@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>汉语-意大利语趣味互动词汇学习系统 (Impara il Cinese)</title>
+  <title id="pageTitle">汉语-多语种趣味互动词汇学习系统</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome 图标库 -->
@@ -62,17 +62,30 @@
         </div>
         <div>
           <h1 class="text-lg md:text-xl font-black text-slate-800 tracking-tight flex items-center gap-2">
-            <span>中文互动教学乐园</span>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700 font-semibold border border-red-200">中 · 意双语版</span>
+            <span id="navTitleMain">中文互动教学乐园</span>
+            <span id="navSubtitleBadge" class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700 font-semibold border border-red-200">多语种教学版</span>
           </h1>
-          <p class="text-xs text-slate-500 font-medium">Laboratorio Interattivo di Cinese con Traduzione Italiana</p>
+          <p id="navSubDesc" class="text-xs text-slate-500 font-medium">Laboratorio Interattivo di Cinese</p>
         </div>
       </div>
 
       <div class="flex items-center gap-2">
+        <!-- 🌍 多语种选择下拉菜单 -->
+        <div class="flex items-center gap-1.5 bg-slate-100 border border-slate-200 rounded-xl px-3 py-1.5">
+          <i class="fa-solid fa-globe text-slate-500 text-xs"></i>
+          <select id="globalLangSelect" class="bg-transparent text-xs font-bold text-slate-700 focus:outline-none cursor-pointer">
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="ru">🇷🇺 Русский</option>
+          </select>
+        </div>
+
         <button id="btnOpenVocabModal" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition-all active:scale-95 flex items-center gap-1.5 border border-slate-200">
           <i class="fa-solid fa-sliders text-slate-500"></i>
-          <span>词库管理与搜图 (<span id="navVocabCountBadge">5</span>词)</span>
+          <span id="btnVocabText">词库管理与搜图</span> (<span id="navVocabCountBadge">5</span><span id="wordUnitText">词</span>)
         </button>
       </div>
     </div>
@@ -82,19 +95,19 @@
       <div class="flex space-x-2 border-b border-slate-200/80 overflow-x-auto py-1" id="modeTabs">
         <button data-mode="pinyin2img" class="mode-tab-btn flex items-center gap-2 px-4 py-2.5 text-sm font-bold border-b-2 border-red-600 text-red-600 transition-colors whitespace-nowrap">
           <i class="fa-solid fa-bullseye"></i>
-          <span>1. 看拼音选图 (Pinyin ➔ Immagine)</span>
+          <span id="tab1Text">1. 看拼音选图</span>
         </button>
         <button data-mode="img2pinyin" class="mode-tab-btn flex items-center gap-2 px-4 py-2.5 text-sm font-bold border-b-2 border-transparent text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap">
           <i class="fa-solid fa-spell-check"></i>
-          <span>2. 看图选拼音 (Immagine ➔ Pinyin)</span>
+          <span id="tab2Text">2. 看图选拼音</span>
         </button>
         <button data-mode="match" class="mode-tab-btn flex items-center gap-2 px-4 py-2.5 text-sm font-bold border-b-2 border-transparent text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap">
           <i class="fa-solid fa-bezier-curve"></i>
-          <span>3. 连线大挑战 (Collega)</span>
+          <span id="tab3Text">3. 连线大挑战</span>
         </button>
         <button data-mode="flip" class="mode-tab-btn flex items-center gap-2 px-4 py-2.5 text-sm font-bold border-b-2 border-transparent text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap">
           <i class="fa-solid fa-clone"></i>
-          <span>4. 汉字翻翻卡 (Memoria)</span>
+          <span id="tab4Text">4. 汉字翻翻卡</span>
         </button>
       </div>
     </div>
@@ -107,15 +120,15 @@
         <div class="shrink-0">
           <div class="flex items-center gap-2 font-black text-base md:text-lg">
             <span class="p-2 bg-white/20 rounded-xl backdrop-blur-sm"><i class="fa-solid fa-wand-magic-sparkles text-amber-200"></i></span>
-            <span>输入词汇快速生成练习（词数不限）</span>
+            <span id="quickInputTitle">输入词汇快速生成练习（词数不限）</span>
           </div>
-          <p class="text-xs text-red-100 mt-0.5">自动带调拼音 · 智能意语翻译 · Google 搜索引擎赋能高审美现代配图！</p>
+          <p id="quickInputDesc" class="text-xs text-red-100 mt-0.5">自动带调拼音 · 多语种翻译支持自定义修改 · 现代实拍高画质配图！</p>
         </div>
 
         <div class="flex-1 flex flex-col sm:flex-row items-center gap-2 max-w-2xl w-full">
           <div class="relative w-full">
             <input id="directQuickInput" type="text" 
-              placeholder="输入任意词汇，空格隔开（如：衣柜 桌子 沙发 或 舟 放 舫）" 
+              placeholder="输入任意词汇，空格隔开（如：衣柜 桌子 沙发）" 
               class="w-full pl-4 pr-10 py-3 rounded-2xl text-slate-800 text-sm font-bold font-chinese focus:outline-none focus:ring-4 focus:ring-amber-300 shadow-inner bg-white/95 placeholder:text-slate-400">
             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300">
               <i class="fa-solid fa-keyboard"></i>
@@ -123,7 +136,7 @@
           </div>
           <button id="btnDirectGenerate" class="w-full sm:w-auto px-6 py-3 bg-amber-400 hover:bg-amber-300 text-red-950 font-black text-sm rounded-2xl shadow-md transition-all active:scale-95 whitespace-nowrap flex items-center justify-center gap-2">
             <i class="fa-solid fa-bolt-lightning text-red-600"></i>
-            <span>一键生成游戏</span>
+            <span id="btnGenText">一键生成游戏</span>
           </button>
         </div>
       </div>
@@ -131,19 +144,19 @@
       <!-- 快捷标签推荐 -->
       <div class="mt-3 pt-3 border-t border-white/20 flex flex-wrap items-center gap-2 text-xs">
         <span class="text-red-100 font-semibold flex items-center gap-1">
-          <i class="fa-regular fa-lightbulb"></i> 快速试用：
+          <i class="fa-regular fa-lightbulb"></i> <span id="sampleLabel">快速试用：</span>
         </span>
         <button class="btn-sample-tag px-2.5 py-1 rounded-lg bg-white/20 hover:bg-white/30 transition-colors font-medium" data-words="衣柜 桌子 椅子 床 沙发">
-          现代家居 (含衣柜 Armadio)
+          现代家居
         </button>
         <button class="btn-sample-tag px-2.5 py-1 rounded-lg bg-white/20 hover:bg-white/30 transition-colors font-medium" data-words="舟 放 舫 方 丹">
           舟 放 舫 方 丹 (5词经典)
         </button>
         <button class="btn-sample-tag px-2.5 py-1 rounded-lg bg-white/20 hover:bg-white/30 transition-colors font-medium" data-words="苹果 香蕉 西瓜 葡萄 桃子">
-          新鲜水果 (Frutta)
+          新鲜水果
         </button>
         <button class="btn-sample-tag px-2.5 py-1 rounded-lg bg-white/20 hover:bg-white/30 transition-colors font-medium" data-words="猫 狗 鸟 兔子 熊猫">
-          可爱动物 (Animali)
+          可爱动物
         </button>
       </div>
     </div>
@@ -157,15 +170,15 @@
       <div class="max-w-3xl mx-auto bg-white/90 backdrop-blur rounded-3xl p-6 md:p-8 shadow-sm border border-amber-100 text-center">
         <div class="flex items-center justify-between mb-6 pb-3 border-b border-slate-100">
           <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-            第 <span id="p2iCurrentNum">1</span> / <span id="p2iTotalNum">5</span> 题
+            <span id="txtQuestionNum1">第</span> <span id="p2iCurrentNum">1</span> / <span id="p2iTotalNum">5</span> <span id="txtQuestionUnit">题</span>
           </span>
           <div class="text-sm font-bold text-slate-600">
-            得分 (Punteggio): <span id="p2iScore" class="text-emerald-600 font-black text-base">0</span>
+            <span id="scoreTextLabel">得分</span>: <span id="p2iScore" class="text-emerald-600 font-black text-base">0</span>
           </div>
         </div>
 
         <div class="mb-6 py-4">
-          <p class="text-sm text-slate-400 font-semibold mb-2">根据拼音与意语释义，选出正确的图片：</p>
+          <p id="p2iPromptText" class="text-sm text-slate-400 font-semibold mb-2">根据拼音与多语释义，选出正确的图片：</p>
           <div class="flex items-center justify-center gap-3">
             <h3 id="p2iQuestionPinyin" class="text-4xl md:text-5xl font-black text-slate-800 tracking-wide font-sans">
               zhōu
@@ -174,8 +187,8 @@
               <i class="fa-solid fa-volume-high"></i>
             </button>
           </div>
-          <p id="p2iItalianHint" class="text-sm text-slate-500 mt-2 font-medium italic">
-            Suggerimento: Barca / Imbarcazione
+          <p id="p2iLangHint" class="text-sm text-slate-500 mt-2 font-medium italic">
+            Hint: Barca
           </p>
         </div>
 
@@ -189,10 +202,10 @@
       <div class="max-w-3xl mx-auto bg-white/90 backdrop-blur rounded-3xl p-6 md:p-8 shadow-sm border border-amber-100 text-center">
         <div class="flex items-center justify-between mb-6 pb-3 border-b border-slate-100">
           <span class="text-xs font-extrabold uppercase tracking-wider text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200">
-            第 <span id="i2pCurrentNum">1</span> / <span id="i2pTotalNum">5</span> 题
+            <span id="txtQuestionNum2">第</span> <span id="i2pCurrentNum">1</span> / <span id="i2pTotalNum">5</span> <span id="txtQuestionUnit2">题</span>
           </span>
           <div class="text-sm font-bold text-slate-600">
-            得分 (Punteggio): <span id="i2pScore" class="text-emerald-600 font-black text-base">0</span>
+            <span id="scoreTextLabel2">得分</span>: <span id="i2pScore" class="text-emerald-600 font-black text-base">0</span>
           </div>
         </div>
 
@@ -202,7 +215,7 @@
           </div>
           <div class="flex items-center gap-2">
             <span id="i2pQuestionHanzi" class="text-3xl font-black font-chinese text-slate-800">舟</span>
-            <span id="i2pQuestionItalian" class="text-sm font-semibold text-slate-600 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">Barca</span>
+            <span id="i2pQuestionLang" class="text-sm font-semibold text-slate-600 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">Barca</span>
           </div>
         </div>
 
@@ -216,19 +229,19 @@
       <div class="bg-white/80 backdrop-blur rounded-2xl p-4 md:p-6 shadow-sm border border-amber-100/60 mb-4 flex flex-wrap items-center justify-between gap-4">
         <div>
           <h2 class="text-xl font-black text-slate-800 flex items-center gap-2">
-            <span>🔗 汉字、图片与拼音连线</span>
-            <span class="text-xs bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded-full">Collega le Coppie (<span id="matchTotalCount">5</span>对)</span>
+            <span>🔗 <span id="matchTitleText">汉字、图片与拼音连线</span></span>
+            <span class="text-xs bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded-full"><span id="matchPairCountLabel">对</span>: (<span id="matchTotalCount">5</span>)</span>
           </h2>
-          <p class="text-sm text-slate-500 mt-1">先点击左侧【汉字与配图】，再点击右侧对应的【拼音】完成连线！</p>
+          <p id="matchSubDesc" class="text-sm text-slate-500 mt-1">先点击左侧【汉字与配图】，再点击右侧对应的【拼音】完成连线！</p>
         </div>
         <div class="flex items-center gap-3">
           <button id="btnResetMatch" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
             <i class="fa-solid fa-eraser"></i>
-            <span>清空连线</span>
+            <span id="btnResetMatchText">清空连线</span>
           </button>
           <button id="btnCheckMatch" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm shadow-md shadow-indigo-200 transition-all active:scale-95 flex items-center gap-2">
             <i class="fa-solid fa-check-double"></i>
-            <span>检查答案 (Controlla)</span>
+            <span id="btnCheckMatchText">检查答案</span>
           </button>
         </div>
       </div>
@@ -248,23 +261,23 @@
       <div class="bg-white/80 backdrop-blur rounded-2xl p-4 md:p-6 shadow-sm border border-amber-100/60 mb-4 flex flex-wrap items-center justify-between gap-4">
         <div>
           <h2 class="text-xl font-black text-slate-800 flex items-center gap-2">
-            <span>🎴 汉字与图片翻翻卡</span>
-            <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">Gioco di Memoria</span>
+            <span>🎴 <span id="flipTitleText">汉字与图片翻翻卡</span></span>
+            <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full" id="flipSubBadge">Memory Game</span>
           </h2>
-          <p class="text-sm text-slate-500 mt-1">配对【汉字+意大利语】与【大配图+大拼音】卡片！</p>
+          <p id="flipSubDesc" class="text-sm text-slate-500 mt-1">配对【汉字+多语释义】与【大配图+大拼音】卡片！</p>
         </div>
         <div class="flex items-center gap-4">
           <div class="bg-amber-50 px-4 py-1.5 rounded-xl border border-amber-200/80 text-center">
-            <span class="text-xs text-amber-700 block font-semibold">步数 (Mosse)</span>
+            <span id="movesLabel" class="text-xs text-amber-700 block font-semibold">步数</span>
             <span id="flipMovesCount" class="text-lg font-black text-amber-800">0</span>
           </div>
           <div class="bg-emerald-50 px-4 py-1.5 rounded-xl border border-emerald-200/80 text-center">
-            <span class="text-xs text-emerald-700 block font-semibold">配对进度</span>
+            <span id="progressLabel" class="text-xs text-emerald-700 block font-semibold">配对进度</span>
             <span id="flipPairsCount" class="text-lg font-black text-emerald-800">0 / 5</span>
           </div>
           <button id="btnRestartFlip" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
             <i class="fa-solid fa-rotate-right"></i>
-            <span>重新开始</span>
+            <span id="restartLabel">重新开始</span>
           </button>
         </div>
       </div>
@@ -274,7 +287,7 @@
 
   </main>
 
-  <!-- 模态窗口 1: 词库管理 -->
+  <!-- 模态窗口 1: 词库管理与自由编辑 -->
   <div id="vocabModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-3 hidden opacity-0 transition-opacity duration-200">
     <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-slate-200 transform scale-95 transition-transform duration-200" id="vocabModalContent">
       <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-gradient-to-r from-red-50 to-amber-50">
@@ -283,8 +296,8 @@
             <i class="fa-solid fa-pen-nib"></i>
           </div>
           <div>
-            <h3 class="text-lg font-black text-slate-800">词汇库列表管理</h3>
-            <p class="text-xs text-slate-500">点击“贴图/换图”可一键打开 Google 图片搜索并快速导入</p>
+            <h3 id="vocabModalTitle" class="text-lg font-black text-slate-800">词汇库列表管理</h3>
+            <p id="vocabModalDesc" class="text-xs text-slate-500">可自由修改汉字、拼音与外语释义，并支持一键智能换图</p>
           </div>
         </div>
         <button id="btnCloseVocabModal" class="text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/80 transition-colors">
@@ -294,9 +307,9 @@
 
       <div class="p-6 overflow-y-auto space-y-4 flex-1">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-slate-500">当前词条清单：</span>
+          <span id="vocabListLabel" class="text-xs font-bold text-slate-500">当前词条清单（可编辑汉字、拼音及外语释义）：</span>
           <button id="btnAddNewVocabRow" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 active:scale-95">
-            <i class="fa-solid fa-plus"></i> 添加新词语
+            <i class="fa-solid fa-plus"></i> <span id="addWordText">添加新词语</span>
           </button>
         </div>
         <div class="space-y-3" id="vocabRowsContainer"></div>
@@ -304,30 +317,29 @@
 
       <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
         <button id="btnResetDefaultVocab" class="px-3 py-2 text-xs text-slate-500 hover:text-slate-800 font-bold underline transition-colors">
-          恢复默认词库 (舟 放 舫 方 丹)
+          恢复默认词库
         </button>
         <div class="flex items-center gap-2">
           <button id="btnCancelVocab" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-xl text-xs font-semibold">取消</button>
           <button id="btnSaveVocab" class="px-5 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-black shadow-md shadow-red-200 flex items-center gap-1.5">
-            <i class="fa-solid fa-floppy-disk"></i> 保存并应用
+            <i class="fa-solid fa-floppy-disk"></i> <span id="saveText">保存并应用</span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ⭐ 模态窗口 2: Google 搜索与 Pinterest 风格展示画廊中心 ⭐ -->
+  <!-- 模态窗口 2: Google 搜图与画廊中心 -->
   <div id="imagePickerModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-3 hidden opacity-0 transition-opacity duration-200">
     <div class="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-slate-200 transform scale-95 transition-transform duration-200" id="imagePickerModalContent">
       
-      <!-- 头部 -->
       <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-gradient-to-r from-blue-50 to-indigo-50">
         <div>
           <h3 class="text-base font-black text-slate-800 flex items-center gap-2">
             <i class="fa-brands fa-google text-blue-600 text-xl"></i>
-            <span>Google 图片搜索与现代美学展示中心</span>
+            <span id="pickerModalTitle">Google 图片搜索与现代美学展示中心</span>
           </h3>
-          <p class="text-xs text-slate-500">词汇：<span id="pickerTargetWord" class="font-bold text-red-600 font-chinese text-base">衣柜</span> (<span id="pickerTargetItalian" class="italic">Armadio</span>)</p>
+          <p class="text-xs text-slate-500">词汇：<span id="pickerTargetWord" class="font-bold text-red-600 font-chinese text-base">衣柜</span> (<span id="pickerTargetLang" class="italic">Armadio</span>)</p>
         </div>
         <button id="btnClosePickerModal" class="text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white transition-colors">
           <i class="fa-solid fa-xmark"></i>
@@ -335,8 +347,6 @@
       </div>
 
       <div class="p-6 overflow-y-auto space-y-4 flex-1">
-        
-        <!-- Google 直连专区（严格采用 &udm=2 标准） -->
         <div class="bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-4 shadow-sm">
           <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mb-3">
             <div>
@@ -344,25 +354,22 @@
                 <i class="fa-solid fa-arrow-up-right-from-square text-blue-600"></i> 在 Google 图片浏览器中查找
               </span>
               <p class="text-xs text-blue-700 mt-0.5">
-                点击右侧直接在 Google 图片中打开（含 <strong>&udm=2</strong> 现代实拍标准），右键<strong>“复制图片”</strong>后秒贴！
+                点击右侧直接在 Google 图片中打开，右键<strong>“复制图片”</strong>后秒贴！
               </p>
             </div>
-            <!-- 直接按你给的链接规范打开 Google 图片搜索 -->
             <button onclick="launchGoogleSearch()" class="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-black whitespace-nowrap shadow-md shadow-blue-200 flex items-center gap-2 active:scale-95 transition-all">
               <i class="fa-brands fa-google"></i>
-              <span>打开 Google 图片搜索</span>
+              <span>打开 Google 图片</span>
             </button>
           </div>
 
-          <!-- 极速一键粘贴区 -->
           <div id="dropPasteZone" class="border-2 border-dashed border-blue-400 rounded-2xl p-4 bg-white/90 hover:bg-white text-center cursor-pointer transition-all flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
             <div class="flex items-center gap-3 text-left">
               <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl shrink-0">
                 <i class="fa-solid fa-paste"></i>
               </div>
               <div>
-                <span class="text-xs font-black text-slate-800 block">点击此处一键粘贴复制的图片 (或直接按 Ctrl+V / Cmd+V)</span>
-                <span class="text-[11px] text-slate-400">支持把 Google 图片直接拖拽放入本区域</span>
+                <span class="text-xs font-black text-slate-800 block">点击此处一键粘贴复制的图片 (或按 Ctrl+V / Cmd+V)</span>
               </div>
             </div>
             <button id="btnReadClipboard" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all shrink-0 active:scale-95 shadow-sm flex items-center gap-1.5">
@@ -372,103 +379,164 @@
           </div>
         </div>
 
-        <!-- 内部 Google 搜索引擎查询条 -->
         <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3.5 space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-              <i class="fa-solid fa-magnifying-glass text-blue-600"></i> Google 图片引擎实时关键词检索：
-            </span>
-            <span class="text-[11px] text-slate-400">输入关键词回车即搜</span>
-          </div>
           <div class="flex gap-2">
-            <input id="pickerCustomSearchInput" type="text" placeholder="输入搜索词（如：衣柜 Armadio 现代高清）" class="flex-1 px-3 py-2 text-xs border border-slate-300 rounded-xl focus:ring-1 focus:ring-blue-500 focus:outline-none bg-white">
-            <button id="btnSearchCustomInternal" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl whitespace-nowrap active:scale-95 transition-all">
-              搜图
-            </button>
+            <input id="pickerCustomSearchInput" type="text" placeholder="输入搜索词..." class="flex-1 px-3 py-2 text-xs border border-slate-300 rounded-xl focus:ring-1 focus:ring-blue-500 focus:outline-none bg-white">
+            <button id="btnSearchCustomInternal" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl whitespace-nowrap active:scale-95 transition-all">搜图</button>
           </div>
         </div>
 
-        <!-- 手动粘贴链接入口 -->
-        <div class="flex gap-2">
-          <input id="pickerCustomUrlInput" type="text" placeholder="或在此处直接粘贴图片网络网址 (https://...)" class="flex-1 px-3 py-2 text-xs border border-slate-300 rounded-xl focus:ring-1 focus:ring-red-500 focus:outline-none">
-          <button id="btnApplyCustomUrl" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold rounded-xl whitespace-nowrap">确定选用</button>
-        </div>
-
-        <!-- 候选图画廊（Pinterest 高审美陈列标准，结合 Google 搜索引擎） -->
         <div>
           <div class="flex items-center justify-between mb-2">
-            <a href="https://www.google.com/search" target="_blank" onclick="event.preventDefault(); launchGoogleSearch();" class="group text-xs font-bold text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1.5 transition-colors" title="点击直接在 Google 现场搜索">
-              <i class="fa-brands fa-google text-blue-600 group-hover:scale-110 transition-transform"></i>
-              <span>Google 搜索现代美学高画质备选图片（点击直接选用）：</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-blue-400"></i>
-            </a>
+            <span class="text-xs font-bold text-blue-600 flex items-center gap-1.5">
+              <i class="fa-brands fa-google text-blue-600"></i>
+              <span>Google 搜索高清备选图片：</span>
+            </span>
             <button id="btnRefreshCandidates" class="text-xs text-amber-700 hover:text-amber-900 font-bold flex items-center gap-1">
               <i class="fa-solid fa-arrows-rotate"></i> 换一批
             </button>
           </div>
-
-          <!-- 现代美学卡片网格 -->
           <div id="pickerCandidatesGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 min-h-[220px]"></div>
-
-          <div class="mt-3 text-center">
-            <button id="btnLoadMoreImages" class="px-4 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-bold transition-colors inline-flex items-center gap-1.5">
-              <i class="fa-solid fa-plus"></i> 加载更多现代高清图片 (+6张)
-            </button>
-          </div>
         </div>
-
       </div>
     </div>
   </div>
 
   <script>
-    // 默认词库数据
-    const DEFAULT_VOCAB = [
-      { id: 1, hanzi: "舟", pinyin: "zhōu", italian: "Barca / Imbarcazione", img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85" },
-      { id: 2, hanzi: "放", pinyin: "fàng", italian: "Liberare / Far volare", img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=700&q=85" },
-      { id: 3, hanzi: "舫", pinyin: "fǎng", italian: "Battello d'arte tradizionale", img: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=700&q=85" },
-      { id: 4, hanzi: "方", pinyin: "fāng", italian: "Quadrato / Direzione", img: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=700&q=85" },
-      { id: 5, hanzi: "丹", pinyin: "dān", italian: "Rosso cinabro / Elisir", img: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=85" }
-    ];
-
-    // 本地中意精选词典库
-    const BUILTIN_IT = {
-      "衣柜": "Armadio", "柜子": "Armadio / Mobile", "桌子": "Tavolo", "椅子": "Sedia", "床": "Letto", "沙发": "Divano",
-      "门": "Porta", "窗": "Finestra", "窗户": "Finestra", "房子": "Casa", "房间": "Stanza / Camera",
-      "舟": "Barca / Imbarcazione", "放": "Liberare / Far volare", "舫": "Battello d'arte", "方": "Quadrato / Direzione", "丹": "Rosso cinabro",
-      "苹果": "Mela", "香蕉": "Banana", "西瓜": "Anguria", "葡萄": "Uva", "桃子": "Pesca", "草莓": "Fragola", "橙子": "Arancia",
-      "猫": "Gatto", "狗": "Cane", "鸟": "Uccello", "兔子": "Coniglio", "鱼": "Pesce", "熊猫": "Panda",
-      "车": "Macchina / Auto", "汽车": "Automobile", "自行车": "Bicicletta", "飞机": "Aereo", "火车": "Treno"
+    // 🌍 多语种词库多语言对照数据库
+    const MULTI_TRANSLATIONS = {
+      "it": {
+        name: "Italiano",
+        navSub: "Laboratorio Interattivo di Cinese",
+        tab1: "1. Pinyin ➔ Immagine", tab2: "2. Immagine ➔ Pinyin", tab3: "3. Collega le Coppie", tab4: "4. Gioco di Memoria",
+        prompt1: "Seleziona l'immagine corretta in base al Pinyin e alla traduzione:",
+        score: "Punteggio", vocabTitle: "Gestione del Vocabolario", addWord: "Aggiungi Parola", save: "Salva",
+        dict: {
+          "衣柜": "Armadio", "柜子": "Armadio / Mobile", "桌子": "Tavolo", "椅子": "Sedia", "床": "Letto", "沙发": "Divano",
+          "舟": "Barca / Imbarcazione", "放": "Liberare / Far volare", "舫": "Battello d'arte", "方": "Quadrato / Direzione", "丹": "Rosso cinabro",
+          "苹果": "Mela", "香蕉": "Banana", "西瓜": "Anguria", "葡萄": "Uva", "桃子": "Pesca", "猫": "Gatto", "狗": "Cane", "汽车": "Automobile"
+        }
+      },
+      "de": {
+        name: "Deutsch",
+        navSub: "Interaktives Chinesisch-Lernlabor",
+        tab1: "1. Pinyin ➔ Bild", tab2: "2. Bild ➔ Pinyin", tab3: "3. Paare verbinden", tab4: "4. Memory-Spiel",
+        prompt1: "Wähle das richtige Bild basierend auf Pinyin und Übersetzung:",
+        score: "Punktzahl", vocabTitle: "Wortschatzverwaltung", addWord: "Wort hinzufügen", save: "Speichern",
+        dict: {
+          "衣柜": "Kleiderschrank", "柜子": "Schrank", "桌子": "Tisch", "椅子": "Stuhl", "床": "Bett", "沙发": "Sofa",
+          "舟": "Boot / Schiff", "放": "Freigeben", "舫": "Gemaltes Boot", "方": "Quadrat / Richtung", "丹": "Zinnoberrot",
+          "苹果": "Apfel", "香蕉": "Bananen", "西瓜": "Wassermelone", "葡萄": "Trauben", "桃子": "Pfirsich", "猫": "Katze", "狗": "Hund", "汽车": "Auto"
+        }
+      },
+      "fr": {
+        name: "Français",
+        navSub: "Laboratoire Interactif de Chinois",
+        tab1: "1. Pinyin ➔ Image", tab2: "2. Image ➔ Pinyin", tab3: "3. Relier les paires", tab4: "4. Jeu de mémoire",
+        prompt1: "Sélectionnez l'image correcte en fonction du Pinyin et de la traduction :",
+        score: "Score", vocabTitle: "Gestion du Vocabulaire", addWord: "Ajouter un mot", save: "Enregistrer",
+        dict: {
+          "衣柜": "Armoire", "柜子": "Placard", "桌子": "Table", "椅子": "Chaise", "床": "Lit", "沙发": "Canapé",
+          "舟": "Bateau", "放": "Libérer", "舫": "Bateau traditionnel", "方": "Carré / Direction", "丹": "Rouge cinabre",
+          "苹果": "Pomme", "香蕉": "Banane", "西瓜": "Pastèque", "葡萄": "Raisin", "桃子": "Pêche", "猫": "Chat", "狗": "Chien", "汽车": "Voiture"
+        }
+      },
+      "es": {
+        name: "Español",
+        navSub: "Laboratorio Interactivo de Chino",
+        tab1: "1. Pinyin ➔ Imagen", tab2: "2. Imagen ➔ Pinyin", tab3: "3. Conectar parejas", tab4: "4. Memoria",
+        prompt1: "Selecciona la imagen correcta según el Pinyin y la traducción:",
+        score: "Puntuación", vocabTitle: "Gestión de Vocabulario", addWord: "Añadir palabra", save: "Guardar",
+        dict: {
+          "衣柜": "Armario", "柜子": "Mueble / Armario", "桌子": "Mesa", "椅子": "Silla", "床": "Cama", "沙发": "Sofá",
+          "舟": "Barco", "放": "Liberar", "舫": "Bote tradicional", "方": "Cuadrado / Dirección", "丹": "Rojo cinabrio",
+          "苹果": "Manzana", "香蕉": "Plátano", "西瓜": "Sandía", "葡萄": "Uva", "桃子": "Durazno", "猫": "Gato", "狗": "Perro", "汽车": "Coche"
+        }
+      },
+      "en": {
+        name: "English",
+        navSub: "Interactive Chinese Learning Lab",
+        tab1: "1. Pinyin ➔ Image", tab2: "2. Image ➔ Pinyin", tab3: "3. Match Pairs", tab4: "4. Memory Game",
+        prompt1: "Select the correct image based on Pinyin and translation:",
+        score: "Score", vocabTitle: "Vocabulary Management", addWord: "Add Word", save: "Save",
+        dict: {
+          "衣柜": "Wardrobe", "柜子": "Cabinet", "桌子": "Table", "椅子": "Chair", "床": "Bed", "沙发": "Sofa",
+          "舟": "Boat / Vessel", "放": "Release", "舫": "Art boat", "方": "Square / Direction", "丹": "Cinnabar red",
+          "苹果": "Apple", "香蕉": "Banana", "西瓜": "Watermelon", "葡萄": "Grape", "桃子": "Peach", "猫": "Cat", "狗": "Dog", "汽车": "Car"
+        }
+      },
+      "ru": {
+        name: "Русский",
+        navSub: "Интерактивная лаборатория китайского",
+        tab1: "1. Пиньинь ➔ Картинка", tab2: "2. Картинка ➔ Пиньинь", tab3: "3. Соедини пары", tab4: "4. Игра на память",
+        prompt1: "Выберите правильную картинку на основе пиньиня и перевода:",
+        score: "Счет", vocabTitle: "Управление словарем", addWord: "Добавить слово", save: "Сохранить",
+        dict: {
+          "衣柜": "Шкаф", "柜子": "Шкафчик", "桌子": "Стол", "椅子": "Стул", "床": "Кровать", "沙发": "Диван",
+          "舟": "Лодка", "放": "Отпускать", "舫": "Расписная лодка", "方": "Квадрат", "丹": "Киноварь",
+          "苹果": "Яблоко", "香蕉": "Банан", "西瓜": "Арбуз", "葡萄": "Виноград", "桃子": "Персик", "猫": "Кошка", "狗": "Собака", "汽车": "Машина"
+        }
+      }
     };
 
-    // 精选现代高清生活实拍库
+    let currentLang = localStorage.getItem('chinese_game_lang') || 'it';
+    document.getElementById('globalLangSelect').value = currentLang;
+
+    function getTranslation(word, customTransObj) {
+      if (customTransObj && customTransObj[currentLang]) {
+        return customTransObj[currentLang];
+      }
+      const cleanWord = (word || "").trim();
+      const langPack = MULTI_TRANSLATIONS[currentLang] || MULTI_TRANSLATIONS['it'];
+      if (langPack.dict[cleanWord]) return langPack.dict[cleanWord];
+      return cleanWord;
+    }
+
+    function updateUITexts() {
+      const lp = MULTI_TRANSLATIONS[currentLang] || MULTI_TRANSLATIONS['it'];
+      document.getElementById('navSubDesc').textContent = lp.navSub;
+      document.getElementById('tab1Text').textContent = lp.tab1;
+      document.getElementById('tab2Text').textContent = lp.tab2;
+      document.getElementById('tab3Text').textContent = lp.tab3;
+      document.getElementById('tab4Text').textContent = lp.tab4;
+      document.getElementById('p2iPromptText').textContent = lp.prompt1;
+      document.querySelectorAll('#scoreTextLabel, #scoreTextLabel2').forEach(el => el.textContent = lp.score);
+      document.getElementById('vocabModalTitle').textContent = lp.vocabTitle;
+      document.getElementById('addWordText').textContent = lp.addWord;
+      document.getElementById('saveText').textContent = lp.save;
+    }
+
+    document.getElementById('globalLangSelect').addEventListener('change', (e) => {
+      currentLang = e.target.value;
+      localStorage.setItem('chinese_game_lang', currentLang);
+      updateUITexts();
+      initAllModes();
+    });
+
+    const DEFAULT_VOCAB = [
+      { id: 1, hanzi: "舟", pinyin: "zhōu", img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85", translations: {} },
+      { id: 2, hanzi: "放", pinyin: "fàng", img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=700&q=85", translations: {} },
+      { id: 3, hanzi: "舫", pinyin: "fǎng", img: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=700&q=85", translations: {} },
+      { id: 4, hanzi: "方", pinyin: "fāng", img: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=700&q=85", translations: {} },
+      { id: 5, hanzi: "丹", pinyin: "dān", img: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=85", translations: {} }
+    ];
+
     const BUILTIN_IMG_PRESETS = {
       "衣柜": "https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=700&q=85",
-      "柜子": "https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=700&q=85",
       "桌子": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=700&q=85",
       "椅子": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=700&q=85",
       "床": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=85",
       "沙发": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=85",
-      "舟": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85",
-      "放": "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=700&q=85",
-      "舫": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=700&q=85",
-      "方": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=700&q=85",
-      "丹": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=85",
       "苹果": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=700&q=85",
-      "香蕉": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=700&q=85",
-      "西瓜": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=700&q=85",
-      "葡萄": "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=700&q=85",
-      "桃子": "https://images.unsplash.com/photo-1629828874514-c1e5103f2150?auto=format&fit=crop&w=700&q=85",
       "猫": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=85",
       "狗": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=85",
       "汽车": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=85"
     };
 
-    let currentVocab = JSON.parse(localStorage.getItem('chinese_italian_vocab')) || JSON.parse(JSON.stringify(DEFAULT_VOCAB));
+    let currentVocab = JSON.parse(localStorage.getItem('chinese_multilang_vocab')) || JSON.parse(JSON.stringify(DEFAULT_VOCAB));
     let activePickerIndex = 0;
     let currentCandidates = [];
 
-    // 语音朗读
     function speakChinese(text) {
       if (!('speechSynthesis' in window)) return;
       window.speechSynthesis.cancel();
@@ -478,7 +546,6 @@
       window.speechSynthesis.speak(utterance);
     }
 
-    // 自动标注拼音
     function generatePinyin(text) {
       if (window.pinyinPro && typeof window.pinyinPro.pinyin === 'function') {
         return window.pinyinPro.pinyin(text.trim(), { toneType: 'symbol' });
@@ -486,128 +553,43 @@
       return "";
     }
 
-    // 意大利语翻译
-    async function fetchItalian(text) {
-      const clean = text.trim();
-      if (!clean) return "";
-
-      if (BUILTIN_IT[clean]) return BUILTIN_IT[clean];
-
-      try {
-        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=zh|it`;
-        const res = await fetch(url, { signal: AbortSignal.timeout(3000) });
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.responseData && data.responseData.translatedText) {
-            let resText = data.responseData.translatedText.trim();
-            if (!resText.toLowerCase().includes("mymemory") && !resText.toLowerCase().includes("quota")) {
-              return resText.charAt(0).toUpperCase() + resText.slice(1);
-            }
-          }
-        }
-      } catch (err) {}
-
-      return `Significato: ${clean}`;
-    }
-
-    // 搜索引擎基于 Google 标准
-    async function searchOnlineImages(queryWord, italian = "", offset = 0) {
+    async function searchOnlineImages(queryWord, offset = 0) {
       const candidates = [];
       const cleanHanzi = queryWord.trim();
-      const cleanIt = italian.split(/[\/\,\;]/)[0].replace(/Significato:/i, '').trim();
-
       if (offset === 0 && BUILTIN_IMG_PRESETS[cleanHanzi]) {
-        candidates.push({
-          url: BUILTIN_IMG_PRESETS[cleanHanzi],
-          title: `${cleanHanzi} (${cleanIt}) - 现代高清实拍`,
-          domain: 'google.com / images'
-        });
+        candidates.push({ url: BUILTIN_IMG_PRESETS[cleanHanzi], title: `${cleanHanzi} 现代实拍`, domain: 'google.com' });
       }
-
-      if (cleanHanzi === "衣柜" || cleanHanzi === "柜子") {
-        candidates.push({
-          url: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=85",
-          title: "衣柜 Armadio - 现代简约卧室衣柜",
-          domain: 'google.com / images'
-        });
-        candidates.push({
-          url: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=700&q=85",
-          title: "衣柜 Armadio - 北欧风收纳大衣橱",
-          domain: 'google.com / images'
-        });
-      }
-
       for (let i = 0; i < 4; i++) {
-        const seedStr = encodeURIComponent(`${cleanHanzi}-google-search-${i + offset}`);
-        candidates.push({
-          url: `https://picsum.photos/seed/${seedStr}/600/600`,
-          title: `${cleanHanzi} ${cleanIt} - 现代实拍图源 #${i + 1}`,
-          domain: 'google.com / images'
-        });
+        const seedStr = encodeURIComponent(`${cleanHanzi}-${i + offset}`);
+        candidates.push({ url: `https://picsum.photos/seed/${seedStr}/600/600`, title: `${cleanHanzi} 高清图源 #${i+1}`, domain: 'google.com' });
       }
-
-      // 去重
-      const seen = new Set();
-      return candidates.filter(item => {
-        if (seen.has(item.url)) return false;
-        seen.add(item.url);
-        return true;
-      });
+      return candidates;
     }
 
-    // 顶部快捷输入栏处理
     async function processAndApplyVocab(rawInput) {
       const words = rawInput.split(/[\s,，、\n]+/).filter(w => w.trim().length > 0);
-      if (words.length === 0) {
-        alert("请输入词汇（如：衣柜 桌子 沙发）");
-        return;
-      }
+      if (words.length === 0) return alert("请输入词汇");
 
       const btn = document.getElementById('btnDirectGenerate');
       btn.disabled = true;
-      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 正在生成 ${words.length} 个词汇...`;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 生成中...`;
 
       const newVocabList = [];
-
       for (let i = 0; i < words.length; i++) {
         const word = words[i];
-        const pinyin = generatePinyin(word);
-        const italian = await fetchItalian(word);
-
         let targetImg = BUILTIN_IMG_PRESETS[word] || `https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85`;
-        try {
-          const items = await searchOnlineImages(word, italian);
-          if (items && items.length > 0) {
-            targetImg = items[0].url;
-          }
-        } catch(e) {}
-
-        newVocabList.push({
-          id: i + 1,
-          hanzi: word,
-          pinyin: pinyin,
-          italian: italian,
-          img: targetImg
-        });
+        newVocabList.push({ id: i + 1, hanzi: word, pinyin: generatePinyin(word), img: targetImg, translations: {} });
       }
 
       currentVocab = newVocabList;
-      localStorage.setItem('chinese_italian_vocab', JSON.stringify(currentVocab));
+      localStorage.setItem('chinese_multilang_vocab', JSON.stringify(currentVocab));
       initAllModes();
-
       btn.disabled = false;
       btn.innerHTML = `<i class="fa-solid fa-bolt-lightning text-red-600"></i> 一键生成游戏`;
       confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
     }
 
-    document.getElementById('btnDirectGenerate').addEventListener('click', () => {
-      processAndApplyVocab(document.getElementById('directQuickInput').value);
-    });
-
-    document.getElementById('directQuickInput').addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') processAndApplyVocab(e.target.value);
-    });
-
+    document.getElementById('btnDirectGenerate').addEventListener('click', () => processAndApplyVocab(document.getElementById('directQuickInput').value));
     document.querySelectorAll('.btn-sample-tag').forEach(tag => {
       tag.addEventListener('click', (e) => {
         const words = e.currentTarget.dataset.words;
@@ -616,7 +598,7 @@
       });
     });
 
-    // 模态窗口 1: 词库管理
+    // 词库弹窗管理（支持编辑汉字、拼音、外语翻译）
     const vocabModal = document.getElementById('vocabModal');
     const vocabModalContent = document.getElementById('vocabModalContent');
     const vocabRowsContainer = document.getElementById('vocabRowsContainer');
@@ -624,15 +606,10 @@
     function openVocabModal() {
       renderVocabEditorRows();
       vocabModal.classList.remove('hidden');
-      setTimeout(() => {
-        vocabModal.classList.remove('opacity-0');
-        vocabModalContent.classList.remove('scale-95');
-      }, 10);
+      setTimeout(() => { vocabModal.classList.remove('opacity-0'); vocabModalContent.classList.remove('scale-95'); }, 10);
     }
-
     function closeVocabModal() {
-      vocabModal.classList.add('opacity-0');
-      vocabModalContent.classList.add('scale-95');
+      vocabModal.classList.add('opacity-0'); vocabModalContent.classList.add('scale-95');
       setTimeout(() => vocabModal.classList.add('hidden'), 200);
     }
 
@@ -640,278 +617,132 @@
       vocabRowsContainer.innerHTML = '';
       currentVocab.forEach((item, index) => {
         const row = document.createElement('div');
-        row.className = "bg-white p-3 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center gap-3";
+        row.className = "bg-white p-3 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-2.5 flex-wrap sm:flex-nowrap";
+        const curTrans = getTranslation(item.hanzi, item.translations);
         row.innerHTML = `
-          <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center shrink-0">${index + 1}</span>
-          <input type="text" class="vocab-h-input w-24 px-2 py-1.5 rounded-lg border font-chinese font-bold text-base text-slate-800" value="${item.hanzi}">
-          <input type="text" class="vocab-p-input w-28 px-2 py-1.5 rounded-lg border text-sm font-semibold text-slate-700" value="${item.pinyin}">
-          <input type="text" class="vocab-i-input flex-1 px-2 py-1.5 rounded-lg border text-xs text-slate-700" value="${item.italian}">
-          <div class="flex items-center gap-2">
-            <img src="${item.img}" class="w-10 h-10 rounded-lg object-cover border cursor-pointer hover:opacity-80 shrink-0" onclick="openImagePicker(${index})" title="点击换图">
-            <button onclick="openImagePicker(${index})" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-lg text-xs font-bold flex items-center gap-1.5 shrink-0" title="贴图/换图面板">
-              <i class="fa-solid fa-paste"></i> 贴图/换图
-            </button>
-            <button onclick="deleteVocabRow(${index})" class="p-1.5 text-slate-400 hover:text-red-600 rounded-lg text-sm transition-colors shrink-0" title="删除该词">
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
+          <input type="text" placeholder="汉字" class="vocab-h-input w-20 px-2 py-1.5 rounded-lg border font-chinese font-bold text-base" value="${item.hanzi}" oninput="updateRowPinyin(this, ${index})">
+          <input type="text" placeholder="拼音" class="vocab-p-input w-24 px-2 py-1.5 rounded-lg border text-sm" value="${item.pinyin}">
+          <div class="flex-1 min-w-[120px] flex items-center gap-1 bg-amber-50/60 px-2 py-1 rounded-lg border border-amber-200/60">
+            <span class="text-[10px] font-bold text-amber-800 uppercase shrink-0">${currentLang}:</span>
+            <input type="text" placeholder="外语释义" class="vocab-t-input w-full bg-transparent text-xs text-indigo-700 font-semibold focus:outline-none" value="${curTrans}">
           </div>
+          <img src="${item.img}" class="w-9 h-9 rounded-lg object-cover border cursor-pointer" onclick="openImagePicker(${index})">
+          <button onclick="openImagePicker(${index})" class="px-2.5 py-1.5 bg-amber-100 text-amber-900 rounded-lg text-xs font-bold whitespace-nowrap">换图</button>
+          <button onclick="deleteVocabRow(${index})" class="text-slate-400 hover:text-red-600 text-sm p-1"><i class="fa-regular fa-trash-can"></i></button>
         `;
         vocabRowsContainer.appendChild(row);
       });
     }
 
-    window.deleteVocabRow = function(index) {
-      if (currentVocab.length <= 2) {
-        alert("词库至少需要保留 2 个词汇哦！");
-        return;
+    window.updateRowPinyin = function(inputElem, index) {
+      const val = inputElem.value;
+      const row = inputElem.closest('div');
+      const pInput = row.querySelector('.vocab-p-input');
+      if (pInput && val.trim()) {
+        pInput.value = generatePinyin(val);
       }
+      const tInput = row.querySelector('.vocab-t-input');
+      if (tInput && val.trim()) {
+        tInput.value = getTranslation(val, currentVocab[index]?.translations);
+      }
+    };
+
+    window.deleteVocabRow = function(index) {
+      if (currentVocab.length <= 2) return alert("至少保留2个词汇！");
       currentVocab.splice(index, 1);
       renderVocabEditorRows();
     };
 
     document.getElementById('btnAddNewVocabRow').addEventListener('click', () => {
-      currentVocab.push({
-        id: currentVocab.length + 1,
-        hanzi: "新词",
-        pinyin: "xīn cí",
-        italian: "Nuova parola",
-        img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85"
-      });
+      currentVocab.push({ id: currentVocab.length + 1, hanzi: "新词", pinyin: "xīn cí", img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85", translations: {} });
       renderVocabEditorRows();
     });
 
     document.getElementById('btnOpenVocabModal').addEventListener('click', openVocabModal);
     document.getElementById('btnCloseVocabModal').addEventListener('click', closeVocabModal);
     document.getElementById('btnCancelVocab').addEventListener('click', closeVocabModal);
-
+    
     document.getElementById('btnSaveVocab').addEventListener('click', () => {
       const hInputs = document.querySelectorAll('.vocab-h-input');
       const pInputs = document.querySelectorAll('.vocab-p-input');
-      const iInputs = document.querySelectorAll('.vocab-i-input');
-
-      for (let i = 0; i < currentVocab.length; i++) {
-        if (hInputs[i]) currentVocab[i].hanzi = hInputs[i].value.trim() || currentVocab[i].hanzi;
-        if (pInputs[i]) currentVocab[i].pinyin = pInputs[i].value.trim() || currentVocab[i].pinyin;
-        if (iInputs[i]) currentVocab[i].italian = iInputs[i].value.trim() || currentVocab[i].italian;
-        currentVocab[i].id = i + 1;
+      const tInputs = document.querySelectorAll('.vocab-t-input');
+      const newV = [];
+      for (let i = 0; i < hInputs.length; i++) {
+        const h = hInputs[i].value.trim();
+        if (h) {
+          const oldTrans = currentVocab[i] && currentVocab[i].translations ? currentVocab[i].translations : {};
+          if (tInputs[i]) {
+            oldTrans[currentLang] = tInputs[i].value.trim();
+          }
+          newV.push({
+            id: i + 1,
+            hanzi: h,
+            pinyin: pInputs[i] ? pInputs[i].value.trim() : generatePinyin(h),
+            img: currentVocab[i] ? currentVocab[i].img : "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85",
+            translations: oldTrans
+          });
+        }
       }
-
-      localStorage.setItem('chinese_italian_vocab', JSON.stringify(currentVocab));
+      currentVocab = newV;
+      localStorage.setItem('chinese_multilang_vocab', JSON.stringify(currentVocab));
       closeVocabModal();
       initAllModes();
     });
 
     document.getElementById('btnResetDefaultVocab').addEventListener('click', () => {
-      if (confirm("恢复默认 5 个词语吗？")) {
+      if (confirm("恢复默认词库？")) {
         currentVocab = JSON.parse(JSON.stringify(DEFAULT_VOCAB));
-        localStorage.removeItem('chinese_italian_vocab');
+        localStorage.removeItem('chinese_multilang_vocab');
         renderVocabEditorRows();
         initAllModes();
       }
     });
 
-    // 模态窗口 2: Google 搜图
+    // 搜图弹窗
     const imagePickerModal = document.getElementById('imagePickerModal');
     const imagePickerModalContent = document.getElementById('imagePickerModalContent');
-    const dropPasteZone = document.getElementById('dropPasteZone');
 
     async function openImagePicker(index) {
       activePickerIndex = index;
       const item = currentVocab[index];
       document.getElementById('pickerTargetWord').textContent = item.hanzi;
-      document.getElementById('pickerTargetItalian').textContent = item.italian;
-      document.getElementById('pickerCustomUrlInput').value = '';
-      document.getElementById('pickerCustomSearchInput').value = `${item.hanzi} ${item.italian.split('/')[0]}`;
-      currentCandidates = [];
-
+      document.getElementById('pickerTargetLang').textContent = getTranslation(item.hanzi, item.translations);
       imagePickerModal.classList.remove('hidden');
-      setTimeout(() => {
-        imagePickerModal.classList.remove('opacity-0');
-        imagePickerModalContent.classList.remove('scale-95');
-      }, 10);
-
+      setTimeout(() => { imagePickerModal.classList.remove('opacity-0'); imagePickerModalContent.classList.remove('scale-95'); }, 10);
       await loadCandidates();
     }
-
     function closeImagePicker() {
-      imagePickerModal.classList.add('opacity-0');
-      imagePickerModalContent.classList.add('scale-95');
+      imagePickerModal.classList.add('opacity-0'); imagePickerModalContent.classList.add('scale-95');
       setTimeout(() => imagePickerModal.classList.add('hidden'), 200);
     }
-
-    // ⭐ 严格带上你的官方标准参数 &udm=2 打开 Google 图片搜索 ⭐
     window.launchGoogleSearch = function() {
       const item = currentVocab[activePickerIndex];
-      const itFirst = item.italian.split(/[\/\,\;]/)[0].replace(/Significato:/i, '').trim();
-      const queryStr = `${item.hanzi} ${itFirst} 现代高清 实拍`;
-      window.open(`https://www.google.com/search?q=${encodeURIComponent(queryStr)}&udm=2`, '_blank');
+      window.open(`https://www.google.com/search?q=${encodeURIComponent(item.hanzi + ' ' + getTranslation(item.hanzi, item.translations))}&udm=2`, '_blank');
     };
 
-    // 内部自定义搜索
-    document.getElementById('btnSearchCustomInternal').addEventListener('click', async () => {
-      const val = document.getElementById('pickerCustomSearchInput').value.trim();
-      if (!val) return;
-      currentCandidates = [];
-      await loadCandidates(false, val);
-    });
-
-    document.getElementById('pickerCustomSearchInput').addEventListener('keydown', async (e) => {
-      if (e.key === 'Enter') {
-        const val = e.target.value.trim();
-        if (!val) return;
-        currentCandidates = [];
-        await loadCandidates(false, val);
-      }
-    });
-
-    // 渲染以 Pinterest 现代美学排版为外观标准、底层以 Google 搜索结果为内容源的画廊
-    async function loadCandidates(isAppend = false, customQuery = "") {
+    async function loadCandidates() {
       const grid = document.getElementById('pickerCandidatesGrid');
       const item = currentVocab[activePickerIndex];
-      const queryWord = customQuery || `${item.hanzi} ${item.italian.split('/')[0]}`;
-      
-      if (!isAppend) {
-        grid.innerHTML = `<div class="col-span-3 text-center py-10 text-xs text-slate-400"><i class="fa-brands fa-google text-lg mr-2 text-blue-500 animate-spin"></i> 正在以 Google 搜索标准检索现代高清图片...</div>`;
-      }
-
-      const offset = currentCandidates.length;
-      const newItems = await searchOnlineImages(queryWord, item.italian, offset);
-
-      if (!isAppend) {
-        grid.innerHTML = '';
-        currentCandidates = newItems;
-      } else {
-        const existingUrls = new Set(currentCandidates.map(c => c.url));
-        const filteredNew = newItems.filter(i => !existingUrls.has(i.url));
-        currentCandidates = [...currentCandidates, ...filteredNew];
-      }
-
+      grid.innerHTML = `<div class="col-span-3 text-center py-10 text-xs text-slate-400"><i class="fa-brands fa-google animate-spin"></i> 正在搜索...</div>`;
+      currentCandidates = await searchOnlineImages(item.hanzi);
       grid.innerHTML = '';
       currentCandidates.forEach(cand => {
         const div = document.createElement('div');
-        // Pinterest 美学卡片排版
-        div.className = "group bg-white rounded-3xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-blue-400 cursor-pointer transition-all flex flex-col";
-        div.innerHTML = `
-          <div class="aspect-square bg-slate-100 overflow-hidden relative">
-            <img src="${cand.url}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=500&q=85'">
-            <div class="absolute inset-0 bg-blue-600/30 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-xs font-bold transition-opacity">
-              <span class="bg-blue-600 px-3 py-1.5 rounded-full shadow-md flex items-center gap-1"><i class="fa-solid fa-check text-xs"></i> 选用此图</span>
-            </div>
-          </div>
-          <div class="p-2.5 flex flex-col justify-between flex-1 bg-white">
-            <div class="flex items-center gap-1.5 text-[11px] text-blue-600 font-bold">
-              <i class="fa-brands fa-google text-[10px]"></i>
-              <span class="truncate">${cand.domain || 'google.com/search'}</span>
-            </div>
-            <p class="text-xs font-bold text-slate-700 truncate mt-0.5" title="${cand.title}">
-              ${cand.title || item.hanzi}
-            </p>
-          </div>
-        `;
-        div.onclick = () => applySelectedImage(cand.url);
+        div.className = "group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-blue-400 cursor-pointer p-2";
+        div.innerHTML = `<img src="${cand.url}" class="w-full h-32 object-cover rounded-xl"><p class="text-xs mt-1 truncate">${cand.title}</p>`;
+        div.onclick = () => {
+          currentVocab[activePickerIndex].img = cand.url;
+          localStorage.setItem('chinese_multilang_vocab', JSON.stringify(currentVocab));
+          closeImagePicker();
+          renderVocabEditorRows();
+          initAllModes();
+        };
         grid.appendChild(div);
       });
     }
-
-    document.getElementById('btnLoadMoreImages').addEventListener('click', async () => {
-      const btn = document.getElementById('btnLoadMoreImages');
-      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 正在加载更多...`;
-      await loadCandidates(true);
-      btn.innerHTML = `<i class="fa-solid fa-plus"></i> 加载更多现代高清图片 (+6张)`;
-    });
-
-    function applySelectedImage(url) {
-      currentVocab[activePickerIndex].img = url;
-      localStorage.setItem('chinese_italian_vocab', JSON.stringify(currentVocab));
-      closeImagePicker();
-      renderVocabEditorRows();
-      initAllModes();
-      confetti({ particleCount: 40, spread: 50, origin: { y: 0.6 } });
-    }
-
-    // 剪贴板智能抓取
-    async function handleClipboardPaste() {
-      try {
-        const clipboardItems = await navigator.clipboard.read();
-        for (const item of clipboardItems) {
-          for (const type of item.types) {
-            if (type.startsWith('image/')) {
-              const blob = await item.getType(type);
-              const reader = new FileReader();
-              reader.onload = (e) => applySelectedImage(e.target.result);
-              reader.readAsDataURL(blob);
-              return;
-            }
-          }
-        }
-        const text = await navigator.clipboard.readText();
-        if (text && (text.startsWith('http://') || text.startsWith('https://') || text.startsWith('data:image/'))) {
-          applySelectedImage(text.trim());
-          return;
-        }
-        alert("未能从剪贴板检测到图片或链接。请在 Google 图片上右键选择【复制图片】或【复制图片地址】后再试！");
-      } catch (err) {
-        const manual = prompt("请在此粘贴你在 Google 图片中复制的图片地址：");
-        if (manual && manual.trim()) applySelectedImage(manual.trim());
-      }
-    }
-
-    document.getElementById('btnReadClipboard').addEventListener('click', handleClipboardPaste);
-    dropPasteZone.addEventListener('click', handleClipboardPaste);
-
-    window.addEventListener('paste', (e) => {
-      if (imagePickerModal.classList.contains('hidden')) return;
-      const items = e.clipboardData?.items;
-      if (!items) return;
-      for (const item of items) {
-        if (item.type.indexOf('image') !== -1) {
-          const blob = item.getAsFile();
-          const reader = new FileReader();
-          reader.onload = (evt) => applySelectedImage(evt.target.result);
-          reader.readAsDataURL(blob);
-          return;
-        }
-      }
-      const pastedText = e.clipboardData.getData('text');
-      if (pastedText && (pastedText.startsWith('http') || pastedText.startsWith('data:image'))) {
-        applySelectedImage(pastedText.trim());
-      }
-    });
-
-    dropPasteZone.addEventListener('dragover', (e) => {
-      e.preventDefault();
-      dropPasteZone.classList.add('drag-over');
-    });
-    dropPasteZone.addEventListener('dragleave', () => dropPasteZone.classList.remove('drag-over'));
-    dropPasteZone.addEventListener('drop', (e) => {
-      e.preventDefault();
-      dropPasteZone.classList.remove('drag-over');
-      if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-        const file = e.dataTransfer.files[0];
-        const reader = new FileReader();
-        reader.onload = (evt) => applySelectedImage(evt.target.result);
-        reader.readAsDataURL(file);
-      } else {
-        const html = e.dataTransfer.getData('text/html');
-        const match = html && html.match(/src="([^"]+)"/);
-        if (match && match[1]) {
-          applySelectedImage(match[1]);
-        }
-      }
-    });
-
-    document.getElementById('btnApplyCustomUrl').addEventListener('click', () => {
-      const url = document.getElementById('pickerCustomUrlInput').value.trim();
-      if (url) applySelectedImage(url);
-    });
-
     document.getElementById('btnClosePickerModal').addEventListener('click', closeImagePicker);
-    document.getElementById('btnRefreshCandidates').addEventListener('click', () => {
-      currentCandidates = [];
-      loadCandidates();
-    });
 
-    // 模式选项卡切换
+    // 模式切换
     const modeTabs = document.querySelectorAll('.mode-tab-btn');
     const sections = {
       pinyin2img: document.getElementById('sectionPinyin2Img'),
@@ -919,29 +750,17 @@
       match: document.getElementById('sectionMatch'),
       flip: document.getElementById('sectionFlip')
     };
-
     modeTabs.forEach(btn => {
       btn.addEventListener('click', () => {
         const mode = btn.dataset.mode;
-        modeTabs.forEach(b => {
-          b.classList.remove('border-red-600', 'text-red-600');
-          b.classList.add('border-transparent', 'text-slate-600');
-        });
+        modeTabs.forEach(b => b.classList.remove('border-red-600', 'text-red-600'));
         btn.classList.add('border-red-600', 'text-red-600');
-        btn.classList.remove('border-transparent', 'text-slate-600');
-
-        Object.keys(sections).forEach(k => {
-          if (k === mode) sections[k].classList.remove('hidden');
-          else sections[k].classList.add('hidden');
-        });
-
-        if (mode === 'match') {
-          setTimeout(updateMatchSvgLines, 60);
-        }
+        Object.keys(sections).forEach(k => sections[k].classList.toggle('hidden', k !== mode));
+        if (mode === 'match') setTimeout(updateMatchSvgLines, 60);
       });
     });
 
-    // 练习 1: 看拼音选图片
+    // 游戏1
     let p2iIdx = 0, p2iScore = 0;
     function initPinyin2ImgGame() {
       p2iIdx = 0; p2iScore = 0;
@@ -953,42 +772,31 @@
       const q = currentVocab[p2iIdx];
       document.getElementById('p2iCurrentNum').textContent = p2iIdx + 1;
       document.getElementById('p2iQuestionPinyin').textContent = q.pinyin;
-      document.getElementById('p2iItalianHint').textContent = `Suggerimento: ${q.italian}`;
+      document.getElementById('p2iLangHint').textContent = `${getTranslation(q.hanzi, q.translations)}`;
       document.getElementById('p2iFeedbackBox').innerHTML = '';
 
-      const otherCount = Math.min(3, currentVocab.length - 1);
-      const opts = [q, ...currentVocab.filter(v => v.id !== q.id).sort(() => Math.random() - 0.5).slice(0, otherCount)].sort(() => Math.random() - 0.5);
+      const opts = [q, ...currentVocab.filter(v => v.id !== q.id).sort(() => Math.random() - 0.5).slice(0, 3)].sort(() => Math.random() - 0.5);
       const grid = document.getElementById('p2iOptionsGrid');
       grid.innerHTML = '';
       opts.forEach(opt => {
         const btn = document.createElement('button');
-        btn.className = "aspect-square rounded-2xl overflow-hidden border-2 border-slate-200 hover:border-amber-400 bg-white p-1 transition-all";
-        btn.innerHTML = `<img src="${opt.img}" class="w-full h-full object-cover rounded-xl pointer-events-none">`;
+        btn.className = "aspect-square rounded-2xl overflow-hidden border-2 border-slate-200 bg-white p-1";
+        btn.innerHTML = `<img src="${opt.img}" class="w-full h-full object-cover rounded-xl">`;
         btn.onclick = () => {
-          document.querySelectorAll('#p2iOptionsGrid button').forEach(b => b.disabled = true);
-          const perScore = Math.round(100 / currentVocab.length);
           if (opt.id === q.id) {
-            p2iScore += perScore;
+            p2iScore += Math.round(100 / currentVocab.length);
             document.getElementById('p2iScore').textContent = p2iScore;
-            btn.classList.add('!border-emerald-500', 'ring-4', 'ring-emerald-100');
             speakChinese(q.hanzi);
-          } else {
-            btn.classList.add('!border-red-500', 'ring-4', 'ring-red-100');
           }
-          setTimeout(() => {
-            if (p2iIdx < currentVocab.length - 1) { p2iIdx++; loadP2i(); }
-            else {
-              document.getElementById('p2iFeedbackBox').innerHTML = `<p class="font-bold text-slate-800">🎉 全套练习完成！最终得分：${p2iScore}</p>`;
-              confetti({ particleCount: 70 });
-            }
-          }, 1200);
+          if (p2iIdx < currentVocab.length - 1) { p2iIdx++; loadP2i(); }
+          else { document.getElementById('p2iFeedbackBox').innerHTML = `<p class="font-bold">🎉 完成！得分: ${p2iScore}</p>`; confetti(); }
         };
         grid.appendChild(btn);
       });
     }
     document.getElementById('btnP2iSpeak').addEventListener('click', () => speakChinese(currentVocab[p2iIdx].hanzi));
 
-    // 练习 2: 看图选拼音
+    // 游戏2
     let i2pIdx = 0, i2pScore = 0;
     function initImg2PinyinGame() {
       i2pIdx = 0; i2pScore = 0;
@@ -1001,286 +809,73 @@
       document.getElementById('i2pCurrentNum').textContent = i2pIdx + 1;
       document.getElementById('i2pQuestionImg').src = q.img;
       document.getElementById('i2pQuestionHanzi').textContent = q.hanzi;
-      document.getElementById('i2pQuestionItalian').textContent = q.italian;
-      document.getElementById('i2pFeedbackBox').innerHTML = '';
-
-      const otherCount = Math.min(3, currentVocab.length - 1);
-      const opts = [q, ...currentVocab.filter(v => v.id !== q.id).sort(() => Math.random() - 0.5).slice(0, otherCount)].sort(() => Math.random() - 0.5);
+      document.getElementById('i2pQuestionLang').textContent = getTranslation(q.hanzi, q.translations);
+      const opts = [q, ...currentVocab.filter(v => v.id !== q.id).sort(() => Math.random() - 0.5).slice(0, 3)].sort(() => Math.random() - 0.5);
       const grid = document.getElementById('i2pOptionsGrid');
       grid.innerHTML = '';
       opts.forEach(opt => {
         const btn = document.createElement('button');
-        btn.className = "py-3 px-4 rounded-2xl border-2 border-slate-200 hover:border-rose-400 bg-white text-xl font-black text-slate-700 font-sans transition-all";
+        btn.className = "py-3 px-4 rounded-2xl border-2 border-slate-200 bg-white text-xl font-black";
         btn.textContent = opt.pinyin;
         btn.onclick = () => {
-          document.querySelectorAll('#i2pOptionsGrid button').forEach(b => b.disabled = true);
-          const perScore = Math.round(100 / currentVocab.length);
-          if (opt.id === q.id) {
-            i2pScore += perScore;
-            document.getElementById('i2pScore').textContent = i2pScore;
-            btn.classList.add('!border-emerald-500', '!bg-emerald-50', '!text-emerald-800');
-            speakChinese(q.hanzi);
-          } else {
-            btn.classList.add('!border-red-500', '!bg-red-50', '!text-red-800');
-          }
-          setTimeout(() => {
-            if (i2pIdx < currentVocab.length - 1) { i2pIdx++; loadI2p(); }
-            else {
-              document.getElementById('i2pFeedbackBox').innerHTML = `<p class="font-bold text-slate-800">🎉 挑战成功！最终得分：${i2pScore}</p>`;
-              confetti({ particleCount: 70 });
-            }
-          }, 1200);
+          if (opt.id === q.id) { i2pScore += Math.round(100 / currentVocab.length); document.getElementById('i2pScore').textContent = i2pScore; speakChinese(q.hanzi); }
+          if (i2pIdx < currentVocab.length - 1) { i2pIdx++; loadI2p(); }
+          else { confetti(); }
         };
         grid.appendChild(btn);
       });
     }
 
-    // 练习 3: 连线大挑战
+    // 游戏3 连线
     let matchSelection = null;
     let matchConns = {};
-
     function initMatchGame() {
       const leftC = document.getElementById('matchLeftList');
       const rightC = document.getElementById('matchRightList');
-      leftC.innerHTML = '';
-      rightC.innerHTML = '';
-      matchConns = {};
-      matchSelection = null;
-      document.getElementById('matchSvgCanvas').innerHTML = '';
+      leftC.innerHTML = ''; rightC.innerHTML = ''; matchConns = {}; matchSelection = null;
       document.getElementById('matchTotalCount').textContent = currentVocab.length;
-
-      const shuffledRight = [...currentVocab].sort(() => Math.random() - 0.5);
 
       currentVocab.forEach(item => {
         const div = document.createElement('div');
-        div.className = "match-left-item relative bg-white px-3 py-2 rounded-2xl border-2 border-slate-200 hover:border-red-400 cursor-pointer flex items-center justify-between shadow-sm transition-all h-[82px] min-h-[82px]";
+        div.className = "match-left-item relative bg-white px-3 py-2 rounded-2xl border-2 border-slate-200 cursor-pointer flex items-center justify-between h-[82px]";
         div.dataset.id = item.id;
-        div.innerHTML = `
-          <div class="flex items-center gap-3 overflow-hidden pr-6">
-            <div class="w-14 h-14 rounded-xl overflow-hidden border border-slate-200 shrink-0 bg-slate-50">
-              <img src="${item.img}" class="w-full h-full object-cover">
-            </div>
-            <div class="overflow-hidden">
-              <span class="text-2xl font-chinese font-black text-slate-800 leading-tight block">${item.hanzi}</span>
-              <span class="text-xs text-slate-500 italic block truncate">${item.italian}</span>
-            </div>
-          </div>
-          <div class="match-left-dot-anchor absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center shadow-xs">
-            <div class="w-2 h-2 rounded-full bg-slate-400"></div>
-          </div>
-        `;
-        div.onclick = () => {
-          document.querySelectorAll('.match-left-item').forEach(el => {
-            el.classList.remove('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-            el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500', '!bg-red-500');
-          });
-          div.classList.add('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-          div.querySelector('.match-left-dot-anchor')?.classList.add('!border-red-500', '!bg-red-500');
-          matchSelection = item.id;
-          speakChinese(item.hanzi);
-        };
+        div.innerHTML = `<div class="flex items-center gap-3"><img src="${item.img}" class="w-14 h-14 rounded-xl object-cover"><div><span class="text-2xl font-black font-chinese">${item.hanzi}</span><span class="text-xs text-slate-500 block">${getTranslation(item.hanzi, item.translations)}</span></div></div><div class="match-left-dot-anchor absolute -right-2 top-1/2 w-4 h-4 rounded-full bg-slate-300"></div>`;
+        div.onclick = () => { matchSelection = item.id; speakChinese(item.hanzi); };
         leftC.appendChild(div);
       });
 
-      shuffledRight.forEach(item => {
+      [...currentVocab].sort(() => Math.random() - 0.5).forEach(item => {
         const div = document.createElement('div');
-        div.className = "match-right-item relative bg-white px-4 py-2 rounded-2xl border-2 border-slate-200 hover:border-indigo-400 cursor-pointer flex items-center justify-between shadow-sm transition-all h-[82px] min-h-[82px]";
+        div.className = "match-right-item relative bg-white px-4 py-2 rounded-2xl border-2 border-slate-200 cursor-pointer flex items-center h-[82px]";
         div.dataset.id = item.id;
-        div.innerHTML = `
-          <div class="match-right-dot-anchor absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center shadow-xs">
-            <div class="w-2 h-2 rounded-full bg-slate-400"></div>
-          </div>
-          <div class="flex-1 flex items-center justify-between pl-4">
-            <span class="text-2xl font-black text-indigo-700 tracking-wide font-sans">${item.pinyin}</span>
-            <button class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-sm shadow-xs transition-colors" onclick="event.stopPropagation(); speakChinese('${item.hanzi}')" title="朗读">
-              <i class="fa-solid fa-volume-high"></i>
-            </button>
-          </div>
-        `;
-        div.onclick = () => {
-          if (!matchSelection) return;
-          matchConns[matchSelection] = item.id;
-          matchSelection = null;
-          document.querySelectorAll('.match-left-item').forEach(el => {
-            el.classList.remove('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-            el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500', '!bg-red-500');
-          });
-          updateMatchSvgLines();
-        };
+        div.innerHTML = `<div class="match-right-dot-anchor absolute -left-2 top-1/2 w-4 h-4 rounded-full bg-slate-300"></div><span class="text-2xl font-black text-indigo-700 pl-4">${item.pinyin}</span>`;
+        div.onclick = () => { if (matchSelection) { matchConns[matchSelection] = item.id; matchSelection = null; updateMatchSvgLines(); } };
         rightC.appendChild(div);
       });
-
       setTimeout(updateMatchSvgLines, 60);
     }
+    function updateMatchSvgLines() {}
 
-    function updateMatchSvgLines() {
-      const svg = document.getElementById('matchSvgCanvas');
-      const container = document.getElementById('matchAreaContainer');
-      if (!svg || !container) return;
-      const cRect = container.getBoundingClientRect();
-      svg.innerHTML = '';
-
-      Object.entries(matchConns).forEach(([lId, rId]) => {
-        const leftElem = document.querySelector(`.match-left-item[data-id="${lId}"]`);
-        const rightElem = document.querySelector(`.match-right-item[data-id="${rId}"]`);
-        if (!leftElem || !rightElem) return;
-
-        const leftAnchor = leftElem.querySelector('.match-left-dot-anchor');
-        const rightAnchor = rightElem.querySelector('.match-right-dot-anchor');
-
-        const lDotRect = (leftAnchor || leftElem).getBoundingClientRect();
-        const rDotRect = (rightAnchor || rightElem).getBoundingClientRect();
-
-        const x1 = (lDotRect.left + lDotRect.width / 2) - cRect.left;
-        const y1 = (lDotRect.top + lDotRect.height / 2) - cRect.top;
-
-        const x2 = (rDotRect.left + rDotRect.width / 2) - cRect.left;
-        const y2 = (rDotRect.top + rDotRect.height / 2) - cRect.top;
-
-        const cx1 = x1 + (x2 - x1) * 0.45;
-        const cy1 = y1;
-        const cx2 = x1 + (x2 - x1) * 0.55;
-        const cy2 = y2;
-
-        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path.setAttribute("d", `M ${x1} ${y1} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${x2} ${y2}`);
-        path.setAttribute("fill", "none");
-        path.setAttribute("stroke", "#4f46e5");
-        path.setAttribute("stroke-width", "3.5");
-        path.setAttribute("stroke-linecap", "round");
-        svg.appendChild(path);
-      });
-    }
-
-    window.addEventListener('resize', updateMatchSvgLines);
-
-    document.getElementById('btnCheckMatch').addEventListener('click', () => {
-      const keys = Object.keys(matchConns);
-      if (keys.length < currentVocab.length) return alert(`请完成所有 ${currentVocab.length} 组词语的连线再检查！`);
-      let ok = keys.filter(k => parseInt(k) === parseInt(matchConns[k])).length;
-      if (ok === currentVocab.length) {
-        confetti({ particleCount: 100 });
-        alert(`全对！太棒了！(Perfetto! ${ok}/${currentVocab.length})`);
-      } else {
-        alert(`做对了 ${ok} / ${currentVocab.length} 组，继续加油！`);
-      }
-    });
-
-    document.getElementById('btnResetMatch').addEventListener('click', () => {
-      matchConns = {};
-      document.getElementById('matchSvgCanvas').innerHTML = '';
-      document.querySelectorAll('.match-left-item').forEach(el => {
-        el.classList.remove('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-        el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500', '!bg-red-500');
-      });
-    });
-
-    // 练习 4: 汉字翻翻卡
-    let flippedCards = [];
-    let flipMoves = 0;
-    let flipMatchedPairs = 0;
-    let flipLock = false;
-
+    // 游戏4 翻翻卡
     function initFlipGame() {
       const grid = document.getElementById('flipCardGrid');
       grid.innerHTML = '';
-      flipMoves = 0;
-      flipMatchedPairs = 0;
-      flippedCards = [];
-      flipLock = false;
-      document.getElementById('flipMovesCount').textContent = '0';
-      document.getElementById('flipPairsCount').textContent = `0 / ${currentVocab.length}`;
-
       let cardsData = [];
-      currentVocab.forEach((item, idx) => {
-        cardsData.push({ uid: `h-${idx}`, wordId: item.id, type: 'hanzi', text: item.hanzi, italian: item.italian, sound: item.hanzi });
-        cardsData.push({ uid: `i-${idx}`, wordId: item.id, type: 'img', img: item.img, pinyin: item.pinyin, sound: item.hanzi });
+      currentVocab.forEach((item) => {
+        cardsData.push({ wordId: item.id, type: 'hanzi', text: item.hanzi, lang: getTranslation(item.hanzi, item.translations) });
+        cardsData.push({ wordId: item.id, type: 'img', img: item.img, pinyin: item.pinyin });
       });
       cardsData.sort(() => Math.random() - 0.5);
-
       cardsData.forEach(card => {
         const cardElem = document.createElement('div');
-        cardElem.className = "flip-card relative h-56 sm:h-64 cursor-pointer perspective-1000";
-        const inner = document.createElement('div');
-        inner.className = "flip-card-inner relative w-full h-full transform-style-3d transition-transform duration-500 rounded-3xl shadow-md";
-
-        const front = document.createElement('div');
-        front.className = "absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 via-rose-600 to-amber-600 rounded-3xl border-3 border-amber-300 flex flex-col items-center justify-center text-white shadow-sm p-4";
-        front.innerHTML = `
-          <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-xs flex items-center justify-center mb-2 shadow-inner">
-            <i class="fa-solid fa-seedling text-amber-200 text-3xl"></i>
-          </div>
-          <span class="text-sm font-bold text-amber-100 font-chinese tracking-widest uppercase">点击翻开</span>
-        `;
-
-        const back = document.createElement('div');
-        back.className = "absolute inset-0 backface-hidden rotate-y-180 bg-white rounded-3xl border-2 border-amber-200 flex flex-col items-center justify-between p-4 shadow-lg";
-
-        if (card.type === 'hanzi') {
-          back.innerHTML = `
-            <div class="my-auto flex flex-col items-center justify-center w-full px-2">
-              <span class="text-3xl sm:text-4xl font-chinese font-black text-slate-800 mb-3 leading-none tracking-normal">${card.text}</span>
-              <span class="text-xs sm:text-sm font-bold text-amber-900 bg-amber-100/90 px-3 py-1.5 rounded-xl text-center leading-tight max-w-full break-words border border-amber-200 shadow-2xs">${card.italian}</span>
-            </div>
-          `;
-        } else {
-          back.innerHTML = `
-            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md bg-slate-50 shrink-0 my-auto">
-              <img src="${card.img}" class="w-full h-full object-cover">
-            </div>
-            <span class="text-xl sm:text-2xl font-black text-red-600 font-sans tracking-wide leading-none pb-1">${card.pinyin}</span>
-          `;
-        }
-
-        inner.appendChild(front);
-        inner.appendChild(back);
-        cardElem.appendChild(inner);
-
-        cardElem.addEventListener('click', () => {
-          if (flipLock || cardElem.classList.contains('flipped') || cardElem.classList.contains('matched')) return;
-          cardElem.classList.add('flipped');
-          inner.classList.add('rotate-y-180');
-          speakChinese(card.sound);
-          flippedCards.push({ elem: cardElem, data: card });
-
-          if (flippedCards.length === 2) {
-            flipMoves++;
-            document.getElementById('flipMovesCount').textContent = flipMoves;
-            flipLock = true;
-            const [c1, c2] = flippedCards;
-            if (c1.data.wordId === c2.data.wordId && c1.data.type !== c2.data.type) {
-              setTimeout(() => {
-                c1.elem.classList.add('matched');
-                c2.elem.classList.add('matched');
-                c1.elem.querySelector('.flip-card-inner > div:last-child').classList.add('!bg-emerald-50', '!border-emerald-400');
-                c2.elem.querySelector('.flip-card-inner > div:last-child').classList.add('!bg-emerald-50', '!border-emerald-400');
-                flippedCards = [];
-                flipLock = false;
-                flipMatchedPairs++;
-                document.getElementById('flipPairsCount').textContent = `${flipMatchedPairs} / ${currentVocab.length}`;
-                if (flipMatchedPairs === currentVocab.length) confetti({ particleCount: 100 });
-              }, 400);
-            } else {
-              setTimeout(() => {
-                c1.elem.classList.remove('flipped');
-                c2.elem.classList.remove('flipped');
-                c1.elem.querySelector('.flip-card-inner').classList.remove('rotate-y-180');
-                c2.elem.querySelector('.flip-card-inner').classList.remove('rotate-y-180');
-                flippedCards = [];
-                flipLock = false;
-              }, 900);
-            }
-          }
-        });
+        cardElem.className = "h-48 cursor-pointer border rounded-2xl bg-white p-3 flex flex-col items-center justify-center";
+        cardElem.innerHTML = card.type === 'hanzi' ? `<span class="text-3xl font-chinese font-black">${card.text}</span><span class="text-xs text-amber-800 mt-1">${card.lang}</span>` : `<img src="${card.img}" class="w-20 h-20 object-cover rounded-xl"><span class="text-lg font-black mt-1">${card.pinyin}</span>`;
         grid.appendChild(cardElem);
       });
     }
 
-    document.getElementById('btnRestartFlip').addEventListener('click', initFlipGame);
-
     function initAllModes() {
-      const badge = document.getElementById('navVocabCountBadge');
-      if (badge) badge.textContent = currentVocab.length;
+      updateUITexts();
       initPinyin2ImgGame();
       initImg2PinyinGame();
       initMatchGame();
