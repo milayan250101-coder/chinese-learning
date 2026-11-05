@@ -97,6 +97,10 @@
           <i class="fa-solid fa-clone"></i>
           <span>4. 汉字翻翻卡 (Memoria)</span>
         </button>
+        <button data-mode="police" class="mode-tab-btn flex items-center gap-2 px-4 py-2.5 text-sm font-bold border-b-2 border-transparent text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>5. 警察抓小偷</span>
+        </button>
       </div>
     </div>
   </header>
@@ -271,6 +275,49 @@
       </div>
 
       <div id="flipCardGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 md:gap-5 select-none"></div>
+    </section>
+
+    <!-- 练习 5: 警察抓小偷 -->
+    <section id="sectionPolice" class="game-section hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)] gap-4">
+        <aside class="bg-gradient-to-br from-indigo-900 to-slate-800 text-white rounded-3xl p-5 shadow-lg">
+          <h2 class="text-lg font-black mb-4">🚓 追捕统计</h2>
+          <div class="rounded-2xl bg-white/10 p-4 mb-3">
+            <p class="text-sm text-indigo-100">警察追捕步数</p>
+            <p id="policeSteps" class="text-3xl font-black tabular-nums">0</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-4 mb-3">
+            <p class="text-sm text-indigo-100">小偷逃跑步数</p>
+            <p id="thiefSteps" class="text-3xl font-black tabular-nums">0</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-4">
+            <p class="text-sm text-indigo-100">答对 / 答错</p>
+            <p class="text-xl font-black"><span id="policeCorrect">0</span> / <span id="policeWrong">0</span></p>
+          </div>
+          <p class="text-xs text-indigo-200 mt-4">答对帮助警察追捕；答错会让小偷趁机多逃几步！</p>
+        </aside>
+        <div class="bg-white/90 rounded-3xl border border-amber-100 p-3 sm:p-5 shadow-sm">
+          <div class="text-center mb-3">
+            <h2 class="text-xl font-black text-slate-800">👮 警察抓小偷</h2>
+            <p class="text-sm text-slate-500">看拼音选出正确词语，帮助警察追上小偷！</p>
+          </div>
+          <div id="policeBoard" class="grid grid-cols-8 gap-1 sm:gap-2 max-w-3xl mx-auto"></div>
+          <div class="max-w-3xl mx-auto mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4 text-center">
+            <div class="text-xs font-bold text-slate-500 mb-1">🎲 本轮骰子</div>
+            <div id="policeDie" class="text-5xl leading-tight mb-2">⚀</div>
+            <div id="policeQuestion" class="text-lg font-black text-slate-800">点击“掷骰子”开始追捕</div>
+            <div id="policeOptions" class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3"></div>
+            <p id="policeFeedback" class="text-sm font-bold mt-3 min-h-6" aria-live="polite"></p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button id="btnPoliceRoll" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold">🎲 掷骰子</button>
+            <button id="btnPoliceHint" class="px-5 py-2.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold">💡 提示</button>
+            <button id="btnPoliceRestart" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold">🔄 重新开始</button>
+            <button id="btnPoliceSound" aria-pressed="true" class="px-5 py-2.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold">🔊 音效：开</button>
+          </div>
+          <p id="policeStatus" class="text-center text-sm font-bold text-indigo-700 mt-3" aria-live="polite">警察从起点出发，小偷已经领先逃跑！</p>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -1018,7 +1065,8 @@
       pinyin2img: document.getElementById('sectionPinyin2Img'),
       img2pinyin: document.getElementById('sectionImg2Pinyin'),
       match: document.getElementById('sectionMatch'),
-      flip: document.getElementById('sectionFlip')
+      flip: document.getElementById('sectionFlip'),
+      police: document.getElementById('sectionPolice')
     };
 
     modeTabs.forEach(btn => {
@@ -1041,6 +1089,128 @@
         }
       });
     });
+
+    // 练习 5: 警察抓小偷
+    const policePath = [];
+    for (let c = 0; c < 8; c++) policePath.push([0, c]);
+    for (let r = 1; r <= 5; r++) policePath.push([r, 7]);
+    for (let c = 6; c >= 0; c--) policePath.push([6, c]);
+    for (let r = 5; r >= 1; r--) policePath.push([r, 0]);
+    let policePos = 0, thiefPos = 17, policeStepTotal = 0, thiefStepTotal = 0;
+    let policeCorrectTotal = 0, policeWrongTotal = 0, policeTurn = false, policeSoundOn = true, policeGameOver = false;
+    let policeQuestionItem = null, policeDieValue = 1, policeLastRoll = 1;
+    const policeDiceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
+    function policeTone(freq = 620, duration = 0.12) {
+      if (!policeSoundOn) return;
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator(), gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination); osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.08, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+        osc.start(); osc.stop(ctx.currentTime + duration);
+        osc.onended = () => ctx.close();
+      } catch (e) {}
+    }
+    function renderPoliceBoard() {
+      const board = document.getElementById('policeBoard');
+      board.innerHTML = '';
+      const cells = new Map(policePath.map((p, i) => [p.join(','), i]));
+      for (let r = 0; r < 7; r++) for (let c = 0; c < 8; c++) {
+        const idx = cells.get(`${r},${c}`);
+        const cell = document.createElement('div');
+        if (idx === undefined) {
+          cell.className = 'hidden sm:flex sm:col-span-1 sm:row-span-1 items-center justify-center';
+          if (r === 3 && c >= 2 && c <= 5) {
+            if (c === 3) cell.innerHTML = '<div class="text-center text-xs sm:text-sm font-black text-slate-500">🎲<br>追捕棋盘</div>';
+          }
+          board.appendChild(cell); continue;
+        }
+        const item = currentVocab.length ? currentVocab[idx % currentVocab.length] : null;
+        cell.className = 'relative min-w-0 aspect-square rounded-lg border border-amber-200 bg-amber-50 overflow-hidden flex flex-col items-center justify-center p-0.5 text-center';
+        if (item) {
+          const img = document.createElement('img'); img.src = item.img || NO_IMAGE_PLACEHOLDER; img.alt = item.hanzi;
+          img.className = 'w-full h-2/3 object-cover rounded';
+          const word = document.createElement('span'); word.className = 'text-[10px] sm:text-xs font-black text-slate-800 leading-tight truncate w-full'; word.textContent = item.hanzi;
+          cell.append(img, word);
+        } else cell.textContent = '词库为空';
+        if (idx === policePos) { const mark = document.createElement('span'); mark.textContent = '👮'; mark.className = 'absolute top-0 left-0 text-lg drop-shadow'; cell.appendChild(mark); cell.classList.add('ring-2','ring-indigo-500'); }
+        if (idx === thiefPos) { const mark = document.createElement('span'); mark.textContent = '🏃'; mark.className = 'absolute top-0 right-0 text-lg drop-shadow'; cell.appendChild(mark); cell.classList.add('ring-2','ring-red-500'); }
+        if (idx === policePos && idx === thiefPos) cell.classList.add('bg-emerald-200');
+        board.appendChild(cell);
+      }
+      document.getElementById('policeSteps').textContent = policeStepTotal;
+      document.getElementById('thiefSteps').textContent = thiefStepTotal;
+      document.getElementById('policeCorrect').textContent = policeCorrectTotal;
+      document.getElementById('policeWrong').textContent = policeWrongTotal;
+    }
+    function resetPoliceGame() {
+      policePos = 0; thiefPos = 17; policeStepTotal = 0; thiefStepTotal = 0;
+      policeCorrectTotal = 0; policeWrongTotal = 0; policeTurn = false; policeGameOver = false; policeQuestionItem = null;
+      document.getElementById('policeDie').textContent = '⚀';
+      document.getElementById('policeQuestion').textContent = '点击“掷骰子”开始追捕';
+      document.getElementById('policeOptions').innerHTML = '';
+      document.getElementById('policeFeedback').textContent = '';
+      document.getElementById('policeStatus').textContent = '警察从起点出发，小偷已经领先逃跑！';
+      document.getElementById('btnPoliceRoll').disabled = false;
+      renderPoliceBoard();
+    }
+    function startPoliceTurn() {
+      if (policeGameOver || policeTurn || currentVocab.length < 2) {
+        if (currentVocab.length < 2) document.getElementById('policeStatus').textContent = '请先在词库中准备至少两个词语。';
+        return;
+      }
+      policeTurn = true;
+      policeDieValue = 1 + Math.floor(Math.random() * 6);
+      document.getElementById('policeDie').textContent = policeDiceFaces[policeDieValue - 1];
+      policeQuestionItem = currentVocab[Math.floor(Math.random() * currentVocab.length)];
+      document.getElementById('policeQuestion').textContent = `请选出“${policeQuestionItem.pinyin}”对应的汉字`;
+      const choices = [policeQuestionItem, ...currentVocab.filter(v => v.id !== policeQuestionItem.id).sort(() => Math.random() - 0.5).slice(0, 3)].sort(() => Math.random() - 0.5);
+      const options = document.getElementById('policeOptions'); options.innerHTML = '';
+      choices.forEach(item => {
+        const b = document.createElement('button'); b.textContent = item.hanzi;
+        b.className = 'rounded-xl border border-slate-200 bg-white px-2 py-3 font-black text-slate-800 hover:bg-indigo-50';
+        b.addEventListener('click', () => answerPoliceTurn(item.id === policeQuestionItem.id));
+        options.appendChild(b);
+      });
+      document.getElementById('btnPoliceRoll').disabled = true;
+      document.getElementById('policeFeedback').textContent = '先答题，再看警察能否追上小偷！';
+    }
+    function answerPoliceTurn(correct) {
+      if (!policeTurn || policeGameOver) return;
+      policeTurn = false;
+      document.getElementById('policeOptions').innerHTML = '';
+      const policeMove = policeDieValue;
+      const thiefMove = 1 + Math.floor(Math.random() * 2) + (correct ? 0 : 2);
+      policePos = (policePos + policeMove) % policePath.length;
+      thiefPos = (thiefPos + thiefMove) % policePath.length;
+      policeStepTotal += policeMove; thiefStepTotal += thiefMove;
+      if (correct) { policeCorrectTotal++; document.getElementById('policeFeedback').textContent = '答对了！警察正常追捕，小偷只随机逃跑少量步数。'; policeTone(780); }
+      else { policeWrongTotal++; document.getElementById('policeFeedback').textContent = '答错了！小偷趁机额外逃跑 2 格！'; policeTone(260,0.2); }
+      renderPoliceBoard();
+      const caught = policePos === thiefPos || (policeMove >= 1 && ((policePos - policeMove + policePath.length) % policePath.length < thiefPos && policePos >= thiefPos));
+      if (caught) {
+        policeGameOver = true;
+        document.getElementById('policeStatus').textContent = '🎉 抓到小偷了！你是追捕高手！';
+        document.getElementById('btnPoliceRoll').disabled = true;
+        policeTone(950,0.3);
+      } else {
+        document.getElementById('policeStatus').textContent = `警察前进 ${policeMove} 格，小偷逃跑 ${thiefMove} 格。继续追捕！`;
+        document.getElementById('btnPoliceRoll').disabled = false;
+      }
+    }
+    document.getElementById('btnPoliceRoll').addEventListener('click', startPoliceTurn);
+    document.getElementById('btnPoliceRestart').addEventListener('click', resetPoliceGame);
+    document.getElementById('btnPoliceHint').addEventListener('click', () => {
+      if (!policeQuestionItem) { document.getElementById('policeFeedback').textContent = '先掷骰子，出现题目后这里会显示提示。'; return; }
+      document.getElementById('policeFeedback').textContent = `提示：这个词的意思是“${getTranslation(policeQuestionItem)}”。`;
+    });
+    document.getElementById('btnPoliceSound').addEventListener('click', e => {
+      policeSoundOn = !policeSoundOn;
+      e.currentTarget.textContent = policeSoundOn ? '🔊 音效：开' : '🔇 音效：关';
+      e.currentTarget.setAttribute('aria-pressed', String(policeSoundOn));
+    });
+    resetPoliceGame();
 
     // 练习 1: 看拼音选图片
     let p2iIdx = 0, p2iScore = 0;
