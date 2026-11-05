@@ -1248,6 +1248,19 @@
       }
     }
 
+
+    /* 第五关：只放大外围棋盘格，中央操作区保持原尺寸与居中位置 */
+    @media (min-width: 901px) {
+      #sectionPolice #policeBoard {
+        height: clamp(560px, 87vh, 980px) !important;
+        grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+      }
+      #sectionPolice #policeAnswerPanel {
+        top: 26.35% !important;
+        height: 47.3% !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
