@@ -742,6 +742,82 @@
       #policeBoard .police-player-marker { font-size: 20px !important; }
     }
 
+  
+    /* 第五关本轮调整：答案区右侧竖排操作按钮，补齐右下角并放大图片 */
+    @media (min-width: 901px) {
+      #sectionPolice > .grid > div:last-child {
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: auto minmax(0, 1fr) auto !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+      }
+      #policeBoard {
+        grid-column: 1 / -1 !important;
+        height: clamp(470px, 63vh, 680px) !important;
+      }
+      #policeAnswerPanel {
+        grid-column: 1 / -1;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(150px, 180px);
+        align-items: stretch;
+        gap: 14px;
+        margin-top: 0 !important;
+        padding: 12px !important;
+      }
+      #policeAnswerChoices { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+      #policeOptions {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+      }
+      #policeOptions .police-answer-option {
+        min-height: 64px !important;
+        padding: 10px 8px !important;
+        justify-content: center !important;
+      }
+      #policeControls {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center;
+        gap: 9px !important;
+        padding-left: 12px;
+        border-left: 1px solid #cbd5e1;
+      }
+      #policeControls button {
+        width: 100%;
+        min-height: 48px;
+        padding: 10px 8px !important;
+        font-size: 14px !important;
+        white-space: nowrap;
+      }
+      #policeStatus { grid-column: 1 / -1; margin: 0 !important; }
+    }
+    #policeBoard .police-cell-image {
+      width: 78% !important;
+      flex: 0 0 78% !important;
+      height: 100% !important;
+    }
+    #policeBoard .police-cell-word {
+      width: 22% !important;
+      flex: 0 0 22% !important;
+      font-size: clamp(13px, 1.1vw, 18px) !important;
+    }
+    @media (max-width: 900px) {
+      #policeAnswerPanel {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+      #policeControls {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px !important;
+      }
+      #policeControls button { flex: 1 1 130px; padding: 10px 8px !important; }
+      #policeBoard { height: clamp(360px, 52vh, 500px) !important; }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -1004,18 +1080,20 @@
         </aside>
         <div class="bg-white/90 rounded-3xl border border-amber-100 p-3 sm:p-5 shadow-sm">
           <div id="policeBoard" class="grid grid-cols-8 gap-1 sm:gap-2 max-w-3xl mx-auto"></div>
-          <div class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3 text-center">
-            <div class="hidden">🎲 本轮骰子</div>
-            <div id="policeDie" class="hidden">⚀</div>
-            <div id="policeQuestion" class="hidden">点击“掷骰子”开始追捕</div>
-            <div id="policeOptions" class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3"></div>
-            <p id="policeFeedback" class="text-sm font-bold mt-3 min-h-6" aria-live="polite"></p>
-          </div>
-          <div class="flex flex-wrap justify-center gap-2 mt-4">
-            <button id="btnPoliceRoll" class="hidden">🎲 掷骰子</button>
-            <button id="btnPoliceHint" class="px-5 py-2.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold">💡 提示</button>
-            <button id="btnPoliceRestart" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold">🔄 重新开始</button>
-            <button id="btnPoliceSound" aria-pressed="true" class="px-5 py-2.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold">🔊 音效：开</button>
+          <div id="policeAnswerPanel" class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3">
+            <div id="policeAnswerChoices" class="min-w-0">
+              <div class="hidden">🎲 本轮骰子</div>
+              <div id="policeDie" class="hidden">⚀</div>
+              <div id="policeQuestion" class="hidden">点击“掷骰子”开始追捕</div>
+              <div id="policeOptions" class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-1"></div>
+              <p id="policeFeedback" class="text-sm font-bold mt-3 min-h-6" aria-live="polite"></p>
+            </div>
+            <div id="policeControls" class="flex flex-col items-stretch justify-center gap-3">
+              <button id="btnPoliceRoll" class="hidden">🎲 掷骰子</button>
+              <button id="btnPoliceHint" class="w-full px-3 py-3 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold">💡 提示</button>
+              <button id="btnPoliceRestart" class="w-full px-3 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold">🔄 重新开始</button>
+              <button id="btnPoliceSound" aria-pressed="true" class="w-full px-3 py-3 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold">🔊 音效：开</button>
+            </div>
           </div>
           <p id="policeStatus" class="text-center text-sm font-bold text-indigo-700 mt-3" aria-live="polite">警察从起点出发，小偷已经领先逃跑！</p>
         </div>
@@ -1825,6 +1903,7 @@
     const policePath = [];
     for (let c = 0; c < 8; c++) policePath.push([0, c]);
     for (let r = 1; r <= 5; r++) policePath.push([r, 7]);
+    policePath.push([6, 7]); // 补齐棋盘右下角缺失的格子
     for (let c = 6; c >= 0; c--) policePath.push([6, c]);
     for (let r = 5; r >= 1; r--) policePath.push([r, 0]);
     let policePos = 0, thiefPos = 17, policeStepTotal = 0, thiefStepTotal = 0;
