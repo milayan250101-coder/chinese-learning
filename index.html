@@ -1172,6 +1172,32 @@
       }
     }
 
+  
+    /* 第五关骰子控制只保留一个；右侧骰子在上，三个按钮在下 */
+    @media (min-width: 901px) {
+      #sectionPolice #policeControls {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: auto repeat(3, minmax(34px, auto)) !important;
+        align-content: center !important;
+        justify-items: stretch !important;
+        gap: clamp(5px, .65vw, 9px) !important;
+        overflow: hidden !important;
+      }
+      #sectionPolice #policeControls > .police-center-dice {
+        grid-row: 1 !important;
+        min-height: 74px !important;
+        margin: 0 !important;
+      }
+      #sectionPolice #policeControls > #btnPoliceHint { grid-row: 2 !important; }
+      #sectionPolice #policeControls > #btnPoliceRestart { grid-row: 3 !important; }
+      #sectionPolice #policeControls > #btnPoliceSound { grid-row: 4 !important; }
+      #sectionPolice #policeAnswerPanel {
+        height: 71% !important;
+        overflow: hidden !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -2323,12 +2349,14 @@
         if (idx === policePos && idx === thiefPos) cell.classList.add('bg-emerald-200');
         board.appendChild(cell);
       }
+      // renderPoliceBoard 会反复执行；先移除上一次移入操作区的骰子控制，避免越积越多。
+      const policeControls = document.getElementById('policeControls');
+      policeControls.querySelectorAll('.police-center-dice').forEach(el => el.remove());
       const centerControl = document.createElement('div');
       centerControl.className = 'police-center-dice absolute rounded-2xl border-2 border-indigo-300 bg-white/95 shadow-xl flex items-center justify-center gap-3 z-10';
       centerControl.innerHTML = `<div class="police-center-die text-5xl sm:text-6xl leading-none" id="policeBoardDie">${policeDiceFaces[policeDieValue - 1]}</div><div class="police-center-actions"><button type="button" class="px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base font-black shadow-lg">🎲 掷骰子</button><div class="text-xs font-bold text-indigo-800 mt-1">👮 警察　🦹 小偷</div></div>`;
       centerControl.querySelector('button').addEventListener('click', startPoliceTurn);
       // 将骰子控制移入中央空白区右半边的顶部；答案面板覆盖在棋盘中央空白区。
-      const policeControls = document.getElementById('policeControls');
       policeControls.insertBefore(centerControl, policeControls.firstChild);
       document.getElementById('policeSteps').textContent = policeStepTotal;
       document.getElementById('thiefSteps').textContent = thiefStepTotal;
