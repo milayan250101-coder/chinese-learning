@@ -499,7 +499,7 @@
 
     // 版本化翻译缓存：旧版本可能把错误语言的结果保存到 translations.de 等字段。
     // 首次升级时清除旧缓存，重新按当前选择的目标语言翻译。
-    const TRANSLATION_CACHE_VERSION = "2";
+    const TRANSLATION_CACHE_VERSION = "3";
     if (localStorage.getItem("chinese_translation_cache_version") !== TRANSLATION_CACHE_VERSION) {
       for (const item of currentVocab) item.translations = {};
       localStorage.setItem("chinese_italian_vocab", JSON.stringify(currentVocab));
@@ -514,23 +514,62 @@
       return item.translations?.[selectedLanguage] || (selectedLanguage === "it" ? item.italian : item.hanzi);
     }
 
+    // 常用初级词汇的人工核对译文优先于机器翻译，避免中文词被错误地转成英语。
+    const BUILTIN_TRANSLATIONS = {
+      "苹果": { it: "Mela", en: "Apple", fr: "Pomme", de: "Apfel", es: "Manzana" },
+      "香蕉": { it: "Banana", en: "Banana", fr: "Banane", de: "Banane", es: "Plátano" },
+      "西瓜": { it: "Anguria", en: "Watermelon", fr: "Pastèque", de: "Wassermelone", es: "Sandía" },
+      "葡萄": { it: "Uva", en: "Grape", fr: "Raisin", de: "Traube", es: "Uva" },
+      "桃子": { it: "Pesca", en: "Peach", fr: "Pêche", de: "Pfirsich", es: "Melocotón" },
+      "草莓": { it: "Fragola", en: "Strawberry", fr: "Fraise", de: "Erdbeere", es: "Fresa" },
+      "橙子": { it: "Arancia", en: "Orange", fr: "Orange", de: "Orange", es: "Naranja" },
+      "猫": { it: "Gatto", en: "Cat", fr: "Chat", de: "Katze", es: "Gato" },
+      "狗": { it: "Cane", en: "Dog", fr: "Chien", de: "Hund", es: "Perro" },
+      "汽车": { it: "Automobile", en: "Car", fr: "Voiture", de: "Auto", es: "Coche" },
+      "自行车": { it: "Bicicletta", en: "Bicycle", fr: "Vélo", de: "Fahrrad", es: "Bicicleta" },
+      "桌子": { it: "Tavolo", en: "Table", fr: "Table", de: "Tisch", es: "Mesa" },
+      "椅子": { it: "Sedia", en: "Chair", fr: "Chaise", de: "Stuhl", es: "Silla" },
+      "床": { it: "Letto", en: "Bed", fr: "Lit", de: "Bett", es: "Cama" },
+      "衣柜": { it: "Armadio", en: "Wardrobe", fr: "Armoire", de: "Kleiderschrank", es: "Armario" }
+    };
+
     async function fetchTranslation(text, language = selectedLanguage) {
       const clean = text.trim();
       if (!clean) return "";
       if (language === "zh") return clean;
+      const known = BUILTIN_TRANSLATIONS[clean]?.[language];
+      if (known) return known;
       if (language === "it" && BUILTIN_IT[clean]) return BUILTIN_IT[clean];
-      try {
-        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=zh|${language}`;
-        const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
-        if (res.ok) {
+
+      // Google Translate endpoint first; MyMemory is a secondary fallback.
+      const endpoints = [
+        async () => {
+          const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=zh-CN&tl=${language}&dt=t&q=${encodeURIComponent(clean)}`;
+          const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+          if (!res.ok) throw new Error(`Google Translate HTTP ${res.status}`);
           const data = await res.json();
-          const translated = data?.responseData?.translatedText?.trim();
-          if (translated && !/mymemory|quota|MYMEMORY WARNING/i.test(translated)) return translated;
+          return Array.isArray(data?.[0]) ? data[0].map(part => part?.[0] || "").join("").trim() : "";
+        },
+        async () => {
+          const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=zh|${language}`;
+          const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+          if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
+          const data = await res.json();
+          if (Number(data?.responseStatus) !== 200) return "";
+          return data?.responseData?.translatedText?.trim() || "";
         }
-      } catch (error) {
-        console.warn("Translation request failed:", language, error);
+      ];
+
+      for (const request of endpoints) {
+        try {
+          const translated = await request();
+          if (translated && translated !== clean && !/mymemory|quota|warning|error/i.test(translated)) return translated;
+        } catch (error) {
+          console.warn("Translation provider failed:", language, error);
+        }
       }
-      return language === "it" ? (BUILTIN_IT[clean] || clean) : clean;
+      // Never substitute the Italian or English text as another language.
+      return clean;
     }
 
     async function ensureCurrentLanguageTranslations() {
