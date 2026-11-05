@@ -664,6 +664,84 @@
     @media (min-width: 901px) { #policeBoard { height: clamp(340px, 48vh, 470px) !important; } #policeBoard > div:not(.absolute) { padding: 3px !important; } #sectionPolice > .grid > div:last-child > div:nth-of-type(2) { padding: 14px !important; margin-top: 12px !important; } }
     @media (max-width: 900px) { #policeBoard .police-cell-word { font-size: 12px !important; } #policeBoard .police-player-marker { font-size: 32px !important; } #policeBoardDie { font-size: 48px !important; } }
 
+
+    /* 第五关最终布局：移除重复提示，放大棋盘与词语图片，玩家标志不遮挡主体 */
+    @media (min-width: 901px) {
+      #sectionPolice > .grid {
+        grid-template-columns: minmax(170px, 195px) minmax(0, 1fr) !important;
+        gap: clamp(10px, 1vw, 16px) !important;
+        align-items: stretch;
+      }
+      #sectionPolice aside { padding: 12px !important; }
+      #sectionPolice aside > div { padding: 10px !important; margin-bottom: 8px !important; }
+      #sectionPolice > .grid > div:last-child {
+        min-width: 0;
+        padding: clamp(10px, 1vw, 16px) !important;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(285px, 330px) !important;
+        grid-template-rows: minmax(0, 1fr) auto auto;
+        align-items: stretch;
+        gap: 10px 14px !important;
+      }
+      #policeBoard {
+        grid-column: 1 / -1;
+        width: 100% !important;
+        max-width: none !important;
+        height: clamp(440px, 59vh, 620px) !important;
+        grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+        grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+        gap: clamp(4px, .45vw, 7px) !important;
+      }
+      #policeBoard > div:not(.absolute) {
+        min-width: 0;
+        padding: 2px !important;
+      }
+    }
+    #policeBoard .police-cell-image {
+      width: 74% !important;
+      height: 96% !important;
+      flex: 0 0 74% !important;
+      object-fit: contain !important;
+      background: #fff;
+      border-radius: 7px;
+    }
+    #policeBoard .police-cell-word {
+      width: 26% !important;
+      flex: 0 0 26% !important;
+      font-size: clamp(13px, 1.15vw, 19px) !important;
+      line-height: 1.08 !important;
+      padding: 1px !important;
+      overflow-wrap: anywhere;
+    }
+    #policeBoard .police-player-marker {
+      top: auto !important;
+      bottom: 2px !important;
+      left: 2px !important;
+      right: auto !important;
+      transform: none !important;
+      z-index: 6;
+      font-size: clamp(20px, 2vw, 29px) !important;
+      line-height: 1 !important;
+      padding: 1px 3px !important;
+      background: rgba(255,255,255,.96) !important;
+      border: 1px solid rgba(100,116,139,.35);
+      box-shadow: 0 1px 4px rgba(15,23,42,.2) !important;
+    }
+    #policeBoard .police-marker-cop,
+    #policeBoard .police-marker-thief {
+      left: 2px !important;
+      right: auto !important;
+    }
+    #policeDie, #policeQuestion { display: none !important; }
+    #sectionPolice #policeBoard + div > div:first-child { display: none !important; }
+    @media (max-width: 900px) {
+      #sectionPolice > .grid > div:last-child { padding: 8px !important; }
+      #policeBoard { height: clamp(330px, 48vh, 460px) !important; }
+      #policeBoard .police-cell-image { width: 70% !important; flex-basis: 70% !important; }
+      #policeBoard .police-cell-word { width: 30% !important; flex-basis: 30% !important; font-size: 12px !important; }
+      #policeBoard .police-player-marker { font-size: 20px !important; }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -925,20 +1003,16 @@
           <p class="text-xs text-indigo-200 mt-4">答对帮助警察追捕；答错会让小偷趁机多逃几步！</p>
         </aside>
         <div class="bg-white/90 rounded-3xl border border-amber-100 p-3 sm:p-5 shadow-sm">
-          <div class="text-center mb-3">
-            <h2 class="text-xl font-black text-slate-800">👮 警察抓小偷</h2>
-            <p class="text-sm text-slate-500">看拼音选出正确词语，帮助警察追上小偷！</p>
-          </div>
           <div id="policeBoard" class="grid grid-cols-8 gap-1 sm:gap-2 max-w-3xl mx-auto"></div>
           <div class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3 text-center">
-            <div class="text-xs font-bold text-slate-500 mb-1">🎲 本轮骰子</div>
-            <div id="policeDie" class="text-5xl leading-tight mb-2">⚀</div>
-            <div id="policeQuestion" class="text-base font-black text-slate-800">点击“掷骰子”开始追捕</div>
+            <div class="hidden">🎲 本轮骰子</div>
+            <div id="policeDie" class="hidden">⚀</div>
+            <div id="policeQuestion" class="hidden">点击“掷骰子”开始追捕</div>
             <div id="policeOptions" class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3"></div>
             <p id="policeFeedback" class="text-sm font-bold mt-3 min-h-6" aria-live="polite"></p>
           </div>
           <div class="flex flex-wrap justify-center gap-2 mt-4">
-            <button id="btnPoliceRoll" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold">🎲 掷骰子</button>
+            <button id="btnPoliceRoll" class="hidden">🎲 掷骰子</button>
             <button id="btnPoliceHint" class="px-5 py-2.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold">💡 提示</button>
             <button id="btnPoliceRestart" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold">🔄 重新开始</button>
             <button id="btnPoliceSound" aria-pressed="true" class="px-5 py-2.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold">🔊 音效：开</button>
