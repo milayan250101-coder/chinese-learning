@@ -496,6 +496,15 @@
     // 多语言翻译：顶部选择目标语言，翻译结果按词条缓存
     const LANGUAGE_NAMES = { it: "Italiano", en: "English", fr: "Français", de: "Deutsch", es: "Español", zh: "中文" };
     let selectedLanguage = localStorage.getItem("chinese_learning_language") || "it";
+
+    // 版本化翻译缓存：旧版本可能把错误语言的结果保存到 translations.de 等字段。
+    // 首次升级时清除旧缓存，重新按当前选择的目标语言翻译。
+    const TRANSLATION_CACHE_VERSION = "2";
+    if (localStorage.getItem("chinese_translation_cache_version") !== TRANSLATION_CACHE_VERSION) {
+      for (const item of currentVocab) item.translations = {};
+      localStorage.setItem("chinese_italian_vocab", JSON.stringify(currentVocab));
+      localStorage.setItem("chinese_translation_cache_version", TRANSLATION_CACHE_VERSION);
+    }
     const languageSelector = document.getElementById("languageSelector");
     if (languageSelector) languageSelector.value = selectedLanguage;
 
