@@ -1261,6 +1261,55 @@
       }
     }
 
+
+    /* 第五关：游戏主体横向铺满页面，统计栏改为顶部横排，不再挤占左侧宽度 */
+    @media (min-width: 901px) {
+      #sectionPolice > .grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+        max-width: none !important;
+        gap: 8px !important;
+      }
+      #sectionPolice > .grid > aside {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-template-rows: auto auto !important;
+        align-items: center !important;
+        gap: 6px 10px !important;
+        padding: 8px 12px !important;
+        border-radius: 14px !important;
+      }
+      #sectionPolice > .grid > aside h2,
+      #sectionPolice > .grid > aside > p {
+        grid-column: 1 / -1 !important;
+        margin: 0 !important;
+      }
+      #sectionPolice > .grid > aside > div {
+        margin: 0 !important;
+        padding: 6px 10px !important;
+      }
+      #sectionPolice > .grid > aside > div p:first-child {
+        font-size: 11px !important;
+      }
+      #sectionPolice > .grid > aside > div p:last-child {
+        font-size: 20px !important;
+        line-height: 1.1 !important;
+      }
+      #sectionPolice > .grid > div:last-child {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 6px !important;
+      }
+      #sectionPolice #policePlayArea {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+      #sectionPolice #policeBoard {
+        width: 100% !important;
+        transform: none !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
