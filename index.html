@@ -1381,6 +1381,46 @@
       }
     }
 
+
+    /* 第五关：让外围图片棋盘、白色底板和左侧统计栏共用同一高度 */
+    @media (min-width: 901px) {
+      #sectionPolice {
+        --police-fit-height: clamp(280px, calc(100dvh - 230px), 900px);
+      }
+      #sectionPolice > .grid {
+        align-items: stretch !important;
+      }
+      #sectionPolice > .grid > aside,
+      #sectionPolice > .grid > div:last-child {
+        height: calc(var(--police-fit-height) + 12px) !important;
+        min-height: 0 !important;
+        box-sizing: border-box !important;
+      }
+      #sectionPolice > .grid > div:last-child {
+        padding: 6px !important;
+        overflow: hidden !important;
+        align-self: stretch !important;
+      }
+      #sectionPolice #policePlayArea {
+        height: var(--police-fit-height) !important;
+        min-height: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+      #sectionPolice #policeBoard {
+        height: 100% !important;
+        min-height: 0 !important;
+        max-height: 100% !important;
+        width: 100% !important;
+      }
+      #sectionPolice #policeAnswerPanel {
+        box-sizing: border-box !important;
+      }
+      #sectionPolice > .grid > aside {
+        justify-content: flex-start !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
