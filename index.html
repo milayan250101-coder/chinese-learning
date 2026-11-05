@@ -49,13 +49,112 @@
       background-color: #eff6ff !important;
       transform: scale(1.02);
     }
+
+    /* 游戏工作区：充分利用屏幕宽度，减少左右留白 */
+    header > div,
+    header > div > div,
+    body > div.max-w-6xl,
+    main {
+      width: 100%;
+      max-width: none !important;
+    }
+    header > div,
+    header > div > div {
+      padding-left: clamp(10px, 1.6vw, 26px);
+      padding-right: clamp(10px, 1.6vw, 26px);
+    }
+    main {
+      padding: clamp(8px, 1.2vw, 18px);
+    }
+    #sectionPinyin2Img > div,
+    #sectionImg2Pinyin > div {
+      width: 100%;
+      max-width: none !important;
+      padding: clamp(12px, 1.6vw, 24px);
+    }
+    #sectionPinyin2Img .max-w-xl,
+    #sectionImg2Pinyin .max-w-md {
+      max-width: 100%;
+    }
+    #sectionPolice > .grid {
+      grid-template-columns: minmax(165px, 205px) minmax(0, 1fr);
+      align-items: stretch;
+      gap: 12px;
+    }
+    #sectionPolice aside {
+      padding: 14px;
+    }
+    #sectionPolice aside h2 {
+      margin-bottom: 10px;
+    }
+    #sectionPolice aside > div {
+      padding: 10px;
+      margin-bottom: 8px;
+    }
+    #policeBoard {
+      width: 100%;
+      max-width: none;
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+      gap: clamp(3px, .45vw, 7px);
+    }
+    #policeBoard > div:not(.absolute) {
+      aspect-ratio: 1.25 / 1;
+      min-height: 0;
+    }
+    #sectionPolice > .grid > div:last-child {
+      min-width: 0;
+      padding: clamp(8px, 1vw, 14px);
+    }
+    #sectionPolice > .grid > div:last-child > div:nth-of-type(2) {
+      max-width: none;
+      margin-top: 8px;
+      padding: 10px;
+    }
+    #sectionPolice > .grid > div:last-child > div:first-child {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 900px) {
+      #sectionPolice > .grid {
+        grid-template-columns: 1fr;
+      }
+      #sectionPolice aside {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+        align-items: center;
+      }
+      #sectionPolice aside h2,
+      #sectionPolice aside > p {
+        grid-column: 1 / -1;
+        margin: 0;
+      }
+      #sectionPolice aside > div {
+        margin: 0;
+      }
+    }
+    @media (max-height: 800px) and (min-width: 901px) {
+      header > div:first-child {
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+      main {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      #sectionPinyin2Img > div,
+      #sectionImg2Pinyin > div {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
 
   <!-- 顶部导航条 -->
   <header class="bg-white/95 backdrop-blur-md sticky top-0 z-30 shadow-sm border-b border-amber-100">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+    <div class="mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center space-x-3">
         <div>
           <h1 class="text-lg md:text-xl font-black text-slate-800 tracking-tight flex items-center gap-2">
@@ -79,7 +178,7 @@
     </div>
 
     <!-- 练习模式选项卡 Tab -->
-    <div class="max-w-6xl mx-auto px-4">
+    <div class="mx-auto px-4">
       <div class="flex space-x-2 border-b border-slate-200/80 overflow-x-auto py-1" id="modeTabs">
         <button data-mode="pinyin2img" class="mode-tab-btn flex items-center gap-2 px-4 py-2.5 text-sm font-bold border-b-2 border-red-600 text-red-600 transition-colors whitespace-nowrap">
           <i class="fa-solid fa-bullseye"></i>
@@ -106,8 +205,8 @@
   </header>
 
   <!-- 顶部快捷输入栏 -->
-  <div class="max-w-6xl w-full mx-auto px-4 pt-4">
-    <div class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 rounded-3xl p-4 md:p-5 shadow-lg shadow-red-200 text-white">
+  <div class="w-full mx-auto px-3 pt-2">
+    <div class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 rounded-2xl p-3 md:p-4 shadow-lg shadow-red-200 text-white">
       <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
         <div class="shrink-0">
           <div class="flex items-center gap-2 font-black text-base md:text-lg">
@@ -155,11 +254,11 @@
   </div>
 
   <!-- 主体互动区域 -->
-  <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6 flex flex-col justify-start">
+  <main class="flex-1 w-full mx-auto p-3 md:p-4 flex flex-col justify-start">
     
     <!-- 练习 1: 看拼音选图片 -->
     <section id="sectionPinyin2Img" class="game-section">
-      <div class="max-w-3xl mx-auto bg-white/90 backdrop-blur rounded-3xl p-6 md:p-8 shadow-sm border border-amber-100 text-center">
+      <div class="w-full mx-auto bg-white/90 backdrop-blur rounded-2xl p-3 md:p-4 shadow-sm border border-amber-100 text-center">
         <div class="flex items-center justify-between mb-6 pb-3 border-b border-slate-100">
           <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
             第 <span id="p2iCurrentNum">1</span> / <span id="p2iTotalNum">5</span> 题
@@ -312,7 +411,7 @@
             <p class="text-sm text-slate-500">看拼音选出正确词语，帮助警察追上小偷！</p>
           </div>
           <div id="policeBoard" class="grid grid-cols-8 gap-1 sm:gap-2 max-w-3xl mx-auto"></div>
-          <div class="max-w-3xl mx-auto mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4 text-center">
+          <div class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3 text-center">
             <div class="text-xs font-bold text-slate-500 mb-1">🎲 本轮骰子</div>
             <div id="policeDie" class="text-5xl leading-tight mb-2">⚀</div>
             <div id="policeQuestion" class="text-lg font-black text-slate-800">点击“掷骰子”开始追捕</div>
