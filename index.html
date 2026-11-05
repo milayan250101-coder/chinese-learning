@@ -656,6 +656,12 @@
       btn.disabled = false;
       btn.innerHTML = `<i class="fa-solid fa-bolt-lightning text-red-600"></i> 一键生成游戏`;
       confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+
+      // 新词没有教师确认过的配图时，自动打开现有选图窗口。
+      const firstUnillustratedIndex = currentVocab.findIndex(item => !item.img || item.img === NO_IMAGE_PLACEHOLDER);
+      if (firstUnillustratedIndex >= 0) {
+        setTimeout(() => openImagePicker(firstUnillustratedIndex), 250);
+      }
     }
 
     document.getElementById('btnDirectGenerate').addEventListener('click', () => {
@@ -746,17 +752,29 @@
       const hInputs = document.querySelectorAll('.vocab-h-input');
       const pInputs = document.querySelectorAll('.vocab-p-input');
       const iInputs = document.querySelectorAll('.vocab-i-input');
+      const originalWords = currentVocab.map(item => item.hanzi);
+      let imageSearchIndex = -1;
 
       for (let i = 0; i < currentVocab.length; i++) {
+        const previousWord = originalWords[i];
         if (hInputs[i]) currentVocab[i].hanzi = hInputs[i].value.trim() || currentVocab[i].hanzi;
         if (pInputs[i]) currentVocab[i].pinyin = pInputs[i].value.trim() || currentVocab[i].pinyin;
         if (iInputs[i]) currentVocab[i].italian = iInputs[i].value.trim() || currentVocab[i].italian;
         currentVocab[i].id = i + 1;
+
+        const isNewOrChangedWord = previousWord === undefined || currentVocab[i].hanzi !== previousWord;
+        if (isNewOrChangedWord) {
+          currentVocab[i].img = BUILTIN_IMG_PRESETS[currentVocab[i].hanzi] || NO_IMAGE_PLACEHOLDER;
+          if (imageSearchIndex < 0 && currentVocab[i].img === NO_IMAGE_PLACEHOLDER) imageSearchIndex = i;
+        }
       }
 
       localStorage.setItem('chinese_italian_vocab', JSON.stringify(currentVocab));
       closeVocabModal();
       initAllModes();
+      if (imageSearchIndex >= 0) {
+        setTimeout(() => openImagePicker(imageSearchIndex), 250);
+      }
     });
 
     document.getElementById('btnResetDefaultVocab').addEventListener('click', () => {
@@ -797,11 +815,13 @@
       setTimeout(() => imagePickerModal.classList.add('hidden'), 200);
     }
 
-    // ⭐ 严格带上你的官方标准参数 &udm=2 打开 Google 图片搜索 ⭐
+    // 在新标签页打开真正的 Google 图片搜索；图片由老师预览并手动选用。
     window.launchGoogleSearch = function() {
       const item = currentVocab[activePickerIndex];
+      if (!item) return;
       const queryStr = `${item.hanzi} ${getTranslation(item)}`;
-      window.open(`https://commons.wikimedia.org/w/index.php?search=${encodeURIComponent(queryStr)}&title=Special:MediaSearch&type=image`, '_blank');
+      const googleImagesUrl = `https://www.google.com/search?tbm=isch&udm=2&q=${encodeURIComponent(queryStr)}`;
+      window.open(googleImagesUrl, '_blank', 'noopener,noreferrer');
     };
 
     // 内部自定义搜索
