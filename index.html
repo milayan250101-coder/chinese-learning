@@ -1116,6 +1116,7 @@
       const board = document.getElementById('policeBoard');
       board.innerHTML = '';
       const cells = new Map(policePath.map((p, i) => [p.join(','), i]));
+      board.classList.add('relative');
       for (let r = 0; r < 7; r++) for (let c = 0; c < 8; c++) {
         const idx = cells.get(`${r},${c}`);
         const cell = document.createElement('div');
@@ -1139,6 +1140,11 @@
         if (idx === policePos && idx === thiefPos) cell.classList.add('bg-emerald-200');
         board.appendChild(cell);
       }
+      const centerControl = document.createElement('div');
+      centerControl.className = 'absolute left-1/4 top-1/4 w-1/2 h-1/2 rounded-2xl border-2 border-indigo-200 bg-white/95 shadow-lg flex flex-col items-center justify-center gap-1 z-10';
+      centerControl.innerHTML = `<div class="text-2xl sm:text-4xl" id="policeBoardDie">${policeDiceFaces[policeDieValue - 1]}</div><button type="button" class="px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-indigo-600 text-white text-[10px] sm:text-sm font-black">🎲 掷骰子</button>`;
+      centerControl.querySelector('button').addEventListener('click', startPoliceTurn);
+      board.appendChild(centerControl);
       document.getElementById('policeSteps').textContent = policeStepTotal;
       document.getElementById('thiefSteps').textContent = thiefStepTotal;
       document.getElementById('policeCorrect').textContent = policeCorrectTotal;
@@ -1163,6 +1169,8 @@
       policeTurn = true;
       policeDieValue = 1 + Math.floor(Math.random() * 6);
       document.getElementById('policeDie').textContent = policeDiceFaces[policeDieValue - 1];
+      const boardDie = document.getElementById('policeBoardDie');
+      if (boardDie) boardDie.textContent = policeDiceFaces[policeDieValue - 1];
       policeQuestionItem = currentVocab[Math.floor(Math.random() * currentVocab.length)];
       document.getElementById('policeQuestion').textContent = `请选出“${policeQuestionItem.pinyin}”对应的汉字`;
       const choices = [policeQuestionItem, ...currentVocab.filter(v => v.id !== policeQuestionItem.id).sort(() => Math.random() - 0.5).slice(0, 3)].sort(() => Math.random() - 0.5);
