@@ -1188,7 +1188,8 @@
       if (correct) { policeCorrectTotal++; document.getElementById('policeFeedback').textContent = '答对了！警察正常追捕，小偷只随机逃跑少量步数。'; policeTone(780); }
       else { policeWrongTotal++; document.getElementById('policeFeedback').textContent = '答错了！小偷趁机额外逃跑 2 格！'; policeTone(260,0.2); }
       renderPoliceBoard();
-      const caught = policePos === thiefPos || (policeMove >= 1 && ((policePos - policeMove + policePath.length) % policePath.length < thiefPos && policePos >= thiefPos));
+      // 小偷起跑时领先 17 格；警察累计追捕距离追平这段领先距离即视为抓到。
+      const caught = policeStepTotal >= thiefStepTotal + 17;
       if (caught) {
         policeGameOver = true;
         document.getElementById('policeStatus').textContent = '🎉 抓到小偷了！你是追捕高手！';
