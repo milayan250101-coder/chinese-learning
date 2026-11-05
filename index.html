@@ -733,7 +733,7 @@
       right: auto !important;
     }
     #policeDie, #policeQuestion { display: none !important; }
-    #sectionPolice #policeBoard + div > div:first-child { display: none !important; }
+    /* 答案容器必须保持可见；只隐藏重复骰子和说明文字 */
     @media (max-width: 900px) {
       #sectionPolice > .grid > div:last-child { padding: 8px !important; }
       #policeBoard { height: clamp(330px, 48vh, 460px) !important; }
@@ -946,6 +946,35 @@
         padding: 6px !important;
       }
       #policeBoardDie { font-size: 42px !important; }
+    }
+
+  
+    /* 修复第五关答案区被误隐藏的问题，并确保正确率持续更新 */
+    #sectionPolice #policeAnswerPanel,
+    #sectionPolice #policeAnswerChoices,
+    #sectionPolice #policeOptions {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    #sectionPolice #policeAnswerChoices {
+      display: block !important;
+      min-width: 0 !important;
+    }
+    #sectionPolice #policeOptions {
+      display: grid !important;
+    }
+    @media (min-width: 901px) {
+      #sectionPolice #policeOptions {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      }
+    }
+    #sectionPolice #policeOptions .police-answer-option {
+      display: flex !important;
+      visibility: visible !important;
+      min-height: 70px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
     }
 
   </style>
@@ -1202,9 +1231,13 @@
             <p class="text-sm text-indigo-100">小偷逃跑步数</p>
             <p id="thiefSteps" class="text-3xl font-black tabular-nums">0</p>
           </div>
-          <div class="rounded-2xl bg-white/10 p-4">
+          <div class="rounded-2xl bg-white/10 p-4 mb-3">
             <p class="text-sm text-indigo-100">答对 / 答错</p>
             <p class="text-xl font-black"><span id="policeCorrect">0</span> / <span id="policeWrong">0</span></p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-4">
+            <p class="text-sm text-indigo-100">答题正确率</p>
+            <p class="text-2xl font-black"><span id="policeAccuracy">0</span>%</p>
           </div>
           <p class="text-xs text-indigo-200 mt-4">答对帮助警察追捕；答错会让小偷趁机多逃几步！</p>
         </aside>
@@ -2105,6 +2138,8 @@
       document.getElementById('thiefSteps').textContent = thiefStepTotal;
       document.getElementById('policeCorrect').textContent = policeCorrectTotal;
       document.getElementById('policeWrong').textContent = policeWrongTotal;
+      const policeAnswered = policeCorrectTotal + policeWrongTotal;
+      document.getElementById('policeAccuracy').textContent = policeAnswered ? Math.round(policeCorrectTotal / policeAnswered * 100) : 0;
     }
     function resetPoliceGame() {
       policePos = 0; thiefPos = 17; policeStepTotal = 0; thiefStepTotal = 0;
