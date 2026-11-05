@@ -1262,31 +1262,32 @@
     }
 
 
-    /* 第五关：游戏主体横向铺满页面，统计栏改为顶部横排，不再挤占左侧宽度 */
+    /* 第五关：统计栏恢复左侧，棋盘与中央操作区保持当前尺寸比例 */
     @media (min-width: 901px) {
       #sectionPolice > .grid {
-        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-columns: minmax(150px, 180px) minmax(0, 1fr) !important;
         width: 100% !important;
         max-width: none !important;
-        gap: 8px !important;
+        gap: 10px !important;
+        align-items: stretch !important;
       }
       #sectionPolice > .grid > aside {
-        display: grid !important;
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-        grid-template-rows: auto auto !important;
-        align-items: center !important;
-        gap: 6px 10px !important;
-        padding: 8px 12px !important;
-        border-radius: 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        padding: 10px !important;
+        height: 100% !important;
       }
       #sectionPolice > .grid > aside h2,
       #sectionPolice > .grid > aside > p {
-        grid-column: 1 / -1 !important;
+        grid-column: auto !important;
         margin: 0 !important;
       }
       #sectionPolice > .grid > aside > div {
         margin: 0 !important;
-        padding: 6px 10px !important;
+        padding: 8px !important;
       }
       #sectionPolice > .grid > aside > div p:first-child {
         font-size: 11px !important;
