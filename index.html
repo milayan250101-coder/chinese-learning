@@ -294,6 +294,64 @@
       }
     }
 
+
+    @media (min-width: 901px) {
+      /* 2. 看图选拼音：缩小题目图片与上下留白 */
+      #sectionImg2Pinyin > div {
+        padding: 10px 14px !important;
+      }
+      #sectionImg2Pinyin > div > div:first-child {
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+      }
+      #sectionImg2Pinyin > div > div:nth-child(2) { margin-bottom: 8px; }
+      #sectionImg2Pinyin > div > div:nth-child(2) > div:first-child {
+        width: clamp(100px, 16vh, 145px);
+        height: clamp(100px, 16vh, 145px);
+        margin-bottom: 6px;
+      }
+      #i2pOptionsGrid { gap: 8px; }
+      #i2pOptionsGrid button { padding: 7px 10px; font-size: 17px; }
+      #i2pFeedbackBox { margin-top: 8px; min-height: 28px; }
+
+      /* 4. 翻翻卡：每页十张卡片保持两行显示 */
+      #sectionFlip > div:first-child {
+        padding: 10px 14px;
+        margin-bottom: 8px;
+        gap: 8px;
+      }
+      #sectionFlip > div:first-child h2 { font-size: 17px; }
+      #sectionFlip > div:first-child p { font-size: 12px; margin-top: 2px; }
+      #sectionFlip > div:nth-child(2) { margin-bottom: 6px; }
+      #sectionFlip > div:nth-child(2) button { padding: 6px 12px; }
+      #flipCardGrid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+      }
+      #flipCardGrid > .flip-card {
+        height: clamp(112px, 17vh, 150px);
+      }
+      #flipCardGrid .flip-card-inner,
+      #flipCardGrid .flip-card-inner > div {
+        border-radius: 14px;
+      }
+      #flipCardGrid .flip-card-inner > div { padding: 8px; }
+      #flipCardGrid .flip-card-inner > div:first-child .w-14 {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 5px;
+      }
+      #flipCardGrid .flip-card-inner > div:first-child .text-3xl { font-size: 20px; }
+      #flipCardGrid .flip-card-inner > div:last-child .text-3xl,
+      #flipCardGrid .flip-card-inner > div:last-child .text-4xl { font-size: 23px; }
+      #flipCardGrid .flip-card-inner > div:last-child .w-32 {
+        width: 66px;
+        height: 66px;
+      }
+      #flipCardGrid .flip-card-inner > div:last-child .text-xl,
+      #flipCardGrid .flip-card-inner > div:last-child .text-2xl { font-size: 14px; }
+    }
+
     @media (max-height: 760px) and (min-width: 901px) {
       body > div.w-full.mx-auto.px-3.pt-2 > div { padding: 5px 10px; }
       body > div.w-full.mx-auto.px-3.pt-2 > div > div:last-child { display: none; }
