@@ -1226,6 +1226,28 @@
       }
     }
 
+  
+    /* 第五关外围棋盘扩展为9列：上下各增加一张图片，并充分利用左侧空间 */
+    @media (min-width: 901px) {
+      #sectionPolice #policeBoard {
+        grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        transform: translateX(-10px) !important;
+      }
+      #sectionPolice #policePlayArea {
+        width: calc(100% + 10px) !important;
+        margin-left: -10px !important;
+      }
+    }
+    @media (max-width: 900px) {
+      #sectionPolice #policeBoard {
+        grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -1492,7 +1514,7 @@
         </aside>
         <div class="bg-white/90 rounded-3xl border border-amber-100 p-3 sm:p-5 shadow-sm">
           <div id="policePlayArea" class="relative">
-            <div id="policeBoard" class="grid grid-cols-8 gap-1 sm:gap-2 max-w-3xl mx-auto"></div>
+            <div id="policeBoard" class="grid grid-cols-9 gap-1 sm:gap-2 w-full"></div>
             <div id="policeAnswerPanel" class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3">
             <div id="policeAnswerChoices" class="min-w-0">
               <div class="hidden">🎲 本轮骰子</div>
@@ -2315,10 +2337,9 @@
 
     // 练习 5: 警察抓小偷
     const policePath = [];
-    for (let c = 0; c < 8; c++) policePath.push([0, c]);
-    for (let r = 1; r <= 5; r++) policePath.push([r, 7]);
-    policePath.push([6, 7]); // 补齐棋盘右下角缺失的格子
-    for (let c = 6; c >= 0; c--) policePath.push([6, c]);
+    for (let c = 0; c < 9; c++) policePath.push([0, c]);
+    for (let r = 1; r <= 5; r++) policePath.push([r, 8]);
+    for (let c = 8; c >= 0; c--) policePath.push([6, c]);
     for (let r = 5; r >= 1; r--) policePath.push([r, 0]);
     let policePos = 0, thiefPos = 17, policeStepTotal = 0, thiefStepTotal = 0;
     let policeCorrectTotal = 0, policeWrongTotal = 0, policeTurn = false, policeSoundOn = true, policeGameOver = false;
@@ -2341,12 +2362,12 @@
       board.innerHTML = '';
       const cells = new Map(policePath.map((p, i) => [p.join(','), i]));
       board.classList.add('relative');
-      for (let r = 0; r < 7; r++) for (let c = 0; c < 8; c++) {
+      for (let r = 0; r < 7; r++) for (let c = 0; c < 9; c++) {
         const idx = cells.get(`${r},${c}`);
         const cell = document.createElement('div');
         if (idx === undefined) {
           cell.className = 'hidden sm:flex sm:col-span-1 sm:row-span-1 items-center justify-center';
-          if (r === 3 && c >= 2 && c <= 5) {
+          if (r === 3 && c >= 2 && c <= 6) {
             if (c === 3) cell.innerHTML = '<div class="text-center text-xs sm:text-sm font-black text-slate-500">🎲<br>追捕棋盘</div>';
           }
           board.appendChild(cell); continue;
