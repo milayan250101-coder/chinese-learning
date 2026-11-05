@@ -496,7 +496,7 @@
 
     // 版本化翻译缓存：旧版本可能把错误语言的结果保存到 translations.de 等字段。
     // 首次升级时清除旧缓存，重新按当前选择的目标语言翻译。
-    const TRANSLATION_CACHE_VERSION = "4";
+    const TRANSLATION_CACHE_VERSION = "5";
     if (localStorage.getItem("chinese_translation_cache_version") !== TRANSLATION_CACHE_VERSION) {
       for (const item of currentVocab) item.translations = {};
       localStorage.setItem("chinese_italian_vocab", JSON.stringify(currentVocab));
@@ -528,6 +528,7 @@
     };
 
     const BUILTIN_TRANSLATIONS = {
+      "学习": { it: "Studiare", en: "Study / learn", fr: "Étudier", de: "lernen", es: "Estudiar" },
       "苹果": { it: "Mela", en: "Apple", fr: "Pomme", de: "Apfel", es: "Manzana" },
       "香蕉": { it: "Banana", en: "Banana", fr: "Banane", de: "Banane", es: "Plátano" },
       "西瓜": { it: "Anguria", en: "Watermelon", fr: "Pastèque", de: "Wassermelone", es: "Sandía" },
