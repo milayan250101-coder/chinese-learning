@@ -1341,6 +1341,45 @@
       }
     }
 
+
+    /* 第五关：增加上下两格横向图片，并把棋盘高度限制在单屏可视范围 */
+    #sectionPolice #policeBoard {
+      grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+      width: 100% !important;
+      max-width: none !important;
+      transform: none !important;
+    }
+    @media (min-width: 901px) {
+      #sectionPolice #policePlayArea {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+      }
+      #sectionPolice #policeBoard {
+        height: clamp(280px, calc(100vh - 250px), 680px) !important;
+        max-height: calc(100vh - 250px) !important;
+        grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+        grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+        gap: clamp(2px, .35vw, 6px) !important;
+      }
+      #sectionPolice #policeBoard > div:not(.absolute) {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: 100% !important;
+        aspect-ratio: auto !important;
+      }
+      #sectionPolice #policeBoard .police-cell-image {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+      }
+      #sectionPolice #policeAnswerPanel {
+        top: 14.5% !important;
+        height: 71% !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -1607,7 +1646,7 @@
         </aside>
         <div class="bg-white/90 rounded-3xl border border-amber-100 p-3 sm:p-5 shadow-sm">
           <div id="policePlayArea" class="relative">
-            <div id="policeBoard" class="grid grid-cols-9 gap-1 sm:gap-2 w-full"></div>
+            <div id="policeBoard" class="grid grid-cols-11 gap-1 sm:gap-2 w-full"></div>
             <div id="policeAnswerPanel" class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3">
             <div id="policeAnswerChoices" class="min-w-0">
               <div class="hidden">🎲 本轮骰子</div>
@@ -2430,9 +2469,9 @@
 
     // 练习 5: 警察抓小偷
     const policePath = [];
-    for (let c = 0; c < 9; c++) policePath.push([0, c]);
-    for (let r = 1; r <= 5; r++) policePath.push([r, 8]);
-    for (let c = 8; c >= 0; c--) policePath.push([6, c]);
+    for (let c = 0; c < 11; c++) policePath.push([0, c]);
+    for (let r = 1; r <= 5; r++) policePath.push([r, 10]);
+    for (let c = 10; c >= 0; c--) policePath.push([6, c]);
     for (let r = 5; r >= 1; r--) policePath.push([r, 0]);
     let policePos = 0, thiefPos = 17, policeStepTotal = 0, thiefStepTotal = 0;
     let policeCorrectTotal = 0, policeWrongTotal = 0, policeTurn = false, policeSoundOn = true, policeGameOver = false;
@@ -2455,12 +2494,12 @@
       board.innerHTML = '';
       const cells = new Map(policePath.map((p, i) => [p.join(','), i]));
       board.classList.add('relative');
-      for (let r = 0; r < 7; r++) for (let c = 0; c < 9; c++) {
+      for (let r = 0; r < 7; r++) for (let c = 0; c < 11; c++) {
         const idx = cells.get(`${r},${c}`);
         const cell = document.createElement('div');
         if (idx === undefined) {
           cell.className = 'hidden sm:flex sm:col-span-1 sm:row-span-1 items-center justify-center';
-          if (r === 3 && c >= 2 && c <= 6) {
+          if (r === 3 && c >= 2 && c <= 8) {
             if (c === 3) cell.innerHTML = '<div class="text-center text-xs sm:text-sm font-black text-slate-500">🎲<br>追捕棋盘</div>';
           }
           board.appendChild(cell); continue;
