@@ -1198,6 +1198,34 @@
       }
     }
 
+  
+    /* 第五关本轮微调：图片环铺满游戏区，骰子放大并移除警察/小偷文字标志 */
+    @media (min-width: 901px) {
+      #sectionPolice #policeBoard {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        height: clamp(430px, 58vh, 620px) !important;
+      }
+      #sectionPolice .police-center-dice {
+        min-height: 92px !important;
+        gap: 12px !important;
+      }
+      #sectionPolice #policeBoardDie {
+        font-size: clamp(76px, 7.5vw, 108px) !important;
+        line-height: 1 !important;
+      }
+      #sectionPolice .police-center-actions > div {
+        display: none !important;
+      }
+      #sectionPolice .police-center-actions button {
+        min-height: 48px !important;
+        padding: 10px 8px !important;
+        font-size: clamp(13px, 1.05vw, 16px) !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
