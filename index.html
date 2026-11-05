@@ -595,13 +595,9 @@
         if (selectedLanguage !== "it" && selectedLanguage !== "zh") {
           translations[selectedLanguage] = await fetchTranslation(word, selectedLanguage);
         }
-        let targetImg = BUILTIN_IMG_PRESETS[word] || "";
-        try {
-          const items = await searchOnlineImages(word, translations[selectedLanguage] || italian);
-          if (items.length > 0) targetImg = items[0].url;
-        } catch (error) {
-          console.warn("Image search failed for", word, error);
-        }
+        // Only use teacher-reviewed built-in images automatically.
+        // Search results remain candidates in the image picker until a teacher selects one.
+        const targetImg = BUILTIN_IMG_PRESETS[word] || NO_IMAGE_PLACEHOLDER;
         newVocabList.push({ id: i + 1, hanzi: word, pinyin, italian, translations, img: targetImg });
       }
 
