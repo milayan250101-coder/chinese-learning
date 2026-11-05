@@ -818,6 +818,136 @@
       #policeBoard { height: clamp(360px, 52vh, 500px) !important; }
     }
 
+  
+    /* 第五关修正：确保四个答案横向显示，操作按钮只占右侧五分之一 */
+    @media (min-width: 901px) {
+      #sectionPolice > .grid > div:last-child {
+        display: grid !important;
+        grid-template-areas: none !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: auto auto auto !important;
+        align-content: start !important;
+        gap: 10px !important;
+      }
+      #policeBoard,
+      #policeAnswerPanel,
+      #policeStatus {
+        grid-area: auto !important;
+        grid-column: auto !important;
+      }
+      #policeBoard {
+        height: clamp(430px, 58vh, 620px) !important;
+      }
+      #policeAnswerPanel {
+        display: grid !important;
+        grid-template-columns: minmax(0, 4fr) minmax(135px, 1fr) !important;
+        grid-template-areas: none !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+        min-height: 100px;
+        padding: 10px !important;
+        margin: 0 !important;
+      }
+      #policeAnswerChoices {
+        display: block !important;
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+      #policeOptions {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-auto-flow: row !important;
+        gap: 8px !important;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+      #policeOptions > button,
+      #policeOptions .police-answer-option {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 0 !important;
+        min-height: 76px !important;
+        padding: 8px 5px !important;
+        gap: 3px 7px !important;
+        white-space: normal !important;
+      }
+      #policeFeedback {
+        min-height: 20px !important;
+        margin: 7px 0 0 !important;
+      }
+      #policeControls {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: stretch !important;
+        min-width: 0 !important;
+        gap: 7px !important;
+        padding-left: 10px !important;
+        border-left: 1px solid #cbd5e1 !important;
+      }
+      #policeControls button {
+        width: 100% !important;
+        min-height: 42px !important;
+        padding: 7px 5px !important;
+        font-size: 12px !important;
+        white-space: normal !important;
+      }
+      #policeStatus { margin: 0 !important; }
+      #policeBoard .police-cell-image {
+        width: 76% !important;
+        flex-basis: 76% !important;
+        height: 100% !important;
+      }
+      #policeBoard .police-cell-word {
+        width: 24% !important;
+        flex-basis: 24% !important;
+        font-size: clamp(15px, 1.25vw, 21px) !important;
+      }
+      #policeBoard .police-player-marker {
+        font-size: clamp(18px, 1.7vw, 25px) !important;
+      }
+      .police-center-dice {
+        left: 32% !important;
+        top: 36% !important;
+        width: 36% !important;
+        height: 28% !important;
+        padding: 8px 12px !important;
+      }
+      #policeBoardDie {
+        font-size: clamp(42px, 4.2vw, 60px) !important;
+      }
+      .police-center-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .police-center-actions button {
+        min-width: 125px;
+      }
+    }
+    @media (max-width: 900px) {
+      #policeAnswerPanel {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+      #policeOptions {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .police-center-dice {
+        left: 25% !important;
+        top: 35% !important;
+        width: 50% !important;
+        height: 30% !important;
+        padding: 6px !important;
+      }
+      #policeBoardDie { font-size: 42px !important; }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -1967,8 +2097,8 @@
         board.appendChild(cell);
       }
       const centerControl = document.createElement('div');
-      centerControl.className = 'police-center-dice absolute left-1/4 top-1/4 w-1/2 h-1/2 rounded-2xl border-4 border-indigo-300 bg-white/95 shadow-2xl flex flex-col items-center justify-center gap-2 z-10';
-      centerControl.innerHTML = `<div class="text-6xl sm:text-7xl leading-none" id="policeBoardDie">${policeDiceFaces[policeDieValue - 1]}</div><button type="button" class="px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-lg font-black shadow-lg">🎲 掷骰子</button><div class="text-xs sm:text-sm font-bold text-indigo-800">👮 警察　🦹 小偷</div>`;
+      centerControl.className = 'police-center-dice absolute rounded-2xl border-2 border-indigo-300 bg-white/95 shadow-xl flex items-center justify-center gap-3 z-10';
+      centerControl.innerHTML = `<div class="police-center-die text-5xl sm:text-6xl leading-none" id="policeBoardDie">${policeDiceFaces[policeDieValue - 1]}</div><div class="police-center-actions"><button type="button" class="px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base font-black shadow-lg">🎲 掷骰子</button><div class="text-xs font-bold text-indigo-800 mt-1">👮 警察　🦹 小偷</div></div>`;
       centerControl.querySelector('button').addEventListener('click', startPoliceTurn);
       board.appendChild(centerControl);
       document.getElementById('policeSteps').textContent = policeStepTotal;
