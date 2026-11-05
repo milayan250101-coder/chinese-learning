@@ -490,6 +490,9 @@
       return "";
     }
 
+    // 缺图时显示明确的占位图，不使用其他词汇的照片冒充
+    const NO_IMAGE_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><rect width="600" height="600" fill="#f1f5f9"/><g fill="none" stroke="#94a3b8" stroke-width="12"><rect x="155" y="155" width="290" height="230" rx="22"/><circle cx="245" cy="235" r="28"/><path d="M175 355l90-85 65 60 45-40 50 65"/></g><text x="300" y="455" text-anchor="middle" font-size="30" fill="#475569" font-family="sans-serif">图片待选择</text></svg>');
+
     // 多语言翻译：顶部选择目标语言，翻译结果按词条缓存
     const LANGUAGE_NAMES = { it: "Italiano", en: "English", fr: "Français", de: "Deutsch", es: "Español", zh: "中文" };
     let selectedLanguage = localStorage.getItem("chinese_learning_language") || "it";
@@ -658,7 +661,7 @@
           <input type="text" class="vocab-p-input w-28 px-2 py-1.5 rounded-lg border text-sm font-semibold text-slate-700" value="${item.pinyin}">
           <input type="text" class="vocab-i-input flex-1 px-2 py-1.5 rounded-lg border text-xs text-slate-700" value="${item.italian}">
           <div class="flex items-center gap-2">
-            <img src="${item.img}" class="w-10 h-10 rounded-lg object-cover border cursor-pointer hover:opacity-80 shrink-0" onclick="openImagePicker(${index})" title="点击换图">
+            <img src="${item.img || NO_IMAGE_PLACEHOLDER}" class="w-10 h-10 rounded-lg object-cover border cursor-pointer hover:opacity-80 shrink-0" onclick="openImagePicker(${index})" title="点击换图">
             <button onclick="openImagePicker(${index})" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-lg text-xs font-bold flex items-center gap-1.5 shrink-0" title="贴图/换图面板">
               <i class="fa-solid fa-paste"></i> 贴图/换图
             </button>
@@ -686,7 +689,7 @@
         hanzi: "新词",
         pinyin: "xīn cí",
         italian: "Nuova parola",
-        img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85"
+        img: NO_IMAGE_PLACEHOLDER
       });
       renderVocabEditorRows();
     });
@@ -979,7 +982,7 @@
       opts.forEach(opt => {
         const btn = document.createElement('button');
         btn.className = "aspect-square rounded-2xl overflow-hidden border-2 border-slate-200 hover:border-amber-400 bg-white p-1 transition-all";
-        btn.innerHTML = `<img src="${opt.img}" class="w-full h-full object-cover rounded-xl pointer-events-none">`;
+        btn.innerHTML = `<img src="${opt.img || NO_IMAGE_PLACEHOLDER}" class="w-full h-full object-cover rounded-xl pointer-events-none">`;
         btn.onclick = () => {
           document.querySelectorAll('#p2iOptionsGrid button').forEach(b => b.disabled = true);
           const perScore = Math.round(100 / currentVocab.length);
@@ -1015,7 +1018,7 @@
     function loadI2p() {
       const q = currentVocab[i2pIdx];
       document.getElementById('i2pCurrentNum').textContent = i2pIdx + 1;
-      document.getElementById('i2pQuestionImg').src = q.img;
+      document.getElementById('i2pQuestionImg').src = q.img || NO_IMAGE_PLACEHOLDER;
       document.getElementById('i2pQuestionHanzi').textContent = q.hanzi;
       document.getElementById('i2pQuestionItalian').textContent = getTranslation(q);
       document.getElementById('i2pFeedbackBox').innerHTML = '';
@@ -1074,7 +1077,7 @@
         div.innerHTML = `
           <div class="flex items-center gap-3 overflow-hidden pr-6">
             <div class="w-14 h-14 rounded-xl overflow-hidden border border-slate-200 shrink-0 bg-slate-50">
-              <img src="${item.img}" class="w-full h-full object-cover">
+              <img src="${item.img || NO_IMAGE_PLACEHOLDER}" class="w-full h-full object-cover">
             </div>
             <div class="overflow-hidden">
               <span class="text-2xl font-chinese font-black text-slate-800 leading-tight block">${item.hanzi}</span>
@@ -1210,7 +1213,7 @@
       let cardsData = [];
       currentVocab.forEach((item, idx) => {
         cardsData.push({ uid: `h-${idx}`, wordId: item.id, type: 'hanzi', text: item.hanzi, italian: getTranslation(item), sound: item.hanzi });
-        cardsData.push({ uid: `i-${idx}`, wordId: item.id, type: 'img', img: item.img, pinyin: item.pinyin, sound: item.hanzi });
+        cardsData.push({ uid: `i-${idx}`, wordId: item.id, type: 'img', img: item.img || NO_IMAGE_PLACEHOLDER, pinyin: item.pinyin, sound: item.hanzi });
       });
       cardsData.sort(() => Math.random() - 0.5);
 
@@ -1303,7 +1306,10 @@
       initFlipGame();
     }
 
-    window.addEventListener('DOMContentLoaded', initAllModes);
+    window.addEventListener('DOMContentLoaded', async () => {
+      initAllModes();
+      await ensureCurrentLanguageTranslations();
+    });
   </script>
 </body>
 </html>
