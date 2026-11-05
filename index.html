@@ -739,7 +739,8 @@
         hanzi: "新词",
         pinyin: "xīn cí",
         italian: "Nuova parola",
-        img: NO_IMAGE_PLACEHOLDER
+        img: NO_IMAGE_PLACEHOLDER,
+        _newVocabRow: true
       });
       renderVocabEditorRows();
     });
@@ -762,11 +763,12 @@
         if (iInputs[i]) currentVocab[i].italian = iInputs[i].value.trim() || currentVocab[i].italian;
         currentVocab[i].id = i + 1;
 
-        const isNewOrChangedWord = previousWord === undefined || currentVocab[i].hanzi !== previousWord;
+        const isNewOrChangedWord = previousWord === undefined || currentVocab[i].hanzi !== previousWord || currentVocab[i]._newVocabRow === true;
         if (isNewOrChangedWord) {
           currentVocab[i].img = BUILTIN_IMG_PRESETS[currentVocab[i].hanzi] || NO_IMAGE_PLACEHOLDER;
           if (imageSearchIndex < 0 && currentVocab[i].img === NO_IMAGE_PLACEHOLDER) imageSearchIndex = i;
         }
+        delete currentVocab[i]._newVocabRow;
       }
 
       localStorage.setItem('chinese_italian_vocab', JSON.stringify(currentVocab));
