@@ -364,6 +364,73 @@
       }
     }
 
+
+    /* 警察抓小偷：玩家标志醒目，棋盘格只保留图片和汉字 */
+    .police-player-marker {
+      position: absolute;
+      z-index: 5;
+      top: 1px;
+      font-size: clamp(22px, 2.2vw, 34px);
+      line-height: 1;
+      filter: drop-shadow(0 2px 2px rgba(15,23,42,.45));
+      background: rgba(255,255,255,.88);
+      border-radius: 999px;
+      padding: 1px 3px;
+    }
+    .police-marker-cop { left: 1px; }
+    .police-marker-thief { right: 1px; }
+    #policeBoard > div:not(.absolute) > img {
+      width: 100%;
+      height: 68% !important;
+      object-fit: contain;
+      background: white;
+      border-radius: 6px;
+    }
+    #policeBoard .police-cell-word {
+      flex: 0 0 auto;
+      padding-top: 2px;
+      font-size: clamp(10px, .9vw, 14px) !important;
+    }
+    #policeOptions .police-answer-option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px 8px;
+      min-height: 48px;
+      padding: 8px 7px;
+      line-height: 1.2;
+    }
+    #policeOptions .police-option-hanzi {
+      font-size: clamp(19px, 1.5vw, 25px);
+      font-weight: 900;
+      color: #1e293b;
+    }
+    #policeOptions .police-option-pinyin {
+      font-size: clamp(13px, 1vw, 16px);
+      font-weight: 700;
+      color: #475569;
+    }
+    #policeOptions .police-option-translation {
+      font-size: clamp(11px, .85vw, 14px);
+      font-weight: 600;
+      color: #4338ca;
+    }
+    #policeQuestionImageWrap:not(.hidden) { display: block; }
+    @media (min-width: 901px) {
+      #sectionPolice > .grid > div:last-child {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+      }
+      #policeBoard { height: clamp(280px, 40vh, 365px); }
+      #policeOptions { grid-template-columns: 1fr; }
+      #policeOptions .police-answer-option { justify-content: flex-start; }
+    }
+    @media (max-width: 900px) {
+      #policeBoard .police-player-marker { font-size: 22px; }
+      #policeOptions .police-answer-option { min-height: 52px; }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -389,6 +456,9 @@
         <button id="btnOpenVocabModal" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition-all active:scale-95 flex items-center gap-1.5 border border-slate-200">
           <i class="fa-solid fa-sliders text-slate-500"></i>
           <span>词库管理与搜图 (<span id="navVocabCountBadge">5</span>词)</span>
+        </button>
+        <button id="btnToggleTeacherTools" type="button" aria-expanded="false" aria-controls="teacherToolsPanel" class="px-3.5 py-2 bg-amber-100 hover:bg-amber-200 text-amber-900 rounded-xl font-bold text-xs border border-amber-200">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> 教师工具
         </button>
       </div>
     </div>
@@ -420,8 +490,8 @@
     </div>
   </header>
 
-  <!-- 顶部快捷输入栏 -->
-  <div class="w-full mx-auto px-3 pt-2">
+  <!-- 教师工具：默认隐藏，点击顶部“教师工具”后展开 -->
+  <div id="teacherToolsPanel" class="hidden w-full mx-auto px-3 pt-2">
     <div class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 rounded-2xl p-3 md:p-4 shadow-lg shadow-red-200 text-white">
       <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
         <div class="shrink-0">
@@ -630,7 +700,10 @@
           <div class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3 text-center">
             <div class="text-xs font-bold text-slate-500 mb-1">🎲 本轮骰子</div>
             <div id="policeDie" class="text-5xl leading-tight mb-2">⚀</div>
-            <div id="policeQuestion" class="text-lg font-black text-slate-800">点击“掷骰子”开始追捕</div>
+            <div id="policeQuestionImageWrap" class="hidden mx-auto mb-2 w-28 h-24 sm:w-36 sm:h-28 rounded-xl overflow-hidden border-2 border-indigo-200 bg-white">
+              <img id="policeQuestionImage" src="" alt="本轮目标图片" class="w-full h-full object-contain">
+            </div>
+            <div id="policeQuestion" class="text-base font-black text-slate-800">点击“掷骰子”开始追捕</div>
             <div id="policeOptions" class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3"></div>
             <p id="policeFeedback" class="text-sm font-bold mt-3 min-h-6" aria-live="polite"></p>
           </div>
@@ -1384,7 +1457,7 @@
       loadCandidates();
     });
 
-    // 模式选项卡切换
+    // 模式选项卡切换：既支持自动闯关，也保留顶部手动选择任意游戏。
     const modeTabs = document.querySelectorAll('.mode-tab-btn');
     const sections = {
       pinyin2img: document.getElementById('sectionPinyin2Img'),
@@ -1393,26 +1466,31 @@
       flip: document.getElementById('sectionFlip'),
       police: document.getElementById('sectionPolice')
     };
-
-    modeTabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const mode = btn.dataset.mode;
-        modeTabs.forEach(b => {
-          b.classList.remove('border-red-600', 'text-red-600');
-          b.classList.add('border-transparent', 'text-slate-600');
-        });
-        btn.classList.add('border-red-600', 'text-red-600');
-        btn.classList.remove('border-transparent', 'text-slate-600');
-
-        Object.keys(sections).forEach(k => {
-          if (k === mode) sections[k].classList.remove('hidden');
-          else sections[k].classList.add('hidden');
-        });
-
-        if (mode === 'match') {
-          setTimeout(updateMatchSvgLines, 60);
-        }
+    const gameOrder = ['pinyin2img', 'img2pinyin', 'match', 'flip', 'police'];
+    function switchToMode(mode) {
+      if (!sections[mode]) return;
+      modeTabs.forEach(b => {
+        const active = b.dataset.mode === mode;
+        b.classList.toggle('border-red-600', active);
+        b.classList.toggle('text-red-600', active);
+        b.classList.toggle('border-transparent', !active);
+        b.classList.toggle('text-slate-600', !active);
       });
+      Object.keys(sections).forEach(k => sections[k].classList.toggle('hidden', k !== mode));
+      if (mode === 'match') setTimeout(updateMatchSvgLines, 60);
+      if (mode === 'police') renderPoliceBoard();
+    }
+    modeTabs.forEach(btn => btn.addEventListener('click', () => switchToMode(btn.dataset.mode)));
+
+    const teacherToolsPanel = document.getElementById('teacherToolsPanel');
+    const teacherToolsToggle = document.getElementById('btnToggleTeacherTools');
+    teacherToolsToggle.addEventListener('click', () => {
+      const opening = teacherToolsPanel.classList.contains('hidden');
+      teacherToolsPanel.classList.toggle('hidden', !opening);
+      teacherToolsToggle.setAttribute('aria-expanded', String(opening));
+      teacherToolsToggle.innerHTML = opening
+        ? '<i class="fa-solid fa-chevron-up"></i> 收起教师工具'
+        : '<i class="fa-solid fa-wand-magic-sparkles"></i> 教师工具';
     });
 
     // 练习 5: 警察抓小偷
@@ -1457,19 +1535,33 @@
         if (item) {
           const img = document.createElement('img'); img.src = item.img || NO_IMAGE_PLACEHOLDER; img.alt = item.hanzi;
           img.className = 'w-full h-[42%] object-cover rounded';
-          const word = document.createElement('span'); word.className = 'text-[10px] sm:text-xs font-black text-slate-800 leading-tight truncate w-full'; word.textContent = item.hanzi;
-          const pinyin = document.createElement('span'); pinyin.className = 'text-[9px] sm:text-[10px] font-semibold text-indigo-700 leading-tight truncate w-full'; pinyin.textContent = item.pinyin || generatePinyin(item.hanzi);
-          const translation = document.createElement('span'); translation.className = 'text-[8px] sm:text-[9px] text-slate-600 leading-tight truncate w-full'; translation.textContent = getTranslation(item);
-          cell.append(img, word, pinyin, translation);
+          const word = document.createElement('span');
+          word.className = 'police-cell-word text-xs sm:text-sm font-black text-slate-900 leading-tight truncate w-full';
+          word.textContent = item.hanzi;
+          cell.append(img, word);
         } else cell.textContent = '词库为空';
-        if (idx === policePos) { const mark = document.createElement('span'); mark.textContent = '👮'; mark.className = 'absolute top-0 left-0 text-lg drop-shadow'; cell.appendChild(mark); cell.classList.add('ring-2','ring-indigo-500'); }
-        if (idx === thiefPos) { const mark = document.createElement('span'); mark.textContent = '🏃'; mark.className = 'absolute top-0 right-0 text-lg drop-shadow'; cell.appendChild(mark); cell.classList.add('ring-2','ring-red-500'); }
+        if (idx === policePos) {
+          const mark = document.createElement('span');
+          mark.textContent = '👮';
+          mark.className = 'police-player-marker police-marker-cop';
+          mark.setAttribute('aria-label', '警察位置');
+          cell.appendChild(mark);
+          cell.classList.add('ring-4','ring-indigo-500','!bg-indigo-100');
+        }
+        if (idx === thiefPos) {
+          const mark = document.createElement('span');
+          mark.textContent = '🦹';
+          mark.className = 'police-player-marker police-marker-thief';
+          mark.setAttribute('aria-label', '小偷位置');
+          cell.appendChild(mark);
+          cell.classList.add('ring-4','ring-red-500','!bg-red-100');
+        }
         if (idx === policePos && idx === thiefPos) cell.classList.add('bg-emerald-200');
         board.appendChild(cell);
       }
       const centerControl = document.createElement('div');
       centerControl.className = 'absolute left-1/4 top-1/4 w-1/2 h-1/2 rounded-2xl border-2 border-indigo-200 bg-white/95 shadow-lg flex flex-col items-center justify-center gap-1 z-10';
-      centerControl.innerHTML = `<div class="text-2xl sm:text-4xl" id="policeBoardDie">${policeDiceFaces[policeDieValue - 1]}</div><button type="button" class="px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-indigo-600 text-white text-[10px] sm:text-sm font-black">🎲 掷骰子</button>`;
+      centerControl.innerHTML = `<div class="text-2xl sm:text-4xl" id="policeBoardDie">${policeDiceFaces[policeDieValue - 1]}</div><button type="button" class="px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-indigo-600 text-white text-[10px] sm:text-sm font-black">🎲 掷骰子</button><div class="text-[10px] sm:text-xs font-bold text-indigo-800">👮 警察　🦹 小偷</div>`;
       centerControl.querySelector('button').addEventListener('click', startPoliceTurn);
       board.appendChild(centerControl);
       document.getElementById('policeSteps').textContent = policeStepTotal;
@@ -1482,6 +1574,8 @@
       policeCorrectTotal = 0; policeWrongTotal = 0; policeTurn = false; policeGameOver = false; policeQuestionItem = null;
       document.getElementById('policeDie').textContent = '⚀';
       document.getElementById('policeQuestion').textContent = '点击“掷骰子”开始追捕';
+      document.getElementById('policeQuestionImageWrap').classList.add('hidden');
+      document.getElementById('policeQuestionImage').src = '';
       document.getElementById('policeOptions').innerHTML = '';
       document.getElementById('policeFeedback').textContent = '';
       document.getElementById('policeStatus').textContent = '警察从起点出发，小偷已经领先逃跑！';
@@ -1499,12 +1593,18 @@
       const boardDie = document.getElementById('policeBoardDie');
       if (boardDie) boardDie.textContent = policeDiceFaces[policeDieValue - 1];
       policeQuestionItem = currentVocab[Math.floor(Math.random() * currentVocab.length)];
-      document.getElementById('policeQuestion').textContent = `请选出“${policeQuestionItem.pinyin}”对应的汉字（${getTranslation(policeQuestionItem)}）`;
+      const questionImage = document.getElementById('policeQuestionImage');
+      questionImage.src = policeQuestionItem.img || NO_IMAGE_PLACEHOLDER;
+      questionImage.alt = '请根据图片选择正确汉字';
+      document.getElementById('policeQuestionImageWrap').classList.remove('hidden');
+      document.getElementById('policeQuestion').textContent = '请选择与上方图片对应的汉字';
       const choices = [policeQuestionItem, ...currentVocab.filter(v => v.id !== policeQuestionItem.id).sort(() => Math.random() - 0.5).slice(0, 3)].sort(() => Math.random() - 0.5);
       const options = document.getElementById('policeOptions'); options.innerHTML = '';
       choices.forEach(item => {
-        const b = document.createElement('button'); b.innerHTML = `<span class="block font-black">${item.hanzi}</span><span class="block text-xs text-slate-500">${item.pinyin || generatePinyin(item.hanzi)}</span><span class="block text-xs text-indigo-700">${getTranslation(item)}</span>`;
-        b.className = 'rounded-xl border border-slate-200 bg-white px-2 py-3 font-black text-slate-800 hover:bg-indigo-50';
+        const b = document.createElement('button');
+        const translation = selectedLanguage === 'zh' ? '' : getTranslation(item);
+        b.innerHTML = `<span class="police-option-hanzi">${item.hanzi}</span><span class="police-option-pinyin">${item.pinyin || generatePinyin(item.hanzi)}</span>${translation ? `<span class="police-option-translation">${translation}</span>` : ''}`;
+        b.className = 'police-answer-option rounded-xl border-2 border-slate-200 bg-white px-2 py-2 font-black text-slate-800 hover:bg-indigo-50';
         b.addEventListener('click', () => answerPoliceTurn(item.id === policeQuestionItem.id));
         options.appendChild(b);
       });
@@ -1527,7 +1627,7 @@
       const caught = policeStepTotal >= thiefStepTotal + 17;
       if (caught) {
         policeGameOver = true;
-        document.getElementById('policeStatus').textContent = '🎉 抓到小偷了！你是追捕高手！';
+        document.getElementById('policeStatus').textContent = '🎉 抓到小偷了！第五关完成！你是追捕高手！';
         document.getElementById('btnPoliceRoll').disabled = true;
         policeTone(950,0.3);
       } else {
@@ -1585,8 +1685,9 @@
           setTimeout(() => {
             if (p2iIdx < currentVocab.length - 1) { p2iIdx++; loadP2i(); }
             else {
-              document.getElementById('p2iFeedbackBox').innerHTML = `<p class="font-bold text-slate-800">🎉 全套练习完成！最终得分：${p2iScore}</p>`;
+              document.getElementById('p2iFeedbackBox').innerHTML = `<p class="font-bold text-slate-800">🎉 第一关完成！最终得分：${p2iScore}。即将进入第二关。</p>`;
               confetti({ particleCount: 70 });
+              setTimeout(() => switchToMode('img2pinyin'), 1100);
             }
           }, 1200);
         };
@@ -1633,8 +1734,9 @@
           setTimeout(() => {
             if (i2pIdx < currentVocab.length - 1) { i2pIdx++; loadI2p(); }
             else {
-              document.getElementById('i2pFeedbackBox').innerHTML = `<p class="font-bold text-slate-800">🎉 挑战成功！最终得分：${i2pScore}</p>`;
+              document.getElementById('i2pFeedbackBox').innerHTML = `<p class="font-bold text-slate-800">🎉 第二关完成！最终得分：${i2pScore}。即将进入第三关。</p>`;
               confetti({ particleCount: 70 });
+              setTimeout(() => switchToMode('match'), 1100);
             }
           }, 1200);
         };
@@ -1742,8 +1844,11 @@
       const keys = Object.keys(matchConns);
       if (keys.length < currentVocab.length) return alert(`请完成全部 ${currentVocab.length} 组连线（共 ${Math.ceil(currentVocab.length / MATCH_PAGE_SIZE)} 页）再检查！`);
       const ok = keys.filter(k => String(k) === String(matchConns[k])).length;
-      if (ok === currentVocab.length) { confetti({ particleCount: 100 }); alert(`全对！太棒了！(${ok}/${currentVocab.length})`); }
-      else alert(`做对了 ${ok} / ${currentVocab.length} 组，继续加油！`);
+      if (ok === currentVocab.length) {
+        confetti({ particleCount: 100 });
+        alert(`第三关完成！全部 ${ok} 组连线正确，即将进入第四关。`);
+        setTimeout(() => switchToMode('flip'), 350);
+      } else alert(`做对了 ${ok} / ${currentVocab.length} 组，请调整后再检查。`);
     });
     document.getElementById('btnResetMatch').addEventListener('click', () => {
       matchConns = {}; matchSelection = null; initMatchGame();
@@ -1803,7 +1908,10 @@
                 flipMatchedWordIds.add(c1.data.wordId);flipMatchedPairs=flipMatchedWordIds.size;
                 document.getElementById('flipPairsCount').textContent=`${flipMatchedPairs} / ${currentVocab.length}`;
                 flippedCards=[];flipLock=false;
-                if(flipMatchedPairs===currentVocab.length)confetti({particleCount:100});
+                if(flipMatchedPairs===currentVocab.length){
+                  confetti({particleCount:100});
+                  setTimeout(()=>switchToMode('police'),900);
+                }
               },400);
             }else setTimeout(()=>{
               c1.elem.classList.remove('flipped');c2.elem.classList.remove('flipped');
