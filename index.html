@@ -423,7 +423,7 @@
         grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
       }
       #policeBoard { height: clamp(280px, 40vh, 365px); }
-      #policeOptions { grid-template-columns: 1fr; }
+      #policeOptions { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       #policeOptions .police-answer-option { justify-content: flex-start; }
     }
     @media (max-width: 900px) {
