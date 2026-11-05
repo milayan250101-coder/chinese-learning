@@ -977,6 +977,60 @@
       flex-wrap: wrap !important;
     }
 
+  
+    /* 第五关本轮：棋盘只显示图片，清理多余提示，并精简右侧按钮 */
+    #sectionPolice #policeStatus {
+      display: none !important;
+    }
+    #sectionPolice #policeFeedback {
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    @media (min-width: 901px) {
+      #sectionPolice #policeAnswerPanel {
+        grid-template-columns: minmax(0, 4fr) minmax(110px, 1fr) !important;
+        gap: 10px !important;
+      }
+      #sectionPolice #policeControls {
+        width: 100% !important;
+        padding-left: 8px !important;
+        gap: 6px !important;
+      }
+      #sectionPolice #policeControls button {
+        width: 100% !important;
+        min-height: 38px !important;
+        padding: 6px 4px !important;
+        font-size: 12px !important;
+      }
+      #sectionPolice #btnPoliceSound {
+        min-height: 32px !important;
+        padding: 4px 3px !important;
+        font-size: 10px !important;
+      }
+    }
+    #sectionPolice #policeBoard .police-board-cell {
+      padding: 0 !important;
+    }
+    #sectionPolice #policeBoard .police-cell-image {
+      display: block !important;
+      width: 100% !important;
+      flex: 0 0 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      object-fit: contain !important;
+      padding: 2px !important;
+    }
+    #sectionPolice #policeBoard .police-cell-word {
+      display: none !important;
+    }
+    @media (max-width: 900px) {
+      #sectionPolice #policeBoard .police-cell-image {
+        width: 100% !important;
+        flex-basis: 100% !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -2105,10 +2159,7 @@
         if (item) {
           const img = document.createElement('img'); img.src = item.img || NO_IMAGE_PLACEHOLDER; img.alt = item.hanzi;
           img.className = 'police-cell-image object-contain rounded';
-          const word = document.createElement('span');
-          word.className = 'police-cell-word text-xs sm:text-sm font-black text-slate-900 leading-tight';
-          word.textContent = item.hanzi;
-          cell.append(img, word);
+          cell.appendChild(img);
         } else cell.textContent = '词库为空';
         if (idx === policePos) {
           const mark = document.createElement('span');
@@ -2183,7 +2234,7 @@
         options.appendChild(b);
       });
       document.getElementById('btnPoliceRoll').disabled = true;
-      document.getElementById('policeFeedback').textContent = '先答题，再看警察能否追上小偷！';
+      document.getElementById('policeFeedback').textContent = '';
     }
     function answerPoliceTurn(correct) {
       if (!policeTurn || policeGameOver) return;
@@ -2194,8 +2245,8 @@
       thiefPos = (thiefPos + thiefMove) % policePath.length;
       thiefStepTotal += thiefMove;
       policePendingMove = 0;
-      if (correct) { policeCorrectTotal++; document.getElementById('policeFeedback').textContent = '答对了！警察正常追捕，小偷只随机逃跑少量步数。'; policeTone(780); }
-      else { policeWrongTotal++; document.getElementById('policeFeedback').textContent = '答错了！小偷趁机额外逃跑 2 格！'; policeTone(260,0.2); }
+      if (correct) { policeCorrectTotal++; document.getElementById('policeFeedback').textContent = '✓ 答对了'; policeTone(780); }
+      else { policeWrongTotal++; document.getElementById('policeFeedback').textContent = '✗ 答错了'; policeTone(260,0.2); }
       renderPoliceBoard();
       // 小偷起跑时领先 17 格；警察累计追捕距离追平这段领先距离即视为抓到。
       const caught = policeStepTotal >= thiefStepTotal + 17;
