@@ -496,7 +496,7 @@
 
     // 版本化翻译缓存：旧版本可能把错误语言的结果保存到 translations.de 等字段。
     // 首次升级时清除旧缓存，重新按当前选择的目标语言翻译。
-    const TRANSLATION_CACHE_VERSION = "3";
+    const TRANSLATION_CACHE_VERSION = "4";
     if (localStorage.getItem("chinese_translation_cache_version") !== TRANSLATION_CACHE_VERSION) {
       for (const item of currentVocab) item.translations = {};
       localStorage.setItem("chinese_italian_vocab", JSON.stringify(currentVocab));
@@ -512,6 +512,21 @@
     }
 
     // 常用初级词汇的人工核对译文优先于机器翻译，避免中文词被错误地转成英语。
+    // 短语优先使用人工核对的整句/动宾结构译文，避免把动词误译成形容词（如“开窗户”）。
+    const BUILTIN_PHRASE_TRANSLATIONS = {
+      "吃苹果": { it: "Mangiare una mela", en: "Eat an apple", fr: "Manger une pomme", de: "Einen Apfel essen", es: "Comer una manzana" },
+      "吃香蕉": { it: "Mangiare una banana", en: "Eat a banana", fr: "Manger une banane", de: "Eine Banane essen", es: "Comer un plátano" },
+      "喝水": { it: "Bere acqua", en: "Drink water", fr: "Boire de l’eau", de: "Wasser trinken", es: "Beber agua" },
+      "喝茶": { it: "Bere tè", en: "Drink tea", fr: "Boire du thé", de: "Tee trinken", es: "Beber té" },
+      "开窗户": { it: "Aprire la finestra", en: "Open the window", fr: "Ouvrir la fenêtre", de: "Das Fenster öffnen", es: "Abrir la ventana" },
+      "打开窗户": { it: "Aprire la finestra", en: "Open the window", fr: "Ouvrir la fenêtre", de: "Das Fenster öffnen", es: "Abrir la ventana" },
+      "关窗户": { it: "Chiudere la finestra", en: "Close the window", fr: "Fermer la fenêtre", de: "Das Fenster schließen", es: "Cerrar la ventana" },
+      "打开门": { it: "Aprire la porta", en: "Open the door", fr: "Ouvrir la porte", de: "Die Tür öffnen", es: "Abrir la puerta" },
+      "关门": { it: "Chiudere la porta", en: "Close the door", fr: "Fermer la porte", de: "Die Tür schließen", es: "Cerrar la puerta" },
+      "买衣服": { it: "Comprare vestiti", en: "Buy clothes", fr: "Acheter des vêtements", de: "Kleidung kaufen", es: "Comprar ropa" },
+      "去学校": { it: "Andare a scuola", en: "Go to school", fr: "Aller à l’école", de: "Zur Schule gehen", es: "Ir a la escuela" }
+    };
+
     const BUILTIN_TRANSLATIONS = {
       "苹果": { it: "Mela", en: "Apple", fr: "Pomme", de: "Apfel", es: "Manzana" },
       "香蕉": { it: "Banana", en: "Banana", fr: "Banane", de: "Banane", es: "Plátano" },
@@ -534,6 +549,9 @@
       const clean = text.trim();
       if (!clean) return "";
       if (language === "zh") return clean;
+      // 完整短语优先于单个词条，保留动词 + 宾语的动作含义。
+      const knownPhrase = BUILTIN_PHRASE_TRANSLATIONS[clean]?.[language];
+      if (knownPhrase) return knownPhrase;
       const known = BUILTIN_TRANSLATIONS[clean]?.[language];
       if (known) return known;
       if (language === "it" && BUILTIN_IT[clean]) return BUILTIN_IT[clean];
