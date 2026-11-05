@@ -1421,6 +1421,28 @@
       }
     }
 
+
+    /* 第三关：汉字与拼音加大约一倍，保持图片尺寸与连线布局 */
+    #matchLeftList .text-2xl,
+    #matchRightList .text-2xl {
+      font-size: clamp(36px, 6vw, 46px) !important;
+      line-height: 1.12 !important;
+    }
+    @media (min-width: 901px) {
+      #matchLeftList .text-2xl,
+      #matchRightList .text-2xl {
+        font-size: clamp(46px, 3.6vw, 60px) !important;
+        line-height: 1.12 !important;
+      }
+    }
+    @media (max-width: 900px) {
+      #matchLeftList .text-2xl,
+      #matchRightList .text-2xl {
+        font-size: clamp(34px, 6vw, 44px) !important;
+        line-height: 1.12 !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -2472,8 +2494,120 @@
       if (mode === 'police') renderPoliceBoard();
     }
 
+    // 将前三关的练习题与成绩排版为可打印 PDF；由浏览器保存对话框选择目标文件夹。
+    function exportGameToPdf(gameType, gameTitle, correctCount, totalCount) {
+      const printWindow = window.open('', '_blank');
+      if (!printWindow) {
+        alert('浏览器拦截了导出窗口，请允许此网站打开弹出窗口后重试。');
+        return;
+      }
+
+      const escapePdfText = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[ch]);
+      const shuffled = list => [...list].sort(() => Math.random() - 0.5);
+      const imageFor = item => escapePdfText(item.img || NO_IMAGE_PLACEHOLDER);
+      const words = currentVocab.slice();
+      const answerLines = [];
+      let questionHtml = '';
+
+      if (gameType === 'pinyin2img') {
+        questionHtml = words.map((item, index) => {
+          const options = shuffled([item, ...shuffled(words.filter(v => v.id !== item.id)).slice(0, 3)]);
+          const answer = String.fromCharCode(65 + options.findIndex(v => v.id === item.id));
+          answerLines.push(`${index + 1}. ${answer} — ${escapePdfText(item.hanzi)}（${escapePdfText(item.pinyin)}）`);
+          return `
+            <article class="question">
+              <div class="question-head"><b>${index + 1}.</b><span class="pinyin">${escapePdfText(item.pinyin)}</span><span class="translation">${escapePdfText(getTranslation(item))}</span></div>
+              <div class="image-options">${options.map((option, optionIndex) => `
+                <div class="image-option"><span class="option-label">${String.fromCharCode(65 + optionIndex)}</span><img src="${imageFor(option)}" alt=""><span>${escapePdfText(option.hanzi)}</span></div>
+              `).join('')}</div>
+            </article>`;
+        }).join('');
+      } else if (gameType === 'img2pinyin') {
+        questionHtml = words.map((item, index) => {
+          const options = shuffled([item, ...shuffled(words.filter(v => v.id !== item.id)).slice(0, 3)]);
+          const answer = String.fromCharCode(65 + options.findIndex(v => v.id === item.id));
+          answerLines.push(`${index + 1}. ${answer} — ${escapePdfText(item.pinyin)}（${escapePdfText(item.hanzi)}）`);
+          return `
+            <article class="question">
+              <div class="picture-question"><img src="${imageFor(item)}" alt=""><div><b>${index + 1}. ${escapePdfText(item.hanzi)}</b><span>${escapePdfText(getTranslation(item))}</span></div></div>
+              <div class="pinyin-options">${options.map((option, optionIndex) => `
+                <div class="pinyin-option"><b>${String.fromCharCode(65 + optionIndex)}.</b> ${escapePdfText(option.pinyin)}</div>
+              `).join('')}</div>
+            </article>`;
+        }).join('');
+      } else if (gameType === 'match') {
+        const pageGroups = [];
+        for (let i = 0; i < words.length; i += MATCH_PAGE_SIZE) pageGroups.push(words.slice(i, i + MATCH_PAGE_SIZE));
+        questionHtml = pageGroups.map((group, pageIndex) => {
+          const right = shuffled(group);
+          const rightLetters = new Map(right.map((item, index) => [item.id, String.fromCharCode(65 + index)]));
+          group.forEach((item, index) => answerLines.push(`${pageIndex * MATCH_PAGE_SIZE + index + 1}. ${rightLetters.get(item.id)} — ${escapePdfText(item.hanzi)} / ${escapePdfText(item.pinyin)}`));
+          return `
+            <section class="match-page">
+              <h2>第 ${pageIndex + 1} 页 · 每页最多 ${MATCH_PAGE_SIZE} 组</h2>
+              <div class="match-columns">
+                <div><h3>左侧：汉字与图片</h3>${group.map((item, index) => `
+                  <div class="match-row"><b>${pageIndex * MATCH_PAGE_SIZE + index + 1}.</b><img src="${imageFor(item)}" alt=""><div><strong>${escapePdfText(item.hanzi)}</strong><span>${escapePdfText(getTranslation(item))}</span></div><i>→</i></div>
+                `).join('')}</div>
+                <div><h3>右侧：拼音（请连线）</h3>${right.map((item, index) => `
+                  <div class="pinyin-row"><b>${String.fromCharCode(65 + index)}.</b><strong>${escapePdfText(item.pinyin)}</strong></div>
+                `).join('')}</div>
+              </div>
+            </section>`;
+        }).join('');
+      } else {
+        printWindow.close();
+        return;
+      }
+
+      const html = `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>${escapePdfText(gameTitle)}-练习PDF</title>
+        <style>
+          @page{size:A4;margin:14mm}
+          *{box-sizing:border-box}
+          body{font-family:Arial,"Microsoft YaHei",sans-serif;color:#172033;margin:0;font-size:12px}
+          h1{font-size:23px;margin:0 0 6px;color:#1e293b}
+          .meta{display:flex;justify-content:space-between;border-bottom:2px solid #e2e8f0;padding:0 0 10px;margin-bottom:14px;color:#475569}
+          .question{border:1px solid #cbd5e1;border-radius:10px;padding:10px;margin:0 0 12px;break-inside:avoid}
+          .question-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+          .pinyin{font-size:22px;font-weight:800;color:#4338ca}
+          .translation{font-size:13px;color:#64748b}
+          .image-options{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+          .image-option{position:relative;border:1px solid #cbd5e1;border-radius:8px;padding:5px;text-align:center;min-width:0}
+          .image-option img{width:100%;height:92px;object-fit:contain}
+          .image-option span:last-child{display:block;margin-top:3px;font-weight:700}
+          .option-label{position:absolute;top:4px;left:5px;background:#fff;border:1px solid #94a3b8;border-radius:50%;width:20px;height:20px;line-height:18px;font-weight:700}
+          .picture-question{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+          .picture-question img{width:105px;height:90px;object-fit:contain;border:1px solid #cbd5e1;border-radius:8px}
+          .picture-question b{display:block;font-size:19px}.picture-question span{display:block;color:#64748b;margin-top:4px}
+          .pinyin-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+          .pinyin-option{border:1px solid #cbd5e1;border-radius:8px;padding:9px;font-size:18px;font-weight:700}
+          .match-page{break-after:page}.match-page:last-child{break-after:auto}
+          .match-page h2{font-size:15px;margin:0 0 8px}
+          .match-columns{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+          .match-columns h3{font-size:13px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+          .match-row,.pinyin-row{height:82px;border:1px solid #cbd5e1;border-radius:8px;margin-bottom:8px;padding:6px;display:flex;align-items:center;gap:8px}
+          .match-row img{width:58px;height:58px;object-fit:contain}
+          .match-row strong{display:block;font-size:18px}.match-row span{display:block;color:#64748b}
+          .match-row i{margin-left:auto;color:#94a3b8;font-style:normal;font-size:20px}
+          .pinyin-row strong{font-size:20px;color:#4338ca}
+          .answer-key{break-before:page}.answer-key h2{font-size:18px}.answer-key p{margin:6px 0}
+          @media print{button{display:none}}
+        </style></head><body>
+          <h1>${escapePdfText(gameTitle)} · 练习与成绩单</h1>
+          <div class="meta"><span>汉字-拼音互动练习</span><strong>成绩：${Number(correctCount)||0} / ${Number(totalCount)||0}</strong></div>
+          ${questionHtml}
+          <section class="answer-key"><h2>参考答案</h2>${answerLines.map(line => `<p>${line}</p>`).join('')}</section>
+          <script>window.addEventListener('load',()=>setTimeout(()=>{window.focus();window.print();},900));</script>
+        </body></html>`;
+      printWindow.document.open();
+      printWindow.document.write(html);
+      printWindow.document.close();
+    }
+
     // 每关结束统一显示奖杯数量；学生点击确定后才进入下一关。
-    function showGameReward(gameTitle, correctCount, totalCount, nextMode) {
+    function showGameReward(gameTitle, correctCount, totalCount, nextMode, exportType) {
       document.getElementById('gameRewardModal')?.remove();
       const safeCount = Math.max(0, Math.min(Number(correctCount) || 0, Number(totalCount) || 0));
       const modal = document.createElement('div');
@@ -2486,10 +2620,14 @@
           <p class="text-lg font-bold text-indigo-700 mb-2">${gameTitle}</p>
           <p class="text-slate-600 font-semibold mb-4">你答对了 ${safeCount} / ${totalCount} 个，获得 ${safeCount} 颗奖杯！</p>
           <div class="flex flex-wrap justify-center gap-2 text-3xl mb-6" aria-label="获得的奖杯">${'🏆'.repeat(safeCount) || '<span class="text-sm text-slate-400">继续加油！</span>'}</div>
-          <button type="button" id="btnConfirmGameReward" class="w-full rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-lg px-6 py-3 shadow-lg">确定，进入下一关</button>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button type="button" id="btnExportGamePdf" class="w-full rounded-xl border-2 border-indigo-200 bg-indigo-50 hover:bg-indigo-100 text-indigo-800 font-black text-base px-4 py-3"><i class="fa-solid fa-file-pdf mr-2"></i>导出本关 PDF</button>
+            <button type="button" id="btnConfirmGameReward" class="w-full rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-lg px-4 py-3 shadow-lg">确定，进入下一关</button>
+          </div>
         </div>`;
       document.body.appendChild(modal);
       confetti({ particleCount: 110, spread: 75, origin: { y: 0.65 } });
+      modal.querySelector('#btnExportGamePdf').addEventListener('click', () => exportGameToPdf(exportType, gameTitle, safeCount, totalCount));
       modal.querySelector('#btnConfirmGameReward').addEventListener('click', () => {
         modal.remove();
         if (nextMode) switchToMode(nextMode);
@@ -2704,7 +2842,7 @@
           setTimeout(() => {
             if (p2iIdx < currentVocab.length - 1) { p2iIdx++; loadP2i(); }
             else {
-              showGameReward('第一关 · 看拼音选图', p2iScore, currentVocab.length, 'img2pinyin');
+              showGameReward('第一关 · 看拼音选图', p2iScore, currentVocab.length, 'img2pinyin', 'pinyin2img');
             }
           }, 1200);
         };
@@ -2750,7 +2888,7 @@
           setTimeout(() => {
             if (i2pIdx < currentVocab.length - 1) { i2pIdx++; loadI2p(); }
             else {
-              showGameReward('第二关 · 看图选拼音', i2pScore, currentVocab.length, 'match');
+              showGameReward('第二关 · 看图选拼音', i2pScore, currentVocab.length, 'match', 'img2pinyin');
             }
           }, 1200);
         };
@@ -2858,7 +2996,7 @@
       const keys = Object.keys(matchConns);
       if (keys.length < currentVocab.length) return alert(`请完成全部 ${currentVocab.length} 组连线（共 ${Math.ceil(currentVocab.length / MATCH_PAGE_SIZE)} 页）再检查！`);
       const ok = keys.filter(k => String(k) === String(matchConns[k])).length;
-      showGameReward('第三关 · 连线大挑战', ok, currentVocab.length, 'flip');
+      showGameReward('第三关 · 连线大挑战', ok, currentVocab.length, 'flip', 'match');
     });
     document.getElementById('btnResetMatch').addEventListener('click', () => {
       matchConns = {}; matchSelection = null; initMatchGame();
