@@ -238,6 +238,11 @@
         </div>
       </div>
 
+      <div class="flex items-center justify-center gap-3 mb-3">
+        <button id="matchPrevPage" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold disabled:opacity-40">上一页</button>
+        <span id="matchPageLabel" class="text-sm font-bold text-slate-600">第 1 页</span>
+        <button id="matchNextPage" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold disabled:opacity-40">下一页</button>
+      </div>
       <div class="relative bg-white/90 rounded-3xl border border-slate-200 shadow-sm p-4 md:p-8 select-none" id="matchAreaContainer">
         <svg id="matchSvgCanvas" class="absolute inset-0 w-full h-full line-canvas-overlay z-10 pointer-events-none"></svg>
 
@@ -274,6 +279,11 @@
         </div>
       </div>
 
+      <div class="flex items-center justify-center gap-3 mb-3">
+        <button id="flipPrevPage" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold disabled:opacity-40">上一页</button>
+        <span id="flipPageLabel" class="text-sm font-bold text-slate-600">第 1 页</span>
+        <button id="flipNextPage" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold disabled:opacity-40">下一页</button>
+      </div>
       <div id="flipCardGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 md:gap-5 select-none"></div>
     </section>
 
@@ -1131,9 +1141,11 @@
         cell.className = 'relative min-w-0 aspect-square rounded-lg border border-amber-200 bg-amber-50 overflow-hidden flex flex-col items-center justify-center p-0.5 text-center';
         if (item) {
           const img = document.createElement('img'); img.src = item.img || NO_IMAGE_PLACEHOLDER; img.alt = item.hanzi;
-          img.className = 'w-full h-2/3 object-cover rounded';
+          img.className = 'w-full h-[42%] object-cover rounded';
           const word = document.createElement('span'); word.className = 'text-[10px] sm:text-xs font-black text-slate-800 leading-tight truncate w-full'; word.textContent = item.hanzi;
-          cell.append(img, word);
+          const pinyin = document.createElement('span'); pinyin.className = 'text-[9px] sm:text-[10px] font-semibold text-indigo-700 leading-tight truncate w-full'; pinyin.textContent = item.pinyin || generatePinyin(item.hanzi);
+          const translation = document.createElement('span'); translation.className = 'text-[8px] sm:text-[9px] text-slate-600 leading-tight truncate w-full'; translation.textContent = getTranslation(item);
+          cell.append(img, word, pinyin, translation);
         } else cell.textContent = '词库为空';
         if (idx === policePos) { const mark = document.createElement('span'); mark.textContent = '👮'; mark.className = 'absolute top-0 left-0 text-lg drop-shadow'; cell.appendChild(mark); cell.classList.add('ring-2','ring-indigo-500'); }
         if (idx === thiefPos) { const mark = document.createElement('span'); mark.textContent = '🏃'; mark.className = 'absolute top-0 right-0 text-lg drop-shadow'; cell.appendChild(mark); cell.classList.add('ring-2','ring-red-500'); }
@@ -1172,11 +1184,11 @@
       const boardDie = document.getElementById('policeBoardDie');
       if (boardDie) boardDie.textContent = policeDiceFaces[policeDieValue - 1];
       policeQuestionItem = currentVocab[Math.floor(Math.random() * currentVocab.length)];
-      document.getElementById('policeQuestion').textContent = `请选出“${policeQuestionItem.pinyin}”对应的汉字`;
+      document.getElementById('policeQuestion').textContent = `请选出“${policeQuestionItem.pinyin}”对应的汉字（${getTranslation(policeQuestionItem)}）`;
       const choices = [policeQuestionItem, ...currentVocab.filter(v => v.id !== policeQuestionItem.id).sort(() => Math.random() - 0.5).slice(0, 3)].sort(() => Math.random() - 0.5);
       const options = document.getElementById('policeOptions'); options.innerHTML = '';
       choices.forEach(item => {
-        const b = document.createElement('button'); b.textContent = item.hanzi;
+        const b = document.createElement('button'); b.innerHTML = `<span class="block font-black">${item.hanzi}</span><span class="block text-xs text-slate-500">${item.pinyin || generatePinyin(item.hanzi)}</span><span class="block text-xs text-indigo-700">${getTranslation(item)}</span>`;
         b.className = 'rounded-xl border border-slate-200 bg-white px-2 py-3 font-black text-slate-800 hover:bg-indigo-50';
         b.addEventListener('click', () => answerPoliceTurn(item.id === policeQuestionItem.id));
         options.appendChild(b);
@@ -1315,47 +1327,48 @@
       });
     }
 
-    // 练习 3: 连线大挑战
+    // 练习 3: 连线大挑战（每页最多 5 组，跨页保留连线结果）
     let matchSelection = null;
     let matchConns = {};
+    let matchPage = 0;
+    const MATCH_PAGE_SIZE = 5;
 
     function initMatchGame() {
       const leftC = document.getElementById('matchLeftList');
       const rightC = document.getElementById('matchRightList');
       leftC.innerHTML = '';
       rightC.innerHTML = '';
-      matchConns = {};
       matchSelection = null;
       document.getElementById('matchSvgCanvas').innerHTML = '';
       document.getElementById('matchTotalCount').textContent = currentVocab.length;
+      const pageCount = Math.max(1, Math.ceil(currentVocab.length / MATCH_PAGE_SIZE));
+      matchPage = Math.min(matchPage, pageCount - 1);
+      const pageItems = currentVocab.slice(matchPage * MATCH_PAGE_SIZE, (matchPage + 1) * MATCH_PAGE_SIZE);
+      const shuffledRight = [...pageItems].sort(() => Math.random() - 0.5);
+      document.getElementById('matchPageLabel').textContent = `第 ${matchPage + 1} / ${pageCount} 页（每页最多 5 组）`;
+      document.getElementById('matchPrevPage').disabled = matchPage === 0;
+      document.getElementById('matchNextPage').disabled = matchPage >= pageCount - 1;
 
-      const shuffledRight = [...currentVocab].sort(() => Math.random() - 0.5);
-
-      currentVocab.forEach(item => {
+      pageItems.forEach(item => {
         const div = document.createElement('div');
         div.className = "match-left-item relative bg-white px-3 py-2 rounded-2xl border-2 border-slate-200 hover:border-red-400 cursor-pointer flex items-center justify-between shadow-sm transition-all h-[82px] min-h-[82px]";
         div.dataset.id = item.id;
         div.innerHTML = `
           <div class="flex items-center gap-3 overflow-hidden pr-6">
-            <div class="w-14 h-14 rounded-xl overflow-hidden border border-slate-200 shrink-0 bg-slate-50">
-              <img src="${item.img || NO_IMAGE_PLACEHOLDER}" class="w-full h-full object-cover">
-            </div>
+            <div class="w-14 h-14 rounded-xl overflow-hidden border border-slate-200 shrink-0 bg-slate-50"><img src="${item.img || NO_IMAGE_PLACEHOLDER}" class="w-full h-full object-cover"></div>
             <div class="overflow-hidden">
               <span class="text-2xl font-chinese font-black text-slate-800 leading-tight block">${item.hanzi}</span>
               <span class="text-xs text-slate-500 italic block truncate">${getTranslation(item)}</span>
             </div>
           </div>
-          <div class="match-left-dot-anchor absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center shadow-xs">
-            <div class="w-2 h-2 rounded-full bg-slate-400"></div>
-          </div>
-        `;
+          <div class="match-left-dot-anchor absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center shadow-xs"><div class="w-2 h-2 rounded-full bg-slate-400"></div></div>`;
         div.onclick = () => {
           document.querySelectorAll('.match-left-item').forEach(el => {
-            el.classList.remove('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-            el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500', '!bg-red-500');
+            el.classList.remove('border-red-500','bg-red-50/40','ring-2','ring-red-200');
+            el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500','!bg-red-500');
           });
-          div.classList.add('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-          div.querySelector('.match-left-dot-anchor')?.classList.add('!border-red-500', '!bg-red-500');
+          div.classList.add('border-red-500','bg-red-50/40','ring-2','ring-red-200');
+          div.querySelector('.match-left-dot-anchor')?.classList.add('!border-red-500','!bg-red-500');
           matchSelection = item.id;
           speakChinese(item.hanzi);
         };
@@ -1367,31 +1380,28 @@
         div.className = "match-right-item relative bg-white px-4 py-2 rounded-2xl border-2 border-slate-200 hover:border-indigo-400 cursor-pointer flex items-center justify-between shadow-sm transition-all h-[82px] min-h-[82px]";
         div.dataset.id = item.id;
         div.innerHTML = `
-          <div class="match-right-dot-anchor absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center shadow-xs">
-            <div class="w-2 h-2 rounded-full bg-slate-400"></div>
-          </div>
+          <div class="match-right-dot-anchor absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center shadow-xs"><div class="w-2 h-2 rounded-full bg-slate-400"></div></div>
           <div class="flex-1 flex items-center justify-between pl-4">
             <span class="text-2xl font-black text-indigo-700 tracking-wide font-sans">${item.pinyin}</span>
-            <button class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-sm shadow-xs transition-colors" onclick="event.stopPropagation(); speakChinese('${item.hanzi}')" title="朗读">
-              <i class="fa-solid fa-volume-high"></i>
-            </button>
-          </div>
-        `;
+            <button class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-sm shadow-xs" onclick="event.stopPropagation(); speakChinese('${item.hanzi}')" title="朗读"><i class="fa-solid fa-volume-high"></i></button>
+          </div>`;
         div.onclick = () => {
           if (!matchSelection) return;
           matchConns[matchSelection] = item.id;
           matchSelection = null;
           document.querySelectorAll('.match-left-item').forEach(el => {
-            el.classList.remove('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-            el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500', '!bg-red-500');
+            el.classList.remove('border-red-500','bg-red-50/40','ring-2','ring-red-200');
+            el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500','!bg-red-500');
           });
           updateMatchSvgLines();
         };
         rightC.appendChild(div);
       });
-
       setTimeout(updateMatchSvgLines, 60);
     }
+
+    document.getElementById('matchPrevPage').addEventListener('click', () => { if (matchPage > 0) { matchPage--; initMatchGame(); } });
+    document.getElementById('matchNextPage').addEventListener('click', () => { if ((matchPage + 1) * MATCH_PAGE_SIZE < currentVocab.length) { matchPage++; initMatchGame(); } });
 
     function updateMatchSvgLines() {
       const svg = document.getElementById('matchSvgCanvas');
@@ -1399,164 +1409,102 @@
       if (!svg || !container) return;
       const cRect = container.getBoundingClientRect();
       svg.innerHTML = '';
-
       Object.entries(matchConns).forEach(([lId, rId]) => {
         const leftElem = document.querySelector(`.match-left-item[data-id="${lId}"]`);
         const rightElem = document.querySelector(`.match-right-item[data-id="${rId}"]`);
         if (!leftElem || !rightElem) return;
-
-        const leftAnchor = leftElem.querySelector('.match-left-dot-anchor');
-        const rightAnchor = rightElem.querySelector('.match-right-dot-anchor');
-
-        const lDotRect = (leftAnchor || leftElem).getBoundingClientRect();
-        const rDotRect = (rightAnchor || rightElem).getBoundingClientRect();
-
-        const x1 = (lDotRect.left + lDotRect.width / 2) - cRect.left;
-        const y1 = (lDotRect.top + lDotRect.height / 2) - cRect.top;
-
-        const x2 = (rDotRect.left + rDotRect.width / 2) - cRect.left;
-        const y2 = (rDotRect.top + rDotRect.height / 2) - cRect.top;
-
-        const cx1 = x1 + (x2 - x1) * 0.45;
-        const cy1 = y1;
-        const cx2 = x1 + (x2 - x1) * 0.55;
-        const cy2 = y2;
-
-        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path.setAttribute("d", `M ${x1} ${y1} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${x2} ${y2}`);
-        path.setAttribute("fill", "none");
-        path.setAttribute("stroke", "#4f46e5");
-        path.setAttribute("stroke-width", "3.5");
-        path.setAttribute("stroke-linecap", "round");
-        svg.appendChild(path);
+        const l = leftElem.querySelector('.match-left-dot-anchor').getBoundingClientRect();
+        const r = rightElem.querySelector('.match-right-dot-anchor').getBoundingClientRect();
+        const x1=l.left+l.width/2-cRect.left, y1=l.top+l.height/2-cRect.top;
+        const x2=r.left+r.width/2-cRect.left, y2=r.top+r.height/2-cRect.top;
+        const path=document.createElementNS("http://www.w3.org/2000/svg","path");
+        path.setAttribute("d",`M ${x1} ${y1} C ${x1+(x2-x1)*.45} ${y1}, ${x1+(x2-x1)*.55} ${y2}, ${x2} ${y2}`);
+        path.setAttribute("fill","none"); path.setAttribute("stroke","#4f46e5"); path.setAttribute("stroke-width","3.5"); path.setAttribute("stroke-linecap","round"); svg.appendChild(path);
       });
     }
-
     window.addEventListener('resize', updateMatchSvgLines);
-
     document.getElementById('btnCheckMatch').addEventListener('click', () => {
       const keys = Object.keys(matchConns);
-      if (keys.length < currentVocab.length) return alert(`请完成所有 ${currentVocab.length} 组词语的连线再检查！`);
-      let ok = keys.filter(k => parseInt(k) === parseInt(matchConns[k])).length;
-      if (ok === currentVocab.length) {
-        confetti({ particleCount: 100 });
-        alert(`全对！太棒了！(Perfetto! ${ok}/${currentVocab.length})`);
-      } else {
-        alert(`做对了 ${ok} / ${currentVocab.length} 组，继续加油！`);
-      }
+      if (keys.length < currentVocab.length) return alert(`请完成全部 ${currentVocab.length} 组连线（共 ${Math.ceil(currentVocab.length / MATCH_PAGE_SIZE)} 页）再检查！`);
+      const ok = keys.filter(k => String(k) === String(matchConns[k])).length;
+      if (ok === currentVocab.length) { confetti({ particleCount: 100 }); alert(`全对！太棒了！(${ok}/${currentVocab.length})`); }
+      else alert(`做对了 ${ok} / ${currentVocab.length} 组，继续加油！`);
     });
-
     document.getElementById('btnResetMatch').addEventListener('click', () => {
-      matchConns = {};
-      document.getElementById('matchSvgCanvas').innerHTML = '';
-      document.querySelectorAll('.match-left-item').forEach(el => {
-        el.classList.remove('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
-        el.querySelector('.match-left-dot-anchor')?.classList.remove('!border-red-500', '!bg-red-500');
-      });
+      matchConns = {}; matchSelection = null; initMatchGame();
     });
 
-    // 练习 4: 汉字翻翻卡
+    // 练习 4: 汉字翻翻卡（每页最多 5 组，即 10 张卡片）
     let flippedCards = [];
     let flipMoves = 0;
     let flipMatchedPairs = 0;
     let flipLock = false;
+    let flipPage = 0;
+    let flipMatchedWordIds = new Set();
+    const FLIP_PAGE_SIZE = 5;
 
     function initFlipGame() {
       const grid = document.getElementById('flipCardGrid');
       grid.innerHTML = '';
-      flipMoves = 0;
-      flipMatchedPairs = 0;
-      flippedCards = [];
-      flipLock = false;
-      document.getElementById('flipMovesCount').textContent = '0';
-      document.getElementById('flipPairsCount').textContent = `0 / ${currentVocab.length}`;
-
+      flippedCards = []; flipLock = false;
+      const pageCount = Math.max(1, Math.ceil(currentVocab.length / FLIP_PAGE_SIZE));
+      flipPage = Math.min(flipPage, pageCount - 1);
+      const pageItems = currentVocab.slice(flipPage * FLIP_PAGE_SIZE, (flipPage + 1) * FLIP_PAGE_SIZE);
+      document.getElementById('flipPageLabel').textContent = `第 ${flipPage + 1} / ${pageCount} 页（每页 5 组 / 10 张卡）`;
+      document.getElementById('flipPrevPage').disabled = flipPage === 0;
+      document.getElementById('flipNextPage').disabled = flipPage >= pageCount - 1;
+      document.getElementById('flipMovesCount').textContent = String(flipMoves);
+      document.getElementById('flipPairsCount').textContent = `${flipMatchedWordIds.size} / ${currentVocab.length}`;
       let cardsData = [];
-      currentVocab.forEach((item, idx) => {
-        cardsData.push({ uid: `h-${idx}`, wordId: item.id, type: 'hanzi', text: item.hanzi, italian: getTranslation(item), sound: item.hanzi });
-        cardsData.push({ uid: `i-${idx}`, wordId: item.id, type: 'img', img: item.img || NO_IMAGE_PLACEHOLDER, pinyin: item.pinyin, sound: item.hanzi });
+      pageItems.forEach((item, idx) => {
+        cardsData.push({ uid:`h-${flipPage}-${idx}`, wordId:item.id, type:'hanzi', text:item.hanzi, translation:getTranslation(item), sound:item.hanzi });
+        cardsData.push({ uid:`i-${flipPage}-${idx}`, wordId:item.id, type:'img', img:item.img || NO_IMAGE_PLACEHOLDER, pinyin:item.pinyin, sound:item.hanzi });
       });
       cardsData.sort(() => Math.random() - 0.5);
-
       cardsData.forEach(card => {
-        const cardElem = document.createElement('div');
-        cardElem.className = "flip-card relative h-56 sm:h-64 cursor-pointer perspective-1000";
-        const inner = document.createElement('div');
-        inner.className = "flip-card-inner relative w-full h-full transform-style-3d transition-transform duration-500 rounded-3xl shadow-md";
-
-        const front = document.createElement('div');
-        front.className = "absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 via-rose-600 to-amber-600 rounded-3xl border-3 border-amber-300 flex flex-col items-center justify-center text-white shadow-sm p-4";
-        front.innerHTML = `
-          <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-xs flex items-center justify-center mb-2 shadow-inner">
-            <i class="fa-solid fa-seedling text-amber-200 text-3xl"></i>
-          </div>
-          <span class="text-sm font-bold text-amber-100 font-chinese tracking-widest uppercase">点击翻开</span>
-        `;
-
-        const back = document.createElement('div');
-        back.className = "absolute inset-0 backface-hidden rotate-y-180 bg-white rounded-3xl border-2 border-amber-200 flex flex-col items-center justify-between p-4 shadow-lg";
-
-        if (card.type === 'hanzi') {
-          back.innerHTML = `
-            <div class="my-auto flex flex-col items-center justify-center w-full px-2">
-              <span class="text-3xl sm:text-4xl font-chinese font-black text-slate-800 mb-3 leading-none tracking-normal">${card.text}</span>
-              <span class="text-xs sm:text-sm font-bold text-amber-900 bg-amber-100/90 px-3 py-1.5 rounded-xl text-center leading-tight max-w-full break-words border border-amber-200 shadow-2xs">${card.italian}</span>
-            </div>
-          `;
-        } else {
-          back.innerHTML = `
-            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md bg-slate-50 shrink-0 my-auto">
-              <img src="${card.img}" class="w-full h-full object-cover">
-            </div>
-            <span class="text-xl sm:text-2xl font-black text-red-600 font-sans tracking-wide leading-none pb-1">${card.pinyin}</span>
-          `;
-        }
-
-        inner.appendChild(front);
-        inner.appendChild(back);
-        cardElem.appendChild(inner);
-
-        cardElem.addEventListener('click', () => {
-          if (flipLock || cardElem.classList.contains('flipped') || cardElem.classList.contains('matched')) return;
-          cardElem.classList.add('flipped');
-          inner.classList.add('rotate-y-180');
-          speakChinese(card.sound);
-          flippedCards.push({ elem: cardElem, data: card });
-
-          if (flippedCards.length === 2) {
-            flipMoves++;
-            document.getElementById('flipMovesCount').textContent = flipMoves;
-            flipLock = true;
-            const [c1, c2] = flippedCards;
-            if (c1.data.wordId === c2.data.wordId && c1.data.type !== c2.data.type) {
-              setTimeout(() => {
-                c1.elem.classList.add('matched');
-                c2.elem.classList.add('matched');
-                c1.elem.querySelector('.flip-card-inner > div:last-child').classList.add('!bg-emerald-50', '!border-emerald-400');
-                c2.elem.querySelector('.flip-card-inner > div:last-child').classList.add('!bg-emerald-50', '!border-emerald-400');
-                flippedCards = [];
-                flipLock = false;
-                flipMatchedPairs++;
-                document.getElementById('flipPairsCount').textContent = `${flipMatchedPairs} / ${currentVocab.length}`;
-                if (flipMatchedPairs === currentVocab.length) confetti({ particleCount: 100 });
-              }, 400);
-            } else {
-              setTimeout(() => {
-                c1.elem.classList.remove('flipped');
-                c2.elem.classList.remove('flipped');
-                c1.elem.querySelector('.flip-card-inner').classList.remove('rotate-y-180');
-                c2.elem.querySelector('.flip-card-inner').classList.remove('rotate-y-180');
-                flippedCards = [];
-                flipLock = false;
-              }, 900);
-            }
+        const cardElem=document.createElement('div');
+        cardElem.className="flip-card relative h-56 sm:h-64 cursor-pointer perspective-1000";
+        const inner=document.createElement('div');
+        inner.className="flip-card-inner relative w-full h-full transform-style-3d transition-transform duration-500 rounded-3xl shadow-md";
+        const front=document.createElement('div');
+        front.className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 via-rose-600 to-amber-600 rounded-3xl border-3 border-amber-300 flex flex-col items-center justify-center text-white shadow-sm p-4";
+        front.innerHTML='<div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-2"><i class="fa-solid fa-seedling text-amber-200 text-3xl"></i></div><span class="text-sm font-bold text-amber-100">点击翻开</span>';
+        const back=document.createElement('div');
+        back.className="absolute inset-0 backface-hidden rotate-y-180 bg-white rounded-3xl border-2 border-amber-200 flex flex-col items-center justify-between p-4 shadow-lg";
+        if(card.type==='hanzi') back.innerHTML=`<div class="my-auto flex flex-col items-center justify-center w-full px-2"><span class="text-3xl sm:text-4xl font-chinese font-black text-slate-800 mb-3">${card.text}</span><span class="text-xs sm:text-sm font-bold text-amber-900 bg-amber-100 px-3 py-1.5 rounded-xl text-center">${card.translation}</span></div>`;
+        else back.innerHTML=`<div class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md bg-slate-50 shrink-0 my-auto"><img src="${card.img}" class="w-full h-full object-cover"></div><span class="text-xl sm:text-2xl font-black text-red-600 leading-none pb-1">${card.pinyin}</span>`;
+        inner.append(front,back); cardElem.appendChild(inner);
+        if(flipMatchedWordIds.has(card.wordId)){cardElem.classList.add('matched','flipped');inner.classList.add('rotate-y-180');back.classList.add('!bg-emerald-50','!border-emerald-400');}
+        cardElem.addEventListener('click',()=>{
+          if(flipLock||cardElem.classList.contains('flipped')||cardElem.classList.contains('matched'))return;
+          cardElem.classList.add('flipped');inner.classList.add('rotate-y-180');speakChinese(card.sound);
+          flippedCards.push({elem:cardElem,data:card});
+          if(flippedCards.length===2){
+            flipMoves++;document.getElementById('flipMovesCount').textContent=String(flipMoves);flipLock=true;
+            const [c1,c2]=flippedCards;
+            if(c1.data.wordId===c2.data.wordId&&c1.data.type!==c2.data.type){
+              setTimeout(()=>{
+                [c1,c2].forEach(c=>{c.elem.classList.add('matched');c.elem.querySelector('.flip-card-inner > div:last-child').classList.add('!bg-emerald-50','!border-emerald-400');});
+                flipMatchedWordIds.add(c1.data.wordId);flipMatchedPairs=flipMatchedWordIds.size;
+                document.getElementById('flipPairsCount').textContent=`${flipMatchedPairs} / ${currentVocab.length}`;
+                flippedCards=[];flipLock=false;
+                if(flipMatchedPairs===currentVocab.length)confetti({particleCount:100});
+              },400);
+            }else setTimeout(()=>{
+              c1.elem.classList.remove('flipped');c2.elem.classList.remove('flipped');
+              c1.elem.querySelector('.flip-card-inner').classList.remove('rotate-y-180');c2.elem.querySelector('.flip-card-inner').classList.remove('rotate-y-180');
+              flippedCards=[];flipLock=false;
+            },900);
           }
         });
         grid.appendChild(cardElem);
       });
     }
+    document.getElementById('flipPrevPage').addEventListener('click',()=>{if(flipPage>0)initFlipPage(-1);});
+    document.getElementById('flipNextPage').addEventListener('click',()=>{if((flipPage+1)*FLIP_PAGE_SIZE<currentVocab.length)initFlipPage(1);});
+    function initFlipPage(delta){flipPage=Math.max(0,flipPage+delta);initFlipGame();}
 
-    document.getElementById('btnRestartFlip').addEventListener('click', initFlipGame);
+    document.getElementById('btnRestartFlip').addEventListener('click', () => { flipMoves=0; flipMatchedPairs=0; flipMatchedWordIds=new Set(); flipPage=0; initFlipGame(); });
 
     function initAllModes() {
       const badge = document.getElementById('navVocabCountBadge');
@@ -1565,6 +1513,7 @@
       initImg2PinyinGame();
       initMatchGame();
       initFlipGame();
+      renderPoliceBoard();
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
