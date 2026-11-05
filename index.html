@@ -1310,6 +1310,37 @@
       }
     }
 
+
+    /* 第五关：棋盘尺寸同时跟随浏览器可用宽度和高度缩放，中央区域仍按比例居中 */
+    @media (min-width: 901px) {
+      #sectionPolice #policePlayArea {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+      }
+      #sectionPolice #policeBoard {
+        width: 100% !important;
+        max-width: none !important;
+        height: clamp(320px, min(82vh, 58vw), 900px) !important;
+        grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+        grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+        gap: clamp(2px, .45vw, 7px) !important;
+        transform: none !important;
+      }
+      #sectionPolice #policeBoard > div:not(.absolute) {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: 100% !important;
+        aspect-ratio: auto !important;
+      }
+      #sectionPolice #policeBoard .police-cell-image {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
