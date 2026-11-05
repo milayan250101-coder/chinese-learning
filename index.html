@@ -70,6 +70,10 @@
       </div>
 
       <div class="flex items-center gap-2">
+        <label for="languageSelector" class="text-xs font-bold text-slate-600">学习语言</label>
+        <select id="languageSelector" class="px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs font-bold text-slate-700">
+          <option value="it">Italiano</option><option value="en">English</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="zh">中文</option>
+        </select>
         <button id="btnOpenVocabModal" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition-all active:scale-95 flex items-center gap-1.5 border border-slate-200">
           <i class="fa-solid fa-sliders text-slate-500"></i>
           <span>词库管理与搜图 (<span id="navVocabCountBadge">5</span>词)</span>
@@ -486,73 +490,84 @@
       return "";
     }
 
-    // 意大利语翻译
-    async function fetchItalian(text) {
-      const clean = text.trim();
-      if (!clean) return "";
+    // 多语言翻译：顶部选择目标语言，翻译结果按词条缓存
+    const LANGUAGE_NAMES = { it: "Italiano", en: "English", fr: "Français", de: "Deutsch", es: "Español", zh: "中文" };
+    let selectedLanguage = localStorage.getItem("chinese_learning_language") || "it";
+    const languageSelector = document.getElementById("languageSelector");
+    if (languageSelector) languageSelector.value = selectedLanguage;
 
-      if (BUILTIN_IT[clean]) return BUILTIN_IT[clean];
-
-      try {
-        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=zh|it`;
-        const res = await fetch(url, { signal: AbortSignal.timeout(3000) });
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.responseData && data.responseData.translatedText) {
-            let resText = data.responseData.translatedText.trim();
-            if (!resText.toLowerCase().includes("mymemory") && !resText.toLowerCase().includes("quota")) {
-              return resText.charAt(0).toUpperCase() + resText.slice(1);
-            }
-          }
-        }
-      } catch (err) {}
-
-      return `Significato: ${clean}`;
+    function getTranslation(item) {
+      if (!item) return "";
+      if (selectedLanguage === "zh") return item.hanzi;
+      return item.translations?.[selectedLanguage] || (selectedLanguage === "it" ? item.italian : item.hanzi);
     }
 
-    // 搜索引擎基于 Google 标准
-    async function searchOnlineImages(queryWord, italian = "", offset = 0) {
-      const candidates = [];
+    async function fetchTranslation(text, language = selectedLanguage) {
+      const clean = text.trim();
+      if (!clean) return "";
+      if (language === "zh") return clean;
+      if (language === "it" && BUILTIN_IT[clean]) return BUILTIN_IT[clean];
+      try {
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=zh|${language}`;
+        const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+        if (res.ok) {
+          const data = await res.json();
+          const translated = data?.responseData?.translatedText?.trim();
+          if (translated && !/mymemory|quota|MYMEMORY WARNING/i.test(translated)) return translated;
+        }
+      } catch (error) {
+        console.warn("Translation request failed:", language, error);
+      }
+      return language === "it" ? (BUILTIN_IT[clean] || clean) : clean;
+    }
+
+    async function ensureCurrentLanguageTranslations() {
+      if (selectedLanguage === "zh") { initAllModes(); return; }
+      for (const item of currentVocab) {
+        if (!item.translations) item.translations = {};
+        if (!item.translations[selectedLanguage]) {
+          item.translations[selectedLanguage] = await fetchTranslation(item.hanzi, selectedLanguage);
+        }
+      }
+      localStorage.setItem("chinese_italian_vocab", JSON.stringify(currentVocab));
+      initAllModes();
+    }
+
+    languageSelector?.addEventListener("change", async (event) => {
+      selectedLanguage = event.target.value;
+      localStorage.setItem("chinese_learning_language", selectedLanguage);
+      await ensureCurrentLanguageTranslations();
+    });
+
+    // 相关图片检索：使用 Wikimedia Commons API，删除随机图片兜底
+    async function searchOnlineImages(queryWord, translation = "", offset = 0) {
       const cleanHanzi = queryWord.trim();
-      const cleanIt = italian.split(/[\/\,\;]/)[0].replace(/Significato:/i, '').trim();
-
-      if (offset === 0 && BUILTIN_IMG_PRESETS[cleanHanzi]) {
-        candidates.push({
-          url: BUILTIN_IMG_PRESETS[cleanHanzi],
-          title: `${cleanHanzi} (${cleanIt}) - 现代高清实拍`,
-          domain: 'google.com / images'
-        });
-      }
-
-      if (cleanHanzi === "衣柜" || cleanHanzi === "柜子") {
-        candidates.push({
-          url: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=85",
-          title: "衣柜 Armadio - 现代简约卧室衣柜",
-          domain: 'google.com / images'
-        });
-        candidates.push({
-          url: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=700&q=85",
-          title: "衣柜 Armadio - 北欧风收纳大衣橱",
-          domain: 'google.com / images'
-        });
-      }
-
-      for (let i = 0; i < 4; i++) {
-        const seedStr = encodeURIComponent(`${cleanHanzi}-google-search-${i + offset}`);
-        candidates.push({
-          url: `https://picsum.photos/seed/${seedStr}/600/600`,
-          title: `${cleanHanzi} ${cleanIt} - 现代实拍图源 #${i + 1}`,
-          domain: 'google.com / images'
-        });
-      }
-
-      // 去重
-      const seen = new Set();
-      return candidates.filter(item => {
-        if (seen.has(item.url)) return false;
-        seen.add(item.url);
-        return true;
-      });
+      const cleanTranslation = (translation || "").split(/[\/;,]/)[0].trim();
+      const searchText = [cleanHanzi, cleanTranslation].filter(Boolean).join(" ");
+      const api = new URL("https://commons.wikimedia.org/w/api.php");
+      api.searchParams.set("action", "query");
+      api.searchParams.set("generator", "search");
+      api.searchParams.set("gsrsearch", searchText);
+      api.searchParams.set("gsrnamespace", "6");
+      api.searchParams.set("gsrlimit", "12");
+      api.searchParams.set("gsroffset", String(offset));
+      api.searchParams.set("prop", "imageinfo");
+      api.searchParams.set("iiprop", "url");
+      api.searchParams.set("iiurlwidth", "600");
+      api.searchParams.set("format", "json");
+      api.searchParams.set("origin", "*");
+      const response = await fetch(api.toString(), { signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error(`Image search failed: HTTP ${response.status}`);
+      const data = await response.json();
+      return Object.values(data?.query?.pages || {})
+        .filter(page => page.imageinfo?.[0]?.thumburl || page.imageinfo?.[0]?.url)
+        .map(page => ({
+          url: page.imageinfo[0].thumburl || page.imageinfo[0].url,
+          title: String(page.title || "").replace(/^File:/, ""),
+          domain: "Wikimedia Commons"
+        }))
+        .filter(item => !/\.svg(?:$|\?)/i.test(item.url))
+        .filter(item => !/logo|icon|map|flag|diagram|symbol|coat of arms/i.test(item.title));
     }
 
     // 顶部快捷输入栏处理
@@ -572,23 +587,19 @@
       for (let i = 0; i < words.length; i++) {
         const word = words[i];
         const pinyin = generatePinyin(word);
-        const italian = await fetchItalian(word);
-
-        let targetImg = BUILTIN_IMG_PRESETS[word] || `https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=85`;
+        const italian = await fetchTranslation(word, "it");
+        const translations = { it: italian };
+        if (selectedLanguage !== "it" && selectedLanguage !== "zh") {
+          translations[selectedLanguage] = await fetchTranslation(word, selectedLanguage);
+        }
+        let targetImg = BUILTIN_IMG_PRESETS[word] || "";
         try {
-          const items = await searchOnlineImages(word, italian);
-          if (items && items.length > 0) {
-            targetImg = items[0].url;
-          }
-        } catch(e) {}
-
-        newVocabList.push({
-          id: i + 1,
-          hanzi: word,
-          pinyin: pinyin,
-          italian: italian,
-          img: targetImg
-        });
+          const items = await searchOnlineImages(word, translations[selectedLanguage] || italian);
+          if (items.length > 0) targetImg = items[0].url;
+        } catch (error) {
+          console.warn("Image search failed for", word, error);
+        }
+        newVocabList.push({ id: i + 1, hanzi: word, pinyin, italian, translations, img: targetImg });
       }
 
       currentVocab = newVocabList;
@@ -719,9 +730,9 @@
       activePickerIndex = index;
       const item = currentVocab[index];
       document.getElementById('pickerTargetWord').textContent = item.hanzi;
-      document.getElementById('pickerTargetItalian').textContent = item.italian;
+      document.getElementById('pickerTargetItalian').textContent = getTranslation(item);
       document.getElementById('pickerCustomUrlInput').value = '';
-      document.getElementById('pickerCustomSearchInput').value = `${item.hanzi} ${item.italian.split('/')[0]}`;
+      document.getElementById('pickerCustomSearchInput').value = `${item.hanzi} ${getTranslation(item)}`;
       currentCandidates = [];
 
       imagePickerModal.classList.remove('hidden');
@@ -742,9 +753,8 @@
     // ⭐ 严格带上你的官方标准参数 &udm=2 打开 Google 图片搜索 ⭐
     window.launchGoogleSearch = function() {
       const item = currentVocab[activePickerIndex];
-      const itFirst = item.italian.split(/[\/\,\;]/)[0].replace(/Significato:/i, '').trim();
-      const queryStr = `${item.hanzi} ${itFirst} 现代高清 实拍`;
-      window.open(`https://www.google.com/search?q=${encodeURIComponent(queryStr)}&udm=2`, '_blank');
+      const queryStr = `${item.hanzi} ${getTranslation(item)}`;
+      window.open(`https://commons.wikimedia.org/w/index.php?search=${encodeURIComponent(queryStr)}&title=Special:MediaSearch&type=image`, '_blank');
     };
 
     // 内部自定义搜索
@@ -768,14 +778,20 @@
     async function loadCandidates(isAppend = false, customQuery = "") {
       const grid = document.getElementById('pickerCandidatesGrid');
       const item = currentVocab[activePickerIndex];
-      const queryWord = customQuery || `${item.hanzi} ${item.italian.split('/')[0]}`;
+      const queryWord = customQuery || item.hanzi;
       
       if (!isAppend) {
         grid.innerHTML = `<div class="col-span-3 text-center py-10 text-xs text-slate-400"><i class="fa-brands fa-google text-lg mr-2 text-blue-500 animate-spin"></i> 正在以 Google 搜索标准检索现代高清图片...</div>`;
       }
 
       const offset = currentCandidates.length;
-      const newItems = await searchOnlineImages(queryWord, item.italian, offset);
+      let newItems = [];
+      try {
+        newItems = await searchOnlineImages(queryWord, customQuery ? "" : getTranslation(item), offset);
+      } catch (error) {
+        grid.innerHTML = '<p class="col-span-3 text-center py-8 text-sm text-rose-600">图片搜索暂时不可用。请稍后重试，或手动粘贴图片网址。</p>';
+        return;
+      }
 
       if (!isAppend) {
         grid.innerHTML = '';
@@ -793,7 +809,7 @@
         div.className = "group bg-white rounded-3xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-blue-400 cursor-pointer transition-all flex flex-col";
         div.innerHTML = `
           <div class="aspect-square bg-slate-100 overflow-hidden relative">
-            <img src="${cand.url}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=500&q=85'">
+            <img src="${cand.url}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.closest('.group').remove()">
             <div class="absolute inset-0 bg-blue-600/30 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-xs font-bold transition-opacity">
               <span class="bg-blue-600 px-3 py-1.5 rounded-full shadow-md flex items-center gap-1"><i class="fa-solid fa-check text-xs"></i> 选用此图</span>
             </div>
@@ -953,7 +969,7 @@
       const q = currentVocab[p2iIdx];
       document.getElementById('p2iCurrentNum').textContent = p2iIdx + 1;
       document.getElementById('p2iQuestionPinyin').textContent = q.pinyin;
-      document.getElementById('p2iItalianHint').textContent = `Suggerimento: ${q.italian}`;
+      document.getElementById('p2iItalianHint').textContent = getTranslation(q);
       document.getElementById('p2iFeedbackBox').innerHTML = '';
 
       const otherCount = Math.min(3, currentVocab.length - 1);
@@ -1001,7 +1017,7 @@
       document.getElementById('i2pCurrentNum').textContent = i2pIdx + 1;
       document.getElementById('i2pQuestionImg').src = q.img;
       document.getElementById('i2pQuestionHanzi').textContent = q.hanzi;
-      document.getElementById('i2pQuestionItalian').textContent = q.italian;
+      document.getElementById('i2pQuestionItalian').textContent = getTranslation(q);
       document.getElementById('i2pFeedbackBox').innerHTML = '';
 
       const otherCount = Math.min(3, currentVocab.length - 1);
@@ -1062,7 +1078,7 @@
             </div>
             <div class="overflow-hidden">
               <span class="text-2xl font-chinese font-black text-slate-800 leading-tight block">${item.hanzi}</span>
-              <span class="text-xs text-slate-500 italic block truncate">${item.italian}</span>
+              <span class="text-xs text-slate-500 italic block truncate">${getTranslation(item)}</span>
             </div>
           </div>
           <div class="match-left-dot-anchor absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center shadow-xs">
@@ -1193,7 +1209,7 @@
 
       let cardsData = [];
       currentVocab.forEach((item, idx) => {
-        cardsData.push({ uid: `h-${idx}`, wordId: item.id, type: 'hanzi', text: item.hanzi, italian: item.italian, sound: item.hanzi });
+        cardsData.push({ uid: `h-${idx}`, wordId: item.id, type: 'hanzi', text: item.hanzi, italian: getTranslation(item), sound: item.hanzi });
         cardsData.push({ uid: `i-${idx}`, wordId: item.id, type: 'img', img: item.img, pinyin: item.pinyin, sound: item.hanzi });
       });
       cardsData.sort(() => Math.random() - 0.5);
