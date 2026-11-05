@@ -1031,6 +1031,147 @@
       }
     }
 
+  
+    /* 第五关中央区域重排：左侧2×2答案，右侧上方骰子、下方操作按钮 */
+    @media (min-width: 901px) {
+      #sectionPolice #policePlayArea {
+        position: relative !important;
+        width: 100% !important;
+      }
+      #sectionPolice #policeBoard {
+        height: clamp(430px, 58vh, 620px) !important;
+      }
+      #sectionPolice #policeAnswerPanel {
+        position: absolute !important;
+        z-index: 20 !important;
+        left: 12.5% !important;
+        top: 14.5% !important;
+        width: 75% !important;
+        height: 71% !important;
+        margin: 0 !important;
+        padding: clamp(8px, 1vw, 14px) !important;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        grid-template-rows: minmax(0, 1fr) !important;
+        align-items: stretch !important;
+        gap: clamp(8px, 1vw, 14px) !important;
+        background: rgba(255,255,255,.94) !important;
+        border: 1px solid #dbe4f0 !important;
+        border-radius: 18px !important;
+        box-shadow: 0 5px 18px rgba(15,23,42,.08) !important;
+      }
+      #sectionPolice #policeAnswerChoices {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+      #sectionPolice #policeOptions {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-rows: repeat(2, minmax(64px, 1fr)) !important;
+        gap: clamp(7px, .8vw, 12px) !important;
+        width: 100% !important;
+      }
+      #sectionPolice #policeOptions > button,
+      #sectionPolice #policeOptions .police-answer-option {
+        min-width: 0 !important;
+        min-height: 64px !important;
+        padding: 8px 5px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 3px 6px !important;
+      }
+      #sectionPolice #policeFeedback {
+        margin-top: 6px !important;
+        text-align: center !important;
+      }
+      #sectionPolice #policeControls {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        align-items: stretch !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 2px 0 2px clamp(7px, .8vw, 12px) !important;
+        border-left: 1px solid #dbe4f0 !important;
+        gap: clamp(5px, .7vw, 9px) !important;
+      }
+      #sectionPolice .police-center-dice {
+        position: static !important;
+        inset: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 74px !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 5px !important;
+        border: 0 !important;
+        border-radius: 12px !important;
+        background: #eef2ff !important;
+        box-shadow: none !important;
+      }
+      #sectionPolice #policeBoardDie {
+        font-size: clamp(38px, 4vw, 54px) !important;
+      }
+      #sectionPolice .police-center-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        min-width: 0 !important;
+      }
+      #sectionPolice .police-center-actions button {
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 9px 6px !important;
+        font-size: clamp(12px, 1vw, 15px) !important;
+      }
+      #sectionPolice .police-center-actions > div {
+        text-align: center !important;
+        font-size: 10px !important;
+      }
+      #sectionPolice #policeControls > button {
+        width: 100% !important;
+        min-height: 38px !important;
+        padding: 6px 4px !important;
+        font-size: clamp(10px, .9vw, 13px) !important;
+        white-space: normal !important;
+      }
+      #sectionPolice #btnPoliceSound {
+        min-height: 32px !important;
+        font-size: 10px !important;
+      }
+    }
+    @media (max-width: 900px) {
+      #sectionPolice #policeAnswerPanel {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        margin-top: 8px !important;
+      }
+      #sectionPolice #policeOptions {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      #sectionPolice .police-center-dice {
+        position: absolute !important;
+        left: 25% !important;
+        top: 35% !important;
+        width: 50% !important;
+        height: 30% !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
@@ -1296,8 +1437,9 @@
           <p class="text-xs text-indigo-200 mt-4">答对帮助警察追捕；答错会让小偷趁机多逃几步！</p>
         </aside>
         <div class="bg-white/90 rounded-3xl border border-amber-100 p-3 sm:p-5 shadow-sm">
-          <div id="policeBoard" class="grid grid-cols-8 gap-1 sm:gap-2 max-w-3xl mx-auto"></div>
-          <div id="policeAnswerPanel" class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3">
+          <div id="policePlayArea" class="relative">
+            <div id="policeBoard" class="grid grid-cols-8 gap-1 sm:gap-2 max-w-3xl mx-auto"></div>
+            <div id="policeAnswerPanel" class="w-full mx-auto mt-2 rounded-2xl bg-slate-50 border border-slate-200 p-3">
             <div id="policeAnswerChoices" class="min-w-0">
               <div class="hidden">🎲 本轮骰子</div>
               <div id="policeDie" class="hidden">⚀</div>
@@ -1310,6 +1452,7 @@
               <button id="btnPoliceHint" class="w-full px-3 py-3 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold">💡 提示</button>
               <button id="btnPoliceRestart" class="w-full px-3 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold">🔄 重新开始</button>
               <button id="btnPoliceSound" aria-pressed="true" class="w-full px-3 py-3 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold">🔊 音效：开</button>
+            </div>
             </div>
           </div>
           <p id="policeStatus" class="text-center text-sm font-bold text-indigo-700 mt-3" aria-live="polite">警察从起点出发，小偷已经领先逃跑！</p>
@@ -2184,7 +2327,9 @@
       centerControl.className = 'police-center-dice absolute rounded-2xl border-2 border-indigo-300 bg-white/95 shadow-xl flex items-center justify-center gap-3 z-10';
       centerControl.innerHTML = `<div class="police-center-die text-5xl sm:text-6xl leading-none" id="policeBoardDie">${policeDiceFaces[policeDieValue - 1]}</div><div class="police-center-actions"><button type="button" class="px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base font-black shadow-lg">🎲 掷骰子</button><div class="text-xs font-bold text-indigo-800 mt-1">👮 警察　🦹 小偷</div></div>`;
       centerControl.querySelector('button').addEventListener('click', startPoliceTurn);
-      board.appendChild(centerControl);
+      // 将骰子控制移入中央空白区右半边的顶部；答案面板覆盖在棋盘中央空白区。
+      const policeControls = document.getElementById('policeControls');
+      policeControls.insertBefore(centerControl, policeControls.firstChild);
       document.getElementById('policeSteps').textContent = policeStepTotal;
       document.getElementById('thiefSteps').textContent = thiefStepTotal;
       document.getElementById('policeCorrect').textContent = policeCorrectTotal;
