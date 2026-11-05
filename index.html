@@ -148,6 +148,164 @@
         padding-bottom: 12px;
       }
     }
+
+    /* 单屏游戏布局：桌面端按可用视口高度压缩内容，不改变游戏逻辑 */
+    @media (min-width: 901px) {
+      body > div.w-full.mx-auto.px-3.pt-2 > div {
+        padding: 8px 12px;
+        border-radius: 14px;
+      }
+      body > div.w-full.mx-auto.px-3.pt-2 > div > div:first-child { gap: 8px; }
+      body > div.w-full.mx-auto.px-3.pt-2 input,
+      body > div.w-full.mx-auto.px-3.pt-2 button { padding-top: 8px; padding-bottom: 8px; }
+      body > div.w-full.mx-auto.px-3.pt-2 > div > div:last-child {
+        margin-top: 6px;
+        padding-top: 6px;
+        gap: 6px;
+      }
+      main { padding: 8px 12px !important; }
+
+      /* 1. 看拼音选图：四张选项图按视口高度缩小 */
+      #sectionPinyin2Img > div {
+        padding: 10px 14px !important;
+      }
+      #sectionPinyin2Img > div > div:first-child {
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+      }
+      #sectionPinyin2Img > div > div:nth-child(2) {
+        margin-bottom: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+      #p2iQuestionPinyin { font-size: clamp(30px, 4vh, 44px); line-height: 1.05; }
+      #p2iOptionsGrid {
+        width: min(100%, 620px);
+        grid-auto-rows: clamp(105px, 18vh, 165px);
+        gap: 10px;
+      }
+      #p2iOptionsGrid > button {
+        height: 100%;
+        min-height: 0;
+        aspect-ratio: auto;
+        padding: 3px;
+        border-radius: 14px;
+      }
+      #p2iFeedbackBox { margin-top: 8px; min-height: 28px; }
+
+      /* 3. 连线大挑战：五组内容压缩到同一屏 */
+      #sectionMatch > div:first-child {
+        padding: 10px 14px;
+        margin-bottom: 8px;
+        gap: 8px;
+      }
+      #sectionMatch > div:first-child h2 { font-size: 17px; }
+      #sectionMatch > div:first-child p { font-size: 12px; margin-top: 2px; }
+      #sectionMatch > div:nth-child(2) { margin-bottom: 6px; gap: 8px; }
+      #sectionMatch > div:nth-child(2) button { padding: 6px 12px; }
+      #matchAreaContainer { padding: 10px 18px !important; }
+      #matchAreaContainer > .grid { gap: 24px; }
+      #matchLeftList, #matchRightList { gap: 7px !important; }
+      #matchLeftList > .match-left-item,
+      #matchRightList > .match-right-item {
+        height: clamp(48px, 7.2vh, 62px) !important;
+        min-height: clamp(48px, 7.2vh, 62px) !important;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 12px;
+      }
+      #matchLeftList .w-14.h-14 { width: 42px; height: 42px; }
+      #matchLeftList .text-2xl,
+      #matchRightList .text-2xl { font-size: 19px; line-height: 1.1; }
+      #matchRightList button { width: 30px; height: 30px; }
+
+      /* 5. 警察抓小偷：棋盘高度受视口控制，答题与操作并排 */
+      #sectionPolice > .grid { gap: 10px; }
+      #sectionPolice aside { padding: 9px; }
+      #sectionPolice aside h2 { font-size: 17px; margin-bottom: 5px; }
+      #sectionPolice aside > div { padding: 7px; margin-bottom: 5px; }
+      #sectionPolice aside > div p.text-3xl { font-size: 24px; }
+      #sectionPolice aside > div p.text-xl { font-size: 17px; }
+      #sectionPolice aside > p { margin-top: 5px; font-size: 10px; }
+      #sectionPolice > .grid > div:last-child {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(230px, 290px);
+        grid-template-areas:
+          "heading heading"
+          "board board"
+          "question actions"
+          "status status";
+        align-content: start;
+        align-items: center;
+        gap: 6px 10px;
+        padding: 8px !important;
+      }
+      #sectionPolice > .grid > div:last-child > div:nth-child(1) {
+        grid-area: heading;
+        margin: 0 !important;
+      }
+      #sectionPolice > .grid > div:last-child > div:nth-child(1) h2 { font-size: 17px; }
+      #sectionPolice > .grid > div:last-child > div:nth-child(1) p { font-size: 11px; }
+      #policeBoard {
+        grid-area: board;
+        height: clamp(290px, 43vh, 390px);
+        grid-template-rows: repeat(7, minmax(0, 1fr));
+        gap: 3px !important;
+      }
+      #policeBoard > div:not(.absolute) {
+        aspect-ratio: auto !important;
+        min-height: 0;
+        padding: 1px;
+      }
+      #policeBoard img { height: 38% !important; min-height: 0; }
+      #policeBoard span { font-size: clamp(7px, .65vw, 10px) !important; line-height: 1 !important; }
+      #policeBoard .absolute.left-1\/4 {
+        gap: 2px;
+        border-radius: 10px;
+      }
+      #policeBoard .absolute.left-1\/4 > div { font-size: 24px; }
+      #sectionPolice > .grid > div:last-child > div:nth-child(3) {
+        grid-area: question;
+        margin: 0 !important;
+        padding: 7px !important;
+      }
+      #policeQuestion { font-size: 13px; line-height: 1.25; }
+      #policeDie { font-size: 28px; margin-bottom: 2px; }
+      #policeOptions { margin-top: 6px; gap: 5px; }
+      #policeOptions button { padding: 5px 3px; font-size: 12px; line-height: 1.15; }
+      #policeOptions button span { font-size: 10px; }
+      #policeFeedback { margin-top: 5px; min-height: 16px; font-size: 11px; }
+      #sectionPolice > .grid > div:last-child > div:nth-child(4) {
+        grid-area: actions;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        margin: 0 !important;
+        align-content: center;
+      }
+      #sectionPolice > .grid > div:last-child > div:nth-child(4) button {
+        padding: 8px 5px;
+        font-size: 11px;
+      }
+      #sectionPolice > .grid > div:last-child > p:last-child {
+        grid-area: status;
+        margin: 0 !important;
+        font-size: 11px;
+      }
+    }
+
+    @media (max-height: 760px) and (min-width: 901px) {
+      body > div.w-full.mx-auto.px-3.pt-2 > div { padding: 5px 10px; }
+      body > div.w-full.mx-auto.px-3.pt-2 > div > div:last-child { display: none; }
+      #p2iOptionsGrid { grid-auto-rows: clamp(90px, 16vh, 125px); }
+      #policeBoard { height: 37vh; }
+      #matchLeftList > .match-left-item,
+      #matchRightList > .match-right-item {
+        height: 46px !important;
+        min-height: 46px !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 min-h-screen text-slate-800 flex flex-col selection:bg-amber-200">
