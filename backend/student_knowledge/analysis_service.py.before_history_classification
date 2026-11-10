@@ -1,0 +1,244 @@
+import json
+import os
+
+import requests
+
+
+DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
+DEEPSEEK_MODEL = "deepseek-flash"
+
+MAX_NOTE_LENGTH = 20000
+REQUEST_TIMEOUT = 90
+
+
+class KnowledgeAnalysisError(Exception):
+    """学生知识分析错误。"""
+
+
+def _parse_json_response(content: str) -> dict:
+    """解析并检查 AI 返回的 JSON。"""
+    if not isinstance(content, str) or not content.strip():
+        raise KnowledgeAnalysisError("AI 返回了空内容。")
+
+    content = content.strip()
+
+    if content.startswith("```"):
+        lines = content.splitlines()
+        if lines[-1].strip() == "```":
+            content = "\n".join(lines[1:-1]).strip()
+        elif len(lines) > 1:
+            content = "\n".join(lines[1:]).strip()
+
+    try:
+        result = json.loads(content)
+    except json.JSONDecodeError as exc:
+        raise KnowledgeAnalysisError("AI 返回的内容不是有效 JSON。") from exc
+
+    if not isinstance(result, dict):
+        raise KnowledgeAnalysisError("AI 返回的数据结构不正确。")
+
+    return result
+
+
+def _validate_results(result, note_text, vocabulary_candidates,
+                      grammar_candidates):
+    """只接受数据库候选知识点，并核验原文证据。"""
+
+    if not isinstance(result.get("vocabulary"), list):
+        raise KnowledgeAnalysisError("词汇分析结果格式不正确。")
+
+    if not isinstance(result.get("grammar"), list):
+        raise KnowledgeAnalysisError("语法分析结果格式不正确。")
+
+    if not isinstance(result.get("observations", []), list):
+        raise KnowledgeAnalysisError("分析说明格式不正确。")
+
+    vocab_ids = {item["id"] for item in vocabulary_candidates}
+    grammar_ids = {item["id"] for item in grammar_candidates}
+
+    validated = {
+        "vocabulary": [],
+        "grammar": [],
+        "observations": [],
+    }
+
+    for key, allowed_ids in (
+        ("vocabulary", vocab_ids),
+        ("grammar", grammar_ids),
+    ):
+        seen = set()
+
+        for item in result[key]:
+            if not isinstance(item, dict):
+                continue
+
+            candidate_id = item.get("candidate_id")
+            evidence = item.get("evidence")
+            confidence = item.get("confidence")
+
+            if candidate_id not in allowed_ids:
+                continue
+
+            if not isinstance(evidence, str) or not evidence.strip():
+                continue
+
+            evidence = evidence.strip()
+
+            # 证据必须真实出现在老师上传的原文中
+            if evidence not in note_text:
+                continue
+
+            try:
+                confidence = float(confidence)
+            except (TypeError, ValueError):
+                continue
+
+            if not 0 <= confidence <= 1:
+                continue
+
+            unique_key = (candidate_id, evidence)
+            if unique_key in seen:
+                continue
+
+            seen.add(unique_key)
+
+            validated[key].append({
+                "candidate_id": candidate_id,
+                "evidence": evidence,
+                "confidence": confidence,
+            })
+
+    for observation in result.get("observations", []):
+        if isinstance(observation, str) and observation.strip():
+            validated["observations"].append(observation.strip()[:500])
+
+    return validated
+
+
+def analyze_knowledge_candidates(
+    note_text: str,
+    vocabulary_candidates: list[dict],
+    grammar_candidates: list[dict],
+) -> dict:
+    """
+    分析老师上传的课堂资料。
+
+    本函数只返回经过核验的候选结果，不写入学生掌握状态，
+    不修改数据库。
+    """
+
+    if not isinstance(note_text, str) or not note_text.strip():
+        raise KnowledgeAnalysisError("课堂资料内容为空。")
+
+    if len(note_text) > MAX_NOTE_LENGTH:
+        raise KnowledgeAnalysisError(
+            "课堂资料过长，需要先分段分析，不能直接截断内容。"
+        )
+
+    if not isinstance(vocabulary_candidates, list):
+        raise KnowledgeAnalysisError("词汇候选数据格式不正确。")
+
+    if not isinstance(grammar_candidates, list):
+        raise KnowledgeAnalysisError("语法候选数据格式不正确。")
+
+    for candidates in (vocabulary_candidates, grammar_candidates):
+        for item in candidates:
+            if not isinstance(item, dict) or "id" not in item:
+                raise KnowledgeAnalysisError("候选知识点缺少数据库编号。")
+
+    api_key = os.environ.get("DEEPSEEK_API_KEY")
+    if not api_key:
+        raise KnowledgeAnalysisError(
+            "DEEPSEEK_API_KEY 未在后端环境中配置。"
+        )
+
+    candidate_data = {
+        "vocabulary": vocabulary_candidates,
+        "grammar": grammar_candidates,
+    }
+
+    system_prompt = """
+你是中文教师的课堂知识分析助手。
+
+任务：
+1. 识别课堂资料中实际出现的词汇和语法知识点。
+2. 只能从用户提供的数据库候选列表中选择知识点。
+3. 不得自行创建候选编号或知识点。
+4. 每个结果必须提供课堂原文中的准确证据。
+5. 课堂资料出现过，只代表学生可能接触过，不代表已经掌握。
+6. 不得推断学生已经掌握知识点。
+7. 只返回 JSON，不要使用 Markdown。
+
+返回结构：
+{
+  "vocabulary": [
+    {
+      "candidate_id": 词汇候选编号,
+      "evidence": "课堂原文证据",
+      "confidence": 0.95
+    }
+  ],
+  "grammar": [
+    {
+      "candidate_id": 语法候选编号,
+      "evidence": "课堂原文证据",
+      "confidence": 0.90
+    }
+  ],
+  "observations": []
+}
+"""
+
+    user_prompt = (
+        "请分析以下课堂资料。\n\n"
+        "数据库候选知识点：\n"
+        + json.dumps(candidate_data, ensure_ascii=False)
+        + "\n\n课堂资料原文：\n"
+        + note_text
+    )
+
+    try:
+        response = requests.post(
+            DEEPSEEK_API_URL,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": DEEPSEEK_MODEL,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                "thinking": {"type": "disabled"},
+                "temperature": 0.1,
+                "max_tokens": 5000,
+                "stream": False,
+            },
+            timeout=REQUEST_TIMEOUT,
+        )
+        response.raise_for_status()
+
+    except requests.RequestException as exc:
+        raise KnowledgeAnalysisError(
+            "调用 AI 分析服务失败。"
+        ) from exc
+
+    try:
+        response_data = response.json()
+        content = (
+            response_data["choices"][0]["message"]["content"]
+        )
+    except (ValueError, KeyError, IndexError, TypeError) as exc:
+        raise KnowledgeAnalysisError(
+            "AI 服务返回的数据结构不正确。"
+        ) from exc
+
+    result = _parse_json_response(content)
+
+    return _validate_results(
+        result,
+        note_text,
+        vocabulary_candidates,
+        grammar_candidates,
+    )

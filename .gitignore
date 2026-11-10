@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Local databases and backups
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+backups/
+
+# Temporary files and editor artifacts
+*.swp
+*.swo
+*~
+*.backup*
+*.bak
+.DS_Store
+.vscode/
+.idea/
+
+# Local previews and temporary exports
+.esl_translation_preview.json*
+*_preview.json

@@ -1,0 +1,1718 @@
+[
+  {
+    "keyword": "基本语序",
+    "slug": "basic-sentence-order",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "时间词位置",
+    "slug": "time-words-word-order",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "在+地点+动词",
+    "slug": "zai-before-verb-location",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "也",
+    "slug": "ye-also",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "名词+形容词",
+    "slug": "noun-adjective-sentence",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "吗（确认）",
+    "slug": "ma-tag-questions",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "呢（…呢？）",
+    "slug": "ne-what-about",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "疑问词位置",
+    "slug": "question-word-placement",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "的（领属）",
+    "slug": "de-possession",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "有（拥有）",
+    "slug": "you-possess",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不",
+    "slug": "bu-negation",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "没有",
+    "slug": "mei-negate-you",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "是",
+    "slug": "shi-connect-nouns",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "在（存在）",
+    "slug": "zai-exist-place",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "有（存在）",
+    "slug": "you-exist",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "叫",
+    "slug": "jiao-name",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "去",
+    "slug": "qu-go",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "都（全部）",
+    "slug": "dou-all",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "太…了",
+    "slug": "tai-excess",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "和",
+    "slug": "he-and-nouns",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "还是（选择问）",
+    "slug": "haishi-or-questions",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "数字",
+    "slug": "numbers-basic",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "时间表达",
+    "slug": "times-basic",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "星期",
+    "slug": "days-week",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "日期",
+    "slug": "dates-basic",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "个",
+    "slug": "measure-word-ge",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "极了",
+    "slug": "adj-ji-le",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不怎么",
+    "slug": "bu-zenme-adj",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "全",
+    "slug": "quan-whole",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "全都",
+    "slug": "quan-negative",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "重叠",
+    "slug": "adj-reduplication",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "地",
+    "slug": "adj-to-adverb-de",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "正好",
+    "slug": "zhenghao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "还",
+    "slug": "hai-continuation",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "还是",
+    "slug": "haishi-had-better",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "就是",
+    "slug": "jiushi-emphasis",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "又",
+    "slug": "you-emphasize-negation",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "再",
+    "slug": "zai-future-again",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "就",
+    "slug": "jiu-yao-le",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "才",
+    "slug": "cai-late",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "原来",
+    "slug": "yuanlai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一下子",
+    "slug": "yixiazi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "差点",
+    "slug": "chadian",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "都…了",
+    "slug": "dou-le-time",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "从来",
+    "slug": "conglai-always",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "结果",
+    "slug": "jieguo",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "互相",
+    "slug": "huxiang",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "够",
+    "slug": "gou",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "终于",
+    "slug": "zhongyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "最好",
+    "slug": "zuihao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "这样",
+    "slug": "zheyang",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一…一…",
+    "slug": "yi-measure-yi-measure",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "老是",
+    "slug": "laoshi-complaint",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "这么/那么",
+    "slug": "zheme-name-adj",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "挺…的",
+    "slug": "ting-quite",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "比较",
+    "slug": "bijiao-rather",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "什么的",
+    "slug": "shenme-de",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "之类的",
+    "slug": "zhileide",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "等等",
+    "slug": "dengdeng",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不过",
+    "slug": "buguo-but",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "要不",
+    "slug": "yaobu-how-about",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "还有",
+    "slug": "haiyou-in-addition",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "另外",
+    "slug": "lingwai-in-addition",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "再说",
+    "slug": "zaishuo-in-addition",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "那么",
+    "slug": "name-then",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "来",
+    "slug": "lai-connect-verb",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "之前/之后",
+    "slug": "zhiqian-zhihou",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "以来",
+    "slug": "yilai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "时",
+    "slug": "shi-when",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "后来",
+    "slug": "houlai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "分之",
+    "slug": "fenzhi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "多",
+    "slug": "duo-excess",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "吗（高级问句）",
+    "slug": "advanced-ma",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "着",
+    "slug": "zhe-aspect",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "嘛",
+    "slug": "ma-self-evident",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "吧（两个选项）",
+    "slug": "ba-two-options",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "的（语气）",
+    "slug": "de-modal-particle",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "关于",
+    "slug": "guanyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "直到",
+    "slug": "zhidao-all-the-way-until",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "给",
+    "slug": "gei-for",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "为",
+    "slug": "wei-for",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不到",
+    "slug": "budao-less-than",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "往",
+    "slug": "wang-towards",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "向",
+    "slug": "xiang-towards",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "在…上/下/方面",
+    "slug": "zai-idiomatic",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "对",
+    "slug": "dui-verbs",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "看起来",
+    "slug": "kanqilai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "让/叫/请/使",
+    "slug": "causative-verbs",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "要看/得看",
+    "slug": "kan-it-depends",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "好像",
+    "slug": "haoxiang-seems",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "以为",
+    "slug": "yiwei",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "经过",
+    "slug": "jingguo",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "通过",
+    "slug": "tongguo",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "来自",
+    "slug": "laizi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "算",
+    "slug": "suan-judgment",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不用",
+    "slug": "buyong",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "得děi",
+    "slug": "dei-must",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "少",
+    "slug": "shao-less",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "到",
+    "slug": "dao-until",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "正在…呢",
+    "slug": "progress-full-form",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "次/遍/下",
+    "slug": "verb-measure-words",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "离合词",
+    "slug": "separable-verbs",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "所有",
+    "slug": "suoyou-all",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "之一",
+    "slug": "zhiyi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "是…的",
+    "slug": "shi-de-details",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "把",
+    "slug": "ba-sentences",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "被",
+    "slug": "bei-sentences",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "连…都",
+    "slug": "lian-dou",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "每次…都",
+    "slug": "mei-dou-every-time",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "疑问词+都",
+    "slug": "question-word-dou",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "越来越",
+    "slug": "yuelaiyue",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "倍",
+    "slug": "bei-multiples",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一点也/都不",
+    "slug": "yidianr-ye-bu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不知道…好",
+    "slug": "bu-zhidao-hao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "为了",
+    "slug": "weile-purpose",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "对…来说",
+    "slug": "laishuo",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "跟…比",
+    "slug": "gen-compared-with",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "更/还",
+    "slug": "geng-hai-even-more",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "比…得多",
+    "slug": "bi-much-more",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "有…吗",
+    "slug": "you-as-as",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "A是A但是",
+    "slug": "shi-concede",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一…就",
+    "slug": "yi-jiu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "虽然…但是",
+    "slug": "suiran-danshi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "要么…要么",
+    "slug": "yaome",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "除了…都/也",
+    "slug": "chule-yiwai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "如果…的话",
+    "slug": "ruguo-dehua",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "如果…就",
+    "slug": "ruguo-jiu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "怪不得",
+    "slug": "guaibude",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不但…而且",
+    "slug": "budan-erqie",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "等到",
+    "slug": "dengdao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "还好",
+    "slug": "haihao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一方面…另一方面",
+    "slug": "yi-fangmian",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "常常/经常",
+    "slug": "changchang-jingchang",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "刚/刚才",
+    "slug": "gang-gangcai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "有点/一点",
+    "slug": "youdian-yidian",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "会/能/可以",
+    "slug": "hui-neng-keyi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "还是/或者",
+    "slug": "haishi-huozhe",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "人家/别人",
+    "slug": "renjia-bieren",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "之间/中间",
+    "slug": "zhijian-zhongjian",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "离/从",
+    "slug": "li-cong",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "以后/的时候",
+    "slug": "yihou-de-shihou",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "得不得了",
+    "slug": "de-budeliao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "得很",
+    "slug": "de-hen",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "了点儿",
+    "slug": "adj-le-yidianr",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "有的是",
+    "slug": "youdeshi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "都怪/都是你",
+    "slug": "dou-advanced",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "还真/还好朋友呢",
+    "slug": "hai-advanced",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "总会/总得",
+    "slug": "zong-advanced",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "只好",
+    "slug": "zhihao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "可…了",
+    "slug": "ke-intensify",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "毕竟",
+    "slug": "bijing",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "再不…就",
+    "slug": "zaibu-jiu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "差点没",
+    "slug": "chadian-mei",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "反正",
+    "slug": "fanzheng",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "尽量",
+    "slug": "jinliang",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "恐怕",
+    "slug": "kongpa",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "好不容易",
+    "slug": "haobu-rongyi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "甚至",
+    "slug": "shenzhi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "尽管（随便）",
+    "slug": "jinguan-feel-free",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不得不",
+    "slug": "budebu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "到底",
+    "slug": "daodi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "究竟",
+    "slug": "jiujing",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "干脆",
+    "slug": "gancui",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "几乎",
+    "slug": "jihu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "再也不",
+    "slug": "zai-ye-bu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "曾经",
+    "slug": "cengjing",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "再三",
+    "slug": "zaisan",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "简直",
+    "slug": "jianzhi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一向",
+    "slug": "yixiang",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "千万",
+    "slug": "qianwan",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "白/白白",
+    "slug": "bai-in-vain",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "顺便",
+    "slug": "shunbian",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "V了又V",
+    "slug": "you-repeated-past",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "难道",
+    "slug": "nandao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "差很多",
+    "slug": "cha-hen-duo",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "A啊B啊",
+    "slug": "a-listing",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "于是",
+    "slug": "yushi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不是…而是",
+    "slug": "er-contrast",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "当中",
+    "slug": "dangzhong",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "彼此",
+    "slug": "bici",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "当…时候",
+    "slug": "dang-shihou",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "其中",
+    "slug": "qizhong",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "这个+名词",
+    "slug": "zhege-label",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "了（宾语后）",
+    "slug": "le-after-object",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "了（补语）",
+    "slug": "le-complements",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "嘛（话题）",
+    "slug": "ma-topic",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "呢（委婉）",
+    "slug": "ne-softening",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "以上/以下/以内/以外",
+    "slug": "yishang-yixia-yinei-yiwai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "随着",
+    "slug": "suizhe",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "自从",
+    "slug": "zicong",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "对…而言",
+    "slug": "dui-eryan",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "包括在内",
+    "slug": "zainei",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "凭",
+    "slug": "ping-basis",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "给（被动）",
+    "slug": "gei-passive",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "至于",
+    "slug": "zhiyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "就+范围",
+    "slug": "jiu-limit-scope",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "趁",
+    "slug": "chen",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "并不/并没",
+    "slug": "bing-negation",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "要不是",
+    "slug": "yaobushi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "多亏",
+    "slug": "duokui",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "而已",
+    "slug": "eryi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "将（把）",
+    "slug": "jiang-ba-formal",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "V什么V",
+    "slug": "shenme-challenge-verb",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "像…一样",
+    "slug": "xiang-like",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "比起/相比",
+    "slug": "biqi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不如",
+    "slug": "buru",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "化",
+    "slug": "hua-ize",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "难怪（动词）",
+    "slug": "nanguai-verb",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "将/将要/将会",
+    "slug": "jiang-future",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "并/并且",
+    "slug": "bing-connect-verbs",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "由",
+    "slug": "you-doer",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "难免",
+    "slug": "nanmian",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "值得",
+    "slug": "zhide",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "害得",
+    "slug": "haide",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "受",
+    "slug": "shou-passive",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "V着V着就",
+    "slug": "zhe-verbing-away",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "格外",
+    "slug": "gewai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "尽管（虽然）",
+    "slug": "jinguan-although",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "倒",
+    "slug": "dao-contrary",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "反而",
+    "slug": "faner",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "却",
+    "slug": "que-however",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "由于",
+    "slug": "youyu-due-to",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "既然",
+    "slug": "jiran",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "因此",
+    "slug": "yinci",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "之所以…是因为",
+    "slug": "zhisuoyi-shi-yinwei",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "得+程度补语",
+    "slug": "advanced-degree-complements",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "得了/不了/得下/不下/得起/不起/得动/不动",
+    "slug": "advanced-potential-complements",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "住/开/出来",
+    "slug": "advanced-result-complements-zhu-kai-chulai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "起来（收拢/结合）",
+    "slug": "qilai-advanced",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "坏了",
+    "slug": "huai-le",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "着zháo/得着/不着",
+    "slug": "zhao-complement",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "到（结果）",
+    "slug": "dao-tricky",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "V来V去",
+    "slug": "lai-qu-verbing-around",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "只要…就",
+    "slug": "zhiyao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一旦…就",
+    "slug": "yidan-jiu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "只有…才",
+    "slug": "zhiyou-cai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "除非",
+    "slug": "chufei",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "即使/就是/就算/哪怕",
+    "slug": "jishi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "即使（就是）",
+    "slug": "jiushi-even-if",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "即使（就算）",
+    "slug": "jiusuan",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "即使（哪怕）",
+    "slug": "napa",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "假如",
+    "slug": "jiaru",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "要是",
+    "slug": "yaoshi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "万一",
+    "slug": "wanyi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "的话（话题）",
+    "slug": "dehua-topic",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不管",
+    "slug": "buguan",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "无论",
+    "slug": "wulun",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "连V都不V",
+    "slug": "lian-advanced",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不比",
+    "slug": "bu-bi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "要V就V",
+    "slug": "yao-jiu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "任何",
+    "slug": "renhe",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "既…又/也",
+    "slug": "ji-you",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "少不了",
+    "slug": "shaobuliao",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "等于",
+    "slug": "dengyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "从…中",
+    "slug": "cong-zhong",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "V就V",
+    "slug": "jiu-indifference",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "无…可…",
+    "slug": "wu-ke",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一+量词+都/也",
+    "slug": "not-even-one",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "好+目的",
+    "slug": "hao-purpose",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "跟/和…有关的",
+    "slug": "you-guan-de",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "一面…一面",
+    "slug": "yimian",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "所谓",
+    "slug": "suowei",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "越…越",
+    "slug": "yue-yue",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不是A就是B",
+    "slug": "bushi-jiushi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "在…内",
+    "slug": "zai-nei",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "宁可…也不/也要",
+    "slug": "ningke",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "或者A或者B",
+    "slug": "huozhe-two-options",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "别说…连…",
+    "slug": "bie-shuo",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "更不用说",
+    "slug": "geng-buyong-shuo",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "不仅/不但/不只…而且/还/也",
+    "slug": "budan-erqie-variants",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "本来/原来",
+    "slug": "benlai-yuanlai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "才/就",
+    "slug": "cai-jiu-compare",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "再/又",
+    "slug": "zai-you-compare",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "总算/终于",
+    "slug": "zongsuan-zhongyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "跟/对",
+    "slug": "gen-dui-compare",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "朝/向/往",
+    "slug": "chao-xiang-wang",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "对/对于",
+    "slug": "dui-duiyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "对于/至于",
+    "slug": "duiyu-zhiyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "给/为",
+    "slug": "gei-wei-compare",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "关于/对于",
+    "slug": "guanyu-duiyu",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "适合/合适",
+    "slug": "shihe-heshi",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "平常/平时",
+    "slug": "pingshi-pingchang",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "以后/之后",
+    "slug": "yihou-zhihou",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "以后/然后/后来",
+    "slug": "yihou-ranhou-houlai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "看起来/看来",
+    "slug": "kanqilai-kanlai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  },
+  {
+    "keyword": "显得/看起来",
+    "slug": "xiande-kanqilai",
+    "mapping_status": "needs_mapping",
+    "grammar_point_ids": []
+  }
+]

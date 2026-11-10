@@ -1,0 +1,127 @@
+from datetime import datetime
+
+from sqlalchemy import (
+    Column, Integer, String, Text, DateTime, ForeignKey,
+    Float, UniqueConstraint, CheckConstraint, Index,
+)
+
+from backend.database import Base
+
+
+class Student(Base):
+    __tablename__ = "students"
+
+    id = Column(Integer, primary_key=True, index=True)
+    teacher_user_id = Column(Integer, ForeignKey("users.id", ondelete="RESTRICT"), nullable=False, index=True)
+    display_name = Column(String(150), nullable=False)
+    student_code = Column(String(100), nullable=True, unique=True)
+    email = Column(String(255), nullable=True)
+    notes = Column(Text, nullable=True)
+    is_active = Column(Integer, nullable=False, default=1)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+    updated_at = Column(DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+
+class StudentNote(Base):
+    __tablename__ = "student_notes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    student_id = Column(Integer, ForeignKey("students.id", ondelete="CASCADE"), nullable=False, index=True)
+    lesson_plan_id = Column(Integer, ForeignKey("lesson_plans.id", ondelete="SET NULL"), nullable=True)
+    title = Column(String(255), nullable=False)
+    source_type = Column(String(30), nullable=False, default="notes")
+    filename = Column(String(255), nullable=True)
+    file_type = Column(String(30), nullable=True)
+    content_text = Column(Text, nullable=False)
+    analysis_status = Column(String(30), nullable=False, default="not_started", index=True)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+
+
+class StudentVocabularyProgress(Base):
+    __tablename__ = "student_vocab_progress"
+
+    id = Column(Integer, primary_key=True, index=True)
+    student_id = Column(Integer, ForeignKey("students.id", ondelete="CASCADE"), nullable=False)
+    vocabulary_number = Column(Integer, ForeignKey("hsk_vocabulary.number", ondelete="RESTRICT"), nullable=False)
+    syllabus_version = Column(String(20), nullable=False, default="2025")
+    learning_status = Column(String(30), nullable=False, default="exposed")
+    review_status = Column(String(30), nullable=False, default="pending")
+    first_seen_at = Column(DateTime, nullable=True)
+    last_seen_at = Column(DateTime, nullable=True)
+    occurrence_count = Column(Integer, nullable=False, default=0)
+    reviewed_by_user_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
+    reviewed_at = Column(DateTime, nullable=True)
+    teacher_comment = Column(Text, nullable=True)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+    updated_at = Column(DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    __table_args__ = (
+        UniqueConstraint("student_id", "vocabulary_number", name="uq_student_vocabulary_progress"),
+        CheckConstraint("learning_status IN ('not_seen', 'exposed', 'mastered', 'review')", name="ck_student_vocab_learning_status"),
+        CheckConstraint("review_status IN ('pending', 'approved', 'rejected')", name="ck_student_vocab_review_status"),
+        Index("ix_student_vocab_student_status", "student_id", "learning_status"),
+    )
+
+
+class StudentGrammarProgress(Base):
+    __tablename__ = "student_grammar_progress"
+
+    id = Column(Integer, primary_key=True, index=True)
+    student_id = Column(Integer, ForeignKey("students.id", ondelete="CASCADE"), nullable=False)
+    grammar_point_id = Column(Integer, ForeignKey("hsk_grammar_points.id", ondelete="RESTRICT"), nullable=False)
+    syllabus_version = Column(String(20), nullable=False, default="2025")
+    learning_status = Column(String(30), nullable=False, default="exposed")
+    review_status = Column(String(30), nullable=False, default="pending")
+    first_seen_at = Column(DateTime, nullable=True)
+    last_seen_at = Column(DateTime, nullable=True)
+    occurrence_count = Column(Integer, nullable=False, default=0)
+    reviewed_by_user_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
+    reviewed_at = Column(DateTime, nullable=True)
+    teacher_comment = Column(Text, nullable=True)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+    updated_at = Column(DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    __table_args__ = (
+        UniqueConstraint("student_id", "grammar_point_id", "syllabus_version", name="uq_student_grammar_progress"),
+        CheckConstraint("learning_status IN ('not_seen', 'exposed', 'mastered', 'review')", name="ck_student_grammar_learning_status"),
+        CheckConstraint("review_status IN ('pending', 'approved', 'rejected')", name="ck_student_grammar_review_status"),
+        Index("ix_student_grammar_student_status", "student_id", "learning_status"),
+    )
+
+
+class KnowledgeEvidence(Base):
+    __tablename__ = "knowledge_evidence"
+
+    id = Column(Integer, primary_key=True, index=True)
+    student_id = Column(Integer, ForeignKey("students.id", ondelete="CASCADE"), nullable=False, index=True)
+    note_id = Column(Integer, ForeignKey("student_notes.id", ondelete="CASCADE"), nullable=False, index=True)
+    vocabulary_number = Column(Integer, ForeignKey("hsk_vocabulary.number", ondelete="RESTRICT"), nullable=True)
+    grammar_point_id = Column(Integer, ForeignKey("hsk_grammar_points.id", ondelete="RESTRICT"), nullable=True)
+    evidence_text = Column(Text, nullable=False)
+    confidence = Column(Float, nullable=True)
+    classification = Column(String(30), nullable=False, default="uncertain")
+    extraction_method = Column(String(30), nullable=False, default="ai")
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+
+    __table_args__ = (
+        CheckConstraint(
+            "(vocabulary_number IS NOT NULL AND grammar_point_id IS NULL) OR "
+            "(vocabulary_number IS NULL AND grammar_point_id IS NOT NULL)",
+            name="ck_evidence_exactly_one_knowledge_type",
+        ),
+    )
+
+
+class AnalysisJob(Base):
+    __tablename__ = "analysis_jobs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    student_id = Column(Integer, ForeignKey("students.id", ondelete="CASCADE"), nullable=False, index=True)
+    note_id = Column(Integer, ForeignKey("student_notes.id", ondelete="SET NULL"), nullable=True)
+    job_type = Column(String(50), nullable=False, default="knowledge_analysis")
+    status = Column(String(30), nullable=False, default="queued", index=True)
+    result_json = Column(Text, nullable=True)
+    error_message = Column(Text, nullable=True)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+    started_at = Column(DateTime, nullable=True)
+    completed_at = Column(DateTime, nullable=True)

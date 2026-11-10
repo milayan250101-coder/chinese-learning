@@ -1,0 +1,418 @@
+import json
+import os
+
+import requests
+
+
+DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
+DEEPSEEK_MODEL = "deepseek-flash"
+
+MAX_NOTE_LENGTH = 20000
+REQUEST_TIMEOUT = 90
+
+CLASSIFICATIONS = {
+    "new_lesson",
+    "previously_exposed",
+    "uncertain",
+}
+
+TEACHING_SIGNALS = {
+    "explicit_explanation",
+    "example",
+    "exercise",
+    "theme_focus",
+    "repeated_teaching",
+    "contextual_use",
+}
+
+
+class KnowledgeAnalysisError(Exception):
+    """学生知识分析错误。"""
+
+
+def _parse_json_response(content: str) -> dict:
+    """解析并检查 AI 返回的 JSON。"""
+    if not isinstance(content, str) or not content.strip():
+        raise KnowledgeAnalysisError("AI 返回了空内容。")
+
+    content = content.strip()
+
+    if content.startswith("```"):
+        lines = content.splitlines()
+        if lines[-1].strip() == "```":
+            content = "\n".join(lines[1:-1]).strip()
+        elif len(lines) > 1:
+            content = "\n".join(lines[1:]).strip()
+
+    try:
+        result = json.loads(content)
+    except json.JSONDecodeError as exc:
+        raise KnowledgeAnalysisError(
+            f"AI 返回的内容不是有效 JSON。"
+            f"解析位置：第 {exc.lineno} 行，第 {exc.colno} 列；"
+            f"字符位置：{exc.pos}；内容长度：{len(content)}。"
+        ) from exc
+
+    if not isinstance(result, dict):
+        raise KnowledgeAnalysisError("AI 返回的数据结构不正确。")
+
+    return result
+
+
+def _prior_candidate_ids(prior_knowledge, key):
+    """提取此前资料中已有证据的知识点编号。"""
+    if not isinstance(prior_knowledge, dict):
+        return set()
+
+    items = prior_knowledge.get(key, [])
+    if not isinstance(items, list):
+        return set()
+
+    ids = set()
+
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+
+        candidate_id = item.get("candidate_id")
+        evidence = item.get("evidence")
+
+        if candidate_id is not None and isinstance(evidence, str):
+            if evidence.strip():
+                ids.add(candidate_id)
+
+    return ids
+
+
+def _validate_results(
+    result,
+    note_text,
+    vocabulary_candidates,
+    grammar_candidates,
+    prior_knowledge=None,
+):
+    """核验数据库候选、原文证据和教学分类。"""
+
+    if not isinstance(result.get("vocabulary"), list):
+        raise KnowledgeAnalysisError("词汇分析结果格式不正确。")
+
+    if not isinstance(result.get("grammar"), list):
+        raise KnowledgeAnalysisError("语法分析结果格式不正确。")
+
+    if not isinstance(result.get("observations", []), list):
+        raise KnowledgeAnalysisError("分析说明格式不正确。")
+
+    vocab_ids = {item["id"] for item in vocabulary_candidates}
+    grammar_ids = {item["id"] for item in grammar_candidates}
+
+    prior_vocab_ids = _prior_candidate_ids(
+        prior_knowledge, "vocabulary"
+    )
+    prior_grammar_ids = _prior_candidate_ids(
+        prior_knowledge, "grammar"
+    )
+
+    validated = {
+        "vocabulary": [],
+        "grammar": [],
+        "observations": [],
+    }
+
+    for key, allowed_ids, prior_ids in (
+        ("vocabulary", vocab_ids, prior_vocab_ids),
+        ("grammar", grammar_ids, prior_grammar_ids),
+    ):
+        seen = set()
+
+        for item in result[key]:
+            if not isinstance(item, dict):
+                continue
+
+            candidate_id = item.get("candidate_id")
+            evidence = item.get("evidence")
+            confidence = item.get("confidence")
+
+            if candidate_id not in allowed_ids:
+                continue
+
+            if not isinstance(evidence, str) or not evidence.strip():
+                continue
+
+            evidence = evidence.strip()
+
+            # 证据必须真实出现在本次课堂原文中
+            if evidence not in note_text:
+                continue
+
+            try:
+                confidence = float(confidence)
+            except (TypeError, ValueError):
+                continue
+
+            if not 0 <= confidence <= 1:
+                continue
+
+            classification = item.get(
+                "classification", "uncertain"
+            )
+
+            if classification not in CLASSIFICATIONS:
+                classification = "uncertain"
+
+            # 没有以前课堂资料的证据，
+            # 不允许标记为“以前接触”
+            if (
+                classification == "previously_exposed"
+                and candidate_id not in prior_ids
+            ):
+                classification = "uncertain"
+
+            reason = item.get("classification_reason", "")
+            if not isinstance(reason, str):
+                reason = ""
+            reason = reason.strip()[:500]
+
+            signals = item.get("teaching_signals", [])
+            if not isinstance(signals, list):
+                signals = []
+
+            signals = list(dict.fromkeys(
+                signal
+                for signal in signals
+                if isinstance(signal, str)
+                and signal in TEACHING_SIGNALS
+            ))
+
+            unique_key = (candidate_id, evidence)
+            if unique_key in seen:
+                continue
+
+            seen.add(unique_key)
+
+            validated[key].append({
+                "candidate_id": candidate_id,
+                "evidence": evidence,
+                "confidence": confidence,
+                "classification": classification,
+                "classification_reason": reason,
+                "teaching_signals": signals,
+            })
+
+    for observation in result.get("observations", []):
+        if isinstance(observation, str) and observation.strip():
+            validated["observations"].append(
+                observation.strip()[:500]
+            )
+
+    return validated
+
+
+def analyze_knowledge_candidates(
+    note_text: str,
+    vocabulary_candidates: list[dict],
+    grammar_candidates: list[dict],
+    prior_knowledge: dict | None = None,
+) -> dict:
+    """
+    分析课堂资料中的词汇和语法。
+
+    prior_knowledge:
+        {
+            "vocabulary": [
+                {
+                    "candidate_id": 123,
+                    "evidence": "此前课堂原文",
+                    "note_id": 1
+                }
+            ],
+            "grammar": [...]
+        }
+
+    本函数只返回核验后的分析结果，不写入数据库，
+    不修改学生掌握状态。
+    """
+
+    if not isinstance(note_text, str) or not note_text.strip():
+        raise KnowledgeAnalysisError("课堂资料内容为空。")
+
+    if len(note_text) > MAX_NOTE_LENGTH:
+        raise KnowledgeAnalysisError(
+            "课堂资料过长，需要先分段分析，不能直接截断内容。"
+        )
+
+    if not isinstance(vocabulary_candidates, list):
+        raise KnowledgeAnalysisError("词汇候选数据格式不正确。")
+
+    if not isinstance(grammar_candidates, list):
+        raise KnowledgeAnalysisError("语法候选数据格式不正确。")
+
+    if prior_knowledge is None:
+        prior_knowledge = {}
+
+    if not isinstance(prior_knowledge, dict):
+        raise KnowledgeAnalysisError("历史知识数据格式不正确。")
+
+    for candidates in (vocabulary_candidates, grammar_candidates):
+        for item in candidates:
+            if not isinstance(item, dict) or "id" not in item:
+                raise KnowledgeAnalysisError(
+                    "候选知识点缺少数据库编号。"
+                )
+
+    api_key = os.environ.get("DEEPSEEK_API_KEY")
+    if not api_key:
+        raise KnowledgeAnalysisError(
+            "DEEPSEEK_API_KEY 未在后端环境中配置。"
+        )
+
+    candidate_data = {
+        "vocabulary": vocabulary_candidates,
+        "grammar": grammar_candidates,
+    }
+
+    history_data = {
+        "vocabulary": prior_knowledge.get("vocabulary", []),
+        "grammar": prior_knowledge.get("grammar", []),
+    }
+
+    system_prompt = """
+你是中文教师的课堂知识分析助手。
+
+你的任务是分析一份课堂资料，并结合此前课堂资料，
+识别词汇和语法知识点，以及它们在教学过程中的归属。
+
+一、识别规则
+
+1. 只能从数据库候选列表中选择知识点。
+2. 不得自行创建候选编号或知识点。
+3. 每个结果必须提供当前课堂原文中的准确证据。
+4. 必须结合上下文、词语、拼音、词性和语法结构判断，
+   不能只凭单个汉字或关键词判断。
+5. 语法识别不能只看语法名称是否出现在原文中，
+   还要判断句子实际使用的结构。
+
+二、教学分类
+
+每个知识点必须选择以下一种分类：
+
+new_lesson:
+本课新授。
+有较强证据表明该知识点是本课的教学重点，
+例如明确讲解、集中练习、多个教学例句、
+与本课主题密切相关，或本课再次系统讲解。
+
+previously_exposed:
+以前接触。
+此前课堂资料中已经有相同知识点的有效证据，
+并且当前资料没有足够证据表明它是本课新授重点。
+
+uncertain:
+待判断。
+只在原文中偶然出现、语境不足、教学意图不明确，
+或无法可靠判断其教学归属时使用。
+
+三、重要限制
+
+1. 不能仅仅因为一个词出现多次就认定它是新授。
+2. 需要结合讲解、例句、练习、主题重点和历史资料。
+3. 不能仅因为知识点在以前资料出现过，
+   就忽略它在本课可能再次被重点讲解的情况。
+4. 没有此前资料证据时，不得标记 previously_exposed。
+5. 资料出现只代表可能接触过，不代表学生已经掌握。
+6. 不得推断学生已经掌握或不会某个知识点。
+7. 不需要设计老师逐条审核的步骤。
+8. classification_reason 必须简短说明分类依据。
+9. teaching_signals 只能使用以下值：
+   explicit_explanation
+   example
+   exercise
+   theme_focus
+   repeated_teaching
+   contextual_use
+
+四、输出要求
+
+只返回有效 JSON，不要使用 Markdown。
+
+结构：
+
+{
+  "vocabulary": [
+    {
+      "candidate_id": 123,
+      "evidence": "当前课堂原文中的准确片段",
+      "confidence": 0.95,
+      "classification": "new_lesson",
+      "classification_reason": "本课围绕该词进行讲解和练习",
+      "teaching_signals": ["explicit_explanation", "exercise"]
+    }
+  ],
+  "grammar": [
+    {
+      "candidate_id": 456,
+      "evidence": "当前课堂原文中的准确片段",
+      "confidence": 0.90,
+      "classification": "uncertain",
+      "classification_reason": "出现了该结构，但缺乏明确教学重点证据",
+      "teaching_signals": ["contextual_use"]
+    }
+  ],
+  "observations": []
+}
+"""
+
+    user_prompt = (
+        "请分析以下课堂资料。\n\n"
+        "数据库候选知识点：\n"
+        + json.dumps(candidate_data, ensure_ascii=False)
+        + "\n\n此前课堂资料中已经找到的知识证据：\n"
+        + json.dumps(history_data, ensure_ascii=False)
+        + "\n\n本次课堂资料原文：\n"
+        + note_text
+    )
+
+    try:
+        response = requests.post(
+            DEEPSEEK_API_URL,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": DEEPSEEK_MODEL,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                "response_format": {"type": "json_object"},
+                "thinking": {"type": "disabled"},
+                "temperature": 0.1,
+                "max_tokens": 5000,
+                "stream": False,
+            },
+            timeout=REQUEST_TIMEOUT,
+        )
+        response.raise_for_status()
+
+    except requests.RequestException as exc:
+        raise KnowledgeAnalysisError(
+            "调用 AI 分析服务失败。"
+        ) from exc
+
+    try:
+        response_data = response.json()
+        content = response_data["choices"][0]["message"]["content"]
+    except (ValueError, KeyError, IndexError, TypeError) as exc:
+        raise KnowledgeAnalysisError(
+            "AI 服务返回的数据结构不正确。"
+        ) from exc
+
+    result = _parse_json_response(content)
+
+    return _validate_results(
+        result,
+        note_text,
+        vocabulary_candidates,
+        grammar_candidates,
+        prior_knowledge,
+    )

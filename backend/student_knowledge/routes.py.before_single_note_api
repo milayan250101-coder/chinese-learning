@@ -1,0 +1,162 @@
+from datetime import datetime
+from io import BytesIO
+from pathlib import PurePath
+
+from docx import Document
+from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
+from pypdf import PdfReader
+from sqlalchemy.orm import Session
+
+from backend.auth_routes import get_current_teacher
+from backend.auth_models import User
+from backend.database import get_db
+from backend.student_profile_models import StudentNote
+from backend.student_routes import get_owned_student
+
+
+router = APIRouter(
+    prefix="/api/student-knowledge",
+    tags=["Student Knowledge"],
+)
+
+MAX_FILE_SIZE = 10 * 1024 * 1024
+ALLOWED_EXTENSIONS = {".txt", ".pdf", ".docx"}
+
+
+def extract_text(filename: str, content: bytes) -> str:
+    extension = PurePath(filename).suffix.lower()
+
+    if extension not in ALLOWED_EXTENSIONS:
+        raise HTTPException(
+            status_code=415,
+            detail="Only TXT, PDF and DOCX files are supported.",
+        )
+
+    try:
+        if extension == ".txt":
+            text = content.decode("utf-8-sig")
+
+        elif extension == ".pdf":
+            reader = PdfReader(BytesIO(content))
+            text = "\n".join(
+                page.extract_text() or "" for page in reader.pages
+            )
+
+        else:
+            document = Document(BytesIO(content))
+            text = "\n".join(
+                paragraph.text
+                for paragraph in document.paragraphs
+                if paragraph.text.strip()
+            )
+
+    except Exception:
+        raise HTTPException(
+            status_code=422,
+            detail="The uploaded document could not be read.",
+        )
+
+    if not text.strip():
+        raise HTTPException(
+            status_code=422,
+            detail="No readable text was found in the document.",
+        )
+
+    return text.strip()
+
+
+@router.post("/students/{student_id}/notes", status_code=201)
+async def upload_student_note(
+    student_id: int,
+    file: UploadFile = File(...),
+    title: str | None = Form(default=None),
+    db: Session = Depends(get_db),
+    teacher: User = Depends(get_current_teacher),
+):
+    student = get_owned_student(db, student_id, teacher.id)
+
+    filename = (file.filename or "").replace("\\", "/").split("/")[-1]
+
+    if not filename:
+        raise HTTPException(status_code=422, detail="Filename is required.")
+
+    content = await file.read()
+
+    if not content:
+        raise HTTPException(status_code=422, detail="The file is empty.")
+
+    if len(content) > MAX_FILE_SIZE:
+        raise HTTPException(
+            status_code=413,
+            detail="File size must not exceed 10 MB.",
+        )
+
+    text = extract_text(filename, content)
+
+    note_title = (title or "").strip() or filename
+
+    note = StudentNote(
+        student_id=student.id,
+        title=note_title[:255],
+        source_type="upload",
+        filename=filename[:255],
+        file_type=PurePath(filename).suffix.lower().lstrip("."),
+        content_text=text,
+        analysis_status="not_started",
+    )
+
+    try:
+        db.add(note)
+        db.commit()
+        db.refresh(note)
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=500,
+            detail="The student note could not be saved.",
+        )
+    finally:
+        await file.close()
+
+    return {
+        "id": note.id,
+        "student_id": note.student_id,
+        "title": note.title,
+        "filename": note.filename,
+        "file_type": note.file_type,
+        "analysis_status": note.analysis_status,
+        "created_at": note.created_at,
+        "message": "Student note uploaded successfully.",
+    }
+
+
+@router.get("/students/{student_id}/notes")
+def list_student_notes(
+    student_id: int,
+    db: Session = Depends(get_db),
+    teacher: User = Depends(get_current_teacher),
+):
+    get_owned_student(db, student_id, teacher.id)
+
+    notes = (
+        db.query(StudentNote)
+        .filter(StudentNote.student_id == student_id)
+        .order_by(StudentNote.created_at.desc())
+        .all()
+    )
+
+    return {
+        "student_id": student_id,
+        "total": len(notes),
+        "items": [
+            {
+                "id": note.id,
+                "title": note.title,
+                "filename": note.filename,
+                "file_type": note.file_type,
+                "analysis_status": note.analysis_status,
+                "created_at": note.created_at,
+            }
+            for note in notes
+        ],
+    }

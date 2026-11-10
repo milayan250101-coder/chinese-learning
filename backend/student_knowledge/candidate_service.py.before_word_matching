@@ -1,0 +1,142 @@
+"""
+课堂教学内容候选检索。
+
+职责：
+1. 从课堂原文中寻找 HSK 词汇候选。
+2. 提供 HSK 语法库作为 AI 判断的候选参考。
+3. 不修改学生进度，不判断学生是否掌握。
+4. 不直接认定老师已经讲授，最终由老师审核。
+"""
+
+from sqlalchemy.orm import Session
+
+from backend.hsk_models import HSKGrammarPoint, HSKVocabulary
+
+
+DEFAULT_SYLLABUS_VERSION = "2025"
+
+
+def find_vocabulary_candidates(
+    db: Session,
+    note_text: str,
+    syllabus_version: str = DEFAULT_SYLLABUS_VERSION,
+) -> list[dict]:
+    """
+    根据课堂原文检索词汇候选。
+
+    同时匹配简体和繁体。
+    词汇候选编号使用 HSKVocabulary.number，
+    与 analysis_service.py 的 candidate_id 对应。
+    """
+
+    if not isinstance(note_text, str) or not note_text.strip():
+        return []
+
+    rows = (
+        db.query(HSKVocabulary)
+        .filter(HSKVocabulary.syllabus_version == syllabus_version)
+        .order_by(HSKVocabulary.number)
+        .all()
+    )
+
+    candidates = []
+
+    for item in rows:
+        forms = {
+            form
+            for form in (item.simplified, item.traditional)
+            if isinstance(form, str) and form.strip()
+        }
+
+        matched_forms = [
+            form for form in forms
+            if form in note_text
+        ]
+
+        if not matched_forms:
+            continue
+
+        candidates.append({
+            "id": item.number,
+            "level": item.level,
+            "simplified": item.simplified,
+            "traditional": item.traditional,
+            "pinyin": item.pinyin,
+            "english": item.english,
+            "part_of_speech": item.part_of_speech,
+            "matched_forms": sorted(
+                matched_forms,
+                key=lambda value: (-len(value), value),
+            ),
+        })
+
+    # 较长词语排在前面，方便 AI 优先判断完整词语，
+    # 同时保留所有匹配结果，不擅自删除可能有意义的单字词。
+    candidates.sort(
+        key=lambda item: (
+            -max(len(value) for value in item["matched_forms"]),
+            item["id"],
+        )
+    )
+
+    return candidates
+
+
+def find_grammar_candidates(
+    db: Session,
+    syllabus_version: str = DEFAULT_SYLLABUS_VERSION,
+) -> list[dict]:
+    """
+    读取指定版本的 HSK 语法知识点，供 AI 结合课堂上下文判断。
+
+    不只查找字面相同的语法名称，因为实际课堂例句
+    可能使用了某个语法结构，却没有写出语法名称。
+    """
+
+    rows = (
+        db.query(HSKGrammarPoint)
+        .filter(HSKGrammarPoint.syllabus_version == syllabus_version)
+        .order_by(
+            HSKGrammarPoint.level,
+            HSKGrammarPoint.source_index,
+            HSKGrammarPoint.id,
+        )
+        .all()
+    )
+
+    return [
+        {
+            "id": item.id,
+            "level": item.level,
+            "category": item.category,
+            "category_name": item.category_name,
+            "subcategory": item.subcategory,
+            "content": item.content,
+        }
+        for item in rows
+    ]
+
+
+def build_knowledge_candidates(
+    db: Session,
+    note_text: str,
+    syllabus_version: str = DEFAULT_SYLLABUS_VERSION,
+) -> dict:
+    """
+    一次生成词汇和语法候选，直接提供给 AI 分析服务。
+    """
+
+    if not isinstance(note_text, str) or not note_text.strip():
+        raise ValueError("课堂资料内容不能为空。")
+
+    return {
+        "vocabulary": find_vocabulary_candidates(
+            db=db,
+            note_text=note_text,
+            syllabus_version=syllabus_version,
+        ),
+        "grammar": find_grammar_candidates(
+            db=db,
+            syllabus_version=syllabus_version,
+        ),
+    }
