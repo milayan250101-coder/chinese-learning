@@ -29,6 +29,10 @@ from backend import hsk_hanzi_models
 from backend import student_profile_models
 from backend import hsk_routes
 from backend import hsk_vocabulary_routes
+from backend.grammar import models as grammar_models
+from backend.grammar import routes as grammar_routes
+from backend.master_curriculum import models as master_curriculum_models
+from backend.master_curriculum import routes as master_curriculum_routes
 
 Base.metadata.create_all(bind=engine)
 
@@ -41,6 +45,8 @@ app.include_router(english_topic_routes.router)
 app.include_router(esl_catalog_routes.router)
 app.include_router(hsk_routes.router)
 app.include_router(hsk_vocabulary_routes.router)
+app.include_router(grammar_routes.router)
+app.include_router(master_curriculum_routes.router)
 
 DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_MODEL = "deepseek-flash"
