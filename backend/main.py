@@ -16,6 +16,7 @@ load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
 from backend.database import engine, Base, get_db
 from backend import auth_routes
 from backend import student_routes
+from backend import cl_course_progress_routes
 from backend.student_knowledge import routes as student_knowledge_routes
 from backend.models import LessonPlan
 from backend import topic_routes
@@ -27,6 +28,7 @@ from backend import esl_catalog_routes
 from backend import hsk_models
 from backend import hsk_hanzi_models
 from backend import student_profile_models
+from backend import cl_course_progress_models
 from backend import student_auth_models
 from backend import student_auth_routes
 from backend import hsk_routes
@@ -41,6 +43,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Chinese Learning Teaching Hub API")
 app.include_router(auth_routes.router)
 app.include_router(student_routes.router)
+app.include_router(cl_course_progress_routes.router)
 app.include_router(student_auth_routes.router)
 app.include_router(student_knowledge_routes.router)
 app.include_router(topic_routes.router)

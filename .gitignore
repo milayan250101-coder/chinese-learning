@@ -40,3 +40,6 @@ backups/
 # Local previews and temporary exports
 .esl_translation_preview.json*
 *_preview.json
+node_modules/
+*.before*
+teacher-portal/dist/

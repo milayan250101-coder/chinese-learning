@@ -1,0 +1,1221 @@
+{
+  "catalog_id": "CL-COURSE-CATALOG",
+  "catalog_name": "中文主题课程体系",
+  "total_courses": 114,
+  "module_count": 10,
+  "course_prefix": "CL",
+  "courses": [
+    {
+      "course_id": "CL-01",
+      "title": "自我介绍、个人信息、数字",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 1,
+      "status": "draft",
+      "content_file": "courses/CL-01.json"
+    },
+    {
+      "course_id": "CL-02",
+      "title": "四个基础动词：吃、喝、买、去",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 2,
+      "status": "draft",
+      "content_file": "courses/CL-02.json"
+    },
+    {
+      "course_id": "CL-03",
+      "title": "昨天、今天、明天",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 3,
+      "status": "draft",
+      "content_file": "courses/CL-03.json"
+    },
+    {
+      "course_id": "CL-04",
+      "title": "常见地点与场所",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 4,
+      "status": "draft",
+      "content_file": "courses/CL-04.json"
+    },
+    {
+      "course_id": "CL-05",
+      "title": "想＋动词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 5,
+      "status": "draft",
+      "content_file": "courses/CL-05.json"
+    },
+    {
+      "course_id": "CL-06",
+      "title": "要＋动词、不要＋动词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 6,
+      "status": "draft",
+      "content_file": "courses/CL-06.json"
+    },
+    {
+      "course_id": "CL-07",
+      "title": "为什么＋因为",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 7,
+      "status": "draft",
+      "content_file": "courses/CL-07.json"
+    },
+    {
+      "course_id": "CL-08",
+      "title": "在哪里做什么",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 8,
+      "status": "draft",
+      "content_file": "courses/CL-08.json"
+    },
+    {
+      "course_id": "CL-09",
+      "title": "将来时间＋去＋地点＋做什么",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 9,
+      "status": "draft",
+      "content_file": "courses/CL-09.json"
+    },
+    {
+      "course_id": "CL-10",
+      "title": "常用连词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 10,
+      "status": "draft",
+      "content_file": "courses/CL-10.json"
+    },
+    {
+      "course_id": "CL-11",
+      "title": "常用能愿动词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 11,
+      "status": "draft",
+      "content_file": "courses/CL-11.json"
+    },
+    {
+      "course_id": "CL-12",
+      "title": "工作状态与反义表达",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 12,
+      "status": "draft",
+      "content_file": "courses/CL-12.json"
+    },
+    {
+      "course_id": "CL-13",
+      "title": "频率副词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 13,
+      "status": "draft",
+      "content_file": "courses/CL-13.json"
+    },
+    {
+      "course_id": "CL-14",
+      "title": "常见早餐食物",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 14,
+      "status": "draft",
+      "content_file": "courses/CL-14.json"
+    },
+    {
+      "course_id": "CL-15",
+      "title": "常见饮料",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 15,
+      "status": "draft",
+      "content_file": "courses/CL-15.json"
+    },
+    {
+      "course_id": "CL-16",
+      "title": "常见生活物品",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 16,
+      "status": "draft",
+      "content_file": "courses/CL-16.json"
+    },
+    {
+      "course_id": "CL-17",
+      "title": "常见地点词汇",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 17,
+      "status": "draft",
+      "content_file": "courses/CL-17.json"
+    },
+    {
+      "course_id": "CL-18",
+      "title": "六个常见国家",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 18,
+      "status": "draft",
+      "content_file": "courses/CL-18.json"
+    },
+    {
+      "course_id": "CL-19",
+      "title": "六个中国著名城市",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 19,
+      "status": "draft",
+      "content_file": "courses/CL-19.json"
+    },
+    {
+      "course_id": "CL-20",
+      "title": "六个世界著名首都",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 20,
+      "status": "draft",
+      "content_file": "courses/CL-20.json"
+    },
+    {
+      "course_id": "CL-21",
+      "title": "六种常见中国美食",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 21,
+      "status": "draft",
+      "content_file": "courses/CL-21.json"
+    },
+    {
+      "course_id": "CL-22",
+      "title": "六种常见中国饮料",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 22,
+      "status": "draft",
+      "content_file": "courses/CL-22.json"
+    },
+    {
+      "course_id": "CL-23",
+      "title": "动词＋过：经历表达",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 23,
+      "status": "draft",
+      "content_file": "courses/CL-23.json"
+    },
+    {
+      "course_id": "CL-24",
+      "title": "第一次做某件事情",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 24,
+      "status": "draft",
+      "content_file": "courses/CL-24.json"
+    },
+    {
+      "course_id": "CL-25",
+      "title": "什么时候＋动词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 25,
+      "status": "draft",
+      "content_file": "courses/CL-25.json"
+    },
+    {
+      "course_id": "CL-26",
+      "title": "常见兴趣爱好",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 26,
+      "status": "draft",
+      "content_file": "courses/CL-26.json"
+    },
+    {
+      "course_id": "CL-27",
+      "title": "一个星期＋次数＋动词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 27,
+      "status": "draft",
+      "content_file": "courses/CL-27.json"
+    },
+    {
+      "course_id": "CL-28",
+      "title": "常见离合词",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 28,
+      "status": "draft",
+      "content_file": "courses/CL-28.json"
+    },
+    {
+      "course_id": "CL-29",
+      "title": "普通动词与时间段",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 29,
+      "status": "draft",
+      "content_file": "courses/CL-29.json"
+    },
+    {
+      "course_id": "CL-30",
+      "title": "频率表达综合练习",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 30,
+      "status": "draft",
+      "content_file": "courses/CL-30.json"
+    },
+    {
+      "course_id": "CL-31",
+      "title": "方位词与位置",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 31,
+      "status": "draft",
+      "content_file": "courses/CL-31.json"
+    },
+    {
+      "course_id": "CL-32",
+      "title": "在、去、回",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 32,
+      "status": "draft",
+      "content_file": "courses/CL-32.json"
+    },
+    {
+      "course_id": "CL-33",
+      "title": "是……的（基础）",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 33,
+      "status": "draft",
+      "content_file": "courses/CL-33.json"
+    },
+    {
+      "course_id": "CL-34",
+      "title": "是……的（使用）",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 34,
+      "status": "draft",
+      "content_file": "courses/CL-34.json"
+    },
+    {
+      "course_id": "CL-35",
+      "title": "是……的（练习）",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 35,
+      "status": "draft",
+      "content_file": "courses/CL-35.json"
+    },
+    {
+      "course_id": "CL-36",
+      "title": "全部语法与词汇综合复习",
+      "title_status": "confirmed",
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "sort_order": 36,
+      "status": "draft",
+      "content_file": "courses/CL-36.json"
+    },
+    {
+      "course_id": "CL-37",
+      "title": "大小与长短",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 37,
+      "status": "draft",
+      "content_file": "courses/CL-37.json"
+    },
+    {
+      "course_id": "CL-38",
+      "title": "高矮与胖瘦",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 38,
+      "status": "draft",
+      "content_file": "courses/CL-38.json"
+    },
+    {
+      "course_id": "CL-39",
+      "title": "年龄与新旧",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 39,
+      "status": "draft",
+      "content_file": "courses/CL-39.json"
+    },
+    {
+      "course_id": "CL-40",
+      "title": "多少与数量",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 40,
+      "status": "draft",
+      "content_file": "courses/CL-40.json"
+    },
+    {
+      "course_id": "CL-41",
+      "title": "冷热与温度",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 41,
+      "status": "draft",
+      "content_file": "courses/CL-41.json"
+    },
+    {
+      "course_id": "CL-42",
+      "title": "好坏与程度",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 42,
+      "status": "draft",
+      "content_file": "courses/CL-42.json"
+    },
+    {
+      "course_id": "CL-43",
+      "title": "颜色与外观",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 43,
+      "status": "draft",
+      "content_file": "courses/CL-43.json"
+    },
+    {
+      "course_id": "CL-44",
+      "title": "价格与贵便宜",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 44,
+      "status": "draft",
+      "content_file": "courses/CL-44.json"
+    },
+    {
+      "course_id": "CL-45",
+      "title": "难易与学习评价",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 45,
+      "status": "draft",
+      "content_file": "courses/CL-45.json"
+    },
+    {
+      "course_id": "CL-46",
+      "title": "速度与快慢",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 46,
+      "status": "draft",
+      "content_file": "courses/CL-46.json"
+    },
+    {
+      "course_id": "CL-47",
+      "title": "心情与情绪",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 47,
+      "status": "draft",
+      "content_file": "courses/CL-47.json"
+    },
+    {
+      "course_id": "CL-48",
+      "title": "身体感受与舒适程度",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 48,
+      "status": "draft",
+      "content_file": "courses/CL-48.json"
+    },
+    {
+      "course_id": "CL-49",
+      "title": "性格与个人特点",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 49,
+      "status": "draft",
+      "content_file": "courses/CL-49.json"
+    },
+    {
+      "course_id": "CL-50",
+      "title": "味道与口感",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 50,
+      "status": "draft",
+      "content_file": "courses/CL-50.json"
+    },
+    {
+      "course_id": "CL-51",
+      "title": "比较句型：A比B",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 51,
+      "status": "draft",
+      "content_file": "courses/CL-51.json"
+    },
+    {
+      "course_id": "CL-52",
+      "title": "否定比较：不如与没有那么",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 52,
+      "status": "draft",
+      "content_file": "courses/CL-52.json"
+    },
+    {
+      "course_id": "CL-53",
+      "title": "程度表达：更与最",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 53,
+      "status": "draft",
+      "content_file": "courses/CL-53.json"
+    },
+    {
+      "course_id": "CL-54",
+      "title": "相同与不同：一样与不一样",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 54,
+      "status": "draft",
+      "content_file": "courses/CL-54.json"
+    },
+    {
+      "course_id": "CL-55",
+      "title": "变化与趋势：越来越",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 55,
+      "status": "draft",
+      "content_file": "courses/CL-55.json"
+    },
+    {
+      "course_id": "CL-56",
+      "title": "比较提问与选择",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 56,
+      "status": "draft",
+      "content_file": "courses/CL-56.json"
+    },
+    {
+      "course_id": "CL-57",
+      "title": "人物综合描述",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 57,
+      "status": "draft",
+      "content_file": "courses/CL-57.json"
+    },
+    {
+      "course_id": "CL-58",
+      "title": "物品综合比较与选择",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 58,
+      "status": "draft",
+      "content_file": "courses/CL-58.json"
+    },
+    {
+      "course_id": "CL-59",
+      "title": "描述与比较综合表达",
+      "title_status": "confirmed",
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "sort_order": 59,
+      "status": "draft",
+      "content_file": "courses/CL-59.json"
+    },
+    {
+      "course_id": "CL-60",
+      "title": "城市与地区",
+      "title_status": "confirmed",
+      "module_id": "M03",
+      "module_name": "城市与居住",
+      "sort_order": 60,
+      "status": "draft",
+      "content_file": "courses/CL-60.json"
+    },
+    {
+      "course_id": "CL-61",
+      "title": "城市设施与公共场所",
+      "title_status": "confirmed",
+      "module_id": "M03",
+      "module_name": "城市与居住",
+      "sort_order": 61,
+      "status": "draft",
+      "content_file": "courses/CL-61.json"
+    },
+    {
+      "course_id": "CL-62",
+      "title": "街道与社区",
+      "title_status": "confirmed",
+      "module_id": "M03",
+      "module_name": "城市与居住",
+      "sort_order": 62,
+      "status": "draft",
+      "content_file": "courses/CL-62.json"
+    },
+    {
+      "course_id": "CL-63",
+      "title": "居住地点与住房类型",
+      "title_status": "confirmed",
+      "module_id": "M03",
+      "module_name": "城市与居住",
+      "sort_order": 63,
+      "status": "draft",
+      "content_file": "courses/CL-63.json"
+    },
+    {
+      "course_id": "CL-64",
+      "title": "城市环境与居住感受",
+      "title_status": "confirmed",
+      "module_id": "M03",
+      "module_name": "城市与居住",
+      "sort_order": 64,
+      "status": "draft",
+      "content_file": "courses/CL-64.json"
+    },
+    {
+      "course_id": "CL-65",
+      "title": "我的城市与居住地",
+      "title_status": "confirmed",
+      "module_id": "M03",
+      "module_name": "城市与居住",
+      "sort_order": 65,
+      "status": "draft",
+      "content_file": "courses/CL-65.json"
+    },
+    {
+      "course_id": "CL-66",
+      "title": "距离与远近",
+      "title_status": "confirmed",
+      "module_id": "M04",
+      "module_name": "距离与出行",
+      "sort_order": 66,
+      "status": "draft",
+      "content_file": "courses/CL-66.json"
+    },
+    {
+      "course_id": "CL-67",
+      "title": "交通工具与出行方式",
+      "title_status": "confirmed",
+      "module_id": "M04",
+      "module_name": "距离与出行",
+      "sort_order": 67,
+      "status": "draft",
+      "content_file": "courses/CL-67.json"
+    },
+    {
+      "course_id": "CL-68",
+      "title": "出行路线与方向",
+      "title_status": "confirmed",
+      "module_id": "M04",
+      "module_name": "距离与出行",
+      "sort_order": 68,
+      "status": "draft",
+      "content_file": "courses/CL-68.json"
+    },
+    {
+      "course_id": "CL-69",
+      "title": "出行时间与所需时长",
+      "title_status": "confirmed",
+      "module_id": "M04",
+      "module_name": "距离与出行",
+      "sort_order": 69,
+      "status": "draft",
+      "content_file": "courses/CL-69.json"
+    },
+    {
+      "course_id": "CL-70",
+      "title": "日常出行与旅行安排",
+      "title_status": "confirmed",
+      "module_id": "M04",
+      "module_name": "距离与出行",
+      "sort_order": 70,
+      "status": "draft",
+      "content_file": "courses/CL-70.json"
+    },
+    {
+      "course_id": "CL-71",
+      "title": "出行与交通综合表达",
+      "title_status": "confirmed",
+      "module_id": "M04",
+      "module_name": "距离与出行",
+      "sort_order": 71,
+      "status": "draft",
+      "content_file": "courses/CL-71.json"
+    },
+    {
+      "course_id": "CL-72",
+      "title": "房屋结构与建筑空间",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 72,
+      "status": "draft",
+      "content_file": "courses/CL-72.json"
+    },
+    {
+      "course_id": "CL-73",
+      "title": "房间类型与功能",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 73,
+      "status": "draft",
+      "content_file": "courses/CL-73.json"
+    },
+    {
+      "course_id": "CL-74",
+      "title": "家具与家居用品",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 74,
+      "status": "draft",
+      "content_file": "courses/CL-74.json"
+    },
+    {
+      "course_id": "CL-75",
+      "title": "家用电器",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 75,
+      "status": "draft",
+      "content_file": "courses/CL-75.json"
+    },
+    {
+      "course_id": "CL-76",
+      "title": "厨房与餐具",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 76,
+      "status": "draft",
+      "content_file": "courses/CL-76.json"
+    },
+    {
+      "course_id": "CL-77",
+      "title": "卫生间与日常用品",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 77,
+      "status": "draft",
+      "content_file": "courses/CL-77.json"
+    },
+    {
+      "course_id": "CL-78",
+      "title": "房间布置与物品位置",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 78,
+      "status": "draft",
+      "content_file": "courses/CL-78.json"
+    },
+    {
+      "course_id": "CL-79",
+      "title": "我的家与房间综合介绍",
+      "title_status": "confirmed",
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "sort_order": 79,
+      "status": "draft",
+      "content_file": "courses/CL-79.json"
+    },
+    {
+      "course_id": "CL-80",
+      "title": "常见动物与宠物",
+      "title_status": "confirmed",
+      "module_id": "M06",
+      "module_name": "动物与生肖",
+      "sort_order": 80,
+      "status": "draft",
+      "content_file": "courses/CL-80.json"
+    },
+    {
+      "course_id": "CL-81",
+      "title": "农场动物与野生动物",
+      "title_status": "confirmed",
+      "module_id": "M06",
+      "module_name": "动物与生肖",
+      "sort_order": 81,
+      "status": "draft",
+      "content_file": "courses/CL-81.json"
+    },
+    {
+      "course_id": "CL-82",
+      "title": "动物外形与生活习性",
+      "title_status": "confirmed",
+      "module_id": "M06",
+      "module_name": "动物与生肖",
+      "sort_order": 82,
+      "status": "draft",
+      "content_file": "courses/CL-82.json"
+    },
+    {
+      "course_id": "CL-83",
+      "title": "中国十二生肖",
+      "title_status": "confirmed",
+      "module_id": "M06",
+      "module_name": "动物与生肖",
+      "sort_order": 83,
+      "status": "draft",
+      "content_file": "courses/CL-83.json"
+    },
+    {
+      "course_id": "CL-84",
+      "title": "我喜欢的动物",
+      "title_status": "confirmed",
+      "module_id": "M06",
+      "module_name": "动物与生肖",
+      "sort_order": 84,
+      "status": "draft",
+      "content_file": "courses/CL-84.json"
+    },
+    {
+      "course_id": "CL-85",
+      "title": "日常兴趣与休闲活动",
+      "title_status": "confirmed",
+      "module_id": "M07",
+      "module_name": "兴趣与偏好",
+      "sort_order": 85,
+      "status": "draft",
+      "content_file": "courses/CL-85.json"
+    },
+    {
+      "course_id": "CL-86",
+      "title": "音乐、电影与文化娱乐",
+      "title_status": "confirmed",
+      "module_id": "M07",
+      "module_name": "兴趣与偏好",
+      "sort_order": 86,
+      "status": "draft",
+      "content_file": "courses/CL-86.json"
+    },
+    {
+      "course_id": "CL-87",
+      "title": "运动与户外活动",
+      "title_status": "confirmed",
+      "module_id": "M07",
+      "module_name": "兴趣与偏好",
+      "sort_order": 87,
+      "status": "draft",
+      "content_file": "courses/CL-87.json"
+    },
+    {
+      "course_id": "CL-88",
+      "title": "旅行与探索体验",
+      "title_status": "confirmed",
+      "module_id": "M07",
+      "module_name": "兴趣与偏好",
+      "sort_order": 88,
+      "status": "draft",
+      "content_file": "courses/CL-88.json"
+    },
+    {
+      "course_id": "CL-89",
+      "title": "收藏、创作与个人爱好",
+      "title_status": "confirmed",
+      "module_id": "M07",
+      "module_name": "兴趣与偏好",
+      "sort_order": 89,
+      "status": "draft",
+      "content_file": "courses/CL-89.json"
+    },
+    {
+      "course_id": "CL-90",
+      "title": "我的兴趣与生活方式综合表达",
+      "title_status": "confirmed",
+      "module_id": "M07",
+      "module_name": "兴趣与偏好",
+      "sort_order": 90,
+      "status": "draft",
+      "content_file": "courses/CL-90.json"
+    },
+    {
+      "course_id": "CL-91",
+      "title": "早晨起床与洗漱",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 91,
+      "status": "draft",
+      "content_file": "courses/CL-91.json"
+    },
+    {
+      "course_id": "CL-92",
+      "title": "早餐与早晨饮食",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 92,
+      "status": "draft",
+      "content_file": "courses/CL-92.json"
+    },
+    {
+      "course_id": "CL-93",
+      "title": "出门、上班与日常通勤",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 93,
+      "status": "draft",
+      "content_file": "courses/CL-93.json"
+    },
+    {
+      "course_id": "CL-94",
+      "title": "工作、学习与日常事务",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 94,
+      "status": "draft",
+      "content_file": "courses/CL-94.json"
+    },
+    {
+      "course_id": "CL-95",
+      "title": "午餐与午间休息",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 95,
+      "status": "draft",
+      "content_file": "courses/CL-95.json"
+    },
+    {
+      "course_id": "CL-96",
+      "title": "下午活动、下班与回家",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 96,
+      "status": "draft",
+      "content_file": "courses/CL-96.json"
+    },
+    {
+      "course_id": "CL-97",
+      "title": "晚餐、家庭生活与睡前活动",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 97,
+      "status": "draft",
+      "content_file": "courses/CL-97.json"
+    },
+    {
+      "course_id": "CL-98",
+      "title": "我的一天与日常作息综合表达",
+      "title_status": "confirmed",
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "sort_order": 98,
+      "status": "draft",
+      "content_file": "courses/CL-98.json"
+    },
+    {
+      "course_id": "CL-99",
+      "title": "职业、行业与工作身份",
+      "title_status": "confirmed",
+      "module_id": "M09",
+      "module_name": "工作与职业",
+      "sort_order": 99,
+      "status": "draft",
+      "content_file": "courses/CL-99.json"
+    },
+    {
+      "course_id": "CL-100",
+      "title": "工作场所与工作环境",
+      "title_status": "confirmed",
+      "module_id": "M09",
+      "module_name": "工作与职业",
+      "sort_order": 100,
+      "status": "draft",
+      "content_file": "courses/CL-100.json"
+    },
+    {
+      "course_id": "CL-101",
+      "title": "工作职责与工作内容",
+      "title_status": "confirmed",
+      "module_id": "M09",
+      "module_name": "工作与职业",
+      "sort_order": 101,
+      "status": "draft",
+      "content_file": "courses/CL-101.json"
+    },
+    {
+      "course_id": "CL-102",
+      "title": "工作时间、班次与休假安排",
+      "title_status": "confirmed",
+      "module_id": "M09",
+      "module_name": "工作与职业",
+      "sort_order": 102,
+      "status": "draft",
+      "content_file": "courses/CL-102.json"
+    },
+    {
+      "course_id": "CL-103",
+      "title": "职场沟通与同事关系",
+      "title_status": "confirmed",
+      "module_id": "M09",
+      "module_name": "工作与职业",
+      "sort_order": 103,
+      "status": "draft",
+      "content_file": "courses/CL-103.json"
+    },
+    {
+      "course_id": "CL-104",
+      "title": "我的工作与职业规划综合表达",
+      "title_status": "confirmed",
+      "module_id": "M09",
+      "module_name": "工作与职业",
+      "sort_order": 104,
+      "status": "draft",
+      "content_file": "courses/CL-104.json"
+    },
+    {
+      "course_id": "CL-105",
+      "title": "购物、超市与日常消费",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 105,
+      "status": "draft",
+      "content_file": "courses/CL-105.json"
+    },
+    {
+      "course_id": "CL-106",
+      "title": "衣服、鞋帽与日常穿着",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 106,
+      "status": "draft",
+      "content_file": "courses/CL-106.json"
+    },
+    {
+      "course_id": "CL-107",
+      "title": "身体健康、常见疾病与看医生",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 107,
+      "status": "draft",
+      "content_file": "courses/CL-107.json"
+    },
+    {
+      "course_id": "CL-108",
+      "title": "天气、季节与气候变化",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 108,
+      "status": "draft",
+      "content_file": "courses/CL-108.json"
+    },
+    {
+      "course_id": "CL-109",
+      "title": "日期、约会与时间安排",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 109,
+      "status": "draft",
+      "content_file": "courses/CL-109.json"
+    },
+    {
+      "course_id": "CL-110",
+      "title": "电话、网络与数字生活",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 110,
+      "status": "draft",
+      "content_file": "courses/CL-110.json"
+    },
+    {
+      "course_id": "CL-111",
+      "title": "家务劳动与家庭分工",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 111,
+      "status": "draft",
+      "content_file": "courses/CL-111.json"
+    },
+    {
+      "course_id": "CL-112",
+      "title": "餐厅用餐与点餐交流",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 112,
+      "status": "draft",
+      "content_file": "courses/CL-112.json"
+    },
+    {
+      "course_id": "CL-113",
+      "title": "节日、庆祝活动与礼物",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 113,
+      "status": "draft",
+      "content_file": "courses/CL-113.json"
+    },
+    {
+      "course_id": "CL-114",
+      "title": "日常问题、公共服务与寻求帮助",
+      "title_status": "confirmed",
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "sort_order": 114,
+      "status": "draft",
+      "content_file": "courses/CL-114.json"
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M01",
+      "module_name": "基础入门",
+      "start_course": "CL-01",
+      "end_course": "CL-36",
+      "course_count": 36
+    },
+    {
+      "module_id": "M02",
+      "module_name": "描述、形容词与比较",
+      "start_course": "CL-37",
+      "end_course": "CL-59",
+      "course_count": 23
+    },
+    {
+      "module_id": "M03",
+      "module_name": "城市与居住",
+      "start_course": "CL-60",
+      "end_course": "CL-65",
+      "course_count": 6
+    },
+    {
+      "module_id": "M04",
+      "module_name": "距离与出行",
+      "start_course": "CL-66",
+      "end_course": "CL-71",
+      "course_count": 6
+    },
+    {
+      "module_id": "M05",
+      "module_name": "房子与房间",
+      "start_course": "CL-72",
+      "end_course": "CL-79",
+      "course_count": 8
+    },
+    {
+      "module_id": "M06",
+      "module_name": "动物与生肖",
+      "start_course": "CL-80",
+      "end_course": "CL-84",
+      "course_count": 5
+    },
+    {
+      "module_id": "M07",
+      "module_name": "兴趣与偏好",
+      "start_course": "CL-85",
+      "end_course": "CL-90",
+      "course_count": 6
+    },
+    {
+      "module_id": "M08",
+      "module_name": "我的日常生活",
+      "start_course": "CL-91",
+      "end_course": "CL-98",
+      "course_count": 8
+    },
+    {
+      "module_id": "M09",
+      "module_name": "工作与职业",
+      "start_course": "CL-99",
+      "end_course": "CL-104",
+      "course_count": 6
+    },
+    {
+      "module_id": "M10",
+      "module_name": "生活专项",
+      "start_course": "CL-105",
+      "end_course": "CL-114",
+      "course_count": 10
+    }
+  ]
+}

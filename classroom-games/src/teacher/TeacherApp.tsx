@@ -34,6 +34,8 @@ import {
   ArrowLeft,
 } from 'lucide-react'
 
+import clCatalogData from '../../../curriculum/CL-course-catalog.json'
+
 const API_BASE = '/api'
 
 type Teacher = {
@@ -90,6 +92,125 @@ type Vocabulary = {
   english?: string
   level?: string | number
   part_of_speech?: string
+}
+
+
+type CLCatalogCourse = {
+  course_id: string
+  title: string
+  title_status?: string
+  module_id: string
+  module_name: string
+  sort_order: number
+  status: string
+  content_file: string
+}
+
+type CLCatalogModule = {
+  module_id: string
+  module_name: string
+  start_course: string
+  end_course: string
+  course_count: number
+}
+
+type CLCatalog = {
+  total_courses: number
+  module_count: number
+  courses: CLCatalogCourse[]
+  modules: CLCatalogModule[]
+}
+
+type CLVocabulary = {
+  word_id?: string
+  simplified?: string
+  traditional?: string
+  pinyin?: string
+  part_of_speech?: string
+  definition_zh?: string
+  category?: string
+  collocations?: string[]
+  is_key_vocabulary?: boolean
+}
+
+type CLCourseProgressRecord = {
+  student_id: number
+  course_id: string
+  learned: boolean
+  learned_at?: string | null
+  updated_at?: string | null
+}
+
+type CLCourseDetail = {
+  course_id: string
+  title: string
+  module_id: string
+  status: string
+  sort_order: number
+  learning_objectives?: unknown[]
+  vocabulary?: CLVocabulary[]
+  core_expressions?: unknown[]
+  sentence_patterns?: unknown[]
+  dialogues?: unknown[]
+  classroom_practice?: unknown[]
+  integrated_expression_task?: {
+    instructions?: string
+    expected_output?: string
+  }
+  teacher_notes?: unknown[]
+  completion_criteria?: unknown[]
+  resources?: unknown[]
+}
+
+const clCatalog = clCatalogData as CLCatalog
+
+const clCourseLoaders = import.meta.glob<CLCourseDetail>(
+  '../../../curriculum/courses/CL-*.json',
+  { eager: false, import: 'default' },
+)
+
+function clDisplayText(value: unknown): string {
+  if (typeof value === 'string') return value.trim()
+  if (typeof value === 'number') return String(value)
+  if (Array.isArray(value)) {
+    return value.map(clDisplayText).filter(Boolean).join('；')
+  }
+  if (value && typeof value === 'object') {
+    return Object.entries(value as Record<string, unknown>)
+      .filter(([key]) => !['word_id', 'is_key_vocabulary'].includes(key))
+      .map(([key, item]) => {
+        const text = clDisplayText(item)
+        return text ? `${key}: ${text}` : ''
+      })
+      .filter(Boolean)
+      .join('；')
+  }
+  return ''
+}
+
+function CLDetailList({
+  title,
+  items,
+}: {
+  title: string
+  items?: unknown[]
+}) {
+  const visibleItems = (items ?? [])
+    .map(clDisplayText)
+    .filter(Boolean)
+
+  if (visibleItems.length === 0) return null
+
+  return (
+    <section className="cl-detail-section">
+      <h3>{title}</h3>
+      <ul>
+        {visibleItems.map((item, index) => (
+          <li key={`${title}-${index}`}>{item}</li>
+        ))}
+      </ul>
+    </section>
+  )
 }
 
 type PageId =
@@ -1026,35 +1147,684 @@ function StudentsPage({ token }: { token: string }) {
 }
 
 function CurriculumPage({ token }: { token: string }) {
-  const [levels, setLevels] = useState<CourseLevel[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const [courseSearch, setCourseSearch] = useState('')
+  const [students, setStudents] = useState<Student[]>([])
+  const [studentsLoading, setStudentsLoading] = useState(false)
+  const [studentsError, setStudentsError] = useState('')
+  const [selectedStudentId, setSelectedStudentId] = useState('')
+  const [progress, setProgress] = useState<CLCourseProgressRecord[]>([])
+  const [progressLoading, setProgressLoading] = useState(false)
+  const [progressSaving, setProgressSaving] = useState(false)
+  const [progressError, setProgressError] = useState('')
+  const [progressMessage, setProgressMessage] = useState('')
+
+  const [selectedModuleId, setSelectedModuleId] = useState(
+    clCatalog.modules[0]?.module_id ?? 'M01',
+  )
+  const [selectedCourseId, setSelectedCourseId] = useState(
+    clCatalog.courses[0]?.course_id ?? '',
+  )
+  const [selectedGroupIndex, setSelectedGroupIndex] = useState<number | null>(null)
+  const [detail, setDetail] = useState<CLCourseDetail | null>(null)
+  const [detailLoading, setDetailLoading] = useState(false)
+  const [detailError, setDetailError] = useState('')
 
   useEffect(() => {
     let active = true
-    apiRequest<unknown>('/master/levels', token)
-      .then(data => { if (active) setLevels(getItems<CourseLevel>(data)) })
-      .catch(err => { if (active) setError(err instanceof Error ? err.message : '课程级别加载失败') })
-      .finally(() => { if (active) setLoading(false) })
-    return () => { active = false }
+    setStudentsLoading(true)
+    setStudentsError('')
+
+    apiRequest<unknown>('/students/?skip=0&limit=100', token)
+      .then(data => {
+        if (active) setStudents(getItems<Student>(data))
+      })
+      .catch(error => {
+        if (active) {
+          setStudentsError(
+            error instanceof Error ? error.message : '学生列表读取失败',
+          )
+        }
+      })
+      .finally(() => {
+        if (active) setStudentsLoading(false)
+      })
+
+    return () => {
+      active = false
+    }
   }, [token])
+
+  useEffect(() => {
+    if (!selectedStudentId) {
+      setProgress([])
+      setProgressError('')
+      setProgressMessage('')
+      return
+    }
+
+    let active = true
+    setProgressLoading(true)
+    setProgressError('')
+    setProgressMessage('')
+
+    apiRequest<unknown>(
+      `/cl-course-progress/students/${selectedStudentId}`,
+      token,
+    )
+      .then(data => {
+        if (!active) return
+        setProgress(Array.isArray(data) ? data as CLCourseProgressRecord[] : [])
+      })
+      .catch(error => {
+        if (active) {
+          setProgressError(
+            error instanceof Error ? error.message : '课程进度读取失败',
+          )
+        }
+      })
+      .finally(() => {
+        if (active) setProgressLoading(false)
+      })
+
+    return () => {
+      active = false
+    }
+  }, [token, selectedStudentId])
+
+  const selectedModule = clCatalog.modules.find(
+    module => module.module_id === selectedModuleId,
+  )
+
+  const moduleCourses = clCatalog.courses.filter(
+    course => course.module_id === selectedModuleId,
+  )
+
+  // 超过6门课程时，自动平均分组；每组最多6门。
+  const moduleCourseGroups = (() => {
+    const count = moduleCourses.length
+    const groupCount = Math.ceil(count / 6)
+    if (groupCount <= 1) return [moduleCourses]
+
+    const baseSize = Math.floor(count / groupCount)
+    const remainder = count % groupCount
+    let offset = 0
+
+    return Array.from({ length: groupCount }, (_, index) => {
+      const size = baseSize + (index < remainder ? 1 : 0)
+      const group = moduleCourses.slice(offset, offset + size)
+      offset += size
+      return group
+    })
+  })()
+
+  const hasCourseGroups = moduleCourses.length > 6
+  const visibleGroupCourses = hasCourseGroups
+    ? (selectedGroupIndex === null
+        ? []
+        : moduleCourseGroups[selectedGroupIndex] ?? [])
+    : moduleCourses
+
+  const selectedCourse = clCatalog.courses.find(
+    course => course.course_id === selectedCourseId,
+  )
+
+  const filteredCourses = courseSearch.trim()
+    ? clCatalog.courses.filter(course => {
+        const keyword = courseSearch.trim().toLocaleLowerCase()
+        return [
+          course.course_id,
+          course.title,
+          course.module_name,
+          course.module_id,
+        ].some(value => value.toLocaleLowerCase().includes(keyword))
+      })
+    : []
+
+  const learnedCount = clCatalog.courses.filter(course =>
+    progress.some(record =>
+      record.course_id === course.course_id && record.learned,
+    ),
+  ).length
+
+  const selectedCourseLearned = progress.some(record =>
+    record.course_id === selectedCourseId && record.learned,
+  )
+
+  useEffect(() => {
+    const firstCourse = clCatalog.courses.find(
+      course => course.module_id === selectedModuleId,
+    )
+    setSelectedCourseId(current => {
+      const currentCourse = clCatalog.courses.find(
+        course => course.course_id === current,
+      )
+      return currentCourse?.module_id === selectedModuleId
+        ? current
+        : firstCourse?.course_id ?? ''
+    })
+    setSelectedGroupIndex(null)
+  }, [selectedModuleId])
+
+  useEffect(() => {
+    if (!selectedCourse) {
+      setDetail(null)
+      return
+    }
+
+    let active = true
+    setDetail(null)
+    setDetailError('')
+    setDetailLoading(true)
+
+    const loaderKey = `../../../curriculum/${selectedCourse.content_file}`
+    const loader = clCourseLoaders[loaderKey]
+
+    if (!loader) {
+      setDetailError(`找不到课程详情文件：${selectedCourse.content_file}`)
+      setDetailLoading(false)
+      return
+    }
+
+    loader()
+      .then(data => {
+        if (active) setDetail(data)
+      })
+      .catch(error => {
+        if (active) {
+          setDetailError(
+            error instanceof Error ? error.message : '课程详情读取失败',
+          )
+        }
+      })
+      .finally(() => {
+        if (active) setDetailLoading(false)
+      })
+
+    return () => {
+      active = false
+    }
+  }, [selectedCourseId])
+
+  async function updateSelectedCourseProgress(learned: boolean) {
+    if (!selectedStudentId || !selectedCourse || progressSaving) return
+
+    setProgressSaving(true)
+    setProgressError('')
+    setProgressMessage('')
+
+    try {
+      const updated = await apiRequest<CLCourseProgressRecord>(
+        `/cl-course-progress/students/${selectedStudentId}/courses/${selectedCourse.course_id}`,
+        token,
+        {
+          method: 'PUT',
+          body: JSON.stringify({ learned }),
+        },
+      )
+
+      setProgress(current => {
+        const existing = current.findIndex(
+          record => record.course_id === updated.course_id,
+        )
+        if (existing < 0) return [...current, updated]
+        return current.map((record, index) =>
+          index === existing ? updated : record,
+        )
+      })
+
+      setProgressMessage(
+        learned ? '已记录这门课程为已学。' : '已取消这门课程的已学标记。',
+      )
+    } catch (error) {
+      setProgressError(
+        error instanceof Error ? error.message : '课程进度保存失败',
+      )
+    } finally {
+      setProgressSaving(false)
+    }
+  }
+
+  const visibleVocabulary = (detail?.vocabulary ?? []).filter(word =>
+    Boolean(
+      word.simplified?.trim() ||
+      word.traditional?.trim() ||
+      word.pinyin?.trim() ||
+      word.definition_zh?.trim(),
+    ),
+  )
 
   return (
     <>
-      <PageHeading title="我的课程体系" subtitle="整理你的教学级别、课程单元与主题内容。" />
-      <section className="content-card">
-        <div className="card-heading"><div><h2>课程级别</h2><p>当前教师账号下的课程结构</p></div><BookOpen size={19} /></div>
-        {loading ? <div className="loading-state"><LoaderCircle className="spin" /> 正在加载课程…</div> :
-          error ? <div className="error-message">{error}</div> :
-          levels.length === 0 ? <EmptyState title="课程体系还是空的" description="目前还没有建立课程级别。后续将在这里逐步连接课程单元、主题、词汇和语法。" /> :
-          <div className="level-grid">{levels.map((level, index) => (
-            <div className="level-card" key={level.id}>
-              <span className="level-number">LEVEL {index + 1}</span>
-              <h3>{level.name || level.title || level.level || `课程级别 ${index + 1}`}</h3>
-              <p>课程级别</p>
+      <PageHeading
+        title="我的课程体系"
+        subtitle={`CL 中文主题课程 · ${clCatalog.total_courses} 门课程 · ${clCatalog.module_count} 个模块`}
+      />
+
+      <section className="course-series-framework">
+        <div className="course-series-heading">
+          <div>
+            <span className="course-series-eyebrow">CHINESE COURSE SYSTEM</span>
+            <h2>中文课程系列</h2>
+            <p>统一课程总体系 · 主题课程与语法课程</p>
+          </div>
+          <BookOpen size={24} />
+        </div>
+
+        <div className="course-series-grid">
+          <article className="course-series-card">
+            <div className="course-series-card-heading">
+              <span className="course-series-code">CL SERIES</span>
+              <span className="course-series-tag">主题课程</span>
             </div>
-          ))}</div>
-        }
+
+            <h3>CL 系列</h3>
+            <p className="course-series-description">
+              中文主题词汇与情景课程
+            </p>
+
+            <div className="course-series-number">
+              <strong>{clCatalog.total_courses}</strong>
+              <span>门课程</span>
+            </div>
+
+            <div className="course-series-divider" />
+
+            <div className="course-series-facts">
+              <div>
+                <strong>{clCatalog.module_count}</strong>
+                <span>课程模块</span>
+              </div>
+              <div>
+                <strong>CL-01 — CL-114</strong>
+                <span>课程编号范围</span>
+              </div>
+            </div>
+
+            <p className="course-series-note">
+              基础入门、描述与比较、城市生活、日常生活、工作与职业等主题。
+            </p>
+
+            <span className="course-series-status">
+              已接入现有课程目录
+            </span>
+          </article>
+
+          <article className="course-series-card">
+            <div className="course-series-card-heading">
+              <span className="course-series-code">G SERIES</span>
+              <span className="course-series-tag">语法课程</span>
+            </div>
+
+            <h3>G 系列</h3>
+            <p className="course-series-description">
+              中文语法知识与专项教学课程
+            </p>
+
+            <div className="course-series-number">
+              <strong>G</strong>
+              <span>独立语法编号</span>
+            </div>
+
+            <div className="course-series-divider" />
+
+            <div className="course-series-groups">
+              <div><span>01</span><strong>第一部分：词语类</strong></div>
+              <div><span>02</span><strong>第二部分：补语类</strong></div>
+              <div><span>03</span><strong>第三部分：句式类</strong></div>
+              <div><span>04</span><strong>第四部分：复句类</strong></div>
+              <div><span>+</span><strong>补充一、补充二、补充三</strong></div>
+              <div><span>+</span><strong>补充四及后续扩展</strong></div>
+            </div>
+
+            <p className="course-series-note">
+              保留四大基础部分，统一管理全部补充章节，后续继续扩展。
+            </p>
+
+            <span className="course-series-status course-series-status-pending">
+              课程框架已建立 · 内容待接入
+            </span>
+          </article>
+        </div>
+      </section>
+
+      <section className="content-card cl-curriculum-overview">
+        <div className="card-heading">
+          <div>
+            <h2>原创中文课程目录</h2>
+            <p>按照既定课程模块和课程编号浏览教学体系</p>
+          </div>
+          <BookOpen size={19} />
+        </div>
+
+        <div className="cl-curriculum-stats">
+          <div><strong>{clCatalog.total_courses}</strong><span>课程总数</span></div>
+          <div><strong>{clCatalog.module_count}</strong><span>课程模块</span></div>
+          <div><strong>草稿</strong><span>当前详情状态</span></div>
+        </div>
+      </section>
+
+      <div className="cl-curriculum-layout">
+        <aside className="content-card cl-module-panel">
+          <div className="card-heading">
+            <div><h2>课程模块</h2><p>选择模块查看课程</p></div>
+          </div>
+
+          <div className="cl-module-list">
+            {clCatalog.modules.map(module => (
+              <button
+                type="button"
+                key={module.module_id}
+                className={`cl-module-button ${
+                  selectedModuleId === module.module_id ? 'active' : ''
+                }`}
+                onClick={() => setSelectedModuleId(module.module_id)}
+              >
+                <span className="cl-module-code">{module.module_id}</span>
+                <span className="cl-module-name">{module.module_name}</span>
+                <span className="cl-module-count">{module.course_count}课</span>
+              </button>
+            ))}
+          </div>
+        </aside>
+
+        <section className="content-card cl-course-panel">
+          <div className="card-heading">
+            <div>
+              <h2>{selectedModule?.module_name ?? '课程列表'}</h2>
+              <p>
+                {selectedModule
+                  ? `${selectedModule.start_course} — ${selectedModule.end_course} · ${selectedModule.course_count} 门课程`
+                  : '选择一个课程模块'}
+              </p>
+            </div>
+            <BookMarked size={19} />
+          </div>
+
+          <div className="cl-course-search">
+            <Search size={17} />
+            <input
+              type="search"
+              value={courseSearch}
+              onChange={event => setCourseSearch(event.target.value)}
+              placeholder="搜索课程编号、课程名称或主题模块…"
+              aria-label="搜索全部CL课程"
+            />
+            {courseSearch && (
+              <button
+                type="button"
+                onClick={() => setCourseSearch('')}
+                aria-label="清空课程搜索"
+              >
+                清空
+              </button>
+            )}
+          </div>
+
+          <div className="cl-course-list">
+            {courseSearch.trim() ? (
+              filteredCourses.length > 0 ? (
+                <>
+                  <p className="cl-search-result-count">
+                    找到 {filteredCourses.length} 门课程
+                  </p>
+                  {filteredCourses.map(course => (
+                    <button
+                      type="button"
+                      key={course.course_id}
+                      className={`cl-course-button ${
+                        selectedCourseId === course.course_id ? 'active' : ''
+                      }`}
+                      onClick={() => {
+                        setSelectedModuleId(course.module_id)
+                        setSelectedCourseId(course.course_id)
+                        setSelectedGroupIndex(null)
+                      }}
+                    >
+                      <span className="cl-course-number">{course.course_id}</span>
+                      <span className="cl-course-title">{course.title}</span>
+                      <span className="cl-draft-label">{course.module_name}</span>
+                      <ChevronRight size={16} />
+                    </button>
+                  ))}
+                </>
+              ) : (
+                <div className="cl-empty-detail">
+                  没有找到匹配课程，请尝试课程编号、课程名称或模块名称。
+                </div>
+              )
+            ) : hasCourseGroups && selectedGroupIndex === null ? (
+              <div className="cl-group-list">
+                {moduleCourseGroups.map((group, index) => (
+                  <button
+                    type="button"
+                    key={`${selectedModuleId}-group-${index}`}
+                    className="cl-group-button"
+                    onClick={() => setSelectedGroupIndex(index)}
+                  >
+                    <span className="cl-group-code">第{index + 1}组</span>
+                    <span className="cl-group-range">
+                      {group[0]?.course_id} — {group[group.length - 1]?.course_id}
+                    </span>
+                    <span className="cl-module-count">{group.length}课</span>
+                    <ChevronRight size={16} />
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <>
+                {hasCourseGroups && (
+                  <button
+                    type="button"
+                    className="cl-group-back"
+                    onClick={() => setSelectedGroupIndex(null)}
+                  >
+                    ← 返回课程分组
+                  </button>
+                )}
+                {visibleGroupCourses.map(course => (
+                  <button
+                    type="button"
+                    key={course.course_id}
+                    className={`cl-course-button ${
+                      selectedCourseId === course.course_id ? 'active' : ''
+                    }`}
+                    onClick={() => setSelectedCourseId(course.course_id)}
+                  >
+                    <span className="cl-course-number">{course.course_id}</span>
+                    <span className="cl-course-title">{course.title}</span>
+                    <span className="cl-draft-label">草稿</span>
+                    <ChevronRight size={16} />
+                  </button>
+                ))}
+              </>
+            )}
+          </div>
+        </section>
+      </div>
+
+      <section className="content-card cl-detail-panel">
+        <div className="card-heading">
+          <div>
+            <h2>
+              {selectedCourse
+                ? `${selectedCourse.course_id} · ${selectedCourse.title}`
+                : '课程详情'}
+            </h2>
+            <p>课程详情根据原始课程文件显示，不自动补写空白内容</p>
+          </div>
+          <span className="cl-status-badge">待完善</span>
+        </div>
+
+        <div className="cl-student-progress">
+          <div className="cl-student-progress-heading">
+            <div>
+              <h3>学生课程学习进度</h3>
+              <p>选择学生，查看其在这套CL课程体系中的学习记录。</p>
+            </div>
+            <Users size={20} />
+          </div>
+
+          <select
+            className="cl-student-select"
+            value={selectedStudentId}
+            onChange={event => setSelectedStudentId(event.target.value)}
+            disabled={studentsLoading}
+            aria-label="选择学生"
+          >
+            <option value="">
+              {studentsLoading ? '正在读取学生列表…' : '请选择学生'}
+            </option>
+            {students.map(student => (
+              <option key={student.id} value={String(student.id)}>
+                {student.display_name || student.student_code || `学生 ${student.id}`}
+                {student.student_code ? `（${student.student_code}）` : ''}
+              </option>
+            ))}
+          </select>
+
+          {studentsError && <div className="error-message">{studentsError}</div>}
+
+          {selectedStudentId && (
+            <>
+              {progressLoading ? (
+                <p className="cl-progress-hint">正在读取该学生的课程进度…</p>
+              ) : (
+                <>
+                  <div className="cl-progress-summary">
+                    <strong>{learnedCount} / {clCatalog.total_courses}</strong>
+                    <span>门课程已记录为学过</span>
+                  </div>
+                  <div
+                    className="cl-progress-track"
+                    role="progressbar"
+                    aria-valuenow={learnedCount}
+                    aria-valuemin={0}
+                    aria-valuemax={clCatalog.total_courses}
+                    aria-label="已学课程数量"
+                  >
+                    <div
+                      className="cl-progress-fill"
+                      style={{
+                        width: `${clCatalog.total_courses
+                          ? (learnedCount / clCatalog.total_courses) * 100
+                          : 0}%`,
+                      }}
+                    />
+                  </div>
+                  <p className="cl-progress-hint">
+                    这里只记录课程是否学过，不代表学生已经掌握课程内容。
+                  </p>
+                </>
+              )}
+
+              {selectedCourse && (
+                <div className="cl-current-course-progress">
+                  <span>
+                    当前课程：{selectedCourse.course_id} · {selectedCourse.title}
+                  </span>
+                  <button
+                    type="button"
+                    className={selectedCourseLearned
+                      ? 'cl-progress-toggle learned'
+                      : 'cl-progress-toggle'}
+                    disabled={progressLoading || progressSaving}
+                    onClick={() =>
+                      updateSelectedCourseProgress(!selectedCourseLearned)
+                    }
+                  >
+                    {progressSaving
+                      ? '正在保存…'
+                      : selectedCourseLearned
+                        ? '取消已学标记'
+                        : '标记为已学'}
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+
+          {progressError && <div className="error-message">{progressError}</div>}
+          {progressMessage && (
+            <p className="cl-progress-success">{progressMessage}</p>
+          )}
+        </div>
+
+        {detailLoading ? (
+          <div className="loading-state">
+            <LoaderCircle className="spin" /> 正在读取课程详情…
+          </div>
+        ) : detailError ? (
+          <div className="error-message">{detailError}</div>
+        ) : detail ? (
+          <>
+            <div className="cl-detail-meta">
+              <span>课程编号：{detail.course_id}</span>
+              <span>所属模块：{selectedCourse?.module_name ?? detail.module_id}</span>
+              <span>课程状态：{detail.status === 'draft' ? '草稿' : detail.status}</span>
+            </div>
+
+            <CLDetailList title="教学目标" items={detail.learning_objectives} />
+
+            {visibleVocabulary.length > 0 && (
+              <section className="cl-detail-section">
+                <h3>主题词汇</h3>
+                <div className="cl-vocabulary-list">
+                  {visibleVocabulary.map((word, index) => (
+                    <article className="cl-vocabulary-item" key={`${word.word_id || word.simplified}-${index}`}>
+                      <strong>{word.simplified || word.traditional}</strong>
+                      {word.traditional && word.traditional !== word.simplified
+                        ? <span>{word.traditional}</span>
+                        : null}
+                      {word.pinyin && <span>{word.pinyin}</span>}
+                      {word.part_of_speech && <span>{word.part_of_speech}</span>}
+                      {word.definition_zh && <p>{word.definition_zh}</p>}
+                      {word.category && <small>{word.category}</small>}
+                      {word.collocations?.filter(Boolean).length
+                        ? <p>常见搭配：{word.collocations.filter(Boolean).join('、')}</p>
+                        : null}
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            <CLDetailList title="核心表达" items={detail.core_expressions} />
+            <CLDetailList title="句型与语法" items={detail.sentence_patterns} />
+            <CLDetailList title="课堂对话" items={detail.dialogues} />
+            <CLDetailList title="课堂练习" items={detail.classroom_practice} />
+
+            {(detail.integrated_expression_task?.instructions ||
+              detail.integrated_expression_task?.expected_output) && (
+              <section className="cl-detail-section">
+                <h3>综合表达任务</h3>
+                {detail.integrated_expression_task.instructions && (
+                  <p>{detail.integrated_expression_task.instructions}</p>
+                )}
+                {detail.integrated_expression_task.expected_output && (
+                  <p>{detail.integrated_expression_task.expected_output}</p>
+                )}
+              </section>
+            )}
+
+            <CLDetailList title="教师备注" items={detail.teacher_notes} />
+            <CLDetailList title="课程完成标准" items={detail.completion_criteria} />
+            <CLDetailList title="教学资源" items={detail.resources} />
+
+            {!detail.learning_objectives?.some(item => clDisplayText(item)) &&
+              visibleVocabulary.length === 0 &&
+              !(detail.core_expressions ?? []).some(item => clDisplayText(item)) &&
+              !(detail.sentence_patterns ?? []).some(item => clDisplayText(item)) &&
+              !(detail.dialogues ?? []).some(item => clDisplayText(item)) &&
+              !(detail.classroom_practice ?? []).some(item => clDisplayText(item)) && (
+                <div className="cl-empty-detail">
+                  这门课程的详情模板已经建立，实际教学内容尚未填写。
+                  课程编号、名称和所属模块已保留。
+                </div>
+              )}
+          </>
+        ) : (
+          <EmptyState title="请选择一门课程" description="从上方课程列表中选择课程，查看它的详情。" />
+        )}
       </section>
     </>
   )

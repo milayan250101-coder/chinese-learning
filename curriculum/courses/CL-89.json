@@ -1,0 +1,52 @@
+{
+  "course_id": "CL-89",
+  "title": "收藏、创作与个人爱好",
+  "module_id": "M07",
+  "status": "draft",
+  "sort_order": 89,
+  "learning_objectives": [],
+  "vocabulary": [
+    {
+      "word_id": "",
+      "simplified": "",
+      "traditional": "",
+      "pinyin": "",
+      "part_of_speech": "",
+      "definition_zh": "",
+      "category": "",
+      "collocations": [],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [],
+  "sentence_patterns": [
+    {
+      "pattern": "",
+      "explanation": "",
+      "examples": []
+    }
+  ],
+  "dialogues": [],
+  "classroom_practice": [],
+  "integrated_expression_task": {
+    "instructions": "",
+    "expected_output": ""
+  },
+  "teacher_notes": [],
+  "completion_criteria": [],
+  "resources": [],
+  "translations": {
+    "en": {},
+    "fr": {},
+    "de": {},
+    "es": {},
+    "it": {}
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": null,
+    "version": 1,
+    "source": "CL-curriculum-framework"
+  },
+  "title_status": "confirmed"
+}

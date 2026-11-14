@@ -682,3 +682,603 @@ button { cursor: pointer; }
   .students-detail-heading > .status-pill { margin-left: 0; }
   .students-modal { padding: 19px; }
 }
+
+
+/* CL原创课程体系：嵌入原教师工作台 */
+.cl-curriculum-overview { margin-bottom: 16px; }
+.cl-curriculum-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.cl-curriculum-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px 16px;
+  border: 1px solid #edf1f6;
+  border-radius: 11px;
+  background: #fbfcfe;
+}
+.cl-curriculum-stats strong { color: #34465d; font-size: 20px; }
+.cl-curriculum-stats span { color: #929fb0; font-size: 11px; }
+.cl-curriculum-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2fr);
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+.cl-module-panel, .cl-course-panel, .cl-detail-panel { min-width: 0; }
+.cl-module-list, .cl-course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 16px;
+}
+.cl-module-button, .cl-course-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #edf1f6;
+  border-radius: 10px;
+  background: #fff;
+  color: #53647a;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.cl-module-button:hover, .cl-course-button:hover {
+  border-color: #b8d9e8;
+  background: #f8fcfe;
+}
+.cl-module-button.active, .cl-course-button.active {
+  border-color: #8fc9d6;
+  background: #f0f9fa;
+}
+.cl-module-code, .cl-course-number {
+  flex: 0 0 auto;
+  color: #528e9e;
+  font-size: 11px;
+  font-weight: 700;
+}
+.cl-module-name, .cl-course-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.cl-module-count {
+  flex: 0 0 auto;
+  color: #98a5b4;
+  font-size: 10px;
+}
+.cl-course-button { padding: 12px 13px; }
+.cl-draft-label, .cl-status-badge {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: #f2f4f7;
+  color: #7e8b9a;
+  font-size: 10px;
+}
+.cl-status-badge { align-self: flex-start; }
+.cl-detail-panel { margin-bottom: 20px; }
+.cl-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 18px;
+  margin: 18px 0;
+  padding: 12px 14px;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #7e8b9a;
+  font-size: 11px;
+}
+.cl-detail-section {
+  padding: 16px 0;
+  border-top: 1px solid #edf1f6;
+}
+.cl-detail-section h3 {
+  margin: 0 0 11px;
+  color: #34465d;
+  font-size: 13px;
+}
+.cl-detail-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #68788c;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.cl-detail-section p {
+  color: #68788c;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.cl-vocabulary-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+.cl-vocabulary-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 9px;
+  padding: 12px;
+  border: 1px solid #edf1f6;
+  border-radius: 9px;
+  background: #fbfcfe;
+}
+.cl-vocabulary-item strong { color: #34465d; font-size: 17px; }
+.cl-vocabulary-item span, .cl-vocabulary-item small {
+  color: #8291a3;
+  font-size: 11px;
+}
+.cl-vocabulary-item p {
+  flex-basis: 100%;
+  margin: 2px 0 0;
+}
+.cl-empty-detail {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px dashed #dce5ed;
+  border-radius: 10px;
+  color: #8795a5;
+  background: #fbfcfe;
+  font-size: 12px;
+  line-height: 1.8;
+}
+@media (max-width: 760px) {
+  .cl-curriculum-layout { grid-template-columns: 1fr; }
+  .cl-module-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .cl-curriculum-stats { gap: 7px; }
+  .cl-curriculum-stats > div { padding: 11px; }
+  .cl-module-list { grid-template-columns: 1fr; }
+  .cl-course-button { gap: 7px; padding: 10px 8px; }
+}
+
+
+/* CL课程树状分组导航 */
+.cl-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.cl-group-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 15px 14px;
+  border: 1px solid #e7edf3;
+  border-radius: 11px;
+  background: #fbfcfe;
+  color: #53647a;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+
+.cl-group-button:hover {
+  border-color: #b8d9e8;
+  background: #f0f9fa;
+}
+
+.cl-group-code {
+  flex: 0 0 auto;
+  color: #528e9e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cl-group-range {
+  flex: 1;
+  min-width: 0;
+  color: #68788c;
+  font-size: 12px;
+}
+
+.cl-group-back {
+  align-self: flex-start;
+  padding: 7px 11px;
+  border: 1px solid #e7edf3;
+  border-radius: 8px;
+  background: #fbfcfe;
+  color: #528e9e;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cl-group-back:hover {
+  border-color: #b8d9e8;
+  background: #f0f9fa;
+}
+
+
+/* 中文课程系列：CL 与 G 双栏统一框架 */
+.course-series-framework {
+  margin: 0 0 20px;
+  padding: 22px;
+  border: 1px solid #e7edf3;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.course-series-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  color: #34465d;
+}
+
+.course-series-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: #78909c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.course-series-heading h2 {
+  margin: 0;
+  color: #293d4d;
+  font-size: 21px;
+}
+
+.course-series-heading p {
+  margin: 6px 0 0;
+  color: #8795a5;
+  font-size: 12px;
+}
+
+.course-series-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.course-series-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 340px;
+  padding: 20px;
+  border: 1px solid #e3eaf0;
+  border-radius: 13px;
+  background: #fbfcfe;
+}
+
+.course-series-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.course-series-code {
+  color: #528e9e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.course-series-tag {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #edf5f7;
+  color: #528e9e;
+  font-size: 10px;
+}
+
+.course-series-card h3 {
+  margin: 20px 0 5px;
+  color: #293d4d;
+  font-size: 21px;
+}
+
+.course-series-description {
+  margin: 0;
+  color: #8291a3;
+  font-size: 12px;
+}
+
+.course-series-number {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.course-series-number strong {
+  color: #34465d;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.course-series-number span {
+  color: #8291a3;
+  font-size: 12px;
+}
+
+.course-series-divider {
+  height: 1px;
+  margin: 19px 0;
+  background: #e7edf3;
+}
+
+.course-series-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.course-series-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.course-series-facts strong {
+  color: #53647a;
+  font-size: 14px;
+}
+
+.course-series-facts span {
+  color: #929fb0;
+  font-size: 11px;
+}
+
+.course-series-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.course-series-groups > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid #edf1f6;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.course-series-groups span {
+  flex: 0 0 24px;
+  color: #528e9e;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.course-series-groups strong {
+  color: #53647a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.course-series-note {
+  margin: 17px 0;
+  color: #8291a3;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.course-series-status {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #edf5f1;
+  color: #477d66;
+  font-size: 10px;
+}
+
+.course-series-status-pending {
+  background: #f2f4f7;
+  color: #7e8b9a;
+}
+
+@media (max-width: 640px) {
+  .course-series-framework {
+    padding: 15px;
+  }
+
+  .course-series-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .course-series-card {
+    min-height: 0;
+  }
+}
+
+
+/* CL课程搜索与学生学习进度 */
+.cl-course-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid #dfe8ee;
+  border-radius: 10px;
+  background: #fff;
+  color: #78909c;
+}
+
+.cl-course-search:focus-within {
+  border-color: #8fc4d1;
+  box-shadow: 0 0 0 3px rgba(82, 142, 158, .08);
+}
+
+.cl-course-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #34465d;
+  font: inherit;
+  font-size: 13px;
+}
+
+.cl-course-search button {
+  border: 0;
+  background: transparent;
+  color: #528e9e;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cl-search-result-count {
+  margin: 0 0 8px;
+  color: #8795a5;
+  font-size: 12px;
+}
+
+.cl-student-progress {
+  margin: 18px 0 22px;
+  padding: 18px;
+  border: 1px solid #e3edf0;
+  border-radius: 12px;
+  background: #f8fbfc;
+}
+
+.cl-student-progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #528e9e;
+}
+
+.cl-student-progress-heading h3 {
+  margin: 0;
+  color: #34465d;
+  font-size: 15px;
+}
+
+.cl-student-progress-heading p {
+  margin: 5px 0 0;
+  color: #8795a5;
+  font-size: 12px;
+}
+
+.cl-student-select {
+  width: 100%;
+  max-width: 440px;
+  padding: 10px 12px;
+  border: 1px solid #dce5ed;
+  border-radius: 9px;
+  background: #fff;
+  color: #34465d;
+  font: inherit;
+  font-size: 13px;
+}
+
+.cl-progress-summary {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-top: 16px;
+  color: #68788c;
+  font-size: 12px;
+}
+
+.cl-progress-summary strong {
+  color: #397d8c;
+  font-size: 22px;
+}
+
+.cl-progress-track {
+  overflow: hidden;
+  height: 8px;
+  margin-top: 9px;
+  border-radius: 99px;
+  background: #e5edf0;
+}
+
+.cl-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #65a9ad;
+  transition: width .2s ease;
+}
+
+.cl-progress-hint {
+  margin: 8px 0 0;
+  color: #8795a5;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.cl-current-course-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e3edf0;
+  color: #53647a;
+  font-size: 12px;
+}
+
+.cl-progress-toggle {
+  padding: 9px 14px;
+  border: 1px solid #8ab9c3;
+  border-radius: 8px;
+  background: #fff;
+  color: #397d8c;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cl-progress-toggle:hover:not(:disabled) {
+  background: #edf7f8;
+}
+
+.cl-progress-toggle.learned {
+  border-color: #d9a7a0;
+  color: #a45e55;
+}
+
+.cl-progress-toggle:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.cl-progress-success {
+  margin: 10px 0 0;
+  color: #397d8c;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .cl-student-progress { padding: 13px; }
+  .cl-current-course-progress { align-items: flex-start; flex-direction: column; }
+}

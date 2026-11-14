@@ -1,0 +1,15 @@
+{
+  "name": "Chinese Learning",
+  "postStartCommand": "bash /workspaces/chinese-learning/start-teacher-portal.sh",
+  "forwardPorts": [5173, 8000],
+  "portsAttributes": {
+    "5173": {
+      "label": "Chinese Learning Teacher Portal",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "Chinese Learning API",
+      "onAutoForward": "silent"
+    }
+  }
+}

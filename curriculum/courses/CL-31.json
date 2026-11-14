@@ -1,0 +1,52 @@
+{
+  "course_id": "CL-31",
+  "title": "方位词与位置",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 31,
+  "learning_objectives": [],
+  "vocabulary": [
+    {
+      "word_id": "",
+      "simplified": "",
+      "traditional": "",
+      "pinyin": "",
+      "part_of_speech": "",
+      "definition_zh": "",
+      "category": "",
+      "collocations": [],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [],
+  "sentence_patterns": [
+    {
+      "pattern": "",
+      "explanation": "",
+      "examples": []
+    }
+  ],
+  "dialogues": [],
+  "classroom_practice": [],
+  "integrated_expression_task": {
+    "instructions": "",
+    "expected_output": ""
+  },
+  "teacher_notes": [],
+  "completion_criteria": [],
+  "resources": [],
+  "translations": {
+    "en": {},
+    "fr": {},
+    "de": {},
+    "es": {},
+    "it": {}
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": null,
+    "version": 1,
+    "source": "CL-curriculum-framework"
+  },
+  "title_status": "confirmed"
+}

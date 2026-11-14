@@ -18,6 +18,7 @@ class Student(Base):
     email = Column(String(255), nullable=True)
     notes = Column(Text, nullable=True)
     is_active = Column(Integer, nullable=False, default=1)
+    learning_started_at = Column(DateTime, nullable=True)
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
     updated_at = Column(DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
 

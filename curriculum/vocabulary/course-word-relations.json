@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "description": "CL课程与公共词汇库之间的关联记录。同一个公共词汇可以关联多节课程。",
+  "relation_types": [
+    "introduced",
+    "reinforced",
+    "reviewed"
+  ],
+  "relations": []
+}
