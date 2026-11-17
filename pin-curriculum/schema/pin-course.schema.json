@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chinese-learning.local/pin/v2.2/schema/pin-course.schema.json",
+  "title": "PIN Course",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "courseId",
+    "schemaVersion",
+    "title",
+    "contentStatus",
+    "acceptanceStatus",
+    "sourceReference",
+    "learningObjectives",
+    "teachingContent",
+    "atlasReferences",
+    "localizedContent",
+    "exerciseReferences",
+    "teacherNotes",
+    "review"
+  ],
+  "properties": {
+    "courseId": {
+      "type": "string",
+      "pattern": "^PIN-(0[1-9]|1[0-9])$"
+    },
+    "schemaVersion": {
+      "const": "2.2.0"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contentStatus": {
+      "enum": [
+        "not_imported",
+        "draft",
+        "in_review",
+        "approved"
+      ]
+    },
+    "acceptanceStatus": {
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected"
+      ]
+    },
+    "sourceReference": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "sourceType"
+      ],
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceType": {
+          "enum": [
+            "pinyin_town_atlas",
+            "teacher_material",
+            "other"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "learningObjectives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "teachingContent": {
+      "type": "object"
+    },
+    "atlasReferences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^ATLAS-[0-9]{5,}$"
+      }
+    },
+    "localizedContent": {
+      "anyOf": [
+        {
+          "$ref": "translation.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "exerciseReferences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^EX-PIN-(0[1-9]|1[0-9])-[0-9]{3,}$"
+      }
+    },
+    "teacherNotes": {
+      "type": "string"
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "firstRoundReview",
+        "crossCourseReview",
+        "atlasReview",
+        "languageReview"
+      ],
+      "properties": {
+        "firstRoundReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "reviewedAt",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "completed"
+              ]
+            },
+            "reviewedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "crossCourseReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "reviewedAt",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "completed"
+              ]
+            },
+            "reviewedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "atlasReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "reviewedAt",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "completed"
+              ]
+            },
+            "reviewedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "languageReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "reviewedAt",
+            "notes"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "completed"
+              ]
+            },
+            "reviewedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "contentStatus": {
+            "const": "not_imported"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "localizedContent": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "contentStatus": {
+            "enum": [
+              "draft",
+              "in_review",
+              "approved"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "localizedContent": {
+            "$ref": "translation.schema.json"
+          }
+        }
+      }
+    }
+  ]
+}

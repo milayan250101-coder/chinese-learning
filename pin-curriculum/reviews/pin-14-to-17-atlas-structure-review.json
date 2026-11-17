@@ -1,0 +1,58 @@
+{
+  "documentType": "PIN_14_TO_17_ATLAS_STRUCTURE_DEPENDENCY_REVIEW",
+  "schemaVersion": "2.2.0",
+  "asOf": "2026-11-17",
+  "status": "structural_mapping_completed_textual_verification_pending",
+  "sourceCounts": {
+    "atlasVocabularyOccurrences": 92,
+    "syllableOccurrences": 192,
+    "distinctToneStrippedSyllableSpellings": 122,
+    "candidateMedialStructureOccurrences": 30,
+    "wholeSyllableRecognitionOccurrences": 31,
+    "wholeSyllableRecognitionDistinctTypes": 13,
+    "consonantInitialMedialStructureOccurrences": 22,
+    "zeroInitialYWMedialSpellingOccurrences": 8,
+    "atlasSlidesIndexed": 14,
+    "uniqueHanziLabels": 90,
+    "medialFinalCombinationFormTypesNotExplicitlyListedInPIN07to13": 10,
+    "medialFinalCombinationOccurrencesNotExplicitlyListedInPIN07to13": 30
+  },
+  "keyFindings": [
+    {
+      "id": "PIN14_TWO_PART",
+      "finding": "Atlas has many consonant + listed final combinations that should be traceable to PIN-14; the current package does not contain the PIN-14 lesson body, so examples cannot be confirmed as taught."
+    },
+    {
+      "id": "PIN15_MEDIAL_COMBINATIONS",
+      "finding": "Atlas includes medial-bearing compound-final forms (for example tiān=t+i+an, miàn=m+i+an, jiào=j+i+ao, liǎng=l+i+ang, huá=h+u+a, duān=d+u+an, xióng=x+i+ong, yuǎn=zero-initial y-spelling of üan). These are structural coverage checks, not additional independent basic finals; confirm against the author’s PIN-14/15 model."
+    },
+    {
+      "id": "PIN17_ZERO_INITIAL_AND_ABBREVIATION",
+      "finding": "Atlas forms with y/w zero-initial spelling and iu/ui/un abbreviations require consistent treatment in PIN-17; do not treat the orthographic y/w as ordinary consonant initials."
+    },
+    {
+      "id": "PIN16_WHOLE_SYLLABLES",
+      "finding": "Atlas occurrences intersect the conventional 16-item whole-syllable set; see exact list and matched occurrences in atlas-phonetic-coverage.json."
+    },
+    {
+      "id": "NO_AUTOMATIC_GAP_VERDICT",
+      "finding": "A medial-bearing compound-final spelling not explicitly enumerated in PIN-07—13 titles is not automatically a curriculum omission; it may be taught through PIN-14/15 combinations or PIN-17 spelling rules."
+    }
+  ],
+  "mustVerifyWhenCourseTextIsAvailable": [
+    "Does PIN-14 explicitly define two-part syllables as initial + final, including finals already taught in PIN-07—13?",
+    "Does PIN-15 explicitly define the medial and final components, with examples matching the course author’s intended classification?",
+    "Are Atlas syllables such as tiān, miàn, jiǎn, liǎng, jiào, xiǎo, niǎo, xióng, huá, guā, huā, duān, ruǎn, wàng, wéi, wò, luó, huǒ, guō, zhuō, zuó, luò and yuǎn accounted for without inventing new curriculum?",
+    "Does PIN-17 explain zero-initial y/w spelling and the iu/iou, ui/uei, un/uen abbreviations?",
+    "Does PIN-17 consistently explain ü spelling after j/q/x and in yu/yue/yuan/yun forms?",
+    "Does PIN-16 contain the agreed 16-item set and align with PIN-05/PIN-06/PIN-17?"
+  ],
+  "acceptance": "No course is marked accepted; this is an outline-level dependency audit only.",
+  "taxonomyClarification": {
+    "status": "clarified",
+    "note": "The ten forms are medial-bearing compound-final forms / spelling patterns, not ten additional independent basic finals. They are coverage checks, not confirmed omissions.",
+    "count": "10 forms / 30 Atlas syllable occurrences",
+    "breakdown": "22 consonant-initial medial structures and 8 zero-initial y/w orthographic forms",
+    "courseTextRequired": true
+  }
+}

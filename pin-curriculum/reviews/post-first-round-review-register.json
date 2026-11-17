@@ -1,0 +1,127 @@
+{
+  "project": "Chinese Learning",
+  "curriculum": "PIN",
+  "schemaVersion": "2.2.0",
+  "asOf": "2026-11-17",
+  "firstRoundReview": {
+    "status": "completed",
+    "completedCourses": 19,
+    "totalCourses": 19,
+    "pendingCourses": 0,
+    "note": "PIN-02 is included as completed; do not revert to 18/19."
+  },
+  "remainingFourReviews": [
+    {
+      "id": "systematicCourseAudit",
+      "label": "逐课系统审校",
+      "status": "in_progress",
+      "completedCourses": 0,
+      "totalCourses": 19,
+      "confirmedIssues": [
+        "PIN-01: b/p aspiration wording consistency",
+        "PIN-02: d/t aspiration and n/l airflow wording consistency",
+        "PIN-03: g/k aspiration wording consistency",
+        "PIN-04: foreign-language sound comparisons must be approximate",
+        "PIN-05: do not invent examples; check zi/ci/si classification",
+        "PIN-07: single-final classification issue recorded",
+        "PIN-11: distinguish independent er from erhua",
+        "PIN-12: explain un as uen abbreviation and distinguish ün from u",
+        "PIN-13: velar nasal [ŋ] is one nasal sound; do not add a released [g]",
+        "PIN-15: add miàn = m + i + an",
+        "PIN-17: use 气球, not 汽球, when referring to Atlas item",
+        "PIN-18: tone-rule examples are not automatically Atlas vocabulary",
+        "PIN-19: check rì classification, 睡觉 shuì jiào, and 火锅 two-part syllable analysis"
+      ],
+      "blockingNote": "The 19 complete lesson source files are not present in the current v2.2 package; this is a consolidated issue register, not a fresh full-text sign-off."
+    },
+    {
+      "id": "sixLanguageReview",
+      "label": "六语整体核对",
+      "status": "in_progress",
+      "completedCourses": 0,
+      "totalCourses": 19,
+      "confirmedIssues": [
+        "Localization standard covers zh/en/de/fr/es/it, while the schema uses zh-CN for Chinese; define the canonical zh to zh-CN mapping consistently.",
+        "The standard itself records PIN-01—PIN-19 six-language content as not yet completed.",
+        "English term “whole-syllable recognition syllable” is redundant/unnatural; flag for editorial decision.",
+        "German “ganzheitlich zu erkennende Silbe” is literal and should be reviewed for natural pedagogical terminology.",
+        "“Alveolar consonant” is phonologically valid but broader than the specific z/c/s group when used as the PIN-05 teaching label; clarify whether the intended category is alveolar sibilants."
+      ],
+      "blockingNote": "17 terminology records have received a preliminary terminology-level review, but no full six-language PIN-01—PIN-19 lesson text is present; course-by-course translation quality cannot be signed off.",
+      "userConfirmedNoIssue": [
+        "Atlas 的“下雨 / 雨”英文释义 “rain / it rains” 正确。",
+        "Atlas 的“婆婆”英文释义 “grandma / mother-in-law” 正确。"
+      ],
+      "terminologyAudit": {
+        "file": "six-language-terminology-audit.json",
+        "termsReviewed": 17,
+        "editorialFlags": [
+          "English: whole-syllable recognition syllable is redundant/unnatural.",
+          "German: ganzheitlich zu erkennende Silbe is overly literal; review a more natural teaching phrase.",
+          "German: Endlaut needs contextual review as the translation of 韵母.",
+          "介音 translations require consistency with the PIN-14/15 structural definitions.",
+          "平舌音: alveolar consonant is a broader category than the specific z/c/s sibilants; confirm intended scope."
+        ],
+        "languageKeyMapping": "zh in the source standard maps to zh-CN in Schema; en/de/fr/es/it remain unchanged.",
+        "pronunciationRulesAudit": "six-language-pronunciation-rules-audit.json: 7 rules / 42 language text fields checked; 42 present; 7 conceptual alignment checks aligned; full-course/native proofreading pending."
+      }
+    },
+    {
+      "id": "atlasSourceVerification",
+      "label": "Atlas 原稿逐项核对",
+      "status": "in_progress",
+      "sourceSlidesReviewed": 14,
+      "sourceVocabularyOccurrencesIndexed": 92,
+      "sourceFlags": [
+        "Slide 5: 哈哈哈哈 has four Chinese characters but the displayed pinyin is hā hā hā (three syllables); preserve and flag without editing the source.",
+        "Slide 10: 足球 appears twice; retain both as distinct source positions.",
+        "Slide 12: 剪刀 appears twice; retain both as distinct source positions."
+      ],
+      "blockingNote": "The Atlas source inventory and syllable-structure mapping are indexed. Exact mapping to taught course content and review of all course translations remain pending because course bodies are not imported.",
+      "userConfirmedItems": [
+        "Slide 2: 下雨 / 雨 — 英文释义 rain / it rains，经用户确认无误。",
+        "Slide 3: 婆婆 — 英文释义 grandma / mother-in-law，经用户确认无误。"
+      ],
+      "phoneticCoverageAudit": {
+        "file": "atlas-phonetic-coverage.json",
+        "syllableOccurrences": 192,
+        "distinctToneStrippedSyllableSpellings": 122,
+        "status": "structural_mapping_completed_textual_verification_pending",
+        "candidateMedialStructureOccurrences": 30,
+        "consonantInitialMedialStructureOccurrences": 22,
+        "zeroInitialYWMedialSpellingOccurrences": 8,
+        "taxonomyClarification": "The ten forms formerly labelled extended finals are medial-bearing compound-final forms / spelling patterns, not ten independent basic finals and not confirmed omissions."
+      }
+    },
+    {
+      "id": "crossCourseConsistency",
+      "label": "跨课程一致性检查",
+      "status": "in_progress",
+      "confirmedChecks": [
+        "The high-level sequence is coherent: PIN-01—06 initials; PIN-07—13 finals; PIN-14—16 syllable construction and whole-syllable recognition; PIN-17 spelling; PIN-18 tones; PIN-19 synthesis.",
+        "PIN-05 and PIN-16 must agree on zi/ci/si and the 16 whole-syllable-recognition syllables.",
+        "PIN-10/PIN-12/PIN-17 must use consistent ü and spelling-rule explanations.",
+        "PIN-14/PIN-15 must distinguish two-part from three-part syllables; miàn is m + i + an.",
+        "PIN-16/PIN-17 must align the 16 whole-syllable-recognition set with spelling rules.",
+        "PIN-18/PIN-19 must distinguish tone-rule demonstration examples from Atlas vocabulary.",
+        "PIN-19 must use Atlas source pinyin 睡觉 shuì jiào and treat each syllable in 火锅 huǒ guō as an initial-plus-final (two-part) syllable.",
+        "Revised syllable-structure audit distinguishes 192 source syllable occurrences, 122 distinct tone-stripped spellings, zero-initial y/w orthography, j/q/x + u -> ü, iu/ui/un abbreviations, apical i, and candidate medial structures.",
+        "Atlas intersects 13 of the conventional 16 whole-syllable-recognition types, across 31 occurrences; see atlas-phonetic-coverage.json for exact source positions.",
+        "The 10 forms previously labelled extended finals have been reclassified in the audit as medial-bearing compound-final forms / orthographic patterns; this avoids implying ten extra basic finals or a confirmed curriculum gap.",
+        "A dedicated PIN-17 Atlas spelling-rule matrix now maps iu→iou (5 occurrences), ui→uei (3), written un (4), j/q/x + u-family→ü-family (5), zero-initial y/w spellings (21), and apical i after z/c/s/zh/ch/sh/r (19); course-text teaching remains unverified."
+      ],
+      "blockingNote": "Structural mapping is completed at outline level. Full text-to-text comparison and pedagogical classification still require the original PIN-14—PIN-17 course bodies.",
+      "dependencyAuditFile": "pin-14-to-17-atlas-structure-review.json",
+      "potentialCoverageChecks": [
+        "Atlas contains 10 medial-bearing compound-final forms not explicitly enumerated in PIN-07—13 titles (ia, ian, iang, iao, iong, ua, uan, uang, uo, üan), across 30 occurrences. These are coverage checks, not independent new basic finals and not confirmed omissions. Verify the author’s PIN-14/15 structure model and PIN-17 spelling rules against the course text."
+      ],
+      "spellingRulesAuditFile": "pin-17-atlas-spelling-rules-audit.json"
+    }
+  ],
+  "formalAcceptance": {
+    "status": "not_started",
+    "acceptedCourses": 0,
+    "totalCourses": 19,
+    "rule": "A course may be accepted only after its systematic audit, cross-course review, Atlas review and six-language review are completed and its content is imported/approved."
+  }
+}

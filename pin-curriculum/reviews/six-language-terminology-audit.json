@@ -1,0 +1,369 @@
+{
+  "documentType": "PIN_SIX_LANGUAGE_TERMINOLOGY_REVIEW",
+  "schemaVersion": "2.2.0",
+  "sourceDocument": "PIN-six-language-localization-standard.json",
+  "sourceStatus": {
+    "terminology_standard": "drafted",
+    "pronunciation_localization_rules": "drafted",
+    "pin_01_to_pin_19_six_language_content": "not_yet_completed",
+    "full_course_json": "not_yet_generated",
+    "final_validation": "not_started"
+  },
+  "languageKeyMapping": {
+    "sourceStandard": "zh",
+    "schemaLocale": "zh-CN",
+    "mapping": "zh -> zh-CN",
+    "otherLocales": "en/de/fr/es/it retain the same keys",
+    "rule": "Do not store both zh and zh-CN as duplicate Chinese language entries in one course; normalize to zh-CN when writing course JSON."
+  },
+  "scope": {
+    "reviewed": "17 terminology records in the six-language standard",
+    "notReviewed": "Full lesson prose, examples, exercise instructions, answer keys, and all 19 course translations because those course bodies are not imported."
+  },
+  "summary": {
+    "terminologyRecordsReviewed": 17,
+    "editorialRevisionRecommended": 1,
+    "contextualOrConceptualChecks": 3,
+    "provisionalNoObviousIssue": 13,
+    "courseLanguageSignoff": "not_completed"
+  },
+  "items": [
+    {
+      "id": "initial_consonant",
+      "sourceTerms": {
+        "id": "initial_consonant",
+        "zh": "声母",
+        "en": "initial consonant",
+        "de": "Anfangskonsonant",
+        "fr": "consonne initiale",
+        "es": "consonante inicial",
+        "it": "consonante iniziale"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "final",
+      "sourceTerms": {
+        "id": "final",
+        "zh": "韵母",
+        "en": "final",
+        "de": "Endlaut",
+        "fr": "finale",
+        "es": "final",
+        "it": "finale"
+      },
+      "reviewStatus": "contextual_terminology_check",
+      "reviewNote": "德语 “Endlaut” 可能被理解为词末音/词尾音；用于汉语拼音韵母时建议在首次出现处标注 “Finale (韵母)” 或提供明确定义，再决定是否保留 Endlaut。其他语言也应保持 initial/final 成对术语一致。",
+      "editorialRecommendations": {
+        "de": [
+          "Finale",
+          "Endlaut (im Pinyin-Silbenaufbau)"
+        ],
+        "decisionNote": "不直接替换源术语，需结合德语课程全文决定。"
+      }
+    },
+    {
+      "id": "syllable",
+      "sourceTerms": {
+        "id": "syllable",
+        "zh": "音节",
+        "en": "syllable",
+        "de": "Silbe",
+        "fr": "syllabe",
+        "es": "sílaba",
+        "it": "sillaba"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "simple_final",
+      "sourceTerms": {
+        "id": "simple_final",
+        "zh": "单韵母",
+        "en": "simple final",
+        "de": "einfacher Endlaut",
+        "fr": "finale simple",
+        "es": "final simple",
+        "it": "finale semplice"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "compound_final",
+      "sourceTerms": {
+        "id": "compound_final",
+        "zh": "复韵母",
+        "en": "compound final",
+        "de": "zusammengesetzter Endlaut",
+        "fr": "finale composée",
+        "es": "final compuesto",
+        "it": "finale composta"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "front_nasal_final",
+      "sourceTerms": {
+        "id": "front_nasal_final",
+        "zh": "前鼻韵母",
+        "en": "front-nasal final",
+        "de": "vorderer Nasalendlaut",
+        "fr": "finale nasale antérieure",
+        "es": "final nasal anterior",
+        "it": "finale nasale anteriore"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "back_nasal_final",
+      "sourceTerms": {
+        "id": "back_nasal_final",
+        "zh": "后鼻韵母",
+        "en": "back-nasal final",
+        "de": "hinterer Nasalendlaut",
+        "fr": "finale nasale postérieure",
+        "es": "final nasal posterior",
+        "it": "finale nasale posteriore"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "tone",
+      "sourceTerms": {
+        "id": "tone",
+        "zh": "声调",
+        "en": "tone",
+        "de": "Ton",
+        "fr": "ton",
+        "es": "tono",
+        "it": "tono"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "neutral_tone",
+      "sourceTerms": {
+        "id": "neutral_tone",
+        "zh": "轻声",
+        "en": "neutral tone",
+        "de": "neutraler Ton",
+        "fr": "ton neutre",
+        "es": "tono neutro",
+        "it": "tono neutro"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "aspiration",
+      "sourceTerms": {
+        "id": "aspiration",
+        "zh": "送气",
+        "en": "aspiration",
+        "de": "Behauchung",
+        "fr": "aspiration",
+        "es": "aspiración",
+        "it": "aspirazione"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "unaspirated",
+      "sourceTerms": {
+        "id": "unaspirated",
+        "zh": "不送气",
+        "en": "unaspirated",
+        "de": "unbehaucht",
+        "fr": "non aspiré",
+        "es": "no aspirado",
+        "it": "non aspirato"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "whole_syllable_recognition",
+      "sourceTerms": {
+        "id": "whole_syllable_recognition",
+        "zh": "整体认读音节",
+        "en": "whole-syllable recognition syllable",
+        "de": "ganzheitlich zu erkennende Silbe",
+        "fr": "syllabe à reconnaître globalement",
+        "es": "sílaba de reconocimiento global",
+        "it": "sillaba da riconoscere globalmente"
+      },
+      "reviewStatus": "editorial_revision_recommended",
+      "reviewNote": "英语表达 “whole-syllable recognition syllable” 重复使用 syllable，英语不自然；德语表达过于逐字直译。其余四语暂未发现同等级别的明显问题。",
+      "editorialRecommendations": {
+        "en": [
+          "whole-syllable recognition unit",
+          "syllable learned as a whole"
+        ],
+        "de": [
+          "Silbe, die als Ganzes gelernt wird",
+          "als Ganzes zu erkennende Silbe"
+        ],
+        "decisionNote": "若作为课程标题/术语标签，优先选简洁且适合初学者的表达；若作为定义句，可用第二种解释式表达。最终术语需由课程作者确认。"
+      }
+    },
+    {
+      "id": "zero_initial",
+      "sourceTerms": {
+        "id": "zero_initial",
+        "zh": "零声母",
+        "en": "zero initial",
+        "de": "Nullanlaut",
+        "fr": "initiale zéro",
+        "es": "inicial cero",
+        "it": "iniziale zero"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "tone_sandhi",
+      "sourceTerms": {
+        "id": "tone_sandhi",
+        "zh": "变调",
+        "en": "tone sandhi",
+        "de": "Tonveränderung",
+        "fr": "modification tonale",
+        "es": "cambio tonal",
+        "it": "modifica tonale"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "retroflex",
+      "sourceTerms": {
+        "id": "retroflex",
+        "zh": "翘舌音",
+        "en": "retroflex consonant",
+        "de": "retroflexer Konsonant",
+        "fr": "consonne rétroflexe",
+        "es": "consonante retrofleja",
+        "it": "consonante retroflessa"
+      },
+      "reviewStatus": "provisional_review_no_obvious_issue",
+      "reviewNote": "术语表层面暂未发现明显错误；仍需结合各课完整句子、图示、练习指令与教学语境复核。",
+      "editorialRecommendations": null
+    },
+    {
+      "id": "alveolar",
+      "sourceTerms": {
+        "id": "alveolar",
+        "zh": "平舌音",
+        "en": "alveolar consonant",
+        "de": "alveolarer Konsonant",
+        "fr": "consonne alvéolaire",
+        "es": "consonante alveolar",
+        "it": "consonante alveolare"
+      },
+      "reviewStatus": "contextual_scope_check",
+      "reviewNote": "“Alveolar consonant” 在音系学上可成立，但范围比 PIN-05 中 z/c/s 这组具体的平舌擦音/塞擦音更宽。若该术语专指 z、c、s，可考虑在教学标签中使用 “alveolar sibilants” 一类更具体的表达；若是讲发音部位的大类，则保留 alveolar consonant 并在定义中限定范围。六语课程需采用同一分类层级。",
+      "editorialRecommendations": {
+        "en": [
+          "alveolar sibilants",
+          "alveolar consonants (when naming the broader place-of-articulation class)"
+        ],
+        "de": [
+          "alveolare Zischlaute",
+          "alveolare Konsonanten (für die allgemeinere Artikulationsort-Kategorie)"
+        ],
+        "fr": [
+          "consonnes sifflantes alvéolaires",
+          "consonnes alvéolaires (pour la catégorie générale du lieu d’articulation)"
+        ],
+        "es": [
+          "sibilantes alveolares",
+          "consonantes alveolares (para la categoría general del lugar de articulación)"
+        ],
+        "it": [
+          "sibilanti alveolari",
+          "consonanti alveolari (per la categoria generale del luogo di articolazione)"
+        ],
+        "decisionNote": "不修改源术语；先确认该标签指具体的 z/c/s 组，还是泛指发音部位。"
+      }
+    },
+    {
+      "id": "medial",
+      "sourceTerms": {
+        "id": "medial",
+        "zh": "介音",
+        "en": "medial glide",
+        "de": "Gleitlaut",
+        "fr": "semi-voyelle médiane",
+        "es": "semivocal medial",
+        "it": "semivocale mediana"
+      },
+      "reviewStatus": "conceptual_scope_check",
+      "reviewNote": "“介音”译为 glide/半元音有助于入门，但需确认课程对介音的定义与例子是否一致；不要让某一语言的术语暗示所有结构都只能按单一音值解释。",
+      "editorialRecommendations": {
+        "en": [
+          "medial",
+          "medial glide"
+        ],
+        "de": [
+          "Gleitlaut (als介音)",
+          "Medial"
+        ],
+        "fr": [
+          "semi-voyelle médiane"
+        ],
+        "es": [
+          "semivocal medial"
+        ],
+        "it": [
+          "semivocale mediana"
+        ],
+        "decisionNote": "术语本身暂不判错，重点是六语定义、结构图和 PIN-14/15 拆分方式一致。"
+      }
+    }
+  ],
+  "userConfirmedAtlasTranslations": [
+    {
+      "atlasOccurrenceId": "ATLAS-S02-03",
+      "sourceMeaning": "rain / it rains",
+      "status": "confirmed_correct_by_user",
+      "mustNotReopenAsIssue": true
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-04",
+      "sourceMeaning": "grandma / mother-in-law",
+      "status": "confirmed_correct_by_user",
+      "mustNotReopenAsIssue": true
+    }
+  ],
+  "conclusion": "This is a terminology-standard review only. It does not complete the six-language review of PIN-01—PIN-19 and does not authorize changing the authoritative Atlas source.",
+  "additionalScopeNote": "本轮将 alveolar 的术语范围列为语境核对：术语在音系学上并非错误，但作为 PIN-05 的 z/c/s 教学标签时，可能需要更精确地指向 alveolar sibilants。",
+  "pronunciationRulesAudit": {
+    "file": "six-language-pronunciation-rules-audit.json",
+    "rulesReviewed": 7,
+    "languageTextFieldsExpected": 42,
+    "languageTextFieldsPresent": 42,
+    "missingFields": 0,
+    "conceptualAlignmentChecks": "7/7 aligned",
+    "nativeCourseSignoff": "pending"
+  }
+}

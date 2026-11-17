@@ -1,0 +1,171 @@
+{
+  "documentType": "PIN_SIX_LANGUAGE_PRONUNCIATION_RULES_AUDIT",
+  "schemaVersion": "2.2.0",
+  "sourceDocument": "PIN-six-language-localization-standard.json",
+  "asOf": "2026-11-17",
+  "scope": {
+    "rulesReviewed": 7,
+    "requiredLanguages": [
+      "zh",
+      "en",
+      "de",
+      "fr",
+      "es",
+      "it"
+    ],
+    "expectedRuleTextFields": 42
+  },
+  "coverage": {
+    "presentRuleTextFields": 42,
+    "missingRuleTextFields": [],
+    "allSevenRulesHaveAllSixLanguages": true
+  },
+  "items": [
+    {
+      "topic": "b_p_d_t_g_k",
+      "status": "all_six_language_fields_present",
+      "missingLocales": [],
+      "languageTexts": {
+        "zh": "普通话 b/p、d/t、g/k 的核心区别是送气与不送气，不应解释成英语式清浊音对立。",
+        "en": "Explain the Mandarin contrast primarily as unaspirated versus aspirated, not as an English-style voiced–voiceless contrast.",
+        "de": "Den Gegensatz im Hochchinesischen vor allem als unbehaucht gegenüber behaucht erklären, nicht als Gegensatz stimmhaft–stimmlos.",
+        "fr": "Présenter principalement l’opposition du mandarin comme non aspirée versus aspirée, et non comme une opposition sonore–sourde à la française.",
+        "es": "Explicar la oposición del mandarín principalmente como no aspirada frente a aspirada, no como una oposición de sonoridad.",
+        "it": "Spiegare il contrasto del mandarino principalmente come non aspirato rispetto ad aspirato, non come opposizione tra consonanti sonore e sorde."
+      }
+    },
+    {
+      "topic": "j_q_x",
+      "status": "all_six_language_fields_present",
+      "missingLocales": [],
+      "languageTexts": {
+        "zh": "说明舌面前部接近硬腭前部；外语参照音只能作为近似，不能说完全相同。",
+        "en": "Describe the front of the tongue approaching the front hard palate; foreign-language examples are approximations, never exact equivalents.",
+        "de": "Beschreiben, wie sich der vordere Zungenrücken dem vorderen harten Gaumen nähert; fremdsprachige Vergleichslaute sind nur Annäherungen.",
+        "fr": "Décrire l’approche de la partie antérieure de la langue vers l’avant du palais dur ; les sons comparatifs ne sont qu’approximatifs.",
+        "es": "Describir cómo la parte anterior del dorso de la lengua se acerca a la zona anterior del paladar duro; los sonidos de otras lenguas son aproximaciones.",
+        "it": "Descrivere l’avvicinamento della parte anteriore del dorso della lingua alla zona anteriore del palato duro; i suoni di confronto sono solo approssimativi."
+      }
+    },
+    {
+      "topic": "zh_ch_sh_r",
+      "status": "all_six_language_fields_present",
+      "missingLocales": [],
+      "languageTexts": {
+        "zh": "说明舌尖后缩的发音特点，不要求夸张卷舌；r 的音值可随描述体系说明。",
+        "en": "Explain the retracted tongue-tip articulation without asking learners to curl the tongue excessively; describe Mandarin r with appropriate phonetic nuance.",
+        "de": "Die zurückgezogene Zungenspitze erklären, ohne übertriebenes Einrollen zu verlangen; den Lautwert von r phonetisch differenziert beschreiben.",
+        "fr": "Expliquer le recul de la pointe de la langue sans demander une rétroflexion exagérée ; décrire r avec les nuances phonétiques nécessaires.",
+        "es": "Explicar la retracción de la punta de la lengua sin exigir una curvatura exagerada; describir r con los matices fonéticos adecuados.",
+        "it": "Spiegare la retrazione della punta della lingua senza richiedere un incurvamento eccessivo; descrivere r con le opportune precisazioni fonetiche."
+      }
+    },
+    {
+      "topic": "an_en_in_un_un_diaeresis",
+      "status": "all_six_language_fields_present",
+      "missingLocales": [],
+      "languageTexts": {
+        "zh": "前鼻韵母以舌尖鼻音 [n] 收尾；注意 un 是 uen 的缩写，ün 与 u 区分。",
+        "en": "Front-nasal finals end in the alveolar nasal [n]. Note that un abbreviates uen and that ün contrasts with u.",
+        "de": "Vordere Nasalendlaute enden mit dem alveolaren Nasal [n]. Un ist die Kurzschreibung von uen; ün ist von u zu unterscheiden.",
+        "fr": "Les finales nasales antérieures se terminent par la nasale alvéolaire [n]. Un est l’abréviation de uen et ün se distingue de u.",
+        "es": "Las finales nasales anteriores terminan en la nasal alveolar [n]. Un es la forma abreviada de uen y ün se distingue de u.",
+        "it": "Le finali nasali anteriori terminano con la nasale alveolare [n]. Un è l’abbreviazione di uen e ün va distinto da u."
+      }
+    },
+    {
+      "topic": "ang_eng_ing_ong",
+      "status": "all_six_language_fields_present",
+      "missingLocales": [],
+      "languageTexts": {
+        "zh": "后鼻韵母以软腭鼻音 [ŋ] 收尾，ng 是一个鼻音，不额外释放 [g]。",
+        "en": "Back-nasal finals end in the velar nasal [ŋ]. The sequence ng represents one nasal sound; do not release an extra [g].",
+        "de": "Hintere Nasalendlaute enden mit dem velaren Nasal [ŋ]. Ng steht für einen Nasal-Laut; es wird kein zusätzliches [g] freigesetzt.",
+        "fr": "Les finales nasales postérieures se terminent par la nasale vélaire [ŋ]. Ng représente une seule consonne nasale, sans [g] supplémentaire.",
+        "es": "Las finales nasales posteriores terminan en la nasal velar [ŋ]. Ng representa un solo sonido nasal; no se añade una [g] final.",
+        "it": "Le finali nasali posteriori terminano con la nasale velare [ŋ]. Ng rappresenta un unico suono nasale, senza aggiungere una [g]."
+      }
+    },
+    {
+      "topic": "er",
+      "status": "all_six_language_fields_present",
+      "missingLocales": [],
+      "languageTexts": {
+        "zh": "er 是普通话卷舌元音，不等于英语字母 R；区分独立 er 音节与儿化。",
+        "en": "Er is a Mandarin rhotic vowel, not the English letter name or sound R. Distinguish the independent syllable er from erhua.",
+        "de": "Er ist ein retroflex gefärbter Vokal im Mandarin und nicht mit dem deutschen oder englischen R gleichzusetzen. Die eigenständige Silbe er vom Erhua unterscheiden.",
+        "fr": "Er est une voyelle rhotique du mandarin, et non le son de la lettre R en français. Distinguer la syllabe autonome er du phénomène erhua.",
+        "es": "Er es una vocal rótica del mandarín, no el sonido de la letra r en español. Distinguir la sílaba independiente er del fenómeno erhua.",
+        "it": "Er è una vocale rotica del mandarino, non il suono della lettera r in italiano. Distinguere la sillaba autonoma er dal fenomeno erhua."
+      }
+    },
+    {
+      "topic": "tones",
+      "status": "all_six_language_fields_present",
+      "missingLocales": [],
+      "languageTexts": {
+        "zh": "声调是词汇意义的一部分；说明调值、调型和变调，不能只描述成语气变化。",
+        "en": "Tone is part of lexical meaning. Teach pitch contour, tone category and tone changes; do not reduce tones to intonation.",
+        "de": "Der Ton gehört zur lexikalischen Bedeutung. Tonhöhe, Tonverlauf und Tonveränderungen erklären, nicht nur Satzintonation.",
+        "fr": "Le ton fait partie du sens lexical. Enseigner la hauteur, le contour tonal et les changements de ton, sans les réduire à l’intonation.",
+        "es": "El tono forma parte del significado léxico. Enseñar la altura, el contorno tonal y los cambios tonales, sin reducirlos a la entonación.",
+        "it": "Il tono fa parte del significato lessicale. Insegnare altezza, andamento e modifiche tonali, senza ridurli all’intonazione."
+      }
+    }
+  ],
+  "editorialFollowUps": [
+    {
+      "topic": "an_en_in_un_un_diaeresis",
+      "languages": [
+        "en",
+        "de"
+      ],
+      "note": "“front-nasal finals” and “vordere Nasalendlaute” are understandable but somewhat literal. Consider an explanatory first-use gloss such as “finals ending in [n]” / “Finalen mit [n]”; do not change the authoritative standard without author approval."
+    },
+    {
+      "topic": "er",
+      "languages": [
+        "de"
+      ],
+      "note": "“retroflex gefärbter Vokal” is understandable. For terminological consistency with the English/French/Spanish/Italian “rhotic vowel” wording, consider whether “rhotischer Vokal” is preferable in the German course; retain the distinction from erhua."
+    }
+  ],
+  "contentAlignmentChecks": [
+    {
+      "topic": "b_p_d_t_g_k",
+      "check": "All six languages frame the contrast as aspirated vs. unaspirated, not voiced vs. voiceless.",
+      "result": "aligned"
+    },
+    {
+      "topic": "j_q_x",
+      "check": "All six languages describe foreign-language comparisons as approximations, not exact equivalents.",
+      "result": "aligned"
+    },
+    {
+      "topic": "zh_ch_sh_r",
+      "check": "All six languages avoid exaggerated tongue curling and allow phonetic nuance for r.",
+      "result": "aligned"
+    },
+    {
+      "topic": "an_en_in_un_un_diaeresis",
+      "check": "All six languages mention [n], un as uen abbreviation, and the ü/u distinction.",
+      "result": "aligned"
+    },
+    {
+      "topic": "ang_eng_ing_ong",
+      "check": "All six languages identify [ŋ] as one nasal sound and reject an extra released [g].",
+      "result": "aligned"
+    },
+    {
+      "topic": "er",
+      "check": "All six languages distinguish the independent er syllable from erhua.",
+      "result": "aligned"
+    },
+    {
+      "topic": "tones",
+      "check": "All six languages treat tone as lexical and distinguish tone contour/change from sentence intonation.",
+      "result": "aligned"
+    }
+  ],
+  "limits": "This checks field completeness and conceptual alignment in the seven-rule localization standard only. It is not native-speaker proofreading of full PIN course prose, example words, exercises, or answer keys; the complete PIN-01—PIN-19 course texts remain absent."
+}
