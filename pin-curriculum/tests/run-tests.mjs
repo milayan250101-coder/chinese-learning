@@ -41,5 +41,29 @@ cases.push(['T24',p=>{const c=read(p,'data/courses/pin-01.json');c.acceptanceSta
 cases.push(['T25',p=>{const m=read(p,'data/manifest.json');m.courses[0].contentStatus='approved';m.courses[0].acceptanceStatus='accepted';m.stats.importedCourses=1;m.stats.approvedCourses=1;write(p,'data/manifest.json',m);expectCode(p,'PIN_MANIFEST_APPROVAL_INCOMPLETE');}]);
 cases.push(['T26',p=>{const c=read(p,'data/courses/pin-01.json');delete c.acceptanceStatus;write(p,'data/courses/pin-01.json',c);expectCode(p,'PIN_SCHEMA_VALIDATION_FAILED');}]);
 cases.push(['T27',p=>{const c=read(p,'data/courses/pin-02.json');c.review.firstRoundReview.status='pending';c.review.firstRoundReview.reviewedAt='2026-11-17T00:00:00Z';write(p,'data/courses/pin-02.json',c);expectCode(p,'PIN_REVIEW_TIMESTAMP_INVALID');}]);
+
+cases.push(['T28',p=>{
+  const c=read(p,'data/courses/pin-01.json');
+  c.contentStatus='approved';
+  c.acceptanceStatus='accepted';
+  c.localizedContent=validTranslation();
+  write(p,'data/courses/pin-01.json',c);
+  expectCode(p,'PIN_SCHEMA_VALIDATION_FAILED');
+}]);
+
+cases.push(['T29',p=>{
+  const c=read(p,'data/courses/pin-01.json');
+  c.contentStatus='draft';
+  c.acceptanceStatus='accepted';
+  c.localizedContent=validTranslation();
+  write(p,'data/courses/pin-01.json',c);
+  const m=read(p,'data/manifest.json');
+  m.courses[0].contentStatus='draft';
+  m.courses[0].acceptanceStatus='accepted';
+  m.stats.importedCourses=1;
+  write(p,'data/manifest.json',m);
+  expectCode(p,'PIN_SCHEMA_VALIDATION_FAILED');
+}]);
+
 for(const [name,fn] of cases){const p=project(name);test(name,()=>fn(p));}
 console.log(JSON.stringify({suite:'PIN v2.2 regression tests',total:cases.length,passed,failed,results},null,2));fs.rmSync(tmp,{recursive:true,force:true});if(failed)process.exitCode=1;

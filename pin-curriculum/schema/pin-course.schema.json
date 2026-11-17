@@ -269,6 +269,70 @@
           }
         }
       }
+    },
+    {
+      "if": {
+        "properties": {
+          "contentStatus": {
+            "const": "approved"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "acceptanceStatus": {
+            "const": "accepted"
+          },
+          "review": {
+            "properties": {
+              "firstRoundReview": {
+                "properties": {
+                  "status": {
+                    "const": "completed"
+                  }
+                }
+              },
+              "crossCourseReview": {
+                "properties": {
+                  "status": {
+                    "const": "completed"
+                  }
+                }
+              },
+              "atlasReview": {
+                "properties": {
+                  "status": {
+                    "const": "completed"
+                  }
+                }
+              },
+              "languageReview": {
+                "properties": {
+                  "status": {
+                    "const": "completed"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "acceptanceStatus": {
+            "const": "accepted"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "contentStatus": {
+            "const": "approved"
+          }
+        }
+      }
     }
   ]
 }
