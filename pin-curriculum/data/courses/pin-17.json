@@ -1,0 +1,37 @@
+{
+  "courseId": "PIN-17",
+  "schemaVersion": "2.2.0",
+  "title": "拼写规则",
+  "contentStatus": "not_imported",
+  "acceptanceStatus": "pending",
+  "sourceReference": null,
+  "learningObjectives": [],
+  "teachingContent": {},
+  "localizedContent": null,
+  "exerciseReferences": [],
+  "teacherNotes": "课程占位文件；尚未导入或审定正式课程内容。",
+  "review": {
+    "firstRoundReview": {
+      "status": "completed",
+      "reviewedAt": null,
+      "notes": "历史记录：第一轮审查已完成；本版本未导入课程正文。"
+    },
+    "crossCourseReview": {
+      "status": "pending",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "atlasReview": {
+      "status": "pending",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "languageReview": {
+      "status": "pending",
+      "reviewedAt": null,
+      "notes": ""
+    }
+  },
+  "atlasVocabularyReferences": [],
+  "atlasOccurrenceReferences": []
+}

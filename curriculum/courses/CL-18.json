@@ -1,0 +1,625 @@
+{
+  "course_id": "CL-18",
+  "title": "六个常见国家",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 18,
+  "learning_objectives": [
+    "能够认读并说出中国、法国、美国、英国、德国和日本六个国家名称。",
+    "能够使用“国家＋人”的形式表达常见国籍。",
+    "能够使用“来自＋国家”介绍来源。",
+    "能够询问和介绍自己或他人会说的语言。",
+    "能够用简单句介绍一个人的国家、国籍和语言。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL18-001",
+      "simplified": "中国",
+      "traditional": "中国",
+      "pinyin": "Zhōngguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于亚洲的国家。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-002",
+      "simplified": "法国",
+      "traditional": "法国",
+      "pinyin": "Fǎguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于欧洲的国家。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-003",
+      "simplified": "美国",
+      "traditional": "美国",
+      "pinyin": "Měiguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于北美洲的国家。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-004",
+      "simplified": "英国",
+      "traditional": "英国",
+      "pinyin": "Yīngguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于欧洲的国家。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-005",
+      "simplified": "德国",
+      "traditional": "德国",
+      "pinyin": "Déguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于欧洲的国家。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-006",
+      "simplified": "日本",
+      "traditional": "日本",
+      "pinyin": "Rìběn",
+      "part_of_speech": "名词",
+      "definition_zh": "位于亚洲的国家。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-007",
+      "simplified": "中国人",
+      "traditional": "中国人",
+      "pinyin": "Zhōngguó rén",
+      "part_of_speech": "名词",
+      "definition_zh": "来自中国的人。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-008",
+      "simplified": "法国人",
+      "traditional": "法国人",
+      "pinyin": "Fǎguó rén",
+      "part_of_speech": "名词",
+      "definition_zh": "来自法国的人。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-009",
+      "simplified": "美国人",
+      "traditional": "美国人",
+      "pinyin": "Měiguó rén",
+      "part_of_speech": "名词",
+      "definition_zh": "来自美国的人。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-010",
+      "simplified": "英国人",
+      "traditional": "英国人",
+      "pinyin": "Yīngguó rén",
+      "part_of_speech": "名词",
+      "definition_zh": "来自英国的人。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-011",
+      "simplified": "德国人",
+      "traditional": "德国人",
+      "pinyin": "Déguó rén",
+      "part_of_speech": "名词",
+      "definition_zh": "来自德国的人。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-012",
+      "simplified": "日本人",
+      "traditional": "日本人",
+      "pinyin": "Rìběn rén",
+      "part_of_speech": "名词",
+      "definition_zh": "来自日本的人。",
+      "category": "国家与国籍",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-013",
+      "simplified": "中文",
+      "traditional": "中文",
+      "pinyin": "Zhōngwén",
+      "part_of_speech": "名词",
+      "definition_zh": "中国的语言文字，日常也常说汉语。",
+      "category": "语言",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-014",
+      "simplified": "法语",
+      "traditional": "法语",
+      "pinyin": "Fǎyǔ",
+      "part_of_speech": "名词",
+      "definition_zh": "法国的语言。",
+      "category": "语言",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-015",
+      "simplified": "英语",
+      "traditional": "英语",
+      "pinyin": "Yīngyǔ",
+      "part_of_speech": "名词",
+      "definition_zh": "英国、美国等国家广泛使用的语言。",
+      "category": "语言",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-016",
+      "simplified": "德语",
+      "traditional": "德语",
+      "pinyin": "Déyǔ",
+      "part_of_speech": "名词",
+      "definition_zh": "德国的语言。",
+      "category": "语言",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-017",
+      "simplified": "日语",
+      "traditional": "日语",
+      "pinyin": "Rìyǔ",
+      "part_of_speech": "名词",
+      "definition_zh": "日本的语言。",
+      "category": "语言",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-018",
+      "simplified": "国家",
+      "traditional": "国家",
+      "pinyin": "guójiā",
+      "part_of_speech": "名词",
+      "definition_zh": "具有自己的领土和政府的地方。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-019",
+      "simplified": "人",
+      "traditional": "人",
+      "pinyin": "rén",
+      "part_of_speech": "名词",
+      "definition_zh": "表示人的常用词。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL18-020",
+      "simplified": "语言",
+      "traditional": "语言",
+      "pinyin": "yǔyán",
+      "part_of_speech": "名词",
+      "definition_zh": "人们用来交流的表达系统。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "你是哪国人？",
+      "pinyin": "Nǐ shì nǎ guó rén?",
+      "meaning_zh": "询问一个人的国籍。"
+    },
+    {
+      "expression": "我是法国人。",
+      "pinyin": "Wǒ shì Fǎguó rén.",
+      "meaning_zh": "介绍自己的国籍。"
+    },
+    {
+      "expression": "他是中国人。",
+      "pinyin": "Tā shì Zhōngguó rén.",
+      "meaning_zh": "介绍别人的国籍。"
+    },
+    {
+      "expression": "你来自哪个国家？",
+      "pinyin": "Nǐ láizì nǎ ge guójiā?",
+      "meaning_zh": "询问一个人来自哪里。"
+    },
+    {
+      "expression": "我来自德国。",
+      "pinyin": "Wǒ láizì Déguó.",
+      "meaning_zh": "说明自己来自哪个国家。"
+    },
+    {
+      "expression": "你会说什么语言？",
+      "pinyin": "Nǐ huì shuō shénme yǔyán?",
+      "meaning_zh": "询问一个人会说什么语言。"
+    },
+    {
+      "expression": "我会说中文和法语。",
+      "pinyin": "Wǒ huì shuō Zhōngwén hé Fǎyǔ.",
+      "meaning_zh": "介绍自己会说的语言。"
+    },
+    {
+      "expression": "她会说英语。",
+      "pinyin": "Tā huì shuō Yīngyǔ.",
+      "meaning_zh": "介绍别人会说的语言。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋是＋国家人",
+      "explanation": "介绍自己或别人的国籍。",
+      "examples": [
+        "我是中国人。",
+        "他是日本人。"
+      ]
+    },
+    {
+      "pattern": "主语＋来自＋国家",
+      "explanation": "说明自己或别人的来源。",
+      "examples": [
+        "我来自法国。",
+        "她来自美国。"
+      ]
+    },
+    {
+      "pattern": "你是＋哪国人？",
+      "explanation": "询问对方的国籍。",
+      "examples": [
+        "你是哪国人？",
+        "他是哪国人？"
+      ]
+    },
+    {
+      "pattern": "主语＋会说＋语言",
+      "explanation": "表达会使用某种语言。",
+      "examples": [
+        "我会说中文。",
+        "她会说英语。"
+      ]
+    },
+    {
+      "pattern": "主语＋会说＋语言＋和＋语言",
+      "explanation": "介绍自己会说的两种语言。",
+      "examples": [
+        "我会说中文和法语。",
+        "他会说英语和德语。"
+      ]
+    },
+    {
+      "pattern": "主语＋是＋国家人，主语＋会说＋语言",
+      "explanation": "结合国籍和语言进行简单介绍。",
+      "examples": [
+        "我是法国人，我会说法语。",
+        "他是中国人，他会说中文。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "认识新朋友",
+      "scene": "两个人第一次见面，互相介绍国籍。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你好！你是哪国人？",
+          "traditional": "你好！你是哪国人？",
+          "pinyin": "Nǐ hǎo! Nǐ shì nǎ guó rén?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我是法国人。你呢？",
+          "traditional": "我是法国人。你呢？",
+          "pinyin": "Wǒ shì Fǎguó rén. Nǐ ne?"
+        },
+        {
+          "speaker": "A",
+          "simplified": "我是中国人。",
+          "traditional": "我是中国人。",
+          "pinyin": "Wǒ shì Zhōngguó rén."
+        },
+        {
+          "speaker": "B",
+          "simplified": "很高兴认识你！",
+          "traditional": "很高兴认识你！",
+          "pinyin": "Hěn gāoxìng rènshi nǐ!"
+        }
+      ]
+    },
+    {
+      "title": "介绍朋友",
+      "scene": "两位朋友介绍自己的朋友。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "她是哪国人？",
+          "traditional": "她是哪国人？",
+          "pinyin": "Tā shì nǎ guó rén?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "她是德国人。",
+          "traditional": "她是德国人。",
+          "pinyin": "Tā shì Déguó rén."
+        },
+        {
+          "speaker": "A",
+          "simplified": "她会说中文吗？",
+          "traditional": "她会说中文吗？",
+          "pinyin": "Tā huì shuō Zhōngwén ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "会，她会说中文和德语。",
+          "traditional": "会，她会说中文和德语。",
+          "pinyin": "Huì, tā huì shuō Zhōngwén hé Déyǔ."
+        }
+      ]
+    },
+    {
+      "title": "聊聊语言",
+      "scene": "两个人谈论自己会说的语言。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你会说什么语言？",
+          "traditional": "你会说什么语言？",
+          "pinyin": "Nǐ huì shuō shénme yǔyán?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我会说英语和日语。",
+          "traditional": "我会说英语和日语。",
+          "pinyin": "Wǒ huì shuō Yīngyǔ hé Rìyǔ."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你会说中文吗？",
+          "traditional": "你会说中文吗？",
+          "pinyin": "Nǐ huì shuō Zhōngwén ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "会一点儿。",
+          "traditional": "会一点儿。",
+          "pinyin": "Huì yìdiǎnr."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "国家名称图片配对",
+      "type": "词汇理解",
+      "instructions": "看国家图片或国旗，在教师提供的六个国家名称中找到对应的中文名称。",
+      "expected_output": [
+        "中国",
+        "法国",
+        "美国",
+        "英国",
+        "德国",
+        "日本"
+      ]
+    },
+    {
+      "activity": "国家与国籍配对",
+      "type": "词汇练习",
+      "instructions": "把国家名称与对应的国籍表达连起来，并大声读出。",
+      "expected_output": [
+        "中国—中国人",
+        "法国—法国人",
+        "美国—美国人",
+        "英国—英国人",
+        "德国—德国人",
+        "日本—日本人"
+      ]
+    },
+    {
+      "activity": "你是哪国人",
+      "type": "口语问答",
+      "instructions": "两人一组轮流提问“你是哪国人？”，并用“我是……人”回答。",
+      "expected_output": [
+        "你是哪国人？我是法国人。",
+        "你是哪国人？我是中国人。"
+      ]
+    },
+    {
+      "activity": "国家与语言配对",
+      "type": "语言表达",
+      "instructions": "根据本课所学内容，将国家与常见语言联系起来。注意一个国家可能有多种语言，不要求记忆复杂的语言分布。",
+      "expected_output": [
+        "中国—中文",
+        "法国—法语",
+        "英国—英语",
+        "德国—德语",
+        "日本—日语"
+      ]
+    },
+    {
+      "activity": "介绍自己和朋友",
+      "type": "综合表达",
+      "instructions": "选择一个国家，介绍自己或一位虚构朋友的国籍和会说的语言。",
+      "expected_output": [
+        "我是法国人，我会说法语。",
+        "他是中国人，他会说中文。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "选择自己或一位朋友，介绍其来自哪个国家、是哪国人，以及会说什么语言。可以使用本课六个国家和语言词汇。",
+    "expected_output": [
+      "我来自法国。",
+      "我是法国人。",
+      "我会说法语和英语。",
+      "我的朋友来自中国。",
+      "他是中国人，他会说中文。"
+    ]
+  },
+  "teacher_notes": [
+    "本课以六个常见国家为例，重点是国家名称、国籍表达和简单自我介绍。",
+    "国家名称后面加“人”，可以构成常见国籍表达，例如法国人、中国人。",
+    "注意“来自法国”和“是法国人”的表达角度不同：前者说明来源，后者说明国籍。",
+    "“会说”用于介绍语言能力，不要求学生学习语言学或国家官方语言制度。",
+    "国家和语言并非一一对应，例如美国、英国等地也存在多种语言。",
+    "本课的语言配对是初级常见例子，不应向学生暗示一个国家只有一种语言。",
+    "中文、汉语在不同语境中使用有所区别，初级阶段可先理解为中文语言表达。",
+    "六个国家的选择是本课教学样例，不代表国家排名或重要性排序。",
+    "可以使用学生真实的国籍和语言背景进行口语练习，但不要强迫学生公开个人信息。",
+    "本课重点是简单介绍，不扩展复杂国籍、民族、地理和政治知识。"
+  ],
+  "completion_criteria": [
+    "能够认读并说出本课六个国家名称。",
+    "能够将六个国家名称与相应的常见国籍表达配对。",
+    "能够使用“你是哪国人？”询问国籍。",
+    "能够使用“我是……人”介绍国籍。",
+    "能够使用“我会说……”介绍语言能力。",
+    "能够用两至四个简单句介绍一个人的国家、国籍和语言。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Six Common Countries",
+      "learning_objectives": [
+        "Recognize and say the names of six common countries.",
+        "Use simple expressions for nationality.",
+        "Ask and answer questions about where someone is from.",
+        "Name some common languages.",
+        "Introduce a person's country, nationality and languages in simple sentences."
+      ],
+      "key_expressions": {
+        "你是哪国人？": "What nationality are you?",
+        "我是法国人。": "I'm French.",
+        "他是中国人。": "He is Chinese.",
+        "你来自哪个国家？": "Which country are you from?",
+        "我来自德国。": "I'm from Germany.",
+        "你会说什么语言？": "What languages can you speak?",
+        "我会说中文和法语。": "I can speak Chinese and French.",
+        "她会说英语。": "She can speak English."
+      },
+      "integrated_task": "Introduce a person's country, nationality and the languages they can speak."
+    },
+    "fr": {
+      "title": "Six pays courants",
+      "learning_objectives": [
+        "Reconnaître et prononcer le nom de six pays courants.",
+        "Utiliser des expressions simples pour parler de la nationalité.",
+        "Poser et répondre à des questions sur l'origine d'une personne.",
+        "Nommer quelques langues courantes.",
+        "Présenter simplement le pays, la nationalité et les langues d'une personne."
+      ],
+      "key_expressions": {
+        "你是哪国人？": "De quelle nationalité es-tu ?",
+        "我是法国人。": "Je suis français(e).",
+        "他是中国人。": "Il est chinois.",
+        "你来自哪个国家？": "De quel pays viens-tu ?",
+        "我来自德国。": "Je viens d'Allemagne.",
+        "你会说什么语言？": "Quelles langues sais-tu parler ?",
+        "我会说中文和法语。": "Je parle chinois et français.",
+        "她会说英语。": "Elle parle anglais."
+      },
+      "integrated_task": "Présentez le pays, la nationalité et les langues parlées par une personne."
+    },
+    "de": {
+      "title": "Sechs häufige Länder",
+      "learning_objectives": [
+        "Die Namen von sechs häufigen Ländern erkennen und aussprechen.",
+        "Einfache Ausdrücke für die Nationalität verwenden.",
+        "Fragen und antworten, aus welchem Land jemand kommt.",
+        "Einige häufige Sprachen benennen.",
+        "Land, Nationalität und Sprachen einer Person einfach vorstellen."
+      ],
+      "key_expressions": {
+        "你是哪国人？": "Welche Nationalität hast du?",
+        "我是法国人。": "Ich bin Franzose/Französin.",
+        "他是中国人。": "Er ist Chinese.",
+        "你来自哪个国家？": "Aus welchem Land kommst du?",
+        "我来自德国。": "Ich komme aus Deutschland.",
+        "你会说什么语言？": "Welche Sprachen kannst du sprechen?",
+        "我会说中文和法语。": "Ich kann Chinesisch und Französisch sprechen.",
+        "她会说英语。": "Sie kann Englisch sprechen."
+      },
+      "integrated_task": "Stelle das Land, die Nationalität und die Sprachen einer Person vor."
+    },
+    "es": {
+      "title": "Seis países comunes",
+      "learning_objectives": [
+        "Reconocer y pronunciar los nombres de seis países comunes.",
+        "Usar expresiones sencillas para hablar de la nacionalidad.",
+        "Preguntar y responder de qué país es alguien.",
+        "Nombrar algunos idiomas comunes.",
+        "Presentar de forma sencilla el país, la nacionalidad y los idiomas de una persona."
+      ],
+      "key_expressions": {
+        "你是哪国人？": "¿De qué nacionalidad eres?",
+        "我是法国人。": "Soy francés/francesa.",
+        "他是中国人。": "Él es chino.",
+        "你来自哪个国家？": "¿De qué país eres?",
+        "我来自德国。": "Vengo de Alemania.",
+        "你会说什么语言？": "¿Qué idiomas sabes hablar?",
+        "我会说中文和法语。": "Sé hablar chino y francés.",
+        "她会说英语。": "Ella sabe hablar inglés."
+      },
+      "integrated_task": "Presenta el país, la nacionalidad y los idiomas que habla una persona."
+    },
+    "it": {
+      "title": "Sei paesi comuni",
+      "learning_objectives": [
+        "Riconoscere e pronunciare i nomi di sei paesi comuni.",
+        "Usare espressioni semplici per parlare della nazionalità.",
+        "Chiedere e rispondere sulla provenienza di una persona.",
+        "Nominare alcune lingue comuni.",
+        "Presentare in modo semplice il paese, la nazionalità e le lingue di una persona."
+      ],
+      "key_expressions": {
+        "你是哪国人？": "Di che nazionalità sei?",
+        "我是法国人。": "Sono francese.",
+        "他是中国人。": "Lui è cinese.",
+        "你来自哪个国家？": "Da quale paese vieni?",
+        "我来自德国。": "Vengo dalla Germania.",
+        "你会说什么语言？": "Quali lingue sai parlare?",
+        "我会说中文和法语。": "So parlare cinese e francese.",
+        "她会说英语。": "Lei sa parlare inglese."
+      },
+      "integrated_task": "Presenta il paese, la nazionalità e le lingue parlate da una persona."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:26:44.804996+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
+  },
+  "title_status": "confirmed"
+}

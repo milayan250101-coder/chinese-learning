@@ -1,0 +1,654 @@
+{
+  "course_id": "CL-25",
+  "title": "什么时候＋动词",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 25,
+  "learning_objectives": [
+    "理解并使用“什么时候”询问事情发生的时间。",
+    "能够使用日期、星期、时间段等表达回答“什么时候”。",
+    "能够区分“什么时候”和“几点”的基本用法。",
+    "能够将时间表达放在自然的句子位置，描述日常活动。",
+    "能够围绕学习、工作和生活安排进行简单的时间问答。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL25-001",
+      "simplified": "什么时候",
+      "traditional": "什麼時候",
+      "pinyin": "shénme shíhou",
+      "part_of_speech": "疑问短语",
+      "definition_zh": "询问某件事情发生的时间。",
+      "category": "时间提问",
+      "collocations": [
+        "你什么时候去",
+        "什么时候上课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-002",
+      "simplified": "几点",
+      "traditional": "幾點",
+      "pinyin": "jǐ diǎn",
+      "part_of_speech": "疑问短语",
+      "definition_zh": "询问具体的钟点。",
+      "category": "时间提问",
+      "collocations": [
+        "几点起床",
+        "几点下班"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-003",
+      "simplified": "时间",
+      "traditional": "時間",
+      "pinyin": "shíjiān",
+      "part_of_speech": "名词",
+      "definition_zh": "事情发生或持续的时间。",
+      "category": "时间表达",
+      "collocations": [
+        "有时间",
+        "没有时间"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-004",
+      "simplified": "早上",
+      "traditional": "早上",
+      "pinyin": "zǎoshang",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一天中早晨的时间。",
+      "category": "一天中的时间",
+      "collocations": [
+        "早上七点",
+        "早上上班"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-005",
+      "simplified": "上午",
+      "traditional": "上午",
+      "pinyin": "shàngwǔ",
+      "part_of_speech": "时间名词",
+      "definition_zh": "从早晨到中午以前的一段时间。",
+      "category": "一天中的时间",
+      "collocations": [
+        "上午九点",
+        "上午上课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-006",
+      "simplified": "中午",
+      "traditional": "中午",
+      "pinyin": "zhōngwǔ",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一天中十二点左右的时间。",
+      "category": "一天中的时间",
+      "collocations": [
+        "中午吃饭",
+        "中午十二点"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-007",
+      "simplified": "下午",
+      "traditional": "下午",
+      "pinyin": "xiàwǔ",
+      "part_of_speech": "时间名词",
+      "definition_zh": "中午以后到傍晚以前的一段时间。",
+      "category": "一天中的时间",
+      "collocations": [
+        "下午三点",
+        "下午下班"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-008",
+      "simplified": "晚上",
+      "traditional": "晚上",
+      "pinyin": "wǎnshang",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一天中太阳落山以后的时间。",
+      "category": "一天中的时间",
+      "collocations": [
+        "晚上回家",
+        "晚上八点"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-009",
+      "simplified": "今天",
+      "traditional": "今天",
+      "pinyin": "jīntiān",
+      "part_of_speech": "时间名词",
+      "definition_zh": "说话当天。",
+      "category": "日期",
+      "collocations": [
+        "今天上课",
+        "今天晚上"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-010",
+      "simplified": "明天",
+      "traditional": "明天",
+      "pinyin": "míngtiān",
+      "part_of_speech": "时间名词",
+      "definition_zh": "说话后的第一天。",
+      "category": "日期",
+      "collocations": [
+        "明天去",
+        "明天上午"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-011",
+      "simplified": "昨天",
+      "traditional": "昨天",
+      "pinyin": "zuótiān",
+      "part_of_speech": "时间名词",
+      "definition_zh": "说话前的一天。",
+      "category": "日期",
+      "collocations": [
+        "昨天去了",
+        "昨天晚上"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-012",
+      "simplified": "星期",
+      "traditional": "星期",
+      "pinyin": "xīngqī",
+      "part_of_speech": "名词",
+      "definition_zh": "表示一周中的日期单位。",
+      "category": "日期",
+      "collocations": [
+        "星期一",
+        "星期几"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-013",
+      "simplified": "周末",
+      "traditional": "週末",
+      "pinyin": "zhōumò",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一周最后的休息时间，通常指星期六和星期日。",
+      "category": "日期",
+      "collocations": [
+        "这个周末",
+        "周末去玩"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-014",
+      "simplified": "每天",
+      "traditional": "每天",
+      "pinyin": "měitiān",
+      "part_of_speech": "时间副词",
+      "definition_zh": "表示一天又一天，天天。",
+      "category": "频率与时间",
+      "collocations": [
+        "每天上班",
+        "每天学习"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-015",
+      "simplified": "每星期",
+      "traditional": "每星期",
+      "pinyin": "měi xīngqī",
+      "part_of_speech": "时间表达",
+      "definition_zh": "表示每一个星期。",
+      "category": "频率与时间",
+      "collocations": [
+        "每星期上课",
+        "每星期运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-016",
+      "simplified": "早",
+      "traditional": "早",
+      "pinyin": "zǎo",
+      "part_of_speech": "形容词/时间表达",
+      "definition_zh": "时间比较靠前，也可以用于问候。",
+      "category": "时间描述",
+      "collocations": [
+        "很早起床",
+        "早一点儿"
+      ],
+      "is_key_vocabulary": false
+    },
+    {
+      "word_id": "CL25-017",
+      "simplified": "晚",
+      "traditional": "晚",
+      "pinyin": "wǎn",
+      "part_of_speech": "形容词/时间表达",
+      "definition_zh": "时间比较靠后。",
+      "category": "时间描述",
+      "collocations": [
+        "很晚回家",
+        "晚一点儿"
+      ],
+      "is_key_vocabulary": false
+    },
+    {
+      "word_id": "CL25-018",
+      "simplified": "起床",
+      "traditional": "起床",
+      "pinyin": "qǐchuáng",
+      "part_of_speech": "动词",
+      "definition_zh": "从床上起来。",
+      "category": "日常活动",
+      "collocations": [
+        "早上起床",
+        "七点起床"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-019",
+      "simplified": "上班",
+      "traditional": "上班",
+      "pinyin": "shàngbān",
+      "part_of_speech": "动词",
+      "definition_zh": "去工作或开始工作。",
+      "category": "日常活动",
+      "collocations": [
+        "早上上班",
+        "几点上班"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL25-020",
+      "simplified": "下班",
+      "traditional": "下班",
+      "pinyin": "xiàbān",
+      "part_of_speech": "动词",
+      "definition_zh": "结束当天的工作。",
+      "category": "日常活动",
+      "collocations": [
+        "下午下班",
+        "几点下班"
+      ],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "你什么时候去？",
+      "pinyin": "Nǐ shénme shíhou qù?",
+      "meaning_zh": "询问对方什么时候出发或去某个地方。"
+    },
+    {
+      "expression": "你什么时候上班？",
+      "pinyin": "Nǐ shénme shíhou shàngbān?",
+      "meaning_zh": "询问对方什么时候开始工作。"
+    },
+    {
+      "expression": "你几点起床？",
+      "pinyin": "Nǐ jǐ diǎn qǐchuáng?",
+      "meaning_zh": "询问对方具体几点起床。"
+    },
+    {
+      "expression": "我明天去。",
+      "pinyin": "Wǒ míngtiān qù.",
+      "meaning_zh": "用明天回答事情发生的时间。"
+    },
+    {
+      "expression": "我星期一上课。",
+      "pinyin": "Wǒ xīngqī yī shàngkè.",
+      "meaning_zh": "用星期几回答上课时间。"
+    },
+    {
+      "expression": "我每天早上七点起床。",
+      "pinyin": "Wǒ měitiān zǎoshang qī diǎn qǐchuáng.",
+      "meaning_zh": "描述每天固定的起床时间。"
+    },
+    {
+      "expression": "我下午五点下班。",
+      "pinyin": "Wǒ xiàwǔ wǔ diǎn xiàbān.",
+      "meaning_zh": "说明具体的下班时间。"
+    },
+    {
+      "expression": "我们周末见。",
+      "pinyin": "Wǒmen zhōumò jiàn.",
+      "meaning_zh": "约定周末见面。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋什么时候＋动词？",
+      "explanation": "询问某人做某件事情的时间。",
+      "examples": [
+        "你什么时候去中国？",
+        "你什么时候上班？"
+      ]
+    },
+    {
+      "pattern": "主语＋时间＋动词。",
+      "explanation": "把时间放在动词前，说明动作发生的时间。",
+      "examples": [
+        "我明天去。",
+        "我星期一上课。"
+      ]
+    },
+    {
+      "pattern": "主语＋几点＋动词？",
+      "explanation": "使用“几点”询问具体钟点。",
+      "examples": [
+        "你几点起床？",
+        "你几点下班？"
+      ]
+    },
+    {
+      "pattern": "主语＋每天／每星期＋时间＋动词。",
+      "explanation": "描述每天或每星期重复进行的活动。",
+      "examples": [
+        "我每天早上七点起床。",
+        "我每星期三下午上课。"
+      ]
+    },
+    {
+      "pattern": "主语＋今天／明天／星期几＋时间＋动词。",
+      "explanation": "结合日期和一天中的时间说明安排。",
+      "examples": [
+        "我明天上午去。",
+        "我星期五晚上学习中文。"
+      ]
+    },
+    {
+      "pattern": "主语＋时间＋在＋地点＋动词。",
+      "explanation": "把时间、地点和动作放在一个句子中表达。",
+      "examples": [
+        "我明天上午在学校上课。",
+        "他每天早上在家吃饭。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "什么时候去上课",
+      "scene": "两位朋友讨论下一次中文课的时间。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你什么时候去上中文课？",
+          "traditional": "你什麼時候去上中文課？",
+          "pinyin": "Nǐ shénme shíhou qù shàng Zhōngwén kè?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我明天下午去。",
+          "traditional": "我明天下午去。",
+          "pinyin": "Wǒ míngtiān xiàwǔ qù."
+        },
+        {
+          "speaker": "A",
+          "simplified": "几点开始？",
+          "traditional": "幾點開始？",
+          "pinyin": "Jǐ diǎn kāishǐ?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "下午三点。",
+          "traditional": "下午三點。",
+          "pinyin": "Xiàwǔ sān diǎn."
+        }
+      ]
+    },
+    {
+      "title": "每天几点起床",
+      "scene": "同事聊日常生活习惯。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你每天几点起床？",
+          "traditional": "你每天幾點起床？",
+          "pinyin": "Nǐ měitiān jǐ diǎn qǐchuáng?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我每天早上七点起床。",
+          "traditional": "我每天早上七點起床。",
+          "pinyin": "Wǒ měitiān zǎoshang qī diǎn qǐchuáng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你几点上班？",
+          "traditional": "你幾點上班？",
+          "pinyin": "Nǐ jǐ diǎn shàngbān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我八点半上班。",
+          "traditional": "我八點半上班。",
+          "pinyin": "Wǒ bā diǎn bàn shàngbān."
+        }
+      ]
+    },
+    {
+      "title": "周末有什么安排",
+      "scene": "朋友约周末一起出去。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你周末什么时候有时间？",
+          "traditional": "你週末什麼時候有時間？",
+          "pinyin": "Nǐ zhōumò shénme shíhou yǒu shíjiān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "星期六下午有时间。",
+          "traditional": "星期六下午有時間。",
+          "pinyin": "Xīngqīliù xiàwǔ yǒu shíjiān."
+        },
+        {
+          "speaker": "A",
+          "simplified": "我们几点见面？",
+          "traditional": "我們幾點見面？",
+          "pinyin": "Wǒmen jǐ diǎn jiànmiàn?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "下午两点怎么样？",
+          "traditional": "下午兩點怎麼樣？",
+          "pinyin": "Xiàwǔ liǎng diǎn zěnmeyàng?"
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "什么时候还是几点",
+      "type": "question_choice",
+      "instructions": "判断题目是在询问宽泛的时间，还是具体钟点，并选择“什么时候”或“几点”。",
+      "expected_output": "你什么时候去？你几点起床？"
+    },
+    {
+      "activity": "时间词语排序",
+      "type": "sentence_order",
+      "instructions": "将人物、时间和动作排列成自然的中文句子。",
+      "expected_output": "我明天上午去学校。"
+    },
+    {
+      "activity": "日常时间问答",
+      "type": "pair_work",
+      "instructions": "互相询问几点起床、几点上班、什么时候上课。",
+      "expected_output": "你几点起床？我每天早上七点起床。"
+    },
+    {
+      "activity": "我的一周安排",
+      "type": "guided_speaking",
+      "instructions": "使用星期、上午、下午、晚上等词语介绍一周中的活动安排。",
+      "expected_output": "我星期一上午上课，星期三晚上学习中文。"
+    },
+    {
+      "activity": "听时间完成句子",
+      "type": "listening",
+      "instructions": "听教师说日期和钟点，将正确时间放进句子中。",
+      "expected_output": "我明天下午三点去学校。"
+    }
+  ],
+  "integrated_expression_task": {
+    "title": "介绍我的日常时间安排",
+    "instructions": "介绍自己一天或一周的生活安排。至少使用三个时间表达，并回答同伴提出的“什么时候”和“几点”问题。",
+    "expected_output": "我每天早上七点起床，八点上班。下午六点下班。星期三晚上我学习中文。周末我有时间。"
+  },
+  "teacher_notes": [
+    "本课重点是询问和回答时间，核心疑问表达为“什么时候”。",
+    "“什么时候”询问较宽泛的时间，回答可以是明天、星期一、上午或下个月等。",
+    "“几点”询问具体钟点，回答通常为七点、八点半等。",
+    "不要把“什么时候”和“几点”教成完全相同的疑问词。",
+    "时间表达通常放在主语之后、动词之前，例如“我明天去”“我每天七点起床”。",
+    "可以从学生熟悉的起床、上班、上课、吃饭和回家等活动入手。",
+    "结合 CL-09 的未来时间表达和 CL-13 的频率表达，帮助学生整合已学知识。",
+    "“每天”“每星期”表示重复的时间安排，不要与具体日期混淆。",
+    "注意“上午、中午、下午、晚上”等时间段与具体钟点的组合，例如“下午三点”。",
+    "初级阶段优先训练自然、清楚的时间问答，不必扩展复杂日程或时间状语从句。"
+  ],
+  "completion_criteria": [
+    "能够理解并使用“什么时候”提出时间问题。",
+    "能够正确区分“什么时候”和“几点”。",
+    "能够使用至少五种日期或时间段表达回答问题。",
+    "能够使用时间＋动词描述日常安排。",
+    "能够询问并回答至少三组日常时间问题。",
+    "能够完成一段包含多个时间表达的简单日常安排介绍。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "When + Verb",
+      "learning_objectives": [
+        "Ask when an activity happens using 什么时候.",
+        "Answer with dates, weekdays, and parts of the day.",
+        "Distinguish 什么时候 from 几点.",
+        "Place time expressions naturally in sentences.",
+        "Talk about simple daily and weekly schedules."
+      ],
+      "integrated_task": "Describe your daily or weekly schedule using at least three time expressions, and answer questions about when activities happen.",
+      "key_expressions": [
+        "你什么时候去？",
+        "你什么时候上班？",
+        "你几点起床？",
+        "我明天去。",
+        "我星期一上课。",
+        "我每天早上七点起床。",
+        "我下午五点下班。",
+        "我们周末见。"
+      ]
+    },
+    "fr": {
+      "title": "Quand + verbe",
+      "learning_objectives": [
+        "Demander quand une activité a lieu avec 什么时候.",
+        "Répondre avec des dates, des jours et des moments de la journée.",
+        "Distinguer 什么时候 de 几点.",
+        "Placer naturellement les expressions de temps dans une phrase.",
+        "Parler simplement de son emploi du temps quotidien et hebdomadaire."
+      ],
+      "integrated_task": "Présentez votre emploi du temps quotidien ou hebdomadaire avec au moins trois expressions de temps, puis répondez à des questions sur les horaires.",
+      "key_expressions": [
+        "你什么时候去？",
+        "你什么时候上班？",
+        "你几点起床？",
+        "我明天去。",
+        "我星期一上课。",
+        "我每天早上七点起床。",
+        "我下午五点下班。",
+        "我们周末见。"
+      ]
+    },
+    "de": {
+      "title": "Wann + Verb",
+      "learning_objectives": [
+        "Mit 什么时候 fragen, wann eine Aktivität stattfindet.",
+        "Mit Datumsangaben, Wochentagen und Tageszeiten antworten.",
+        "Den Unterschied zwischen 什么时候 und 几点 verstehen.",
+        "Zeitangaben natürlich in Sätzen platzieren.",
+        "Einfache Tages- und Wochenpläne beschreiben."
+      ],
+      "integrated_task": "Beschreiben Sie Ihren Tages- oder Wochenplan mit mindestens drei Zeitangaben und beantworten Sie Fragen dazu, wann Aktivitäten stattfinden.",
+      "key_expressions": [
+        "你什么时候去？",
+        "你什么时候上班？",
+        "你几点起床？",
+        "我明天去。",
+        "我星期一上课。",
+        "我每天早上七点起床。",
+        "我下午五点下班。",
+        "我们周末见。"
+      ]
+    },
+    "es": {
+      "title": "Cuándo + verbo",
+      "learning_objectives": [
+        "Preguntar cuándo ocurre una actividad usando 什么时候.",
+        "Responder con fechas, días de la semana y momentos del día.",
+        "Distinguir 什么时候 de 几点.",
+        "Colocar las expresiones de tiempo de forma natural en las frases.",
+        "Hablar de horarios diarios y semanales sencillos."
+      ],
+      "integrated_task": "Describe tu horario diario o semanal utilizando al menos tres expresiones de tiempo y responde preguntas sobre cuándo realizas tus actividades.",
+      "key_expressions": [
+        "你什么时候去？",
+        "你什么时候上班？",
+        "你几点起床？",
+        "我明天去。",
+        "我星期一上课。",
+        "我每天早上七点起床。",
+        "我下午五点下班。",
+        "我们周末见。"
+      ]
+    },
+    "it": {
+      "title": "Quando + verbo",
+      "learning_objectives": [
+        "Chiedere quando si svolge un'attività usando 什么时候.",
+        "Rispondere con date, giorni della settimana e momenti della giornata.",
+        "Distinguere 什么时候 da 几点.",
+        "Posizionare in modo naturale le espressioni di tempo nella frase.",
+        "Parlare di semplici programmi quotidiani e settimanali."
+      ],
+      "integrated_task": "Descrivi il tuo programma quotidiano o settimanale usando almeno tre espressioni di tempo e rispondi a domande su quando svolgi le attività.",
+      "key_expressions": [
+        "你什么时候去？",
+        "你什么时候上班？",
+        "你几点起床？",
+        "我明天去。",
+        "我星期一上课。",
+        "我每天早上七点起床。",
+        "我下午五点下班。",
+        "我们周末见。"
+      ]
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:49:08",
+    "version": 3,
+    "source": "CL-curriculum-framework",
+    "content_status": "draft",
+    "review_note": "CL-25 first content draft. Focus: asking and answering when, distinguishing 什么时候 and 几点. Requires pedagogical and translation review."
+  },
+  "title_status": "confirmed"
+}

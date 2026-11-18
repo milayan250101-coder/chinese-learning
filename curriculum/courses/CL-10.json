@@ -1,0 +1,674 @@
+{
+  "course_id": "CL-10",
+  "title": "常用连词",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 10,
+  "learning_objectives": [
+    {
+      "objective": "理解并使用“和”连接人物或事物。",
+      "success_indicator": "能够用“和”介绍人物组合或共同活动。"
+    },
+    {
+      "objective": "使用“但是”表达简单的转折关系。",
+      "success_indicator": "能够连接两个意思有转折关系的简单句。"
+    },
+    {
+      "objective": "使用“因为……所以……”说明原因和结果。",
+      "success_indicator": "能够根据日常情景说出原因和结果。"
+    },
+    {
+      "objective": "区分“或者”和“还是”的基本使用场景。",
+      "success_indicator": "能够在陈述句和选择疑问句中正确选择表达。"
+    },
+    {
+      "objective": "使用“然后”按顺序介绍日常活动。",
+      "success_indicator": "能够用两个以上连续动作介绍简单的日常安排。"
+    }
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL10-001",
+      "simplified": "和",
+      "traditional": "和",
+      "pinyin": "hé",
+      "part_of_speech": "连词／介词",
+      "definition_zh": "连接两个或多个并列的人或事物，也可表示共同参与。",
+      "category": "并列连接",
+      "collocations": [
+        "我和你",
+        "爸爸和妈妈",
+        "和朋友一起"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-002",
+      "simplified": "但是",
+      "traditional": "但是",
+      "pinyin": "dànshì",
+      "part_of_speech": "连词",
+      "definition_zh": "连接两个意思有转折关系的部分。",
+      "category": "转折关系",
+      "collocations": [
+        "喜欢但是不常吃",
+        "很忙但是有时间"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-003",
+      "simplified": "可是",
+      "traditional": "可是",
+      "pinyin": "kěshì",
+      "part_of_speech": "连词",
+      "definition_zh": "表示转折，常用于口语。",
+      "category": "转折关系",
+      "collocations": [
+        "想去可是没时间",
+        "很贵可是很好吃"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-004",
+      "simplified": "因为",
+      "traditional": "因為",
+      "pinyin": "yīnwèi",
+      "part_of_speech": "连词",
+      "definition_zh": "引出事情发生的原因。",
+      "category": "因果关系",
+      "collocations": [
+        "因为下雨",
+        "因为很忙",
+        "因为喜欢"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-005",
+      "simplified": "所以",
+      "traditional": "所以",
+      "pinyin": "suǒyǐ",
+      "part_of_speech": "连词",
+      "definition_zh": "引出原因所产生的结果。",
+      "category": "因果关系",
+      "collocations": [
+        "所以不去",
+        "所以很高兴",
+        "所以在家"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-006",
+      "simplified": "或者",
+      "traditional": "或者",
+      "pinyin": "huòzhě",
+      "part_of_speech": "连词",
+      "definition_zh": "在陈述句中表示几种可能的选择。",
+      "category": "选择关系",
+      "collocations": [
+        "咖啡或者茶",
+        "今天或者明天"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-007",
+      "simplified": "还是",
+      "traditional": "還是",
+      "pinyin": "háishi",
+      "part_of_speech": "连词",
+      "definition_zh": "在选择疑问句中连接供选择的内容。",
+      "category": "选择关系",
+      "collocations": [
+        "茶还是咖啡",
+        "今天还是明天"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-008",
+      "simplified": "然后",
+      "traditional": "然後",
+      "pinyin": "ránhòu",
+      "part_of_speech": "连词／副词",
+      "definition_zh": "表示一件事情之后接着发生另一件事情。",
+      "category": "顺序关系",
+      "collocations": [
+        "先吃饭然后看电影",
+        "然后回家"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-009",
+      "simplified": "先",
+      "traditional": "先",
+      "pinyin": "xiān",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某个动作在其他动作之前进行。",
+      "category": "顺序关系",
+      "collocations": [
+        "先吃饭",
+        "先回家",
+        "先学习"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-010",
+      "simplified": "再",
+      "traditional": "再",
+      "pinyin": "zài",
+      "part_of_speech": "副词",
+      "definition_zh": "表示之后再进行某个动作。",
+      "category": "顺序关系",
+      "collocations": [
+        "再去超市",
+        "再说一次",
+        "吃完再走"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-011",
+      "simplified": "一起",
+      "traditional": "一起",
+      "pinyin": "yìqǐ",
+      "part_of_speech": "副词",
+      "definition_zh": "表示两个人或多个人共同做某件事。",
+      "category": "共同活动",
+      "collocations": [
+        "一起吃饭",
+        "一起学习",
+        "一起出去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-012",
+      "simplified": "也",
+      "traditional": "也",
+      "pinyin": "yě",
+      "part_of_speech": "副词",
+      "definition_zh": "表示相同或类似的情况也适用于另一人或另一事物。",
+      "category": "补充表达",
+      "collocations": [
+        "我也喜欢",
+        "他也去",
+        "我也想去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-013",
+      "simplified": "都",
+      "traditional": "都",
+      "pinyin": "dōu",
+      "part_of_speech": "副词",
+      "definition_zh": "表示所涉及的人或事物全部具有某种情况。",
+      "category": "补充表达",
+      "collocations": [
+        "我们都喜欢",
+        "他们都去",
+        "大家都知道"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL10-014",
+      "simplified": "如果",
+      "traditional": "如果",
+      "pinyin": "rúguǒ",
+      "part_of_speech": "连词",
+      "definition_zh": "提出一种条件或假设。",
+      "category": "条件关系",
+      "collocations": [
+        "如果有时间",
+        "如果下雨",
+        "如果可以"
+      ],
+      "is_key_vocabulary": false
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "我和朋友一起去。",
+      "pinyin": "Wǒ hé péngyou yìqǐ qù.",
+      "meaning_zh": "表示自己和朋友共同前往某地。",
+      "examples": [
+        "我和朋友一起去学校。"
+      ]
+    },
+    {
+      "expression": "我喜欢，但是……",
+      "pinyin": "Wǒ xǐhuan, dànshì ...",
+      "meaning_zh": "先说明一种情况，再表达不同或相反的情况。",
+      "examples": [
+        "我喜欢咖啡，但是今天想喝茶。"
+      ]
+    },
+    {
+      "expression": "因为……所以……",
+      "pinyin": "Yīnwèi ... suǒyǐ ...",
+      "meaning_zh": "先说明原因，再说明结果。",
+      "examples": [
+        "因为今天下雨，所以我不出去。"
+      ]
+    },
+    {
+      "expression": "你要茶还是咖啡？",
+      "pinyin": "Nǐ yào chá háishi kāfēi?",
+      "meaning_zh": "在问句中提供两个选择。",
+      "examples": [
+        "你要茶还是咖啡？"
+      ]
+    },
+    {
+      "expression": "我想喝茶或者咖啡。",
+      "pinyin": "Wǒ xiǎng hē chá huòzhě kāfēi.",
+      "meaning_zh": "在陈述句中说明可选择的内容。",
+      "examples": [
+        "晚上我想吃米饭或者面条。"
+      ]
+    },
+    {
+      "expression": "先……然后……",
+      "pinyin": "Xiān ... ránhòu ...",
+      "meaning_zh": "按照事情发生的先后顺序介绍活动。",
+      "examples": [
+        "我先吃饭，然后去学校。"
+      ]
+    },
+    {
+      "expression": "我也……",
+      "pinyin": "Wǒ yě ...",
+      "meaning_zh": "表示自己与前面提到的人有相同的情况。",
+      "examples": [
+        "你喜欢中文？我也喜欢。"
+      ]
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "名词／人物＋和＋名词／人物。",
+      "explanation": "使用“和”连接并列的人或事物。",
+      "examples": [
+        {
+          "simplified": "我和妈妈去超市。",
+          "traditional": "我和媽媽去超市。",
+          "pinyin": "Wǒ hé māma qù chāoshì.",
+          "meaning": "我和妈妈一起去超市。"
+        },
+        {
+          "simplified": "我喜欢茶和咖啡。",
+          "traditional": "我喜歡茶和咖啡。",
+          "pinyin": "Wǒ xǐhuan chá hé kāfēi.",
+          "meaning": "我喜欢这两种饮料。"
+        }
+      ]
+    },
+    {
+      "pattern": "分句一＋但是／可是＋分句二。",
+      "explanation": "用“但是”或“可是”连接有转折关系的两个部分。",
+      "examples": [
+        {
+          "simplified": "我想去，但是今天没有时间。",
+          "traditional": "我想去，但是今天沒有時間。",
+          "pinyin": "Wǒ xiǎng qù, dànshì jīntiān méiyǒu shíjiān.",
+          "meaning": "我想去，可是今天没有时间。"
+        },
+        {
+          "simplified": "这家饭店很小，可是很好吃。",
+          "traditional": "這家飯店很小，可是很好吃。",
+          "pinyin": "Zhè jiā fàndiàn hěn xiǎo, kěshì hěn hǎochī.",
+          "meaning": "饭店虽然小，但是食物很好吃。"
+        }
+      ]
+    },
+    {
+      "pattern": "因为＋原因，所以＋结果。",
+      "explanation": "用“因为”说明原因，用“所以”引出结果。口语中也可以只使用其中一个连接词。",
+      "examples": [
+        {
+          "simplified": "因为下雨，所以我在家。",
+          "traditional": "因為下雨，所以我在家。",
+          "pinyin": "Yīnwèi xiàyǔ, suǒyǐ wǒ zài jiā.",
+          "meaning": "下雨是我在家的原因。"
+        },
+        {
+          "simplified": "因为我很累，所以今天不运动。",
+          "traditional": "因為我很累，所以今天不運動。",
+          "pinyin": "Yīnwèi wǒ hěn lèi, suǒyǐ jīntiān bù yùndòng.",
+          "meaning": "我因为累，今天不运动。"
+        }
+      ]
+    },
+    {
+      "pattern": "陈述内容一＋或者＋陈述内容二。",
+      "explanation": "在陈述句中用“或者”提供选择。",
+      "examples": [
+        {
+          "simplified": "晚上我喝茶或者喝水。",
+          "traditional": "晚上我喝茶或者喝水。",
+          "pinyin": "Wǎnshang wǒ hē chá huòzhě hē shuǐ.",
+          "meaning": "晚上我可以选择茶或水。"
+        },
+        {
+          "simplified": "星期六或者星期天我有时间。",
+          "traditional": "星期六或者星期天我有時間。",
+          "pinyin": "Xīngqīliù huòzhě xīngqītiān wǒ yǒu shíjiān.",
+          "meaning": "星期六和星期天其中一天我有时间。"
+        }
+      ]
+    },
+    {
+      "pattern": "选择一＋还是＋选择二？",
+      "explanation": "在选择疑问句中用“还是”连接两个选项。",
+      "examples": [
+        {
+          "simplified": "你喝茶还是喝咖啡？",
+          "traditional": "你喝茶還是喝咖啡？",
+          "pinyin": "Nǐ hē chá háishi hē kāfēi?",
+          "meaning": "询问对方选择哪一种饮料。"
+        },
+        {
+          "simplified": "你明天去还是星期天去？",
+          "traditional": "你明天去還是星期天去？",
+          "pinyin": "Nǐ míngtiān qù háishi xīngqītiān qù?",
+          "meaning": "询问对方选择哪一天前往。"
+        }
+      ]
+    },
+    {
+      "pattern": "先＋动作一，然后／再＋动作二。",
+      "explanation": "用“先”和“然后”或“再”表达动作发生的顺序。",
+      "examples": [
+        {
+          "simplified": "我先吃饭，然后去学校。",
+          "traditional": "我先吃飯，然後去學校。",
+          "pinyin": "Wǒ xiān chīfàn, ránhòu qù xuéxiào.",
+          "meaning": "先吃饭，再去学校。"
+        },
+        {
+          "simplified": "我先做作业，再看电视。",
+          "traditional": "我先做作業，再看電視。",
+          "pinyin": "Wǒ xiān zuò zuòyè, zài kàn diànshì.",
+          "meaning": "先完成作业，之后看电视。"
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "你喝茶还是咖啡",
+      "scene": "两位朋友在咖啡店选择饮料。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你喝茶还是咖啡？",
+          "traditional": "你喝茶還是咖啡？",
+          "pinyin": "Nǐ hē chá háishi kāfēi?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我喝咖啡。你呢？",
+          "traditional": "我喝咖啡。你呢？",
+          "pinyin": "Wǒ hē kāfēi. Nǐ ne?"
+        },
+        {
+          "speaker": "A",
+          "simplified": "我喝茶，因为今天有点累。",
+          "traditional": "我喝茶，因為今天有點累。",
+          "pinyin": "Wǒ hē chá, yīnwèi jīntiān yǒudiǎn lèi."
+        },
+        {
+          "speaker": "B",
+          "simplified": "好，我也想喝茶。",
+          "traditional": "好，我也想喝茶。",
+          "pinyin": "Hǎo, wǒ yě xiǎng hē chá."
+        }
+      ]
+    },
+    {
+      "title": "想去但是没有时间",
+      "scene": "朋友邀请对方周末出去。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "周末我们一起去看电影吧！",
+          "traditional": "週末我們一起去看電影吧！",
+          "pinyin": "Zhōumò wǒmen yìqǐ qù kàn diànyǐng ba!"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想去，但是星期六要工作。",
+          "traditional": "我想去，但是星期六要工作。",
+          "pinyin": "Wǒ xiǎng qù, dànshì xīngqīliù yào gōngzuò."
+        },
+        {
+          "speaker": "A",
+          "simplified": "那星期天呢？",
+          "traditional": "那星期天呢？",
+          "pinyin": "Nà xīngqītiān ne?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "星期天可以，我们先吃饭，然后去看电影。",
+          "traditional": "星期天可以，我們先吃飯，然後去看電影。",
+          "pinyin": "Xīngqītiān kěyǐ, wǒmen xiān chīfàn, ránhòu qù kàn diànyǐng."
+        }
+      ]
+    },
+    {
+      "title": "今天为什么不出去",
+      "scene": "家人讨论当天的活动安排。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天怎么不出去？",
+          "traditional": "你今天怎麼不出去？",
+          "pinyin": "Nǐ jīntiān zěnme bù chūqù?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "因为今天下雨，所以我想在家休息。",
+          "traditional": "因為今天下雨，所以我想在家休息。",
+          "pinyin": "Yīnwèi jīntiān xiàyǔ, suǒyǐ wǒ xiǎng zài jiā xiūxi."
+        },
+        {
+          "speaker": "A",
+          "simplified": "那我们在家看电影或者看书吧。",
+          "traditional": "那我們在家看電影或者看書吧。",
+          "pinyin": "Nà wǒmen zài jiā kàn diànyǐng huòzhě kànshū ba."
+        },
+        {
+          "speaker": "B",
+          "simplified": "好啊，我先看书，然后看电影。",
+          "traditional": "好啊，我先看書，然後看電影。",
+          "pinyin": "Hǎo a, wǒ xiān kànshū, ránhòu kàn diànyǐng."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "人物和事物连接",
+      "type": "句子组合",
+      "instructions": "教师给出人物或事物图片，学生使用“和”将两个内容连接起来，并组成简单句子。",
+      "expected_output": [
+        "我和朋友去学校。",
+        "我喜欢茶和咖啡。",
+        "爸爸和妈妈在家。"
+      ]
+    },
+    {
+      "activity": "转折句接龙",
+      "type": "口语表达",
+      "instructions": "教师先说一个简单情况，学生使用“但是”或“可是”补充一个转折信息。",
+      "expected_output": [
+        "我喜欢运动，但是今天很累。",
+        "这家饭店很小，可是很好吃。",
+        "我想去，但是没有时间。"
+      ]
+    },
+    {
+      "activity": "原因和结果配对",
+      "type": "逻辑配对",
+      "instructions": "学生将原因卡片和结果卡片配对，再使用“因为……所以……”说出完整句子。",
+      "expected_output": [
+        "因为下雨，所以我在家。",
+        "因为我很忙，所以今天不出去。",
+        "因为他喜欢中文，所以他学习中文。"
+      ]
+    },
+    {
+      "activity": "或者还是选择题",
+      "type": "句型辨析",
+      "instructions": "教师给出陈述句和选择疑问句，让学生判断使用“或者”还是“还是”，再进行口头回答。",
+      "expected_output": [
+        "晚上我喝茶或者喝水。",
+        "你喝茶还是喝水？",
+        "你明天去还是星期天去？"
+      ]
+    },
+    {
+      "activity": "先做什么然后做什么",
+      "type": "顺序表达",
+      "instructions": "学生根据日常活动图片排列先后顺序，并使用“先……然后……”介绍活动。",
+      "expected_output": [
+        "我先吃早饭，然后去学校。",
+        "我先工作，然后回家。",
+        "我先做作业，再看电视。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "主题：我的一天和我的选择。学生介绍一天中的活动，至少使用一次“和”、一次“但是”或“可是”、一次原因结果表达、一次选择表达，以及一次“先……然后……”顺序表达。教师可根据学生水平选择其中重点进行口头练习。",
+    "expected_output": "我早上和朋友一起去学校。因为今天有课，所以我很早起床。我喜欢中文，但是有时候觉得汉字很难。中午我喝茶或者喝水。下午我先做作业，然后回家。\nA：你喝茶还是咖啡？\nB：我喝茶。"
+  },
+  "teacher_notes": [
+    "本课属于初级常用连接表达，不要求学生掌握所有汉语连词的语法分类。",
+    "先教“和”和“但是”，再复习 CL-07 的“因为”和“所以”，最后练习选择和顺序表达。",
+    "“和”在本课首先用于连接名词或人物，不要直接把它解释成可以连接所有完整句子的连接词。",
+    "“但是”和“可是”都能表示转折，初级阶段可先作为近义表达接触，不需要展开细微语体差别。",
+    "“因为……所以……”可以成对使用，但在自然表达中也可以只出现“因为”或“所以”，不要要求每句话必须同时出现两个词。",
+    "“或者”常用于陈述中的选择，“还是”常用于选择疑问句。通过问答对比帮助学生建立基本区别。",
+    "“先……然后……”用于介绍动作顺序；“先……再……”也可以表达相近的先后关系。",
+    "“也”和“都”作为补充表达复习，不应误认为它们与“但是”“因为”具有相同的连接功能。",
+    "“如果”只作为后续课程的预备接触，本课不要求学生掌握“如果……就……”的完整条件句。",
+    "鼓励学生使用真实生活情境表达，不要为了使用连词而制造不自然或过长的句子。"
+  ],
+  "completion_criteria": [
+    "能够使用“和”连接两个人或两种事物。",
+    "能够使用“但是”或“可是”表达简单转折。",
+    "能够用“因为……所以……”说明日常原因和结果。",
+    "能够初步区分陈述句中的“或者”和选择疑问句中的“还是”。",
+    "能够使用“先……然后……”说明两个或多个活动的顺序。",
+    "能够在简单对话或短文中使用至少三种不同的连接表达。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Common conjunctions and connecting expressions",
+      "learning_objectives": [
+        "Connect people and things with 和.",
+        "Express contrast with 但是.",
+        "Give reasons and results with 因为……所以…….",
+        "Distinguish 或者 in statements from 还是 in choice questions.",
+        "Describe the order of activities with 先……然后……."
+      ],
+      "key_expressions": {
+        "我和朋友一起去。": "I am going with my friend.",
+        "我喜欢，但是今天没有时间。": "I like it, but I don't have time today.",
+        "因为下雨，所以我在家。": "Because it is raining, I am staying at home.",
+        "你喝茶还是咖啡？": "Would you like tea or coffee?",
+        "我先吃饭，然后去学校。": "I eat first, and then I go to school."
+      },
+      "integrated_task": "My day and my choices."
+    },
+    "fr": {
+      "title": "Les conjonctions et expressions de liaison courantes",
+      "learning_objectives": [
+        "Relier des personnes et des choses avec 和.",
+        "Exprimer une opposition avec 但是.",
+        "Exprimer une cause et un résultat avec 因为……所以…….",
+        "Distinguer 或者 dans une phrase déclarative et 还是 dans une question à choix.",
+        "Présenter l'ordre des activités avec 先……然后……."
+      ],
+      "key_expressions": {
+        "我和朋友一起去。": "J'y vais avec mon ami.",
+        "我喜欢，但是今天没有时间。": "J'aime bien, mais je n'ai pas le temps aujourd'hui.",
+        "因为下雨，所以我在家。": "Comme il pleut, je reste à la maison.",
+        "你喝茶还是咖啡？": "Tu veux du thé ou du café ?",
+        "我先吃饭，然后去学校。": "Je mange d'abord, puis je vais à l'école."
+      },
+      "integrated_task": "Ma journée et mes choix."
+    },
+    "de": {
+      "title": "Häufige Konjunktionen und Verbindungswörter",
+      "learning_objectives": [
+        "Personen und Dinge mit 和 verbinden.",
+        "Gegensätze mit 但是 ausdrücken.",
+        "Gründe und Folgen mit 因为……所以…… ausdrücken.",
+        "或者 in Aussagen von 还是 in Auswahlfragen unterscheiden.",
+        "Die Reihenfolge von Aktivitäten mit 先……然后…… beschreiben."
+      ],
+      "key_expressions": {
+        "我和朋友一起去。": "Ich gehe zusammen mit meinem Freund.",
+        "我喜欢，但是今天没有时间。": "Ich mag es, aber heute habe ich keine Zeit.",
+        "因为下雨，所以我在家。": "Weil es regnet, bleibe ich zu Hause.",
+        "你喝茶还是咖啡？": "Möchtest du Tee oder Kaffee?",
+        "我先吃饭，然后去学校。": "Ich esse zuerst und gehe dann zur Schule."
+      },
+      "integrated_task": "Mein Tag und meine Entscheidungen."
+    },
+    "es": {
+      "title": "Conjunciones y expresiones de enlace frecuentes",
+      "learning_objectives": [
+        "Unir personas y cosas con 和.",
+        "Expresar contraste con 但是.",
+        "Expresar causa y resultado con 因为……所以…….",
+        "Distinguir 或者 en afirmaciones de 还是 en preguntas de elección.",
+        "Describir el orden de las actividades con 先……然后……."
+      ],
+      "key_expressions": {
+        "我和朋友一起去。": "Voy con mi amigo.",
+        "我喜欢，但是今天没有时间。": "Me gusta, pero hoy no tengo tiempo.",
+        "因为下雨，所以我在家。": "Como llueve, me quedo en casa.",
+        "你喝茶还是咖啡？": "¿Quieres té o café?",
+        "我先吃饭，然后去学校。": "Primero como y después voy a la escuela."
+      },
+      "integrated_task": "Mi día y mis elecciones."
+    },
+    "it": {
+      "title": "Congiunzioni ed espressioni di collegamento comuni",
+      "learning_objectives": [
+        "Collegare persone e cose con 和.",
+        "Esprimere un contrasto con 但是.",
+        "Esprimere causa e risultato con 因为……所以…….",
+        "Distinguere 或者 nelle frasi dichiarative da 还是 nelle domande a scelta.",
+        "Descrivere l'ordine delle attività con 先……然后……."
+      ],
+      "key_expressions": {
+        "我和朋友一起去。": "Vado insieme al mio amico.",
+        "我喜欢，但是今天没有时间。": "Mi piace, ma oggi non ho tempo.",
+        "因为下雨，所以我在家。": "Dato che piove, resto a casa.",
+        "你喝茶还是咖啡？": "Preferisci tè o caffè?",
+        "我先吃饭，然后去学校。": "Prima mangio, poi vado a scuola."
+      },
+      "integrated_task": "La mia giornata e le mie scelte."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T17:12:44.707943+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "本课为初版课程建设成果。后续重点检查连词语义、语序、例句自然度及多语言翻译。"
+  },
+  "title_status": "confirmed"
+}

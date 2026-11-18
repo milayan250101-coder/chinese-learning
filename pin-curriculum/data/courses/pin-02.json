@@ -1,0 +1,37 @@
+{
+  "courseId": "PIN-02",
+  "schemaVersion": "2.2.0",
+  "title": "声母：舌尖中音 d,t,n,l",
+  "contentStatus": "not_imported",
+  "acceptanceStatus": "pending",
+  "sourceReference": null,
+  "learningObjectives": [],
+  "teachingContent": {},
+  "localizedContent": null,
+  "exerciseReferences": [],
+  "teacherNotes": "课程占位文件；尚未导入或审定正式课程内容。",
+  "review": {
+    "firstRoundReview": {
+      "status": "completed",
+      "reviewedAt": null,
+      "notes": "历史审核记录（2026-11-15）：PIN-02 第一轮课程审核已完成，审核范围包括 d/t/n/l 的 IPA 与发音要点、送气与不送气、n/l 气流区别、五语发音参照、Atlas 词汇（弟弟、大肚子、打鼓、马路、你好）及跨课程关联。此状态表示第一轮审核记录完成，不代表课程正式验收；发音措辞修订、发音说明多语言校对、Atlas 英文核对及最终翻译校对仍列为后续修订事项。"
+    },
+    "crossCourseReview": {
+      "status": "pending",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "atlasReview": {
+      "status": "pending",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "languageReview": {
+      "status": "pending",
+      "reviewedAt": null,
+      "notes": ""
+    }
+  },
+  "atlasVocabularyReferences": [],
+  "atlasOccurrenceReferences": []
+}

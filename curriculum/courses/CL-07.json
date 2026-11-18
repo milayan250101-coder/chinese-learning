@@ -1,0 +1,575 @@
+{
+  "course_id": "CL-07",
+  "title": "为什么＋因为",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 7,
+  "learning_objectives": [
+    {
+      "objective": "理解并使用“为什么？”询问事情发生的原因。",
+      "success_indicator": "能够针对日常情况提出至少三个“为什么”问题。"
+    },
+    {
+      "objective": "使用“因为……”说明简单原因。",
+      "success_indicator": "能够根据具体情景用“因为”回答问题。"
+    },
+    {
+      "objective": "理解“因为……，所以……”表达原因和结果的关系。",
+      "success_indicator": "能够用一个简单原因和一个结果组成完整句子。"
+    },
+    {
+      "objective": "在日常交流中询问和解释原因。",
+      "success_indicator": "能够完成一段包含原因提问和回答的简单对话。"
+    }
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL07-001",
+      "simplified": "为什么",
+      "traditional": "為什麼",
+      "pinyin": "wèishénme",
+      "part_of_speech": "疑问代词",
+      "definition_zh": "询问事情的原因。",
+      "category": "原因提问",
+      "collocations": [
+        "为什么迟到",
+        "为什么不去",
+        "为什么喜欢"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-002",
+      "simplified": "因为",
+      "traditional": "因為",
+      "pinyin": "yīnwèi",
+      "part_of_speech": "连词",
+      "definition_zh": "用来说明原因。",
+      "category": "原因表达",
+      "collocations": [
+        "因为下雨",
+        "因为很忙",
+        "因为生病"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-003",
+      "simplified": "所以",
+      "traditional": "所以",
+      "pinyin": "suǒyǐ",
+      "part_of_speech": "连词",
+      "definition_zh": "用来引出事情的结果。",
+      "category": "结果表达",
+      "collocations": [
+        "所以不去",
+        "所以迟到",
+        "所以很高兴"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-004",
+      "simplified": "今天",
+      "traditional": "今天",
+      "pinyin": "jīntiān",
+      "part_of_speech": "时间名词",
+      "definition_zh": "说话当天。",
+      "category": "时间",
+      "collocations": [
+        "今天很忙",
+        "今天下雨",
+        "今天有课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-005",
+      "simplified": "昨天",
+      "traditional": "昨天",
+      "pinyin": "zuótiān",
+      "part_of_speech": "时间名词",
+      "definition_zh": "今天的前一天。",
+      "category": "时间",
+      "collocations": [
+        "昨天很累",
+        "昨天没去",
+        "昨天生病"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-006",
+      "simplified": "下雨",
+      "traditional": "下雨",
+      "pinyin": "xiàyǔ",
+      "part_of_speech": "动词",
+      "definition_zh": "天空中落下雨水。",
+      "category": "天气",
+      "collocations": [
+        "今天下雨",
+        "因为下雨",
+        "下雨了"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-007",
+      "simplified": "生病",
+      "traditional": "生病",
+      "pinyin": "shēngbìng",
+      "part_of_speech": "动词",
+      "definition_zh": "身体不舒服，患病。",
+      "category": "身体状况",
+      "collocations": [
+        "生病了",
+        "因为生病",
+        "生病不能去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-008",
+      "simplified": "忙",
+      "traditional": "忙",
+      "pinyin": "máng",
+      "part_of_speech": "形容词",
+      "definition_zh": "事情多，没有太多空闲时间。",
+      "category": "生活状态",
+      "collocations": [
+        "很忙",
+        "工作很忙",
+        "因为很忙"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-009",
+      "simplified": "有时间",
+      "traditional": "有時間",
+      "pinyin": "yǒu shíjiān",
+      "part_of_speech": "动词短语",
+      "definition_zh": "有空，可以安排活动。",
+      "category": "时间安排",
+      "collocations": [
+        "今天有时间",
+        "有时间见面",
+        "有时间学习"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-010",
+      "simplified": "没时间",
+      "traditional": "沒時間",
+      "pinyin": "méi shíjiān",
+      "part_of_speech": "动词短语",
+      "definition_zh": "没有空闲时间。",
+      "category": "时间安排",
+      "collocations": [
+        "今天没时间",
+        "没时间吃饭",
+        "没时间出去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-011",
+      "simplified": "累",
+      "traditional": "累",
+      "pinyin": "lèi",
+      "part_of_speech": "形容词",
+      "definition_zh": "身体或精神感到疲劳。",
+      "category": "身体状况",
+      "collocations": [
+        "很累",
+        "有一点累",
+        "因为很累"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL07-012",
+      "simplified": "迟到",
+      "traditional": "遲到",
+      "pinyin": "chídào",
+      "part_of_speech": "动词",
+      "definition_zh": "没有按规定时间到达。",
+      "category": "日常活动",
+      "collocations": [
+        "上课迟到",
+        "因为下雨迟到",
+        "今天迟到"
+      ],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "为什么？",
+      "pinyin": "Wèishénme?",
+      "meaning_zh": "询问原因。",
+      "examples": [
+        "你为什么不去？",
+        "你为什么迟到？"
+      ]
+    },
+    {
+      "expression": "因为……",
+      "pinyin": "Yīnwèi ...",
+      "meaning_zh": "说明事情发生的原因。",
+      "examples": [
+        "因为今天下雨。",
+        "因为我很忙。"
+      ]
+    },
+    {
+      "expression": "因为……，所以……",
+      "pinyin": "Yīnwèi ..., suǒyǐ ...",
+      "meaning_zh": "先说明原因，再说明结果。",
+      "examples": [
+        "因为下雨，所以我不去。",
+        "因为我生病了，所以今天不工作。"
+      ]
+    },
+    {
+      "expression": "因为……，不能……",
+      "pinyin": "Yīnwèi ..., bù néng ...",
+      "meaning_zh": "说明原因以及因此不能做的事情。",
+      "examples": [
+        "因为我很忙，不能出去。"
+      ]
+    },
+    {
+      "expression": "你为什么……？",
+      "pinyin": "Nǐ wèishénme ...?",
+      "meaning_zh": "询问对方做某事或不做某事的原因。",
+      "examples": [
+        "你为什么学习中文？"
+      ]
+    },
+    {
+      "expression": "因为我觉得……",
+      "pinyin": "Yīnwèi wǒ juéde ...",
+      "meaning_zh": "用个人想法或感受解释原因。",
+      "examples": [
+        "因为我觉得中文很有意思。"
+      ]
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "为什么＋主语＋动词／形容词？",
+      "explanation": "把“为什么”放在句首，询问事情发生的原因。",
+      "examples": [
+        {
+          "simplified": "你为什么学习中文？",
+          "traditional": "你為什麼學習中文？",
+          "pinyin": "Nǐ wèishénme xuéxí Zhōngwén?",
+          "meaning": "询问对方学习中文的原因。"
+        },
+        {
+          "simplified": "你为什么不去学校？",
+          "traditional": "你為什麼不去學校？",
+          "pinyin": "Nǐ wèishénme bú qù xuéxiào?",
+          "meaning": "询问对方不去学校的原因。"
+        }
+      ]
+    },
+    {
+      "pattern": "因为＋原因。",
+      "explanation": "使用“因为”直接回答原因，可以根据上下文省略结果。",
+      "examples": [
+        {
+          "simplified": "因为今天下雨。",
+          "traditional": "因為今天下雨。",
+          "pinyin": "Yīnwèi jīntiān xiàyǔ.",
+          "meaning": "说明不出门的原因是下雨。"
+        },
+        {
+          "simplified": "因为我很忙。",
+          "traditional": "因為我很忙。",
+          "pinyin": "Yīnwèi wǒ hěn máng.",
+          "meaning": "说明没有时间的原因。"
+        }
+      ]
+    },
+    {
+      "pattern": "因为＋原因，所以＋结果。",
+      "explanation": "先说原因，再用“所以”引出结果。初级阶段重点掌握简单句。",
+      "examples": [
+        {
+          "simplified": "因为今天下雨，所以我不去公园。",
+          "traditional": "因為今天下雨，所以我不去公園。",
+          "pinyin": "Yīnwèi jīntiān xiàyǔ, suǒyǐ wǒ bú qù gōngyuán.",
+          "meaning": "下雨是原因，不去公园是结果。"
+        },
+        {
+          "simplified": "因为我生病了，所以今天不工作。",
+          "traditional": "因為我生病了，所以今天不工作。",
+          "pinyin": "Yīnwèi wǒ shēngbìng le, suǒyǐ jīntiān bù gōngzuò.",
+          "meaning": "生病是原因，今天不工作是结果。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋动词／形容词，因为＋原因。",
+      "explanation": "也可以先说结果，再用“因为”补充原因。",
+      "examples": [
+        {
+          "simplified": "我今天不出去，因为我很累。",
+          "traditional": "我今天不出去，因為我很累。",
+          "pinyin": "Wǒ jīntiān bú chūqù, yīnwèi wǒ hěn lèi.",
+          "meaning": "先说明不出去，再解释原因。"
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "为什么迟到",
+      "scene": "学生上课迟到，老师询问原因。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天为什么迟到？",
+          "traditional": "你今天為什麼遲到？",
+          "pinyin": "Nǐ jīntiān wèishénme chídào?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "因为今天下雨，路上很忙。",
+          "traditional": "因為今天下雨，路上很忙。",
+          "pinyin": "Yīnwèi jīntiān xiàyǔ, lùshang hěn máng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "哦，没关系。",
+          "traditional": "哦，沒關係。",
+          "pinyin": "Ó, méi guānxi."
+        }
+      ]
+    },
+    {
+      "title": "为什么不出去",
+      "scene": "朋友邀请对方出去，对方解释原因。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天为什么不出去？",
+          "traditional": "你今天為什麼不出去？",
+          "pinyin": "Nǐ jīntiān wèishénme bú chūqù?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "因为我很累，想在家休息。",
+          "traditional": "因為我很累，想在家休息。",
+          "pinyin": "Yīnwèi wǒ hěn lèi, xiǎng zài jiā xiūxi."
+        },
+        {
+          "speaker": "A",
+          "simplified": "好，那我们明天见。",
+          "traditional": "好，那我們明天見。",
+          "pinyin": "Hǎo, nà wǒmen míngtiān jiàn."
+        }
+      ]
+    },
+    {
+      "title": "为什么学习中文",
+      "scene": "两位朋友谈论学习中文的原因。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你为什么学习中文？",
+          "traditional": "你為什麼學習中文？",
+          "pinyin": "Nǐ wèishénme xuéxí Zhōngwén?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "因为我喜欢中国文化。",
+          "traditional": "因為我喜歡中國文化。",
+          "pinyin": "Yīnwèi wǒ xǐhuan Zhōngguó wénhuà."
+        },
+        {
+          "speaker": "A",
+          "simplified": "所以你以后想去中国吗？",
+          "traditional": "所以你以後想去中國嗎？",
+          "pinyin": "Suǒyǐ nǐ yǐhòu xiǎng qù Zhōngguó ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "对，我想去中国旅行。",
+          "traditional": "對，我想去中國旅行。",
+          "pinyin": "Duì, wǒ xiǎng qù Zhōngguó lǚxíng."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "问题与原因配对",
+      "type": "理解与配对",
+      "instructions": "教师给出“为什么不去公园”“为什么迟到”等问题，学生从原因卡片中选择合适答案。",
+      "expected_output": [
+        "因为今天下雨。",
+        "因为我生病了。",
+        "因为我没有时间。"
+      ]
+    },
+    {
+      "activity": "看图回答为什么",
+      "type": "图片表达",
+      "instructions": "教师展示下雨、生病、工作忙等图片，学生根据图片回答“为什么”。",
+      "expected_output": [
+        "因为今天下雨，所以我不出去。",
+        "因为我生病了，所以我在家休息。"
+      ]
+    },
+    {
+      "activity": "句子排序",
+      "type": "语序训练",
+      "instructions": "学生将打乱的原因和结果重新排列，组成通顺的句子。",
+      "expected_output": [
+        "因为我很忙，所以今天不去。",
+        "因为下雨，所以我们在家。"
+      ]
+    },
+    {
+      "activity": "两人问答",
+      "type": "口语互动",
+      "instructions": "两人一组轮流使用“为什么……？”提问，并用“因为……”回答。",
+      "expected_output": [
+        "A：你为什么学习中文？",
+        "B：因为我喜欢中文。"
+      ]
+    },
+    {
+      "activity": "真实生活表达",
+      "type": "自由表达",
+      "instructions": "学生根据自己的生活，说出一件今天做或不做某事的原因。",
+      "expected_output": [
+        "我今天不出去，因为我很累。",
+        "我学习中文，因为我想和中国朋友聊天。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "主题：为什么？学生选择三个真实或合理的生活情景，分别提出一个为什么问题并回答。至少一次使用“因为……，所以……”，并能够向同伴解释自己学习中文或安排活动的原因。",
+    "expected_output": "A：你今天为什么不去公园？\nB：因为今天下雨，所以我不去公园。\nA：你为什么学习中文？\nB：因为我喜欢中文，也想和中国朋友聊天。"
+  },
+  "teacher_notes": [
+    "本课重点是日常交流中的原因提问和解释，不是复杂因果复句教学。",
+    "先教“为什么”提问，再教“因为”回答，最后引入“因为……，所以……”。",
+    "“因为”可以单独引出原因作为回答，不要求每次都同时出现“所以”。",
+    "“因为……，所以……”中原因在前，结果在后。",
+    "也可以先说结果，再用“因为”补充原因，例如“我今天不出去，因为我很累”。",
+    "避免让学生机械地在所有句子中同时使用“因为”和“所以”。",
+    "词汇优先选择天气、身体状况、时间安排和学习生活中的高频内容。",
+    "通过真实问答帮助学生理解原因与结果的逻辑关系。"
+  ],
+  "completion_criteria": [
+    "能够理解“为什么”并独立提出至少三个原因问题。",
+    "能够使用“因为……”回答简单问题。",
+    "能够正确表达一个简单的原因和结果。",
+    "能够理解“因为”和“所以”在句子中的基本作用。",
+    "能够完成至少一段包含提问和解释原因的简单对话。",
+    "能够结合自己的生活表达至少两个原因。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Why? Because...",
+      "learning_objectives": [
+        "Ask why something happens.",
+        "Give simple reasons with 因为.",
+        "Connect a reason and a result with 因为……所以…….",
+        "Ask and answer questions about everyday situations."
+      ],
+      "key_expressions": {
+        "为什么？": "Why?",
+        "因为……": "Because...",
+        "因为……，所以……": "Because..., so...",
+        "你为什么……？": "Why do you...?",
+        "因为我很忙。": "Because I am busy."
+      },
+      "integrated_task": "Why? Giving reasons in everyday life"
+    },
+    "fr": {
+      "title": "Pourquoi ? Parce que...",
+      "learning_objectives": [
+        "Demander pourquoi quelque chose arrive.",
+        "Donner des raisons simples avec 因为.",
+        "Relier une cause et un résultat avec 因为……所以…….",
+        "Poser et répondre à des questions sur la vie quotidienne."
+      ],
+      "key_expressions": {
+        "为什么？": "Pourquoi ?",
+        "因为……": "Parce que...",
+        "因为……，所以……": "Parce que..., alors...",
+        "你为什么……？": "Pourquoi est-ce que tu... ?",
+        "因为我很忙。": "Parce que je suis très occupé(e)."
+      },
+      "integrated_task": "Pourquoi ? Expliquer les raisons dans la vie quotidienne"
+    },
+    "de": {
+      "title": "Warum? Weil...",
+      "learning_objectives": [
+        "Nach dem Grund für etwas fragen.",
+        "Einfache Gründe mit 因为 nennen.",
+        "Grund und Ergebnis mit 因为……所以…… verbinden.",
+        "Fragen und Antworten zu Alltagssituationen formulieren."
+      ],
+      "key_expressions": {
+        "为什么？": "Warum?",
+        "因为……": "Weil...",
+        "因为……，所以……": "Weil..., deshalb...",
+        "你为什么……？": "Warum ... du?",
+        "因为我很忙。": "Weil ich sehr beschäftigt bin."
+      },
+      "integrated_task": "Warum? Gründe im Alltag erklären"
+    },
+    "es": {
+      "title": "¿Por qué? Porque...",
+      "learning_objectives": [
+        "Preguntar por qué ocurre algo.",
+        "Dar razones sencillas con 因为.",
+        "Relacionar una causa y un resultado con 因为……所以…….",
+        "Hacer y responder preguntas sobre situaciones cotidianas."
+      ],
+      "key_expressions": {
+        "为什么？": "¿Por qué?",
+        "因为……": "Porque...",
+        "因为……，所以……": "Como..., por eso...",
+        "你为什么……？": "¿Por qué ...?",
+        "因为我很忙。": "Porque estoy muy ocupado/a."
+      },
+      "integrated_task": "¿Por qué? Explicar motivos en la vida cotidiana"
+    },
+    "it": {
+      "title": "Perché? Perché...",
+      "learning_objectives": [
+        "Chiedere perché succede qualcosa.",
+        "Dare motivazioni semplici con 因为.",
+        "Collegare una causa e un risultato con 因为……所以…….",
+        "Fare e rispondere a domande su situazioni quotidiane."
+      ],
+      "key_expressions": {
+        "为什么？": "Perché?",
+        "因为……": "Perché...",
+        "因为……，所以……": "Poiché..., quindi...",
+        "你为什么……？": "Perché ...?",
+        "因为我很忙。": "Perché sono molto impegnato/a."
+      },
+      "integrated_task": "Perché? Spiegare le ragioni nella vita quotidiana"
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T17:07:58.288485+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "本课为初版课程建设成果，后续可结合实际教学反馈调整。"
+  },
+  "title_status": "confirmed"
+}

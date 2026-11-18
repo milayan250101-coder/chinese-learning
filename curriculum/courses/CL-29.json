@@ -1,0 +1,661 @@
+{
+  "course_id": "CL-29",
+  "title": "普通动词与时间段",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 29,
+  "learning_objectives": [
+    "理解小时、分钟、天、个月、年等时间段表达。",
+    "能够使用动词和时间段描述动作持续的时间。",
+    "能够询问并回答做某件事做了多长时间。",
+    "初步掌握动词、了和时间段的常见语序。",
+    "能够介绍学习、居住、工作和等待等真实经历。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL-29-001",
+      "simplified": "小时",
+      "traditional": "小時",
+      "pinyin": "xiǎo shí",
+      "part_of_speech": "量词",
+      "definition_zh": "表示时间长度，一小时等于六十分钟。",
+      "category": "时间段",
+      "collocations": [
+        "一个小时",
+        "两个小时"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-002",
+      "simplified": "分钟",
+      "traditional": "分鐘",
+      "pinyin": "fēn zhōng",
+      "part_of_speech": "量词",
+      "definition_zh": "表示时间长度，一分钟等于六十秒。",
+      "category": "时间段",
+      "collocations": [
+        "十分钟",
+        "三十分钟"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-003",
+      "simplified": "天",
+      "traditional": "天",
+      "pinyin": "tiān",
+      "part_of_speech": "量词",
+      "definition_zh": "表示一天的时间。",
+      "category": "时间段",
+      "collocations": [
+        "三天",
+        "五天"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-004",
+      "simplified": "个月",
+      "traditional": "個月",
+      "pinyin": "ge yuè",
+      "part_of_speech": "量词",
+      "definition_zh": "表示月份的时间长度。",
+      "category": "时间段",
+      "collocations": [
+        "一个月",
+        "三个月"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-005",
+      "simplified": "年",
+      "traditional": "年",
+      "pinyin": "nián",
+      "part_of_speech": "量词",
+      "definition_zh": "表示一年的时间长度。",
+      "category": "时间段",
+      "collocations": [
+        "一年",
+        "两年"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-006",
+      "simplified": "半",
+      "traditional": "半",
+      "pinyin": "bàn",
+      "part_of_speech": "数词",
+      "definition_zh": "表示二分之一，也可以表示半小时。",
+      "category": "时间表达",
+      "collocations": [
+        "半个小时",
+        "一个半小时"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-007",
+      "simplified": "多长时间",
+      "traditional": "多長時間",
+      "pinyin": "duō cháng shí jiān",
+      "part_of_speech": "疑问短语",
+      "definition_zh": "询问一件事情持续了多少时间。",
+      "category": "时间表达",
+      "collocations": [
+        "学了多长时间",
+        "等了多长时间"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-008",
+      "simplified": "学习",
+      "traditional": "學習",
+      "pinyin": "xué xí",
+      "part_of_speech": "动词",
+      "definition_zh": "通过上课、阅读或练习获得知识。",
+      "category": "学习",
+      "collocations": [
+        "学习中文",
+        "学习两年"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-009",
+      "simplified": "住",
+      "traditional": "住",
+      "pinyin": "zhù",
+      "part_of_speech": "动词",
+      "definition_zh": "在某个地方生活或居住。",
+      "category": "生活",
+      "collocations": [
+        "住在法国",
+        "住了三年"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-010",
+      "simplified": "等",
+      "traditional": "等",
+      "pinyin": "děng",
+      "part_of_speech": "动词",
+      "definition_zh": "等待某人或某件事情。",
+      "category": "生活",
+      "collocations": [
+        "等朋友",
+        "等十分钟"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-011",
+      "simplified": "工作",
+      "traditional": "工作",
+      "pinyin": "gōng zuò",
+      "part_of_speech": "动词/名词",
+      "definition_zh": "做职业或日常工作。",
+      "category": "生活",
+      "collocations": [
+        "工作八小时",
+        "工作三年"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-012",
+      "simplified": "看",
+      "traditional": "看",
+      "pinyin": "kàn",
+      "part_of_speech": "动词",
+      "definition_zh": "用眼睛观察或阅读。",
+      "category": "生活",
+      "collocations": [
+        "看书",
+        "看两个小时"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-013",
+      "simplified": "听",
+      "traditional": "聽",
+      "pinyin": "tīng",
+      "part_of_speech": "动词",
+      "definition_zh": "用耳朵接收声音。",
+      "category": "生活",
+      "collocations": [
+        "听音乐",
+        "听半个小时"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-014",
+      "simplified": "写",
+      "traditional": "寫",
+      "pinyin": "xiě",
+      "part_of_speech": "动词",
+      "definition_zh": "用文字或符号记录内容。",
+      "category": "学习",
+      "collocations": [
+        "写汉字",
+        "写了二十分钟"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-015",
+      "simplified": "做",
+      "traditional": "做",
+      "pinyin": "zuò",
+      "part_of_speech": "动词",
+      "definition_zh": "进行某种活动或工作。",
+      "category": "生活",
+      "collocations": [
+        "做作业",
+        "做了一个小时"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-016",
+      "simplified": "休息",
+      "traditional": "休息",
+      "pinyin": "xiū xi",
+      "part_of_speech": "动词",
+      "definition_zh": "停止工作或活动，让身体放松。",
+      "category": "生活",
+      "collocations": [
+        "休息十分钟",
+        "休息半个小时"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-017",
+      "simplified": "开始",
+      "traditional": "開始",
+      "pinyin": "kāi shǐ",
+      "part_of_speech": "动词",
+      "definition_zh": "从某个时间点开始做一件事。",
+      "category": "时间表达",
+      "collocations": [
+        "开始学习",
+        "开始工作"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-018",
+      "simplified": "结束",
+      "traditional": "結束",
+      "pinyin": "jié shù",
+      "part_of_speech": "动词",
+      "definition_zh": "一件事情到此完成或停止。",
+      "category": "时间表达",
+      "collocations": [
+        "课程结束",
+        "工作结束"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-019",
+      "simplified": "已经",
+      "traditional": "已經",
+      "pinyin": "yǐ jīng",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某件事情在某个时间之前发生或达到某状态。",
+      "category": "时间表达",
+      "collocations": [
+        "已经学了",
+        "已经工作"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-29-020",
+      "simplified": "还",
+      "traditional": "還",
+      "pinyin": "hái",
+      "part_of_speech": "副词",
+      "definition_zh": "表示动作或状态继续。",
+      "category": "时间表达",
+      "collocations": [
+        "还在学习",
+        "还没结束"
+      ],
+      "is_key_vocabulary": false
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "我学了两个小时中文。",
+      "pinyin": "Wǒ xué le liǎng ge xiǎo shí Zhōngwén.",
+      "meaning_zh": "我学习中文的时间是两个小时。"
+    },
+    {
+      "expression": "他在法国住了三年。",
+      "pinyin": "Tā zài Fǎguó zhù le sān nián.",
+      "meaning_zh": "他在法国居住了三年。"
+    },
+    {
+      "expression": "我等了你十分钟。",
+      "pinyin": "Wǒ děng le nǐ shí fēn zhōng.",
+      "meaning_zh": "我等待你的时间是十分钟。"
+    },
+    {
+      "expression": "你学中文学了多长时间？",
+      "pinyin": "Nǐ xué Zhōngwén xué le duō cháng shí jiān?",
+      "meaning_zh": "询问对方学习中文持续了多久。"
+    },
+    {
+      "expression": "我工作了八个小时。",
+      "pinyin": "Wǒ gōng zuò le bā ge xiǎo shí.",
+      "meaning_zh": "我工作的时间是八个小时。"
+    },
+    {
+      "expression": "我们休息了半个小时。",
+      "pinyin": "Wǒ men xiū xi le bàn ge xiǎo shí.",
+      "meaning_zh": "我们休息了三十分钟。"
+    },
+    {
+      "expression": "她看书看了一个小时。",
+      "pinyin": "Tā kàn shū kàn le yí ge xiǎo shí.",
+      "meaning_zh": "她看书的时间是一个小时。"
+    },
+    {
+      "expression": "我已经在这里住了两年。",
+      "pinyin": "Wǒ yǐ jīng zài zhè lǐ zhù le liǎng nián.",
+      "meaning_zh": "我在这里居住已经两年了。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋动词＋了＋时间段",
+      "explanation": "表达某个动作持续了一段时间。",
+      "examples": [
+        "我工作了八个小时。",
+        "我们休息了半个小时。"
+      ]
+    },
+    {
+      "pattern": "主语＋动词＋宾语＋动词＋了＋时间段",
+      "explanation": "动词带宾语时，可以重复动词再说明持续时间。",
+      "examples": [
+        "我学中文学了两年。",
+        "她看书看了一个小时。"
+      ]
+    },
+    {
+      "pattern": "主语＋在＋地点＋动词＋了＋时间段",
+      "explanation": "表达在某个地点持续进行活动或居住一段时间。",
+      "examples": [
+        "他在法国住了三年。",
+        "我在这里工作了两个月。"
+      ]
+    },
+    {
+      "pattern": "主语＋动词＋了＋多长时间？",
+      "explanation": "询问某个动作持续了多久。",
+      "examples": [
+        "你等了多长时间？",
+        "你工作了多长时间？"
+      ]
+    },
+    {
+      "pattern": "主语＋已经＋动词＋了＋时间段",
+      "explanation": "强调到现在为止已经持续了一段时间。",
+      "examples": [
+        "我已经学了两年中文。",
+        "他已经住了三个月。"
+      ]
+    },
+    {
+      "pattern": "主语＋还在＋动词",
+      "explanation": "表示动作仍然继续。",
+      "examples": [
+        "我还在学习中文。",
+        "他还在工作。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "学习中文多长时间",
+      "scene": "两位朋友谈论学习中文的时间。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你学中文学了多长时间？",
+          "traditional": "你學中文學了多長時間？",
+          "pinyin": "Nǐ xué Zhōngwén xué le duō cháng shí jiān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我学了两年。",
+          "traditional": "我學了兩年。",
+          "pinyin": "Wǒ xué le liǎng nián."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你现在还学习吗？",
+          "traditional": "你現在還學習嗎？",
+          "pinyin": "Nǐ xiàn zài hái xué xí ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "当然，我还在学习。",
+          "traditional": "當然，我還在學習。",
+          "pinyin": "Dāng rán, wǒ hái zài xué xí."
+        }
+      ]
+    },
+    {
+      "title": "在法国生活的时间",
+      "scene": "朋友询问对方在法国居住了多久。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你在法国住了多长时间？",
+          "traditional": "你在法國住了多長時間？",
+          "pinyin": "Nǐ zài Fǎguó zhù le duō cháng shí jiān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我住了三年。",
+          "traditional": "我住了三年。",
+          "pinyin": "Wǒ zhù le sān nián."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你喜欢这里吗？",
+          "traditional": "你喜歡這裡嗎？",
+          "pinyin": "Nǐ xǐ huan zhè lǐ ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "喜欢，我已经习惯这里的生活了。",
+          "traditional": "喜歡，我已經習慣這裡的生活了。",
+          "pinyin": "Xǐ huan, wǒ yǐ jīng xí guàn zhè lǐ de shēng huó le."
+        }
+      ]
+    },
+    {
+      "title": "等朋友",
+      "scene": "两个人约好见面，其中一人迟到了。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "不好意思，你等了多长时间？",
+          "traditional": "不好意思，你等了多長時間？",
+          "pinyin": "Bù hǎo yì si, nǐ děng le duō cháng shí jiān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我等了十分钟。",
+          "traditional": "我等了十分鐘。",
+          "pinyin": "Wǒ děng le shí fēn zhōng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "对不起，让你等了。",
+          "traditional": "對不起，讓你等了。",
+          "pinyin": "Duì bu qǐ, ràng nǐ děng le."
+        },
+        {
+          "speaker": "B",
+          "simplified": "没关系，我们现在走吧。",
+          "traditional": "沒關係，我們現在走吧。",
+          "pinyin": "Méi guān xi, wǒ men xiàn zài zǒu ba."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "时间段词汇配对",
+      "type": "词汇练习",
+      "instructions": "将小时、分钟、天、个月、年与数字组合，读出正确的时间长度。",
+      "expected_output": "例如：两个小时、十分钟、三天、六个月、两年。"
+    },
+    {
+      "activity": "动作持续多久",
+      "type": "句型练习",
+      "instructions": "教师给出动作和时间段，学生组成完整句子。",
+      "expected_output": "例如：工作了八个小时。"
+    },
+    {
+      "activity": "互相采访",
+      "type": "问答互动",
+      "instructions": "两人一组，询问学习中文、居住、工作和等待等活动持续了多长时间。",
+      "expected_output": "提出至少三个问题，并用时间段回答。"
+    },
+    {
+      "activity": "纠正语序",
+      "type": "语序练习",
+      "instructions": "将打乱的词语重新排列，注意动词、宾语和时间段的位置。",
+      "expected_output": "例如：我学中文学了两年。"
+    },
+    {
+      "activity": "介绍我的学习和生活经历",
+      "type": "综合表达",
+      "instructions": "介绍自己学习语言、居住或做某项活动持续了多长时间。",
+      "expected_output": "至少使用三个不同的动词和三个时间段表达。"
+    }
+  ],
+  "integrated_expression_task": {
+    "title": "介绍我做过的事情持续了多久",
+    "instructions": "介绍自己的学习、居住、工作或休闲经历，说明至少三件事情持续了多长时间，并询问同学一件事情持续了多久。",
+    "requirements": [
+      "至少使用三个不同的动词。",
+      "至少使用三个不同的时间段表达。",
+      "至少使用一次动词＋了＋时间段结构。",
+      "至少提出一个多长时间的问题。",
+      "使用完整句子介绍真实经历。"
+    ],
+    "sample": "我学中文学了两年。我在法国住了三年。我每天听音乐半个小时。你学中文学了多长时间？"
+  },
+  "teacher_notes": [
+    "本课重点是动作持续时间，不是每周发生多少次；要与 CL-27 的次数表达区分。",
+    "小时、分钟、天、个月、年是时间长度单位，不要与几点、星期几等时间点混淆。",
+    "一次、两次回答动作发生多少回；一个小时、两年回答动作持续多久。",
+    "初级阶段先掌握动词＋了＋时间段，例如工作了八个小时。",
+    "动词带宾语时，可以使用动词重复结构，例如学中文学了两年。",
+    "我学了两年中文和我学中文学了两年都可以表达学习持续时间。",
+    "询问持续时间可以使用多长时间，不要和什么时候、几点混淆。",
+    "已经常用于强调持续至今的时间；不要把所有带了的句子都解释为动作彻底结束。",
+    "还在＋动词表示动作仍在继续，不需要展开复杂体貌理论。",
+    "优先使用学生真实的学习、居住和生活经历，避免引入复杂的持续体和结果补语。"
+  ],
+  "completion_criteria": [
+    "能够理解小时、分钟、天、个月和年等时间段单位。",
+    "能够区分动作发生次数和动作持续时间。",
+    "能够使用动词＋了＋时间段描述动作持续时间。",
+    "能够在动词带宾语时使用合适的语序表达时间段。",
+    "能够使用多长时间询问动作持续时间。",
+    "能够完成介绍个人学习或生活经历的综合表达任务。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Verbs and Duration of Time",
+      "learning_objectives": [
+        "Understand duration units such as hours, minutes, days, months and years.",
+        "Describe how long an action lasted using a verb and a time duration.",
+        "Ask and answer questions about how long an activity has lasted.",
+        "Learn common word order patterns with verbs, 了 and duration expressions.",
+        "Talk about real experiences involving study, living, work and waiting."
+      ],
+      "integrated_task": "Talk about how long you have studied, lived somewhere, worked or enjoyed activities. Describe at least three activities and ask a classmate about the duration of one activity.",
+      "key_expressions": {
+        "我学了两个小时中文。": "我学习中文的时间是两个小时。",
+        "他在法国住了三年。": "他在法国居住了三年。",
+        "我等了你十分钟。": "我等待你的时间是十分钟。",
+        "你学中文学了多长时间？": "询问对方学习中文持续了多久。",
+        "我工作了八个小时。": "我工作的时间是八个小时。",
+        "我们休息了半个小时。": "我们休息了三十分钟。",
+        "她看书看了一个小时。": "她看书的时间是一个小时。",
+        "我已经在这里住了两年。": "我在这里居住已经两年了。"
+      }
+    },
+    "fr": {
+      "title": "Les verbes et la durée",
+      "learning_objectives": [
+        "Comprendre les unités de durée : heures, minutes, jours, mois et années.",
+        "Indiquer combien de temps une action a duré avec un verbe et une durée.",
+        "Poser et répondre à des questions sur la durée d'une activité.",
+        "Apprendre l'ordre courant des mots avec le verbe, 了 et la durée.",
+        "Parler d'expériences liées aux études, au logement, au travail et à l'attente."
+      ],
+      "integrated_task": "Présentez la durée de vos études, de votre séjour dans un lieu, de votre travail ou de vos loisirs. Décrivez au moins trois activités et demandez à un camarade depuis combien de temps il pratique une activité.",
+      "key_expressions": {
+        "我学了两个小时中文。": "我学习中文的时间是两个小时。",
+        "他在法国住了三年。": "他在法国居住了三年。",
+        "我等了你十分钟。": "我等待你的时间是十分钟。",
+        "你学中文学了多长时间？": "询问对方学习中文持续了多久。",
+        "我工作了八个小时。": "我工作的时间是八个小时。",
+        "我们休息了半个小时。": "我们休息了三十分钟。",
+        "她看书看了一个小时。": "她看书的时间是一个小时。",
+        "我已经在这里住了两年。": "我在这里居住已经两年了。"
+      }
+    },
+    "de": {
+      "title": "Verben und Zeitdauer",
+      "learning_objectives": [
+        "Zeiteinheiten wie Stunden, Minuten, Tage, Monate und Jahre verstehen.",
+        "Mit einem Verb und einer Zeitangabe beschreiben, wie lange eine Handlung dauerte.",
+        "Fragen zur Dauer einer Aktivität stellen und beantworten.",
+        "Häufige Wortstellungsmuster mit Verb, 了 und Zeitdauer kennenlernen.",
+        "Über Erfahrungen mit Lernen, Wohnen, Arbeiten und Warten sprechen."
+      ],
+      "integrated_task": "Beschreibe, wie lange du gelernt, an einem Ort gewohnt, gearbeitet oder Freizeitaktivitäten ausgeübt hast. Nenne mindestens drei Aktivitäten und frage einen Mitschüler nach der Dauer einer Aktivität.",
+      "key_expressions": {
+        "我学了两个小时中文。": "我学习中文的时间是两个小时。",
+        "他在法国住了三年。": "他在法国居住了三年。",
+        "我等了你十分钟。": "我等待你的时间是十分钟。",
+        "你学中文学了多长时间？": "询问对方学习中文持续了多久。",
+        "我工作了八个小时。": "我工作的时间是八个小时。",
+        "我们休息了半个小时。": "我们休息了三十分钟。",
+        "她看书看了一个小时。": "她看书的时间是一个小时。",
+        "我已经在这里住了两年。": "我在这里居住已经两年了。"
+      }
+    },
+    "es": {
+      "title": "Verbos y duración del tiempo",
+      "learning_objectives": [
+        "Comprender unidades de duración como horas, minutos, días, meses y años.",
+        "Describir cuánto duró una acción usando un verbo y una duración.",
+        "Preguntar y responder cuánto tiempo ha durado una actividad.",
+        "Aprender el orden habitual de las palabras con el verbo, 了 y la duración.",
+        "Hablar de experiencias de estudio, residencia, trabajo y espera."
+      ],
+      "integrated_task": "Habla de cuánto tiempo has estudiado, vivido en un lugar, trabajado o realizado actividades de ocio. Describe al menos tres actividades y pregunta a un compañero cuánto tiempo lleva realizando una actividad.",
+      "key_expressions": {
+        "我学了两个小时中文。": "我学习中文的时间是两个小时。",
+        "他在法国住了三年。": "他在法国居住了三年。",
+        "我等了你十分钟。": "我等待你的时间是十分钟。",
+        "你学中文学了多长时间？": "询问对方学习中文持续了多久。",
+        "我工作了八个小时。": "我工作的时间是八个小时。",
+        "我们休息了半个小时。": "我们休息了三十分钟。",
+        "她看书看了一个小时。": "她看书的时间是一个小时。",
+        "我已经在这里住了两年。": "我在这里居住已经两年了。"
+      }
+    },
+    "it": {
+      "title": "Verbi e durata del tempo",
+      "learning_objectives": [
+        "Comprendere unità di durata come ore, minuti, giorni, mesi e anni.",
+        "Descrivere quanto è durata un'azione usando un verbo e una durata.",
+        "Fare e rispondere a domande sulla durata di un'attività.",
+        "Imparare l'ordine comune delle parole con verbo, 了 e durata.",
+        "Parlare di esperienze di studio, residenza, lavoro e attesa."
+      ],
+      "integrated_task": "Parla di quanto tempo hai studiato, vissuto in un luogo, lavorato o svolto attività nel tempo libero. Descrivi almeno tre attività e chiedi a un compagno quanto tempo dura una sua attività.",
+      "key_expressions": {
+        "我学了两个小时中文。": "我学习中文的时间是两个小时。",
+        "他在法国住了三年。": "他在法国居住了三年。",
+        "我等了你十分钟。": "我等待你的时间是十分钟。",
+        "你学中文学了多长时间？": "询问对方学习中文持续了多久。",
+        "我工作了八个小时。": "我工作的时间是八个小时。",
+        "我们休息了半个小时。": "我们休息了三十分钟。",
+        "她看书看了一个小时。": "她看书的时间是一个小时。",
+        "我已经在这里住了两年。": "我在这里居住已经两年了。"
+      }
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T19:01:27",
+    "version": 3,
+    "source": "CL-curriculum-framework",
+    "content_status": "draft",
+    "review_note": "首次完整内容写入，待检查时间段表达、动词宾语语序、教学难度及五种语言翻译。"
+  },
+  "title_status": "confirmed"
+}

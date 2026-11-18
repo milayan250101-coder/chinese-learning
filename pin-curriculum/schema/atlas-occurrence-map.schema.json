@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chinese-learning.local/pin/v2.2/schema/atlas-occurrence-map.schema.json",
+  "title": "Pinyin Town Atlas Occurrence Mapping",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "documentType",
+    "schemaVersion",
+    "sourceFiles",
+    "mappingMethod",
+    "counts",
+    "entries"
+  ],
+  "properties": {
+    "documentType": {
+      "const": "atlas_occurrence_official_vocabulary_mapping"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "sourceFiles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "officialVocabulary",
+        "visualOccurrenceIndex"
+      ],
+      "properties": {
+        "officialVocabulary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "visualOccurrenceIndex": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "mappingMethod": {
+      "type": "string",
+      "minLength": 1
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "visualOccurrences",
+        "officialVocabularyRecords",
+        "matchedOccurrences",
+        "exactMatches",
+        "hanziMatchesWithPinyinDifferences",
+        "unmatchedOccurrences",
+        "distinctOfficialVocabularyReferenced"
+      ],
+      "properties": {
+        "visualOccurrences": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "officialVocabularyRecords": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "matchedOccurrences": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "exactMatches": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hanziMatchesWithPinyinDifferences": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unmatchedOccurrences": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "distinctOfficialVocabularyReferenced": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/occurrenceEntry"
+      }
+    }
+  },
+  "$defs": {
+    "occurrenceEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "atlasOccurrenceId",
+        "officialAtlasId",
+        "matchingStatus",
+        "displayedHanzi",
+        "officialHanzi",
+        "displayedPinyin",
+        "officialPinyin",
+        "displayedEnglishMeaning",
+        "sourceSlide",
+        "sourceOrder",
+        "officialPage",
+        "sourceFlags"
+      ],
+      "properties": {
+        "atlasOccurrenceId": {
+          "type": "string",
+          "pattern": "^ATLAS-S[0-9]{2}-[0-9]{2}$"
+        },
+        "officialAtlasId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^PTA-P[0-9]{2}-[0-9]{3}$"
+        },
+        "matchingStatus": {
+          "enum": [
+            "exact_hanzi_pinyin_match",
+            "hanzi_match_pinyin_differs",
+            "no_official_match"
+          ]
+        },
+        "displayedHanzi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "officialHanzi": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "displayedPinyin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "officialPinyin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "displayedEnglishMeaning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceSlide": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sourceOrder": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "officialPage": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "sourceFlags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "matchingStatus": {
+                "const": "no_official_match"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "officialAtlasId": {
+                "type": "null"
+              },
+              "officialHanzi": {
+                "type": "null"
+              },
+              "officialPinyin": {
+                "type": "null"
+              },
+              "officialPage": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "officialAtlasId": {
+                "type": "string"
+              },
+              "officialHanzi": {
+                "type": "string"
+              },
+              "officialPinyin": {
+                "type": "string"
+              },
+              "officialPage": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

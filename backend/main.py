@@ -16,7 +16,9 @@ load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
 from backend.database import engine, Base, get_db
 from backend import auth_routes
 from backend import student_routes
+from backend import cl_course_progress_routes
 from backend.student_knowledge import routes as student_knowledge_routes
+from backend.student_knowledge import document_management
 from backend.models import LessonPlan
 from backend import topic_routes
 from backend import topic_models
@@ -27,8 +29,13 @@ from backend import esl_catalog_routes
 from backend import hsk_models
 from backend import hsk_hanzi_models
 from backend import student_profile_models
+from backend import cl_course_progress_models
+from backend import student_auth_models
+from backend import student_auth_routes
 from backend import hsk_routes
 from backend import hsk_vocabulary_routes
+from backend import hsk_knowledge_link_models
+from backend import hsk_knowledge_link_routes
 from backend.grammar import models as grammar_models
 from backend.grammar import routes as grammar_routes
 from backend.master_curriculum import models as master_curriculum_models
@@ -39,12 +46,16 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Chinese Learning Teaching Hub API")
 app.include_router(auth_routes.router)
 app.include_router(student_routes.router)
+app.include_router(cl_course_progress_routes.router)
+app.include_router(student_auth_routes.router)
 app.include_router(student_knowledge_routes.router)
+app.include_router(document_management.router)
 app.include_router(topic_routes.router)
 app.include_router(english_topic_routes.router)
 app.include_router(esl_catalog_routes.router)
 app.include_router(hsk_routes.router)
 app.include_router(hsk_vocabulary_routes.router)
+app.include_router(hsk_knowledge_link_routes.router)
 app.include_router(grammar_routes.router)
 app.include_router(master_curriculum_routes.router)
 

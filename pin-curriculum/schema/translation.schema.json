@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chinese-learning.local/pin/v2.2/schema/translation.schema.json",
+  "title": "PIN Translation Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "defaultLanguage",
+    "requiredLanguages",
+    "content"
+  ],
+  "properties": {
+    "defaultLanguage": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$"
+    },
+    "requiredLanguages": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "allOf": [
+        {
+          "contains": {
+            "const": "zh-CN"
+          },
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "const": "en"
+          },
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "const": "de"
+          },
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "const": "fr"
+          },
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "const": "es"
+          },
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "const": "it"
+          },
+          "minContains": 1
+        }
+      ],
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$"
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "zh-CN",
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it"
+      ],
+      "propertyNames": {
+        "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$"
+      },
+      "patternProperties": {
+        "^[a-z]{2,3}(-[A-Z]{2})?$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "text"
+          ],
+          "properties": {
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$comment": "Schema enforces the six baseline locales; validator enforces defaultLanguage is present in content and requiredLanguages exactly matches content keys."
+}

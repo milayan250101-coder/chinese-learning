@@ -1,0 +1,680 @@
+{
+  "course_id": "CL-28",
+  "title": "常见离合词",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 28,
+  "learning_objectives": [
+    "认识常见的离合词，理解它们由两个部分组成的特点。",
+    "能够在简单句子中正确使用见面、洗澡、睡觉、唱歌等常见离合词。",
+    "理解离合词中间可以插入次数、时间或动态助词等成分。",
+    "能够区分离合词的整体形式和分开使用时的表达。",
+    "能够在日常生活对话中自然使用常见离合词。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL-28-001",
+      "simplified": "见面",
+      "traditional": "見面",
+      "pinyin": "jiàn miàn",
+      "part_of_speech": "动词",
+      "definition_zh": "和别人见到面。",
+      "category": "社交",
+      "collocations": [
+        "见面",
+        "见一次面",
+        "和朋友见面"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-002",
+      "simplified": "睡觉",
+      "traditional": "睡覺",
+      "pinyin": "shuì jiào",
+      "part_of_speech": "动词",
+      "definition_zh": "进入睡眠状态。",
+      "category": "生活",
+      "collocations": [
+        "睡觉",
+        "睡一会儿觉",
+        "睡了八个小时的觉"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-003",
+      "simplified": "洗澡",
+      "traditional": "洗澡",
+      "pinyin": "xǐ zǎo",
+      "part_of_speech": "动词",
+      "definition_zh": "清洁身体。",
+      "category": "生活",
+      "collocations": [
+        "洗澡",
+        "洗个澡",
+        "洗了一个澡"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-004",
+      "simplified": "唱歌",
+      "traditional": "唱歌",
+      "pinyin": "chàng gē",
+      "part_of_speech": "动词",
+      "definition_zh": "用声音唱出歌曲。",
+      "category": "兴趣",
+      "collocations": [
+        "唱歌",
+        "唱一首歌",
+        "喜欢唱歌"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-005",
+      "simplified": "跳舞",
+      "traditional": "跳舞",
+      "pinyin": "tiào wǔ",
+      "part_of_speech": "动词",
+      "definition_zh": "跟着音乐做舞蹈动作。",
+      "category": "兴趣",
+      "collocations": [
+        "跳舞",
+        "跳一支舞",
+        "喜欢跳舞"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-006",
+      "simplified": "上课",
+      "traditional": "上課",
+      "pinyin": "shàng kè",
+      "part_of_speech": "动词",
+      "definition_zh": "参加课程或课堂学习。",
+      "category": "学习",
+      "collocations": [
+        "上课",
+        "上一节课",
+        "上两次课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-007",
+      "simplified": "下课",
+      "traditional": "下課",
+      "pinyin": "xià kè",
+      "part_of_speech": "动词",
+      "definition_zh": "一节课结束。",
+      "category": "学习",
+      "collocations": [
+        "下课",
+        "下课以后",
+        "快下课了"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-008",
+      "simplified": "说话",
+      "traditional": "說話",
+      "pinyin": "shuō huà",
+      "part_of_speech": "动词",
+      "definition_zh": "用语言表达自己的想法。",
+      "category": "交流",
+      "collocations": [
+        "说话",
+        "说几句话",
+        "小声说话"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-009",
+      "simplified": "帮忙",
+      "traditional": "幫忙",
+      "pinyin": "bāng máng",
+      "part_of_speech": "动词",
+      "definition_zh": "帮助别人做事情。",
+      "category": "日常",
+      "collocations": [
+        "帮忙",
+        "帮个忙",
+        "请你帮忙"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-010",
+      "simplified": "散步",
+      "traditional": "散步",
+      "pinyin": "sàn bù",
+      "part_of_speech": "动词",
+      "definition_zh": "慢慢走路，通常为了休闲或锻炼。",
+      "category": "生活",
+      "collocations": [
+        "散步",
+        "散一会儿步",
+        "饭后散步"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-011",
+      "simplified": "生气",
+      "traditional": "生氣",
+      "pinyin": "shēng qì",
+      "part_of_speech": "动词",
+      "definition_zh": "因为不高兴而产生情绪。",
+      "category": "情绪",
+      "collocations": [
+        "生气",
+        "有点儿生气",
+        "别生气"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-012",
+      "simplified": "请假",
+      "traditional": "請假",
+      "pinyin": "qǐng jià",
+      "part_of_speech": "动词",
+      "definition_zh": "因为某种原因申请不参加工作或学习。",
+      "category": "工作学习",
+      "collocations": [
+        "请假",
+        "请一天假",
+        "向老师请假"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-013",
+      "simplified": "考试",
+      "traditional": "考試",
+      "pinyin": "kǎo shì",
+      "part_of_speech": "动词/名词",
+      "definition_zh": "通过考试检查学习情况。",
+      "category": "学习",
+      "collocations": [
+        "考试",
+        "考一次试",
+        "参加考试"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-014",
+      "simplified": "理发",
+      "traditional": "理髮",
+      "pinyin": "lǐ fà",
+      "part_of_speech": "动词",
+      "definition_zh": "修剪头发。",
+      "category": "生活",
+      "collocations": [
+        "理发",
+        "理一次发",
+        "去理发"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-015",
+      "simplified": "游泳",
+      "traditional": "游泳",
+      "pinyin": "yóu yǒng",
+      "part_of_speech": "动词",
+      "definition_zh": "人在水中活动。",
+      "category": "运动",
+      "collocations": [
+        "游泳",
+        "游一会儿泳",
+        "去游泳"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-016",
+      "simplified": "聊天",
+      "traditional": "聊天",
+      "pinyin": "liáo tiān",
+      "part_of_speech": "动词",
+      "definition_zh": "和别人轻松地交谈。",
+      "category": "社交",
+      "collocations": [
+        "聊天",
+        "聊一会儿天",
+        "和朋友聊天"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-017",
+      "simplified": "结婚",
+      "traditional": "結婚",
+      "pinyin": "jié hūn",
+      "part_of_speech": "动词",
+      "definition_zh": "两个人建立婚姻关系。",
+      "category": "生活",
+      "collocations": [
+        "结婚",
+        "结过婚",
+        "准备结婚"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-018",
+      "simplified": "约会",
+      "traditional": "約會",
+      "pinyin": "yuē huì",
+      "part_of_speech": "动词",
+      "definition_zh": "和别人约定时间见面。",
+      "category": "社交",
+      "collocations": [
+        "约会",
+        "约一次会",
+        "去约会"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-019",
+      "simplified": "照相",
+      "traditional": "照相",
+      "pinyin": "zhào xiàng",
+      "part_of_speech": "动词",
+      "definition_zh": "拍摄照片。",
+      "category": "生活",
+      "collocations": [
+        "照相",
+        "照一张相",
+        "去照相"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-28-020",
+      "simplified": "发烧",
+      "traditional": "發燒",
+      "pinyin": "fā shāo",
+      "part_of_speech": "动词",
+      "definition_zh": "体温升高，通常是身体不舒服的表现。",
+      "category": "健康",
+      "collocations": [
+        "发烧",
+        "有点儿发烧",
+        "昨天发烧"
+      ],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "我昨天和朋友见了一次面。",
+      "pinyin": "Wǒ zuótiān hé péng you jiàn le yí cì miàn.",
+      "meaning_zh": "我昨天和朋友见面一次。"
+    },
+    {
+      "expression": "我每天晚上洗澡。",
+      "pinyin": "Wǒ měi tiān wǎn shang xǐ zǎo.",
+      "meaning_zh": "我每天晚上清洁身体。"
+    },
+    {
+      "expression": "我昨天睡了八个小时的觉。",
+      "pinyin": "Wǒ zuótiān shuì le bā ge xiǎo shí de jiào.",
+      "meaning_zh": "我昨天睡眠时间是八个小时。"
+    },
+    {
+      "expression": "她喜欢唱歌，也喜欢跳舞。",
+      "pinyin": "Tā xǐ huan chàng gē, yě xǐ huan tiào wǔ.",
+      "meaning_zh": "她喜欢唱歌和跳舞。"
+    },
+    {
+      "expression": "我们下课以后一起散步。",
+      "pinyin": "Wǒ men xià kè yǐ hòu yì qǐ sàn bù.",
+      "meaning_zh": "课程结束以后我们一起散步。"
+    },
+    {
+      "expression": "你可以帮我一个忙吗？",
+      "pinyin": "Nǐ kě yǐ bāng wǒ yí ge máng ma?",
+      "meaning_zh": "你可以帮助我吗？"
+    },
+    {
+      "expression": "我想和老师说几句话。",
+      "pinyin": "Wǒ xiǎng hé lǎo shī shuō jǐ jù huà.",
+      "meaning_zh": "我想和老师简单谈一谈。"
+    },
+    {
+      "expression": "他昨天请了一天假。",
+      "pinyin": "Tā zuótiān qǐng le yì tiān jià.",
+      "meaning_zh": "他昨天没有上班或上课，请了一天假。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋离合词",
+      "explanation": "离合词可以整体使用，表达一个完整动作。",
+      "examples": [
+        "我每天洗澡。",
+        "他们周末见面。"
+      ]
+    },
+    {
+      "pattern": "主语＋离合词前半部分＋次数＋后半部分",
+      "explanation": "表达动作发生的次数，次数放在离合词两个部分之间。",
+      "examples": [
+        "我和朋友见一次面。",
+        "我们一个星期见两次面。"
+      ]
+    },
+    {
+      "pattern": "主语＋离合词前半部分＋了＋数量或时间＋后半部分",
+      "explanation": "在适合的语境中，动态助词了可以出现在离合词前半部分之后。",
+      "examples": [
+        "我洗了一个澡。",
+        "他睡了八个小时的觉。"
+      ]
+    },
+    {
+      "pattern": "主语＋离合词＋时间",
+      "explanation": "简单表达动作发生的时间或日常习惯。",
+      "examples": [
+        "我晚上洗澡。",
+        "我们明天见面。"
+      ]
+    },
+    {
+      "pattern": "主语＋离合词前半部分＋数量＋后半部分＋吗？",
+      "explanation": "使用带数量的离合词结构提出简单问题。",
+      "examples": [
+        "你今天洗了一个澡吗？",
+        "你们昨天见了一次面吗？"
+      ]
+    },
+    {
+      "pattern": "主语＋想／喜欢＋离合词",
+      "explanation": "表达意愿或兴趣，后面可以直接使用离合词整体。",
+      "examples": [
+        "我喜欢唱歌。",
+        "我想和朋友见面。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "和朋友见面",
+      "scene": "两个人谈论昨天和朋友见面的情况。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你昨天做什么了？",
+          "traditional": "你昨天做什麼了？",
+          "pinyin": "Nǐ zuótiān zuò shénme le?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我和朋友见了一次面。",
+          "traditional": "我和朋友見了一次面。",
+          "pinyin": "Wǒ hé péng you jiàn le yí cì miàn."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你们一起做什么了？",
+          "traditional": "你們一起做什麼了？",
+          "pinyin": "Nǐ men yì qǐ zuò shénme le?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我们一起吃饭，还聊了一会儿天。",
+          "traditional": "我們一起吃飯，還聊了一會兒天。",
+          "pinyin": "Wǒ men yì qǐ chī fàn, hái liáo le yí huìr tiān."
+        }
+      ]
+    },
+    {
+      "title": "谈每天的生活习惯",
+      "scene": "朋友之间谈论晚上睡觉和洗澡的习惯。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你每天几点睡觉？",
+          "traditional": "你每天幾點睡覺？",
+          "pinyin": "Nǐ měi tiān jǐ diǎn shuì jiào?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我通常十一点睡觉。",
+          "traditional": "我通常十一點睡覺。",
+          "pinyin": "Wǒ tōng cháng shí yī diǎn shuì jiào."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你晚上洗澡吗？",
+          "traditional": "你晚上洗澡嗎？",
+          "pinyin": "Nǐ wǎn shang xǐ zǎo ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "洗，我每天晚上洗澡。",
+          "traditional": "洗，我每天晚上洗澡。",
+          "pinyin": "Xǐ, wǒ měi tiān wǎn shang xǐ zǎo."
+        }
+      ]
+    },
+    {
+      "title": "请同学帮忙",
+      "scene": "学生请同学帮忙，并谈论下课后的安排。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你可以帮我一个忙吗？",
+          "traditional": "你可以幫我一個忙嗎？",
+          "pinyin": "Nǐ kě yǐ bāng wǒ yí ge máng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "可以，什么事？",
+          "traditional": "可以，什麼事？",
+          "pinyin": "Kě yǐ, shénme shì?"
+        },
+        {
+          "speaker": "A",
+          "simplified": "下课以后，你可以和我说几句话吗？",
+          "traditional": "下課以後，你可以和我說幾句話嗎？",
+          "pinyin": "Xià kè yǐ hòu, nǐ kě yǐ hé wǒ shuō jǐ jù huà ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "没问题，我们下课以后聊。",
+          "traditional": "沒問題，我們下課以後聊。",
+          "pinyin": "Méi wèn tí, wǒ men xià kè yǐ hòu liáo."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "整体形式与分开形式",
+      "type": "结构识别",
+      "instructions": "观察见面、洗澡、睡觉、唱歌等词语，判断哪些句子使用整体形式，哪些句子在中间加入了数量或时间成分。",
+      "expected_output": "能够识别见面与见一次面、洗澡与洗一个澡等表达。"
+    },
+    {
+      "activity": "补全离合词",
+      "type": "句型练习",
+      "instructions": "教师提供离合词和次数或数量，学生补全句子。",
+      "expected_output": "例如：我和朋友见了两次面；我洗了一个澡。"
+    },
+    {
+      "activity": "生活习惯问答",
+      "type": "口语问答",
+      "instructions": "两人互相询问睡觉、洗澡、散步和见朋友等生活习惯。",
+      "expected_output": "能够使用至少三个离合词进行问答。"
+    },
+    {
+      "activity": "改写句子",
+      "type": "句型转换",
+      "instructions": "把简单的整体离合词表达改写成带次数或数量的表达。",
+      "expected_output": "例如：我们见面。→ 我们见了一次面。"
+    },
+    {
+      "activity": "我的一天",
+      "type": "综合表达",
+      "instructions": "介绍自己一天中的生活安排，至少使用四个本课离合词，其中两个使用分开形式。",
+      "expected_output": "能够连贯表达睡觉、洗澡、上课、聊天或散步等活动。"
+    }
+  ],
+  "integrated_expression_task": {
+    "title": "介绍我的日常生活",
+    "instructions": "介绍自己一天或一周的生活习惯，谈谈什么时候睡觉、洗澡、上课、见朋友或散步。至少使用四个本课离合词，其中至少两个使用中间插入次数、时间或数量成分的形式。",
+    "requirements": [
+      "至少正确使用四个本课离合词。",
+      "至少使用两个分开形式的离合词。",
+      "表达清楚动作发生的时间或生活场景。",
+      "能够回答同学关于生活习惯的一个问题。"
+    ],
+    "sample": "我每天晚上十一点睡觉。昨天我睡了八个小时的觉。周末我和朋友见了一次面，我们一起散步，还聊了一会儿天。"
+  },
+  "teacher_notes": [
+    "本课先帮助学生认识常见离合词，不要求初级学生掌握完整的离合词语法体系。",
+    "离合词常由动词和宾语部分组成，例如见面、洗澡、睡觉、唱歌。",
+    "离合词整体可以使用，例如我每天洗澡、我喜欢唱歌。",
+    "表达次数时，通常需要把次数放在离合词两个部分之间，例如见一次面、唱一首歌。",
+    "表达时间长度时，可以使用睡了八个小时的觉等结构。",
+    "动态助词了的位置需要结合句子结构教学，例如洗了一个澡、见了一次面。",
+    "不要把所有离合词都机械地要求学生拆开；只有在表达需要时才使用分开形式。",
+    "部分离合词的具体搭配不同，例如唱一首歌、跳一支舞、说几句话，应作为完整搭配帮助学生记忆。",
+    "本课优先练习见面、洗澡、睡觉、唱歌、跳舞、上课、说话和帮忙等常用表达。",
+    "结婚、约会、发烧等词可以结合生活场景进行理解，不必要求学生掌握复杂的扩展用法。"
+  ],
+  "completion_criteria": [
+    "能够识别至少八个常见离合词。",
+    "能够在简单句子中正确使用离合词整体形式。",
+    "能够使用次数或数量成分构成至少两个分开形式。",
+    "能够理解见面与见一次面等表达的区别。",
+    "能够在日常生活对话中使用至少四个本课离合词。",
+    "能够完成介绍个人日常生活的综合表达任务。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Common Separable Verbs",
+      "learning_objectives": [
+        "Recognize common Chinese separable verbs and their two-part structure.",
+        "Use common expressions such as meeting, bathing, sleeping and singing in simple sentences.",
+        "Understand how numbers, time expressions and aspect markers can appear between the two parts.",
+        "Distinguish between the combined form and separated forms.",
+        "Use common separable verbs in everyday conversations."
+      ],
+      "integrated_task": "Describe your daily or weekly routine. Use at least four separable verbs, including at least two forms with a number, time expression or other element inserted between the two parts.",
+      "key_expressions": {
+        "我昨天和朋友见了一次面。": "我昨天和朋友见面一次。",
+        "我每天晚上洗澡。": "我每天晚上清洁身体。",
+        "我昨天睡了八个小时的觉。": "我昨天睡眠时间是八个小时。",
+        "她喜欢唱歌，也喜欢跳舞。": "她喜欢唱歌和跳舞。",
+        "我们下课以后一起散步。": "课程结束以后我们一起散步。",
+        "你可以帮我一个忙吗？": "你可以帮助我吗？",
+        "我想和老师说几句话。": "我想和老师简单谈一谈。",
+        "他昨天请了一天假。": "他昨天没有上班或上课，请了一天假。"
+      }
+    },
+    "fr": {
+      "title": "Les verbes séparables courants",
+      "learning_objectives": [
+        "Reconnaître les verbes séparables courants et leur structure en deux parties.",
+        "Utiliser des expressions comme se rencontrer, se laver, dormir et chanter dans des phrases simples.",
+        "Comprendre comment un nombre, une durée ou une particule aspectuelle peut s'insérer entre les deux parties.",
+        "Distinguer la forme complète de la forme séparée.",
+        "Utiliser ces verbes dans des conversations quotidiennes."
+      ],
+      "integrated_task": "Présentez votre routine quotidienne ou hebdomadaire. Utilisez au moins quatre verbes séparables, dont deux formes avec un nombre, une durée ou un autre élément entre les deux parties.",
+      "key_expressions": {
+        "我昨天和朋友见了一次面。": "我昨天和朋友见面一次。",
+        "我每天晚上洗澡。": "我每天晚上清洁身体。",
+        "我昨天睡了八个小时的觉。": "我昨天睡眠时间是八个小时。",
+        "她喜欢唱歌，也喜欢跳舞。": "她喜欢唱歌和跳舞。",
+        "我们下课以后一起散步。": "课程结束以后我们一起散步。",
+        "你可以帮我一个忙吗？": "你可以帮助我吗？",
+        "我想和老师说几句话。": "我想和老师简单谈一谈。",
+        "他昨天请了一天假。": "他昨天没有上班或上课，请了一天假。"
+      }
+    },
+    "de": {
+      "title": "Häufige trennbare Verben im Chinesischen",
+      "learning_objectives": [
+        "Häufige chinesische trennbare Verben und ihren zweiteiligen Aufbau erkennen.",
+        "Ausdrücke wie sich treffen, baden, schlafen und singen in einfachen Sätzen verwenden.",
+        "Verstehen, wie Zahlen, Zeitangaben und Aspektpartikeln zwischen den beiden Teilen stehen können.",
+        "Die Gesamtform von der getrennten Form unterscheiden.",
+        "Häufige trennbare Verben in Alltagssituationen verwenden."
+      ],
+      "integrated_task": "Beschreibe deinen Tages- oder Wochenablauf. Verwende mindestens vier trennbare Verben, davon mindestens zwei mit einer eingefügten Zahl, Zeitangabe oder einem anderen Element.",
+      "key_expressions": {
+        "我昨天和朋友见了一次面。": "我昨天和朋友见面一次。",
+        "我每天晚上洗澡。": "我每天晚上清洁身体。",
+        "我昨天睡了八个小时的觉。": "我昨天睡眠时间是八个小时。",
+        "她喜欢唱歌，也喜欢跳舞。": "她喜欢唱歌和跳舞。",
+        "我们下课以后一起散步。": "课程结束以后我们一起散步。",
+        "你可以帮我一个忙吗？": "你可以帮助我吗？",
+        "我想和老师说几句话。": "我想和老师简单谈一谈。",
+        "他昨天请了一天假。": "他昨天没有上班或上课，请了一天假。"
+      }
+    },
+    "es": {
+      "title": "Verbos separables frecuentes",
+      "learning_objectives": [
+        "Reconocer verbos separables frecuentes del chino y su estructura de dos partes.",
+        "Usar expresiones como quedar, bañarse, dormir y cantar en frases sencillas.",
+        "Comprender cómo pueden aparecer números, expresiones de tiempo y partículas aspectuales entre las dos partes.",
+        "Distinguir la forma completa de la forma separada.",
+        "Usar verbos separables frecuentes en conversaciones cotidianas."
+      ],
+      "integrated_task": "Describe tu rutina diaria o semanal. Usa al menos cuatro verbos separables, incluidos dos con un número, una expresión de tiempo u otro elemento entre sus dos partes.",
+      "key_expressions": {
+        "我昨天和朋友见了一次面。": "我昨天和朋友见面一次。",
+        "我每天晚上洗澡。": "我每天晚上清洁身体。",
+        "我昨天睡了八个小时的觉。": "我昨天睡眠时间是八个小时。",
+        "她喜欢唱歌，也喜欢跳舞。": "她喜欢唱歌和跳舞。",
+        "我们下课以后一起散步。": "课程结束以后我们一起散步。",
+        "你可以帮我一个忙吗？": "你可以帮助我吗？",
+        "我想和老师说几句话。": "我想和老师简单谈一谈。",
+        "他昨天请了一天假。": "他昨天没有上班或上课，请了一天假。"
+      }
+    },
+    "it": {
+      "title": "Verbi separabili comuni",
+      "learning_objectives": [
+        "Riconoscere i verbi separabili comuni in cinese e la loro struttura in due parti.",
+        "Usare espressioni come incontrarsi, fare il bagno, dormire e cantare in frasi semplici.",
+        "Capire come numeri, espressioni di tempo e particelle aspettuali possano inserirsi tra le due parti.",
+        "Distinguere la forma completa dalla forma separata.",
+        "Usare i verbi separabili comuni nelle conversazioni quotidiane."
+      ],
+      "integrated_task": "Descrivi la tua routine quotidiana o settimanale. Usa almeno quattro verbi separabili, di cui almeno due con un numero, un'espressione di tempo o un altro elemento inserito tra le due parti.",
+      "key_expressions": {
+        "我昨天和朋友见了一次面。": "我昨天和朋友见面一次。",
+        "我每天晚上洗澡。": "我每天晚上清洁身体。",
+        "我昨天睡了八个小时的觉。": "我昨天睡眠时间是八个小时。",
+        "她喜欢唱歌，也喜欢跳舞。": "她喜欢唱歌和跳舞。",
+        "我们下课以后一起散步。": "课程结束以后我们一起散步。",
+        "你可以帮我一个忙吗？": "你可以帮助我吗？",
+        "我想和老师说几句话。": "我想和老师简单谈一谈。",
+        "他昨天请了一天假。": "他昨天没有上班或上课，请了一天假。"
+      }
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:58:03",
+    "version": 3,
+    "source": "CL-curriculum-framework",
+    "content_status": "draft",
+    "review_note": "首次内容写入，待检查离合词分类、分开形式、动量与时量搭配及五种语言翻译。"
+  },
+  "title_status": "confirmed"
+}

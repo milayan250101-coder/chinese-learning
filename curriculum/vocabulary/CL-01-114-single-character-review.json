@@ -1,0 +1,2344 @@
+{
+  "schema_version": "1.0",
+  "status": "review_proposal_not_approved",
+  "source": "curriculum/vocabulary/CL-01-114-vocabulary-candidates.json",
+  "principle": "不因单字形式删除词汇；区分独立词汇、语法功能词、构词成分和待核查词",
+  "statistics": {
+    "total": 178,
+    "independent_word": 158,
+    "grammar_function": 18,
+    "word_formation_element": 1,
+    "needs_context_review": 1
+  },
+  "items": [
+    {
+      "word": "一",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [
+        "CL-27"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "七",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "三",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "上",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-31",
+      "review_courses": [
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "下",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-31",
+      "review_courses": [
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "不",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-52",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "两",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-27",
+      "review_courses": [
+        "CL-40"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "个",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-40",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "九",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "也",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-10",
+      "review_courses": [
+        "CL-13",
+        "CL-54"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "书",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-16",
+      "review_courses": [
+        "CL-26"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "买",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-02",
+      "review_courses": [
+        "CL-05",
+        "CL-06",
+        "CL-09",
+        "CL-23",
+        "CL-33",
+        "CL-36",
+        "CL-44",
+        "CL-105"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "二",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "五",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "些",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-40",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "人",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [
+        "CL-36",
+        "CL-57"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "从",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-66",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2",
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "他",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [
+        "CL-36"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "会",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-11",
+      "review_courses": [
+        "CL-45"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "住",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-32",
+      "review_courses": [
+        "CL-65"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "你",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [
+        "CL-36"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "做",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-06",
+        "CL-08",
+        "CL-09",
+        "CL-23",
+        "CL-24",
+        "CL-33",
+        "CL-34",
+        "CL-89",
+        "CL-94",
+        "CL-101"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "元",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-40",
+      "review_courses": [
+        "CL-44"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "兔",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [],
+      "source_type": "CL_extension_candidate"
+    },
+    {
+      "word": "八",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "六",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "再",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-13",
+      "review_courses": [
+        "CL-30"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "写",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-45",
+        "CL-89",
+        "CL-94",
+        "CL-101"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "冷",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-41",
+        "CL-48",
+        "CL-55",
+        "CL-108"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "几",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-27",
+      "review_courses": [
+        "CL-40"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "刀",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-76",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "到",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-32",
+      "review_courses": [
+        "CL-66",
+        "CL-68",
+        "CL-70",
+        "CL-71"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "前",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-31",
+      "review_courses": [
+        "CL-68",
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "包",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-16",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "十",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "千",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-40",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "半",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-29",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1",
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "卖",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-44",
+      "review_courses": [
+        "CL-105"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "去",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-02",
+      "review_courses": [
+        "CL-05",
+        "CL-06",
+        "CL-09",
+        "CL-23",
+        "CL-24",
+        "CL-32",
+        "CL-33",
+        "CL-34",
+        "CL-36",
+        "CL-70",
+        "CL-71",
+        "CL-88",
+        "CL-93"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "叫",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1",
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "右",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-68",
+      "review_courses": [
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "吃",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-02",
+      "review_courses": [
+        "CL-05",
+        "CL-06",
+        "CL-09",
+        "CL-23",
+        "CL-36",
+        "CL-92",
+        "CL-95"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "后",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-31",
+      "review_courses": [
+        "CL-68",
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "听",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-23",
+        "CL-26",
+        "CL-45",
+        "CL-85",
+        "CL-86"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "和",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-10",
+      "review_courses": [
+        "CL-54"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk7-9"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "咸",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-50",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "哪",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-56",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "唱",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-26",
+      "review_courses": [
+        "CL-85",
+        "CL-86"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "喝",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-02",
+      "review_courses": [
+        "CL-05",
+        "CL-06",
+        "CL-23",
+        "CL-36",
+        "CL-92"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "四",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "回",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-32",
+      "review_courses": [
+        "CL-33",
+        "CL-34",
+        "CL-70",
+        "CL-71",
+        "CL-88",
+        "CL-96"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "国",
+      "review_status": "word_formation_element",
+      "review_reason": "优先结合国家、中国等完整词语教学",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "在",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-08",
+      "review_courses": [
+        "CL-32",
+        "CL-36",
+        "CL-65",
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "坏",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-42",
+      "review_courses": [
+        "CL-52",
+        "CL-56",
+        "CL-59"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "坐",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-71",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "块",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-40",
+      "review_courses": [
+        "CL-44"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "墙",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-72",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "外",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-31",
+      "review_courses": [
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "多",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-37"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "大",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-37",
+        "CL-38",
+        "CL-51",
+        "CL-52",
+        "CL-53",
+        "CL-55",
+        "CL-56",
+        "CL-58",
+        "CL-59",
+        "CL-82",
+        "CL-106"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "天",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-27",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "太",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-42",
+      "review_courses": [
+        "CL-53"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "她",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "好",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-42",
+        "CL-49",
+        "CL-52",
+        "CL-53",
+        "CL-55",
+        "CL-56",
+        "CL-59"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk2",
+        "hsk4",
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "学",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-24",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "家",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-04",
+      "review_courses": [
+        "CL-08",
+        "CL-32",
+        "CL-62",
+        "CL-63",
+        "CL-65",
+        "CL-79",
+        "CL-97",
+        "CL-111"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "小",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-37",
+        "CL-38",
+        "CL-51",
+        "CL-52",
+        "CL-53",
+        "CL-55",
+        "CL-56",
+        "CL-58",
+        "CL-59",
+        "CL-82",
+        "CL-106"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "少",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-37"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "层",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-63",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "属",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk6"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "岁",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [
+        "CL-39",
+        "CL-57"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "左",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-68",
+      "review_courses": [
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "年",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-39",
+      "review_courses": [
+        "CL-109"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "床",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-74",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "店",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-04",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "很",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-42",
+      "review_courses": [
+        "CL-53"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "忙",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-47",
+        "CL-49",
+        "CL-55",
+        "CL-57"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "快",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-46",
+      "review_courses": [
+        "CL-51",
+        "CL-52",
+        "CL-59",
+        "CL-69",
+        "CL-82"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "您",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "想",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-11",
+        "CL-36",
+        "CL-104"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "慢",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-46",
+      "review_courses": [
+        "CL-51",
+        "CL-52",
+        "CL-59",
+        "CL-69",
+        "CL-82"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "我",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [
+        "CL-36",
+        "CL-65",
+        "CL-90"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "拐",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-68",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk6"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "新",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-37",
+      "review_courses": [
+        "CL-39",
+        "CL-51",
+        "CL-58",
+        "CL-106"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "日",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-109",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1",
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "旧",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-37",
+      "review_courses": [
+        "CL-51"
+      ],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "早",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-46",
+      "review_courses": [
+        "CL-69"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "是",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-33",
+      "review_courses": [
+        "CL-35",
+        "CL-36"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "晚",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-46",
+      "review_courses": [
+        "CL-69"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "更",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-53",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "最",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-53",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "月",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-109",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "来",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-32",
+      "review_courses": [
+        "CL-33",
+        "CL-34",
+        "CL-70",
+        "CL-71",
+        "CL-88",
+        "CL-96"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "楼",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-63",
+      "review_courses": [
+        "CL-72"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "次",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-27",
+      "review_courses": [
+        "CL-30"
+      ],
+      "hsk_levels": [
+        "hsk2",
+        "hsk7-9"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "歌",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-26",
+      "review_courses": [
+        "CL-86"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "比",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-51",
+      "review_courses": [
+        "CL-52"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "毛",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-82",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3",
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "水",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-15",
+      "review_courses": [
+        "CL-22",
+        "CL-76",
+        "CL-77",
+        "CL-112"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "洗",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-91",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "热",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-12",
+      "review_courses": [
+        "CL-41",
+        "CL-48",
+        "CL-55",
+        "CL-108"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "熊",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-81",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "爱",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-47",
+      "review_courses": [
+        "CL-84",
+        "CL-90"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "牛",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-80",
+      "review_courses": [
+        "CL-81",
+        "CL-83"
+      ],
+      "hsk_levels": [
+        "hsk3",
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "狗",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-80",
+      "review_courses": [
+        "CL-81",
+        "CL-83",
+        "CL-84"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "猪",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "猫",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-80",
+      "review_courses": [
+        "CL-81",
+        "CL-84"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "猴",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [],
+      "source_type": "CL_extension_candidate"
+    },
+    {
+      "word": "玩",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-23",
+        "CL-26",
+        "CL-85",
+        "CL-88"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "甜",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-50",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "画",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-89",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "疼",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-48",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2",
+        "hsk6"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "病",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-48",
+      "review_courses": [
+        "CL-107"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "瘦",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-38",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "白",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-43",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "百",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-40",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "的",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-33",
+      "review_courses": [
+        "CL-35",
+        "CL-36"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "直",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-68",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "看",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-06",
+        "CL-09",
+        "CL-23",
+        "CL-26",
+        "CL-85",
+        "CL-86",
+        "CL-88",
+        "CL-89",
+        "CL-94",
+        "CL-101"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "短",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-37",
+      "review_courses": [
+        "CL-59",
+        "CL-82"
+      ],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "矮",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-38",
+      "review_courses": [
+        "CL-57",
+        "CL-82"
+      ],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "碗",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-76",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "穿",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-106",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "第",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-24",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "粥",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-92",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk6"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "累",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-47",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "红",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-43",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "绿",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-43",
+      "review_courses": [],
+      "hsk_levels": [],
+      "source_type": "CL_extension_candidate"
+    },
+    {
+      "word": "羊",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-80",
+      "review_courses": [
+        "CL-81",
+        "CL-83"
+      ],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "老",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-39",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3",
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "胖",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-38",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "能",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-11",
+      "review_courses": [
+        "CL-45"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "脸",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-91",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "船",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-67",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "花",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-69",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2",
+        "hsk6"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "苦",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-50",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "茶",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-15",
+      "review_courses": [
+        "CL-22",
+        "CL-112"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "药",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-107",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "菜",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-14",
+      "review_courses": [
+        "CL-21",
+        "CL-50",
+        "CL-112"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "蓝",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-43",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "虎",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [],
+      "source_type": "CL_extension_candidate"
+    },
+    {
+      "word": "蛇",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "要",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-06",
+      "review_courses": [
+        "CL-11",
+        "CL-36",
+        "CL-104"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "讲",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-103",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "说",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-45",
+        "CL-101",
+        "CL-103"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "读",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-05",
+      "review_courses": [
+        "CL-45",
+        "CL-94"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "谁",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-34",
+      "review_courses": [
+        "CL-35"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "贵",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-44",
+      "review_courses": [
+        "CL-51",
+        "CL-56",
+        "CL-58",
+        "CL-59"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "走",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-71",
+      "review_courses": [
+        "CL-88",
+        "CL-96"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "路",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-62",
+      "review_courses": [
+        "CL-68",
+        "CL-71"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "跳",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-85",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "车",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-67",
+      "review_courses": [
+        "CL-71"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "辣",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-50",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "边",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-31",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "达",
+      "review_status": "needs_context_review",
+      "review_reason": "疑似从完整词语拆出，需核对原课程语境",
+      "first_learning_course": "CL-70",
+      "review_courses": [],
+      "hsk_levels": [],
+      "source_type": "CL_extension_candidate"
+    },
+    {
+      "word": "近",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-66",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "还",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-10",
+      "review_courses": [
+        "CL-13",
+        "CL-30"
+      ],
+      "hsk_levels": [
+        "hsk1",
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "远",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-66",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "都",
+      "review_status": "grammar_function",
+      "review_reason": "具有语法或功能意义，保留并标注语法类别",
+      "first_learning_course": "CL-10",
+      "review_courses": [
+        "CL-13",
+        "CL-54"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "酸",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-50",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk4"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "里",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-31",
+      "review_courses": [
+        "CL-78"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "钱",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-16",
+      "review_courses": [
+        "CL-44",
+        "CL-105"
+      ],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "长",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-37",
+      "review_courses": [
+        "CL-51",
+        "CL-59",
+        "CL-82"
+      ],
+      "hsk_levels": [
+        "hsk2",
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "门",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-72",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "问",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-103",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "难",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-45",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3",
+        "hsk6"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "零",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-01",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "鞋",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-106",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "饭",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-95",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk1"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "马",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-80",
+      "review_courses": [
+        "CL-81",
+        "CL-83"
+      ],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "高",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-38",
+      "review_courses": [
+        "CL-51",
+        "CL-53",
+        "CL-57",
+        "CL-59",
+        "CL-82"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "鱼",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-80",
+      "review_courses": [
+        "CL-81"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "鸟",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-80",
+      "review_courses": [
+        "CL-81"
+      ],
+      "hsk_levels": [
+        "hsk2"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "鸡",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk3"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "黄",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-43",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk6"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "黑",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-43",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    },
+    {
+      "word": "鼠",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [],
+      "source_type": "CL_extension_candidate"
+    },
+    {
+      "word": "龙",
+      "review_status": "independent_word",
+      "review_reason": "具有独立词义，作为单字词汇候选保留",
+      "first_learning_course": "CL-83",
+      "review_courses": [],
+      "hsk_levels": [
+        "hsk5"
+      ],
+      "source_type": "HSK_2025"
+    }
+  ]
+}

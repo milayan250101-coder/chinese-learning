@@ -1,0 +1,870 @@
+{
+  "documentType": "PIN_ATLAS_SOURCE_VISUAL_INDEX",
+  "schemaVersion": "2.2.0",
+  "sourceFile": "🌹拼音英语词汇Pinyin_Town_Atlas.pptx",
+  "sourceAuthority": "User-designated authoritative source; original Chinese, pinyin and source meaning are preserved as displayed.",
+  "inspectionMethod": "Visual inspection of the 14 vocabulary slides (slides 2–15); slide 1 is the cover. Text is embedded in slide images rather than editable slide text.",
+  "counts": {
+    "totalVocabularyOccurrences": 92,
+    "uniqueHanziLabels": 90,
+    "contentSlidesReviewed": 14,
+    "coverSlidesExcluded": 1
+  },
+  "entries": [
+    {
+      "atlasOccurrenceId": "ATLAS-S02-01",
+      "sourceSlide": 2,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "阿姨",
+      "pinyinAsDisplayed": "ā yí",
+      "englishMeaningAsDisplayed": "aunt",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S02-02",
+      "sourceSlide": 2,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "乌鸦",
+      "pinyinAsDisplayed": "wū yā",
+      "englishMeaningAsDisplayed": "crow",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S02-03",
+      "sourceSlide": 2,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "下雨 / 雨",
+      "pinyinAsDisplayed": "yǔ",
+      "englishMeaningAsDisplayed": "rain / it rains",
+      "sourceFlags": [],
+      "userConfirmation": {
+        "status": "confirmed_no_translation_issue",
+        "note": "用户已确认该条目原有英文释义 “rain / it rains” 正确；保留 Atlas 原始汉字、拼音及释义，不再列为翻译问题。"
+      }
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S02-04",
+      "sourceSlide": 2,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "意大利",
+      "pinyinAsDisplayed": "yì dà lì",
+      "englishMeaningAsDisplayed": "Italy",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S02-05",
+      "sourceSlide": 2,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "五",
+      "pinyinAsDisplayed": "wǔ",
+      "englishMeaningAsDisplayed": "five",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S02-06",
+      "sourceSlide": 2,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "青蛙",
+      "pinyinAsDisplayed": "qīng wā",
+      "englishMeaningAsDisplayed": "frog",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S02-07",
+      "sourceSlide": 2,
+      "sourceOrder": 7,
+      "hanziAsDisplayed": "握手",
+      "pinyinAsDisplayed": "wò shǒu",
+      "englishMeaningAsDisplayed": "shake hands",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-01",
+      "sourceSlide": 3,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "爸爸",
+      "pinyinAsDisplayed": "bà ba",
+      "englishMeaningAsDisplayed": "dad / papa",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-02",
+      "sourceSlide": 3,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "妈妈",
+      "pinyinAsDisplayed": "mā ma",
+      "englishMeaningAsDisplayed": "mom / mama",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-03",
+      "sourceSlide": 3,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "大佛",
+      "pinyinAsDisplayed": "dà fó",
+      "englishMeaningAsDisplayed": "big Buddha",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-04",
+      "sourceSlide": 3,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "婆婆",
+      "pinyinAsDisplayed": "pó po",
+      "englishMeaningAsDisplayed": "grandma / mother-in-law",
+      "sourceFlags": [],
+      "userConfirmation": {
+        "status": "confirmed_no_translation_issue",
+        "note": "用户已确认该条目原有英文释义 “grandma / mother-in-law” 正确；保留 Atlas 原始汉字、拼音及释义，不再列为翻译问题。"
+      }
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-05",
+      "sourceSlide": 3,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "沙发",
+      "pinyinAsDisplayed": "shā fā",
+      "englishMeaningAsDisplayed": "sofa / couch",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-06",
+      "sourceSlide": 3,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "菠萝",
+      "pinyinAsDisplayed": "bō luó",
+      "englishMeaningAsDisplayed": "pineapple",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S03-07",
+      "sourceSlide": 3,
+      "sourceOrder": 7,
+      "hanziAsDisplayed": "木马",
+      "pinyinAsDisplayed": "mù mǎ",
+      "englishMeaningAsDisplayed": "wooden horse / hobbyhorse",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S04-01",
+      "sourceSlide": 4,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "弟弟",
+      "pinyinAsDisplayed": "dì di",
+      "englishMeaningAsDisplayed": "brother",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S04-02",
+      "sourceSlide": 4,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "你好",
+      "pinyinAsDisplayed": "nǐ hǎo",
+      "englishMeaningAsDisplayed": "hello / hi",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S04-03",
+      "sourceSlide": 4,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "大肚子",
+      "pinyinAsDisplayed": "dà dù zi",
+      "englishMeaningAsDisplayed": "big belly",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S04-04",
+      "sourceSlide": 4,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "打鼓",
+      "pinyinAsDisplayed": "dǎ gǔ",
+      "englishMeaningAsDisplayed": "play the drum",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S04-05",
+      "sourceSlide": 4,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "马路",
+      "pinyinAsDisplayed": "mǎ lù",
+      "englishMeaningAsDisplayed": "road / street",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S05-01",
+      "sourceSlide": 5,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "哥哥",
+      "pinyinAsDisplayed": "gē ge",
+      "englishMeaningAsDisplayed": "brother",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S05-02",
+      "sourceSlide": 5,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "哈哈哈哈",
+      "pinyinAsDisplayed": "hā hā hā",
+      "englishMeaningAsDisplayed": "ha ha ha",
+      "sourceFlags": [
+        "SOURCE_CHARACTER_COUNT_AND_PINYIN_SYLLABLE_COUNT_MISMATCH"
+      ]
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S05-03",
+      "sourceSlide": 5,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "火锅",
+      "pinyinAsDisplayed": "huǒ guō",
+      "englishMeaningAsDisplayed": "hot pot",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S05-04",
+      "sourceSlide": 5,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "华为",
+      "pinyinAsDisplayed": "huá wéi",
+      "englishMeaningAsDisplayed": "Huawei",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S05-05",
+      "sourceSlide": 5,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "可乐",
+      "pinyinAsDisplayed": "kě lè",
+      "englishMeaningAsDisplayed": "cola",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S05-06",
+      "sourceSlide": 5,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "咖啡",
+      "pinyinAsDisplayed": "kā fēi",
+      "englishMeaningAsDisplayed": "coffee",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S05-07",
+      "sourceSlide": 5,
+      "sourceOrder": 7,
+      "hanziAsDisplayed": "咖喱",
+      "pinyinAsDisplayed": "gā lí",
+      "englishMeaningAsDisplayed": "curry",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S06-01",
+      "sourceSlide": 6,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "飞机",
+      "pinyinAsDisplayed": "fēi jī",
+      "englishMeaningAsDisplayed": "plane / airplane",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S06-02",
+      "sourceSlide": 6,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "橘子",
+      "pinyinAsDisplayed": "jú zi",
+      "englishMeaningAsDisplayed": "orange",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S06-03",
+      "sourceSlide": 6,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "骑马",
+      "pinyinAsDisplayed": "qí mǎ",
+      "englishMeaningAsDisplayed": "ride a horse",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S06-04",
+      "sourceSlide": 6,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "母鸡",
+      "pinyinAsDisplayed": "mǔ jī",
+      "englishMeaningAsDisplayed": "hen",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S06-05",
+      "sourceSlide": 6,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "西瓜",
+      "pinyinAsDisplayed": "xī guā",
+      "englishMeaningAsDisplayed": "watermelon",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S06-06",
+      "sourceSlide": 6,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "汽车",
+      "pinyinAsDisplayed": "qì chē",
+      "englishMeaningAsDisplayed": "car",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S07-01",
+      "sourceSlide": 7,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "司机",
+      "pinyinAsDisplayed": "sī jī",
+      "englishMeaningAsDisplayed": "driver",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S07-02",
+      "sourceSlide": 7,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "擦桌子",
+      "pinyinAsDisplayed": "cā zhuō zi",
+      "englishMeaningAsDisplayed": "clean the table",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S07-03",
+      "sourceSlide": 7,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "瓷器",
+      "pinyinAsDisplayed": "cí qì",
+      "englishMeaningAsDisplayed": "porcelain / china",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S07-04",
+      "sourceSlide": 7,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "昨天",
+      "pinyinAsDisplayed": "zuó tiān",
+      "englishMeaningAsDisplayed": "yesterday",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S07-05",
+      "sourceSlide": 7,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "四",
+      "pinyinAsDisplayed": "sì",
+      "englishMeaningAsDisplayed": "four",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S08-01",
+      "sourceSlide": 8,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "竹子",
+      "pinyinAsDisplayed": "zhú zi",
+      "englishMeaningAsDisplayed": "bamboo",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S08-02",
+      "sourceSlide": 8,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "蜘蛛",
+      "pinyinAsDisplayed": "zhī zhū",
+      "englishMeaningAsDisplayed": "spider",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S08-03",
+      "sourceSlide": 8,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "日落",
+      "pinyinAsDisplayed": "rì luò",
+      "englishMeaningAsDisplayed": "sunset",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S08-04",
+      "sourceSlide": 8,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "喝茶",
+      "pinyinAsDisplayed": "hē chá",
+      "englishMeaningAsDisplayed": "drink tea",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S08-05",
+      "sourceSlide": 8,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "狮子",
+      "pinyinAsDisplayed": "shī zi",
+      "englishMeaningAsDisplayed": "lion",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S08-06",
+      "sourceSlide": 8,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "树",
+      "pinyinAsDisplayed": "shù",
+      "englishMeaningAsDisplayed": "tree",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S09-01",
+      "sourceSlide": 9,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "大海",
+      "pinyinAsDisplayed": "dà hǎi",
+      "englishMeaningAsDisplayed": "sea / ocean",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S09-02",
+      "sourceSlide": 9,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "妹妹",
+      "pinyinAsDisplayed": "mèi mei",
+      "englishMeaningAsDisplayed": "younger sister",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S09-03",
+      "sourceSlide": 9,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "很累",
+      "pinyinAsDisplayed": "hěn lèi",
+      "englishMeaningAsDisplayed": "very tired",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S09-04",
+      "sourceSlide": 9,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "乌龟排队",
+      "pinyinAsDisplayed": "wū guī pái duì",
+      "englishMeaningAsDisplayed": "turtles lining up",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S09-05",
+      "sourceSlide": 9,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "大白菜",
+      "pinyinAsDisplayed": "dà bái cài",
+      "englishMeaningAsDisplayed": "Chinese cabbage",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S09-06",
+      "sourceSlide": 9,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "杯子",
+      "pinyinAsDisplayed": "bēi zi",
+      "englishMeaningAsDisplayed": "cup",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S09-07",
+      "sourceSlide": 9,
+      "sourceOrder": 7,
+      "hanziAsDisplayed": "睡觉",
+      "pinyinAsDisplayed": "shuì jiào",
+      "englishMeaningAsDisplayed": "sleep",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-01",
+      "sourceSlide": 10,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "小猫",
+      "pinyinAsDisplayed": "xiǎo māo",
+      "englishMeaningAsDisplayed": "kitten / little cat",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-02",
+      "sourceSlide": 10,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "帽子",
+      "pinyinAsDisplayed": "mào zi",
+      "englishMeaningAsDisplayed": "hat",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-03",
+      "sourceSlide": 10,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "猴子",
+      "pinyinAsDisplayed": "hóu zi",
+      "englishMeaningAsDisplayed": "monkey",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-04",
+      "sourceSlide": 10,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "气球",
+      "pinyinAsDisplayed": "qì qiú",
+      "englishMeaningAsDisplayed": "balloon",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-05",
+      "sourceSlide": 10,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "大狗",
+      "pinyinAsDisplayed": "dà gǒu",
+      "englishMeaningAsDisplayed": "big dog",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-06",
+      "sourceSlide": 10,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "土豆",
+      "pinyinAsDisplayed": "tǔ dòu",
+      "englishMeaningAsDisplayed": "potato",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-07",
+      "sourceSlide": 10,
+      "sourceOrder": 7,
+      "hanziAsDisplayed": "足球",
+      "pinyinAsDisplayed": "zú qiú",
+      "englishMeaningAsDisplayed": "football / soccer",
+      "sourceFlags": [
+        "DUPLICATE_VISUAL_OCCURRENCE_PRESERVE_OCCURRENCE"
+      ]
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-08",
+      "sourceSlide": 10,
+      "sourceOrder": 8,
+      "hanziAsDisplayed": "奶牛",
+      "pinyinAsDisplayed": "nǎi niú",
+      "englishMeaningAsDisplayed": "cow / dairy cow",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-09",
+      "sourceSlide": 10,
+      "sourceOrder": 9,
+      "hanziAsDisplayed": "牛奶",
+      "pinyinAsDisplayed": "niú nǎi",
+      "englishMeaningAsDisplayed": "milk",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-10",
+      "sourceSlide": 10,
+      "sourceOrder": 10,
+      "hanziAsDisplayed": "草莓",
+      "pinyinAsDisplayed": "cǎo méi",
+      "englishMeaningAsDisplayed": "strawberry",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S10-11",
+      "sourceSlide": 10,
+      "sourceOrder": 11,
+      "hanziAsDisplayed": "足球",
+      "pinyinAsDisplayed": "zú qiú",
+      "englishMeaningAsDisplayed": "football / soccer",
+      "sourceFlags": [
+        "DUPLICATE_VISUAL_OCCURRENCE_PRESERVE_OCCURRENCE"
+      ]
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S11-01",
+      "sourceSlide": 11,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "月牙",
+      "pinyinAsDisplayed": "yuè yá",
+      "englishMeaningAsDisplayed": "crescent moon",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S11-02",
+      "sourceSlide": 11,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "雪花",
+      "pinyinAsDisplayed": "xuě huā",
+      "englishMeaningAsDisplayed": "snowflake",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S11-03",
+      "sourceSlide": 11,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "大街",
+      "pinyinAsDisplayed": "dà jiē",
+      "englishMeaningAsDisplayed": "main street",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S11-04",
+      "sourceSlide": 11,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "孔雀",
+      "pinyinAsDisplayed": "kǒng què",
+      "englishMeaningAsDisplayed": "peacock",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S11-05",
+      "sourceSlide": 11,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "儿子",
+      "pinyinAsDisplayed": "ér zi",
+      "englishMeaningAsDisplayed": "son",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S11-06",
+      "sourceSlide": 11,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "耳朵",
+      "pinyinAsDisplayed": "ěr duo",
+      "englishMeaningAsDisplayed": "ear",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S11-07",
+      "sourceSlide": 11,
+      "sourceOrder": 7,
+      "hanziAsDisplayed": "二十",
+      "pinyinAsDisplayed": "èr shí",
+      "englishMeaningAsDisplayed": "twenty",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S12-01",
+      "sourceSlide": 12,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "端盘子",
+      "pinyinAsDisplayed": "duān pán zi",
+      "englishMeaningAsDisplayed": "carry plates",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S12-02",
+      "sourceSlide": 12,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "软面包",
+      "pinyinAsDisplayed": "ruǎn miàn bāo",
+      "englishMeaningAsDisplayed": "soft bread",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S12-03",
+      "sourceSlide": 12,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "米饭",
+      "pinyinAsDisplayed": "mǐ fàn",
+      "englishMeaningAsDisplayed": "rice",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S12-04",
+      "sourceSlide": 12,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "眼睛",
+      "pinyinAsDisplayed": "yǎn jīng",
+      "englishMeaningAsDisplayed": "eye",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S12-05",
+      "sourceSlide": 12,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "剪刀",
+      "pinyinAsDisplayed": "jiǎn dāo",
+      "englishMeaningAsDisplayed": "scissors",
+      "sourceFlags": [
+        "DUPLICATE_VISUAL_OCCURRENCE_PRESERVE_OCCURRENCE"
+      ]
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S12-06",
+      "sourceSlide": 12,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "剪刀",
+      "pinyinAsDisplayed": "jiǎn dāo",
+      "englishMeaningAsDisplayed": "scissors",
+      "sourceFlags": [
+        "DUPLICATE_VISUAL_OCCURRENCE_PRESERVE_OCCURRENCE"
+      ]
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S13-01",
+      "sourceSlide": 13,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "听音乐",
+      "pinyinAsDisplayed": "tīng yīn yuè",
+      "englishMeaningAsDisplayed": "listen to music",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S13-02",
+      "sourceSlide": 13,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "军人",
+      "pinyinAsDisplayed": "jūn rén",
+      "englishMeaningAsDisplayed": "soldier",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S13-03",
+      "sourceSlide": 13,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "白云",
+      "pinyinAsDisplayed": "bái yún",
+      "englishMeaningAsDisplayed": "white clouds",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S13-04",
+      "sourceSlide": 13,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "裙子",
+      "pinyinAsDisplayed": "qún zi",
+      "englishMeaningAsDisplayed": "skirt",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S13-05",
+      "sourceSlide": 13,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "车轮",
+      "pinyinAsDisplayed": "chē lún",
+      "englishMeaningAsDisplayed": "wheel",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S13-06",
+      "sourceSlide": 13,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "拼音",
+      "pinyinAsDisplayed": "pīn yīn",
+      "englishMeaningAsDisplayed": "Pinyin",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S14-01",
+      "sourceSlide": 14,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "两个",
+      "pinyinAsDisplayed": "liǎng ge",
+      "englishMeaningAsDisplayed": "two",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S14-02",
+      "sourceSlide": 14,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "望远镜",
+      "pinyinAsDisplayed": "wàng yuǎn jìng",
+      "englishMeaningAsDisplayed": "telescope",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S14-03",
+      "sourceSlide": 14,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "海浪",
+      "pinyinAsDisplayed": "hǎi làng",
+      "englishMeaningAsDisplayed": "wave",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S14-04",
+      "sourceSlide": 14,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "蒙面",
+      "pinyinAsDisplayed": "méng miàn",
+      "englishMeaningAsDisplayed": "cover one's face",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S14-05",
+      "sourceSlide": 14,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "红绿灯",
+      "pinyinAsDisplayed": "hóng lǜ dēng",
+      "englishMeaningAsDisplayed": "traffic light",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S14-06",
+      "sourceSlide": 14,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "钉子",
+      "pinyinAsDisplayed": "dīng zi",
+      "englishMeaningAsDisplayed": "nail",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S15-01",
+      "sourceSlide": 15,
+      "sourceOrder": 1,
+      "hanziAsDisplayed": "星星",
+      "pinyinAsDisplayed": "xīng xing",
+      "englishMeaningAsDisplayed": "star",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S15-02",
+      "sourceSlide": 15,
+      "sourceOrder": 2,
+      "hanziAsDisplayed": "北京",
+      "pinyinAsDisplayed": "běi jīng",
+      "englishMeaningAsDisplayed": "Beijing",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S15-03",
+      "sourceSlide": 15,
+      "sourceOrder": 3,
+      "hanziAsDisplayed": "熊猫",
+      "pinyinAsDisplayed": "xióng māo",
+      "englishMeaningAsDisplayed": "panda",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S15-04",
+      "sourceSlide": 15,
+      "sourceOrder": 4,
+      "hanziAsDisplayed": "鸟笼",
+      "pinyinAsDisplayed": "niǎo lóng",
+      "englishMeaningAsDisplayed": "birdcage",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S15-05",
+      "sourceSlide": 15,
+      "sourceOrder": 5,
+      "hanziAsDisplayed": "游泳",
+      "pinyinAsDisplayed": "yóu yǒng",
+      "englishMeaningAsDisplayed": "swim",
+      "sourceFlags": []
+    },
+    {
+      "atlasOccurrenceId": "ATLAS-S15-06",
+      "sourceSlide": 15,
+      "sourceOrder": 6,
+      "hanziAsDisplayed": "红色",
+      "pinyinAsDisplayed": "hóng sè",
+      "englishMeaningAsDisplayed": "red",
+      "sourceFlags": []
+    }
+  ],
+  "reviewNotes": [
+    "This index records what is visibly displayed in the source; it does not rewrite or correct Atlas content.",
+    "Repeated items are retained as separate occurrences so source placement is not lost.",
+    "Course-to-Atlas mapping for all 19 course files remains pending; current v2.2 course files are placeholders, not imported lesson content."
+  ],
+  "userConfirmedTranslationItems": [
+    "ATLAS-S02-03",
+    "ATLAS-S03-04"
+  ]
+}

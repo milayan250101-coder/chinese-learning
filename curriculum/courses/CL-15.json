@@ -1,0 +1,663 @@
+{
+  "course_id": "CL-15",
+  "title": "常见饮料",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 15,
+  "learning_objectives": [
+    "能够识别并说出日常生活中常见的饮料名称。",
+    "能够使用喝、买、要等动词描述饮料需求。",
+    "能够使用热、冷、冰等简单词语描述饮料。",
+    "能够询问别人想喝什么并表达自己的喜好。",
+    "能够在商店或饮品店进行简单的饮料点选。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL15-001",
+      "simplified": "水",
+      "traditional": "水",
+      "pinyin": "shuǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "日常饮用的水。",
+      "category": "基本饮品",
+      "collocations": [
+        "喝水",
+        "一杯水"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-002",
+      "simplified": "白开水",
+      "traditional": "白開水",
+      "pinyin": "báikāishuǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "烧开后放凉或保温的饮用水。",
+      "category": "基本饮品",
+      "collocations": [
+        "喝白开水"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-003",
+      "simplified": "矿泉水",
+      "traditional": "礦泉水",
+      "pinyin": "kuàngquánshuǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "装瓶销售的饮用水。",
+      "category": "基本饮品",
+      "collocations": [
+        "买矿泉水"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-004",
+      "simplified": "茶",
+      "traditional": "茶",
+      "pinyin": "chá",
+      "part_of_speech": "名词",
+      "definition_zh": "用茶叶泡制的饮品。",
+      "category": "茶类",
+      "collocations": [
+        "喝茶",
+        "一杯茶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-005",
+      "simplified": "绿茶",
+      "traditional": "綠茶",
+      "pinyin": "lǜchá",
+      "part_of_speech": "名词",
+      "definition_zh": "一种常见的茶。",
+      "category": "茶类",
+      "collocations": [
+        "喝绿茶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-006",
+      "simplified": "红茶",
+      "traditional": "紅茶",
+      "pinyin": "hóngchá",
+      "part_of_speech": "名词",
+      "definition_zh": "一种常见的茶。",
+      "category": "茶类",
+      "collocations": [
+        "喝红茶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-007",
+      "simplified": "奶茶",
+      "traditional": "奶茶",
+      "pinyin": "nǎichá",
+      "part_of_speech": "名词",
+      "definition_zh": "加入奶或奶制品的茶饮。",
+      "category": "茶类",
+      "collocations": [
+        "喝奶茶",
+        "买奶茶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-008",
+      "simplified": "咖啡",
+      "traditional": "咖啡",
+      "pinyin": "kāfēi",
+      "part_of_speech": "名词",
+      "definition_zh": "一种常见的饮品。",
+      "category": "咖啡类",
+      "collocations": [
+        "喝咖啡",
+        "一杯咖啡"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-009",
+      "simplified": "牛奶",
+      "traditional": "牛奶",
+      "pinyin": "niúnǎi",
+      "part_of_speech": "名词",
+      "definition_zh": "常见的乳制饮品。",
+      "category": "乳制饮品",
+      "collocations": [
+        "喝牛奶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-010",
+      "simplified": "豆浆",
+      "traditional": "豆漿",
+      "pinyin": "dòujiāng",
+      "part_of_speech": "名词",
+      "definition_zh": "用大豆制作的饮品。",
+      "category": "植物饮品",
+      "collocations": [
+        "喝豆浆"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-011",
+      "simplified": "果汁",
+      "traditional": "果汁",
+      "pinyin": "guǒzhī",
+      "part_of_speech": "名词",
+      "definition_zh": "用水果制作的汁液饮品。",
+      "category": "果汁类",
+      "collocations": [
+        "喝果汁"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-012",
+      "simplified": "苹果汁",
+      "traditional": "蘋果汁",
+      "pinyin": "píngguǒzhī",
+      "part_of_speech": "名词",
+      "definition_zh": "用苹果制作的果汁。",
+      "category": "果汁类",
+      "collocations": [
+        "喝苹果汁"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-013",
+      "simplified": "橙汁",
+      "traditional": "橙汁",
+      "pinyin": "chéngzhī",
+      "part_of_speech": "名词",
+      "definition_zh": "用橙子制作的果汁。",
+      "category": "果汁类",
+      "collocations": [
+        "喝橙汁"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-014",
+      "simplified": "汽水",
+      "traditional": "汽水",
+      "pinyin": "qìshuǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "有气泡的甜味饮料。",
+      "category": "其他饮料",
+      "collocations": [
+        "喝汽水"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-015",
+      "simplified": "可乐",
+      "traditional": "可樂",
+      "pinyin": "kělè",
+      "part_of_speech": "名词",
+      "definition_zh": "一种常见的碳酸饮料。",
+      "category": "其他饮料",
+      "collocations": [
+        "喝可乐",
+        "一瓶可乐"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-016",
+      "simplified": "啤酒",
+      "traditional": "啤酒",
+      "pinyin": "píjiǔ",
+      "part_of_speech": "名词",
+      "definition_zh": "一种含酒精的饮品。",
+      "category": "其他饮料",
+      "collocations": [
+        "喝啤酒"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-017",
+      "simplified": "热水",
+      "traditional": "熱水",
+      "pinyin": "rèshuǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "温度较高的水。",
+      "category": "温度表达",
+      "collocations": [
+        "喝热水"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-018",
+      "simplified": "冰水",
+      "traditional": "冰水",
+      "pinyin": "bīngshuǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "温度很低或加入冰的水。",
+      "category": "温度表达",
+      "collocations": [
+        "喝冰水"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-019",
+      "simplified": "热饮",
+      "traditional": "熱飲",
+      "pinyin": "rèyǐn",
+      "part_of_speech": "名词",
+      "definition_zh": "温度较高的饮品。",
+      "category": "温度表达",
+      "collocations": [
+        "买热饮"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL15-020",
+      "simplified": "冷饮",
+      "traditional": "冷飲",
+      "pinyin": "lěngyǐn",
+      "part_of_speech": "名词",
+      "definition_zh": "温度较低的饮品。",
+      "category": "温度表达",
+      "collocations": [
+        "买冷饮"
+      ],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "我想喝水。",
+      "pinyin": "Wǒ xiǎng hē shuǐ.",
+      "meaning_zh": "表达想喝水。"
+    },
+    {
+      "expression": "我每天喝茶。",
+      "pinyin": "Wǒ měitiān hē chá.",
+      "meaning_zh": "描述日常饮用习惯。"
+    },
+    {
+      "expression": "我喜欢喝咖啡。",
+      "pinyin": "Wǒ xǐhuan hē kāfēi.",
+      "meaning_zh": "表达饮料喜好。"
+    },
+    {
+      "expression": "我不喝可乐。",
+      "pinyin": "Wǒ bù hē kělè.",
+      "meaning_zh": "表达不喝某种饮料。"
+    },
+    {
+      "expression": "你想喝什么？",
+      "pinyin": "Nǐ xiǎng hē shénme?",
+      "meaning_zh": "询问别人想喝什么。"
+    },
+    {
+      "expression": "我要一杯热茶。",
+      "pinyin": "Wǒ yào yì bēi rè chá.",
+      "meaning_zh": "点选一杯热饮。"
+    },
+    {
+      "expression": "你要热的还是冷的？",
+      "pinyin": "Nǐ yào rè de háishi lěng de?",
+      "meaning_zh": "询问冷热选择。"
+    },
+    {
+      "expression": "请给我一瓶水。",
+      "pinyin": "Qǐng gěi wǒ yì píng shuǐ.",
+      "meaning_zh": "礼貌地提出购买或取用需求。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋想／要＋喝＋饮料。",
+      "explanation": "表达想喝或需要某种饮料。",
+      "examples": [
+        "我想喝水。",
+        "我要喝果汁。"
+      ]
+    },
+    {
+      "pattern": "主语＋喜欢／不喜欢＋喝＋饮料。",
+      "explanation": "表达对饮料的喜好。",
+      "examples": [
+        "我喜欢喝茶。",
+        "我不喜欢喝咖啡。"
+      ]
+    },
+    {
+      "pattern": "主语＋每天／经常＋喝＋饮料。",
+      "explanation": "描述日常饮用习惯。",
+      "examples": [
+        "我每天喝水。",
+        "她经常喝牛奶。"
+      ]
+    },
+    {
+      "pattern": "你＋想喝＋什么？",
+      "explanation": "询问别人想喝的饮料。",
+      "examples": [
+        "你想喝什么？",
+        "你今天想喝什么？"
+      ]
+    },
+    {
+      "pattern": "主语＋要＋数量词＋饮料。",
+      "explanation": "表达购买或点选饮料的数量。",
+      "examples": [
+        "我要一杯茶。",
+        "我要两瓶水。"
+      ]
+    },
+    {
+      "pattern": "主语＋要＋热的／冷的＋饮料。",
+      "explanation": "表达对饮料温度的选择。",
+      "examples": [
+        "我要热的茶。",
+        "我想喝冷的水。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "朋友之间选择饮料",
+      "scene": "两位朋友在一起讨论喝什么。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你想喝什么？",
+          "traditional": "你想喝什麼？",
+          "pinyin": "Nǐ xiǎng hē shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想喝茶。",
+          "traditional": "我想喝茶。",
+          "pinyin": "Wǒ xiǎng hē chá."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你喜欢喝红茶还是绿茶？",
+          "traditional": "你喜歡喝紅茶還是綠茶？",
+          "pinyin": "Nǐ xǐhuan hē hóngchá háishi lǜchá?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我喜欢喝绿茶。",
+          "traditional": "我喜歡喝綠茶。",
+          "pinyin": "Wǒ xǐhuan hē lǜchá."
+        }
+      ]
+    },
+    {
+      "title": "在饮品店点饮料",
+      "scene": "顾客在饮品店选择饮料。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你好，你要喝什么？",
+          "traditional": "你好，你要喝什麼？",
+          "pinyin": "Nǐ hǎo, nǐ yào hē shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我要一杯奶茶。",
+          "traditional": "我要一杯奶茶。",
+          "pinyin": "Wǒ yào yì bēi nǎichá."
+        },
+        {
+          "speaker": "A",
+          "simplified": "要热的还是冷的？",
+          "traditional": "要熱的還是冷的？",
+          "pinyin": "Yào rè de háishi lěng de?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我要冷的，谢谢。",
+          "traditional": "我要冷的，謝謝。",
+          "pinyin": "Wǒ yào lěng de, xièxie."
+        }
+      ]
+    },
+    {
+      "title": "在商店买水",
+      "scene": "顾客在商店购买饮料。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你要买什么？",
+          "traditional": "你要買什麼？",
+          "pinyin": "Nǐ yào mǎi shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想买两瓶矿泉水。",
+          "traditional": "我想買兩瓶礦泉水。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng píng kuàngquánshuǐ."
+        },
+        {
+          "speaker": "A",
+          "simplified": "还要别的吗？",
+          "traditional": "還要別的嗎？",
+          "pinyin": "Hái yào bié de ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "不要了，谢谢。",
+          "traditional": "不要了，謝謝。",
+          "pinyin": "Bú yào le, xièxie."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "饮料图片分类",
+      "type": "词汇理解",
+      "instructions": "根据图片将饮料分成水、茶、咖啡、乳制饮品和其他饮料。",
+      "expected_output": [
+        "水：白开水、矿泉水",
+        "茶：绿茶、红茶、奶茶",
+        "咖啡：咖啡",
+        "乳制饮品：牛奶",
+        "其他：果汁、汽水、可乐"
+      ]
+    },
+    {
+      "activity": "我喜欢喝什么",
+      "type": "口语表达",
+      "instructions": "选择三种喜欢的饮料和一种不喜欢的饮料，分别造句。",
+      "expected_output": [
+        "我喜欢喝茶。",
+        "我喜欢喝果汁。",
+        "我不喜欢喝可乐。"
+      ]
+    },
+    {
+      "activity": "冷热选择问答",
+      "type": "句型练习",
+      "instructions": "两人一组，轮流询问对方想喝热饮还是冷饮。",
+      "expected_output": [
+        "你要热的还是冷的？",
+        "我要热的。"
+      ]
+    },
+    {
+      "activity": "饮品店角色扮演",
+      "type": "情景表达",
+      "instructions": "一人扮演店员，一人扮演顾客，练习选择饮料和数量。",
+      "expected_output": [
+        "我要一杯咖啡。",
+        "请给我一瓶水。"
+      ]
+    },
+    {
+      "activity": "我的饮料习惯",
+      "type": "综合表达",
+      "instructions": "用四至六句话介绍自己平时喝什么、喜欢什么以及不喜欢什么。",
+      "expected_output": [
+        "我每天喝水。",
+        "我喜欢喝茶。",
+        "我不喜欢喝可乐。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "介绍自己的饮料习惯。说一说平时喝什么、喜欢什么、不喜欢什么，以及今天想买什么饮料。使用四至六句话完成介绍。",
+    "expected_output": [
+      "我每天喝水。",
+      "我喜欢喝茶和牛奶。",
+      "我不喜欢喝可乐。",
+      "今天我想买一瓶矿泉水。"
+    ]
+  },
+  "teacher_notes": [
+    "本课重点是常见饮料名称和日常饮用表达，不要求学生学习复杂饮品制作方法。",
+    "喝通常搭配饮料；买、要、想等动词用于表达购买和选择。",
+    "水、白开水、矿泉水是不同范围的词语，初级阶段通过图片和实物解释即可。",
+    "热水、冰水、热饮、冷饮用于温度表达，不要求讲解复杂温度描述。",
+    "一杯、一瓶等量词应结合真实容器进行练习。",
+    "茶、绿茶、红茶之间是类别关系，不需要扩展茶叶制作知识。",
+    "果汁可以搭配不同水果名称，但本课不要求大量学习水果词汇。",
+    "奶茶、咖啡等饮料在不同地区有不同做法，教学时以词语理解和日常表达为主。",
+    "啤酒是含酒精饮品，仅作为词汇识别，不安排饮酒活动或鼓励饮用。",
+    "本课重点是饮料词汇、喝的搭配、喜好和简单点单，不把复杂比较句或饮料制作过程作为教学目标。"
+  ],
+  "completion_criteria": [
+    "能够识别并说出至少十二种常见饮料。",
+    "能够正确使用喝描述饮料。",
+    "能够询问并回答想喝什么。",
+    "能够使用喜欢和不喜欢表达饮料偏好。",
+    "能够使用一杯、一瓶等数量表达进行简单点单。",
+    "能够用四至六句话介绍自己的饮料习惯。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Common Drinks",
+      "learning_objectives": [
+        "Recognize and name common everyday drinks.",
+        "Use verbs such as drink, buy and want to talk about drinks.",
+        "Describe drinks using simple words for hot and cold.",
+        "Ask what someone would like to drink and express preferences.",
+        "Order or choose drinks in a shop or drink store."
+      ],
+      "key_expressions": {
+        "我想喝水。": "I want to drink water.",
+        "我每天喝茶。": "I drink tea every day.",
+        "我喜欢喝咖啡。": "I like drinking coffee.",
+        "我不喝可乐。": "I don't drink cola.",
+        "你想喝什么？": "What would you like to drink?",
+        "我要一杯热茶。": "I'd like a cup of hot tea.",
+        "你要热的还是冷的？": "Would you like it hot or cold?",
+        "请给我一瓶水。": "Please give me a bottle of water."
+      },
+      "integrated_task": "Describe your drinking habits."
+    },
+    "fr": {
+      "title": "Les boissons courantes",
+      "learning_objectives": [
+        "Reconnaître et nommer les boissons courantes.",
+        "Utiliser des verbes comme boire, acheter et vouloir pour parler des boissons.",
+        "Décrire simplement les boissons chaudes et froides.",
+        "Demander ce que quelqu'un souhaite boire et exprimer ses préférences.",
+        "Choisir ou commander une boisson dans un magasin."
+      ],
+      "key_expressions": {
+        "我想喝水。": "Je voudrais boire de l'eau.",
+        "我每天喝茶。": "Je bois du thé tous les jours.",
+        "我喜欢喝咖啡。": "J'aime boire du café.",
+        "我不喝可乐。": "Je ne bois pas de cola.",
+        "你想喝什么？": "Qu'est-ce que tu voudrais boire ?",
+        "我要一杯热茶。": "Je voudrais une tasse de thé chaud.",
+        "你要热的还是冷的？": "Tu le veux chaud ou froid ?",
+        "请给我一瓶水。": "Donnez-moi une bouteille d'eau, s'il vous plaît."
+      },
+      "integrated_task": "Présentez vos habitudes de consommation de boissons."
+    },
+    "de": {
+      "title": "Häufige Getränke",
+      "learning_objectives": [
+        "Häufige Getränke im Alltag erkennen und benennen.",
+        "Verben wie trinken, kaufen und möchten verwenden.",
+        "Getränke mit einfachen Wörtern für heiß und kalt beschreiben.",
+        "Fragen, was jemand trinken möchte, und Vorlieben ausdrücken.",
+        "In einem Geschäft einfache Getränke auswählen und bestellen."
+      ],
+      "key_expressions": {
+        "我想喝水。": "Ich möchte Wasser trinken.",
+        "我每天喝茶。": "Ich trinke jeden Tag Tee.",
+        "我喜欢喝咖啡。": "Ich trinke gern Kaffee.",
+        "我不喝可乐。": "Ich trinke keine Cola.",
+        "你想喝什么？": "Was möchtest du trinken?",
+        "我要一杯热茶。": "Ich möchte eine Tasse heißen Tee.",
+        "你要热的还是冷的？": "Möchtest du es heiß oder kalt?",
+        "请给我一瓶水。": "Bitte geben Sie mir eine Flasche Wasser."
+      },
+      "integrated_task": "Beschreibe deine Trinkgewohnheiten."
+    },
+    "es": {
+      "title": "Bebidas habituales",
+      "learning_objectives": [
+        "Reconocer y nombrar bebidas habituales.",
+        "Usar verbos como beber, comprar y querer para hablar de bebidas.",
+        "Describir bebidas con palabras sencillas como caliente y fría.",
+        "Preguntar qué quiere beber otra persona y expresar preferencias.",
+        "Elegir y pedir bebidas en una tienda."
+      ],
+      "key_expressions": {
+        "我想喝水。": "Quiero beber agua.",
+        "我每天喝茶。": "Bebo té todos los días.",
+        "我喜欢喝咖啡。": "Me gusta beber café.",
+        "我不喝可乐。": "No bebo cola.",
+        "你想喝什么？": "¿Qué quieres beber?",
+        "我要一杯热茶。": "Quiero una taza de té caliente.",
+        "你要热的还是冷的？": "¿Lo quieres caliente o frío?",
+        "请给我一瓶水。": "Deme una botella de agua, por favor."
+      },
+      "integrated_task": "Describe tus hábitos al beber."
+    },
+    "it": {
+      "title": "Bevande comuni",
+      "learning_objectives": [
+        "Riconoscere e nominare le bevande più comuni.",
+        "Usare verbi come bere, comprare e volere per parlare delle bevande.",
+        "Descrivere le bevande con parole semplici come caldo e freddo.",
+        "Chiedere cosa desidera bere un'altra persona ed esprimere preferenze.",
+        "Scegliere e ordinare bevande in un negozio."
+      ],
+      "key_expressions": {
+        "我想喝水。": "Voglio bere dell'acqua.",
+        "我每天喝茶。": "Bevo tè ogni giorno.",
+        "我喜欢喝咖啡。": "Mi piace bere il caffè.",
+        "我不喝可乐。": "Non bevo cola.",
+        "你想喝什么？": "Che cosa vuoi bere?",
+        "我要一杯热茶。": "Vorrei una tazza di tè caldo.",
+        "你要热的还是冷的？": "Lo vuoi caldo o freddo?",
+        "请给我一瓶水。": "Mi dia una bottiglia d'acqua, per favore."
+      },
+      "integrated_task": "Descrivi le tue abitudini riguardo alle bevande."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:07:16.802130+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
+  },
+  "title_status": "confirmed"
+}

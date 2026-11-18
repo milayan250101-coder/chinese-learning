@@ -1,0 +1,16 @@
+{
+  "name": "pin-curriculum-schema-v2-2",
+  "version": "2.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate:pin": "node scripts/validate-pin.mjs",
+    "validate:atlas": "node scripts/validate-atlas.mjs",
+    "generate:placeholders": "node scripts/generate-course-placeholders.mjs",
+    "test": "node tests/run-tests.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

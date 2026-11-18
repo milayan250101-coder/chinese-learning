@@ -1,0 +1,682 @@
+{
+  "course_id": "CL-17",
+  "title": "常见地点词汇",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 17,
+  "learning_objectives": [
+    "能够识别并说出二十个常见生活地点。",
+    "能够使用“去＋地点”表达前往某个地方。",
+    "能够使用“在＋地点”说明人所在的位置。",
+    "能够询问地点在哪里，并理解简单的位置回答。",
+    "能够结合地点和日常动词，介绍自己常去的地方及活动。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL17-001",
+      "simplified": "家",
+      "traditional": "家",
+      "pinyin": "jiā",
+      "part_of_speech": "名词",
+      "definition_zh": "自己和家人生活的地方。",
+      "category": "生活地点",
+      "collocations": [
+        "回家",
+        "在家"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-002",
+      "simplified": "学校",
+      "traditional": "學校",
+      "pinyin": "xuéxiào",
+      "part_of_speech": "名词",
+      "definition_zh": "学生学习的地方。",
+      "category": "学习地点",
+      "collocations": [
+        "去学校",
+        "在学校学习"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-003",
+      "simplified": "公司",
+      "traditional": "公司",
+      "pinyin": "gōngsī",
+      "part_of_speech": "名词",
+      "definition_zh": "很多人工作的地方。",
+      "category": "工作地点",
+      "collocations": [
+        "去公司",
+        "在公司工作"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-004",
+      "simplified": "办公室",
+      "traditional": "辦公室",
+      "pinyin": "bàngōngshì",
+      "part_of_speech": "名词",
+      "definition_zh": "在公司或其他单位里工作的房间。",
+      "category": "工作地点",
+      "collocations": [
+        "在办公室",
+        "办公室里"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-005",
+      "simplified": "超市",
+      "traditional": "超市",
+      "pinyin": "chāoshì",
+      "part_of_speech": "名词",
+      "definition_zh": "可以买食品和日常用品的商店。",
+      "category": "购物地点",
+      "collocations": [
+        "去超市",
+        "在超市买东西"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-006",
+      "simplified": "商店",
+      "traditional": "商店",
+      "pinyin": "shāngdiàn",
+      "part_of_speech": "名词",
+      "definition_zh": "可以买东西的地方。",
+      "category": "购物地点",
+      "collocations": [
+        "去商店",
+        "商店里"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-007",
+      "simplified": "餐厅",
+      "traditional": "餐廳",
+      "pinyin": "cāntīng",
+      "part_of_speech": "名词",
+      "definition_zh": "可以吃饭的地方。",
+      "category": "餐饮地点",
+      "collocations": [
+        "去餐厅",
+        "在餐厅吃饭"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-008",
+      "simplified": "咖啡馆",
+      "traditional": "咖啡館",
+      "pinyin": "kāfēiguǎn",
+      "part_of_speech": "名词",
+      "definition_zh": "可以买咖啡、坐下来休息的地方。",
+      "category": "餐饮地点",
+      "collocations": [
+        "去咖啡馆",
+        "在咖啡馆喝咖啡"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-009",
+      "simplified": "医院",
+      "traditional": "醫院",
+      "pinyin": "yīyuàn",
+      "part_of_speech": "名词",
+      "definition_zh": "看病和接受治疗的地方。",
+      "category": "公共服务地点",
+      "collocations": [
+        "去医院",
+        "在医院看病"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-010",
+      "simplified": "药店",
+      "traditional": "藥店",
+      "pinyin": "yàodiàn",
+      "part_of_speech": "名词",
+      "definition_zh": "可以买药的商店。",
+      "category": "公共服务地点",
+      "collocations": [
+        "去药店",
+        "在药店买药"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-011",
+      "simplified": "银行",
+      "traditional": "銀行",
+      "pinyin": "yínháng",
+      "part_of_speech": "名词",
+      "definition_zh": "可以存钱、取钱和办理银行业务的地方。",
+      "category": "公共服务地点",
+      "collocations": [
+        "去银行",
+        "在银行取钱"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-012",
+      "simplified": "邮局",
+      "traditional": "郵局",
+      "pinyin": "yóujú",
+      "part_of_speech": "名词",
+      "definition_zh": "可以寄信和寄东西的地方。",
+      "category": "公共服务地点",
+      "collocations": [
+        "去邮局",
+        "在邮局寄信"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-013",
+      "simplified": "图书馆",
+      "traditional": "圖書館",
+      "pinyin": "túshūguǎn",
+      "part_of_speech": "名词",
+      "definition_zh": "可以看书、借书和学习的地方。",
+      "category": "学习地点",
+      "collocations": [
+        "去图书馆",
+        "在图书馆看书"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-014",
+      "simplified": "公园",
+      "traditional": "公園",
+      "pinyin": "gōngyuán",
+      "part_of_speech": "名词",
+      "definition_zh": "可以散步、休息和活动的地方。",
+      "category": "休闲地点",
+      "collocations": [
+        "去公园",
+        "在公园散步"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-015",
+      "simplified": "电影院",
+      "traditional": "電影院",
+      "pinyin": "diànyǐngyuàn",
+      "part_of_speech": "名词",
+      "definition_zh": "可以看电影的地方。",
+      "category": "休闲地点",
+      "collocations": [
+        "去电影院",
+        "在电影院看电影"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-016",
+      "simplified": "车站",
+      "traditional": "車站",
+      "pinyin": "chēzhàn",
+      "part_of_speech": "名词",
+      "definition_zh": "乘坐火车或其他公共交通工具的地方。",
+      "category": "交通地点",
+      "collocations": [
+        "去车站",
+        "在车站等车"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-017",
+      "simplified": "机场",
+      "traditional": "機場",
+      "pinyin": "jīchǎng",
+      "part_of_speech": "名词",
+      "definition_zh": "飞机起飞和降落、乘客乘坐飞机的地方。",
+      "category": "交通地点",
+      "collocations": [
+        "去机场",
+        "在机场等飞机"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-018",
+      "simplified": "酒店",
+      "traditional": "酒店",
+      "pinyin": "jiǔdiàn",
+      "part_of_speech": "名词",
+      "definition_zh": "旅行或外出时可以住宿的地方。",
+      "category": "住宿地点",
+      "collocations": [
+        "住酒店",
+        "在酒店休息"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-019",
+      "simplified": "厕所",
+      "traditional": "廁所",
+      "pinyin": "cèsuǒ",
+      "part_of_speech": "名词",
+      "definition_zh": "人们上厕所的地方。",
+      "category": "公共设施",
+      "collocations": [
+        "去厕所",
+        "厕所在哪里"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL17-020",
+      "simplified": "教室",
+      "traditional": "教室",
+      "pinyin": "jiàoshì",
+      "part_of_speech": "名词",
+      "definition_zh": "老师上课、学生学习的房间。",
+      "category": "学习地点",
+      "collocations": [
+        "在教室上课",
+        "走进教室"
+      ],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "你去哪儿？",
+      "pinyin": "Nǐ qù nǎr?",
+      "meaning_zh": "询问对方要去什么地方。"
+    },
+    {
+      "expression": "我去学校。",
+      "pinyin": "Wǒ qù xuéxiào.",
+      "meaning_zh": "说明自己要去的地点。"
+    },
+    {
+      "expression": "你在哪里？",
+      "pinyin": "Nǐ zài nǎlǐ?",
+      "meaning_zh": "询问某人现在的位置。"
+    },
+    {
+      "expression": "我在家。",
+      "pinyin": "Wǒ zài jiā.",
+      "meaning_zh": "说明自己现在所在的地点。"
+    },
+    {
+      "expression": "超市在哪里？",
+      "pinyin": "Chāoshì zài nǎlǐ?",
+      "meaning_zh": "询问某个地点的位置。"
+    },
+    {
+      "expression": "我在餐厅吃饭。",
+      "pinyin": "Wǒ zài cāntīng chīfàn.",
+      "meaning_zh": "说明自己在某个地点做什么。"
+    },
+    {
+      "expression": "我从家去公司。",
+      "pinyin": "Wǒ cóng jiā qù gōngsī.",
+      "meaning_zh": "说明从哪里出发、去哪里。"
+    },
+    {
+      "expression": "学校在我家附近。",
+      "pinyin": "Xuéxiào zài wǒ jiā fùjìn.",
+      "meaning_zh": "简单说明一个地点的位置。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋去＋地点",
+      "explanation": "表达去某个地方。",
+      "examples": [
+        "我去学校。",
+        "她去超市。"
+      ]
+    },
+    {
+      "pattern": "主语＋在＋地点",
+      "explanation": "表达某人现在所在的位置。",
+      "examples": [
+        "我在家。",
+        "他在公司。"
+      ]
+    },
+    {
+      "pattern": "地点＋在哪里？",
+      "explanation": "询问某个地点的位置。",
+      "examples": [
+        "医院在哪里？",
+        "厕所在哪里？"
+      ]
+    },
+    {
+      "pattern": "主语＋在＋地点＋动词",
+      "explanation": "表达某人在某个地点进行什么活动。",
+      "examples": [
+        "我在图书馆看书。",
+        "她在餐厅吃饭。"
+      ]
+    },
+    {
+      "pattern": "主语＋从＋地点＋去＋地点",
+      "explanation": "表达出发地点和目的地。",
+      "examples": [
+        "我从家去学校。",
+        "他从公司去车站。"
+      ]
+    },
+    {
+      "pattern": "地点＋在＋位置＋附近",
+      "explanation": "简单说明一个地点在另一个地点附近。",
+      "examples": [
+        "学校在我家附近。",
+        "超市在银行附近。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "询问学校在哪里",
+      "scene": "两位朋友在路上寻找学校。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "请问，学校在哪里？",
+          "traditional": "请问，学校在哪里？",
+          "pinyin": "Qǐngwèn, xuéxiào zài nǎlǐ?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "学校在前面。",
+          "traditional": "学校在前面。",
+          "pinyin": "Xuéxiào zài qiánmiàn."
+        },
+        {
+          "speaker": "A",
+          "simplified": "谢谢！",
+          "traditional": "谢谢！",
+          "pinyin": "Xièxie!"
+        },
+        {
+          "speaker": "B",
+          "simplified": "不客气。",
+          "traditional": "不客气。",
+          "pinyin": "Bú kèqi."
+        }
+      ]
+    },
+    {
+      "title": "说说现在在哪里",
+      "scene": "两位朋友打电话，询问对方的位置。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你现在在哪里？",
+          "traditional": "你现在在哪里？",
+          "pinyin": "Nǐ xiànzài zài nǎlǐ?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我在超市。",
+          "traditional": "我在超市。",
+          "pinyin": "Wǒ zài chāoshì."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你去超市做什么？",
+          "traditional": "你去超市做什么？",
+          "pinyin": "Nǐ qù chāoshì zuò shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我买东西。",
+          "traditional": "我买东西。",
+          "pinyin": "Wǒ mǎi dōngxi."
+        }
+      ]
+    },
+    {
+      "title": "介绍日常路线",
+      "scene": "两位同事聊每天上班的路线。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你每天去哪儿上班？",
+          "traditional": "你每天去哪儿上班？",
+          "pinyin": "Nǐ měitiān qù nǎr shàngbān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我去公司上班。",
+          "traditional": "我去公司上班。",
+          "pinyin": "Wǒ qù gōngsī shàngbān."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你从家去公司吗？",
+          "traditional": "你从家去公司吗？",
+          "pinyin": "Nǐ cóng jiā qù gōngsī ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "对，我从家坐车去公司。",
+          "traditional": "对，我从家坐车去公司。",
+          "pinyin": "Duì, wǒ cóng jiā zuò chē qù gōngsī."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "地点词汇图片配对",
+      "type": "词汇理解",
+      "instructions": "看图片，说出地点名称，并把地点分成学习、工作、购物、餐饮、交通和休闲等类别。",
+      "expected_output": [
+        "学习地点：学校、图书馆、教室",
+        "工作地点：公司、办公室",
+        "购物地点：超市、商店",
+        "餐饮地点：餐厅、咖啡馆",
+        "交通地点：车站、机场"
+      ]
+    },
+    {
+      "activity": "你去哪儿？",
+      "type": "口语问答",
+      "instructions": "两人一组轮流抽取地点卡片，使用“你去哪儿？”提问，并用“我去……”回答。",
+      "expected_output": [
+        "你去哪儿？我去医院。",
+        "你去哪儿？我去公园。",
+        "你去哪儿？我去银行。"
+      ]
+    },
+    {
+      "activity": "我在哪里？",
+      "type": "句型练习",
+      "instructions": "根据图片或教师给出的地点信息，用“我在……”说明人物所在的位置。",
+      "expected_output": [
+        "我在家。",
+        "我在公司。",
+        "我在图书馆。"
+      ]
+    },
+    {
+      "activity": "地点和活动连线",
+      "type": "搭配练习",
+      "instructions": "把地点和常见活动连起来，再使用“在＋地点＋动词”说完整句子。",
+      "expected_output": [
+        "在餐厅吃饭。",
+        "在图书馆看书。",
+        "在电影院看电影。",
+        "在公园散步。"
+      ]
+    },
+    {
+      "activity": "设计自己的日常路线",
+      "type": "综合表达",
+      "instructions": "选择两个或三个熟悉的地点，介绍自己从哪里出发、去哪里以及在那里做什么。",
+      "expected_output": [
+        "我从家去公司。",
+        "我在公司工作。",
+        "下班以后，我去超市买东西。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "介绍自己日常生活中常去的三至五个地点。说出地点名称、去这些地方做什么，以及简单的出发地点或位置关系。尽量使用本课词汇和句型。",
+    "expected_output": [
+      "我每天去公司上班。",
+      "我在公司工作。",
+      "下班以后，我去超市买东西。",
+      "周末我去公园散步。",
+      "学校在我家附近。"
+    ]
+  },
+  "teacher_notes": [
+    "本课重点是常见地点名称及其日常用途，不要求学生记忆大量城市设施或专业场所。",
+    "注意区分“去＋地点”和“在＋地点”：前者表达前往某地，后者表达所在位置。",
+    "“在＋地点＋动词”用于表达在某地进行的活动，例如“我在图书馆看书”。",
+    "“在哪里”用于询问位置；“去哪儿”用于询问目的地，两者不能随意替换。",
+    "“从……去……”用于表达出发地点和目的地，先掌握简单路线表达即可。",
+    "“附近”作为位置表达接触，不扩展复杂方位词和地图描述。",
+    "“家”和“学校”等词可与 CL-08、CL-09 的地点句型复习结合。",
+    "对话中的“请问”“谢谢”“不客气”等表达用于自然交际，不作为本课新增重点词汇。",
+    "机场、邮局、银行等词汇以识别和简单表达为主，不要求学习相关专业业务。",
+    "课堂活动应优先使用学生熟悉的真实地点，避免因陌生地名增加记忆负担。"
+  ],
+  "completion_criteria": [
+    "能够看图识别并说出至少十五个本课地点词汇。",
+    "能够使用“去＋地点”说出自己要去的地方。",
+    "能够使用“在＋地点”说明自己或他人的位置。",
+    "能够用“在哪里”询问一个地点的位置。",
+    "能够使用“在＋地点＋动词”说出至少三个日常活动。",
+    "能够简单介绍自己常去的地点及在那里进行的活动。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Common Places",
+      "learning_objectives": [
+        "Recognize and name common everyday places.",
+        "Say where they are going and where they are.",
+        "Ask where a place is.",
+        "Describe simple activities at different places.",
+        "Give a simple description of a familiar daily route."
+      ],
+      "key_expressions": {
+        "你去哪儿？": "Where are you going?",
+        "我去学校。": "I'm going to school.",
+        "你在哪里？": "Where are you?",
+        "我在家。": "I'm at home.",
+        "超市在哪里？": "Where is the supermarket?",
+        "我在餐厅吃饭。": "I'm eating at the restaurant.",
+        "我从家去公司。": "I go from home to the office.",
+        "学校在我家附近。": "The school is near my home."
+      },
+      "integrated_task": "Introduce three to five places you often visit and say what you do there."
+    },
+    "fr": {
+      "title": "Les lieux courants",
+      "learning_objectives": [
+        "Reconnaître et nommer les lieux courants du quotidien.",
+        "Dire où l'on va et où l'on se trouve.",
+        "Demander où se trouve un lieu.",
+        "Décrire des activités simples dans différents lieux.",
+        "Présenter simplement un trajet quotidien familier."
+      ],
+      "key_expressions": {
+        "你去哪儿？": "Où vas-tu ?",
+        "我去学校。": "Je vais à l'école.",
+        "你在哪里？": "Où es-tu ?",
+        "我在家。": "Je suis à la maison.",
+        "超市在哪里？": "Où se trouve le supermarché ?",
+        "我在餐厅吃饭。": "Je mange au restaurant.",
+        "我从家去公司。": "Je vais de chez moi au travail.",
+        "学校在我家附近。": "L'école est près de chez moi."
+      },
+      "integrated_task": "Présentez trois à cinq lieux que vous fréquentez et dites ce que vous y faites."
+    },
+    "de": {
+      "title": "Häufige Orte",
+      "learning_objectives": [
+        "Häufige Orte im Alltag erkennen und benennen.",
+        "Sagen, wohin man geht und wo man sich befindet.",
+        "Nach dem Standort eines Ortes fragen.",
+        "Einfache Aktivitäten an verschiedenen Orten beschreiben.",
+        "Einen vertrauten täglichen Weg einfach beschreiben."
+      ],
+      "key_expressions": {
+        "你去哪儿？": "Wohin gehst du?",
+        "我去学校。": "Ich gehe zur Schule.",
+        "你在哪里？": "Wo bist du?",
+        "我在家。": "Ich bin zu Hause.",
+        "超市在哪里？": "Wo ist der Supermarkt?",
+        "我在餐厅吃饭。": "Ich esse im Restaurant.",
+        "我从家去公司。": "Ich fahre von zu Hause zur Arbeit.",
+        "学校在我家附近。": "Die Schule ist in der Nähe meines Zuhauses."
+      },
+      "integrated_task": "Stelle drei bis fünf Orte vor, die du oft besuchst, und sage, was du dort machst."
+    },
+    "es": {
+      "title": "Lugares comunes",
+      "learning_objectives": [
+        "Reconocer y nombrar lugares habituales de la vida diaria.",
+        "Decir adónde se va y dónde se está.",
+        "Preguntar dónde está un lugar.",
+        "Describir actividades sencillas en distintos lugares.",
+        "Describir de forma sencilla un trayecto cotidiano conocido."
+      ],
+      "key_expressions": {
+        "你去哪儿？": "¿Adónde vas?",
+        "我去学校。": "Voy a la escuela.",
+        "你在哪里？": "¿Dónde estás?",
+        "我在家。": "Estoy en casa.",
+        "超市在哪里？": "¿Dónde está el supermercado?",
+        "我在餐厅吃饭。": "Estoy comiendo en el restaurante.",
+        "我从家去公司。": "Voy de casa al trabajo.",
+        "学校在我家附近。": "La escuela está cerca de mi casa."
+      },
+      "integrated_task": "Presenta de tres a cinco lugares que visitas a menudo y explica qué haces allí."
+    },
+    "it": {
+      "title": "Luoghi comuni",
+      "learning_objectives": [
+        "Riconoscere e nominare i luoghi più comuni della vita quotidiana.",
+        "Dire dove si va e dove ci si trova.",
+        "Chiedere dove si trova un luogo.",
+        "Descrivere attività semplici in luoghi diversi.",
+        "Descrivere in modo semplice un percorso quotidiano conosciuto."
+      ],
+      "key_expressions": {
+        "你去哪儿？": "Dove vai?",
+        "我去学校。": "Vado a scuola.",
+        "你在哪里？": "Dove sei?",
+        "我在家。": "Sono a casa.",
+        "超市在哪里？": "Dov'è il supermercato?",
+        "我在餐厅吃饭。": "Mangio al ristorante.",
+        "我从家去公司。": "Vado da casa al lavoro.",
+        "学校在我家附近。": "La scuola è vicino a casa mia."
+      },
+      "integrated_task": "Presenta da tre a cinque luoghi che frequenti e spiega che cosa fai lì."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:24:55.443764+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
+  },
+  "title_status": "confirmed"
+}

@@ -1,0 +1,710 @@
+{
+  "course_id": "CL-11",
+  "title": "常用能愿动词",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 11,
+  "learning_objectives": [
+    {
+      "objective": "理解并使用“会”表达已经掌握的技能或知识。",
+      "success_indicator": "能够介绍自己会做和不会做的事情。"
+    },
+    {
+      "objective": "使用“能”表达能力、条件或是否有时间。",
+      "success_indicator": "能够根据实际情况说明自己能不能做某事。"
+    },
+    {
+      "objective": "使用“可以”询问许可或表达允许。",
+      "success_indicator": "能够在日常情景中礼貌地请求许可和回答。"
+    },
+    {
+      "objective": "使用“应该”表达建议或认为合适的做法。",
+      "success_indicator": "能够针对简单生活问题提出建议。"
+    },
+    {
+      "objective": "使用“愿意”表达个人意愿。",
+      "success_indicator": "能够说明自己愿意或不愿意做某件事情。"
+    }
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL11-001",
+      "simplified": "会",
+      "traditional": "會",
+      "pinyin": "huì",
+      "part_of_speech": "能愿动词",
+      "definition_zh": "表示已经学会某种技能或掌握某种知识。",
+      "category": "技能能力",
+      "collocations": [
+        "会说中文",
+        "会做饭",
+        "会开车"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-002",
+      "simplified": "不会",
+      "traditional": "不會",
+      "pinyin": "bú huì",
+      "part_of_speech": "能愿动词短语",
+      "definition_zh": "表示没有学会某种技能或不具备某种知识。",
+      "category": "技能能力",
+      "collocations": [
+        "不会说中文",
+        "不会做饭",
+        "不会开车"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-003",
+      "simplified": "能",
+      "traditional": "能",
+      "pinyin": "néng",
+      "part_of_speech": "能愿动词",
+      "definition_zh": "表示具备某种能力或有条件完成某个动作。",
+      "category": "能力与条件",
+      "collocations": [
+        "能去",
+        "能工作",
+        "能帮助"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-004",
+      "simplified": "不能",
+      "traditional": "不能",
+      "pinyin": "bù néng",
+      "part_of_speech": "能愿动词短语",
+      "definition_zh": "表示没有能力、条件或许可做某事，具体意思需要结合语境。",
+      "category": "能力与条件",
+      "collocations": [
+        "不能去",
+        "不能吃",
+        "不能工作"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-005",
+      "simplified": "可以",
+      "traditional": "可以",
+      "pinyin": "kěyǐ",
+      "part_of_speech": "能愿动词",
+      "definition_zh": "表示许可、允许或在条件允许时可以做某事。",
+      "category": "许可与可能",
+      "collocations": [
+        "可以进去",
+        "可以使用",
+        "可以休息"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-006",
+      "simplified": "不可以",
+      "traditional": "不可以",
+      "pinyin": "bù kěyǐ",
+      "part_of_speech": "能愿动词短语",
+      "definition_zh": "表示不允许或不适合做某事。",
+      "category": "许可与可能",
+      "collocations": [
+        "不可以进去",
+        "不可以拍照",
+        "不可以抽烟"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-007",
+      "simplified": "应该",
+      "traditional": "應該",
+      "pinyin": "yīnggāi",
+      "part_of_speech": "能愿动词",
+      "definition_zh": "表示建议、责任或认为合适的做法。",
+      "category": "建议与责任",
+      "collocations": [
+        "应该休息",
+        "应该学习",
+        "应该早点睡"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-008",
+      "simplified": "不应该",
+      "traditional": "不應該",
+      "pinyin": "bù yīnggāi",
+      "part_of_speech": "能愿动词短语",
+      "definition_zh": "表示某种行为不合适或不应该发生。",
+      "category": "建议与责任",
+      "collocations": [
+        "不应该迟到",
+        "不应该熬夜",
+        "不应该生气"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-009",
+      "simplified": "愿意",
+      "traditional": "願意",
+      "pinyin": "yuànyì",
+      "part_of_speech": "能愿动词",
+      "definition_zh": "表示个人主观上愿意做某件事情。",
+      "category": "个人意愿",
+      "collocations": [
+        "愿意帮忙",
+        "愿意学习",
+        "愿意一起去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-010",
+      "simplified": "不愿意",
+      "traditional": "不願意",
+      "pinyin": "bú yuànyì",
+      "part_of_speech": "能愿动词短语",
+      "definition_zh": "表示个人主观上不想或不愿意做某件事情。",
+      "category": "个人意愿",
+      "collocations": [
+        "不愿意出去",
+        "不愿意工作",
+        "不愿意等待"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-011",
+      "simplified": "帮助",
+      "traditional": "幫助",
+      "pinyin": "bāngzhù",
+      "part_of_speech": "动词",
+      "definition_zh": "给别人提供支持或协助。",
+      "category": "日常活动",
+      "collocations": [
+        "帮助朋友",
+        "帮助老师",
+        "愿意帮助"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-012",
+      "simplified": "休息",
+      "traditional": "休息",
+      "pinyin": "xiūxi",
+      "part_of_speech": "动词",
+      "definition_zh": "停止工作或活动，让身体恢复精力。",
+      "category": "日常活动",
+      "collocations": [
+        "好好休息",
+        "应该休息",
+        "在家休息"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-013",
+      "simplified": "开车",
+      "traditional": "開車",
+      "pinyin": "kāichē",
+      "part_of_speech": "动词短语",
+      "definition_zh": "驾驶汽车。",
+      "category": "技能活动",
+      "collocations": [
+        "会开车",
+        "不会开车",
+        "自己开车"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-014",
+      "simplified": "说",
+      "traditional": "說",
+      "pinyin": "shuō",
+      "part_of_speech": "动词",
+      "definition_zh": "用语言表达意思。",
+      "category": "语言活动",
+      "collocations": [
+        "说中文",
+        "说英语",
+        "会说中文"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-015",
+      "simplified": "早点",
+      "traditional": "早點",
+      "pinyin": "zǎodiǎn",
+      "part_of_speech": "副词",
+      "definition_zh": "表示比平常或预期的时间早一些。",
+      "category": "时间表达",
+      "collocations": [
+        "早点睡",
+        "早点回家",
+        "早点起床"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL11-016",
+      "simplified": "可能",
+      "traditional": "可能",
+      "pinyin": "kěnéng",
+      "part_of_speech": "形容词／副词",
+      "definition_zh": "表示某件事情有发生的机会或可能性。",
+      "category": "可能性表达",
+      "collocations": [
+        "可能有时间",
+        "可能会去",
+        "不太可能"
+      ],
+      "is_key_vocabulary": false
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "我会说中文。",
+      "pinyin": "Wǒ huì shuō Zhōngwén.",
+      "meaning_zh": "表示自己已经掌握说中文的技能。",
+      "examples": [
+        "我会说一点中文。"
+      ]
+    },
+    {
+      "expression": "我不会开车。",
+      "pinyin": "Wǒ bú huì kāichē.",
+      "meaning_zh": "表示自己没有学会开车。",
+      "examples": [
+        "我不会开车，但是我会骑自行车。"
+      ]
+    },
+    {
+      "expression": "我今天能去。",
+      "pinyin": "Wǒ jīntiān néng qù.",
+      "meaning_zh": "表示今天有条件或有时间前往。",
+      "examples": [
+        "我今天能去学校。"
+      ]
+    },
+    {
+      "expression": "我可以进去吗？",
+      "pinyin": "Wǒ kěyǐ jìnqù ma?",
+      "meaning_zh": "礼貌地询问是否允许进入。",
+      "examples": [
+        "老师，我可以进来吗？"
+      ]
+    },
+    {
+      "expression": "你应该多休息。",
+      "pinyin": "Nǐ yīnggāi duō xiūxi.",
+      "meaning_zh": "向对方提出建议。",
+      "examples": [
+        "你今天很累，应该多休息。"
+      ]
+    },
+    {
+      "expression": "我愿意帮你。",
+      "pinyin": "Wǒ yuànyì bāng nǐ.",
+      "meaning_zh": "表示自己愿意提供帮助。",
+      "examples": [
+        "如果你需要，我愿意帮你。"
+      ]
+    },
+    {
+      "expression": "你能不能帮我？",
+      "pinyin": "Nǐ néng bu néng bāng wǒ?",
+      "meaning_zh": "询问对方是否有能力或条件帮助自己。",
+      "examples": [
+        "你能不能帮我拿一下这个？"
+      ]
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋会／不会＋动词（＋宾语）。",
+      "explanation": "“会”表示已经掌握的技能或知识；否定形式为“不会”。",
+      "examples": [
+        {
+          "simplified": "我会说中文。",
+          "traditional": "我會說中文。",
+          "pinyin": "Wǒ huì shuō Zhōngwén.",
+          "meaning": "我已经学会说中文。"
+        },
+        {
+          "simplified": "他不会做饭。",
+          "traditional": "他不會做飯。",
+          "pinyin": "Tā bú huì zuòfàn.",
+          "meaning": "他没有学会做饭。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋能／不能＋动词（＋宾语）。",
+      "explanation": "“能”表示能力、身体状况或客观条件允许。",
+      "examples": [
+        {
+          "simplified": "我今天能去上课。",
+          "traditional": "我今天能去上課。",
+          "pinyin": "Wǒ jīntiān néng qù shàngkè.",
+          "meaning": "我今天有条件去上课。"
+        },
+        {
+          "simplified": "他生病了，不能工作。",
+          "traditional": "他生病了，不能工作。",
+          "pinyin": "Tā shēngbìng le, bù néng gōngzuò.",
+          "meaning": "因为生病，他现在不能工作。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋可以／不可以＋动词（＋宾语）。",
+      "explanation": "“可以”表示允许或条件许可；疑问句常用“可以……吗？”。",
+      "examples": [
+        {
+          "simplified": "这里可以拍照吗？",
+          "traditional": "這裡可以拍照嗎？",
+          "pinyin": "Zhèlǐ kěyǐ pāizhào ma?",
+          "meaning": "询问这里是否允许拍照。"
+        },
+        {
+          "simplified": "这里不可以抽烟。",
+          "traditional": "這裡不可以抽煙。",
+          "pinyin": "Zhèlǐ bù kěyǐ chōuyān.",
+          "meaning": "表示这里不允许抽烟。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋应该／不应该＋动词（＋宾语）。",
+      "explanation": "表达建议、责任或认为合适的行为。",
+      "examples": [
+        {
+          "simplified": "你应该早点睡觉。",
+          "traditional": "你應該早點睡覺。",
+          "pinyin": "Nǐ yīnggāi zǎodiǎn shuìjiào.",
+          "meaning": "建议对方早点睡觉。"
+        },
+        {
+          "simplified": "我们不应该迟到。",
+          "traditional": "我們不應該遲到。",
+          "pinyin": "Wǒmen bù yīnggāi chídào.",
+          "meaning": "表示迟到是不合适的行为。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋愿意／不愿意＋动词（＋宾语）。",
+      "explanation": "表达个人主观意愿，而不是客观能力或许可。",
+      "examples": [
+        {
+          "simplified": "我愿意帮助你。",
+          "traditional": "我願意幫助你。",
+          "pinyin": "Wǒ yuànyì bāngzhù nǐ.",
+          "meaning": "我主观上愿意帮助你。"
+        },
+        {
+          "simplified": "他不愿意出去。",
+          "traditional": "他不願意出去。",
+          "pinyin": "Tā bú yuànyì chūqù.",
+          "meaning": "他不想出去。"
+        }
+      ]
+    },
+    {
+      "pattern": "能／会／可以＋动词吗？",
+      "explanation": "通过疑问句询问能力、许可或条件，具体含义根据情境判断。",
+      "examples": [
+        {
+          "simplified": "你会说英语吗？",
+          "traditional": "你會說英語嗎？",
+          "pinyin": "Nǐ huì shuō Yīngyǔ ma?",
+          "meaning": "询问对方是否掌握说英语的技能。"
+        },
+        {
+          "simplified": "我可以坐这里吗？",
+          "traditional": "我可以坐這裡嗎？",
+          "pinyin": "Wǒ kěyǐ zuò zhèlǐ ma?",
+          "meaning": "询问是否允许坐在这里。"
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "你会说中文吗",
+      "scene": "两位新朋友介绍自己的语言能力。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你会说中文吗？",
+          "traditional": "你會說中文嗎？",
+          "pinyin": "Nǐ huì shuō Zhōngwén ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我会说一点中文。",
+          "traditional": "我會說一點中文。",
+          "pinyin": "Wǒ huì shuō yìdiǎn Zhōngwén."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你会写汉字吗？",
+          "traditional": "你會寫漢字嗎？",
+          "pinyin": "Nǐ huì xiě Hànzì ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我会写一些简单的汉字。",
+          "traditional": "我會寫一些簡單的漢字。",
+          "pinyin": "Wǒ huì xiě yìxiē jiǎndān de Hànzì."
+        }
+      ]
+    },
+    {
+      "title": "我可以坐这里吗",
+      "scene": "学生进入教室，向老师询问。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "老师，我可以坐这里吗？",
+          "traditional": "老師，我可以坐這裡嗎？",
+          "pinyin": "Lǎoshī, wǒ kěyǐ zuò zhèlǐ ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "可以，请坐。",
+          "traditional": "可以，請坐。",
+          "pinyin": "Kěyǐ, qǐng zuò."
+        },
+        {
+          "speaker": "A",
+          "simplified": "我可以打开窗户吗？",
+          "traditional": "我可以打開窗戶嗎？",
+          "pinyin": "Wǒ kěyǐ dǎkāi chuānghu ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "可以，今天有一点热。",
+          "traditional": "可以，今天有一點熱。",
+          "pinyin": "Kěyǐ, jīntiān yǒu yìdiǎn rè."
+        }
+      ]
+    },
+    {
+      "title": "你应该多休息",
+      "scene": "朋友发现对方很累，给出建议。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天怎么了？",
+          "traditional": "你今天怎麼了？",
+          "pinyin": "Nǐ jīntiān zěnme le?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我昨天工作到很晚，今天很累。",
+          "traditional": "我昨天工作到很晚，今天很累。",
+          "pinyin": "Wǒ zuótiān gōngzuò dào hěn wǎn, jīntiān hěn lèi."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你应该早点回家，多休息。",
+          "traditional": "你應該早點回家，多休息。",
+          "pinyin": "Nǐ yīnggāi zǎodiǎn huí jiā, duō xiūxi."
+        },
+        {
+          "speaker": "B",
+          "simplified": "好，谢谢你。我今天能早点走。",
+          "traditional": "好，謝謝你。我今天能早點走。",
+          "pinyin": "Hǎo, xièxie nǐ. Wǒ jīntiān néng zǎodiǎn zǒu."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "会与不会技能调查",
+      "type": "口语调查",
+      "instructions": "学生两人一组，互相询问会不会说某种语言、做饭、开车或游泳，并记录答案。",
+      "expected_output": [
+        "你会说中文吗？",
+        "我会说一点中文。",
+        "你会开车吗？",
+        "我不会开车。"
+      ]
+    },
+    {
+      "activity": "能不能情境判断",
+      "type": "情景判断",
+      "instructions": "教师给出时间、身体状况或客观条件，学生判断人物能不能做某件事。",
+      "expected_output": [
+        "我今天很忙，不能去。",
+        "他生病了，不能工作。",
+        "我今天有时间，能去学校。"
+      ]
+    },
+    {
+      "activity": "礼貌请求许可",
+      "type": "角色扮演",
+      "instructions": "学生模拟教室、商店或朋友家等场景，使用“可以……吗？”请求许可，并回答别人的请求。",
+      "expected_output": [
+        "我可以进来吗？",
+        "我可以坐这里吗？",
+        "可以，请坐。"
+      ]
+    },
+    {
+      "activity": "给朋友提建议",
+      "type": "情景表达",
+      "instructions": "教师给出简单生活问题，例如很累、迟到或没有时间，学生使用“应该／不应该”提出建议。",
+      "expected_output": [
+        "你应该早点睡觉。",
+        "你应该多休息。",
+        "你不应该经常迟到。"
+      ]
+    },
+    {
+      "activity": "你愿意做什么",
+      "type": "个人表达",
+      "instructions": "学生介绍自己愿意或不愿意参与的活动，并说明简单原因。",
+      "expected_output": [
+        "我愿意帮助朋友。",
+        "我愿意和你一起去。",
+        "我不愿意晚上工作。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "主题：我的能力、选择和生活建议。学生介绍自己会做的两件事、目前能做的一件事、一次请求许可的情景、给朋友的一条建议，以及自己愿意参加的一项活动。重点是根据语境正确选择能愿动词。",
+    "expected_output": "我会说中文，但是我不会开车。我今天能去学校学习。老师，我可以早点回家吗？我朋友最近很累，我觉得他应该多休息。周末我愿意和朋友一起去公园运动。"
+  },
+  "teacher_notes": [
+    "本课重点是常见能愿动词的实际使用，不要求初级学生掌握复杂的情态语义理论。",
+    "“会”首先解释为已经学会的技能或知识，例如“会说中文”“会做饭”。",
+    "“能”主要结合能力、身体状况、时间和客观条件讲解，例如“今天能去”“生病了不能工作”。",
+    "“可以”优先从许可和允许的场景开始教学，例如“我可以进去吗？”。",
+    "“应该”用于建议或责任表达，注意语气不等于命令。",
+    "“愿意”强调主观意愿，与“会”表达技能不同。一个人会做某事，不代表他愿意做。",
+    "“不能”和“不可以”不能随意互换。“不能”可表示条件或能力不允许，“不可以”常表示规则或许可不允许。",
+    "注意不同能愿动词的否定形式：不会、不能、不可以、不应该、不愿意。",
+    "避免把“会、能、可以”全部翻译成同一个意思。应使用对比情景帮助学生理解。",
+    "“可能”在本课只作为非重点接触词，不要求讲解“可能会”等扩展结构。"
+  ],
+  "completion_criteria": [
+    "能够使用“会／不会”介绍自己掌握的技能。",
+    "能够使用“能／不能”表达能力或客观条件。",
+    "能够使用“可以……吗？”请求许可。",
+    "能够使用“应该／不应该”提出简单建议。",
+    "能够使用“愿意／不愿意”表达个人意愿。",
+    "能够根据不同生活情境选择合适的能愿动词。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Common modal verbs",
+      "learning_objectives": [
+        "Use 会 to describe learned skills.",
+        "Use 能 to describe ability or circumstances.",
+        "Use 可以 to ask for or give permission.",
+        "Use 应该 to give advice.",
+        "Use 愿意 to express willingness."
+      ],
+      "key_expressions": {
+        "我会说中文。": "I can speak Chinese.",
+        "我今天能去。": "I can go today.",
+        "我可以进去吗？": "May I come in?",
+        "你应该多休息。": "You should get more rest.",
+        "我愿意帮你。": "I am willing to help you."
+      },
+      "integrated_task": "My abilities, choices and everyday advice."
+    },
+    "fr": {
+      "title": "Les verbes modaux courants",
+      "learning_objectives": [
+        "Utiliser 会 pour parler de compétences acquises.",
+        "Utiliser 能 pour exprimer une capacité ou des conditions favorables.",
+        "Utiliser 可以 pour demander ou donner une permission.",
+        "Utiliser 应该 pour donner un conseil.",
+        "Utiliser 愿意 pour exprimer sa volonté."
+      ],
+      "key_expressions": {
+        "我会说中文。": "Je sais parler chinois.",
+        "我今天能去。": "Je peux y aller aujourd'hui.",
+        "我可以进去吗？": "Est-ce que je peux entrer ?",
+        "你应该多休息。": "Tu devrais te reposer davantage.",
+        "我愿意帮你。": "Je veux bien t'aider."
+      },
+      "integrated_task": "Mes capacités, mes choix et les conseils du quotidien."
+    },
+    "de": {
+      "title": "Häufige Modalverben",
+      "learning_objectives": [
+        "会 verwenden, um erlernte Fähigkeiten zu beschreiben.",
+        "能 verwenden, um Fähigkeiten oder Umstände auszudrücken.",
+        "Mit 可以 um Erlaubnis bitten oder Erlaubnis geben.",
+        "Mit 应该 Ratschläge ausdrücken.",
+        "Mit 愿意 Bereitschaft ausdrücken."
+      ],
+      "key_expressions": {
+        "我会说中文。": "Ich kann Chinesisch sprechen.",
+        "我今天能去。": "Ich kann heute gehen.",
+        "我可以进去吗？": "Darf ich hereinkommen?",
+        "你应该多休息。": "Du solltest dich mehr ausruhen.",
+        "我愿意帮你。": "Ich helfe dir gerne."
+      },
+      "integrated_task": "Meine Fähigkeiten, Entscheidungen und Alltagsempfehlungen."
+    },
+    "es": {
+      "title": "Verbos modales frecuentes",
+      "learning_objectives": [
+        "Usar 会 para describir habilidades aprendidas.",
+        "Usar 能 para expresar capacidad o condiciones.",
+        "Usar 可以 para pedir o conceder permiso.",
+        "Usar 应该 para dar consejos.",
+        "Usar 愿意 para expresar voluntad."
+      ],
+      "key_expressions": {
+        "我会说中文。": "Sé hablar chino.",
+        "我今天能去。": "Puedo ir hoy.",
+        "我可以进去吗？": "¿Puedo entrar?",
+        "你应该多休息。": "Deberías descansar más.",
+        "我愿意帮你。": "Estoy dispuesto a ayudarte."
+      },
+      "integrated_task": "Mis capacidades, mis decisiones y los consejos cotidianos."
+    },
+    "it": {
+      "title": "Verbi modali comuni",
+      "learning_objectives": [
+        "Usare 会 per descrivere abilità apprese.",
+        "Usare 能 per esprimere capacità o condizioni.",
+        "Usare 可以 per chiedere o concedere il permesso.",
+        "Usare 应该 per dare consigli.",
+        "Usare 愿意 per esprimere disponibilità."
+      ],
+      "key_expressions": {
+        "我会说中文。": "So parlare cinese.",
+        "我今天能去。": "Posso andare oggi.",
+        "我可以进去吗？": "Posso entrare?",
+        "你应该多休息。": "Dovresti riposarti di più.",
+        "我愿意帮你。": "Sono disposto ad aiutarti."
+      },
+      "integrated_task": "Le mie capacità, le mie scelte e i consigli quotidiani."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T17:15:35.835528+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "本课为初版课程建设成果。后续重点检查会、能、可以、应该、愿意的语义区别、否定形式和多语言翻译。"
+  },
+  "title_status": "confirmed"
+}

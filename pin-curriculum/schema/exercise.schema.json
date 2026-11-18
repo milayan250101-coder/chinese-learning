@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chinese-learning.local/pin/v2.2/schema/exercise.schema.json",
+  "title": "PIN Exercise",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "exerciseId",
+    "courseId",
+    "schemaVersion",
+    "exerciseType",
+    "prompt",
+    "answerType",
+    "answer",
+    "atlasVocabularyReferences",
+    "atlasOccurrenceReferences"
+  ],
+  "properties": {
+    "exerciseId": {
+      "type": "string",
+      "pattern": "^EX-PIN-(0[1-9]|1[0-9])-[0-9]{3,}$"
+    },
+    "courseId": {
+      "type": "string",
+      "pattern": "^PIN-(0[1-9]|1[0-9])$"
+    },
+    "schemaVersion": {
+      "const": "2.2.0"
+    },
+    "exerciseType": {
+      "enum": [
+        "multiple_choice",
+        "matching",
+        "pronunciation",
+        "spelling",
+        "tone_identification"
+      ]
+    },
+    "prompt": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "answerType": {
+      "enum": [
+        "single_option",
+        "matching_pairs",
+        "text",
+        "tone"
+      ]
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "optionId",
+          "content"
+        ],
+        "properties": {
+          "optionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "content": {
+            "type": "object",
+            "minProperties": 1
+          }
+        }
+      }
+    },
+    "matchingItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "left",
+        "right"
+      ],
+      "properties": {
+        "left": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "itemId",
+              "content"
+            ],
+            "properties": {
+              "itemId": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "right": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "itemId",
+              "content"
+            ],
+            "properties": {
+              "itemId": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "answer": {
+      "type": "object"
+    },
+    "atlasVocabularyReferences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^PTA-P[0-9]{2}-[0-9]{3}$"
+      }
+    },
+    "atlasOccurrenceReferences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^ATLAS-S[0-9]{2}-[0-9]{2}$"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "exerciseType": {
+            "const": "multiple_choice"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "options"
+        ],
+        "properties": {
+          "answerType": {
+            "const": "single_option"
+          },
+          "options": {
+            "minItems": 2
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "exerciseType": {
+            "const": "matching"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "matchingItems"
+        ],
+        "properties": {
+          "answerType": {
+            "const": "matching_pairs"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "exerciseType": {
+            "enum": [
+              "pronunciation",
+              "spelling"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "answerType": {
+            "const": "text"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "exerciseType": {
+            "const": "tone_identification"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "answerType": {
+            "const": "tone"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "course_id": "CL-16",
+  "title": "常见生活物品",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 16,
+  "learning_objectives": [
+    "能够识别并说出日常生活中常见物品的名称。",
+    "能够按照家庭用品、学习用品和随身物品对常见物品进行简单分类。",
+    "能够使用这、那、什么等词语询问和介绍物品。",
+    "能够使用有、没有、是、在等常见表达描述物品。",
+    "能够在日常场景中简单说明物品属于谁、在哪里以及有什么用途。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL16-001",
+      "simplified": "手机",
+      "traditional": "手機",
+      "pinyin": "shǒujī",
+      "part_of_speech": "名词",
+      "definition_zh": "可以打电话、发信息和使用应用程序的电子设备。",
+      "category": "电子设备",
+      "collocations": [
+        "用手机",
+        "看手机"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-002",
+      "simplified": "电脑",
+      "traditional": "電腦",
+      "pinyin": "diànnǎo",
+      "part_of_speech": "名词",
+      "definition_zh": "用于工作、学习和处理信息的电子设备。",
+      "category": "电子设备",
+      "collocations": [
+        "用电脑",
+        "打开电脑"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-003",
+      "simplified": "电视",
+      "traditional": "電視",
+      "pinyin": "diànshì",
+      "part_of_speech": "名词",
+      "definition_zh": "用于观看节目和视频的设备。",
+      "category": "电子设备",
+      "collocations": [
+        "看电视",
+        "打开电视"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-004",
+      "simplified": "书",
+      "traditional": "書",
+      "pinyin": "shū",
+      "part_of_speech": "名词",
+      "definition_zh": "用来阅读和学习的读物。",
+      "category": "学习用品",
+      "collocations": [
+        "看书",
+        "一本书"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-005",
+      "simplified": "本子",
+      "traditional": "本子",
+      "pinyin": "běnzi",
+      "part_of_speech": "名词",
+      "definition_zh": "用来写字和记录内容的本子。",
+      "category": "学习用品",
+      "collocations": [
+        "一个本子",
+        "写在本子上"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-006",
+      "simplified": "笔",
+      "traditional": "筆",
+      "pinyin": "bǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "用来写字的工具。",
+      "category": "学习用品",
+      "collocations": [
+        "一支笔",
+        "用笔写"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-007",
+      "simplified": "纸",
+      "traditional": "紙",
+      "pinyin": "zhǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "用来写字、画画或打印的材料。",
+      "category": "学习用品",
+      "collocations": [
+        "一张纸",
+        "用纸"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-008",
+      "simplified": "桌子",
+      "traditional": "桌子",
+      "pinyin": "zhuōzi",
+      "part_of_speech": "名词",
+      "definition_zh": "可以放东西或学习、工作的家具。",
+      "category": "家具",
+      "collocations": [
+        "一张桌子",
+        "在桌子上"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-009",
+      "simplified": "椅子",
+      "traditional": "椅子",
+      "pinyin": "yǐzi",
+      "part_of_speech": "名词",
+      "definition_zh": "供人坐的家具。",
+      "category": "家具",
+      "collocations": [
+        "一把椅子",
+        "坐在椅子上"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-010",
+      "simplified": "床",
+      "traditional": "床",
+      "pinyin": "chuáng",
+      "part_of_speech": "名词",
+      "definition_zh": "用于睡觉的家具。",
+      "category": "家具",
+      "collocations": [
+        "一张床",
+        "在床上"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-011",
+      "simplified": "门",
+      "traditional": "門",
+      "pinyin": "mén",
+      "part_of_speech": "名词",
+      "definition_zh": "房间或建筑物出入口的设施。",
+      "category": "家居用品",
+      "collocations": [
+        "开门",
+        "关门"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-012",
+      "simplified": "窗户",
+      "traditional": "窗戶",
+      "pinyin": "chuānghu",
+      "part_of_speech": "名词",
+      "definition_zh": "房间墙壁上用于采光和通风的部分。",
+      "category": "家居用品",
+      "collocations": [
+        "打开窗户",
+        "关窗户"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-013",
+      "simplified": "钥匙",
+      "traditional": "鑰匙",
+      "pinyin": "yàoshi",
+      "part_of_speech": "名词",
+      "definition_zh": "用来开锁的工具。",
+      "category": "随身物品",
+      "collocations": [
+        "一把钥匙",
+        "找钥匙"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-014",
+      "simplified": "包",
+      "traditional": "包",
+      "pinyin": "bāo",
+      "part_of_speech": "名词",
+      "definition_zh": "用来装东西、方便携带的物品。",
+      "category": "随身物品",
+      "collocations": [
+        "一个包",
+        "带包"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-015",
+      "simplified": "钱包",
+      "traditional": "錢包",
+      "pinyin": "qiánbāo",
+      "part_of_speech": "名词",
+      "definition_zh": "用来放钱和卡片的小包。",
+      "category": "随身物品",
+      "collocations": [
+        "一个钱包",
+        "找钱包"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-016",
+      "simplified": "衣服",
+      "traditional": "衣服",
+      "pinyin": "yīfu",
+      "part_of_speech": "名词",
+      "definition_zh": "穿在身上的物品。",
+      "category": "衣物",
+      "collocations": [
+        "穿衣服",
+        "买衣服"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-017",
+      "simplified": "鞋",
+      "traditional": "鞋",
+      "pinyin": "xié",
+      "part_of_speech": "名词",
+      "definition_zh": "穿在脚上的物品。",
+      "category": "衣物",
+      "collocations": [
+        "一双鞋",
+        "穿鞋"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-018",
+      "simplified": "眼镜",
+      "traditional": "眼鏡",
+      "pinyin": "yǎnjìng",
+      "part_of_speech": "名词",
+      "definition_zh": "帮助看清楚或保护眼睛的用品。",
+      "category": "随身物品",
+      "collocations": [
+        "戴眼镜",
+        "一副眼镜"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-019",
+      "simplified": "手表",
+      "traditional": "手錶",
+      "pinyin": "shǒubiǎo",
+      "part_of_speech": "名词",
+      "definition_zh": "戴在手腕上用来看时间的物品。",
+      "category": "随身物品",
+      "collocations": [
+        "戴手表",
+        "看手表"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL16-020",
+      "simplified": "杯子",
+      "traditional": "杯子",
+      "pinyin": "bēizi",
+      "part_of_speech": "名词",
+      "definition_zh": "用来喝水或其他饮料的容器。",
+      "category": "家居用品",
+      "collocations": [
+        "一个杯子",
+        "用杯子喝水"
+      ],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "这是什么？",
+      "pinyin": "Zhè shì shénme?",
+      "meaning_zh": "询问眼前物品的名称。"
+    },
+    {
+      "expression": "这是我的手机。",
+      "pinyin": "Zhè shì wǒ de shǒujī.",
+      "meaning_zh": "介绍物品属于自己。"
+    },
+    {
+      "expression": "那是你的书吗？",
+      "pinyin": "Nà shì nǐ de shū ma?",
+      "meaning_zh": "确认远处物品是否属于对方。"
+    },
+    {
+      "expression": "我有一台电脑。",
+      "pinyin": "Wǒ yǒu yì tái diànnǎo.",
+      "meaning_zh": "说明自己拥有某种物品。"
+    },
+    {
+      "expression": "我没有钥匙。",
+      "pinyin": "Wǒ méiyǒu yàoshi.",
+      "meaning_zh": "说明自己没有某件物品。"
+    },
+    {
+      "expression": "我的包在桌子上。",
+      "pinyin": "Wǒ de bāo zài zhuōzi shàng.",
+      "meaning_zh": "说明物品所在的位置。"
+    },
+    {
+      "expression": "这是谁的手机？",
+      "pinyin": "Zhè shì shéi de shǒujī?",
+      "meaning_zh": "询问物品属于谁。"
+    },
+    {
+      "expression": "我的手机在包里。",
+      "pinyin": "Wǒ de shǒujī zài bāo lǐ.",
+      "meaning_zh": "说明物品在某个物品里面。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "这／那＋是＋什么？",
+      "explanation": "询问眼前或稍远处物品的名称。",
+      "examples": [
+        "这是什么？",
+        "那是什么？"
+      ]
+    },
+    {
+      "pattern": "这／那＋是＋我的／你的＋物品。",
+      "explanation": "介绍物品及其所属关系。",
+      "examples": [
+        "这是我的书。",
+        "那是你的包。"
+      ]
+    },
+    {
+      "pattern": "主语＋有／没有＋物品。",
+      "explanation": "说明自己或别人是否拥有某件物品。",
+      "examples": [
+        "我有一台电脑。",
+        "我没有手表。"
+      ]
+    },
+    {
+      "pattern": "物品＋在＋地点／位置。",
+      "explanation": "说明物品所在的位置。",
+      "examples": [
+        "手机在桌子上。",
+        "书在包里。"
+      ]
+    },
+    {
+      "pattern": "这是谁的＋物品？",
+      "explanation": "询问物品属于谁。",
+      "examples": [
+        "这是谁的笔？",
+        "那是谁的手机？"
+      ]
+    },
+    {
+      "pattern": "主语＋用＋物品＋动词。",
+      "explanation": "简单说明使用某种物品做什么。",
+      "examples": [
+        "我用电脑工作。",
+        "我用笔写字。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "认识桌上的物品",
+      "scene": "两位同学一起看桌上的学习用品。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "这是什么？",
+          "traditional": "這是什麼？",
+          "pinyin": "Zhè shì shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "这是一本书。",
+          "traditional": "這是一本書。",
+          "pinyin": "Zhè shì yì běn shū."
+        },
+        {
+          "speaker": "A",
+          "simplified": "那是什么？",
+          "traditional": "那是什麼？",
+          "pinyin": "Nà shì shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "那是一支笔。",
+          "traditional": "那是一支筆。",
+          "pinyin": "Nà shì yì zhī bǐ."
+        }
+      ]
+    },
+    {
+      "title": "寻找手机",
+      "scene": "朋友在家里寻找自己的手机。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "我的手机在哪里？",
+          "traditional": "我的手機在哪裡？",
+          "pinyin": "Wǒ de shǒujī zài nǎlǐ?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "你的手机在桌子上。",
+          "traditional": "你的手機在桌子上。",
+          "pinyin": "Nǐ de shǒujī zài zhuōzi shàng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "谢谢！那我的钥匙呢？",
+          "traditional": "謝謝！那我的鑰匙呢？",
+          "pinyin": "Xièxie! Nà wǒ de yàoshi ne?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "钥匙在你的包里。",
+          "traditional": "鑰匙在你的包裡。",
+          "pinyin": "Yàoshi zài nǐ de bāo lǐ."
+        }
+      ]
+    },
+    {
+      "title": "介绍自己的物品",
+      "scene": "两位朋友介绍自己带来的物品。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "这是你的电脑吗？",
+          "traditional": "這是你的電腦嗎？",
+          "pinyin": "Zhè shì nǐ de diànnǎo ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "是，这是我的电脑。",
+          "traditional": "是，這是我的電腦。",
+          "pinyin": "Shì, zhè shì wǒ de diànnǎo."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你有手表吗？",
+          "traditional": "你有手錶嗎？",
+          "pinyin": "Nǐ yǒu shǒubiǎo ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "没有，我没有手表。",
+          "traditional": "沒有，我沒有手錶。",
+          "pinyin": "Méiyǒu, wǒ méiyǒu shǒubiǎo."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "生活物品图片分类",
+      "type": "词汇理解",
+      "instructions": "看图片，把物品分成电子设备、学习用品、家具、衣物和随身物品。",
+      "expected_output": [
+        "电子设备：手机、电脑、电视",
+        "学习用品：书、本子、笔、纸",
+        "家具：桌子、椅子、床",
+        "衣物：衣服、鞋",
+        "随身物品：钥匙、包、钱包、眼镜、手表"
+      ]
+    },
+    {
+      "activity": "这是什么",
+      "type": "口语问答",
+      "instructions": "教师展示不同物品或图片，学生轮流询问并回答名称。",
+      "expected_output": [
+        "这是什么？",
+        "这是一本书。",
+        "那是什么？",
+        "那是一把椅子。"
+      ]
+    },
+    {
+      "activity": "我的物品",
+      "type": "句型练习",
+      "instructions": "选择自己拥有的三件物品，用“这是我的……”或“我有……”介绍。",
+      "expected_output": [
+        "这是我的手机。",
+        "我有一台电脑。",
+        "这是我的包。"
+      ]
+    },
+    {
+      "activity": "物品在哪里",
+      "type": "位置表达",
+      "instructions": "把物品放在桌子上、包里或椅子旁边，练习描述位置。",
+      "expected_output": [
+        "手机在桌子上。",
+        "书在包里。",
+        "包在椅子上。"
+      ]
+    },
+    {
+      "activity": "我的日常物品介绍",
+      "type": "综合表达",
+      "instructions": "选择四件日常物品，介绍它们是什么、属于谁以及在哪里。",
+      "expected_output": [
+        "这是我的手机。",
+        "我的书在包里。",
+        "我有一台电脑。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "介绍自己日常生活中常用的物品。选择四至六件物品，说出名称、所属关系、所在位置或用途。尽量使用本课的词汇和句型。",
+    "expected_output": [
+      "这是我的手机。",
+      "我有一台电脑。",
+      "我的书在包里。",
+      "我的钥匙在桌子上。",
+      "我每天用电脑工作。"
+    ]
+  },
+  "teacher_notes": [
+    "本课重点是日常高频物品名称和简单介绍，不扩展复杂的家居设备或电子产品词汇。",
+    "这和那主要用于区分说话人附近和较远处的物品，可结合教室实物演示。",
+    "我的、你的等表达用于介绍所属关系，注意“的”在初级句子中的位置。",
+    "有和没有用于表达拥有或缺少，不要与“在”表示位置的用法混淆。",
+    "一台电脑、一支笔、一张纸、一把椅子等量词应结合实物自然练习。",
+    "桌子上、包里等位置表达用于复习地点和方位概念，不要求扩展复杂方位词。",
+    "本课的“用电脑工作”“用笔写字”用于简单说明物品用途，不要求展开复杂动词结构。",
+    "眼镜通常说一副眼镜，鞋通常说一双鞋；可作为真实语言输入，不必将所有量词作为本课考核重点。",
+    "不同学生的生活物品可能不同，鼓励学生使用自己真实拥有或熟悉的物品进行表达。",
+    "教师应优先保证词汇识别和基本句子表达，不要求学生一次掌握所有物品的复杂用途。"
+  ],
+  "completion_criteria": [
+    "能够看图识别并说出至少十二种常见生活物品。",
+    "能够使用这、那和什么询问或介绍物品。",
+    "能够使用我的、你的说明物品所属关系。",
+    "能够使用有、没有描述是否拥有某件物品。",
+    "能够使用在和简单位置词说明物品在哪里。",
+    "能够用四至六句话介绍自己的日常物品。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Common Everyday Objects",
+      "learning_objectives": [
+        "Recognize and name common everyday objects.",
+        "Group common objects into household, study and personal items.",
+        "Ask about and identify objects using this, that and what.",
+        "Describe possessions using have, do not have, be and be located at.",
+        "Say simply who an object belongs to, where it is and what it is used for."
+      ],
+      "key_expressions": {
+        "这是什么？": "What is this?",
+        "这是我的手机。": "This is my phone.",
+        "那是你的书吗？": "Is that your book?",
+        "我有一台电脑。": "I have a computer.",
+        "我没有钥匙。": "I don't have a key.",
+        "我的包在桌子上。": "My bag is on the table.",
+        "这是谁的手机？": "Whose phone is this?",
+        "我的手机在包里。": "My phone is in the bag."
+      },
+      "integrated_task": "Introduce the everyday objects you use."
+    },
+    "fr": {
+      "title": "Les objets du quotidien",
+      "learning_objectives": [
+        "Reconnaître et nommer les objets courants du quotidien.",
+        "Classer les objets en fournitures, meubles et effets personnels.",
+        "Poser des questions sur les objets avec ceci, cela et quoi.",
+        "Décrire ce que l'on possède ou ne possède pas.",
+        "Indiquer simplement à qui appartient un objet, où il se trouve et à quoi il sert."
+      ],
+      "key_expressions": {
+        "这是什么？": "Qu'est-ce que c'est ?",
+        "这是我的手机。": "C'est mon téléphone.",
+        "那是你的书吗？": "Est-ce ton livre, là-bas ?",
+        "我有一台电脑。": "J'ai un ordinateur.",
+        "我没有钥匙。": "Je n'ai pas de clé.",
+        "我的包在桌子上。": "Mon sac est sur la table.",
+        "这是谁的手机？": "À qui est ce téléphone ?",
+        "我的手机在包里。": "Mon téléphone est dans le sac."
+      },
+      "integrated_task": "Présentez les objets que vous utilisez au quotidien."
+    },
+    "de": {
+      "title": "Alltagsgegenstände",
+      "learning_objectives": [
+        "Häufige Alltagsgegenstände erkennen und benennen.",
+        "Gegenstände in Haushalts-, Lern- und persönliche Dinge einteilen.",
+        "Mit diesem, jenem und was nach Gegenständen fragen.",
+        "Mit haben und nicht haben beschreiben, was man besitzt.",
+        "Einfach sagen, wem ein Gegenstand gehört, wo er liegt und wozu er dient."
+      ],
+      "key_expressions": {
+        "这是什么？": "Was ist das?",
+        "这是我的手机。": "Das ist mein Handy.",
+        "那是你的书吗？": "Ist das dort dein Buch?",
+        "我有一台电脑。": "Ich habe einen Computer.",
+        "我没有钥匙。": "Ich habe keinen Schlüssel.",
+        "我的包在桌子上。": "Meine Tasche liegt auf dem Tisch.",
+        "这是谁的手机？": "Wem gehört dieses Handy?",
+        "我的手机在包里。": "Mein Handy ist in der Tasche."
+      },
+      "integrated_task": "Stelle die Alltagsgegenstände vor, die du benutzt."
+    },
+    "es": {
+      "title": "Objetos de uso cotidiano",
+      "learning_objectives": [
+        "Reconocer y nombrar objetos habituales de la vida diaria.",
+        "Clasificar objetos en artículos del hogar, de estudio y personales.",
+        "Preguntar e identificar objetos usando este, ese y qué.",
+        "Describir lo que se tiene y lo que no se tiene.",
+        "Decir sencillamente de quién es un objeto, dónde está y para qué sirve."
+      ],
+      "key_expressions": {
+        "这是什么？": "¿Qué es esto?",
+        "这是我的手机。": "Este es mi teléfono.",
+        "那是你的书吗？": "¿Ese es tu libro?",
+        "我有一台电脑。": "Tengo un ordenador.",
+        "我没有钥匙。": "No tengo llave.",
+        "我的包在桌子上。": "Mi bolso está encima de la mesa.",
+        "这是谁的手机？": "¿De quién es este teléfono?",
+        "我的手机在包里。": "Mi teléfono está dentro del bolso."
+      },
+      "integrated_task": "Presenta los objetos que utilizas en tu vida diaria."
+    },
+    "it": {
+      "title": "Oggetti di uso quotidiano",
+      "learning_objectives": [
+        "Riconoscere e nominare gli oggetti comuni della vita quotidiana.",
+        "Classificare gli oggetti in articoli per la casa, per lo studio e personali.",
+        "Fare domande sugli oggetti usando questo, quello e che cosa.",
+        "Descrivere ciò che si possiede e ciò che non si possiede.",
+        "Dire semplicemente a chi appartiene un oggetto, dove si trova e a cosa serve."
+      ],
+      "key_expressions": {
+        "这是什么？": "Che cos'è questo?",
+        "这是我的手机。": "Questo è il mio telefono.",
+        "那是你的书吗？": "Quello è il tuo libro?",
+        "我有一台电脑。": "Ho un computer.",
+        "我没有钥匙。": "Non ho le chiavi.",
+        "我的包在桌子上。": "La mia borsa è sul tavolo.",
+        "这是谁的手机？": "Di chi è questo telefono?",
+        "我的手机在包里。": "Il mio telefono è nella borsa."
+      },
+      "integrated_task": "Presenta gli oggetti che usi nella vita quotidiana."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:15:15.050431+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
+  },
+  "title_status": "confirmed"
+}

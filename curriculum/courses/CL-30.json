@@ -1,0 +1,661 @@
+{
+  "course_id": "CL-30",
+  "title": "频率表达综合练习",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 30,
+  "learning_objectives": [
+    "理解总是、经常、有时候、很少等常见频率表达。",
+    "能够使用频率副词描述自己的日常习惯和兴趣活动。",
+    "能够使用每周、每天等时间表达和次数说明活动频率。",
+    "能够使用多久一次询问和回答活动频率。",
+    "能够综合介绍自己的日常生活、学习安排和兴趣爱好。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL-30-001",
+      "simplified": "总是",
+      "traditional": "總是",
+      "pinyin": "zǒng shì",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某种情况或动作每次都发生。",
+      "category": "频率表达",
+      "collocations": [
+        "总是很忙",
+        "总是迟到"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-002",
+      "simplified": "经常",
+      "traditional": "經常",
+      "pinyin": "jīng cháng",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某种情况或动作发生的次数比较多。",
+      "category": "频率表达",
+      "collocations": [
+        "经常运动",
+        "经常看书"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-003",
+      "simplified": "常常",
+      "traditional": "常常",
+      "pinyin": "cháng cháng",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某种动作发生得比较频繁。",
+      "category": "频率表达",
+      "collocations": [
+        "常常听音乐",
+        "常常做饭"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-004",
+      "simplified": "有时候",
+      "traditional": "有時候",
+      "pinyin": "yǒu shí hou",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某种情况或动作在一些时候发生。",
+      "category": "频率表达",
+      "collocations": [
+        "有时候跑步",
+        "有时候做饭"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-005",
+      "simplified": "偶尔",
+      "traditional": "偶爾",
+      "pinyin": "ǒu ěr",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某种情况或动作发生的次数不多。",
+      "category": "频率表达",
+      "collocations": [
+        "偶尔旅行",
+        "偶尔看电影"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-006",
+      "simplified": "很少",
+      "traditional": "很少",
+      "pinyin": "hěn shǎo",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某种情况或动作发生的次数少。",
+      "category": "频率表达",
+      "collocations": [
+        "很少喝咖啡",
+        "很少看电视"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-007",
+      "simplified": "几乎不",
+      "traditional": "幾乎不",
+      "pinyin": "jī hū bù",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某种动作基本不发生。",
+      "category": "频率表达",
+      "collocations": [
+        "几乎不迟到",
+        "几乎不喝酒"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-008",
+      "simplified": "每天",
+      "traditional": "每天",
+      "pinyin": "měi tiān",
+      "part_of_speech": "时间表达",
+      "definition_zh": "表示每一天。",
+      "category": "周期表达",
+      "collocations": [
+        "每天学习",
+        "每天运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-009",
+      "simplified": "每周",
+      "traditional": "每週",
+      "pinyin": "měi zhōu",
+      "part_of_speech": "时间表达",
+      "definition_zh": "表示每一个星期。",
+      "category": "周期表达",
+      "collocations": [
+        "每周游泳",
+        "每周上课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-010",
+      "simplified": "每个月",
+      "traditional": "每個月",
+      "pinyin": "měi ge yuè",
+      "part_of_speech": "时间表达",
+      "definition_zh": "表示每一个月。",
+      "category": "周期表达",
+      "collocations": [
+        "每个月旅行",
+        "每个月看电影"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-011",
+      "simplified": "一次",
+      "traditional": "一次",
+      "pinyin": "yí cì",
+      "part_of_speech": "数量表达",
+      "definition_zh": "表示动作发生一回。",
+      "category": "次数表达",
+      "collocations": [
+        "一次运动",
+        "一次旅行"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-012",
+      "simplified": "两次",
+      "traditional": "兩次",
+      "pinyin": "liǎng cì",
+      "part_of_speech": "数量表达",
+      "definition_zh": "表示动作发生两回。",
+      "category": "次数表达",
+      "collocations": [
+        "两次游泳",
+        "两次上课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-013",
+      "simplified": "三次",
+      "traditional": "三次",
+      "pinyin": "sān cì",
+      "part_of_speech": "数量表达",
+      "definition_zh": "表示动作发生三回。",
+      "category": "次数表达",
+      "collocations": [
+        "三次练习",
+        "三次运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-014",
+      "simplified": "多久一次",
+      "traditional": "多久一次",
+      "pinyin": "duō jiǔ yí cì",
+      "part_of_speech": "疑问短语",
+      "definition_zh": "询问一件事情多长时间发生一次。",
+      "category": "频率提问",
+      "collocations": [
+        "每周多久一次",
+        "你多久运动一次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-015",
+      "simplified": "运动",
+      "traditional": "運動",
+      "pinyin": "yùn dòng",
+      "part_of_speech": "动词/名词",
+      "definition_zh": "通过身体活动锻炼身体。",
+      "category": "日常活动",
+      "collocations": [
+        "经常运动",
+        "每周运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-016",
+      "simplified": "跑步",
+      "traditional": "跑步",
+      "pinyin": "pǎo bù",
+      "part_of_speech": "动词",
+      "definition_zh": "用跑的方式进行身体活动。",
+      "category": "兴趣活动",
+      "collocations": [
+        "每天跑步",
+        "每周跑步两次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-017",
+      "simplified": "游泳",
+      "traditional": "游泳",
+      "pinyin": "yóu yǒng",
+      "part_of_speech": "动词",
+      "definition_zh": "在水中活动。",
+      "category": "兴趣活动",
+      "collocations": [
+        "每周游泳",
+        "偶尔游泳"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-018",
+      "simplified": "看书",
+      "traditional": "看書",
+      "pinyin": "kàn shū",
+      "part_of_speech": "动词短语",
+      "definition_zh": "阅读书籍。",
+      "category": "日常活动",
+      "collocations": [
+        "每天看书",
+        "经常看书"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-019",
+      "simplified": "听音乐",
+      "traditional": "聽音樂",
+      "pinyin": "tīng yīn yuè",
+      "part_of_speech": "动词短语",
+      "definition_zh": "听歌曲或其他音乐。",
+      "category": "兴趣活动",
+      "collocations": [
+        "每天听音乐",
+        "有时候听音乐"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-30-020",
+      "simplified": "做饭",
+      "traditional": "做飯",
+      "pinyin": "zuò fàn",
+      "part_of_speech": "动词短语",
+      "definition_zh": "准备和烹饪食物。",
+      "category": "日常活动",
+      "collocations": [
+        "经常做饭",
+        "周末做饭"
+      ],
+      "is_key_vocabulary": false
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "我每天都学习中文。",
+      "pinyin": "Wǒ měi tiān dōu xué xí Zhōngwén.",
+      "meaning_zh": "我每天都进行中文学习。"
+    },
+    {
+      "expression": "我经常听音乐。",
+      "pinyin": "Wǒ jīng cháng tīng yīn yuè.",
+      "meaning_zh": "我听音乐的次数比较多。"
+    },
+    {
+      "expression": "我有时候去跑步。",
+      "pinyin": "Wǒ yǒu shí hou qù pǎo bù.",
+      "meaning_zh": "我在一些时候会去跑步。"
+    },
+    {
+      "expression": "我很少看电视。",
+      "pinyin": "Wǒ hěn shǎo kàn diàn shì.",
+      "meaning_zh": "我看电视的次数不多。"
+    },
+    {
+      "expression": "我每周游泳两次。",
+      "pinyin": "Wǒ měi zhōu yóu yǒng liǎng cì.",
+      "meaning_zh": "我一个星期游泳两回。"
+    },
+    {
+      "expression": "你多久运动一次？",
+      "pinyin": "Nǐ duō jiǔ yùn dòng yí cì?",
+      "meaning_zh": "询问对方多长时间运动一回。"
+    },
+    {
+      "expression": "我通常周末做饭。",
+      "pinyin": "Wǒ tōng cháng zhōu mò zuò fàn.",
+      "meaning_zh": "我一般在周末做饭。"
+    },
+    {
+      "expression": "我偶尔和朋友看电影。",
+      "pinyin": "Wǒ ǒu ěr hé péng you kàn diàn yǐng.",
+      "meaning_zh": "我有时和朋友一起看电影。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋频率副词＋动词",
+      "explanation": "频率副词通常放在主语之后、主要动词之前。",
+      "examples": [
+        "我经常看书。",
+        "他很少喝咖啡。"
+      ]
+    },
+    {
+      "pattern": "主语＋每天／每周＋动词",
+      "explanation": "使用周期表达说明活动通常在哪个时间周期发生。",
+      "examples": [
+        "我每天学习中文。",
+        "她每周游泳。"
+      ]
+    },
+    {
+      "pattern": "主语＋每周／每个月＋动词＋次数",
+      "explanation": "使用周期和次数一起说明活动频率。",
+      "examples": [
+        "我每周跑步两次。",
+        "他每个月旅行一次。"
+      ]
+    },
+    {
+      "pattern": "你＋多久＋动词＋一次？",
+      "explanation": "询问某项活动多长时间发生一次。",
+      "examples": [
+        "你多久运动一次？",
+        "你多久看一次电影？"
+      ]
+    },
+    {
+      "pattern": "主语＋时间＋频率副词＋动词",
+      "explanation": "将时间和频率表达结合，介绍具体的生活习惯。",
+      "examples": [
+        "我周末经常看书。",
+        "她晚上有时候听音乐。"
+      ]
+    },
+    {
+      "pattern": "主语＋频率副词＋动词＋其他内容",
+      "explanation": "在频率副词之后补充地点、对象或活动内容。",
+      "examples": [
+        "我经常和朋友一起运动。",
+        "他有时候在家做饭。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "你多久运动一次",
+      "scene": "两位朋友谈论自己的运动习惯。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你多久运动一次？",
+          "traditional": "你多久運動一次？",
+          "pinyin": "Nǐ duō jiǔ yùn dòng yí cì?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我每周运动两次。",
+          "traditional": "我每週運動兩次。",
+          "pinyin": "Wǒ měi zhōu yùn dòng liǎng cì."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你喜欢跑步吗？",
+          "traditional": "你喜歡跑步嗎？",
+          "pinyin": "Nǐ xǐ huan pǎo bù ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "喜欢，我有时候也去游泳。",
+          "traditional": "喜歡，我有時候也去游泳。",
+          "pinyin": "Xǐ huan, wǒ yǒu shí hou yě qù yóu yǒng."
+        }
+      ]
+    },
+    {
+      "title": "周末的习惯",
+      "scene": "朋友之间谈论周末通常做什么。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你周末通常做什么？",
+          "traditional": "你週末通常做什麼？",
+          "pinyin": "Nǐ zhōu mò tōng cháng zuò shén me?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我经常在家看书，也做饭。",
+          "traditional": "我經常在家看書，也做飯。",
+          "pinyin": "Wǒ jīng cháng zài jiā kàn shū, yě zuò fàn."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你经常和朋友出去吗？",
+          "traditional": "你經常和朋友出去嗎？",
+          "pinyin": "Nǐ jīng cháng hé péng you chū qù ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "不经常，我偶尔和朋友看电影。",
+          "traditional": "不經常，我偶爾和朋友看電影。",
+          "pinyin": "Bù jīng cháng, wǒ ǒu ěr hé péng you kàn diàn yǐng."
+        }
+      ]
+    },
+    {
+      "title": "每周学习几次",
+      "scene": "同学交流学习中文的安排。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你每周学习中文几次？",
+          "traditional": "你每週學習中文幾次？",
+          "pinyin": "Nǐ měi zhōu xué xí Zhōngwén jǐ cì?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我每周上两次中文课。",
+          "traditional": "我每週上兩次中文課。",
+          "pinyin": "Wǒ měi zhōu shàng liǎng cì Zhōngwén kè."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你每天也学习吗？",
+          "traditional": "你每天也學習嗎？",
+          "pinyin": "Nǐ měi tiān yě xué xí ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "是的，我每天都学习半个小时。",
+          "traditional": "是的，我每天都學習半個小時。",
+          "pinyin": "Shì de, wǒ měi tiān dōu xué xí bàn ge xiǎo shí."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "频率副词排序",
+      "type": "词汇与表达练习",
+      "instructions": "将总是、经常、有时候、偶尔、很少、几乎不按照大致频率从高到低排列，并用它们造句。",
+      "expected_output": "能够正确理解并使用不同频率表达，知道它们表示的频率程度并非精确数字。"
+    },
+    {
+      "activity": "我的每周活动表",
+      "type": "信息整理练习",
+      "instructions": "写出自己每周做的三至五种活动，并标注每周发生的次数。",
+      "expected_output": "例如：每周跑步两次，每周上中文课一次。"
+    },
+    {
+      "activity": "多久一次问答",
+      "type": "双人问答",
+      "instructions": "两人互相询问运动、看书、听音乐、做饭等活动多久一次。",
+      "expected_output": "至少提出三个多久一次的问题，并使用每周、每天或频率副词回答。"
+    },
+    {
+      "activity": "句子综合改写",
+      "type": "句型练习",
+      "instructions": "把活动、时间和频率信息组合成完整句子，注意频率副词的位置和次数表达。",
+      "expected_output": "例如：我周末经常看书；我每周游泳两次。"
+    },
+    {
+      "activity": "我的生活频率介绍",
+      "type": "综合口语表达",
+      "instructions": "介绍自己平时和周末的生活习惯、学习安排和兴趣活动，并与同学进行交流。",
+      "expected_output": "至少使用四种频率表达、两个周期表达和一个多久一次的问题。"
+    }
+  ],
+  "integrated_expression_task": {
+    "title": "介绍我的日常习惯和每周安排",
+    "instructions": "介绍自己平时、周末和每周的活动安排。说明哪些事情经常做、哪些事情偶尔做，以及每周进行某项活动多少次。然后采访一位同学。",
+    "requirements": [
+      "至少使用四种不同的频率副词或频率表达。",
+      "至少使用两个周期表达，例如每天、每周。",
+      "至少使用两个次数表达，例如一次、两次。",
+      "至少提出一个多久一次的问题。",
+      "介绍至少三种真实的日常活动或兴趣爱好。"
+    ],
+    "sample": "我每天都学习中文。我经常听音乐，也喜欢看书。我每周跑步两次，偶尔和朋友看电影。你多久运动一次？"
+  },
+  "teacher_notes": [
+    "本课是综合练习课，重点整合 CL-13、CL-25、CL-26 和 CL-27，不新增复杂语法。",
+    "总是、经常、有时候、偶尔、很少、几乎不表示不同频率程度，但不是严格的数学比例。",
+    "频率副词通常放在主语后、主要动词前，例如我经常看书。",
+    "每天、每周、每个月表示重复发生的时间周期，不应简单归类为频率副词。",
+    "一次、两次、三次表示动作发生的次数，不表示持续时间。",
+    "每周游泳两次中，每周表示周期，两次表示次数。",
+    "多久一次用于询问活动发生的频率，不等于多长时间；多长时间主要询问持续时间。",
+    "通常可以作为日常习惯表达，与经常意思接近，但不要求学生掌握细微语义差别。",
+    "不要把一直与总是当成完全相同的表达；本课不重点扩展一直。",
+    "鼓励学生根据真实生活安排表达，不要求所有学生使用相同的频率或活动内容。"
+  ],
+  "completion_criteria": [
+    "能够理解并使用常见频率副词表达日常习惯。",
+    "能够区分频率副词、周期表达和动作次数。",
+    "能够使用每周＋次数＋动词表达活动安排。",
+    "能够使用多久一次询问和回答活动频率。",
+    "能够把时间、频率和活动组合成完整句子。",
+    "能够完成介绍个人生活习惯和每周安排的综合表达任务。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Integrated Practice: Frequency Expressions",
+      "learning_objectives": [
+        "Understand common frequency expressions such as always, often, sometimes and rarely.",
+        "Use frequency adverbs to describe daily habits and hobbies.",
+        "Use time periods such as every day and every week together with activity counts.",
+        "Ask and answer questions about how often an activity takes place.",
+        "Give an integrated description of daily routines, study plans and hobbies."
+      ],
+      "integrated_task": "Describe your daily and weekly routines, including activities you do often or occasionally and how many times a week you do them. Then interview a classmate.",
+      "key_expressions": {
+        "我每天都学习中文。": "我每天都进行中文学习。",
+        "我经常听音乐。": "我听音乐的次数比较多。",
+        "我有时候去跑步。": "我在一些时候会去跑步。",
+        "我很少看电视。": "我看电视的次数不多。",
+        "我每周游泳两次。": "我一个星期游泳两回。",
+        "你多久运动一次？": "询问对方多长时间运动一回。",
+        "我通常周末做饭。": "我一般在周末做饭。",
+        "我偶尔和朋友看电影。": "我有时和朋友一起看电影。"
+      }
+    },
+    "fr": {
+      "title": "Pratique intégrée : les expressions de fréquence",
+      "learning_objectives": [
+        "Comprendre les expressions de fréquence courantes comme toujours, souvent, parfois et rarement.",
+        "Utiliser les adverbes de fréquence pour décrire ses habitudes et ses loisirs.",
+        "Associer des périodes comme chaque jour et chaque semaine au nombre de fois.",
+        "Poser et répondre à des questions sur la fréquence d'une activité.",
+        "Présenter de manière intégrée ses habitudes, son emploi du temps et ses loisirs."
+      ],
+      "integrated_task": "Présentez vos habitudes quotidiennes et hebdomadaires, en indiquant les activités que vous faites souvent ou occasionnellement et leur fréquence par semaine. Puis interrogez un camarade.",
+      "key_expressions": {
+        "我每天都学习中文。": "我每天都进行中文学习。",
+        "我经常听音乐。": "我听音乐的次数比较多。",
+        "我有时候去跑步。": "我在一些时候会去跑步。",
+        "我很少看电视。": "我看电视的次数不多。",
+        "我每周游泳两次。": "我一个星期游泳两回。",
+        "你多久运动一次？": "询问对方多长时间运动一回。",
+        "我通常周末做饭。": "我一般在周末做饭。",
+        "我偶尔和朋友看电影。": "我有时和朋友一起看电影。"
+      }
+    },
+    "de": {
+      "title": "Integrierte Übung: Häufigkeitsangaben",
+      "learning_objectives": [
+        "Häufigkeitsangaben wie immer, oft, manchmal und selten verstehen.",
+        "Häufigkeitsadverbien verwenden, um Alltag und Hobbys zu beschreiben.",
+        "Zeiträume wie jeden Tag und jede Woche mit einer Anzahl von Aktivitäten verbinden.",
+        "Fragen dazu stellen und beantworten, wie oft etwas stattfindet.",
+        "Alltagsgewohnheiten, Lernpläne und Hobbys zusammenhängend beschreiben."
+      ],
+      "integrated_task": "Beschreibe deine täglichen und wöchentlichen Gewohnheiten. Erkläre, was du oft oder gelegentlich machst und wie oft pro Woche. Interviewe anschließend einen Mitschüler.",
+      "key_expressions": {
+        "我每天都学习中文。": "我每天都进行中文学习。",
+        "我经常听音乐。": "我听音乐的次数比较多。",
+        "我有时候去跑步。": "我在一些时候会去跑步。",
+        "我很少看电视。": "我看电视的次数不多。",
+        "我每周游泳两次。": "我一个星期游泳两回。",
+        "你多久运动一次？": "询问对方多长时间运动一回。",
+        "我通常周末做饭。": "我一般在周末做饭。",
+        "我偶尔和朋友看电影。": "我有时和朋友一起看电影。"
+      }
+    },
+    "es": {
+      "title": "Práctica integrada: expresiones de frecuencia",
+      "learning_objectives": [
+        "Comprender expresiones de frecuencia comunes como siempre, a menudo, a veces y rara vez.",
+        "Usar adverbios de frecuencia para describir hábitos diarios y aficiones.",
+        "Combinar periodos como cada día y cada semana con el número de veces.",
+        "Preguntar y responder con qué frecuencia se realiza una actividad.",
+        "Describir de forma integrada las rutinas, los planes de estudio y las aficiones."
+      ],
+      "integrated_task": "Describe tus hábitos diarios y semanales. Explica qué actividades haces a menudo u ocasionalmente y cuántas veces por semana. Después entrevista a un compañero.",
+      "key_expressions": {
+        "我每天都学习中文。": "我每天都进行中文学习。",
+        "我经常听音乐。": "我听音乐的次数比较多。",
+        "我有时候去跑步。": "我在一些时候会去跑步。",
+        "我很少看电视。": "我看电视的次数不多。",
+        "我每周游泳两次。": "我一个星期游泳两回。",
+        "你多久运动一次？": "询问对方多长时间运动一回。",
+        "我通常周末做饭。": "我一般在周末做饭。",
+        "我偶尔和朋友看电影。": "我有时和朋友一起看电影。"
+      }
+    },
+    "it": {
+      "title": "Esercizio integrato: espressioni di frequenza",
+      "learning_objectives": [
+        "Comprendere espressioni di frequenza comuni come sempre, spesso, a volte e raramente.",
+        "Usare gli avverbi di frequenza per descrivere abitudini quotidiane e hobby.",
+        "Combinare periodi come ogni giorno e ogni settimana con il numero di volte.",
+        "Fare e rispondere a domande sulla frequenza di un'attività.",
+        "Descrivere in modo integrato abitudini quotidiane, programmi di studio e hobby."
+      ],
+      "integrated_task": "Descrivi le tue abitudini quotidiane e settimanali. Spiega quali attività svolgi spesso o occasionalmente e quante volte alla settimana. Poi intervista un compagno.",
+      "key_expressions": {
+        "我每天都学习中文。": "我每天都进行中文学习。",
+        "我经常听音乐。": "我听音乐的次数比较多。",
+        "我有时候去跑步。": "我在一些时候会去跑步。",
+        "我很少看电视。": "我看电视的次数不多。",
+        "我每周游泳两次。": "我一个星期游泳两回。",
+        "你多久运动一次？": "询问对方多长时间运动一回。",
+        "我通常周末做饭。": "我一般在周末做饭。",
+        "我偶尔和朋友看电影。": "我有时和朋友一起看电影。"
+      }
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T19:03:01",
+    "version": 3,
+    "source": "CL-curriculum-framework",
+    "content_status": "draft",
+    "review_note": "首次完整内容写入，待检查频率表达、周期与次数的区别、教学衔接及五种语言翻译。"
+  },
+  "title_status": "confirmed"
+}

@@ -1,0 +1,51 @@
+{
+  "course_id": "",
+  "title": "",
+  "module_id": "",
+  "status": "draft",
+  "sort_order": null,
+  "learning_objectives": [],
+  "vocabulary": [
+    {
+      "word_id": "",
+      "simplified": "",
+      "traditional": "",
+      "pinyin": "",
+      "part_of_speech": "",
+      "definition_zh": "",
+      "category": "",
+      "collocations": [],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [],
+  "sentence_patterns": [
+    {
+      "pattern": "",
+      "explanation": "",
+      "examples": []
+    }
+  ],
+  "dialogues": [],
+  "classroom_practice": [],
+  "integrated_expression_task": {
+    "instructions": "",
+    "expected_output": ""
+  },
+  "teacher_notes": [],
+  "completion_criteria": [],
+  "resources": [],
+  "translations": {
+    "en": {},
+    "fr": {},
+    "de": {},
+    "es": {},
+    "it": {}
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": null,
+    "version": 1,
+    "source": "teacher_curriculum"
+  }
+}

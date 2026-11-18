@@ -1,0 +1,628 @@
+{
+  "course_id": "CL-19",
+  "title": "六个中国著名城市",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 19,
+  "learning_objectives": [
+    "能够认读并说出北京、上海、广州、成都、西安和杭州六个城市名称。",
+    "能够理解北京是中国的首都。",
+    "能够使用“去过”询问和介绍过去的旅行经历。",
+    "能够使用“想去”表达想去某个城市的愿望。",
+    "能够用简单句介绍城市的方位或特色。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL19-001",
+      "simplified": "中国",
+      "traditional": "中国",
+      "pinyin": "Zhōngguó",
+      "part_of_speech": "名词",
+      "definition_zh": "国家名称。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-002",
+      "simplified": "城市",
+      "traditional": "城市",
+      "pinyin": "chéngshì",
+      "part_of_speech": "名词",
+      "definition_zh": "人口较多、建筑和生活设施集中的地方。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-003",
+      "simplified": "北京",
+      "traditional": "北京",
+      "pinyin": "Běijīng",
+      "part_of_speech": "名词",
+      "definition_zh": "中国的首都。",
+      "category": "城市名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-004",
+      "simplified": "上海",
+      "traditional": "上海",
+      "pinyin": "Shànghǎi",
+      "part_of_speech": "名词",
+      "definition_zh": "中国的一座重要城市。",
+      "category": "城市名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-005",
+      "simplified": "广州",
+      "traditional": "广州",
+      "pinyin": "Guǎngzhōu",
+      "part_of_speech": "名词",
+      "definition_zh": "中国南方的一座重要城市。",
+      "category": "城市名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-006",
+      "simplified": "成都",
+      "traditional": "成都",
+      "pinyin": "Chéngdū",
+      "part_of_speech": "名词",
+      "definition_zh": "四川省的省会城市。",
+      "category": "城市名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-007",
+      "simplified": "西安",
+      "traditional": "西安",
+      "pinyin": "Xī'ān",
+      "part_of_speech": "名词",
+      "definition_zh": "中国历史文化名城。",
+      "category": "城市名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-008",
+      "simplified": "杭州",
+      "traditional": "杭州",
+      "pinyin": "Hángzhōu",
+      "part_of_speech": "名词",
+      "definition_zh": "浙江省的省会城市。",
+      "category": "城市名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-009",
+      "simplified": "首都",
+      "traditional": "首都",
+      "pinyin": "shǒudū",
+      "part_of_speech": "名词",
+      "definition_zh": "一个国家的政治中心城市。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-010",
+      "simplified": "北方",
+      "traditional": "北方",
+      "pinyin": "běifāng",
+      "part_of_speech": "名词",
+      "definition_zh": "比较靠北的地区。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-011",
+      "simplified": "南方",
+      "traditional": "南方",
+      "pinyin": "nánfāng",
+      "part_of_speech": "名词",
+      "definition_zh": "比较靠南的地区。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-012",
+      "simplified": "东边",
+      "traditional": "东边",
+      "pinyin": "dōngbian",
+      "part_of_speech": "名词",
+      "definition_zh": "东方的位置。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-013",
+      "simplified": "西边",
+      "traditional": "西边",
+      "pinyin": "xībian",
+      "part_of_speech": "名词",
+      "definition_zh": "西方的位置。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-014",
+      "simplified": "旅游",
+      "traditional": "旅游",
+      "pinyin": "lǚyóu",
+      "part_of_speech": "名词",
+      "definition_zh": "到一个地方参观、游玩。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-015",
+      "simplified": "旅行",
+      "traditional": "旅行",
+      "pinyin": "lǚxíng",
+      "part_of_speech": "名词",
+      "definition_zh": "到别的地方去。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-016",
+      "simplified": "有名",
+      "traditional": "有名",
+      "pinyin": "yǒumíng",
+      "part_of_speech": "名词",
+      "definition_zh": "很多人知道的。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-017",
+      "simplified": "地方",
+      "traditional": "地方",
+      "pinyin": "dìfang",
+      "part_of_speech": "名词",
+      "definition_zh": "一个位置或区域。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-018",
+      "simplified": "风景",
+      "traditional": "风景",
+      "pinyin": "fēngjǐng",
+      "part_of_speech": "名词",
+      "definition_zh": "一个地方的自然或人文景色。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-019",
+      "simplified": "熊猫",
+      "traditional": "熊猫",
+      "pinyin": "xióngmāo",
+      "part_of_speech": "名词",
+      "definition_zh": "一种黑白颜色的大型动物。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-020",
+      "simplified": "西湖",
+      "traditional": "西湖",
+      "pinyin": "Xī Hú",
+      "part_of_speech": "名词",
+      "definition_zh": "杭州著名的湖。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL19-021",
+      "simplified": "历史",
+      "traditional": "历史",
+      "pinyin": "lìshǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "过去发生的事情。",
+      "category": "城市与旅行",
+      "collocations": [],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "你去过北京吗？",
+      "pinyin": "Nǐ qù guo Běijīng ma?",
+      "meaning_zh": "询问对方是否有去过某个城市。"
+    },
+    {
+      "expression": "我去过上海。",
+      "pinyin": "Wǒ qù guo Shànghǎi.",
+      "meaning_zh": "介绍自己曾经去过的城市。"
+    },
+    {
+      "expression": "我想去成都。",
+      "pinyin": "Wǒ xiǎng qù Chéngdū.",
+      "meaning_zh": "表达想去某个城市。"
+    },
+    {
+      "expression": "北京是中国的首都。",
+      "pinyin": "Běijīng shì Zhōngguó de shǒudū.",
+      "meaning_zh": "介绍北京的基本信息。"
+    },
+    {
+      "expression": "杭州有西湖。",
+      "pinyin": "Hángzhōu yǒu Xī Hú.",
+      "meaning_zh": "介绍一个城市有名的地方。"
+    },
+    {
+      "expression": "成都有熊猫。",
+      "pinyin": "Chéngdū yǒu xióngmāo.",
+      "meaning_zh": "介绍一个城市相关的特色。"
+    },
+    {
+      "expression": "广州在中国南方。",
+      "pinyin": "Guǎngzhōu zài Zhōngguó nánfāng.",
+      "meaning_zh": "介绍城市的大致方位。"
+    },
+    {
+      "expression": "哪个城市最有名？",
+      "pinyin": "Nǎ ge chéngshì zuì yǒumíng?",
+      "meaning_zh": "询问城市的知名程度。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋去过＋城市＋吗？",
+      "explanation": "询问是否有过某地的经历。",
+      "examples": [
+        "你去过北京吗？",
+        "你去过上海吗？"
+      ]
+    },
+    {
+      "pattern": "主语＋去过＋城市",
+      "explanation": "表达曾经去过某个地方。",
+      "examples": [
+        "我去过西安。",
+        "他去过广州。"
+      ]
+    },
+    {
+      "pattern": "主语＋想去＋城市",
+      "explanation": "表达想去某个城市。",
+      "examples": [
+        "我想去成都。",
+        "她想去杭州。"
+      ]
+    },
+    {
+      "pattern": "城市＋是＋国家的＋首都",
+      "explanation": "介绍一个国家的首都。",
+      "examples": [
+        "北京是中国的首都。"
+      ]
+    },
+    {
+      "pattern": "城市＋在＋方位",
+      "explanation": "简单介绍城市的大致地理位置。",
+      "examples": [
+        "广州在中国南方。",
+        "北京在中国北方。"
+      ]
+    },
+    {
+      "pattern": "城市＋有＋地方／事物",
+      "explanation": "介绍城市里有的景点或特色。",
+      "examples": [
+        "杭州有西湖。",
+        "成都有熊猫。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "聊聊去过的城市",
+      "scene": "两位朋友谈论去过的中国城市。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你去过北京吗？",
+          "traditional": "你去过北京吗？",
+          "pinyin": "Nǐ qù guo Běijīng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "去过，我去过北京。",
+          "traditional": "去过，我去过北京。",
+          "pinyin": "Qù guo, wǒ qù guo Běijīng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你去过上海吗？",
+          "traditional": "你去过上海吗？",
+          "pinyin": "Nǐ qù guo Shànghǎi ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "没有，我还没去过。",
+          "traditional": "没有，我还没去过。",
+          "pinyin": "Méiyǒu, wǒ hái méi qù guo."
+        }
+      ]
+    },
+    {
+      "title": "计划旅行",
+      "scene": "两个人讨论下一次想去的城市。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你想去哪个城市？",
+          "traditional": "你想去哪个城市？",
+          "pinyin": "Nǐ xiǎng qù nǎ ge chéngshì?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想去成都。",
+          "traditional": "我想去成都。",
+          "pinyin": "Wǒ xiǎng qù Chéngdū."
+        },
+        {
+          "speaker": "A",
+          "simplified": "为什么？",
+          "traditional": "为什么？",
+          "pinyin": "Wèishénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想看熊猫。",
+          "traditional": "我想看熊猫。",
+          "pinyin": "Wǒ xiǎng kàn xióngmāo."
+        }
+      ]
+    },
+    {
+      "title": "介绍杭州",
+      "scene": "朋友向别人介绍自己喜欢的城市。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "杭州是一个什么样的城市？",
+          "traditional": "杭州是一个什么样的城市？",
+          "pinyin": "Hángzhōu shì yí ge shénme yàng de chéngshì?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "杭州很有名。",
+          "traditional": "杭州很有名。",
+          "pinyin": "Hángzhōu hěn yǒumíng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "杭州有什么？",
+          "traditional": "杭州有什么？",
+          "pinyin": "Hángzhōu yǒu shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "杭州有西湖。",
+          "traditional": "杭州有西湖。",
+          "pinyin": "Hángzhōu yǒu Xī Hú."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "城市名称认读",
+      "type": "词汇练习",
+      "instructions": "认读并听辨六个城市名称，将名称与教师展示的城市图片配对。",
+      "expected_output": [
+        "北京",
+        "上海",
+        "广州",
+        "成都",
+        "西安",
+        "杭州"
+      ]
+    },
+    {
+      "activity": "城市与特色配对",
+      "type": "词汇理解",
+      "instructions": "根据本课内容，将城市与简单特色配对。",
+      "expected_output": [
+        "北京—首都",
+        "杭州—西湖",
+        "成都—熊猫"
+      ]
+    },
+    {
+      "activity": "你去过哪里",
+      "type": "口语问答",
+      "instructions": "两人一组使用“你去过……吗？”提问，并用“去过”或“没去过”回答。",
+      "expected_output": [
+        "你去过上海吗？我去过上海。",
+        "你去过西安吗？我没去过。"
+      ]
+    },
+    {
+      "activity": "我想去的城市",
+      "type": "表达练习",
+      "instructions": "从六个城市中选择一个，使用“我想去……”表达旅行愿望。",
+      "expected_output": [
+        "我想去成都。",
+        "我想去杭州。"
+      ]
+    },
+    {
+      "activity": "介绍一座城市",
+      "type": "综合表达",
+      "instructions": "选择一座城市，用两到三句话介绍城市名称、方位或特色。",
+      "expected_output": [
+        "北京是中国的首都。",
+        "杭州有西湖。",
+        "成都有熊猫。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "选择一座城市，介绍城市名称、一个简单特点，以及自己是否去过或是否想去。",
+    "expected_output": [
+      "北京是中国的首都。",
+      "我没去过北京。",
+      "我想去北京。"
+    ]
+  },
+  "teacher_notes": [
+    "本课重点是认识六个中国城市，并能在简单对话中使用城市名称。",
+    "六个城市为教学样例，不代表中国城市的排名。",
+    "北京是中国的首都；不要把上海、广州等城市误称为首都。",
+    "城市方位只作初步认识，不要求记忆详细地图或行政区划。",
+    "“去过”表示过去有过某种经历，初级阶段通过问答自然接触即可。",
+    "“想去”表达愿望，与“去过”表达经历不同。",
+    "“有”可以介绍城市的景点或特色，例如杭州有西湖。",
+    "成都与熊猫的联系可作为文化话题，不要暗示只有成都有熊猫。",
+    "西安的历史文化可作为拓展话题，不要求学生掌握复杂历史知识。",
+    "教学中可根据学生兴趣替换城市例子，但本课六个核心城市名称应保留。"
+  ],
+  "completion_criteria": [
+    "能够认读并说出六个城市名称。",
+    "能够理解北京是中国的首都。",
+    "能够使用“你去过……吗？”询问经历。",
+    "能够使用“我去过……”或“我没去过……”回答。",
+    "能够使用“我想去……”表达旅行愿望。",
+    "能够选择一座城市，用两到三句简单中文进行介绍。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Six Famous Chinese Cities",
+      "learning_objectives": [
+        "Recognize six Chinese city names.",
+        "Understand that Beijing is the capital of China.",
+        "Ask and answer whether someone has visited a city.",
+        "Express a wish to visit a city.",
+        "Introduce a city using simple sentences."
+      ],
+      "key_expressions": {
+        "你去过北京吗？": "Have you been to Beijing?",
+        "我去过上海。": "I've been to Shanghai.",
+        "我想去成都。": "I want to go to Chengdu.",
+        "北京是中国的首都。": "Beijing is the capital of China.",
+        "杭州有西湖。": "Hangzhou has West Lake.",
+        "成都有熊猫。": "There are pandas in Chengdu.",
+        "广州在中国南方。": "Guangzhou is in southern China.",
+        "哪个城市最有名？": "Which city is the most famous?"
+      },
+      "integrated_task": "Choose a city and introduce it in two or three simple sentences."
+    },
+    "fr": {
+      "title": "Six villes célèbres de Chine",
+      "learning_objectives": [
+        "Reconnaître six noms de villes chinoises.",
+        "Comprendre que Pékin est la capitale de la Chine.",
+        "Demander et dire si l'on a déjà visité une ville.",
+        "Exprimer le souhait de visiter une ville.",
+        "Présenter une ville avec des phrases simples."
+      ],
+      "key_expressions": {
+        "你去过北京吗？": "Es-tu déjà allé(e) à Pékin ?",
+        "我去过上海。": "Je suis déjà allé(e) à Shanghai.",
+        "我想去成都。": "Je voudrais aller à Chengdu.",
+        "北京是中国的首都。": "Pékin est la capitale de la Chine.",
+        "杭州有西湖。": "Il y a le lac de l'Ouest à Hangzhou.",
+        "成都有熊猫。": "Il y a des pandas à Chengdu.",
+        "广州在中国南方。": "Canton se trouve dans le sud de la Chine.",
+        "哪个城市最有名？": "Quelle ville est la plus connue ?"
+      },
+      "integrated_task": "Choisissez une ville et présentez-la en deux ou trois phrases simples."
+    },
+    "de": {
+      "title": "Sechs berühmte chinesische Städte",
+      "learning_objectives": [
+        "Sechs chinesische Städtenamen erkennen.",
+        "Verstehen, dass Peking die Hauptstadt Chinas ist.",
+        "Fragen und sagen, ob man eine Stadt schon besucht hat.",
+        "Den Wunsch ausdrücken, eine Stadt zu besuchen.",
+        "Eine Stadt mit einfachen Sätzen vorstellen."
+      ],
+      "key_expressions": {
+        "你去过北京吗？": "Warst du schon einmal in Peking?",
+        "我去过上海。": "Ich war schon einmal in Shanghai.",
+        "我想去成都。": "Ich möchte nach Chengdu fahren.",
+        "北京是中国的首都。": "Peking ist die Hauptstadt Chinas.",
+        "杭州有西湖。": "In Hangzhou gibt es den Westsee.",
+        "成都有熊猫。": "In Chengdu gibt es Pandas.",
+        "广州在中国南方。": "Guangzhou liegt im Süden Chinas.",
+        "哪个城市最有名？": "Welche Stadt ist am bekanntesten?"
+      },
+      "integrated_task": "Wähle eine Stadt und stelle sie mit zwei oder drei einfachen Sätzen vor."
+    },
+    "es": {
+      "title": "Seis ciudades famosas de China",
+      "learning_objectives": [
+        "Reconocer seis nombres de ciudades chinas.",
+        "Comprender que Pekín es la capital de China.",
+        "Preguntar y decir si alguien ha visitado una ciudad.",
+        "Expresar el deseo de visitar una ciudad.",
+        "Presentar una ciudad con frases sencillas."
+      ],
+      "key_expressions": {
+        "你去过北京吗？": "¿Has estado en Pekín?",
+        "我去过上海。": "He estado en Shanghái.",
+        "我想去成都。": "Quiero ir a Chengdu.",
+        "北京是中国的首都。": "Pekín es la capital de China.",
+        "杭州有西湖。": "En Hangzhou está el Lago del Oeste.",
+        "成都有熊猫。": "En Chengdu hay pandas.",
+        "广州在中国南方。": "Cantón está en el sur de China.",
+        "哪个城市最有名？": "¿Qué ciudad es la más famosa?"
+      },
+      "integrated_task": "Elige una ciudad y preséntala con dos o tres frases sencillas."
+    },
+    "it": {
+      "title": "Sei città famose della Cina",
+      "learning_objectives": [
+        "Riconoscere i nomi di sei città cinesi.",
+        "Capire che Pechino è la capitale della Cina.",
+        "Chiedere e dire se si è già visitata una città.",
+        "Esprimere il desiderio di visitare una città.",
+        "Presentare una città con frasi semplici."
+      ],
+      "key_expressions": {
+        "你去过北京吗？": "Sei mai stato/a a Pechino?",
+        "我去过上海。": "Sono già stato/a a Shanghai.",
+        "我想去成都。": "Vorrei andare a Chengdu.",
+        "北京是中国的首都。": "Pechino è la capitale della Cina.",
+        "杭州有西湖。": "A Hangzhou c'è il Lago dell'Ovest.",
+        "成都有熊猫。": "A Chengdu ci sono i panda.",
+        "广州在中国南方。": "Guangzhou si trova nel sud della Cina.",
+        "哪个城市最有名？": "Quale città è la più famosa?"
+      },
+      "integrated_task": "Scegli una città e presentala con due o tre frasi semplici."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:30:23.405267+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
+  },
+  "title_status": "confirmed"
+}

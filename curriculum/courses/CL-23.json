@@ -1,0 +1,615 @@
+{
+  "course_id": "CL-23",
+  "title": "动词＋过：经历表达",
+  "module_id": "M01",
+  "status": "draft",
+  "sort_order": 23,
+  "learning_objectives": [
+    "理解“动词＋过”表示过去曾经有过某种经历。",
+    "能够使用“去过、吃过、看过”等常见表达介绍个人经历。",
+    "能够使用“没＋动词＋过”表达没有某种经历。",
+    "能够使用“……过吗？”询问他人是否有过某种经历。",
+    "能够结合时间、地点和简单活动，用两到三句话介绍自己的经历。"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL23-001",
+      "simplified": "去",
+      "traditional": "去",
+      "pinyin": "qù",
+      "part_of_speech": "动词",
+      "definition_zh": "从一个地方到另一个地方。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-002",
+      "simplified": "吃",
+      "traditional": "吃",
+      "pinyin": "chī",
+      "part_of_speech": "动词",
+      "definition_zh": "把食物放进嘴里吃。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-003",
+      "simplified": "看",
+      "traditional": "看",
+      "pinyin": "kàn",
+      "part_of_speech": "动词",
+      "definition_zh": "用眼睛观察或观看。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-004",
+      "simplified": "听",
+      "traditional": "听",
+      "pinyin": "tīng",
+      "part_of_speech": "动词",
+      "definition_zh": "用耳朵听声音。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-005",
+      "simplified": "做",
+      "traditional": "做",
+      "pinyin": "zuò",
+      "part_of_speech": "动词",
+      "definition_zh": "进行某种活动。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-006",
+      "simplified": "买",
+      "traditional": "买",
+      "pinyin": "mǎi",
+      "part_of_speech": "动词",
+      "definition_zh": "用钱换东西。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-007",
+      "simplified": "住",
+      "traditional": "住",
+      "pinyin": "zhù",
+      "part_of_speech": "动词",
+      "definition_zh": "在某个地方生活或居住。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-008",
+      "simplified": "学",
+      "traditional": "学",
+      "pinyin": "xué",
+      "part_of_speech": "动词",
+      "definition_zh": "学习知识或技能。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-009",
+      "simplified": "玩",
+      "traditional": "玩",
+      "pinyin": "wán",
+      "part_of_speech": "动词",
+      "definition_zh": "进行娱乐活动。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-010",
+      "simplified": "旅行",
+      "traditional": "旅行",
+      "pinyin": "lǚxíng",
+      "part_of_speech": "动词",
+      "definition_zh": "到其他地方游览或体验生活。",
+      "category": "常见经历动词",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-011",
+      "simplified": "以前",
+      "traditional": "以前",
+      "pinyin": "yǐqián",
+      "part_of_speech": "名词",
+      "definition_zh": "过去的时间。",
+      "category": "时间表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-012",
+      "simplified": "已经",
+      "traditional": "已经",
+      "pinyin": "yǐjīng",
+      "part_of_speech": "副词",
+      "definition_zh": "表示某件事情在某个时候发生或完成。",
+      "category": "时间表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-013",
+      "simplified": "还",
+      "traditional": "还",
+      "pinyin": "hái",
+      "part_of_speech": "副词",
+      "definition_zh": "在否定或疑问语境中可表示至今仍然没有。",
+      "category": "经历表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-014",
+      "simplified": "没有",
+      "traditional": "没有",
+      "pinyin": "méiyǒu",
+      "part_of_speech": "动词",
+      "definition_zh": "表示不存在或没有发生。",
+      "category": "经历表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-015",
+      "simplified": "吗",
+      "traditional": "吗",
+      "pinyin": "ma",
+      "part_of_speech": "助词",
+      "definition_zh": "放在句末构成一般疑问句。",
+      "category": "疑问表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-016",
+      "simplified": "次",
+      "traditional": "次",
+      "pinyin": "cì",
+      "part_of_speech": "量词",
+      "definition_zh": "表示动作或事情发生的次数。",
+      "category": "次数表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-017",
+      "simplified": "地方",
+      "traditional": "地方",
+      "pinyin": "dìfang",
+      "part_of_speech": "名词",
+      "definition_zh": "某个地点或区域。",
+      "category": "经历话题",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-018",
+      "simplified": "经历",
+      "traditional": "经历",
+      "pinyin": "jīnglì",
+      "part_of_speech": "名词／动词",
+      "definition_zh": "过去发生过的事情或亲身体验。",
+      "category": "经历话题",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-019",
+      "simplified": "第一次",
+      "traditional": "第一次",
+      "pinyin": "dì yī cì",
+      "part_of_speech": "数量表达",
+      "definition_zh": "表示某件事情首次发生。",
+      "category": "次数表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL23-020",
+      "simplified": "从来",
+      "traditional": "从来",
+      "pinyin": "cónglái",
+      "part_of_speech": "副词",
+      "definition_zh": "常与否定形式搭配，表示过去一直没有。",
+      "category": "经历表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    }
+  ],
+  "core_expressions": [
+    {
+      "expression": "我去过北京。",
+      "pinyin": "Wǒ qù guo Běijīng.",
+      "meaning_zh": "表达自己曾经去过北京。"
+    },
+    {
+      "expression": "我吃过中国菜。",
+      "pinyin": "Wǒ chī guo Zhōngguó cài.",
+      "meaning_zh": "表达自己曾经吃过中国菜。"
+    },
+    {
+      "expression": "你看过这部电影吗？",
+      "pinyin": "Nǐ kàn guo zhè bù diànyǐng ma?",
+      "meaning_zh": "询问对方是否看过这部电影。"
+    },
+    {
+      "expression": "我没去过上海。",
+      "pinyin": "Wǒ méi qù guo Shànghǎi.",
+      "meaning_zh": "表达自己没有去过上海。"
+    },
+    {
+      "expression": "我以前学过中文。",
+      "pinyin": "Wǒ yǐqián xué guo Zhōngwén.",
+      "meaning_zh": "介绍以前有过学习中文的经历。"
+    },
+    {
+      "expression": "你做过这个吗？",
+      "pinyin": "Nǐ zuò guo zhège ma?",
+      "meaning_zh": "询问对方是否做过某件事情。"
+    },
+    {
+      "expression": "我去过两次。",
+      "pinyin": "Wǒ qù guo liǎng cì.",
+      "meaning_zh": "说明某种经历发生过两次。"
+    },
+    {
+      "expression": "我从来没吃过这个。",
+      "pinyin": "Wǒ cónglái méi chī guo zhège.",
+      "meaning_zh": "强调自己以前从来没有吃过这个。"
+    }
+  ],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋动词＋过＋宾语",
+      "explanation": "表示过去曾经有过某种经历，不强调具体动作发生的时间。",
+      "examples": [
+        "我去过法国。",
+        "她看过这部电影。"
+      ]
+    },
+    {
+      "pattern": "主语＋没（有）＋动词＋过＋宾语",
+      "explanation": "表示没有某种经历。",
+      "examples": [
+        "我没去过北京。",
+        "他没有吃过酸梅汤。"
+      ]
+    },
+    {
+      "pattern": "主语＋动词＋过＋宾语＋吗？",
+      "explanation": "用“吗”询问对方是否有过某种经历。",
+      "examples": [
+        "你去过中国吗？",
+        "你看过这个电影吗？"
+      ]
+    },
+    {
+      "pattern": "主语＋以前＋动词＋过＋宾语",
+      "explanation": "结合“以前”介绍过去的经历。",
+      "examples": [
+        "我以前住过上海。",
+        "她以前学过法语。"
+      ]
+    },
+    {
+      "pattern": "主语＋动词＋过＋宾语＋次数",
+      "explanation": "说明某种经历发生过多少次。",
+      "examples": [
+        "我去过两次北京。",
+        "我看过三次这部电影。"
+      ]
+    },
+    {
+      "pattern": "主语＋从来没＋动词＋过＋宾语",
+      "explanation": "强调到目前为止从来没有某种经历。",
+      "examples": [
+        "我从来没去过日本。",
+        "他从来没吃过火锅。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "聊聊旅行经历",
+      "scene": "两位朋友谈论自己去过的地方。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你去过中国吗？",
+          "traditional": "你去过中国吗？",
+          "pinyin": "Nǐ qù guo Zhōngguó ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "去过，我去过北京。",
+          "traditional": "去过，我去过北京。",
+          "pinyin": "Qù guo, wǒ qù guo Běijīng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你去过上海吗？",
+          "traditional": "你去过上海吗？",
+          "pinyin": "Nǐ qù guo Shànghǎi ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "没有，我没去过上海。",
+          "traditional": "没有，我没去过上海。",
+          "pinyin": "Méiyǒu, wǒ méi qù guo Shànghǎi."
+        }
+      ]
+    },
+    {
+      "title": "聊聊吃过的中国菜",
+      "scene": "朋友讨论自己尝试过的中国食物。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你吃过火锅吗？",
+          "traditional": "你吃过火锅吗？",
+          "pinyin": "Nǐ chī guo huǒguō ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "吃过，我很喜欢吃火锅。",
+          "traditional": "吃过，我很喜欢吃火锅。",
+          "pinyin": "Chī guo, wǒ hěn xǐhuan chī huǒguō."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你吃过北京烤鸭吗？",
+          "traditional": "你吃过北京烤鸭吗？",
+          "pinyin": "Nǐ chī guo Běijīng kǎoyā ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "还没吃过，我想试一试。",
+          "traditional": "还没吃过，我想试一试。",
+          "pinyin": "Hái méi chī guo, wǒ xiǎng shì yi shì."
+        }
+      ]
+    },
+    {
+      "title": "聊聊以前的学习经历",
+      "scene": "两位同学谈论以前学习过的语言。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你以前学过中文吗？",
+          "traditional": "你以前学过中文吗？",
+          "pinyin": "Nǐ yǐqián xué guo Zhōngwén ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "学过，我以前学过一点儿。",
+          "traditional": "学过，我以前学过一点儿。",
+          "pinyin": "Xué guo, wǒ yǐqián xué guo yìdiǎnr."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你学过法语吗？",
+          "traditional": "你学过法语吗？",
+          "pinyin": "Nǐ xué guo Fǎyǔ ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "没有，我没学过法语。",
+          "traditional": "没有，我没学过法语。",
+          "pinyin": "Méiyǒu, wǒ méi xué guo Fǎyǔ."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "动词与经历表达配对",
+      "type": "句型练习",
+      "instructions": "教师给出常见动词和宾语，学生组合成“动词＋过”的经历表达。",
+      "expected_output": [
+        "去过北京",
+        "吃过中国菜",
+        "看过电影"
+      ]
+    },
+    {
+      "activity": "有过还是没有过",
+      "type": "肯定与否定练习",
+      "instructions": "教师给出活动或地点，学生分别用肯定和否定形式表达自己的经历。",
+      "expected_output": [
+        "我去过法国。",
+        "我没去过日本。"
+      ]
+    },
+    {
+      "activity": "经历问答",
+      "type": "口语练习",
+      "instructions": "两人一组使用“……过吗？”互相询问经历，并用“过”或“没……”回答。",
+      "expected_output": [
+        "你看过这部电影吗？",
+        "看过。",
+        "没看过。"
+      ]
+    },
+    {
+      "activity": "我的经历小调查",
+      "type": "互动练习",
+      "instructions": "学生询问同学去过哪些地方、吃过哪些食物，并记录简单答案。",
+      "expected_output": [
+        "他去过北京。",
+        "她没吃过火锅。"
+      ]
+    },
+    {
+      "activity": "介绍自己的经历",
+      "type": "综合表达",
+      "instructions": "选择两到三种真实经历，用“过”和“没……过”介绍自己。",
+      "expected_output": [
+        "我去过法国。",
+        "我吃过中国菜。",
+        "我没去过日本。"
+      ]
+    }
+  ],
+  "integrated_expression_task": {
+    "instructions": "介绍自己曾经有过的两种经历，以及一种还没有过的经历。可以谈旅行、饮食、电影或学习。",
+    "expected_output": [
+      "我去过法国。",
+      "我吃过中国菜。",
+      "我没去过日本。"
+    ]
+  },
+  "teacher_notes": [
+    "本课核心是“动词＋过”表示曾经有过某种经历。",
+    "“过”放在动词后面，表示经历，不要求学生说明动作发生的具体时间。",
+    "肯定句常用“主语＋动词＋过＋宾语”的结构。",
+    "否定经历使用“没（有）＋动词＋过”，不要教成“不＋动词＋过”。",
+    "疑问句可以使用“动词＋过＋宾语＋吗？”询问经历。",
+    "回答时可以简短使用“去过”“吃过”“没去过”等形式。",
+    "“还没……过”表示到目前为止尚未有过某种经历；“从来没……过”语气更强调。",
+    "“过”表示经历，与“了”表示动作完成的常见用法不同，本课只作必要对比，不展开复杂语法。",
+    "“次”用于说明经历次数，例如“去过两次”，注意次数表达的位置和自然语序。",
+    "优先使用学生熟悉的地点、食物和活动举例；鼓励介绍真实经历，不要求编造经历。"
+  ],
+  "completion_criteria": [
+    "能够理解“动词＋过”表示曾经有过某种经历。",
+    "能够使用至少三个常见动词说出自己的经历。",
+    "能够使用“没（有）＋动词＋过”表达没有某种经历。",
+    "能够使用“……过吗？”询问他人的经历。",
+    "能够结合“以前”或“次”补充简单经历信息。",
+    "能够用两到三句话介绍自己有过和没有过的经历。"
+  ],
+  "resources": [],
+  "translations": {
+    "en": {
+      "title": "Verb + 过: Talking About Past Experiences",
+      "learning_objectives": [
+        "Understand that verb + 过 describes an experience one has had.",
+        "Use common expressions such as 去过, 吃过 and 看过.",
+        "Say that an experience has not happened using 没 + verb + 过.",
+        "Ask whether someone has had an experience using 过吗.",
+        "Describe personal experiences in two or three simple sentences."
+      ],
+      "key_expressions": {
+        "我去过北京。": "I have been to Beijing.",
+        "我吃过中国菜。": "I have eaten Chinese food.",
+        "你看过这部电影吗？": "Have you seen this movie?",
+        "我没去过上海。": "I have never been to Shanghai.",
+        "我以前学过中文。": "I studied Chinese before.",
+        "你做过这个吗？": "Have you done this before?",
+        "我去过两次。": "I have been there twice.",
+        "我从来没吃过这个。": "I have never eaten this before."
+      },
+      "integrated_task": "Describe two experiences you have had and one experience you have not had."
+    },
+    "fr": {
+      "title": "Verbe + 过 : parler de ses expériences",
+      "learning_objectives": [
+        "Comprendre que verbe + 过 exprime une expérience vécue.",
+        "Utiliser des expressions courantes comme 去过, 吃过 et 看过.",
+        "Exprimer une expérience non vécue avec 没 + verbe + 过.",
+        "Demander si quelqu'un a déjà vécu une expérience avec 过吗.",
+        "Décrire ses expériences en deux ou trois phrases simples."
+      ],
+      "key_expressions": {
+        "我去过北京。": "Je suis déjà allé(e) à Pékin.",
+        "我吃过中国菜。": "J'ai déjà mangé de la cuisine chinoise.",
+        "你看过这部电影吗？": "As-tu déjà vu ce film ?",
+        "我没去过上海。": "Je ne suis jamais allé(e) à Shanghai.",
+        "我以前学过中文。": "J'ai étudié le chinois auparavant.",
+        "你做过这个吗？": "As-tu déjà fait cela ?",
+        "我去过两次。": "J'y suis allé(e) deux fois.",
+        "我从来没吃过这个。": "Je n'ai jamais mangé cela."
+      },
+      "integrated_task": "Présentez deux expériences vécues et une expérience que vous n'avez jamais vécue."
+    },
+    "de": {
+      "title": "Verb + 过: Über vergangene Erfahrungen sprechen",
+      "learning_objectives": [
+        "Verstehen, dass Verb + 过 eine bereits gemachte Erfahrung ausdrückt.",
+        "Häufige Ausdrücke wie 去过, 吃过 und 看过 verwenden.",
+        "Mit 没 + Verb + 过 ausdrücken, dass man etwas noch nie erlebt hat.",
+        "Mit 过吗 fragen, ob jemand eine Erfahrung gemacht hat.",
+        "Eigene Erfahrungen in zwei oder drei einfachen Sätzen beschreiben."
+      ],
+      "key_expressions": {
+        "我去过北京。": "Ich war schon einmal in Peking.",
+        "我吃过中国菜。": "Ich habe schon chinesisches Essen gegessen.",
+        "你看过这部电影吗？": "Hast du diesen Film schon gesehen?",
+        "我没去过上海。": "Ich war noch nie in Shanghai.",
+        "我以前学过中文。": "Ich habe früher Chinesisch gelernt.",
+        "你做过这个吗？": "Hast du das schon einmal gemacht?",
+        "我去过两次。": "Ich war zweimal dort.",
+        "我从来没吃过这个。": "Ich habe das noch nie gegessen."
+      },
+      "integrated_task": "Beschreibe zwei Erfahrungen, die du bereits gemacht hast, und eine, die du noch nicht gemacht hast."
+    },
+    "es": {
+      "title": "Verbo + 过: Hablar de experiencias pasadas",
+      "learning_objectives": [
+        "Comprender que verbo + 过 expresa una experiencia vivida.",
+        "Usar expresiones comunes como 去过, 吃过 y 看过.",
+        "Expresar que no se ha tenido una experiencia con 没 + verbo + 过.",
+        "Preguntar si alguien ha vivido una experiencia usando 过吗.",
+        "Describir experiencias personales en dos o tres frases sencillas."
+      ],
+      "key_expressions": {
+        "我去过北京。": "He estado en Pekín.",
+        "我吃过中国菜。": "He comido comida china.",
+        "你看过这部电影吗？": "¿Has visto esta película?",
+        "我没去过上海。": "Nunca he estado en Shanghái.",
+        "我以前学过中文。": "Antes estudié chino.",
+        "你做过这个吗？": "¿Has hecho esto alguna vez?",
+        "我去过两次。": "He estado allí dos veces.",
+        "我从来没吃过这个。": "Nunca he comido esto."
+      },
+      "integrated_task": "Describe dos experiencias que hayas tenido y una que todavía no hayas tenido."
+    },
+    "it": {
+      "title": "Verbo + 过: Parlare delle esperienze passate",
+      "learning_objectives": [
+        "Capire che verbo + 过 esprime un'esperienza vissuta.",
+        "Usare espressioni comuni come 去过, 吃过 e 看过.",
+        "Esprimere un'esperienza mai vissuta con 没 + verbo + 过.",
+        "Chiedere se qualcuno ha già vissuto un'esperienza usando 过吗.",
+        "Descrivere le proprie esperienze in due o tre frasi semplici."
+      ],
+      "key_expressions": {
+        "我去过北京。": "Sono già stato/a a Pechino.",
+        "我吃过中国菜。": "Ho già mangiato cibo cinese.",
+        "你看过这部电影吗？": "Hai già visto questo film?",
+        "我没去过上海。": "Non sono mai stato/a a Shanghai.",
+        "我以前学过中文。": "In passato ho studiato cinese.",
+        "你做过这个吗？": "Hai mai fatto questo?",
+        "我去过两次。": "Ci sono stato/a due volte.",
+        "我从来没吃过这个。": "Non ho mai mangiato questo."
+      },
+      "integrated_task": "Descrivi due esperienze che hai già vissuto e una che non hai ancora vissuto."
+    }
+  },
+  "metadata": {
+    "created_at": null,
+    "updated_at": "2026-11-15T18:39:55.935420+00:00",
+    "version": 3,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
+  },
+  "title_status": "confirmed"
+}
