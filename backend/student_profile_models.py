@@ -23,6 +23,23 @@ class Student(Base):
     updated_at = Column(DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
 
 
+
+class StudentNoteFolder(Base):
+    __tablename__ = "student_note_folders"
+
+    id = Column(Integer, primary_key=True, index=True)
+    student_id = Column(
+        Integer,
+        ForeignKey("students.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    name = Column(String(120), nullable=False)
+    level_name = Column(String(120), nullable=True)
+    sort_order = Column(Integer, nullable=False, default=0)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+
+
 class StudentNote(Base):
     __tablename__ = "student_notes"
 
@@ -36,6 +53,28 @@ class StudentNote(Base):
     content_text = Column(Text, nullable=False)
     analysis_status = Column(String(30), nullable=False, default="not_started", index=True)
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+
+    # 资料管理扩展字段
+    folder_id = Column(
+        Integer,
+        ForeignKey("student_note_folders.id", ondelete="SET NULL"),
+        nullable=True,
+        index=True,
+    )
+    document_type = Column(String(40), nullable=False, default="class_notes")
+    source_mode = Column(String(40), nullable=False, default="local_file")
+    storage_path = Column(String(500), nullable=True)
+    lesson_number = Column(Integer, nullable=True)
+    description = Column(Text, nullable=True)
+    pinyin_text = Column(Text, nullable=True)
+    translation_text = Column(Text, nullable=True)
+
+    # 外部资料链接及原始文件生命周期
+    link_url = Column(String(2000), nullable=True)
+    link_provider = Column(String(100), nullable=True)
+    link_title = Column(String(255), nullable=True)
+    external_file_id = Column(String(500), nullable=True)
+    original_file_deleted_at = Column(DateTime, nullable=True)
 
 
 class StudentVocabularyProgress(Base):
@@ -58,7 +97,7 @@ class StudentVocabularyProgress(Base):
 
     __table_args__ = (
         UniqueConstraint("student_id", "vocabulary_number", name="uq_student_vocabulary_progress"),
-        CheckConstraint("learning_status IN ('not_seen', 'exposed', 'mastered', 'review')", name="ck_student_vocab_learning_status"),
+        CheckConstraint("learning_status IN ('not_seen', 'exposed', 'learned', 'mastered', 'review')", name="ck_student_vocab_learning_status"),
         CheckConstraint("review_status IN ('pending', 'approved', 'rejected')", name="ck_student_vocab_review_status"),
         Index("ix_student_vocab_student_status", "student_id", "learning_status"),
     )
@@ -84,7 +123,7 @@ class StudentGrammarProgress(Base):
 
     __table_args__ = (
         UniqueConstraint("student_id", "grammar_point_id", "syllabus_version", name="uq_student_grammar_progress"),
-        CheckConstraint("learning_status IN ('not_seen', 'exposed', 'mastered', 'review')", name="ck_student_grammar_learning_status"),
+        CheckConstraint("learning_status IN ('not_seen', 'exposed', 'learned', 'mastered', 'review')", name="ck_student_grammar_learning_status"),
         CheckConstraint("review_status IN ('pending', 'approved', 'rejected')", name="ck_student_grammar_review_status"),
         Index("ix_student_grammar_student_status", "student_id", "learning_status"),
     )

@@ -1,0 +1,628 @@
+{
+  "schema_version": "1.0",
+  "status": "extension_review_proposal_not_approved",
+  "source": "curriculum/vocabulary/CL-01-114-global-level-proposal.json",
+  "principle": "HSK 2025未匹配不等于其他HSK版本未收录；专名、文化词和普通教学词分开管理",
+  "statistics": {
+    "total": 44,
+    "daily_expression": 19,
+    "geographical_proper_noun": 16,
+    "cultural_zodiac": 4,
+    "thematic_noun": 3,
+    "independent_adjective": 1,
+    "needs_context_review": 1
+  },
+  "items": [
+    {
+      "word": "一天",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-98",
+      "first_learning_title": "我的一天与日常作息综合表达",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-98"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "一次",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-24",
+      "first_learning_title": "第一次做某件事情",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-24"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "上海",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-19",
+      "first_learning_title": "六个中国著名城市",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-19",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "下雪",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-41",
+      "first_learning_title": "冷热与温度",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-41",
+        "CL-108"
+      ],
+      "review_courses": [
+        "CL-108"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "不一样",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-54",
+      "first_learning_title": "相同与不同：一样与不一样",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-54"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "东京",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-20",
+      "first_learning_title": "六个世界著名首都",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-20"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "什么时候",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-25",
+      "first_learning_title": "什么时候＋动词",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-25"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "伦敦",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-20",
+      "first_learning_title": "六个世界著名首都",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-20",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "兔",
+      "proposed_type": "cultural_zodiac",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-83",
+      "first_learning_title": "中国十二生肖",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-83"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "公共汽车",
+      "proposed_type": "thematic_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-67",
+      "first_learning_title": "交通工具与出行方式",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-67"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "刷牙",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-91",
+      "first_learning_title": "早晨起床与洗漱",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-91"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "北京",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-19",
+      "first_learning_title": "六个中国著名城市",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-19",
+        "CL-20",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-20",
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "吃饭",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-29",
+      "first_learning_title": "普通动词与时间段",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-29",
+        "CL-97",
+        "CL-112"
+      ],
+      "review_courses": [
+        "CL-97",
+        "CL-112"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "唱歌",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-28",
+      "first_learning_title": "常见离合词",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-28"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "回家",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-96",
+      "first_learning_title": "下午活动、下班与回家",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-96"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "坐车",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-93",
+      "first_learning_title": "出门、上班与日常通勤",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-93"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "屋顶",
+      "proposed_type": "thematic_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-72",
+      "first_learning_title": "房屋结构与建筑空间",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-72"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "巴黎",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-20",
+      "first_learning_title": "六个世界著名首都",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-20",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "广州",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-19",
+      "first_learning_title": "六个中国著名城市",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-19",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "德国",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-18",
+      "first_learning_title": "六个常见国家",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-18"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "成都",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-19",
+      "first_learning_title": "六个中国著名城市",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-19",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "打球",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-87",
+      "first_learning_title": "运动与户外活动",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-87"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "日本",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-18",
+      "first_learning_title": "六个常见国家",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-18"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "服务员",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-112",
+      "first_learning_title": "餐厅用餐与点餐交流",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-112"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "柏林",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-20",
+      "first_learning_title": "六个世界著名首都",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-20"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "每天",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-13",
+      "first_learning_title": "频率副词",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-13",
+        "CL-27",
+        "CL-30"
+      ],
+      "review_courses": [
+        "CL-27",
+        "CL-30"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "法国",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-18",
+      "first_learning_title": "六个常见国家",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-18"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "洗衣服",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-111",
+      "first_learning_title": "家务劳动与家庭分工",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-111"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "深圳",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-19",
+      "first_learning_title": "六个中国著名城市",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-19",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "点菜",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-112",
+      "first_learning_title": "餐厅用餐与点餐交流",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-112"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "猴",
+      "proposed_type": "cultural_zodiac",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-83",
+      "first_learning_title": "中国十二生肖",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-83"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "班次",
+      "proposed_type": "thematic_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-102",
+      "first_learning_title": "工作时间、班次与休假安排",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-102"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "睡前",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-97",
+      "first_learning_title": "晚餐、家庭生活与睡前活动",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-97"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "绿",
+      "proposed_type": "independent_adjective",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-43",
+      "first_learning_title": "颜色与外观",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-43"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "罗马",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-20",
+      "first_learning_title": "六个世界著名首都",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-20"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "美国",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-18",
+      "first_learning_title": "六个常见国家",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-18"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "英国",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-18",
+      "first_learning_title": "六个常见国家",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-18"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "虎",
+      "proposed_type": "cultural_zodiac",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-83",
+      "first_learning_title": "中国十二生肖",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-83"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "西安",
+      "proposed_type": "geographical_proper_noun",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-19",
+      "first_learning_title": "六个中国著名城市",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-19",
+        "CL-60"
+      ],
+      "review_courses": [
+        "CL-60"
+      ],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "越来越",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-55",
+      "first_learning_title": "变化与趋势：越来越",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-55"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "达",
+      "proposed_type": "needs_context_review",
+      "review_status": "needs_context_review",
+      "first_learning_course": "CL-70",
+      "first_learning_title": "日常出行与旅行安排",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-70"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "通勤",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-93",
+      "first_learning_title": "出门、上班与日常通勤",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-93"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "面条",
+      "proposed_type": "daily_expression",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-112",
+      "first_learning_title": "餐厅用餐与点餐交流",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-112"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    },
+    {
+      "word": "鼠",
+      "proposed_type": "cultural_zodiac",
+      "review_status": "proposed_not_approved",
+      "first_learning_course": "CL-83",
+      "first_learning_title": "中国十二生肖",
+      "hsk_levels_2025": [],
+      "all_courses": [
+        "CL-83"
+      ],
+      "review_courses": [],
+      "other_hsk_versions_checked": false
+    }
+  ]
+}

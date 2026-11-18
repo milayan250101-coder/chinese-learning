@@ -18,6 +18,27 @@ class CategoryCreate(BaseModel):
         return value
 
 
+class CategoryUpdate(BaseModel):
+    name: Optional[str] = Field(default=None, min_length=1, max_length=150)
+    parent_id: Optional[int] = None
+    description: Optional[str] = None
+    sort_order: Optional[int] = None
+
+    @field_validator("name")
+    @classmethod
+    def clean_name(cls, value):
+        if value is None:
+            return value
+        value = value.strip()
+        if not value:
+            raise ValueError("分类名称不能为空")
+        return value
+
+
+class GrammarSourceLinkCreate(BaseModel):
+    hsk_grammar_point_id: int = Field(ge=1)
+
+
 class LevelMappingCreate(BaseModel):
     level_code: str
     mapping_type: Literal["introduced", "review", "extension"] = "introduced"

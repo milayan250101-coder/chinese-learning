@@ -4,49 +4,614 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 22,
-  "learning_objectives": [],
+  "learning_objectives": [
+    "能够认读并说出茶、豆浆、酸梅汤、凉茶、珍珠奶茶和果汁六种饮料名称。",
+    "能够使用甜、酸、苦、好喝等词语描述饮料味道。",
+    "能够使用“我喜欢喝……”表达饮品喜好。",
+    "能够使用“我要一杯……”进行简单点单。",
+    "能够询问或选择饮品冷热，并提出少糖要求。"
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
+      "word_id": "CL22-001",
+      "simplified": "茶",
+      "traditional": "茶",
+      "pinyin": "chá",
+      "part_of_speech": "名词",
+      "definition_zh": "用茶叶冲泡的饮品。",
+      "category": "六种饮料",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-002",
+      "simplified": "豆浆",
+      "traditional": "豆浆",
+      "pinyin": "dòujiāng",
+      "part_of_speech": "名词",
+      "definition_zh": "用大豆制成的饮品。",
+      "category": "六种饮料",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-003",
+      "simplified": "酸梅汤",
+      "traditional": "酸梅汤",
+      "pinyin": "suānméitāng",
+      "part_of_speech": "名词",
+      "definition_zh": "一种传统的酸甜饮品。",
+      "category": "六种饮料",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-004",
+      "simplified": "凉茶",
+      "traditional": "凉茶",
+      "pinyin": "liángchá",
+      "part_of_speech": "名词",
+      "definition_zh": "中国常见的一类传统草本饮品。",
+      "category": "六种饮料",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-005",
+      "simplified": "珍珠奶茶",
+      "traditional": "珍珠奶茶",
+      "pinyin": "zhēnzhū nǎichá",
+      "part_of_speech": "名词",
+      "definition_zh": "加入珍珠等配料的奶茶。",
+      "category": "六种饮料",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-006",
+      "simplified": "果汁",
+      "traditional": "果汁",
+      "pinyin": "guǒzhī",
+      "part_of_speech": "名词",
+      "definition_zh": "用水果制成的汁液饮品。",
+      "category": "六种饮料",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-007",
+      "simplified": "水",
+      "traditional": "水",
+      "pinyin": "shuǐ",
+      "part_of_speech": "名词",
+      "definition_zh": "日常饮用的水。",
+      "category": "饮品与味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-008",
+      "simplified": "牛奶",
+      "traditional": "牛奶",
+      "pinyin": "niúnǎi",
+      "part_of_speech": "名词",
+      "definition_zh": "常见的乳制饮品。",
+      "category": "饮品与味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-009",
+      "simplified": "咖啡",
+      "traditional": "咖啡",
+      "pinyin": "kāfēi",
+      "part_of_speech": "名词",
+      "definition_zh": "用咖啡豆制作的饮品。",
+      "category": "饮品与味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-010",
+      "simplified": "饮料",
+      "traditional": "饮料",
+      "pinyin": "yǐnliào",
+      "part_of_speech": "名词",
+      "definition_zh": "可以饮用的液体。",
+      "category": "饮品与味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-011",
+      "simplified": "热",
+      "traditional": "热",
+      "pinyin": "rè",
+      "part_of_speech": "形容词",
+      "definition_zh": "温度比较高。",
+      "category": "冷热表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-012",
+      "simplified": "冷",
+      "traditional": "冷",
+      "pinyin": "lěng",
+      "part_of_speech": "形容词",
+      "definition_zh": "温度比较低。",
+      "category": "冷热表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-013",
+      "simplified": "冰",
+      "traditional": "冰",
+      "pinyin": "bīng",
+      "part_of_speech": "名词",
+      "definition_zh": "冻结的水，也用于表示冰镇。",
+      "category": "冷热表达",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-014",
+      "simplified": "甜",
+      "traditional": "甜",
+      "pinyin": "tián",
+      "part_of_speech": "形容词",
+      "definition_zh": "像糖一样的味道。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-015",
+      "simplified": "酸",
+      "traditional": "酸",
+      "pinyin": "suān",
+      "part_of_speech": "形容词",
+      "definition_zh": "一种酸的味道。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-016",
+      "simplified": "苦",
+      "traditional": "苦",
+      "pinyin": "kǔ",
+      "part_of_speech": "形容词",
+      "definition_zh": "一种苦的味道。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-017",
+      "simplified": "好喝",
+      "traditional": "好喝",
+      "pinyin": "hǎohē",
+      "part_of_speech": "形容词",
+      "definition_zh": "饮品的味道好。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-018",
+      "simplified": "少糖",
+      "traditional": "少糖",
+      "pinyin": "shǎo táng",
+      "part_of_speech": "名词",
+      "definition_zh": "要求饮品少放糖。",
+      "category": "点单",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-019",
+      "simplified": "一杯",
+      "traditional": "一杯",
+      "pinyin": "yì bēi",
+      "part_of_speech": "名词",
+      "definition_zh": "常用于饮料的数量表达。",
+      "category": "点单",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL22-020",
+      "simplified": "点单",
+      "traditional": "点单",
+      "pinyin": "diǎndān",
+      "part_of_speech": "动词",
+      "definition_zh": "选择饮品或食物并提出要求。",
+      "category": "点单",
       "collocations": [],
       "is_key_vocabulary": true
     }
   ],
-  "core_expressions": [],
-  "sentence_patterns": [
+  "core_expressions": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "expression": "你喜欢喝什么？",
+      "pinyin": "Nǐ xǐhuan hē shénme?",
+      "meaning_zh": "询问对方喜欢喝什么。"
+    },
+    {
+      "expression": "我喜欢喝茶。",
+      "pinyin": "Wǒ xǐhuan hē chá.",
+      "meaning_zh": "表达喜欢喝茶。"
+    },
+    {
+      "expression": "我要一杯豆浆。",
+      "pinyin": "Wǒ yào yì bēi dòujiāng.",
+      "meaning_zh": "点一杯豆浆。"
+    },
+    {
+      "expression": "你要热的还是冷的？",
+      "pinyin": "Nǐ yào rè de háishi lěng de?",
+      "meaning_zh": "询问饮品要热的还是冷的。"
+    },
+    {
+      "expression": "我要一杯冰果汁。",
+      "pinyin": "Wǒ yào yì bēi bīng guǒzhī.",
+      "meaning_zh": "点一杯冰果汁。"
+    },
+    {
+      "expression": "这个甜不甜？",
+      "pinyin": "Zhège tián bu tián?",
+      "meaning_zh": "询问饮品是否甜。"
+    },
+    {
+      "expression": "请少放一点儿糖。",
+      "pinyin": "Qǐng shǎo fàng yìdiǎnr táng.",
+      "meaning_zh": "提出少放糖的要求。"
+    },
+    {
+      "expression": "这个很好喝。",
+      "pinyin": "Zhège hěn hǎohē.",
+      "meaning_zh": "评价饮品的味道。"
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋喜欢喝＋饮料",
+      "explanation": "表达喜欢喝某种饮料。",
+      "examples": [
+        "我喜欢喝茶。",
+        "她喜欢喝豆浆。"
+      ]
+    },
+    {
+      "pattern": "主语＋要＋数量＋饮料",
+      "explanation": "在饮品店点饮料。",
+      "examples": [
+        "我要一杯咖啡。",
+        "我要一杯果汁。"
+      ]
+    },
+    {
+      "pattern": "主语＋要＋热的／冷的",
+      "explanation": "选择饮品的温度。",
+      "examples": [
+        "我要热的。",
+        "我要冷的。"
+      ]
+    },
+    {
+      "pattern": "这个＋甜不甜？",
+      "explanation": "用正反问句询问味道。",
+      "examples": [
+        "这个甜不甜？",
+        "这个酸不酸？"
+      ]
+    },
+    {
+      "pattern": "请＋少放＋一点儿＋糖",
+      "explanation": "礼貌地提出少放糖的要求。",
+      "examples": [
+        "请少放一点儿糖。"
+      ]
+    },
+    {
+      "pattern": "饮料＋很好喝",
+      "explanation": "评价饮料的味道。",
+      "examples": [
+        "这个很好喝。",
+        "豆浆很好喝。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "聊聊喜欢的饮料",
+      "scene": "两位朋友谈论平时喜欢喝什么。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你喜欢喝什么？",
+          "traditional": "你喜欢喝什么？",
+          "pinyin": "Nǐ xǐhuan hē shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我喜欢喝茶。",
+          "traditional": "我喜欢喝茶。",
+          "pinyin": "Wǒ xǐhuan hē chá."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你喜欢喝豆浆吗？",
+          "traditional": "你喜欢喝豆浆吗？",
+          "pinyin": "Nǐ xǐhuan hē dòujiāng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "喜欢，豆浆很好喝。",
+          "traditional": "喜欢，豆浆很好喝。",
+          "pinyin": "Xǐhuan, dòujiāng hěn hǎohē."
+        }
+      ]
+    },
+    {
+      "title": "在饮品店点单",
+      "scene": "顾客在饮品店点一杯珍珠奶茶。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你好，你要喝什么？",
+          "traditional": "你好，你要喝什么？",
+          "pinyin": "Nǐ hǎo, nǐ yào hē shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我要一杯珍珠奶茶。",
+          "traditional": "我要一杯珍珠奶茶。",
+          "pinyin": "Wǒ yào yì bēi zhēnzhū nǎichá."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你要热的还是冷的？",
+          "traditional": "你要热的还是冷的？",
+          "pinyin": "Nǐ yào rè de háishi lěng de?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我要冷的，请少放一点儿糖。",
+          "traditional": "我要冷的，请少放一点儿糖。",
+          "pinyin": "Wǒ yào lěng de, qǐng shǎo fàng yìdiǎnr táng."
+        }
+      ]
+    },
+    {
+      "title": "询问饮料味道",
+      "scene": "朋友一起尝试酸梅汤。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "这个饮料是什么？",
+          "traditional": "这个饮料是什么？",
+          "pinyin": "Zhège yǐnliào shì shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "这是酸梅汤。",
+          "traditional": "这是酸梅汤。",
+          "pinyin": "Zhè shì suānméitāng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "这个酸不酸？",
+          "traditional": "这个酸不酸？",
+          "pinyin": "Zhège suān bu suān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "有一点儿酸，也有一点儿甜。",
+          "traditional": "有一点儿酸，也有一点儿甜。",
+          "pinyin": "Yǒu yìdiǎnr suān, yě yǒu yìdiǎnr tián."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "六种饮料认读",
+      "type": "词汇练习",
+      "instructions": "看图片或饮料名称，认读六种饮料并说出中文名称。",
+      "expected_output": [
+        "茶",
+        "豆浆",
+        "酸梅汤",
+        "凉茶",
+        "珍珠奶茶",
+        "果汁"
+      ]
+    },
+    {
+      "activity": "饮料与味道配对",
+      "type": "词汇理解",
+      "instructions": "根据教师提供的饮料图片或描述，使用甜、酸、苦、好喝等词语表达。",
+      "expected_output": [
+        "这个很甜。",
+        "这个有一点儿酸。",
+        "这个很好喝。"
+      ]
+    },
+    {
+      "activity": "选择冷热饮品",
+      "type": "口语练习",
+      "instructions": "两人一组询问饮品要热的还是冷的，并回答自己的选择。",
+      "expected_output": [
+        "你要热的还是冷的？我要热的。"
+      ]
+    },
+    {
+      "activity": "饮品店点单",
+      "type": "情景练习",
+      "instructions": "一人扮演顾客，一人扮演店员，练习点饮料、选择温度和提出少糖要求。",
+      "expected_output": [
+        "我要一杯珍珠奶茶。",
+        "我要冷的，请少放一点儿糖。"
+      ]
+    },
+    {
+      "activity": "介绍自己喜欢的饮料",
+      "type": "综合表达",
+      "instructions": "选择一种饮料，介绍自己是否喜欢、喜欢什么温度，以及饮料的味道。",
+      "expected_output": [
+        "我喜欢喝茶。",
+        "我喜欢喝热茶。",
+        "这个很好喝。"
+      ]
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "instructions": "选择一种饮料，介绍名称、味道、冷热偏好，并模拟一次简单点单。",
+    "expected_output": [
+      "我喜欢喝茶。",
+      "我喜欢喝热茶。",
+      "我要一杯豆浆。",
+      "请少放一点儿糖。"
+    ]
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课重点是六种常见中国饮料名称，以及日常饮品点单表达。",
+    "六种饮料是教学样例，不代表中国饮料的排名或全部种类。",
+    "茶有很多种类，初级阶段先掌握“茶”这个常用词即可。",
+    "豆浆由大豆制成，注意不要与牛奶混为一谈。",
+    "酸梅汤是一种常见传统饮品，味道通常带有酸甜特点。",
+    "凉茶是中国常见的一类传统草本饮品，不应直接解释成普通的冰茶。",
+    "珍珠奶茶可以有不同配料、甜度和温度，点单时可练习相关表达。",
+    "果汁可以由不同水果制成，不要求学生记忆复杂制作方法。",
+    "“好喝”评价饮品，“好吃”评价食物，注意两个词的使用对象。",
+    "饮品店点单时可以根据个人需要选择冷热和甜度，不要求学生必须选择含糖饮料。"
+  ],
+  "completion_criteria": [
+    "能够认读并说出六种常见中国饮料名称。",
+    "能够理解并使用甜、酸、苦、好喝等简单味道表达。",
+    "能够使用“我喜欢喝……”介绍饮品喜好。",
+    "能够使用“我要一杯……”进行简单点单。",
+    "能够询问或选择饮品的冷热，并提出少糖要求。",
+    "能够用两到三句中文介绍自己喜欢的一种饮料。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Six Common Chinese Drinks",
+      "learning_objectives": [
+        "Recognize six common Chinese drinks.",
+        "Use simple words to describe taste.",
+        "Talk about drink preferences.",
+        "Order a drink using simple expressions.",
+        "Choose a drink's temperature and request less sugar."
+      ],
+      "key_expressions": {
+        "你喜欢喝什么？": "What do you like to drink?",
+        "我喜欢喝茶。": "I like drinking tea.",
+        "我要一杯豆浆。": "I'd like a cup of soy milk.",
+        "你要热的还是冷的？": "Would you like it hot or cold?",
+        "我要一杯冰果汁。": "I'd like a glass of cold juice.",
+        "这个甜不甜？": "Is this sweet?",
+        "请少放一点儿糖。": "Please add a little less sugar.",
+        "这个很好喝。": "This tastes very good."
+      },
+      "integrated_task": "Introduce a drink you like, its taste and whether you prefer it hot or cold."
+    },
+    "fr": {
+      "title": "Six boissons chinoises courantes",
+      "learning_objectives": [
+        "Reconnaître six boissons chinoises courantes.",
+        "Utiliser des mots simples pour décrire le goût.",
+        "Parler de ses préférences en matière de boissons.",
+        "Commander une boisson avec des expressions simples.",
+        "Choisir la température et demander moins de sucre."
+      ],
+      "key_expressions": {
+        "你喜欢喝什么？": "Qu'est-ce que tu aimes boire ?",
+        "我喜欢喝茶。": "J'aime boire du thé.",
+        "我要一杯豆浆。": "Je voudrais un verre de lait de soja.",
+        "你要热的还是冷的？": "Tu le veux chaud ou froid ?",
+        "我要一杯冰果汁。": "Je voudrais un jus de fruits frais.",
+        "这个甜不甜？": "Est-ce que c'est sucré ?",
+        "请少放一点儿糖。": "Veuillez mettre un peu moins de sucre.",
+        "这个很好喝。": "C'est très bon à boire."
+      },
+      "integrated_task": "Présentez une boisson que vous aimez, son goût et votre préférence pour une boisson chaude ou froide."
+    },
+    "de": {
+      "title": "Sechs gängige chinesische Getränke",
+      "learning_objectives": [
+        "Sechs gängige chinesische Getränke erkennen.",
+        "Einfache Wörter zur Beschreibung des Geschmacks verwenden.",
+        "Über Getränkewünsche sprechen.",
+        "Ein Getränk mit einfachen Ausdrücken bestellen.",
+        "Die Temperatur wählen und um weniger Zucker bitten."
+      ],
+      "key_expressions": {
+        "你喜欢喝什么？": "Was trinkst du gerne?",
+        "我喜欢喝茶。": "Ich trinke gerne Tee.",
+        "我要一杯豆浆。": "Ich hätte gerne ein Glas Sojamilch.",
+        "你要热的还是冷的？": "Möchtest du es heiß oder kalt?",
+        "我要一杯冰果汁。": "Ich hätte gerne ein Glas kalten Saft.",
+        "这个甜不甜？": "Ist das süß?",
+        "请少放一点儿糖。": "Bitte etwas weniger Zucker.",
+        "这个很好喝。": "Das schmeckt sehr gut."
+      },
+      "integrated_task": "Stelle ein Getränk vor, das du magst, beschreibe seinen Geschmack und sage, ob du es lieber heiß oder kalt trinkst."
+    },
+    "es": {
+      "title": "Seis bebidas chinas comunes",
+      "learning_objectives": [
+        "Reconocer seis bebidas chinas comunes.",
+        "Usar palabras sencillas para describir sabores.",
+        "Hablar de preferencias de bebidas.",
+        "Pedir una bebida con expresiones sencillas.",
+        "Elegir la temperatura y pedir menos azúcar."
+      ],
+      "key_expressions": {
+        "你喜欢喝什么？": "¿Qué te gusta beber?",
+        "我喜欢喝茶。": "Me gusta beber té.",
+        "我要一杯豆浆。": "Quiero un vaso de leche de soja.",
+        "你要热的还是冷的？": "¿Lo quieres caliente o frío?",
+        "我要一杯冰果汁。": "Quiero un vaso de zumo frío.",
+        "这个甜不甜？": "¿Esto es dulce?",
+        "请少放一点儿糖。": "Por favor, pon un poco menos de azúcar.",
+        "这个很好喝。": "Esto está muy rico."
+      },
+      "integrated_task": "Presenta una bebida que te guste, describe su sabor y di si la prefieres caliente o fría."
+    },
+    "it": {
+      "title": "Sei bevande cinesi comuni",
+      "learning_objectives": [
+        "Riconoscere sei bevande cinesi comuni.",
+        "Usare parole semplici per descrivere i sapori.",
+        "Parlare delle proprie preferenze sulle bevande.",
+        "Ordinare una bevanda con espressioni semplici.",
+        "Scegliere la temperatura e chiedere meno zucchero."
+      ],
+      "key_expressions": {
+        "你喜欢喝什么？": "Che cosa ti piace bere?",
+        "我喜欢喝茶。": "Mi piace bere il tè.",
+        "我要一杯豆浆。": "Vorrei un bicchiere di latte di soia.",
+        "你要热的还是冷的？": "Lo vuoi caldo o freddo?",
+        "我要一杯冰果汁。": "Vorrei un bicchiere di succo freddo.",
+        "这个甜不甜？": "Questo è dolce?",
+        "请少放一点儿糖。": "Per favore, metti un po' meno zucchero.",
+        "这个很好喝。": "Questo è molto buono da bere."
+      },
+      "integrated_task": "Presenta una bevanda che ti piace, descrivine il sapore e dì se la preferisci calda o fredda."
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T18:35:31.232858+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
   },
   "title_status": "confirmed"
 }

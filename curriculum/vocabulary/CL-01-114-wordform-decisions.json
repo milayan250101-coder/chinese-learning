@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "status": "review_decisions_proposed",
+  "source": "curriculum/vocabulary/CL-01-114-multi-character-review.json",
+  "statistics": {
+    "reviewed_pairs": 12,
+    "keep_both": 10,
+    "synonym_relation": 1,
+    "standardize_variant": 1
+  },
+  "decisions": [
+    {
+      "shorter_word": "一样",
+      "longer_word": "不一样",
+      "shorter_courses": [
+        "CL-52",
+        "CL-54"
+      ],
+      "longer_courses": [
+        "CL-54"
+      ],
+      "decision": "keep_both",
+      "reason": "反义表达，不合并"
+    },
+    {
+      "shorter_word": "什么",
+      "longer_word": "为什么",
+      "shorter_courses": [
+        "CL-07"
+      ],
+      "longer_courses": [
+        "CL-07"
+      ],
+      "decision": "keep_both",
+      "reason": "不同疑问表达"
+    },
+    {
+      "shorter_word": "什么",
+      "longer_word": "什么时候",
+      "shorter_courses": [
+        "CL-07"
+      ],
+      "longer_courses": [
+        "CL-25"
+      ],
+      "decision": "keep_both",
+      "reason": "不同疑问表达"
+    },
+    {
+      "shorter_word": "时候",
+      "longer_word": "什么时候",
+      "shorter_courses": [
+        "CL-34"
+      ],
+      "longer_courses": [
+        "CL-25"
+      ],
+      "decision": "keep_both",
+      "reason": "普通时间词与时间疑问表达"
+    },
+    {
+      "shorter_word": "汽车",
+      "longer_word": "公共汽车",
+      "shorter_courses": [
+        "CL-67"
+      ],
+      "longer_courses": [
+        "CL-67"
+      ],
+      "decision": "keep_both",
+      "reason": "上下位概念"
+    },
+    {
+      "shorter_word": "电话",
+      "longer_word": "打电话",
+      "shorter_courses": [
+        "CL-16",
+        "CL-110"
+      ],
+      "longer_courses": [
+        "CL-28"
+      ],
+      "decision": "keep_both",
+      "reason": "名词与动词短语"
+    },
+    {
+      "shorter_word": "星期",
+      "longer_word": "星期天",
+      "shorter_courses": [
+        "CL-27",
+        "CL-30",
+        "CL-102",
+        "CL-109"
+      ],
+      "longer_courses": [
+        "CL-27"
+      ],
+      "decision": "keep_both",
+      "reason": "基础词与具体时间表达"
+    },
+    {
+      "shorter_word": "星期",
+      "longer_word": "星期日",
+      "shorter_courses": [
+        "CL-27",
+        "CL-30",
+        "CL-102",
+        "CL-109"
+      ],
+      "longer_courses": [
+        "CL-27"
+      ],
+      "decision": "synonym_relation",
+      "reason": "同义时间表达，建立关联"
+    },
+    {
+      "shorter_word": "服务",
+      "longer_word": "服务员",
+      "shorter_courses": [
+        "CL-114"
+      ],
+      "longer_courses": [
+        "CL-112"
+      ],
+      "decision": "keep_both",
+      "reason": "不同词汇"
+    },
+    {
+      "shorter_word": "衣服",
+      "longer_word": "洗衣服",
+      "shorter_courses": [
+        "CL-16",
+        "CL-106"
+      ],
+      "longer_courses": [
+        "CL-111"
+      ],
+      "decision": "keep_both",
+      "reason": "名词与动宾结构"
+    },
+    {
+      "shorter_word": "电影",
+      "longer_word": "电影院",
+      "shorter_courses": [
+        "CL-26",
+        "CL-86"
+      ],
+      "longer_courses": [
+        "CL-04",
+        "CL-17"
+      ],
+      "decision": "keep_both",
+      "reason": "不同词汇"
+    },
+    {
+      "shorter_word": "面条",
+      "longer_word": "面条儿",
+      "shorter_courses": [
+        "CL-112"
+      ],
+      "longer_courses": [
+        "CL-14",
+        "CL-21",
+        "CL-50"
+      ],
+      "decision": "standardize_variant",
+      "reason": "面条为标准词形，面条儿作为儿化变体"
+    }
+  ]
+}

@@ -12,7 +12,8 @@
     "prompt",
     "answerType",
     "answer",
-    "atlasReferences"
+    "atlasVocabularyReferences",
+    "atlasOccurrenceReferences"
   ],
   "properties": {
     "exerciseId": {
@@ -121,12 +122,20 @@
     "answer": {
       "type": "object"
     },
-    "atlasReferences": {
+    "atlasVocabularyReferences": {
       "type": "array",
       "uniqueItems": true,
       "items": {
         "type": "string",
-        "pattern": "^ATLAS-[0-9]{5,}$"
+        "pattern": "^PTA-P[0-9]{2}-[0-9]{3}$"
+      }
+    },
+    "atlasOccurrenceReferences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^ATLAS-S[0-9]{2}-[0-9]{2}$"
       }
     }
   },

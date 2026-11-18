@@ -7,7 +7,6 @@
   "sourceReference": null,
   "learningObjectives": [],
   "teachingContent": {},
-  "atlasReferences": [],
   "localizedContent": null,
   "exerciseReferences": [],
   "teacherNotes": "课程占位文件；尚未导入或审定正式课程内容。",
@@ -32,5 +31,7 @@
       "reviewedAt": null,
       "notes": ""
     }
-  }
+  },
+  "atlasVocabularyReferences": [],
+  "atlasOccurrenceReferences": []
 }

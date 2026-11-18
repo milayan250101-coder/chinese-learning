@@ -43,3 +43,5 @@ backups/
 node_modules/
 *.before*
 teacher-portal/dist/
+# Private student-uploaded documents
+private_storage/

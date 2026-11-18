@@ -16,7 +16,14 @@ from backend.grammar.models import (
     GrammarExample,
     GrammarPitfall,
 )
-from backend.grammar.schemas import CategoryCreate, GrammarPointCreate
+from backend.grammar.schemas import (
+    CategoryCreate,
+    CategoryUpdate,
+    GrammarPointCreate,
+    GrammarSourceLinkCreate,
+)
+from backend.grammar.models import GrammarSourceLink
+from backend.hsk_models import HSKGrammarPoint
 
 router = APIRouter(
     prefix="/api/grammar",
@@ -109,6 +116,33 @@ def list_categories(
     return [category_dict(item) for item in items]
 
 
+@router.get("/categories/tree")
+def get_category_tree(
+    db: Session = Depends(get_db),
+    teacher: User = Depends(auth_routes.get_current_teacher),
+):
+    items = (
+        visible_categories(db, teacher.id)
+        .order_by(GrammarCategory.sort_order, GrammarCategory.id)
+        .all()
+    )
+
+    nodes = {
+        item.id: {**category_dict(item), "children": []}
+        for item in items
+    }
+    roots = []
+
+    for item in items:
+        node = nodes[item.id]
+        if item.parent_id in nodes:
+            nodes[item.parent_id]["children"].append(node)
+        else:
+            roots.append(node)
+
+    return roots
+
+
 @router.post("/categories", status_code=201)
 def create_category(
     payload: CategoryCreate,
@@ -141,6 +175,113 @@ def create_category(
     db.commit()
     db.refresh(item)
     return category_dict(item)
+
+
+@router.patch("/categories/{category_id}")
+def update_category(
+    category_id: int,
+    payload: CategoryUpdate,
+    db: Session = Depends(get_db),
+    teacher: User = Depends(auth_routes.get_current_teacher),
+):
+    item = visible_categories(db, teacher.id).filter(
+        GrammarCategory.id == category_id,
+        GrammarCategory.owner_teacher_id == teacher.id,
+    ).first()
+
+    if item is None:
+        raise HTTPException(status_code=404, detail="分类不存在或无权修改")
+
+    changes = payload.model_fields_set
+
+    new_parent_id = (
+        payload.parent_id if "parent_id" in changes else item.parent_id
+    )
+
+    if new_parent_id is not None:
+        parent = visible_categories(db, teacher.id).filter(
+            GrammarCategory.id == new_parent_id
+        ).first()
+        if parent is None:
+            raise HTTPException(status_code=404, detail="目标父分类不存在或无权使用")
+
+        # 禁止移动到自身或自己的后代目录中
+        cursor = parent
+        visited = set()
+        while cursor is not None:
+            if cursor.id == item.id:
+                raise HTTPException(status_code=422, detail="不能将目录移动到自身或其子目录")
+            if cursor.id in visited:
+                raise HTTPException(status_code=409, detail="检测到目录层级循环")
+            visited.add(cursor.id)
+            cursor = db.query(GrammarCategory).filter(
+                GrammarCategory.id == cursor.parent_id
+            ).first() if cursor.parent_id is not None else None
+
+    new_name = payload.name if "name" in changes else item.name
+    duplicate = visible_categories(db, teacher.id).filter(
+        GrammarCategory.id != category_id,
+        GrammarCategory.parent_id == new_parent_id,
+        func.lower(GrammarCategory.name) == new_name.lower(),
+    ).first()
+
+    if duplicate:
+        raise HTTPException(status_code=409, detail="目标层级已存在同名分类")
+
+    if "name" in changes:
+        if payload.name is None:
+            raise HTTPException(status_code=422, detail="分类名称不能为空")
+        item.name = payload.name
+
+    if "parent_id" in changes:
+        item.parent_id = payload.parent_id
+
+    if "description" in changes:
+        item.description = payload.description
+
+    if "sort_order" in changes:
+        item.sort_order = payload.sort_order
+
+    db.commit()
+    db.refresh(item)
+    return category_dict(item)
+
+
+@router.delete("/categories/{category_id}")
+def delete_category(
+    category_id: int,
+    db: Session = Depends(get_db),
+    teacher: User = Depends(auth_routes.get_current_teacher),
+):
+    item = visible_categories(db, teacher.id).filter(
+        GrammarCategory.id == category_id,
+        GrammarCategory.owner_teacher_id == teacher.id,
+    ).first()
+
+    if item is None:
+        raise HTTPException(status_code=404, detail="分类不存在或无权删除")
+
+    child_count = db.query(GrammarCategory).filter(
+        GrammarCategory.parent_id == category_id
+    ).count()
+
+    point_count = db.query(GrammarPointCategory).filter(
+        GrammarPointCategory.category_id == category_id
+    ).count()
+
+    primary_count = db.query(GrammarKnowledgePoint).filter(
+        GrammarKnowledgePoint.primary_category_id == category_id
+    ).count()
+
+    if child_count or point_count or primary_count:
+        raise HTTPException(
+            status_code=409,
+            detail="只能删除没有子目录、没有关联知识点的空目录",
+        )
+
+    db.delete(item)
+    db.commit()
+    return {"deleted": True, "id": category_id}
 
 
 @router.get("/points")
@@ -344,4 +485,117 @@ def get_grammar_point(
         .order_by(GrammarPitfall.sort_order, GrammarPitfall.id)
         .all()
     ]
+    result["hsk_sources"] = [
+        {
+            "id": source.id,
+            "level": source.level,
+            "category": source.category,
+            "category_name": source.category_name,
+            "subcategory": source.subcategory,
+            "content": source.content,
+            "syllabus_version": source.syllabus_version,
+            "source_repo": source.source_repo,
+            "source_file": source.source_file,
+            "source_url": source.source_url,
+            "source_index": source.source_index,
+        }
+        for source in (
+            db.query(HSKGrammarPoint)
+            .join(
+                GrammarSourceLink,
+                GrammarSourceLink.hsk_grammar_point_id == HSKGrammarPoint.id,
+            )
+            .filter(GrammarSourceLink.grammar_point_id == item.id)
+            .order_by(HSKGrammarPoint.level, HSKGrammarPoint.source_index)
+            .all()
+        )
+    ]
     return result
+
+
+@router.post("/points/{point_id}/hsk-links", status_code=201)
+def link_hsk_grammar(
+    point_id: int,
+    payload: GrammarSourceLinkCreate,
+    db: Session = Depends(get_db),
+    teacher: User = Depends(auth_routes.get_current_teacher),
+):
+    point = db.query(GrammarKnowledgePoint).filter(
+        GrammarKnowledgePoint.id == point_id,
+        GrammarKnowledgePoint.teacher_user_id == teacher.id,
+    ).first()
+
+    if point is None:
+        raise HTTPException(status_code=404, detail="G 系列知识点不存在")
+
+    source = db.query(HSKGrammarPoint).filter(
+        HSKGrammarPoint.id == payload.hsk_grammar_point_id
+    ).first()
+
+    if source is None:
+        raise HTTPException(status_code=404, detail="HSK 原始语法条目不存在")
+
+    existing = db.query(GrammarSourceLink).filter(
+        GrammarSourceLink.grammar_point_id == point_id,
+        GrammarSourceLink.hsk_grammar_point_id == source.id,
+    ).first()
+
+    if existing:
+        return {
+            "linked": True,
+            "already_linked": True,
+            "grammar_point_id": point_id,
+            "hsk_grammar_point_id": source.id,
+        }
+
+    link = GrammarSourceLink(
+        grammar_point_id=point_id,
+        hsk_grammar_point_id=source.id,
+    )
+
+    try:
+        db.add(link)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
+
+    return {
+        "linked": True,
+        "already_linked": False,
+        "grammar_point_id": point_id,
+        "hsk_grammar_point_id": source.id,
+    }
+
+
+@router.delete("/points/{point_id}/hsk-links/{hsk_grammar_point_id}")
+def unlink_hsk_grammar(
+    point_id: int,
+    hsk_grammar_point_id: int,
+    db: Session = Depends(get_db),
+    teacher: User = Depends(auth_routes.get_current_teacher),
+):
+    point = db.query(GrammarKnowledgePoint).filter(
+        GrammarKnowledgePoint.id == point_id,
+        GrammarKnowledgePoint.teacher_user_id == teacher.id,
+    ).first()
+
+    if point is None:
+        raise HTTPException(status_code=404, detail="G 系列知识点不存在")
+
+    link = db.query(GrammarSourceLink).filter(
+        GrammarSourceLink.grammar_point_id == point_id,
+        GrammarSourceLink.hsk_grammar_point_id == hsk_grammar_point_id,
+    ).first()
+
+    if link is None:
+        raise HTTPException(status_code=404, detail="关联记录不存在")
+
+    db.delete(link)
+    db.commit()
+
+    return {
+        "unlinked": True,
+        "grammar_point_id": point_id,
+        "hsk_grammar_point_id": hsk_grammar_point_id,
+    }

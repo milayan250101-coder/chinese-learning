@@ -4,49 +4,643 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 9,
-  "learning_objectives": [],
+  "learning_objectives": [
+    {
+      "objective": "理解并使用常见将来时间表达。",
+      "success_indicator": "能够使用明天、周末、下星期等时间词说明未来安排。"
+    },
+    {
+      "objective": "掌握“时间＋去＋地点＋动词”的基本语序。",
+      "success_indicator": "能够用完整句子介绍至少三个未来活动计划。"
+    },
+    {
+      "objective": "能够询问和回答他人的未来活动安排。",
+      "success_indicator": "能够使用“你明天去哪里？”等问题进行简单对话。"
+    },
+    {
+      "objective": "结合地点、活动和时间表达个人计划。",
+      "success_indicator": "能够介绍自己的周末或近期安排。"
+    }
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
-      "collocations": [],
+      "word_id": "CL09-001",
+      "simplified": "明天",
+      "traditional": "明天",
+      "pinyin": "míngtiān",
+      "part_of_speech": "时间名词",
+      "definition_zh": "今天之后的第一天。",
+      "category": "将来时间",
+      "collocations": [
+        "明天早上",
+        "明天下午",
+        "明天去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-002",
+      "simplified": "后天",
+      "traditional": "後天",
+      "pinyin": "hòutiān",
+      "part_of_speech": "时间名词",
+      "definition_zh": "明天之后的一天。",
+      "category": "将来时间",
+      "collocations": [
+        "后天见",
+        "后天去",
+        "后天晚上"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-003",
+      "simplified": "周末",
+      "traditional": "週末",
+      "pinyin": "zhōumò",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一星期的最后两天，通常指星期六和星期日。",
+      "category": "将来时间",
+      "collocations": [
+        "这个周末",
+        "周末去",
+        "周末有时间"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-004",
+      "simplified": "下星期",
+      "traditional": "下星期",
+      "pinyin": "xià xīngqī",
+      "part_of_speech": "时间名词",
+      "definition_zh": "从本星期之后开始的一个星期。",
+      "category": "将来时间",
+      "collocations": [
+        "下星期一",
+        "下星期去",
+        "下星期见"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-005",
+      "simplified": "晚上",
+      "traditional": "晚上",
+      "pinyin": "wǎnshang",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一天中太阳落山以后的一段时间。",
+      "category": "时间",
+      "collocations": [
+        "明天晚上",
+        "星期六晚上",
+        "晚上出去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-006",
+      "simplified": "早上",
+      "traditional": "早上",
+      "pinyin": "zǎoshang",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一天开始的早晨时段。",
+      "category": "时间",
+      "collocations": [
+        "明天早上",
+        "早上出门",
+        "早上去"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-007",
+      "simplified": "去",
+      "traditional": "去",
+      "pinyin": "qù",
+      "part_of_speech": "动词",
+      "definition_zh": "从现在所在的地方前往另一个地方。",
+      "category": "移动动词",
+      "collocations": [
+        "去学校",
+        "去超市",
+        "去公园"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-008",
+      "simplified": "旅游",
+      "traditional": "旅遊",
+      "pinyin": "lǚyóu",
+      "part_of_speech": "动词／名词",
+      "definition_zh": "到其他地方游览和体验。",
+      "category": "活动",
+      "collocations": [
+        "去中国旅游",
+        "周末旅游",
+        "一起旅游"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-009",
+      "simplified": "看电影",
+      "traditional": "看電影",
+      "pinyin": "kàn diànyǐng",
+      "part_of_speech": "动词短语",
+      "definition_zh": "观看电影。",
+      "category": "休闲活动",
+      "collocations": [
+        "去电影院看电影",
+        "周末看电影"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-010",
+      "simplified": "买东西",
+      "traditional": "買東西",
+      "pinyin": "mǎi dōngxi",
+      "part_of_speech": "动词短语",
+      "definition_zh": "购买日常用品或其他物品。",
+      "category": "日常活动",
+      "collocations": [
+        "去超市买东西",
+        "明天买东西"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-011",
+      "simplified": "吃饭",
+      "traditional": "吃飯",
+      "pinyin": "chīfàn",
+      "part_of_speech": "动词短语",
+      "definition_zh": "吃正餐或进餐。",
+      "category": "日常活动",
+      "collocations": [
+        "去饭店吃饭",
+        "一起吃饭"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-012",
+      "simplified": "运动",
+      "traditional": "運動",
+      "pinyin": "yùndòng",
+      "part_of_speech": "动词／名词",
+      "definition_zh": "进行体育锻炼或身体活动。",
+      "category": "休闲活动",
+      "collocations": [
+        "去公园运动",
+        "明天运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-013",
+      "simplified": "朋友",
+      "traditional": "朋友",
+      "pinyin": "péngyou",
+      "part_of_speech": "名词",
+      "definition_zh": "关系友好、经常来往的人。",
+      "category": "人物",
+      "collocations": [
+        "我的朋友",
+        "和朋友一起",
+        "朋友见面"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-014",
+      "simplified": "一起",
+      "traditional": "一起",
+      "pinyin": "yìqǐ",
+      "part_of_speech": "副词",
+      "definition_zh": "表示两个人或多个人共同做某事。",
+      "category": "活动表达",
+      "collocations": [
+        "一起去",
+        "一起吃饭",
+        "一起旅游"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-015",
+      "simplified": "计划",
+      "traditional": "計劃",
+      "pinyin": "jìhuà",
+      "part_of_speech": "名词／动词",
+      "definition_zh": "对以后要做的事情进行安排。",
+      "category": "计划表达",
+      "collocations": [
+        "周末计划",
+        "有一个计划",
+        "计划去旅游"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL09-016",
+      "simplified": "电影院",
+      "traditional": "電影院",
+      "pinyin": "diànyǐngyuàn",
+      "part_of_speech": "名词",
+      "definition_zh": "人们观看电影的地方。",
+      "category": "活动地点",
+      "collocations": [
+        "去电影院",
+        "在电影院看电影"
+      ],
       "is_key_vocabulary": true
     }
   ],
-  "core_expressions": [],
-  "sentence_patterns": [
+  "core_expressions": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "expression": "明天去哪里？",
+      "pinyin": "Míngtiān qù nǎlǐ?",
+      "meaning_zh": "询问明天要前往什么地方。",
+      "examples": [
+        "你明天去哪里？",
+        "我们明天去哪里？"
+      ]
+    },
+    {
+      "expression": "周末有什么计划？",
+      "pinyin": "Zhōumò yǒu shénme jìhuà?",
+      "meaning_zh": "询问周末的活动安排。",
+      "examples": [
+        "你周末有什么计划？"
+      ]
+    },
+    {
+      "expression": "我明天要去……",
+      "pinyin": "Wǒ míngtiān yào qù ...",
+      "meaning_zh": "说明自己明天打算前往某地。",
+      "examples": [
+        "我明天要去超市。",
+        "我明天要去学校。"
+      ]
+    },
+    {
+      "expression": "周末一起去……",
+      "pinyin": "Zhōumò yìqǐ qù ...",
+      "meaning_zh": "邀请别人周末一起前往某地。",
+      "examples": [
+        "周末一起去看电影吧。"
+      ]
+    },
+    {
+      "expression": "我打算去……",
+      "pinyin": "Wǒ dǎsuàn qù ...",
+      "meaning_zh": "表达自己已经有的初步计划。",
+      "examples": [
+        "我打算去北京旅游。"
+      ]
+    },
+    {
+      "expression": "我还没有计划。",
+      "pinyin": "Wǒ hái méiyǒu jìhuà.",
+      "meaning_zh": "说明自己目前还没有安排。",
+      "examples": [
+        "这个周末我还没有计划。"
+      ]
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "sentence_patterns": [
+    {
+      "pattern": "将来时间＋主语＋去＋地点＋动词（＋宾语）。",
+      "explanation": "将来时间放在句首，说明计划发生的时间；“去”表示前往某地。",
+      "examples": [
+        {
+          "simplified": "明天我去超市买东西。",
+          "traditional": "明天我去超市買東西。",
+          "pinyin": "Míngtiān wǒ qù chāoshì mǎi dōngxi.",
+          "meaning": "我计划明天去超市购物。"
+        },
+        {
+          "simplified": "周末我们去公园运动。",
+          "traditional": "週末我們去公園運動。",
+          "pinyin": "Zhōumò wǒmen qù gōngyuán yùndòng.",
+          "meaning": "我们计划周末去公园运动。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋将来时间＋去＋地点＋动词（＋宾语）。",
+      "explanation": "时间也可以放在主语之后，表达相同的未来安排。",
+      "examples": [
+        {
+          "simplified": "我明天去学校学习中文。",
+          "traditional": "我明天去學校學習中文。",
+          "pinyin": "Wǒ míngtiān qù xuéxiào xuéxí Zhōngwén.",
+          "meaning": "我明天前往学校学习中文。"
+        },
+        {
+          "simplified": "他们下星期去中国旅游。",
+          "traditional": "他們下星期去中國旅遊。",
+          "pinyin": "Tāmen xià xīngqī qù Zhōngguó lǚyóu.",
+          "meaning": "他们计划下星期去中国旅游。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋将来时间＋要＋去＋地点（＋动词）。",
+      "explanation": "“要”在这里加强计划或意愿的表达；初级阶段先作为常见表达整体学习。",
+      "examples": [
+        {
+          "simplified": "我明天要去医院。",
+          "traditional": "我明天要去醫院。",
+          "pinyin": "Wǒ míngtiān yào qù yīyuàn.",
+          "meaning": "我明天计划或需要去医院。"
+        },
+        {
+          "simplified": "她周末要去电影院看电影。",
+          "traditional": "她週末要去電影院看電影。",
+          "pinyin": "Tā zhōumò yào qù diànyǐngyuàn kàn diànyǐng.",
+          "meaning": "她周末打算去电影院看电影。"
+        }
+      ]
+    },
+    {
+      "pattern": "你＋将来时间＋去哪里？",
+      "explanation": "询问对方未来某个时间要去的地点。",
+      "examples": [
+        {
+          "simplified": "你明天去哪里？",
+          "traditional": "你明天去哪裡？",
+          "pinyin": "Nǐ míngtiān qù nǎlǐ?",
+          "meaning": "询问对方明天的目的地。"
+        },
+        {
+          "simplified": "你周末要去哪里？",
+          "traditional": "你週末要去哪裡？",
+          "pinyin": "Nǐ zhōumò yào qù nǎlǐ?",
+          "meaning": "询问对方周末的安排。"
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "明天去哪里",
+      "scene": "两位朋友讨论第二天的安排。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你明天去哪里？",
+          "traditional": "你明天去哪裡？",
+          "pinyin": "Nǐ míngtiān qù nǎlǐ?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我明天去超市买东西。",
+          "traditional": "我明天去超市買東西。",
+          "pinyin": "Wǒ míngtiān qù chāoshì mǎi dōngxi."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你一个人去吗？",
+          "traditional": "你一個人去嗎？",
+          "pinyin": "Nǐ yí ge rén qù ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "不是，我和朋友一起去。",
+          "traditional": "不是，我和朋友一起去。",
+          "pinyin": "Bú shì, wǒ hé péngyou yìqǐ qù."
+        }
+      ]
+    },
+    {
+      "title": "周末一起看电影",
+      "scene": "朋友邀请对方周末去电影院。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你周末有什么计划？",
+          "traditional": "你週末有什麼計劃？",
+          "pinyin": "Nǐ zhōumò yǒu shénme jìhuà?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我还没有计划。",
+          "traditional": "我還沒有計劃。",
+          "pinyin": "Wǒ hái méiyǒu jìhuà."
+        },
+        {
+          "speaker": "A",
+          "simplified": "我们一起去电影院看电影吧！",
+          "traditional": "我們一起去電影院看電影吧！",
+          "pinyin": "Wǒmen yìqǐ qù diànyǐngyuàn kàn diànyǐng ba!"
+        },
+        {
+          "speaker": "B",
+          "simplified": "好啊！星期六晚上可以吗？",
+          "traditional": "好啊！星期六晚上可以嗎？",
+          "pinyin": "Hǎo a! Xīngqīliù wǎnshang kěyǐ ma?"
+        }
+      ]
+    },
+    {
+      "title": "下星期去旅游",
+      "scene": "同事谈论下星期的旅行计划。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你下星期要做什么？",
+          "traditional": "你下星期要做什麼？",
+          "pinyin": "Nǐ xià xīngqī yào zuò shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我打算去中国旅游。",
+          "traditional": "我打算去中國旅遊。",
+          "pinyin": "Wǒ dǎsuàn qù Zhōngguó lǚyóu."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你和谁一起去？",
+          "traditional": "你和誰一起去？",
+          "pinyin": "Nǐ hé shéi yìqǐ qù?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我和家人一起去。",
+          "traditional": "我和家人一起去。",
+          "pinyin": "Wǒ hé jiārén yìqǐ qù."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "时间词排序",
+      "type": "时间表达",
+      "instructions": "教师展示今天、明天、后天、这个周末、下星期等时间卡片，学生按时间顺序排列，并用它们造句。",
+      "expected_output": [
+        "明天我去学校。",
+        "后天我去超市。",
+        "下星期我去旅游。"
+      ]
+    },
+    {
+      "activity": "时间地点活动组合",
+      "type": "句子组合",
+      "instructions": "学生从时间、地点和活动卡片中各选一张，组合成完整句子。",
+      "expected_output": [
+        "明天我去公园运动。",
+        "周末我去电影院看电影。",
+        "下星期我去中国旅游。"
+      ]
+    },
+    {
+      "activity": "你明天去哪里",
+      "type": "口语问答",
+      "instructions": "学生两人一组，使用“你明天去哪里？”“你周末有什么计划？”询问对方，并用完整句子回答。",
+      "expected_output": [
+        "A：你明天去哪里？",
+        "B：我明天去超市买东西。",
+        "A：你周末有什么计划？",
+        "B：我周末去公园运动。"
+      ]
+    },
+    {
+      "activity": "我的周末计划",
+      "type": "个人表达",
+      "instructions": "学生根据自己的实际情况，选择至少两个周末活动，介绍时间、地点和活动内容。",
+      "expected_output": [
+        "星期六我去饭店吃饭。",
+        "星期天下午我去公园运动。"
+      ]
+    },
+    {
+      "activity": "计划信息差",
+      "type": "双人互动",
+      "instructions": "两名学生分别获得不同的计划信息卡，通过提问了解对方明天或周末的安排，并记录答案。",
+      "expected_output": [
+        "你明天要去哪里？",
+        "你星期六晚上做什么？",
+        "你和谁一起去？"
+      ]
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "instructions": "主题：我的近期计划。学生介绍明天或周末至少三个活动安排。每个安排尽量包含时间、地点和活动；至少提出一个问题并回答。",
+    "expected_output": "明天早上我去学校学习中文。下午我去超市买东西。星期六晚上我和朋友一起去电影院看电影。星期天我们去公园运动。\nA：你周末有什么计划？\nB：我周末去公园运动。"
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课重点是把时间、地点和活动组合成未来计划，不需要提前讲解复杂的将来时语法。",
+    "建议先复习 CL-08 的地点和活动表达，再加入明天、后天、周末、下星期等时间词。",
+    "将来时间可以放在主语前面或主语后面，例如“明天我去学校”和“我明天去学校”。",
+    "“去＋地点＋动词”强调前往某地进行活动，与 CL-08 的“在＋地点＋动词”有所不同。",
+    "“要去”可以表达计划、意愿或需要，具体含义要结合语境，不要简单解释为所有将来动作都必须加“要”。",
+    "本课的“计划”和“打算”作为常用表达接触即可，不需要扩展复杂的计划类语法。",
+    "鼓励学生使用真实生活中的安排，例如上课、购物、吃饭、运动和看电影。",
+    "如果学生没有真实计划，可以使用教师提供的情景卡进行替代练习。"
+  ],
+  "completion_criteria": [
+    "能够理解并使用至少四个常见将来时间表达。",
+    "能够使用“时间＋去＋地点＋动词”组织句子。",
+    "能够询问他人明天或周末的活动安排。",
+    "能够用完整句子介绍至少两个未来活动。",
+    "能够在简单语境中使用“一起去”邀请他人。",
+    "能够完成一段关于近期计划的简单对话或口头介绍。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Future time + go to a place + do something",
+      "learning_objectives": [
+        "Understand common expressions for future time.",
+        "Use the pattern time + 去 + place + verb.",
+        "Ask and answer questions about future plans.",
+        "Describe personal plans using time, place and activity."
+      ],
+      "key_expressions": {
+        "明天去哪里？": "Where are you going tomorrow?",
+        "周末有什么计划？": "What are your plans for the weekend?",
+        "我明天要去超市。": "I am going to the supermarket tomorrow.",
+        "我们一起去电影院看电影吧！": "Let's go to the cinema and watch a movie together!"
+      },
+      "integrated_task": "My plans for the coming days."
+    },
+    "fr": {
+      "title": "Temps futur + aller dans un lieu + faire une activité",
+      "learning_objectives": [
+        "Comprendre les expressions courantes du futur.",
+        "Utiliser la structure temps + 去 + lieu + verbe.",
+        "Poser et répondre à des questions sur les projets à venir.",
+        "Présenter ses projets avec le temps, le lieu et l'activité."
+      ],
+      "key_expressions": {
+        "明天去哪里？": "Où vas-tu demain ?",
+        "周末有什么计划？": "Quels sont tes projets pour le week-end ?",
+        "我明天要去超市。": "Demain, je vais au supermarché.",
+        "我们一起去电影院看电影吧！": "Allons ensemble au cinéma voir un film !"
+      },
+      "integrated_task": "Mes projets pour les prochains jours."
+    },
+    "de": {
+      "title": "Zukunftszeit + an einen Ort gehen + etwas tun",
+      "learning_objectives": [
+        "Häufige Zeitangaben für die Zukunft verstehen.",
+        "Die Struktur Zeit + 去 + Ort + Verb verwenden.",
+        "Fragen zu zukünftigen Plänen stellen und beantworten.",
+        "Eigene Pläne mit Zeit, Ort und Aktivität beschreiben."
+      ],
+      "key_expressions": {
+        "明天去哪里？": "Wohin gehst du morgen?",
+        "周末有什么计划？": "Was hast du am Wochenende vor?",
+        "我明天要去超市。": "Ich gehe morgen zum Supermarkt.",
+        "我们一起去电影院看电影吧！": "Lass uns zusammen ins Kino gehen und einen Film ansehen!"
+      },
+      "integrated_task": "Meine Pläne für die nächsten Tage."
+    },
+    "es": {
+      "title": "Tiempo futuro + ir a un lugar + hacer algo",
+      "learning_objectives": [
+        "Comprender expresiones habituales de tiempo futuro.",
+        "Utilizar la estructura tiempo + 去 + lugar + verbo.",
+        "Preguntar y responder sobre planes futuros.",
+        "Describir planes personales con tiempo, lugar y actividad."
+      ],
+      "key_expressions": {
+        "明天去哪里？": "¿Adónde vas mañana?",
+        "周末有什么计划？": "¿Qué planes tienes para el fin de semana?",
+        "我明天要去超市。": "Mañana voy al supermercado.",
+        "我们一起去电影院看电影吧！": "¡Vamos juntos al cine a ver una película!"
+      },
+      "integrated_task": "Mis planes para los próximos días."
+    },
+    "it": {
+      "title": "Tempo futuro + andare in un luogo + fare qualcosa",
+      "learning_objectives": [
+        "Comprendere le espressioni comuni del tempo futuro.",
+        "Usare la struttura tempo + 去 + luogo + verbo.",
+        "Fare e rispondere a domande sui programmi futuri.",
+        "Descrivere i propri programmi con tempo, luogo e attività."
+      ],
+      "key_expressions": {
+        "明天去哪里？": "Dove vai domani?",
+        "周末有什么计划？": "Che programmi hai per il fine settimana?",
+        "我明天要去超市。": "Domani vado al supermercato.",
+        "我们一起去电影院看电影吧！": "Andiamo insieme al cinema a vedere un film!"
+      },
+      "integrated_task": "I miei programmi per i prossimi giorni."
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T17:11:01.157573+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "本课为初版课程建设成果，后续需检查时间表达、语序及多语言翻译。"
   },
   "title_status": "confirmed"
 }

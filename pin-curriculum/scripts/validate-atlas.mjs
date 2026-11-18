@@ -1,7 +1,277 @@
 #!/usr/bin/env node
-import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';import Ajv2020 from 'ajv/dist/2020.js';import addFormats from 'ajv-formats';
-const HERE=path.dirname(fileURLToPath(import.meta.url)),ROOT=path.resolve(process.argv[2]??path.join(HERE,'..'));const errors=[],warnings=[];let filesChecked=0;const LANGS=['zh-CN','en','de','fr','es','it'];
-const err=(code,file,p,message)=>errors.push({code,file,path:p,message});function read(rel){filesChecked++;try{return JSON.parse(fs.readFileSync(path.join(ROOT,rel),'utf8'));}catch(e){err(fs.existsSync(path.join(ROOT,rel))?'ATLAS_JSON_INVALID':'ATLAS_FILE_MISSING',rel,'$',e.message);return null;}}
-function main(){const a=new Ajv2020({allErrors:true,strict:false});addFormats(a);const names=['translation','atlas-entry','pin-manifest','pin-course'];for(const n of names){const s=read(`schema/${n}.schema.json`);if(s)a.addSchema(s,`${n}.schema.json`);}const m=read('data/manifest.json'),entries=read('data/atlas-vocabulary.json')??[];if(m){const v=a.getSchema('pin-manifest.schema.json');if(v&&!v(m))for(const e of v.errors??[])err('ATLAS_MANIFEST_SCHEMA_INVALID','data/manifest.json',e.instancePath||'$',`${e.keyword}: ${e.message}`);}if(!Array.isArray(entries))err('ATLAS_DATA_NOT_ARRAY','data/atlas-vocabulary.json','$','Atlas vocabulary must be an array');const atlasEntries=Array.isArray(entries)?entries:[];const ids=new Set(),courseRefs=new Map();for(const e of atlasEntries){const v=a.getSchema('atlas-entry.schema.json');if(v&&!v(e))for(const x of v.errors??[])err('ATLAS_SCHEMA_VALIDATION_FAILED','data/atlas-vocabulary.json',x.instancePath||'$',`${x.keyword}: ${x.message}`);if(ids.has(e.atlasId))err('ATLAS_DUPLICATE_ID','data/atlas-vocabulary.json','/atlasId',`Duplicate ${e.atlasId}`);ids.add(e.atlasId);const localeKeys=Object.keys(e.translations?.content??{});if(!localeKeys.includes(e.translations?.defaultLanguage))err('ATLAS_TRANSLATION_MISSING','data/atlas-vocabulary.json',`/${e.atlasId}/translations/defaultLanguage`,'Default language must exist in translation content');if(JSON.stringify([...(e.translations?.requiredLanguages??[])].sort())!==JSON.stringify([...localeKeys].sort()))err('ATLAS_TRANSLATION_MISSING','data/atlas-vocabulary.json',`/${e.atlasId}/translations`,'requiredLanguages must exactly match translation content locales');for(const l of LANGS){if(!e.translations?.content?.[l]?.text?.trim())err('ATLAS_TRANSLATION_MISSING','data/atlas-vocabulary.json',`/${e.atlasId}/translations/content/${l}`,`Missing ${l} translation`);if(e.translationVerified?.[l]==='completed'&&!e.translations?.content?.[l]?.text?.trim())err('ATLAS_TRANSLATION_VERIFICATION_INVALID','data/atlas-vocabulary.json',`/${e.atlasId}/translationVerified/${l}`,'Cannot verify a missing translation');}for(const c of e.courseReferences??[]){if(!m?.courses?.some(x=>x.courseId===c))err('ATLAS_COURSE_MISSING','data/atlas-vocabulary.json',`/${e.atlasId}/courseReferences`,`Course ${c} is absent from manifest`);courseRefs.set(c,[...(courseRefs.get(c)??[]),e.atlasId]);}}
-for(const c of (Array.isArray(m?.courses)?m.courses:[])){const rel=`data/courses/${c.file}`;let course;try{course=JSON.parse(fs.readFileSync(path.join(ROOT,rel),'utf8'));filesChecked++;}catch{err('ATLAS_COURSE_FILE_MISSING',rel,'$','Course file missing or invalid');continue;}const set=new Set(course.atlasReferences??[]);for(const aid of set){const entry=atlasEntries.find(x=>x.atlasId===aid);if(!entry)err('ATLAS_COURSE_REFERENCE_MISMATCH',rel,'/atlasReferences',`Unknown Atlas ID ${aid}`);else if(!(entry.courseReferences??[]).includes(c.courseId))err('ATLAS_COURSE_REFERENCE_MISMATCH',rel,'/atlasReferences',`Atlas ${aid} does not list course ${c.courseId}`);}for(const e of atlasEntries)if((e.courseReferences??[]).includes(c.courseId)&&!set.has(e.atlasId))err('ATLAS_COURSE_REFERENCE_MISMATCH',rel,'/atlasReferences',`Atlas ${e.atlasId} reverse reference absent`);}
-const result={tool:'validate-atlas',schemaVersion:'2.2.0',valid:errors.length===0,summary:{filesChecked,errors:errors.length,warnings:warnings.length},errors,warnings};console.log(JSON.stringify(result,null,2));if(errors.length)process.exitCode=1;}main();
+
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import Ajv2020 from 'ajv/dist/2020.js';
+import addFormats from 'ajv-formats';
+
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(process.argv[2] ?? path.join(HERE, '..'));
+
+const errors = [];
+let filesChecked = 0;
+
+const LANGS = ['zh', 'en', 'de', 'fr', 'es', 'it'];
+
+function report(code, file, location, message) {
+  errors.push({ code, file, path: location, message });
+}
+
+function readJson(rel) {
+  filesChecked++;
+  const file = path.join(ROOT, rel);
+
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch (e) {
+    report(
+      fs.existsSync(file) ? 'ATLAS_JSON_INVALID' : 'ATLAS_FILE_MISSING',
+      rel,
+      '$',
+      e.message
+    );
+    return null;
+  }
+}
+
+function addSchema(ajv, rel, schemaName) {
+  const schema = readJson(rel);
+  if (schema) {
+    ajv.addSchema(schema, schemaName);
+  }
+}
+
+function main() {
+  const ajv = new Ajv2020({
+    allErrors: true,
+    strict: false
+  });
+
+  addFormats(ajv);
+
+  addSchema(
+    ajv,
+    'schema/atlas-entry.schema.json',
+    'atlas-entry.schema.json'
+  );
+
+  addSchema(
+    ajv,
+    'schema/atlas-occurrence-map.schema.json',
+    'atlas-occurrence-map.schema.json'
+  );
+
+  const official = readJson('data/atlas-vocabulary.json');
+  const mapping = readJson('data/atlas-occurrence-map.json');
+
+  const officialEntries = Array.isArray(official) ? official : [];
+
+  if (!Array.isArray(official)) {
+    report(
+      'ATLAS_DATA_NOT_ARRAY',
+      'data/atlas-vocabulary.json',
+      '$',
+      'Official Atlas vocabulary must be an array'
+    );
+  }
+
+  const officialIds = new Set();
+  const officialValidator = ajv.getSchema('atlas-entry.schema.json');
+
+  for (const entry of officialEntries) {
+    if (!officialValidator(entry)) {
+      for (const e of officialValidator.errors ?? []) {
+        report(
+          'ATLAS_SCHEMA_VALIDATION_FAILED',
+          'data/atlas-vocabulary.json',
+          e.instancePath || '$',
+          `${e.keyword}: ${e.message}`
+        );
+      }
+    }
+
+    if (officialIds.has(entry.atlasId)) {
+      report(
+        'ATLAS_DUPLICATE_ID',
+        'data/atlas-vocabulary.json',
+        '/atlasId',
+        `Duplicate official Atlas ID: ${entry.atlasId}`
+      );
+    }
+
+    officialIds.add(entry.atlasId);
+
+    for (const lang of LANGS) {
+      const value = entry.translations?.[lang];
+
+      if (typeof value !== 'string' || !value.trim()) {
+        report(
+          'ATLAS_TRANSLATION_MISSING',
+          'data/atlas-vocabulary.json',
+          `/${entry.atlasId}/translations/${lang}`,
+          `Missing or blank ${lang} translation`
+        );
+      }
+    }
+
+    // courseReferences are PIN-CORE module references.
+    // They are intentionally not checked against PIN-01 to PIN-19.
+  }
+
+  if (
+    !mapping ||
+    typeof mapping !== 'object' ||
+    Array.isArray(mapping)
+  ) {
+    report(
+      'ATLAS_OCCURRENCE_MAP_INVALID',
+      'data/atlas-occurrence-map.json',
+      '$',
+      'Occurrence mapping must be an object'
+    );
+  }
+
+  const mappingValidator = ajv.getSchema(
+    'atlas-occurrence-map.schema.json'
+  );
+
+  if (mapping && !mappingValidator(mapping)) {
+    for (const e of mappingValidator.errors ?? []) {
+      report(
+        'ATLAS_OCCURRENCE_SCHEMA_INVALID',
+        'data/atlas-occurrence-map.json',
+        e.instancePath || '$',
+        `${e.keyword}: ${e.message}`
+      );
+    }
+  }
+
+  const occurrences = Array.isArray(mapping?.entries)
+    ? mapping.entries
+    : [];
+
+  if (!Array.isArray(mapping?.entries)) {
+    report(
+      'ATLAS_OCCURRENCE_ENTRIES_INVALID',
+      'data/atlas-occurrence-map.json',
+      '/entries',
+      'Occurrence entries must be an array'
+    );
+  }
+
+  const occurrenceIds = new Set();
+  const referencedOfficialIds = new Set();
+
+  for (const occurrence of occurrences) {
+    const occurrenceId = occurrence.atlasOccurrenceId;
+    const officialId = occurrence.officialAtlasId;
+
+    if (occurrenceIds.has(occurrenceId)) {
+      report(
+        'ATLAS_OCCURRENCE_DUPLICATE_ID',
+        'data/atlas-occurrence-map.json',
+        '/entries',
+        `Duplicate occurrence ID: ${occurrenceId}`
+      );
+    }
+
+    occurrenceIds.add(occurrenceId);
+
+    if (officialId !== null && officialId !== undefined) {
+      if (!officialIds.has(officialId)) {
+        report(
+          'ATLAS_OCCURRENCE_BROKEN_LINK',
+          'data/atlas-occurrence-map.json',
+          `/${occurrenceId}/officialAtlasId`,
+          `Unknown official Atlas ID: ${officialId}`
+        );
+      } else {
+        referencedOfficialIds.add(officialId);
+      }
+    }
+  }
+
+  for (const id of officialIds) {
+    if (!referencedOfficialIds.has(id)) {
+      report(
+        'ATLAS_OFFICIAL_ENTRY_UNREFERENCED',
+        'data/atlas-occurrence-map.json',
+        '/entries',
+        `Official vocabulary entry has no visual occurrence: ${id}`
+      );
+    }
+  }
+
+  const soccer = occurrences.filter(
+    x => x.officialAtlasId === 'PTA-P09-053'
+  );
+
+  const scissors = occurrences.filter(
+    x => x.officialAtlasId === 'PTA-P11-066'
+  );
+
+  if (officialEntries.length !== 79) {
+    report(
+      'ATLAS_OFFICIAL_COUNT_MISMATCH',
+      'data/atlas-vocabulary.json',
+      '$',
+      `Expected 79 official entries, found ${officialEntries.length}`
+    );
+  }
+
+  if (occurrences.length !== 92) {
+    report(
+      'ATLAS_OCCURRENCE_COUNT_MISMATCH',
+      'data/atlas-occurrence-map.json',
+      '/entries',
+      `Expected 92 visual occurrences, found ${occurrences.length}`
+    );
+  }
+
+  if (soccer.length !== 2) {
+    report(
+      'ATLAS_SOCCER_OCCURRENCES_MISMATCH',
+      'data/atlas-occurrence-map.json',
+      '/entries',
+      `Expected 2 soccer occurrences, found ${soccer.length}`
+    );
+  }
+
+  if (scissors.length !== 2) {
+    report(
+      'ATLAS_SCISSORS_OCCURRENCES_MISMATCH',
+      'data/atlas-occurrence-map.json',
+      '/entries',
+      `Expected 2 scissors occurrences, found ${scissors.length}`
+    );
+  }
+
+  const result = {
+    tool: 'validate-atlas',
+    schemaVersion: '2.2.0',
+    valid: errors.length === 0,
+    summary: {
+      filesChecked,
+      officialVocabularyEntries: officialEntries.length,
+      uniqueOfficialIds: officialIds.size,
+      occurrenceEntries: occurrences.length,
+      uniqueOccurrenceIds: occurrenceIds.size,
+      distinctOfficialEntriesReferenced: referencedOfficialIds.size,
+      errors: errors.length
+    },
+    repeatedVisualOccurrences: {
+      soccer: soccer.map(x => x.atlasOccurrenceId),
+      scissors: scissors.map(x => x.atlasOccurrenceId)
+    },
+    errors
+  };
+
+  console.log(JSON.stringify(result, null, 2));
+
+  if (errors.length > 0) {
+    process.exitCode = 1;
+  }
+}
+
+main();

@@ -4,49 +4,618 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 20,
-  "learning_objectives": [],
+  "learning_objectives": [
+    "能够认读并说出巴黎、伦敦、罗马、东京、华盛顿和柏林六个首都名称。",
+    "能够将六个首都与对应的国家配对。",
+    "能够使用“……是……的首都”介绍城市与国家的关系。",
+    "能够使用“我想去……”表达旅行愿望。",
+    "能够用简单句介绍一个首都。"
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
+      "word_id": "CL20-001",
+      "simplified": "巴黎",
+      "traditional": "巴黎",
+      "pinyin": "Bālí",
+      "part_of_speech": "名词",
+      "definition_zh": "法国的首都。",
+      "category": "首都名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-002",
+      "simplified": "伦敦",
+      "traditional": "伦敦",
+      "pinyin": "Lúndūn",
+      "part_of_speech": "名词",
+      "definition_zh": "英国的首都。",
+      "category": "首都名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-003",
+      "simplified": "罗马",
+      "traditional": "罗马",
+      "pinyin": "Luómǎ",
+      "part_of_speech": "名词",
+      "definition_zh": "意大利的首都。",
+      "category": "首都名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-004",
+      "simplified": "东京",
+      "traditional": "东京",
+      "pinyin": "Dōngjīng",
+      "part_of_speech": "名词",
+      "definition_zh": "日本的首都。",
+      "category": "首都名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-005",
+      "simplified": "华盛顿",
+      "traditional": "华盛顿",
+      "pinyin": "Huáshèngdùn",
+      "part_of_speech": "名词",
+      "definition_zh": "美国首都华盛顿的常用中文简称。",
+      "category": "首都名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-006",
+      "simplified": "柏林",
+      "traditional": "柏林",
+      "pinyin": "Bólín",
+      "part_of_speech": "名词",
+      "definition_zh": "德国的首都。",
+      "category": "首都名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-007",
+      "simplified": "法国",
+      "traditional": "法国",
+      "pinyin": "Fǎguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于欧洲的国家。",
+      "category": "国家名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-008",
+      "simplified": "英国",
+      "traditional": "英国",
+      "pinyin": "Yīngguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于欧洲的国家。",
+      "category": "国家名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-009",
+      "simplified": "意大利",
+      "traditional": "意大利",
+      "pinyin": "Yìdàlì",
+      "part_of_speech": "名词",
+      "definition_zh": "位于欧洲的国家。",
+      "category": "国家名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-010",
+      "simplified": "日本",
+      "traditional": "日本",
+      "pinyin": "Rìběn",
+      "part_of_speech": "名词",
+      "definition_zh": "位于亚洲的国家。",
+      "category": "国家名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-011",
+      "simplified": "美国",
+      "traditional": "美国",
+      "pinyin": "Měiguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于北美洲的国家。",
+      "category": "国家名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-012",
+      "simplified": "德国",
+      "traditional": "德国",
+      "pinyin": "Déguó",
+      "part_of_speech": "名词",
+      "definition_zh": "位于欧洲的国家。",
+      "category": "国家名称",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-013",
+      "simplified": "首都",
+      "traditional": "首都",
+      "pinyin": "shǒudū",
+      "part_of_speech": "名词",
+      "definition_zh": "一个国家的政治中心城市。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-014",
+      "simplified": "世界",
+      "traditional": "世界",
+      "pinyin": "shìjiè",
+      "part_of_speech": "名词",
+      "definition_zh": "地球上的所有国家和地区。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-015",
+      "simplified": "国家",
+      "traditional": "国家",
+      "pinyin": "guójiā",
+      "part_of_speech": "名词",
+      "definition_zh": "具有自己的领土和政府的地方。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-016",
+      "simplified": "城市",
+      "traditional": "城市",
+      "pinyin": "chéngshì",
+      "part_of_speech": "名词",
+      "definition_zh": "人口和建筑比较集中的地方。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-017",
+      "simplified": "地图",
+      "traditional": "地图",
+      "pinyin": "dìtú",
+      "part_of_speech": "名词",
+      "definition_zh": "表示地区和位置的图。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-018",
+      "simplified": "旅游",
+      "traditional": "旅游",
+      "pinyin": "lǚyóu",
+      "part_of_speech": "动词或形容词",
+      "definition_zh": "到一个地方参观、游玩。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-019",
+      "simplified": "参观",
+      "traditional": "参观",
+      "pinyin": "cānguān",
+      "part_of_speech": "动词或形容词",
+      "definition_zh": "到一个地方看一看、了解情况。",
+      "category": "基础词汇",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL20-020",
+      "simplified": "有名",
+      "traditional": "有名",
+      "pinyin": "yǒumíng",
+      "part_of_speech": "动词或形容词",
+      "definition_zh": "很多人知道的。",
+      "category": "基础词汇",
       "collocations": [],
       "is_key_vocabulary": true
     }
   ],
-  "core_expressions": [],
-  "sentence_patterns": [
+  "core_expressions": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "expression": "巴黎是法国的首都。",
+      "pinyin": "Bālí shì Fǎguó de shǒudū.",
+      "meaning_zh": "介绍巴黎与法国的关系。"
+    },
+    {
+      "expression": "伦敦是英国的首都。",
+      "pinyin": "Lúndūn shì Yīngguó de shǒudū.",
+      "meaning_zh": "介绍伦敦与英国的关系。"
+    },
+    {
+      "expression": "东京是日本的首都。",
+      "pinyin": "Dōngjīng shì Rìběn de shǒudū.",
+      "meaning_zh": "介绍东京与日本的关系。"
+    },
+    {
+      "expression": "你想去哪个首都？",
+      "pinyin": "Nǐ xiǎng qù nǎ ge shǒudū?",
+      "meaning_zh": "询问对方想去哪个首都。"
+    },
+    {
+      "expression": "我想去罗马。",
+      "pinyin": "Wǒ xiǎng qù Luómǎ.",
+      "meaning_zh": "表达想去罗马的愿望。"
+    },
+    {
+      "expression": "柏林是一个有名的城市。",
+      "pinyin": "Bólín shì yí ge yǒumíng de chéngshì.",
+      "meaning_zh": "简单介绍柏林。"
+    },
+    {
+      "expression": "我想去巴黎旅游。",
+      "pinyin": "Wǒ xiǎng qù Bālí lǚyóu.",
+      "meaning_zh": "表达旅行计划或愿望。"
+    },
+    {
+      "expression": "你知道华盛顿吗？",
+      "pinyin": "Nǐ zhīdào Huáshèngdùn ma?",
+      "meaning_zh": "询问对方是否知道华盛顿。"
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "sentence_patterns": [
+    {
+      "pattern": "城市＋是＋国家的＋首都",
+      "explanation": "介绍一个首都属于哪个国家。",
+      "examples": [
+        "巴黎是法国的首都。",
+        "东京是日本的首都。"
+      ]
+    },
+    {
+      "pattern": "主语＋想去＋城市",
+      "explanation": "表达想去某个城市的愿望。",
+      "examples": [
+        "我想去罗马。",
+        "她想去伦敦。"
+      ]
+    },
+    {
+      "pattern": "主语＋想去＋城市＋旅游",
+      "explanation": "表达想去某个城市旅行。",
+      "examples": [
+        "我想去巴黎旅游。",
+        "他想去东京旅游。"
+      ]
+    },
+    {
+      "pattern": "你知道＋城市＋吗？",
+      "explanation": "询问对方是否知道某个城市。",
+      "examples": [
+        "你知道柏林吗？",
+        "你知道罗马吗？"
+      ]
+    },
+    {
+      "pattern": "城市＋是＋一个＋有名的＋城市",
+      "explanation": "简单介绍城市的知名程度。",
+      "examples": [
+        "柏林是一个有名的城市。",
+        "巴黎是一个有名的城市。"
+      ]
+    },
+    {
+      "pattern": "你想去＋哪个＋城市／首都？",
+      "explanation": "询问对方想去的城市或首都。",
+      "examples": [
+        "你想去哪个首都？",
+        "你想去哪个城市？"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "认识世界首都",
+      "scene": "两位朋友一起看世界地图。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "这是哪个城市？",
+          "traditional": "这是哪个城市？",
+          "pinyin": "Zhè shì nǎ ge chéngshì?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "这是巴黎。",
+          "traditional": "这是巴黎。",
+          "pinyin": "Zhè shì Bālí."
+        },
+        {
+          "speaker": "A",
+          "simplified": "巴黎是哪个国家的首都？",
+          "traditional": "巴黎是哪个国家的首都？",
+          "pinyin": "Bālí shì nǎ ge guójiā de shǒudū?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "巴黎是法国的首都。",
+          "traditional": "巴黎是法国的首都。",
+          "pinyin": "Bālí shì Fǎguó de shǒudū."
+        }
+      ]
+    },
+    {
+      "title": "选择旅行城市",
+      "scene": "两位朋友讨论想去哪里旅游。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你想去哪个首都？",
+          "traditional": "你想去哪个首都？",
+          "pinyin": "Nǐ xiǎng qù nǎ ge shǒudū?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想去东京。",
+          "traditional": "我想去东京。",
+          "pinyin": "Wǒ xiǎng qù Dōngjīng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "为什么？",
+          "traditional": "为什么？",
+          "pinyin": "Wèishénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想去日本旅游。",
+          "traditional": "我想去日本旅游。",
+          "pinyin": "Wǒ xiǎng qù Rìběn lǚyóu."
+        }
+      ]
+    },
+    {
+      "title": "介绍柏林",
+      "scene": "两位朋友谈论德国的首都。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你知道柏林吗？",
+          "traditional": "你知道柏林吗？",
+          "pinyin": "Nǐ zhīdào Bólín ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "知道。柏林是德国的首都。",
+          "traditional": "知道。柏林是德国的首都。",
+          "pinyin": "Zhīdào. Bólín shì Déguó de shǒudū."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你想去柏林吗？",
+          "traditional": "你想去柏林吗？",
+          "pinyin": "Nǐ xiǎng qù Bólín ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "想，我想去看看。",
+          "traditional": "想，我想去看看。",
+          "pinyin": "Xiǎng, wǒ xiǎng qù kànkan."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "首都名称认读",
+      "type": "词汇练习",
+      "instructions": "认读巴黎、伦敦、罗马、东京、华盛顿和柏林六个首都名称。",
+      "expected_output": [
+        "巴黎",
+        "伦敦",
+        "罗马",
+        "东京",
+        "华盛顿",
+        "柏林"
+      ]
+    },
+    {
+      "activity": "国家与首都配对",
+      "type": "配对练习",
+      "instructions": "将六个国家与对应的首都配对。",
+      "expected_output": [
+        "法国—巴黎",
+        "英国—伦敦",
+        "意大利—罗马",
+        "日本—东京",
+        "美国—华盛顿",
+        "德国—柏林"
+      ]
+    },
+    {
+      "activity": "看地图说城市",
+      "type": "理解与表达",
+      "instructions": "看地图或图片，说出对应的首都名称和国家名称。",
+      "expected_output": [
+        "巴黎是法国的首都。",
+        "东京是日本的首都。"
+      ]
+    },
+    {
+      "activity": "我想去哪里",
+      "type": "口语练习",
+      "instructions": "两人一组询问想去哪个首都，并说出自己的选择。",
+      "expected_output": [
+        "你想去哪个首都？我想去罗马。",
+        "我想去伦敦旅游。"
+      ]
+    },
+    {
+      "activity": "介绍一个首都",
+      "type": "综合表达",
+      "instructions": "选择一个首都，用两到三句简单中文介绍它属于哪个国家，以及自己是否想去。",
+      "expected_output": [
+        "柏林是德国的首都。我想去柏林。",
+        "巴黎是法国的首都。我想去巴黎旅游。"
+      ]
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "instructions": "选择一个首都，介绍它属于哪个国家，以及自己是否想去。",
+    "expected_output": [
+      "巴黎是法国的首都。",
+      "我想去巴黎旅游。",
+      "伦敦是英国的首都。",
+      "我想去伦敦。"
+    ]
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课重点是六个世界首都的名称，以及首都与国家的对应关系。",
+    "本课选择巴黎、伦敦、罗马、东京、华盛顿和柏林作为教学样例，不代表首都排名。",
+    "华盛顿是美国首都，日常中文常称华盛顿；与美国州名或其他同名地点区分时可说华盛顿哥伦比亚特区。",
+    "巴黎是法国首都，伦敦是英国首都，罗马是意大利首都。",
+    "东京是日本首都，柏林是德国首都。",
+    "“城市”和“首都”含义不同：首都是一个国家的政治中心城市。",
+    "“想去”表达愿望，不表示已经去过。",
+    "本课不要求学生记忆国家面积、人口、政治制度或详细地理位置。",
+    "可使用地图、城市照片或旅行图片辅助理解，但图片不应替代中文表达练习。",
+    "教师可根据学生兴趣扩展其他首都，但本课六个核心名称应先掌握。"
+  ],
+  "completion_criteria": [
+    "能够认读并说出六个首都名称。",
+    "能够将六个首都与对应国家正确配对。",
+    "能够使用“……是……的首都”介绍城市。",
+    "能够使用“我想去……”表达旅行愿望。",
+    "能够理解“城市”和“首都”的基本区别。",
+    "能够用两到三句简单中文介绍一个首都。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Six Famous World Capitals",
+      "learning_objectives": [
+        "Recognize the names of six famous world capitals.",
+        "Match each capital with its country.",
+        "Use a simple sentence to identify a capital.",
+        "Express a wish to visit a city.",
+        "Introduce a capital using simple Chinese sentences."
+      ],
+      "key_expressions": {
+        "巴黎是法国的首都。": "Paris is the capital of France.",
+        "伦敦是英国的首都。": "London is the capital of the UK.",
+        "东京是日本的首都。": "Tokyo is the capital of Japan.",
+        "你想去哪个首都？": "Which capital would you like to visit?",
+        "我想去罗马。": "I want to go to Rome.",
+        "柏林是一个有名的城市。": "Berlin is a famous city.",
+        "我想去巴黎旅游。": "I want to travel to Paris.",
+        "你知道华盛顿吗？": "Do you know Washington?"
+      },
+      "integrated_task": "Choose a capital and introduce its country and your wish to visit it."
+    },
+    "fr": {
+      "title": "Six capitales célèbres du monde",
+      "learning_objectives": [
+        "Reconnaître le nom de six capitales célèbres.",
+        "Associer chaque capitale à son pays.",
+        "Utiliser une phrase simple pour présenter une capitale.",
+        "Exprimer le souhait de visiter une ville.",
+        "Présenter une capitale avec des phrases simples en chinois."
+      ],
+      "key_expressions": {
+        "巴黎是法国的首都。": "Paris est la capitale de la France.",
+        "伦敦是英国的首都。": "Londres est la capitale du Royaume-Uni.",
+        "东京是日本的首都。": "Tokyo est la capitale du Japon.",
+        "你想去哪个首都？": "Quelle capitale voudrais-tu visiter ?",
+        "我想去罗马。": "Je voudrais aller à Rome.",
+        "柏林是一个有名的城市。": "Berlin est une ville célèbre.",
+        "我想去巴黎旅游。": "Je voudrais voyager à Paris.",
+        "你知道华盛顿吗？": "Tu connais Washington ?"
+      },
+      "integrated_task": "Choisissez une capitale et présentez son pays ainsi que votre envie de la visiter."
+    },
+    "de": {
+      "title": "Sechs berühmte Hauptstädte der Welt",
+      "learning_objectives": [
+        "Die Namen von sechs berühmten Hauptstädten erkennen.",
+        "Jede Hauptstadt dem richtigen Land zuordnen.",
+        "Eine Hauptstadt mit einem einfachen Satz vorstellen.",
+        "Den Wunsch ausdrücken, eine Stadt zu besuchen.",
+        "Eine Hauptstadt mit einfachen chinesischen Sätzen vorstellen."
+      ],
+      "key_expressions": {
+        "巴黎是法国的首都。": "Paris ist die Hauptstadt Frankreichs.",
+        "伦敦是英国的首都。": "London ist die Hauptstadt des Vereinigten Königreichs.",
+        "东京是日本的首都。": "Tokio ist die Hauptstadt Japans.",
+        "你想去哪个首都？": "Welche Hauptstadt möchtest du besuchen?",
+        "我想去罗马。": "Ich möchte nach Rom fahren.",
+        "柏林是一个有名的城市。": "Berlin ist eine bekannte Stadt.",
+        "我想去巴黎旅游。": "Ich möchte nach Paris reisen.",
+        "你知道华盛顿吗？": "Kennst du Washington?"
+      },
+      "integrated_task": "Wähle eine Hauptstadt und stelle ihr Land sowie deinen Besuchswunsch vor."
+    },
+    "es": {
+      "title": "Seis capitales famosas del mundo",
+      "learning_objectives": [
+        "Reconocer los nombres de seis capitales famosas.",
+        "Relacionar cada capital con su país.",
+        "Usar una frase sencilla para identificar una capital.",
+        "Expresar el deseo de visitar una ciudad.",
+        "Presentar una capital con frases sencillas en chino."
+      ],
+      "key_expressions": {
+        "巴黎是法国的首都。": "París es la capital de Francia.",
+        "伦敦是英国的首都。": "Londres es la capital del Reino Unido.",
+        "东京是日本的首都。": "Tokio es la capital de Japón.",
+        "你想去哪个首都？": "¿Qué capital te gustaría visitar?",
+        "我想去罗马。": "Quiero ir a Roma.",
+        "柏林是一个有名的城市。": "Berlín es una ciudad famosa.",
+        "我想去巴黎旅游。": "Quiero viajar a París.",
+        "你知道华盛顿吗？": "¿Conoces Washington?"
+      },
+      "integrated_task": "Elige una capital y presenta su país y tu deseo de visitarla."
+    },
+    "it": {
+      "title": "Sei famose capitali del mondo",
+      "learning_objectives": [
+        "Riconoscere i nomi di sei capitali famose.",
+        "Associare ogni capitale al suo paese.",
+        "Usare una frase semplice per identificare una capitale.",
+        "Esprimere il desiderio di visitare una città.",
+        "Presentare una capitale con frasi semplici in cinese."
+      ],
+      "key_expressions": {
+        "巴黎是法国的首都。": "Parigi è la capitale della Francia.",
+        "伦敦是英国的首都。": "Londra è la capitale del Regno Unito.",
+        "东京是日本的首都。": "Tokyo è la capitale del Giappone.",
+        "你想去哪个首都？": "Quale capitale vorresti visitare?",
+        "我想去罗马。": "Vorrei andare a Roma.",
+        "柏林是一个有名的城市。": "Berlino è una città famosa.",
+        "我想去巴黎旅游。": "Vorrei fare un viaggio a Parigi.",
+        "你知道华盛顿吗？": "Conosci Washington?"
+      },
+      "integrated_task": "Scegli una capitale e presenta il suo paese e il tuo desiderio di visitarla."
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T18:32:46.223890+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
   },
   "title_status": "confirmed"
 }

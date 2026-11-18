@@ -4,49 +4,578 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 6,
-  "learning_objectives": [],
+  "learning_objectives": [
+    {
+      "objective": "理解并使用“要＋动词”表达自己的意愿、打算或需要。",
+      "success_indicator": "能够用“我要……”说出至少三件自己打算做的事情。"
+    },
+    {
+      "objective": "理解并使用“不要＋动词”表达不想做某事或提醒别人不要做某事。",
+      "success_indicator": "能够根据情景正确使用“不要＋动词”。"
+    },
+    {
+      "objective": "使用“要不要＋动词”向别人提出邀请或询问意愿。",
+      "success_indicator": "能够提出至少两个“要不要……”问题并回答。"
+    },
+    {
+      "objective": "在日常生活场景中使用本课表达进行简单交流。",
+      "success_indicator": "能够完成关于饮食、活动和日常安排的简短对话。"
+    }
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
-      "collocations": [],
+      "word_id": "CL06-001",
+      "simplified": "要",
+      "traditional": "要",
+      "pinyin": "yào",
+      "part_of_speech": "能愿动词",
+      "definition_zh": "表示意愿、打算或需要。",
+      "category": "核心表达",
+      "collocations": [
+        "要吃饭",
+        "要喝水",
+        "要去学校",
+        "要工作"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-002",
+      "simplified": "不要",
+      "traditional": "不要",
+      "pinyin": "bú yào",
+      "part_of_speech": "否定表达",
+      "definition_zh": "表示不想做某事，也可以用于提醒或劝阻别人。",
+      "category": "核心表达",
+      "collocations": [
+        "不要吃",
+        "不要喝",
+        "不要去",
+        "不要说"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-003",
+      "simplified": "吃",
+      "traditional": "吃",
+      "pinyin": "chī",
+      "part_of_speech": "动词",
+      "definition_zh": "把食物放进嘴里吃。",
+      "category": "日常活动",
+      "collocations": [
+        "吃饭",
+        "吃面条",
+        "吃水果"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-004",
+      "simplified": "喝",
+      "traditional": "喝",
+      "pinyin": "hē",
+      "part_of_speech": "动词",
+      "definition_zh": "喝水或饮料。",
+      "category": "日常活动",
+      "collocations": [
+        "喝水",
+        "喝茶",
+        "喝咖啡"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-005",
+      "simplified": "买",
+      "traditional": "買",
+      "pinyin": "mǎi",
+      "part_of_speech": "动词",
+      "definition_zh": "用钱购买东西。",
+      "category": "日常活动",
+      "collocations": [
+        "买东西",
+        "买水果",
+        "买衣服"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-006",
+      "simplified": "去",
+      "traditional": "去",
+      "pinyin": "qù",
+      "part_of_speech": "动词",
+      "definition_zh": "从现在的地方到另一个地方。",
+      "category": "日常活动",
+      "collocations": [
+        "去学校",
+        "去超市",
+        "去餐厅"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-007",
+      "simplified": "看",
+      "traditional": "看",
+      "pinyin": "kàn",
+      "part_of_speech": "动词",
+      "definition_zh": "用眼睛观察或阅读。",
+      "category": "日常活动",
+      "collocations": [
+        "看书",
+        "看电影",
+        "看电视"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-008",
+      "simplified": "学习",
+      "traditional": "學習",
+      "pinyin": "xuéxí",
+      "part_of_speech": "动词",
+      "definition_zh": "学习知识或技能。",
+      "category": "学习活动",
+      "collocations": [
+        "学习中文",
+        "学习汉字",
+        "学习英语"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-009",
+      "simplified": "做",
+      "traditional": "做",
+      "pinyin": "zuò",
+      "part_of_speech": "动词",
+      "definition_zh": "进行某项活动或完成某件事情。",
+      "category": "日常活动",
+      "collocations": [
+        "做饭",
+        "做作业",
+        "做运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-010",
+      "simplified": "睡觉",
+      "traditional": "睡覺",
+      "pinyin": "shuìjiào",
+      "part_of_speech": "动词",
+      "definition_zh": "进入睡眠状态，休息。",
+      "category": "日常活动",
+      "collocations": [
+        "早点睡觉",
+        "晚上睡觉"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-011",
+      "simplified": "工作",
+      "traditional": "工作",
+      "pinyin": "gōngzuò",
+      "part_of_speech": "动词",
+      "definition_zh": "从事工作。",
+      "category": "日常活动",
+      "collocations": [
+        "去工作",
+        "在家工作",
+        "努力工作"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL06-012",
+      "simplified": "休息",
+      "traditional": "休息",
+      "pinyin": "xiūxi",
+      "part_of_speech": "动词",
+      "definition_zh": "暂时停止工作或活动，让身体放松。",
+      "category": "日常活动",
+      "collocations": [
+        "在家休息",
+        "休息一下",
+        "好好休息"
+      ],
       "is_key_vocabulary": true
     }
   ],
-  "core_expressions": [],
-  "sentence_patterns": [
+  "core_expressions": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "expression": "我要……",
+      "pinyin": "wǒ yào ...",
+      "meaning_zh": "表达自己想做或打算做某事。",
+      "examples": [
+        "我要喝水。",
+        "我要去超市。"
+      ]
+    },
+    {
+      "expression": "我不要……",
+      "pinyin": "wǒ bú yào ...",
+      "meaning_zh": "表达自己不想做某事。",
+      "examples": [
+        "我不要喝咖啡。",
+        "我不要吃这个。"
+      ]
+    },
+    {
+      "expression": "我今天要……",
+      "pinyin": "wǒ jīntiān yào ...",
+      "meaning_zh": "表达今天的计划或安排。",
+      "examples": [
+        "我今天要工作。",
+        "我今天要学习中文。"
+      ]
+    },
+    {
+      "expression": "你要不要……？",
+      "pinyin": "nǐ yào bú yào ...?",
+      "meaning_zh": "询问对方是否愿意做某事，也可以用于邀请。",
+      "examples": [
+        "你要不要喝茶？",
+        "你要不要一起去？"
+      ]
+    },
+    {
+      "expression": "好啊！",
+      "pinyin": "hǎo a!",
+      "meaning_zh": "表示同意或接受邀请。",
+      "examples": [
+        "好啊，我们一起去！"
+      ]
+    },
+    {
+      "expression": "不用了，谢谢。",
+      "pinyin": "bú yòng le, xièxie.",
+      "meaning_zh": "礼貌地拒绝对方提供的东西或帮助。",
+      "examples": [
+        "不用了，谢谢。我不喝咖啡。"
+      ]
+    },
+    {
+      "expression": "我不想……",
+      "pinyin": "wǒ bù xiǎng ...",
+      "meaning_zh": "补充表达：说明自己没有做某事的意愿。",
+      "examples": [
+        "我不想出去。",
+        "我不想吃饭。"
+      ]
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋要＋动词（＋宾语）",
+      "explanation": "表示主语想做、打算做或需要做某事。具体意思要根据上下文判断。",
+      "examples": [
+        {
+          "simplified": "我要喝水。",
+          "traditional": "我要喝水。",
+          "pinyin": "Wǒ yào hē shuǐ.",
+          "meaning": "我想喝水。"
+        },
+        {
+          "simplified": "她要去超市。",
+          "traditional": "她要去超市。",
+          "pinyin": "Tā yào qù chāoshì.",
+          "meaning": "她打算去超市。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋不要＋动词（＋宾语）",
+      "explanation": "可以表示自己不愿意做某事；在对别人说时，也可以表示劝阻或提醒。",
+      "examples": [
+        {
+          "simplified": "我不要喝咖啡。",
+          "traditional": "我不要喝咖啡。",
+          "pinyin": "Wǒ bú yào hē kāfēi.",
+          "meaning": "我不想喝咖啡。"
+        },
+        {
+          "simplified": "不要说话。",
+          "traditional": "不要說話。",
+          "pinyin": "Bú yào shuōhuà.",
+          "meaning": "请不要说话。"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋要不要＋动词（＋宾语）？",
+      "explanation": "正反问句，用来询问对方是否愿意做某事或提出邀请。",
+      "examples": [
+        {
+          "simplified": "你要不要吃水果？",
+          "traditional": "你要不要吃水果？",
+          "pinyin": "Nǐ yào bú yào chī shuǐguǒ?",
+          "meaning": "你想吃水果吗？"
+        },
+        {
+          "simplified": "你今天要不要去学校？",
+          "traditional": "你今天要不要去學校？",
+          "pinyin": "Nǐ jīntiān yào bú yào qù xuéxiào?",
+          "meaning": "你今天打算去学校吗？"
+        }
+      ]
+    },
+    {
+      "pattern": "主语＋时间＋要＋动词",
+      "explanation": "时间词可以放在主语之后、动词短语之前，说明计划发生的时间。",
+      "examples": [
+        {
+          "simplified": "我晚上要学习中文。",
+          "traditional": "我晚上要學習中文。",
+          "pinyin": "Wǒ wǎnshang yào xuéxí Zhōngwén.",
+          "meaning": "我晚上打算学习中文。"
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "朋友邀请喝咖啡",
+      "scene": "朋友见面时，一方向另一方提出饮料邀请。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你要不要喝咖啡？",
+          "traditional": "你要不要喝咖啡？",
+          "pinyin": "Nǐ yào bú yào hē kāfēi?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "好啊，我要喝咖啡。",
+          "traditional": "好啊，我要喝咖啡。",
+          "pinyin": "Hǎo a, wǒ yào hē kāfēi."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你要不要吃蛋糕？",
+          "traditional": "你要不要吃蛋糕？",
+          "pinyin": "Nǐ yào bú yào chī dàngāo?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "不用了，谢谢。我不要吃蛋糕。",
+          "traditional": "不用了，謝謝。我不要吃蛋糕。",
+          "pinyin": "Bú yòng le, xièxie. Wǒ bú yào chī dàngāo."
+        }
+      ]
+    },
+    {
+      "title": "今天的安排",
+      "scene": "两位朋友谈论当天的计划。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天要做什么？",
+          "traditional": "你今天要做什麼？",
+          "pinyin": "Nǐ jīntiān yào zuò shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我要工作，晚上要学习中文。",
+          "traditional": "我要工作，晚上要學習中文。",
+          "pinyin": "Wǒ yào gōngzuò, wǎnshang yào xuéxí Zhōngwén."
+        },
+        {
+          "speaker": "A",
+          "simplified": "晚上要不要一起吃饭？",
+          "traditional": "晚上要不要一起吃飯？",
+          "pinyin": "Wǎnshang yào bú yào yìqǐ chīfàn?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "好啊！",
+          "traditional": "好啊！",
+          "pinyin": "Hǎo a!"
+        }
+      ]
+    },
+    {
+      "title": "在家休息",
+      "scene": "家人讨论周末活动。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天要不要出去？",
+          "traditional": "你今天要不要出去？",
+          "pinyin": "Nǐ jīntiān yào bú yào chūqù?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我不要出去，我要在家休息。",
+          "traditional": "我不要出去，我要在家休息。",
+          "pinyin": "Wǒ bú yào chūqù, wǒ yào zài jiā xiūxi."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "看图说句子",
+      "type": "图片表达",
+      "instructions": "教师展示吃饭、喝水、看书、睡觉等图片，学生用“我要＋动词”或“我不要＋动词”表达。",
+      "expected_output": [
+        "我要吃饭。",
+        "我不要喝咖啡。"
+      ]
+    },
+    {
+      "activity": "肯定句与否定句转换",
+      "type": "句型转换",
+      "instructions": "教师给出“我要去学校”等句子，学生根据要求改成“不要”表达。",
+      "expected_output": [
+        "我要去学校。",
+        "我不要去学校。"
+      ]
+    },
+    {
+      "activity": "你要不要？",
+      "type": "同伴问答",
+      "instructions": "学生两人一组，轮流使用“你要不要＋动词／宾语？”提问，并用肯定或否定回答。",
+      "expected_output": [
+        "你要不要喝茶？",
+        "要，谢谢。",
+        "不要了，谢谢。"
+      ]
+    },
+    {
+      "activity": "生活情景选择",
+      "type": "情景表达",
+      "instructions": "教师设置餐厅、超市、家里和周末活动等情景，学生选择合适的表达。",
+      "expected_output": [
+        "我要买水果。",
+        "我不要吃这个。",
+        "你要不要一起去？"
+      ]
+    },
+    {
+      "activity": "我的今天",
+      "type": "个人表达",
+      "instructions": "学生说出今天要做的事情，以及一件今天不想做的事情。",
+      "expected_output": [
+        "我今天要工作。晚上我要学习中文。我不要看电视。"
+      ]
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "instructions": "主题：我的今天。学生需要使用本课句型介绍今天的安排，说出至少三件要做的事情、一件不要做的事情，并向同伴提出一个邀请。",
+    "expected_output": "我今天要工作。中午我要吃饭。晚上我要学习中文。我不要看电视。你要不要一起学习？"
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "教学重点是让学生在生活场景中使用“要”和“不要”，不要只进行机械句型替换。",
+    "“要”可以表达意愿、打算或需要，具体含义根据上下文理解；本课先重点练习意愿和计划。",
+    "“不要”既可以表达说话人不愿意做某事，也可以用于提醒或劝阻别人，注意通过语境区分。",
+    "“不要”读作bú yào，注意“不”在第四声“要”前发生变调。",
+    "“你要不要……”是本课重要的邀请和询问形式，应安排足够的口语互动。",
+    "“我不想……”作为自然表达补充介绍即可，不应取代本课的核心句型。",
+    "避免将“不要”简单解释为所有情况下都等于“不想”；劝阻语境中的“不要”具有不同交际功能。",
+    "词汇可以与学生已经学过的食物、饮料、地点和日常活动词汇结合使用。"
+  ],
+  "completion_criteria": [
+    "能够理解“要＋动词”并独立说出至少三个相关句子。",
+    "能够使用“不要＋动词”表达拒绝或不愿意做某事。",
+    "能够理解劝阻语境中的“不要＋动词”。",
+    "能够使用“你要不要＋动词？”提出邀请或询问。",
+    "能够对邀请作出简单、自然的肯定或否定回答。",
+    "能够完成“我的今天”综合表达任务。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Want to / Don't want to + Verb",
+      "learning_objectives": [
+        "Express intentions, plans or needs with 要 + verb.",
+        "Express refusal or prohibition with 不要 + verb.",
+        "Ask about someone's willingness using 要不要 + verb."
+      ],
+      "key_expressions": {
+        "我要……": "I want to ... / I am going to ...",
+        "我不要……": "I don't want to ...",
+        "你要不要……？": "Would you like to ...?",
+        "好啊！": "Sure!",
+        "不用了，谢谢。": "No, thank you."
+      },
+      "integrated_task": "My day"
+    },
+    "fr": {
+      "title": "Vouloir / ne pas vouloir + verbe",
+      "learning_objectives": [
+        "Exprimer une intention, un projet ou un besoin avec 要 + verbe.",
+        "Exprimer un refus ou une interdiction avec 不要 + verbe.",
+        "Demander si quelqu'un souhaite faire quelque chose avec 要不要 + verbe."
+      ],
+      "key_expressions": {
+        "我要……": "Je veux ... / Je vais ...",
+        "我不要……": "Je ne veux pas ...",
+        "你要不要……？": "Est-ce que tu veux ... ?",
+        "好啊！": "D'accord !",
+        "不用了，谢谢。": "Non merci."
+      },
+      "integrated_task": "Ma journée"
+    },
+    "de": {
+      "title": "Wollen / nicht wollen + Verb",
+      "learning_objectives": [
+        "Absichten, Pläne oder Bedürfnisse mit 要 + Verb ausdrücken.",
+        "Eine Ablehnung oder ein Verbot mit 不要 + Verb ausdrücken.",
+        "Mit 要不要 + Verb fragen, ob jemand etwas machen möchte."
+      ],
+      "key_expressions": {
+        "我要……": "Ich möchte ... / Ich werde ...",
+        "我不要……": "Ich möchte nicht ...",
+        "你要不要……？": "Möchtest du ...?",
+        "好啊！": "Gerne!",
+        "不用了，谢谢。": "Nein danke."
+      },
+      "integrated_task": "Mein Tag"
+    },
+    "es": {
+      "title": "Querer / no querer + verbo",
+      "learning_objectives": [
+        "Expresar intenciones, planes o necesidades con 要 + verbo.",
+        "Expresar rechazo o prohibición con 不要 + verbo.",
+        "Preguntar si alguien quiere hacer algo con 要不要 + verbo."
+      ],
+      "key_expressions": {
+        "我要……": "Quiero ... / Voy a ...",
+        "我不要……": "No quiero ...",
+        "你要不要……？": "¿Quieres ...?",
+        "好啊！": "¡Claro!",
+        "不用了，谢谢。": "No, gracias."
+      },
+      "integrated_task": "Mi día"
+    },
+    "it": {
+      "title": "Volere / non volere + verbo",
+      "learning_objectives": [
+        "Esprimere intenzioni, programmi o necessità con 要 + verbo.",
+        "Esprimere un rifiuto o un divieto con 不要 + verbo.",
+        "Chiedere se qualcuno vuole fare qualcosa con 要不要 + verbo."
+      ],
+      "key_expressions": {
+        "我要……": "Voglio ... / Ho intenzione di ...",
+        "我不要……": "Non voglio ...",
+        "你要不要……？": "Vuoi ...?",
+        "好啊！": "Volentieri!",
+        "不用了，谢谢。": "No, grazie."
+      },
+      "integrated_task": "La mia giornata"
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T17:05:51.686487+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "本课内容为初版课程建设成果，后续可结合实际教学反馈调整。"
   },
   "title_status": "confirmed"
 }

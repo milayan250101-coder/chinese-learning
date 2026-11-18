@@ -4,49 +4,673 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 27,
-  "learning_objectives": [],
+  "learning_objectives": [
+    "理解一个星期、每天、一个月等时间范围与次数表达的关系。",
+    "能够使用一次、两次、三次、几次表达动作发生的次数。",
+    "能够使用时间范围＋次数＋动词表达自己的生活习惯。",
+    "能够询问并回答别人一段时间内做某件事的次数。",
+    "能够结合真实生活介绍每周的学习、运动和休闲安排。"
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
-      "collocations": [],
+      "word_id": "CL-27-001",
+      "simplified": "星期",
+      "traditional": "星期",
+      "pinyin": "xīngqī",
+      "part_of_speech": "名词",
+      "definition_zh": "表示一周中的时间单位。",
+      "category": "时间",
+      "collocations": [
+        "一个星期",
+        "这个星期",
+        "下个星期"
+      ],
       "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-002",
+      "simplified": "周",
+      "traditional": "週",
+      "pinyin": "zhōu",
+      "part_of_speech": "名词",
+      "definition_zh": "表示一周的时间。",
+      "category": "时间",
+      "collocations": [
+        "一周",
+        "每周",
+        "这周"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-003",
+      "simplified": "每周",
+      "traditional": "每週",
+      "pinyin": "měi zhōu",
+      "part_of_speech": "时间词",
+      "definition_zh": "每一个星期。",
+      "category": "时间",
+      "collocations": [
+        "每周运动",
+        "每周上课",
+        "每周见面"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-004",
+      "simplified": "每个月",
+      "traditional": "每個月",
+      "pinyin": "měi ge yuè",
+      "part_of_speech": "时间词",
+      "definition_zh": "每一个月。",
+      "category": "时间",
+      "collocations": [
+        "每个月一次",
+        "每个月旅行"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-005",
+      "simplified": "一次",
+      "traditional": "一次",
+      "pinyin": "yí cì",
+      "part_of_speech": "数量短语",
+      "definition_zh": "表示动作发生一回。",
+      "category": "次数",
+      "collocations": [
+        "去一次",
+        "一次中文课",
+        "一次旅行"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-006",
+      "simplified": "两次",
+      "traditional": "兩次",
+      "pinyin": "liǎng cì",
+      "part_of_speech": "数量短语",
+      "definition_zh": "表示动作发生两回。",
+      "category": "次数",
+      "collocations": [
+        "两次运动",
+        "去两次",
+        "两次中文课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-007",
+      "simplified": "三次",
+      "traditional": "三次",
+      "pinyin": "sān cì",
+      "part_of_speech": "数量短语",
+      "definition_zh": "表示动作发生三回。",
+      "category": "次数",
+      "collocations": [
+        "三次练习",
+        "三次上课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-008",
+      "simplified": "几次",
+      "traditional": "幾次",
+      "pinyin": "jǐ cì",
+      "part_of_speech": "数量短语",
+      "definition_zh": "询问或表示不确定的次数。",
+      "category": "次数",
+      "collocations": [
+        "几次运动",
+        "去过几次",
+        "每周几次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-009",
+      "simplified": "多次",
+      "traditional": "多次",
+      "pinyin": "duō cì",
+      "part_of_speech": "数量短语",
+      "definition_zh": "表示不止一次，发生了很多回。",
+      "category": "次数",
+      "collocations": [
+        "多次练习",
+        "多次见面"
+      ],
+      "is_key_vocabulary": false
+    },
+    {
+      "word_id": "CL-27-010",
+      "simplified": "运动",
+      "traditional": "運動",
+      "pinyin": "yùn dòng",
+      "part_of_speech": "动词/名词",
+      "definition_zh": "通过身体活动锻炼身体。",
+      "category": "生活活动",
+      "collocations": [
+        "每周运动",
+        "做运动",
+        "喜欢运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-011",
+      "simplified": "上课",
+      "traditional": "上課",
+      "pinyin": "shàng kè",
+      "part_of_speech": "动词",
+      "definition_zh": "参加课程或课堂学习。",
+      "category": "学习",
+      "collocations": [
+        "每周上课",
+        "上中文课",
+        "上两次课"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-012",
+      "simplified": "练习",
+      "traditional": "練習",
+      "pinyin": "liàn xí",
+      "part_of_speech": "动词/名词",
+      "definition_zh": "通过反复做某件事提高能力。",
+      "category": "学习",
+      "collocations": [
+        "练习中文",
+        "每天练习",
+        "练习两次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-013",
+      "simplified": "游泳",
+      "traditional": "游泳",
+      "pinyin": "yóu yǒng",
+      "part_of_speech": "动词",
+      "definition_zh": "人在水中活动。",
+      "category": "运动",
+      "collocations": [
+        "去游泳",
+        "每周游泳",
+        "游泳两次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-014",
+      "simplified": "跑步",
+      "traditional": "跑步",
+      "pinyin": "pǎo bù",
+      "part_of_speech": "动词",
+      "definition_zh": "用跑的方式锻炼身体。",
+      "category": "运动",
+      "collocations": [
+        "每天跑步",
+        "每周跑步",
+        "跑步三次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-015",
+      "simplified": "打球",
+      "traditional": "打球",
+      "pinyin": "dǎ qiú",
+      "part_of_speech": "动词",
+      "definition_zh": "进行球类运动。",
+      "category": "运动",
+      "collocations": [
+        "和朋友打球",
+        "每周打球",
+        "打球一次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-016",
+      "simplified": "看电影",
+      "traditional": "看電影",
+      "pinyin": "kàn diàn yǐng",
+      "part_of_speech": "动词短语",
+      "definition_zh": "观看电影。",
+      "category": "休闲",
+      "collocations": [
+        "周末看电影",
+        "每月看电影",
+        "看两次电影"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-017",
+      "simplified": "去超市",
+      "traditional": "去超市",
+      "pinyin": "qù chāo shì",
+      "part_of_speech": "动词短语",
+      "definition_zh": "前往超市购物。",
+      "category": "生活活动",
+      "collocations": [
+        "每周去超市",
+        "去一次超市"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-018",
+      "simplified": "见面",
+      "traditional": "見面",
+      "pinyin": "jiàn miàn",
+      "part_of_speech": "动词",
+      "definition_zh": "和别人见到面。",
+      "category": "社交",
+      "collocations": [
+        "和朋友见面",
+        "每周见面",
+        "见面两次"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL-27-019",
+      "simplified": "通常",
+      "traditional": "通常",
+      "pinyin": "tōng cháng",
+      "part_of_speech": "副词",
+      "definition_zh": "表示一般情况下经常发生的情况。",
+      "category": "频率",
+      "collocations": [
+        "通常每周",
+        "通常运动",
+        "通常上课"
+      ],
+      "is_key_vocabulary": false
+    },
+    {
+      "word_id": "CL-27-020",
+      "simplified": "总共",
+      "traditional": "總共",
+      "pinyin": "zǒng gòng",
+      "part_of_speech": "副词",
+      "definition_zh": "表示把所有数量合在一起计算。",
+      "category": "数量",
+      "collocations": [
+        "一个星期总共",
+        "总共三次",
+        "总共上课两次"
+      ],
+      "is_key_vocabulary": false
     }
   ],
-  "core_expressions": [],
+  "core_expressions": [
+    {
+      "expression": "我每周运动两次。",
+      "pinyin": "Wǒ měi zhōu yùn dòng liǎng cì.",
+      "meaning_zh": "我一个星期运动两回。"
+    },
+    {
+      "expression": "你一个星期上几次中文课？",
+      "pinyin": "Nǐ yí ge xīngqī shàng jǐ cì Zhōngwén kè?",
+      "meaning_zh": "询问对方一周上中文课的次数。"
+    },
+    {
+      "expression": "我每周去一次超市。",
+      "pinyin": "Wǒ měi zhōu qù yí cì chāo shì.",
+      "meaning_zh": "我一个星期去超市一回。"
+    },
+    {
+      "expression": "她一个星期游泳三次。",
+      "pinyin": "Tā yí ge xīngqī yóu yǒng sān cì.",
+      "meaning_zh": "她一周游泳三回。"
+    },
+    {
+      "expression": "我一个月看两次电影。",
+      "pinyin": "Wǒ yí ge yuè kàn liǎng cì diàn yǐng.",
+      "meaning_zh": "我一个月看电影两回。"
+    },
+    {
+      "expression": "我通常每周练习三次中文。",
+      "pinyin": "Wǒ tōng cháng měi zhōu liàn xí sān cì Zhōngwén.",
+      "meaning_zh": "我一般一个星期练习三回中文。"
+    },
+    {
+      "expression": "你每周和朋友见几次面？",
+      "pinyin": "Nǐ měi zhōu hé péng you jiàn jǐ cì miàn?",
+      "meaning_zh": "询问对方每周和朋友见面的次数。"
+    },
+    {
+      "expression": "我们一个星期总共上两次课。",
+      "pinyin": "Wǒ men yí ge xīngqī zǒng gòng shàng liǎng cì kè.",
+      "meaning_zh": "我们一周一共上课两回。"
+    }
+  ],
   "sentence_patterns": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "pattern": "主语＋每周＋动词＋次数",
+      "explanation": "用来表达某人每个星期做某件事的次数。",
+      "examples": [
+        "我每周运动两次。",
+        "他每周跑步三次。"
+      ]
+    },
+    {
+      "pattern": "主语＋一个星期＋动词＋几次？",
+      "explanation": "用来询问一周内某个动作发生多少次。",
+      "examples": [
+        "你一个星期上几次课？",
+        "她一个星期去几次超市？"
+      ]
+    },
+    {
+      "pattern": "主语＋一个月＋动词＋次数",
+      "explanation": "把时间范围从一个星期扩展到一个月。",
+      "examples": [
+        "我一个月看两次电影。",
+        "他一个月去一次旅行。"
+      ]
+    },
+    {
+      "pattern": "主语＋通常＋每周＋动词＋次数",
+      "explanation": "在表达每周次数时加入通常，说明一般习惯。",
+      "examples": [
+        "我通常每周游泳两次。",
+        "她通常每周练习三次。"
+      ]
+    },
+    {
+      "pattern": "主语＋每周＋和＋某人＋动词＋次数",
+      "explanation": "表达与某人共同进行某项活动的次数。",
+      "examples": [
+        "我每周和朋友打球一次。",
+        "他每周和家人吃饭两次。"
+      ]
+    },
+    {
+      "pattern": "主语＋一个星期总共＋动词＋次数",
+      "explanation": "强调一周内合计发生的次数。",
+      "examples": [
+        "我一个星期总共上两次中文课。",
+        "我们一个星期总共见面三次。"
+      ]
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "dialogues": [
+    {
+      "title": "谈每周运动安排",
+      "scene": "两个朋友在聊天，谈论自己一周运动几次。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你每周运动几次？",
+          "traditional": "你每週運動幾次？",
+          "pinyin": "Nǐ měi zhōu yùn dòng jǐ cì?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我每周运动两次。",
+          "traditional": "我每週運動兩次。",
+          "pinyin": "Wǒ měi zhōu yùn dòng liǎng cì."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你每次都去游泳吗？",
+          "traditional": "你每次都去游泳嗎？",
+          "pinyin": "Nǐ měi cì dōu qù yóu yǒng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "不一定，有时候跑步，有时候游泳。",
+          "traditional": "不一定，有時候跑步，有時候游泳。",
+          "pinyin": "Bù yí dìng, yǒu shí hou pǎo bù, yǒu shí hou yóu yǒng."
+        }
+      ]
+    },
+    {
+      "title": "谈中文学习次数",
+      "scene": "学生和朋友谈论每周学习中文的安排。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你一个星期上几次中文课？",
+          "traditional": "你一個星期上幾次中文課？",
+          "pinyin": "Nǐ yí ge xīngqī shàng jǐ cì Zhōngwén kè?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我一个星期上两次课。",
+          "traditional": "我一個星期上兩次課。",
+          "pinyin": "Wǒ yí ge xīngqī shàng liǎng cì kè."
+        },
+        {
+          "speaker": "A",
+          "simplified": "那你每周练习几次中文？",
+          "traditional": "那你每週練習幾次中文？",
+          "pinyin": "Nà nǐ měi zhōu liàn xí jǐ cì Zhōngwén?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我通常练习三次。",
+          "traditional": "我通常練習三次。",
+          "pinyin": "Wǒ tōng cháng liàn xí sān cì."
+        }
+      ]
+    },
+    {
+      "title": "安排周末见面",
+      "scene": "两个朋友商量见面和休闲活动。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你每周和朋友见几次面？",
+          "traditional": "你每週和朋友見幾次面？",
+          "pinyin": "Nǐ měi zhōu hé péng you jiàn jǐ cì miàn?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我通常见面一次。",
+          "traditional": "我通常見面一次。",
+          "pinyin": "Wǒ tōng cháng jiàn miàn yí cì."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你们一起看电影吗？",
+          "traditional": "你們一起看電影嗎？",
+          "pinyin": "Nǐ men yì qǐ kàn diàn yǐng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "对，我们一个月看两次电影。",
+          "traditional": "對，我們一個月看兩次電影。",
+          "pinyin": "Duì, wǒ men yí ge yuè kàn liǎng cì diàn yǐng."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "次数与动词配对",
+      "type": "词汇搭配",
+      "instructions": "将一次、两次、三次分别与运动、上课、游泳、看电影等活动搭配，组成自然的短语。",
+      "expected_output": "例如：运动两次、上课三次、看电影一次。"
+    },
+    {
+      "activity": "听问题回答次数",
+      "type": "听说练习",
+      "instructions": "教师提问一个星期做某项活动几次，学生用完整句子回答。",
+      "expected_output": "例如：我每周游泳两次。"
+    },
+    {
+      "activity": "采访同学",
+      "type": "问答互动",
+      "instructions": "两人一组，互相询问每周上课、运动、练习中文和见朋友的次数。",
+      "expected_output": "能够提出至少三个次数问题，并记录同伴的回答。"
+    },
+    {
+      "activity": "我的一周安排",
+      "type": "口语表达",
+      "instructions": "选择三种真实的生活活动，使用每周和次数介绍自己的安排。",
+      "expected_output": "例如：我每周上两次中文课，运动三次，去一次超市。"
+    },
+    {
+      "activity": "每周次数小调查",
+      "type": "综合表达",
+      "instructions": "调查同学一周内做不同活动的次数，比较不同人的生活安排。",
+      "expected_output": "能够用完整句子介绍至少两个人的活动次数。"
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "title": "介绍我的每周生活安排",
+    "instructions": "介绍自己一个星期内的学习、运动和休闲活动。至少使用三个不同的动作和三种次数表达，并向同学提出一个关于每周活动次数的问题。",
+    "requirements": [
+      "至少使用三个不同的动词或动词短语。",
+      "至少使用一次、两次、三次或几次中的三种表达。",
+      "至少使用一个星期或每周表达时间范围。",
+      "能够提出并回答一个次数问题。"
+    ],
+    "sample": "我每周上两次中文课，练习三次中文。我每周运动两次，也去一次超市。你每周运动几次？"
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课重点是时间范围与动作次数的组合，不是重新学习全部频率副词。",
+    "重点区分时间范围和次数：每周说明时间范围，两次说明动作发生的数量。",
+    "中文中常用动词＋次数表达，例如运动两次、上课三次、去两次。",
+    "一次中的次是动作次数的量词，不要与一个、两个等一般数量表达混淆。",
+    "两次是自然表达，不要在初级教学中要求学生说二次。",
+    "询问次数时可以使用每周几次、一个星期几次等表达。",
+    "每周和一个星期在本课语境中都可以表示一周的时间范围。",
+    "区分每周运动两次与每天运动两次，避免把时间范围和次数混在一起。",
+    "总共用于强调合计数量；通常用于表达一般习惯，两者功能不同。",
+    "练习应尽量使用学生真实的学习、运动、购物和社交安排，不要求所有学生有相同生活习惯。"
+  ],
+  "completion_criteria": [
+    "能够理解每周、一个星期和每个月等时间范围表达。",
+    "能够正确使用一次、两次、三次和几次表达动作次数。",
+    "能够使用时间范围＋动词＋次数描述自己的生活安排。",
+    "能够询问别人一周内某项活动发生几次。",
+    "能够听懂并回答关于每周活动次数的简单问题。",
+    "能够完成介绍自己每周安排的综合表达任务。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Weekly Activities and How Many Times",
+      "learning_objectives": [
+        "Understand time periods such as a week, every week and every month.",
+        "Use once, twice, three times and how many times to describe frequency.",
+        "Describe weekly activities using a time period, an action and a number of times.",
+        "Ask and answer questions about how often someone does an activity.",
+        "Introduce personal study, exercise and leisure routines."
+      ],
+      "integrated_task": "Introduce your weekly routine, including study, exercise and leisure activities. Use at least three actions and three frequency expressions, and ask a classmate one question about their weekly activities.",
+      "key_expressions": {
+        "我每周运动两次。": "我一个星期运动两回。",
+        "你一个星期上几次中文课？": "询问对方一周上中文课的次数。",
+        "我每周去一次超市。": "我一个星期去超市一回。",
+        "她一个星期游泳三次。": "她一周游泳三回。",
+        "我一个月看两次电影。": "我一个月看电影两回。",
+        "我通常每周练习三次中文。": "我一般一个星期练习三回中文。",
+        "你每周和朋友见几次面？": "询问对方每周和朋友见面的次数。",
+        "我们一个星期总共上两次课。": "我们一周一共上课两回。"
+      }
+    },
+    "fr": {
+      "title": "Les activités de la semaine et le nombre de fois",
+      "learning_objectives": [
+        "Comprendre les périodes comme une semaine, chaque semaine et chaque mois.",
+        "Utiliser une fois, deux fois, trois fois et combien de fois.",
+        "Décrire ses activités hebdomadaires avec une période, une action et un nombre de fois.",
+        "Poser et répondre à des questions sur la fréquence des activités.",
+        "Présenter ses habitudes d'étude, de sport et de loisirs."
+      ],
+      "integrated_task": "Présentez votre semaine en parlant de vos études, de vos activités sportives et de vos loisirs. Utilisez au moins trois actions et trois expressions de fréquence, puis posez une question à un camarade.",
+      "key_expressions": {
+        "我每周运动两次。": "我一个星期运动两回。",
+        "你一个星期上几次中文课？": "询问对方一周上中文课的次数。",
+        "我每周去一次超市。": "我一个星期去超市一回。",
+        "她一个星期游泳三次。": "她一周游泳三回。",
+        "我一个月看两次电影。": "我一个月看电影两回。",
+        "我通常每周练习三次中文。": "我一般一个星期练习三回中文。",
+        "你每周和朋友见几次面？": "询问对方每周和朋友见面的次数。",
+        "我们一个星期总共上两次课。": "我们一周一共上课两回。"
+      }
+    },
+    "de": {
+      "title": "Wöchentliche Aktivitäten und wie oft",
+      "learning_objectives": [
+        "Zeitangaben wie eine Woche, jede Woche und jeden Monat verstehen.",
+        "Einmal, zweimal, dreimal und wie oft verwenden.",
+        "Wöchentliche Aktivitäten mit Zeitraum, Handlung und Anzahl beschreiben.",
+        "Nach der Häufigkeit von Aktivitäten fragen und darauf antworten.",
+        "Eigene Lern-, Sport- und Freizeitgewohnheiten vorstellen."
+      ],
+      "integrated_task": "Stelle deinen Wochenablauf mit Lernen, Sport und Freizeitaktivitäten vor. Verwende mindestens drei Tätigkeiten und drei Häufigkeitsangaben und stelle einem Mitschüler eine Frage zu seinen wöchentlichen Aktivitäten.",
+      "key_expressions": {
+        "我每周运动两次。": "我一个星期运动两回。",
+        "你一个星期上几次中文课？": "询问对方一周上中文课的次数。",
+        "我每周去一次超市。": "我一个星期去超市一回。",
+        "她一个星期游泳三次。": "她一周游泳三回。",
+        "我一个月看两次电影。": "我一个月看电影两回。",
+        "我通常每周练习三次中文。": "我一般一个星期练习三回中文。",
+        "你每周和朋友见几次面？": "询问对方每周和朋友见面的次数。",
+        "我们一个星期总共上两次课。": "我们一周一共上课两回。"
+      }
+    },
+    "es": {
+      "title": "Actividades semanales y cuántas veces",
+      "learning_objectives": [
+        "Comprender períodos como una semana, cada semana y cada mes.",
+        "Usar una vez, dos veces, tres veces y cuántas veces.",
+        "Describir actividades semanales con un período, una acción y un número de veces.",
+        "Preguntar y responder sobre la frecuencia de las actividades.",
+        "Presentar hábitos personales de estudio, deporte y ocio."
+      ],
+      "integrated_task": "Presenta tu rutina semanal e incluye actividades de estudio, deporte y ocio. Usa al menos tres acciones y tres expresiones de frecuencia, y haz una pregunta a un compañero sobre sus actividades semanales.",
+      "key_expressions": {
+        "我每周运动两次。": "我一个星期运动两回。",
+        "你一个星期上几次中文课？": "询问对方一周上中文课的次数。",
+        "我每周去一次超市。": "我一个星期去超市一回。",
+        "她一个星期游泳三次。": "她一周游泳三回。",
+        "我一个月看两次电影。": "我一个月看电影两回。",
+        "我通常每周练习三次中文。": "我一般一个星期练习三回中文。",
+        "你每周和朋友见几次面？": "询问对方每周和朋友见面的次数。",
+        "我们一个星期总共上两次课。": "我们一周一共上课两回。"
+      }
+    },
+    "it": {
+      "title": "Attività settimanali e quante volte",
+      "learning_objectives": [
+        "Comprendere periodi come una settimana, ogni settimana e ogni mese.",
+        "Usare una volta, due volte, tre volte e quante volte.",
+        "Descrivere le attività settimanali con un periodo, un'azione e un numero di volte.",
+        "Chiedere e rispondere sulla frequenza delle attività.",
+        "Presentare le proprie abitudini di studio, sport e tempo libero."
+      ],
+      "integrated_task": "Presenta la tua settimana parlando di studio, sport e tempo libero. Usa almeno tre azioni e tre espressioni di frequenza e fai a un compagno una domanda sulle sue attività settimanali.",
+      "key_expressions": {
+        "我每周运动两次。": "我一个星期运动两回。",
+        "你一个星期上几次中文课？": "询问对方一周上中文课的次数。",
+        "我每周去一次超市。": "我一个星期去超市一回。",
+        "她一个星期游泳三次。": "她一周游泳三回。",
+        "我一个月看两次电影。": "我一个月看电影两回。",
+        "我通常每周练习三次中文。": "我一般一个星期练习三回中文。",
+        "你每周和朋友见几次面？": "询问对方每周和朋友见面的次数。",
+        "我们一个星期总共上两次课。": "我们一周一共上课两回。"
+      }
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T18:56:34",
+    "version": 3,
+    "source": "CL-curriculum-framework",
+    "content_status": "draft",
+    "review_note": "首次内容写入，待检查次数表达、动词搭配、教学难度及五种语言翻译。"
   },
   "title_status": "confirmed"
 }

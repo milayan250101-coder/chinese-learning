@@ -1,0 +1,2943 @@
+{
+  "status": "audit_only_not_approved",
+  "unique_word_count": 511,
+  "one_character_entries": [
+    {
+      "word": "我",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "你",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "他",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "她",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "人",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "叫",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "岁",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "一",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "二",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "三",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "四",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "五",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "六",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "七",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "八",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "九",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "十",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "零",
+      "course": "CL-01",
+      "category": "core"
+    },
+    {
+      "word": "您",
+      "course": "CL-01",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "国",
+      "course": "CL-01",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "吃",
+      "course": "CL-02",
+      "category": "core"
+    },
+    {
+      "word": "喝",
+      "course": "CL-02",
+      "category": "core"
+    },
+    {
+      "word": "买",
+      "course": "CL-02",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-02",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-04",
+      "category": "core"
+    },
+    {
+      "word": "店",
+      "course": "CL-04",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "想",
+      "course": "CL-05",
+      "category": "core"
+    },
+    {
+      "word": "吃",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "喝",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "买",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "去",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "看",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "做",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "玩",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "读",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "写",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "听",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "说",
+      "course": "CL-05",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "要",
+      "course": "CL-06",
+      "category": "core"
+    },
+    {
+      "word": "吃",
+      "course": "CL-06",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "喝",
+      "course": "CL-06",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "买",
+      "course": "CL-06",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "去",
+      "course": "CL-06",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "看",
+      "course": "CL-06",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "做",
+      "course": "CL-06",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "在",
+      "course": "CL-08",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-08",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-08",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "去",
+      "course": "CL-09",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-09",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-09",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "买",
+      "course": "CL-09",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "吃",
+      "course": "CL-09",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "和",
+      "course": "CL-10",
+      "category": "core"
+    },
+    {
+      "word": "也",
+      "course": "CL-10",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "还",
+      "course": "CL-10",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "都",
+      "course": "CL-10",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "会",
+      "course": "CL-11",
+      "category": "core"
+    },
+    {
+      "word": "能",
+      "course": "CL-11",
+      "category": "core"
+    },
+    {
+      "word": "想",
+      "course": "CL-11",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "要",
+      "course": "CL-11",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "忙",
+      "course": "CL-12",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-12",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "小",
+      "course": "CL-12",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "多",
+      "course": "CL-12",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "少",
+      "course": "CL-12",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "好",
+      "course": "CL-12",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "冷",
+      "course": "CL-12",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "热",
+      "course": "CL-12",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "都",
+      "course": "CL-13",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "也",
+      "course": "CL-13",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "还",
+      "course": "CL-13",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "再",
+      "course": "CL-13",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "菜",
+      "course": "CL-14",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "水",
+      "course": "CL-15",
+      "category": "core"
+    },
+    {
+      "word": "茶",
+      "course": "CL-15",
+      "category": "core"
+    },
+    {
+      "word": "书",
+      "course": "CL-16",
+      "category": "core"
+    },
+    {
+      "word": "包",
+      "course": "CL-16",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "钱",
+      "course": "CL-16",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "菜",
+      "course": "CL-21",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "水",
+      "course": "CL-22",
+      "category": "core"
+    },
+    {
+      "word": "茶",
+      "course": "CL-22",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "吃",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "喝",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "玩",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "买",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "听",
+      "course": "CL-23",
+      "category": "core"
+    },
+    {
+      "word": "第",
+      "course": "CL-24",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-24",
+      "category": "core"
+    },
+    {
+      "word": "学",
+      "course": "CL-24",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-24",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-26",
+      "category": "core"
+    },
+    {
+      "word": "听",
+      "course": "CL-26",
+      "category": "core"
+    },
+    {
+      "word": "唱",
+      "course": "CL-26",
+      "category": "core"
+    },
+    {
+      "word": "玩",
+      "course": "CL-26",
+      "category": "core"
+    },
+    {
+      "word": "歌",
+      "course": "CL-26",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "书",
+      "course": "CL-26",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "天",
+      "course": "CL-27",
+      "category": "core"
+    },
+    {
+      "word": "次",
+      "course": "CL-27",
+      "category": "core"
+    },
+    {
+      "word": "一",
+      "course": "CL-27",
+      "category": "core"
+    },
+    {
+      "word": "两",
+      "course": "CL-27",
+      "category": "core"
+    },
+    {
+      "word": "几",
+      "course": "CL-27",
+      "category": "core"
+    },
+    {
+      "word": "半",
+      "course": "CL-29",
+      "category": "core"
+    },
+    {
+      "word": "次",
+      "course": "CL-30",
+      "category": "core"
+    },
+    {
+      "word": "再",
+      "course": "CL-30",
+      "category": "core"
+    },
+    {
+      "word": "还",
+      "course": "CL-30",
+      "category": "core"
+    },
+    {
+      "word": "上",
+      "course": "CL-31",
+      "category": "core"
+    },
+    {
+      "word": "下",
+      "course": "CL-31",
+      "category": "core"
+    },
+    {
+      "word": "里",
+      "course": "CL-31",
+      "category": "core"
+    },
+    {
+      "word": "外",
+      "course": "CL-31",
+      "category": "core"
+    },
+    {
+      "word": "前",
+      "course": "CL-31",
+      "category": "core"
+    },
+    {
+      "word": "后",
+      "course": "CL-31",
+      "category": "core"
+    },
+    {
+      "word": "边",
+      "course": "CL-31",
+      "category": "core"
+    },
+    {
+      "word": "在",
+      "course": "CL-32",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-32",
+      "category": "core"
+    },
+    {
+      "word": "回",
+      "course": "CL-32",
+      "category": "core"
+    },
+    {
+      "word": "来",
+      "course": "CL-32",
+      "category": "core"
+    },
+    {
+      "word": "到",
+      "course": "CL-32",
+      "category": "core"
+    },
+    {
+      "word": "住",
+      "course": "CL-32",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-32",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "是",
+      "course": "CL-33",
+      "category": "core"
+    },
+    {
+      "word": "的",
+      "course": "CL-33",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-33",
+      "category": "core"
+    },
+    {
+      "word": "来",
+      "course": "CL-33",
+      "category": "core"
+    },
+    {
+      "word": "回",
+      "course": "CL-33",
+      "category": "core"
+    },
+    {
+      "word": "买",
+      "course": "CL-33",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-33",
+      "category": "core"
+    },
+    {
+      "word": "谁",
+      "course": "CL-34",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-34",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "来",
+      "course": "CL-34",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "回",
+      "course": "CL-34",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "做",
+      "course": "CL-34",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "是",
+      "course": "CL-35",
+      "category": "core"
+    },
+    {
+      "word": "的",
+      "course": "CL-35",
+      "category": "core"
+    },
+    {
+      "word": "谁",
+      "course": "CL-35",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "我",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "你",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "他",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "人",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "吃",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "喝",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "买",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "想",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "要",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "在",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "是",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "的",
+      "course": "CL-36",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-37",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-37",
+      "category": "core"
+    },
+    {
+      "word": "长",
+      "course": "CL-37",
+      "category": "core"
+    },
+    {
+      "word": "短",
+      "course": "CL-37",
+      "category": "core"
+    },
+    {
+      "word": "多",
+      "course": "CL-37",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "少",
+      "course": "CL-37",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "新",
+      "course": "CL-37",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "旧",
+      "course": "CL-37",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "高",
+      "course": "CL-38",
+      "category": "core"
+    },
+    {
+      "word": "矮",
+      "course": "CL-38",
+      "category": "core"
+    },
+    {
+      "word": "胖",
+      "course": "CL-38",
+      "category": "core"
+    },
+    {
+      "word": "瘦",
+      "course": "CL-38",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-38",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "小",
+      "course": "CL-38",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "年",
+      "course": "CL-39",
+      "category": "core"
+    },
+    {
+      "word": "岁",
+      "course": "CL-39",
+      "category": "core"
+    },
+    {
+      "word": "新",
+      "course": "CL-39",
+      "category": "core"
+    },
+    {
+      "word": "老",
+      "course": "CL-39",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "几",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "个",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "些",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "两",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "百",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "千",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "元",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "块",
+      "course": "CL-40",
+      "category": "core"
+    },
+    {
+      "word": "冷",
+      "course": "CL-41",
+      "category": "core"
+    },
+    {
+      "word": "热",
+      "course": "CL-41",
+      "category": "core"
+    },
+    {
+      "word": "好",
+      "course": "CL-42",
+      "category": "core"
+    },
+    {
+      "word": "坏",
+      "course": "CL-42",
+      "category": "core"
+    },
+    {
+      "word": "很",
+      "course": "CL-42",
+      "category": "core"
+    },
+    {
+      "word": "太",
+      "course": "CL-42",
+      "category": "core"
+    },
+    {
+      "word": "白",
+      "course": "CL-43",
+      "category": "core"
+    },
+    {
+      "word": "黑",
+      "course": "CL-43",
+      "category": "core"
+    },
+    {
+      "word": "红",
+      "course": "CL-43",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "黄",
+      "course": "CL-43",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "蓝",
+      "course": "CL-43",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "绿",
+      "course": "CL-43",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "贵",
+      "course": "CL-44",
+      "category": "core"
+    },
+    {
+      "word": "钱",
+      "course": "CL-44",
+      "category": "core"
+    },
+    {
+      "word": "元",
+      "course": "CL-44",
+      "category": "core"
+    },
+    {
+      "word": "块",
+      "course": "CL-44",
+      "category": "core"
+    },
+    {
+      "word": "买",
+      "course": "CL-44",
+      "category": "core"
+    },
+    {
+      "word": "卖",
+      "course": "CL-44",
+      "category": "core"
+    },
+    {
+      "word": "难",
+      "course": "CL-45",
+      "category": "core"
+    },
+    {
+      "word": "写",
+      "course": "CL-45",
+      "category": "core"
+    },
+    {
+      "word": "读",
+      "course": "CL-45",
+      "category": "core"
+    },
+    {
+      "word": "听",
+      "course": "CL-45",
+      "category": "core"
+    },
+    {
+      "word": "说",
+      "course": "CL-45",
+      "category": "core"
+    },
+    {
+      "word": "会",
+      "course": "CL-45",
+      "category": "core"
+    },
+    {
+      "word": "能",
+      "course": "CL-45",
+      "category": "core"
+    },
+    {
+      "word": "快",
+      "course": "CL-46",
+      "category": "core"
+    },
+    {
+      "word": "早",
+      "course": "CL-46",
+      "category": "core"
+    },
+    {
+      "word": "晚",
+      "course": "CL-46",
+      "category": "core"
+    },
+    {
+      "word": "慢",
+      "course": "CL-46",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "爱",
+      "course": "CL-47",
+      "category": "core"
+    },
+    {
+      "word": "忙",
+      "course": "CL-47",
+      "category": "core"
+    },
+    {
+      "word": "累",
+      "course": "CL-47",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "病",
+      "course": "CL-48",
+      "category": "core"
+    },
+    {
+      "word": "冷",
+      "course": "CL-48",
+      "category": "core"
+    },
+    {
+      "word": "热",
+      "course": "CL-48",
+      "category": "core"
+    },
+    {
+      "word": "疼",
+      "course": "CL-48",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "忙",
+      "course": "CL-49",
+      "category": "core"
+    },
+    {
+      "word": "好",
+      "course": "CL-49",
+      "category": "core"
+    },
+    {
+      "word": "菜",
+      "course": "CL-50",
+      "category": "core"
+    },
+    {
+      "word": "甜",
+      "course": "CL-50",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "酸",
+      "course": "CL-50",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "苦",
+      "course": "CL-50",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "辣",
+      "course": "CL-50",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "咸",
+      "course": "CL-50",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "比",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "高",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "长",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "新",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "旧",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "贵",
+      "course": "CL-51",
+      "category": "core"
+    },
+    {
+      "word": "快",
+      "course": "CL-51",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "慢",
+      "course": "CL-51",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "不",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "比",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "好",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "坏",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "快",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "慢",
+      "course": "CL-52",
+      "category": "core"
+    },
+    {
+      "word": "更",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "最",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "很",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "太",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "好",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "高",
+      "course": "CL-53",
+      "category": "core"
+    },
+    {
+      "word": "和",
+      "course": "CL-54",
+      "category": "core"
+    },
+    {
+      "word": "也",
+      "course": "CL-54",
+      "category": "core"
+    },
+    {
+      "word": "都",
+      "course": "CL-54",
+      "category": "core"
+    },
+    {
+      "word": "冷",
+      "course": "CL-55",
+      "category": "core"
+    },
+    {
+      "word": "热",
+      "course": "CL-55",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-55",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-55",
+      "category": "core"
+    },
+    {
+      "word": "好",
+      "course": "CL-55",
+      "category": "core"
+    },
+    {
+      "word": "忙",
+      "course": "CL-55",
+      "category": "core"
+    },
+    {
+      "word": "哪",
+      "course": "CL-56",
+      "category": "core"
+    },
+    {
+      "word": "好",
+      "course": "CL-56",
+      "category": "core"
+    },
+    {
+      "word": "坏",
+      "course": "CL-56",
+      "category": "core"
+    },
+    {
+      "word": "贵",
+      "course": "CL-56",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-56",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-56",
+      "category": "core"
+    },
+    {
+      "word": "人",
+      "course": "CL-57",
+      "category": "core"
+    },
+    {
+      "word": "岁",
+      "course": "CL-57",
+      "category": "core"
+    },
+    {
+      "word": "高",
+      "course": "CL-57",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "矮",
+      "course": "CL-57",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "忙",
+      "course": "CL-57",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "新",
+      "course": "CL-58",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-58",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-58",
+      "category": "core"
+    },
+    {
+      "word": "贵",
+      "course": "CL-58",
+      "category": "core"
+    },
+    {
+      "word": "好",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "坏",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "高",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "长",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "短",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "快",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "慢",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "贵",
+      "course": "CL-59",
+      "category": "core"
+    },
+    {
+      "word": "路",
+      "course": "CL-62",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-62",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-63",
+      "category": "core"
+    },
+    {
+      "word": "楼",
+      "course": "CL-63",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "层",
+      "course": "CL-63",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "我",
+      "course": "CL-65",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-65",
+      "category": "core"
+    },
+    {
+      "word": "住",
+      "course": "CL-65",
+      "category": "core"
+    },
+    {
+      "word": "在",
+      "course": "CL-65",
+      "category": "core"
+    },
+    {
+      "word": "远",
+      "course": "CL-66",
+      "category": "core"
+    },
+    {
+      "word": "近",
+      "course": "CL-66",
+      "category": "core"
+    },
+    {
+      "word": "从",
+      "course": "CL-66",
+      "category": "core"
+    },
+    {
+      "word": "到",
+      "course": "CL-66",
+      "category": "core"
+    },
+    {
+      "word": "车",
+      "course": "CL-67",
+      "category": "core"
+    },
+    {
+      "word": "船",
+      "course": "CL-67",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "路",
+      "course": "CL-68",
+      "category": "core"
+    },
+    {
+      "word": "左",
+      "course": "CL-68",
+      "category": "core"
+    },
+    {
+      "word": "右",
+      "course": "CL-68",
+      "category": "core"
+    },
+    {
+      "word": "前",
+      "course": "CL-68",
+      "category": "core"
+    },
+    {
+      "word": "后",
+      "course": "CL-68",
+      "category": "core"
+    },
+    {
+      "word": "直",
+      "course": "CL-68",
+      "category": "core"
+    },
+    {
+      "word": "到",
+      "course": "CL-68",
+      "category": "core"
+    },
+    {
+      "word": "拐",
+      "course": "CL-68",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "早",
+      "course": "CL-69",
+      "category": "core"
+    },
+    {
+      "word": "晚",
+      "course": "CL-69",
+      "category": "core"
+    },
+    {
+      "word": "快",
+      "course": "CL-69",
+      "category": "core"
+    },
+    {
+      "word": "慢",
+      "course": "CL-69",
+      "category": "core"
+    },
+    {
+      "word": "花",
+      "course": "CL-69",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "去",
+      "course": "CL-70",
+      "category": "core"
+    },
+    {
+      "word": "来",
+      "course": "CL-70",
+      "category": "core"
+    },
+    {
+      "word": "回",
+      "course": "CL-70",
+      "category": "core"
+    },
+    {
+      "word": "到",
+      "course": "CL-70",
+      "category": "core"
+    },
+    {
+      "word": "达",
+      "course": "CL-70",
+      "category": "core"
+    },
+    {
+      "word": "坐",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "车",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "来",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "回",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "到",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "走",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "路",
+      "course": "CL-71",
+      "category": "core"
+    },
+    {
+      "word": "门",
+      "course": "CL-72",
+      "category": "core"
+    },
+    {
+      "word": "楼",
+      "course": "CL-72",
+      "category": "core"
+    },
+    {
+      "word": "墙",
+      "course": "CL-72",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "床",
+      "course": "CL-74",
+      "category": "core"
+    },
+    {
+      "word": "水",
+      "course": "CL-76",
+      "category": "core"
+    },
+    {
+      "word": "碗",
+      "course": "CL-76",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "刀",
+      "course": "CL-76",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "水",
+      "course": "CL-77",
+      "category": "core"
+    },
+    {
+      "word": "在",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "上",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "下",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "里",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "外",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "前",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "后",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "左",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "右",
+      "course": "CL-78",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-79",
+      "category": "core"
+    },
+    {
+      "word": "猫",
+      "course": "CL-80",
+      "category": "core"
+    },
+    {
+      "word": "狗",
+      "course": "CL-80",
+      "category": "core"
+    },
+    {
+      "word": "鸟",
+      "course": "CL-80",
+      "category": "core"
+    },
+    {
+      "word": "鱼",
+      "course": "CL-80",
+      "category": "core"
+    },
+    {
+      "word": "马",
+      "course": "CL-80",
+      "category": "core"
+    },
+    {
+      "word": "牛",
+      "course": "CL-80",
+      "category": "core"
+    },
+    {
+      "word": "羊",
+      "course": "CL-80",
+      "category": "core"
+    },
+    {
+      "word": "猫",
+      "course": "CL-81",
+      "category": "core"
+    },
+    {
+      "word": "狗",
+      "course": "CL-81",
+      "category": "core"
+    },
+    {
+      "word": "鸟",
+      "course": "CL-81",
+      "category": "core"
+    },
+    {
+      "word": "鱼",
+      "course": "CL-81",
+      "category": "core"
+    },
+    {
+      "word": "马",
+      "course": "CL-81",
+      "category": "core"
+    },
+    {
+      "word": "牛",
+      "course": "CL-81",
+      "category": "core"
+    },
+    {
+      "word": "羊",
+      "course": "CL-81",
+      "category": "core"
+    },
+    {
+      "word": "熊",
+      "course": "CL-81",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "大",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "长",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "短",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "高",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "矮",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "快",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "慢",
+      "course": "CL-82",
+      "category": "core"
+    },
+    {
+      "word": "毛",
+      "course": "CL-82",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "鼠",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "牛",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "虎",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "兔",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "龙",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "蛇",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "马",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "羊",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "猴",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "鸡",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "狗",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "猪",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "属",
+      "course": "CL-83",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "爱",
+      "course": "CL-84",
+      "category": "core"
+    },
+    {
+      "word": "猫",
+      "course": "CL-84",
+      "category": "core"
+    },
+    {
+      "word": "狗",
+      "course": "CL-84",
+      "category": "core"
+    },
+    {
+      "word": "玩",
+      "course": "CL-85",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-85",
+      "category": "core"
+    },
+    {
+      "word": "听",
+      "course": "CL-85",
+      "category": "core"
+    },
+    {
+      "word": "唱",
+      "course": "CL-85",
+      "category": "core"
+    },
+    {
+      "word": "跳",
+      "course": "CL-85",
+      "category": "core"
+    },
+    {
+      "word": "歌",
+      "course": "CL-86",
+      "category": "core"
+    },
+    {
+      "word": "唱",
+      "course": "CL-86",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-86",
+      "category": "core"
+    },
+    {
+      "word": "听",
+      "course": "CL-86",
+      "category": "core"
+    },
+    {
+      "word": "去",
+      "course": "CL-88",
+      "category": "core"
+    },
+    {
+      "word": "来",
+      "course": "CL-88",
+      "category": "core"
+    },
+    {
+      "word": "回",
+      "course": "CL-88",
+      "category": "core"
+    },
+    {
+      "word": "走",
+      "course": "CL-88",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-88",
+      "category": "core"
+    },
+    {
+      "word": "玩",
+      "course": "CL-88",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-89",
+      "category": "core"
+    },
+    {
+      "word": "写",
+      "course": "CL-89",
+      "category": "core"
+    },
+    {
+      "word": "画",
+      "course": "CL-89",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-89",
+      "category": "core"
+    },
+    {
+      "word": "我",
+      "course": "CL-90",
+      "category": "core"
+    },
+    {
+      "word": "爱",
+      "course": "CL-90",
+      "category": "core"
+    },
+    {
+      "word": "洗",
+      "course": "CL-91",
+      "category": "core"
+    },
+    {
+      "word": "脸",
+      "course": "CL-91",
+      "category": "core"
+    },
+    {
+      "word": "吃",
+      "course": "CL-92",
+      "category": "core"
+    },
+    {
+      "word": "喝",
+      "course": "CL-92",
+      "category": "core"
+    },
+    {
+      "word": "粥",
+      "course": "CL-92",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "去",
+      "course": "CL-93",
+      "category": "core"
+    },
+    {
+      "word": "写",
+      "course": "CL-94",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-94",
+      "category": "core"
+    },
+    {
+      "word": "读",
+      "course": "CL-94",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-94",
+      "category": "core"
+    },
+    {
+      "word": "吃",
+      "course": "CL-95",
+      "category": "core"
+    },
+    {
+      "word": "饭",
+      "course": "CL-95",
+      "category": "core"
+    },
+    {
+      "word": "回",
+      "course": "CL-96",
+      "category": "core"
+    },
+    {
+      "word": "来",
+      "course": "CL-96",
+      "category": "core"
+    },
+    {
+      "word": "走",
+      "course": "CL-96",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-97",
+      "category": "core"
+    },
+    {
+      "word": "做",
+      "course": "CL-101",
+      "category": "core"
+    },
+    {
+      "word": "写",
+      "course": "CL-101",
+      "category": "core"
+    },
+    {
+      "word": "看",
+      "course": "CL-101",
+      "category": "core"
+    },
+    {
+      "word": "说",
+      "course": "CL-101",
+      "category": "core"
+    },
+    {
+      "word": "说",
+      "course": "CL-103",
+      "category": "core"
+    },
+    {
+      "word": "讲",
+      "course": "CL-103",
+      "category": "core"
+    },
+    {
+      "word": "问",
+      "course": "CL-103",
+      "category": "core"
+    },
+    {
+      "word": "想",
+      "course": "CL-104",
+      "category": "core"
+    },
+    {
+      "word": "要",
+      "course": "CL-104",
+      "category": "core"
+    },
+    {
+      "word": "买",
+      "course": "CL-105",
+      "category": "core"
+    },
+    {
+      "word": "卖",
+      "course": "CL-105",
+      "category": "core"
+    },
+    {
+      "word": "钱",
+      "course": "CL-105",
+      "category": "core"
+    },
+    {
+      "word": "鞋",
+      "course": "CL-106",
+      "category": "core"
+    },
+    {
+      "word": "穿",
+      "course": "CL-106",
+      "category": "core"
+    },
+    {
+      "word": "新",
+      "course": "CL-106",
+      "category": "core"
+    },
+    {
+      "word": "大",
+      "course": "CL-106",
+      "category": "core"
+    },
+    {
+      "word": "小",
+      "course": "CL-106",
+      "category": "core"
+    },
+    {
+      "word": "病",
+      "course": "CL-107",
+      "category": "core"
+    },
+    {
+      "word": "药",
+      "course": "CL-107",
+      "category": "core"
+    },
+    {
+      "word": "冷",
+      "course": "CL-108",
+      "category": "core"
+    },
+    {
+      "word": "热",
+      "course": "CL-108",
+      "category": "core"
+    },
+    {
+      "word": "年",
+      "course": "CL-109",
+      "category": "core"
+    },
+    {
+      "word": "月",
+      "course": "CL-109",
+      "category": "core"
+    },
+    {
+      "word": "日",
+      "course": "CL-109",
+      "category": "core"
+    },
+    {
+      "word": "家",
+      "course": "CL-111",
+      "category": "core"
+    },
+    {
+      "word": "菜",
+      "course": "CL-112",
+      "category": "core"
+    },
+    {
+      "word": "水",
+      "course": "CL-112",
+      "category": "core"
+    },
+    {
+      "word": "茶",
+      "course": "CL-112",
+      "category": "core"
+    }
+  ],
+  "extension_candidates": [
+    {
+      "word": "每天",
+      "course": "CL-13",
+      "category": "core"
+    },
+    {
+      "word": "法国",
+      "course": "CL-18",
+      "category": "core"
+    },
+    {
+      "word": "德国",
+      "course": "CL-18",
+      "category": "core"
+    },
+    {
+      "word": "英国",
+      "course": "CL-18",
+      "category": "core"
+    },
+    {
+      "word": "美国",
+      "course": "CL-18",
+      "category": "core"
+    },
+    {
+      "word": "日本",
+      "course": "CL-18",
+      "category": "core"
+    },
+    {
+      "word": "北京",
+      "course": "CL-19",
+      "category": "core"
+    },
+    {
+      "word": "上海",
+      "course": "CL-19",
+      "category": "core"
+    },
+    {
+      "word": "广州",
+      "course": "CL-19",
+      "category": "core"
+    },
+    {
+      "word": "深圳",
+      "course": "CL-19",
+      "category": "core"
+    },
+    {
+      "word": "西安",
+      "course": "CL-19",
+      "category": "core"
+    },
+    {
+      "word": "成都",
+      "course": "CL-19",
+      "category": "core"
+    },
+    {
+      "word": "北京",
+      "course": "CL-20",
+      "category": "core"
+    },
+    {
+      "word": "巴黎",
+      "course": "CL-20",
+      "category": "core"
+    },
+    {
+      "word": "伦敦",
+      "course": "CL-20",
+      "category": "core"
+    },
+    {
+      "word": "柏林",
+      "course": "CL-20",
+      "category": "core"
+    },
+    {
+      "word": "东京",
+      "course": "CL-20",
+      "category": "core"
+    },
+    {
+      "word": "罗马",
+      "course": "CL-20",
+      "category": "core"
+    },
+    {
+      "word": "一次",
+      "course": "CL-24",
+      "category": "core"
+    },
+    {
+      "word": "什么时候",
+      "course": "CL-25",
+      "category": "core"
+    },
+    {
+      "word": "每天",
+      "course": "CL-27",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "唱歌",
+      "course": "CL-28",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "吃饭",
+      "course": "CL-29",
+      "category": "core"
+    },
+    {
+      "word": "每天",
+      "course": "CL-30",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "下雪",
+      "course": "CL-41",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "绿",
+      "course": "CL-43",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "不一样",
+      "course": "CL-54",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "越来越",
+      "course": "CL-55",
+      "category": "core"
+    },
+    {
+      "word": "北京",
+      "course": "CL-60",
+      "category": "core"
+    },
+    {
+      "word": "上海",
+      "course": "CL-60",
+      "category": "core"
+    },
+    {
+      "word": "广州",
+      "course": "CL-60",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "深圳",
+      "course": "CL-60",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "成都",
+      "course": "CL-60",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "西安",
+      "course": "CL-60",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "巴黎",
+      "course": "CL-60",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "伦敦",
+      "course": "CL-60",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "公共汽车",
+      "course": "CL-67",
+      "category": "core"
+    },
+    {
+      "word": "达",
+      "course": "CL-70",
+      "category": "core"
+    },
+    {
+      "word": "屋顶",
+      "course": "CL-72",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "鼠",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "虎",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "兔",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "猴",
+      "course": "CL-83",
+      "category": "core"
+    },
+    {
+      "word": "打球",
+      "course": "CL-87",
+      "category": "core"
+    },
+    {
+      "word": "刷牙",
+      "course": "CL-91",
+      "category": "core"
+    },
+    {
+      "word": "坐车",
+      "course": "CL-93",
+      "category": "core"
+    },
+    {
+      "word": "通勤",
+      "course": "CL-93",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "回家",
+      "course": "CL-96",
+      "category": "core"
+    },
+    {
+      "word": "吃饭",
+      "course": "CL-97",
+      "category": "core"
+    },
+    {
+      "word": "睡前",
+      "course": "CL-97",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "一天",
+      "course": "CL-98",
+      "category": "core"
+    },
+    {
+      "word": "班次",
+      "course": "CL-102",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "下雪",
+      "course": "CL-108",
+      "category": "core"
+    },
+    {
+      "word": "洗衣服",
+      "course": "CL-111",
+      "category": "core"
+    },
+    {
+      "word": "吃饭",
+      "course": "CL-112",
+      "category": "core"
+    },
+    {
+      "word": "面条",
+      "course": "CL-112",
+      "category": "core"
+    },
+    {
+      "word": "点菜",
+      "course": "CL-112",
+      "category": "extension_candidate"
+    },
+    {
+      "word": "服务员",
+      "course": "CL-112",
+      "category": "extension_candidate"
+    }
+  ],
+  "first_learning_relation_errors": [],
+  "hsk_source_errors": [],
+  "category_conflicts": {
+    "学生": [
+      "core",
+      "extension_candidate"
+    ],
+    "老师": [
+      "core",
+      "extension_candidate"
+    ],
+    "朋友": [
+      "core",
+      "extension_candidate"
+    ],
+    "中国": [
+      "core",
+      "extension_candidate"
+    ],
+    "家人": [
+      "core",
+      "extension_candidate"
+    ],
+    "妈妈": [
+      "core",
+      "extension_candidate"
+    ],
+    "爸爸": [
+      "core",
+      "extension_candidate"
+    ],
+    "吃": [
+      "core",
+      "extension_candidate"
+    ],
+    "喝": [
+      "core",
+      "extension_candidate"
+    ],
+    "买": [
+      "core",
+      "extension_candidate"
+    ],
+    "去": [
+      "core",
+      "extension_candidate"
+    ],
+    "今天": [
+      "core",
+      "extension_candidate"
+    ],
+    "去年": [
+      "core",
+      "extension_candidate"
+    ],
+    "今年": [
+      "core",
+      "extension_candidate"
+    ],
+    "早上": [
+      "core",
+      "extension_candidate"
+    ],
+    "上午": [
+      "core",
+      "extension_candidate"
+    ],
+    "中午": [
+      "core",
+      "extension_candidate"
+    ],
+    "下午": [
+      "core",
+      "extension_candidate"
+    ],
+    "晚上": [
+      "core",
+      "extension_candidate"
+    ],
+    "家": [
+      "core",
+      "extension_candidate"
+    ],
+    "学校": [
+      "core",
+      "extension_candidate"
+    ],
+    "医院": [
+      "core",
+      "extension_candidate"
+    ],
+    "公司": [
+      "core",
+      "extension_candidate"
+    ],
+    "商店": [
+      "core",
+      "extension_candidate"
+    ],
+    "饭店": [
+      "core",
+      "extension_candidate"
+    ],
+    "书店": [
+      "core",
+      "extension_candidate"
+    ],
+    "超市": [
+      "core",
+      "extension_candidate"
+    ],
+    "房间": [
+      "core",
+      "extension_candidate"
+    ],
+    "想": [
+      "core",
+      "extension_candidate"
+    ],
+    "看": [
+      "core",
+      "extension_candidate"
+    ],
+    "做": [
+      "core",
+      "extension_candidate"
+    ],
+    "学习": [
+      "core",
+      "extension_candidate"
+    ],
+    "玩": [
+      "core",
+      "extension_candidate"
+    ],
+    "读": [
+      "core",
+      "extension_candidate"
+    ],
+    "写": [
+      "core",
+      "extension_candidate"
+    ],
+    "听": [
+      "core",
+      "extension_candidate"
+    ],
+    "说": [
+      "core",
+      "extension_candidate"
+    ],
+    "要": [
+      "core",
+      "extension_candidate"
+    ],
+    "不要": [
+      "core",
+      "extension_candidate"
+    ],
+    "怎么": [
+      "core",
+      "extension_candidate"
+    ],
+    "哪里": [
+      "core",
+      "extension_candidate"
+    ],
+    "工作": [
+      "core",
+      "extension_candidate"
+    ],
+    "也": [
+      "core",
+      "extension_candidate"
+    ],
+    "还": [
+      "core",
+      "extension_candidate"
+    ],
+    "都": [
+      "core",
+      "extension_candidate"
+    ],
+    "喜欢": [
+      "core",
+      "extension_candidate"
+    ],
+    "觉得": [
+      "core",
+      "extension_candidate"
+    ],
+    "忙": [
+      "core",
+      "extension_candidate"
+    ],
+    "大": [
+      "core",
+      "extension_candidate"
+    ],
+    "小": [
+      "core",
+      "extension_candidate"
+    ],
+    "好": [
+      "core",
+      "extension_candidate"
+    ],
+    "冷": [
+      "core",
+      "extension_candidate"
+    ],
+    "热": [
+      "core",
+      "extension_candidate"
+    ],
+    "常常": [
+      "core",
+      "extension_candidate"
+    ],
+    "每天": [
+      "core",
+      "extension_candidate"
+    ],
+    "再": [
+      "core",
+      "extension_candidate"
+    ],
+    "有时": [
+      "core",
+      "extension_candidate"
+    ],
+    "菜": [
+      "core",
+      "extension_candidate"
+    ],
+    "水果": [
+      "core",
+      "extension_candidate"
+    ],
+    "苹果": [
+      "core",
+      "extension_candidate"
+    ],
+    "电视": [
+      "core",
+      "extension_candidate"
+    ],
+    "书": [
+      "core",
+      "extension_candidate"
+    ],
+    "衣服": [
+      "core",
+      "extension_candidate"
+    ],
+    "杯子": [
+      "core",
+      "extension_candidate"
+    ],
+    "电话": [
+      "core",
+      "extension_candidate"
+    ],
+    "钱": [
+      "core",
+      "extension_candidate"
+    ],
+    "银行": [
+      "core",
+      "extension_candidate"
+    ],
+    "车站": [
+      "core",
+      "extension_candidate"
+    ],
+    "广州": [
+      "core",
+      "extension_candidate"
+    ],
+    "深圳": [
+      "core",
+      "extension_candidate"
+    ],
+    "西安": [
+      "core",
+      "extension_candidate"
+    ],
+    "成都": [
+      "core",
+      "extension_candidate"
+    ],
+    "巴黎": [
+      "core",
+      "extension_candidate"
+    ],
+    "伦敦": [
+      "core",
+      "extension_candidate"
+    ],
+    "以后": [
+      "core",
+      "extension_candidate"
+    ],
+    "时间": [
+      "core",
+      "extension_candidate"
+    ],
+    "电影": [
+      "core",
+      "extension_candidate"
+    ],
+    "歌": [
+      "core",
+      "extension_candidate"
+    ],
+    "休息": [
+      "core",
+      "extension_candidate"
+    ],
+    "这里": [
+      "core",
+      "extension_candidate"
+    ],
+    "那里": [
+      "core",
+      "extension_candidate"
+    ],
+    "回": [
+      "core",
+      "extension_candidate"
+    ],
+    "来": [
+      "core",
+      "extension_candidate"
+    ],
+    "地方": [
+      "core",
+      "extension_candidate"
+    ],
+    "谁": [
+      "core",
+      "extension_candidate"
+    ],
+    "新": [
+      "core",
+      "extension_candidate"
+    ],
+    "旧": [
+      "core",
+      "extension_candidate"
+    ],
+    "高": [
+      "core",
+      "extension_candidate"
+    ],
+    "矮": [
+      "core",
+      "extension_candidate"
+    ],
+    "漂亮": [
+      "core",
+      "extension_candidate"
+    ],
+    "好看": [
+      "core",
+      "extension_candidate"
+    ],
+    "下雨": [
+      "core",
+      "extension_candidate"
+    ],
+    "下雪": [
+      "core",
+      "extension_candidate"
+    ],
+    "价格": [
+      "core",
+      "extension_candidate"
+    ],
+    "快": [
+      "core",
+      "extension_candidate"
+    ],
+    "慢": [
+      "core",
+      "extension_candidate"
+    ],
+    "身体": [
+      "core",
+      "extension_candidate"
+    ],
+    "城市": [
+      "core",
+      "extension_candidate"
+    ],
+    "楼": [
+      "core",
+      "extension_candidate"
+    ],
+    "环境": [
+      "core",
+      "extension_candidate"
+    ],
+    "方便": [
+      "core",
+      "extension_candidate"
+    ],
+    "地铁": [
+      "core",
+      "extension_candidate"
+    ],
+    "卫生间": [
+      "core",
+      "extension_candidate"
+    ],
+    "动物": [
+      "core",
+      "extension_candidate"
+    ]
+  }
+}

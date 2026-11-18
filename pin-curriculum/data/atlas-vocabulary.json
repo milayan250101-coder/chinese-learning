@@ -1,1 +1,1995 @@
-[]
+[
+  {
+    "atlasId": "PTA-P02-001",
+    "hanzi": "阿姨",
+    "originalPinyin": "ā yí",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 2,
+      "scene": "单韵母场景（a, o, e, i, u, ü / y, w）"
+    },
+    "translations": {
+      "zh": "阿姨",
+      "en": "aunt",
+      "de": "Tante",
+      "fr": "tante",
+      "es": "tía",
+      "it": "zia"
+    },
+    "courseReferences": [
+      "PIN-CORE-VOWEL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P02-002",
+    "hanzi": "乌鸦",
+    "originalPinyin": "wū yā",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 2,
+      "scene": "单韵母场景（a, o, e, i, u, ü / y, w）"
+    },
+    "translations": {
+      "zh": "乌鸦",
+      "en": "crow",
+      "de": "Krähe",
+      "fr": "corneille",
+      "es": "cuervo",
+      "it": "cornacchia"
+    },
+    "courseReferences": [
+      "PIN-CORE-VOWEL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P02-003",
+    "hanzi": "下雨 / 雨",
+    "originalPinyin": "xià yǔ",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 2,
+      "scene": "单韵母场景（a, o, e, i, u, ü / y, w）"
+    },
+    "translations": {
+      "zh": "下雨 / 雨",
+      "en": "rain / it rains",
+      "de": "regnen / Regen",
+      "fr": "pleuvoir / pluie",
+      "es": "llover / lluvia",
+      "it": "piovere / pioggia"
+    },
+    "courseReferences": [
+      "PIN-CORE-VOWEL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P02-004",
+    "hanzi": "五",
+    "originalPinyin": "wǔ",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 2,
+      "scene": "单韵母场景（a, o, e, i, u, ü / y, w）"
+    },
+    "translations": {
+      "zh": "五",
+      "en": "five",
+      "de": "fünf",
+      "fr": "cinq",
+      "es": "cinco",
+      "it": "cinque"
+    },
+    "courseReferences": [
+      "PIN-CORE-VOWEL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P02-005",
+    "hanzi": "青蛙",
+    "originalPinyin": "qīng wā",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 2,
+      "scene": "单韵母场景（a, o, e, i, u, ü / y, w）"
+    },
+    "translations": {
+      "zh": "青蛙",
+      "en": "frog",
+      "de": "Frosch",
+      "fr": "grenouille",
+      "es": "rana",
+      "it": "rana"
+    },
+    "courseReferences": [
+      "PIN-CORE-VOWEL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "拼音知识点超纲：包含后鼻韵母ing（qīng），对单韵母入门阶段有一定语音干扰"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P02-006",
+    "hanzi": "意大利",
+    "originalPinyin": "yì dà lì",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 2,
+      "scene": "单韵母场景（a, o, e, i, u, ü / y, w）"
+    },
+    "translations": {
+      "zh": "意大利",
+      "en": "Italy",
+      "de": "Italien",
+      "fr": "Italie",
+      "es": "Italia",
+      "it": "Italia"
+    },
+    "courseReferences": [
+      "PIN-CORE-VOWEL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P02-007",
+    "hanzi": "握手",
+    "originalPinyin": "wò shǒu",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 2,
+      "scene": "单韵母场景（a, o, e, i, u, ü / y, w）"
+    },
+    "translations": {
+      "zh": "握手",
+      "en": "shake hands",
+      "de": "Hände schütteln",
+      "fr": "serrer la main",
+      "es": "apretón de manos",
+      "it": "stretta di mano"
+    },
+    "courseReferences": [
+      "PIN-CORE-VOWEL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "拼音知识点超纲：包含复韵母ou和翘舌音sh（shǒu），超出纯单韵母范围"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P03-008",
+    "hanzi": "爸爸",
+    "originalPinyin": "bà ba",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 3,
+      "scene": "声母 b, p, m, f 客厅场景"
+    },
+    "translations": {
+      "zh": "爸爸",
+      "en": "dad / papa",
+      "de": "Papa",
+      "fr": "papa",
+      "es": "papá",
+      "it": "papà"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P03-009",
+    "hanzi": "妈妈",
+    "originalPinyin": "mā ma",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 3,
+      "scene": "声母 b, p, m, f 客厅场景"
+    },
+    "translations": {
+      "zh": "妈妈",
+      "en": "mom / mama",
+      "de": "Mama",
+      "fr": "maman",
+      "es": "mamá",
+      "it": "mamma"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P03-010",
+    "hanzi": "菠萝",
+    "originalPinyin": "bō luó",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 3,
+      "scene": "声母 b, p, m, f 客厅场景"
+    },
+    "translations": {
+      "zh": "菠萝",
+      "en": "pineapple",
+      "de": "Ananas",
+      "fr": "ananas",
+      "es": "piña",
+      "it": "ananas"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P03-011",
+    "hanzi": "沙发",
+    "originalPinyin": "shā fā",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 3,
+      "scene": "声母 b, p, m, f 客厅场景"
+    },
+    "translations": {
+      "zh": "沙发",
+      "en": "sofa / couch",
+      "de": "Sofa",
+      "fr": "canapé",
+      "es": "sofá",
+      "it": "divano"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P03-012",
+    "hanzi": "大佛",
+    "originalPinyin": "dà fó",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 3,
+      "scene": "声母 b, p, m, f 客厅场景"
+    },
+    "translations": {
+      "zh": "大佛",
+      "en": "big Buddha",
+      "de": "großer Buddha",
+      "fr": "grand Bouddha",
+      "es": "gran Buda",
+      "it": "grande Buddha"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P03-013",
+    "hanzi": "婆婆",
+    "originalPinyin": "pó po",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 3,
+      "scene": "声母 b, p, m, f 客厅场景"
+    },
+    "translations": {
+      "zh": "婆婆",
+      "en": "grandma / mother-in-law",
+      "de": "Schwiegermutter / Oma",
+      "fr": "belle-mère / grand-mère",
+      "es": "suegra / abuela",
+      "it": "suocera / nonna"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P03-014",
+    "hanzi": "木马",
+    "originalPinyin": "mù mǎ",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 3,
+      "scene": "声母 b, p, m, f 客厅场景"
+    },
+    "translations": {
+      "zh": "木马",
+      "en": "wooden horse / hobbyhorse",
+      "de": "Schaukelpferd",
+      "fr": "cheval à bascule",
+      "es": "caballito de madera",
+      "it": "cavallo a dondolo"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P04-015",
+    "hanzi": "弟弟",
+    "originalPinyin": "dì di",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 4,
+      "scene": "声母 d, t, n, l 街景场景"
+    },
+    "translations": {
+      "zh": "弟弟",
+      "en": "younger brother",
+      "de": "jüngerer Bruder",
+      "fr": "petit frère",
+      "es": "hermano menor",
+      "it": "fratello minore"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P04-016",
+    "hanzi": "大肚子",
+    "originalPinyin": "dà dù zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 4,
+      "scene": "声母 d, t, n, l 街景场景"
+    },
+    "translations": {
+      "zh": "大肚子",
+      "en": "big belly",
+      "de": "großer Bauch",
+      "fr": "gros ventre",
+      "es": "barriga grande",
+      "it": "panciuto / gran pancia"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P04-017",
+    "hanzi": "打鼓",
+    "originalPinyin": "dǎ gǔ",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 4,
+      "scene": "声母 d, t, n, l 街景场景"
+    },
+    "translations": {
+      "zh": "打鼓",
+      "en": "play the drum",
+      "de": "Trommel spielen",
+      "fr": "jouer du tambour",
+      "es": "tocar el tambor",
+      "it": "suonare il tamburo"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P04-018",
+    "hanzi": "马路",
+    "originalPinyin": "mǎ lù",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 4,
+      "scene": "声母 d, t, n, l 街景场景"
+    },
+    "translations": {
+      "zh": "马路",
+      "en": "road / street",
+      "de": "Straße",
+      "fr": "route / rue",
+      "es": "calle / carretera",
+      "it": "strada"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P04-019",
+    "hanzi": "你好",
+    "originalPinyin": "nǐ hǎo",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 4,
+      "scene": "声母 d, t, n, l 街景场景"
+    },
+    "translations": {
+      "zh": "你好",
+      "en": "hello / hi",
+      "de": "Hallo",
+      "fr": "bonjour",
+      "es": "hola",
+      "it": "ciao"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P05-020",
+    "hanzi": "哥哥",
+    "originalPinyin": "gē ge",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 5,
+      "scene": "声母 g, k, h 夜市美食街场景"
+    },
+    "translations": {
+      "zh": "哥哥",
+      "en": "older brother",
+      "de": "älterer Bruder",
+      "fr": "grand frère",
+      "es": "hermano mayor",
+      "it": "fratello maggiore"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P05-021",
+    "hanzi": "火锅",
+    "originalPinyin": "huǒ guō",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 5,
+      "scene": "声母 g, k, h 夜市美食街场景"
+    },
+    "translations": {
+      "zh": "火锅",
+      "en": "hot pot",
+      "de": "Hotpot (chinesischer Feuertopf)",
+      "fr": "fondue chinoise (hot pot)",
+      "es": "olla china (hot pot)",
+      "it": "hot pot (pentola cinese)"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "语音结构提示：包含介母u的三拼音节（guō），对纯声母入门阶段有一定难度"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P05-022",
+    "hanzi": "咖喱",
+    "originalPinyin": "gā lí",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 5,
+      "scene": "声母 g, k, h 夜市美食街场景"
+    },
+    "translations": {
+      "zh": "咖喱",
+      "en": "curry",
+      "de": "Curry",
+      "fr": "curry",
+      "es": "curry",
+      "it": "curry"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P05-023",
+    "hanzi": "咖啡",
+    "originalPinyin": "kā fēi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 5,
+      "scene": "声母 g, k, h 夜市美食街场景"
+    },
+    "translations": {
+      "zh": "咖啡",
+      "en": "coffee",
+      "de": "Kaffee",
+      "fr": "café",
+      "es": "café",
+      "it": "caffè"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P05-024",
+    "hanzi": "哈哈哈哈",
+    "originalPinyin": "hā hā hā hā",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 5,
+      "scene": "声母 g, k, h 夜市美食街场景"
+    },
+    "translations": {
+      "zh": "哈哈哈哈",
+      "en": "ha ha ha ha",
+      "de": "hahaha",
+      "fr": "hahaha",
+      "es": "jajaja",
+      "it": "ahahaha"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "词性标注提示：属于拟声叠词，建议在教学中作为趣味拓展处理"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P05-025",
+    "hanzi": "华为",
+    "originalPinyin": "huá wéi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 5,
+      "scene": "声母 g, k, h 夜市美食街场景"
+    },
+    "translations": {
+      "zh": "华为",
+      "en": "Huawei",
+      "de": "Huawei",
+      "fr": "Huawei",
+      "es": "Huawei",
+      "it": "Huawei"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "词性标注提示：属于品牌专有名词，通用基础词汇代表性弱于日常高频词"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P05-026",
+    "hanzi": "可乐",
+    "originalPinyin": "kě lè",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 5,
+      "scene": "声母 g, k, h 夜市美食街场景"
+    },
+    "translations": {
+      "zh": "可乐",
+      "en": "cola",
+      "de": "Cola",
+      "fr": "cola",
+      "es": "cola",
+      "it": "cola"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P06-027",
+    "hanzi": "飞机",
+    "originalPinyin": "fēi jī",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 6,
+      "scene": "声母 j, q, x 田野农场场景"
+    },
+    "translations": {
+      "zh": "飞机",
+      "en": "plane / airplane",
+      "de": "Flugzeug",
+      "fr": "avion",
+      "es": "avión",
+      "it": "aereo"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P06-028",
+    "hanzi": "母鸡",
+    "originalPinyin": "mǔ jī",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 6,
+      "scene": "声母 j, q, x 田野农场场景"
+    },
+    "translations": {
+      "zh": "母鸡",
+      "en": "hen",
+      "de": "Henne",
+      "fr": "poule",
+      "es": "gallina",
+      "it": "gallina"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P06-029",
+    "hanzi": "骑马",
+    "originalPinyin": "qí mǎ",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 6,
+      "scene": "声母 j, q, x 田野农场场景"
+    },
+    "translations": {
+      "zh": "骑马",
+      "en": "ride a horse",
+      "de": "reiten",
+      "fr": "faire du cheval",
+      "es": "montar a caballo",
+      "it": "andare a cavallo"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P06-030",
+    "hanzi": "西瓜",
+    "originalPinyin": "xī guā",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 6,
+      "scene": "声母 j, q, x 田野农场场景"
+    },
+    "translations": {
+      "zh": "西瓜",
+      "en": "watermelon",
+      "de": "Wassermelone",
+      "fr": "pastèque",
+      "es": "sandía",
+      "it": "anguria"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P06-031",
+    "hanzi": "橘子",
+    "originalPinyin": "jú zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 6,
+      "scene": "声母 j, q, x 田野农场场景"
+    },
+    "translations": {
+      "zh": "橘子",
+      "en": "orange",
+      "de": "Mandarine / Orange",
+      "fr": "mandarine",
+      "es": "mandarina",
+      "it": "mandarino"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P06-032",
+    "hanzi": "汽车",
+    "originalPinyin": "qì chē",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 6,
+      "scene": "声母 j, q, x 田野农场场景"
+    },
+    "translations": {
+      "zh": "汽车",
+      "en": "car",
+      "de": "Auto",
+      "fr": "voiture",
+      "es": "coche",
+      "it": "macchina / auto"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P07-033",
+    "hanzi": "竹子",
+    "originalPinyin": "zhú zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 7,
+      "scene": "翘舌音声母 zh, ch, sh, r 傍晚荒野场景"
+    },
+    "translations": {
+      "zh": "竹子",
+      "en": "bamboo",
+      "de": "Bambus",
+      "fr": "bambou",
+      "es": "bambú",
+      "it": "bambù"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P07-034",
+    "hanzi": "狮子",
+    "originalPinyin": "shī zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 7,
+      "scene": "翘舌音声母 zh, ch, sh, r 傍晚荒野场景"
+    },
+    "translations": {
+      "zh": "狮子",
+      "en": "lion",
+      "de": "Löwe",
+      "fr": "lion",
+      "es": "león",
+      "it": "leone"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P07-035",
+    "hanzi": "蜘蛛",
+    "originalPinyin": "zhī zhū",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 7,
+      "scene": "翘舌音声母 zh, ch, sh, r 傍晚荒野场景"
+    },
+    "translations": {
+      "zh": "蜘蛛",
+      "en": "spider",
+      "de": "Spinne",
+      "fr": "araignée",
+      "es": "araña",
+      "it": "ragno"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P07-036",
+    "hanzi": "喝茶",
+    "originalPinyin": "hē chá",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 7,
+      "scene": "翘舌音声母 zh, ch, sh, r 傍晚荒野场景"
+    },
+    "translations": {
+      "zh": "喝茶",
+      "en": "drink tea",
+      "de": "Tee trinken",
+      "fr": "boire du thé",
+      "es": "beber té",
+      "it": "bere il tè"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P07-037",
+    "hanzi": "日落",
+    "originalPinyin": "rì luò",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 7,
+      "scene": "翘舌音声母 zh, ch, sh, r 傍晚荒野场景"
+    },
+    "translations": {
+      "zh": "日落",
+      "en": "sunset",
+      "de": "Sonnenuntergang",
+      "fr": "coucher de soleil",
+      "es": "puesta de sol",
+      "it": "tramonto"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P07-038",
+    "hanzi": "树",
+    "originalPinyin": "shù",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 7,
+      "scene": "翘舌音声母 zh, ch, sh, r 傍晚荒野场景"
+    },
+    "translations": {
+      "zh": "树",
+      "en": "tree",
+      "de": "Baum",
+      "fr": "arbre",
+      "es": "árbol",
+      "it": "albero"
+    },
+    "courseReferences": [
+      "PIN-CORE-INITIAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P08-039",
+    "hanzi": "大海",
+    "originalPinyin": "dà hǎi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 8,
+      "scene": "复韵母 ai, ei, ui 海滩场景"
+    },
+    "translations": {
+      "zh": "大海",
+      "en": "sea / ocean",
+      "de": "Meer / Ozean",
+      "fr": "mer / océan",
+      "es": "mar / océano",
+      "it": "mare / oceano"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P08-040",
+    "hanzi": "大白菜",
+    "originalPinyin": "dà bái cài",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 8,
+      "scene": "复韵母 ai, ei, ui 海滩场景"
+    },
+    "translations": {
+      "zh": "大白菜",
+      "en": "Chinese cabbage",
+      "de": "Chinakohl",
+      "fr": "chou chinois",
+      "es": "col china",
+      "it": "cavolo cinese"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "场景契合提示：出现在海滩场景中逻辑较跳跃，建议核对PPTX插图"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P08-041",
+    "hanzi": "妹妹",
+    "originalPinyin": "mèi mei",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 8,
+      "scene": "复韵母 ai, ei, ui 海滩场景"
+    },
+    "translations": {
+      "zh": "妹妹",
+      "en": "younger sister",
+      "de": "jüngere Schwester",
+      "fr": "petite sœur",
+      "es": "hermana menor",
+      "it": "sorella minore"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P08-042",
+    "hanzi": "很累",
+    "originalPinyin": "hěn lèi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 8,
+      "scene": "复韵母 ai, ei, ui 海滩场景"
+    },
+    "translations": {
+      "zh": "很累",
+      "en": "very tired",
+      "de": "sehr müde",
+      "fr": "très fatigué",
+      "es": "muy cansado",
+      "it": "molto stanco"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P08-043",
+    "hanzi": "杯子",
+    "originalPinyin": "bēi zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 8,
+      "scene": "复韵母 ai, ei, ui 海滩场景"
+    },
+    "translations": {
+      "zh": "杯子",
+      "en": "cup",
+      "de": "Tasse / Becher",
+      "fr": "tasse / gobelet",
+      "es": "taza / vaso",
+      "it": "tazza / bicchiere"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P08-044",
+    "hanzi": "乌龟排队",
+    "originalPinyin": "wū guī pái duì",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 8,
+      "scene": "复韵母 ai, ei, ui 海滩场景"
+    },
+    "translations": {
+      "zh": "乌龟排队",
+      "en": "turtles lining up",
+      "de": "Schildkröten stehen Schlange",
+      "fr": "tortues qui font la queue",
+      "es": "tortugas haciendo fila",
+      "it": "tartarughe in fila"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P08-045",
+    "hanzi": "睡觉",
+    "originalPinyin": "shuì jiào",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 8,
+      "scene": "复韵母 ai, ei, ui 海滩场景"
+    },
+    "translations": {
+      "zh": "睡觉",
+      "en": "sleep",
+      "de": "schlafen",
+      "fr": "dormir",
+      "es": "dormir",
+      "it": "dormire"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-046",
+    "hanzi": "小猫",
+    "originalPinyin": "xiǎo māo",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "小猫",
+      "en": "kitten / little cat",
+      "de": "Kätzchen",
+      "fr": "chaton",
+      "es": "gatito",
+      "it": "gattino"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-047",
+    "hanzi": "帽子",
+    "originalPinyin": "mào zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "帽子",
+      "en": "hat",
+      "de": "Hut",
+      "fr": "chapeau",
+      "es": "sombrero",
+      "it": "cappello"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-048",
+    "hanzi": "草莓",
+    "originalPinyin": "cǎo méi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "草莓",
+      "en": "strawberry",
+      "de": "Erdbeere",
+      "fr": "fraise",
+      "es": "fresa",
+      "it": "fragola"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-049",
+    "hanzi": "大狗",
+    "originalPinyin": "dà gǒu",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "大狗",
+      "en": "big dog",
+      "de": "großer Hund",
+      "fr": "grand chien",
+      "es": "perro grande",
+      "it": "cane grosso"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-050",
+    "hanzi": "猴子",
+    "originalPinyin": "hóu zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "猴子",
+      "en": "monkey",
+      "de": "Affe",
+      "fr": "singe",
+      "es": "mono",
+      "it": "scimmia"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-051",
+    "hanzi": "土豆",
+    "originalPinyin": "tǔ dòu",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "土豆",
+      "en": "potato",
+      "de": "Kartoffel",
+      "fr": "pomme de terre",
+      "es": "patata",
+      "it": "patata"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-052",
+    "hanzi": "气球",
+    "originalPinyin": "qì qiú",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "气球",
+      "en": "balloon",
+      "de": "Luftballon",
+      "fr": "ballon de baudruche",
+      "es": "globo",
+      "it": "palloncino"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-053",
+    "hanzi": "足球",
+    "originalPinyin": "zú qiú",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "足球",
+      "en": "football / soccer",
+      "de": "Fußball",
+      "fr": "football",
+      "es": "fútbol",
+      "it": "calcio"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-054",
+    "hanzi": "奶牛",
+    "originalPinyin": "nǎi niú",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "奶牛",
+      "en": "cow / dairy cow",
+      "de": "Milchkühe",
+      "fr": "vache laitière",
+      "es": "vaca lechera",
+      "it": "mucca da latte"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P09-055",
+    "hanzi": "牛奶",
+    "originalPinyin": "niú nǎi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 9,
+      "scene": "复韵母 ao, ou, iu 庭院动物场景"
+    },
+    "translations": {
+      "zh": "牛奶",
+      "en": "milk",
+      "de": "Milch",
+      "fr": "lait",
+      "es": "leche",
+      "it": "latte"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P10-056",
+    "hanzi": "大街",
+    "originalPinyin": "dà jiē",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 10,
+      "scene": "复韵母 ie, üe, er 雪夜小镇场景"
+    },
+    "translations": {
+      "zh": "大街",
+      "en": "main street",
+      "de": "Hauptstraße",
+      "fr": "grande rue",
+      "es": "calle principal",
+      "it": "strada principale"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P10-057",
+    "hanzi": "月牙",
+    "originalPinyin": "yuè yá",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 10,
+      "scene": "复韵母 ie, üe, er 雪夜小镇场景"
+    },
+    "translations": {
+      "zh": "月牙",
+      "en": "crescent moon",
+      "de": "Mondsichel",
+      "fr": "croissant de lune",
+      "es": "luna creciente",
+      "it": "falce di luna"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P10-058",
+    "hanzi": "雪花",
+    "originalPinyin": "xuě huā",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 10,
+      "scene": "复韵母 ie, üe, er 雪夜小镇场景"
+    },
+    "translations": {
+      "zh": "雪花",
+      "en": "snowflake",
+      "de": "Schneeflocke",
+      "fr": "flocon de neige",
+      "es": "copo de nieve",
+      "it": "fiocco di neve"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P10-059",
+    "hanzi": "孔雀",
+    "originalPinyin": "kǒng què",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 10,
+      "scene": "复韵母 ie, üe, er 雪夜小镇场景"
+    },
+    "translations": {
+      "zh": "孔雀",
+      "en": "peacock",
+      "de": "Pfau",
+      "fr": "paon",
+      "es": "pavo real",
+      "it": "pavone"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P10-060",
+    "hanzi": "儿子",
+    "originalPinyin": "ér zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 10,
+      "scene": "复韵母 ie, üe, er 雪夜小镇场景"
+    },
+    "translations": {
+      "zh": "儿子",
+      "en": "son",
+      "de": "Sohn",
+      "fr": "fils",
+      "es": "hijo",
+      "it": "figlio"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P10-061",
+    "hanzi": "耳朵",
+    "originalPinyin": "ěr duo",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 10,
+      "scene": "复韵母 ie, üe, er 雪夜小镇场景"
+    },
+    "translations": {
+      "zh": "耳朵",
+      "en": "ear",
+      "de": "Ohr",
+      "fr": "oreille",
+      "es": "oreja",
+      "it": "orecchio"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P10-062",
+    "hanzi": "二十",
+    "originalPinyin": "èr shí",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 10,
+      "scene": "复韵母 ie, üe, er 雪夜小镇场景"
+    },
+    "translations": {
+      "zh": "二十",
+      "en": "twenty",
+      "de": "zwanzig",
+      "fr": "vingt",
+      "es": "veinte",
+      "it": "venti"
+    },
+    "courseReferences": [
+      "PIN-CORE-FINAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P11-063",
+    "hanzi": "端盘子",
+    "originalPinyin": "duān pán zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 11,
+      "scene": "前鼻韵母 an, en, in, un, ün 餐厅厨房场景"
+    },
+    "translations": {
+      "zh": "端盘子",
+      "en": "carry plates",
+      "de": "Teller tragen",
+      "fr": "porter des assiettes",
+      "es": "llevar platos",
+      "it": "portare i piatti"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P11-064",
+    "hanzi": "米饭",
+    "originalPinyin": "mǐ fàn",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 11,
+      "scene": "前鼻韵母 an, en, in, un, ün 餐厅厨房场景"
+    },
+    "translations": {
+      "zh": "米饭",
+      "en": "rice",
+      "de": "gekochter Reis",
+      "fr": "riz cuit",
+      "es": "arroz cocido",
+      "it": "riso cotto"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P11-065",
+    "hanzi": "软面包",
+    "originalPinyin": "ruǎn miàn bāo",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 11,
+      "scene": "前鼻韵母 an, en, in, un, ün 餐厅厨房场景"
+    },
+    "translations": {
+      "zh": "软面包",
+      "en": "soft bread",
+      "de": "weiches Brot",
+      "fr": "pain mou",
+      "es": "pan blando",
+      "it": "pane morbido"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P11-066",
+    "hanzi": "剪刀",
+    "originalPinyin": "jiǎn dāo",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 11,
+      "scene": "前鼻韵母 an, en, in, un, ün 餐厅厨房场景"
+    },
+    "translations": {
+      "zh": "剪刀",
+      "en": "scissors",
+      "de": "Schere",
+      "fr": "ciseaux",
+      "es": "tijeras",
+      "it": "forbici"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P11-067",
+    "hanzi": "眼睛",
+    "originalPinyin": "yǎn jing",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 11,
+      "scene": "前鼻韵母 an, en, in, un, ün 餐厅厨房场景"
+    },
+    "translations": {
+      "zh": "眼睛",
+      "en": "eye",
+      "de": "Auge",
+      "fr": "œil / yeux",
+      "es": "ojo",
+      "it": "occhio"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "拼音混杂提示：首字an，次字jing（轻声）属于后鼻音ing，在前鼻韵母专页易混淆前后鼻音"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P12-068",
+    "hanzi": "海浪",
+    "originalPinyin": "hǎi làng",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 12,
+      "scene": "后鼻韵母 ang, eng, ing, ong 航海甲板场景"
+    },
+    "translations": {
+      "zh": "海浪",
+      "en": "wave",
+      "de": "Welle",
+      "fr": "vague",
+      "es": "ola",
+      "it": "onda"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P12-069",
+    "hanzi": "两个",
+    "originalPinyin": "liǎng gè",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 12,
+      "scene": "后鼻韵母 ang, eng, ing, ong 航海甲板场景"
+    },
+    "translations": {
+      "zh": "两个",
+      "en": "two",
+      "de": "zwei (Stück)",
+      "fr": "deux (éléments)",
+      "es": "dos (unidades)",
+      "it": "due (pezzi)"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P12-070",
+    "hanzi": "望远镜",
+    "originalPinyin": "wàng yuǎn jìng",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 12,
+      "scene": "后鼻韵母 ang, eng, ing, ong 航海甲板场景"
+    },
+    "translations": {
+      "zh": "望远镜",
+      "en": "telescope",
+      "de": "Teleskop / Fernglas",
+      "fr": "télescope / jumelles",
+      "es": "telescopio / prismáticos",
+      "it": "telescopio / binocolo"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P12-071",
+    "hanzi": "蒙面",
+    "originalPinyin": "méng miàn",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 12,
+      "scene": "后鼻韵母 ang, eng, ing, ong 航海甲板场景"
+    },
+    "translations": {
+      "zh": "蒙面",
+      "en": "cover one's face",
+      "de": "maskiert / Gesicht bedecken",
+      "fr": "visage masqué",
+      "es": "con la cara cubierta",
+      "it": "mascherato"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "拼音混杂提示：首字méng为后鼻音，次字miàn为前鼻音an，前后鼻音混杂"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P12-072",
+    "hanzi": "钉子",
+    "originalPinyin": "dīng zi",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 12,
+      "scene": "后鼻韵母 ang, eng, ing, ong 航海甲板场景"
+    },
+    "translations": {
+      "zh": "钉子",
+      "en": "nail",
+      "de": "Nagel",
+      "fr": "clou",
+      "es": "clavo",
+      "it": "chiodo"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P12-073",
+    "hanzi": "红绿灯",
+    "originalPinyin": "hóng lǜ dēng",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 12,
+      "scene": "后鼻韵母 ang, eng, ing, ong 航海甲板场景"
+    },
+    "translations": {
+      "zh": "红绿灯",
+      "en": "traffic light",
+      "de": "Ampel",
+      "fr": "feu tricolore",
+      "es": "semáforo",
+      "it": "semaforo"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "needs_review",
+      "issues": [
+        "场景契合提示：航海甲板场景中出现陆地交通工具的红绿灯，场景契合度需核对"
+      ]
+    }
+  },
+  {
+    "atlasId": "PTA-P13-074",
+    "hanzi": "星星",
+    "originalPinyin": "xīng xing",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 13,
+      "scene": "后鼻音与夜空场景"
+    },
+    "translations": {
+      "zh": "星星",
+      "en": "star",
+      "de": "Stern",
+      "fr": "étoile",
+      "es": "estrella",
+      "it": "stella"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P13-075",
+    "hanzi": "北京",
+    "originalPinyin": "běi jīng",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 13,
+      "scene": "后鼻音与夜空场景"
+    },
+    "translations": {
+      "zh": "北京",
+      "en": "Beijing",
+      "de": "Peking",
+      "fr": "Pékin",
+      "es": "Pekín",
+      "it": "Pechino"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P13-076",
+    "hanzi": "熊猫",
+    "originalPinyin": "xióng māo",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 13,
+      "scene": "后鼻音与夜空场景"
+    },
+    "translations": {
+      "zh": "熊猫",
+      "en": "panda",
+      "de": "Panda",
+      "fr": "panda",
+      "es": "panda",
+      "it": "panda"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P13-077",
+    "hanzi": "鸟笼",
+    "originalPinyin": "niǎo lóng",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 13,
+      "scene": "后鼻音与夜空场景"
+    },
+    "translations": {
+      "zh": "鸟笼",
+      "en": "birdcage",
+      "de": "Vogelkäfig",
+      "fr": "cage à oiseaux",
+      "es": "jaula de pájaros",
+      "it": "gabbia per uccelli"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P13-078",
+    "hanzi": "游泳",
+    "originalPinyin": "yóu yǒng",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 13,
+      "scene": "后鼻音与夜空场景"
+    },
+    "translations": {
+      "zh": "游泳",
+      "en": "swim",
+      "de": "schwimmen",
+      "fr": "nager",
+      "es": "nadar",
+      "it": "nuotare"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  },
+  {
+    "atlasId": "PTA-P13-079",
+    "hanzi": "红色",
+    "originalPinyin": "hóng sè",
+    "source": {
+      "document": "Pinyin_Town_Atlas.pptx",
+      "page": 13,
+      "scene": "后鼻音与夜空场景"
+    },
+    "translations": {
+      "zh": "红色",
+      "en": "red",
+      "de": "rot",
+      "fr": "rouge",
+      "es": "rojo",
+      "it": "rosso"
+    },
+    "courseReferences": [
+      "PIN-CORE-NASAL-01"
+    ],
+    "review": {
+      "status": "approved",
+      "issues": []
+    }
+  }
+]

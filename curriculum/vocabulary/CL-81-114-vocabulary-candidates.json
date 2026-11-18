@@ -1,0 +1,3139 @@
+{
+  "schema_version": "1.0",
+  "status": "candidate_not_imported",
+  "source_index": "curriculum/vocabulary/HSK-2025-word-index.json",
+  "course_range": "CL-81–CL-114",
+  "courses": [
+    {
+      "course_id": "CL-81",
+      "course_title": "农场动物与野生动物",
+      "vocabulary": [
+        {
+          "word": "动物",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "猫",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "狗",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "鸟",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "鱼",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "马",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "牛",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "羊",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "老虎",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "狮子",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk6"
+          ]
+        },
+        {
+          "word": "熊",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-82",
+      "course_title": "动物外形与生活习性",
+      "vocabulary": [
+        {
+          "word": "大",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "小",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "长",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2",
+            "hsk3"
+          ]
+        },
+        {
+          "word": "短",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "高",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "矮",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "快",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "慢",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "尾巴",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "翅膀",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "毛",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3",
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-83",
+      "course_title": "中国十二生肖",
+      "vocabulary": [
+        {
+          "word": "鼠",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "牛",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "虎",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "兔",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "龙",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "蛇",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "马",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "羊",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "猴",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "鸡",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "狗",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "猪",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "生肖",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "属",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-83",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk6"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-84",
+      "course_title": "我喜欢的动物",
+      "vocabulary": [
+        {
+          "word": "喜欢",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "爱",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "动物",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "猫",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "狗",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-81",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "可爱",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "宠物",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-85",
+      "course_title": "日常兴趣与休闲活动",
+      "vocabulary": [
+        {
+          "word": "喜欢",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "玩",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "看",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "听",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "唱",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "跳",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "运动",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "休息",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "散步",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-86",
+      "course_title": "音乐、电影与文化娱乐",
+      "vocabulary": [
+        {
+          "word": "音乐",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-86",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "电影",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-86",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "歌",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-86",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "唱",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "看",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "听",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "演员",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-86",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "文化",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-86",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-87",
+      "course_title": "运动与户外活动",
+      "vocabulary": [
+        {
+          "word": "运动",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "跑步",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-87",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "游泳",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-87",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "打球",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-87",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "足球",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-87",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "篮球",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-87",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "比赛",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-87",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "锻炼",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-87",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-88",
+      "course_title": "旅行与探索体验",
+      "vocabulary": [
+        {
+          "word": "旅行",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "去",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "来",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "回",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk3"
+          ]
+        },
+        {
+          "word": "走",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "看",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "玩",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "风景",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "照片",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-89",
+      "course_title": "收藏、创作与个人爱好",
+      "vocabulary": [
+        {
+          "word": "喜欢",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "做",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "写",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "画",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "看",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "收集",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "收藏",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk6"
+          ]
+        },
+        {
+          "word": "创作",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-90",
+      "course_title": "我的兴趣与生活方式综合表达",
+      "vocabulary": [
+        {
+          "word": "我",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-90",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "喜欢",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "爱",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "觉得",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-90",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "常常",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-90",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "有时",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-90",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "生活",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-90",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "习惯",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-90",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-91",
+      "course_title": "早晨起床与洗漱",
+      "vocabulary": [
+        {
+          "word": "早上",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "起床",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "睡觉",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "洗",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "脸",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "刷牙",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "洗澡",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "头发",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-92",
+      "course_title": "早餐与早晨饮食",
+      "vocabulary": [
+        {
+          "word": "早饭",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "早餐",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "吃",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "喝",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "牛奶",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "鸡蛋",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "面包",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "豆浆",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "粥",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk6"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-93",
+      "course_title": "出门、上班与日常通勤",
+      "vocabulary": [
+        {
+          "word": "出门",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-93",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "上班",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-93",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "去",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "坐车",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-93",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "走路",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-93",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "通勤",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-93",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "地铁",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-93",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-94",
+      "course_title": "工作、学习与日常事务",
+      "vocabulary": [
+        {
+          "word": "工作",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "学习",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "上课",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "写",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "看",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "读",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "做",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "任务",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "事情",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-95",
+      "course_title": "午餐与午间休息",
+      "vocabulary": [
+        {
+          "word": "中午",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-95",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "午饭",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-95",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "吃",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-92",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "饭",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-95",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "休息",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "午餐",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-95",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-96",
+      "course_title": "下午活动、下班与回家",
+      "vocabulary": [
+        {
+          "word": "下午",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-96",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "下班",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-96",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "回家",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-96",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "回",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk3"
+          ]
+        },
+        {
+          "word": "来",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "走",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-88",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "活动",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-96",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-97",
+      "course_title": "晚餐、家庭生活与睡前活动",
+      "vocabulary": [
+        {
+          "word": "晚上",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-97",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "晚饭",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-97",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "吃饭",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-97",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "家",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-97",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk3"
+          ]
+        },
+        {
+          "word": "睡觉",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "睡前",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-97",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        }
+      ]
+    },
+    {
+      "course_id": "CL-98",
+      "course_title": "我的一天与日常作息综合表达",
+      "vocabulary": [
+        {
+          "word": "一天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-98",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "早上",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "上午",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-98",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "中午",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-95",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "下午",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-96",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "晚上",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-97",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "今天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-98",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "作息",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-98",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk7-9"
+          ]
+        },
+        {
+          "word": "日常",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-98",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-99",
+      "course_title": "职业、行业与工作身份",
+      "vocabulary": [
+        {
+          "word": "工作",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "老师",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "学生",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "医生",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "工人",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "公司",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "职业",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "行业",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-100",
+      "course_title": "工作场所与工作环境",
+      "vocabulary": [
+        {
+          "word": "公司",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "学校",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "医院",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "商店",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "办公室",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "环境",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "工厂",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-101",
+      "course_title": "工作职责与工作内容",
+      "vocabulary": [
+        {
+          "word": "工作",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "做",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "写",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-89",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "看",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-85",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk5"
+          ]
+        },
+        {
+          "word": "说",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-101",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "学习",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "帮助",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-101",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "负责",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-101",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "职责",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-101",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk6"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-102",
+      "course_title": "工作时间、班次与休假安排",
+      "vocabulary": [
+        {
+          "word": "时间",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-102",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "今天",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-98",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "明天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-102",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "早上",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-91",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "晚上",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-97",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "星期",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-102",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "休假",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-102",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "班次",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-102",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        }
+      ]
+    },
+    {
+      "course_id": "CL-103",
+      "course_title": "职场沟通与同事关系",
+      "vocabulary": [
+        {
+          "word": "说",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-101",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "讲",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "问",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "回答",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "帮助",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-101",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "认识",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "朋友",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "同事",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "沟通",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-104",
+      "course_title": "我的工作与职业规划综合表达",
+      "vocabulary": [
+        {
+          "word": "工作",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "喜欢",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-84",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "想",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-104",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "要",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-104",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "学习",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-94",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "以后",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-104",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "计划",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-104",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "目标",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-104",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-105",
+      "course_title": "购物、超市与日常消费",
+      "vocabulary": [
+        {
+          "word": "买",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "卖",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "钱",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "商店",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "超市",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "东西",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "价格",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "购物",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "消费",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-105",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-106",
+      "course_title": "衣服、鞋帽与日常穿着",
+      "vocabulary": [
+        {
+          "word": "衣服",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "裤子",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "鞋",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "帽子",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "穿",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "新",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "大",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "小",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-82",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "裙子",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "外套",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-106",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-107",
+      "course_title": "身体健康、常见疾病与看医生",
+      "vocabulary": [
+        {
+          "word": "身体",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-107",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "病",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-107",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "生病",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-107",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "医院",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "医生",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-99",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "药",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-107",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "健康",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-107",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "发烧",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-107",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "咳嗽",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-107",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-108",
+      "course_title": "天气、季节与气候变化",
+      "vocabulary": [
+        {
+          "word": "天气",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "冷",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "热",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "下雨",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "下雪",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "春天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "夏天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "秋天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "冬天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "季节",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "气候",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-108",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-109",
+      "course_title": "日期、约会与时间安排",
+      "vocabulary": [
+        {
+          "word": "今天",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-98",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "明天",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-102",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "昨天",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-109",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "年",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-109",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "月",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-109",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "日",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-109",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk4"
+          ]
+        },
+        {
+          "word": "星期",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-102",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "时间",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-102",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "日期",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-109",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "约会",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-109",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-110",
+      "course_title": "电话、网络与数字生活",
+      "vocabulary": [
+        {
+          "word": "电话",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "手机",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "电脑",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "网络",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        },
+        {
+          "word": "上网",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "信息",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "网站",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "软件",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-110",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-111",
+      "course_title": "家务劳动与家庭分工",
+      "vocabulary": [
+        {
+          "word": "家",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-97",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1",
+            "hsk3"
+          ]
+        },
+        {
+          "word": "做饭",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-111",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "洗衣服",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-111",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "打扫",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-111",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "收拾",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-111",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "家务",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-111",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk5"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-112",
+      "course_title": "餐厅用餐与点餐交流",
+      "vocabulary": [
+        {
+          "word": "饭店",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "餐厅",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "吃饭",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-97",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "菜",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "米饭",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "面条",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "水",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "茶",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "菜单",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "点菜",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        },
+        {
+          "word": "服务员",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-112",
+          "source_type": "CL_extension_candidate",
+          "hsk_levels": []
+        }
+      ]
+    },
+    {
+      "course_id": "CL-113",
+      "course_title": "节日、庆祝活动与礼物",
+      "vocabulary": [
+        {
+          "word": "节日",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-113",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "生日",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-113",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk2"
+          ]
+        },
+        {
+          "word": "礼物",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-113",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "朋友",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-103",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "家人",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-113",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "高兴",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-113",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "庆祝",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-113",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        },
+        {
+          "word": "祝贺",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-113",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk4"
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": "CL-114",
+      "course_title": "日常问题、公共服务与寻求帮助",
+      "vocabulary": [
+        {
+          "word": "问题",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "帮助",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-101",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "请问",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "哪里",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "怎么",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "医院",
+          "category": "core",
+          "relation_type": "review",
+          "first_learning_course": "CL-100",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk1"
+          ]
+        },
+        {
+          "word": "银行",
+          "category": "core",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "服务",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        },
+        {
+          "word": "求助",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk6"
+          ]
+        },
+        {
+          "word": "解决",
+          "category": "extension_candidate",
+          "relation_type": "first_learning",
+          "first_learning_course": "CL-114",
+          "source_type": "HSK_2025",
+          "hsk_levels": [
+            "hsk3"
+          ]
+        }
+      ]
+    }
+  ]
+}

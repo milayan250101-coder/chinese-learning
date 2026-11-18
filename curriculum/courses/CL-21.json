@@ -4,49 +4,613 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 21,
-  "learning_objectives": [],
+  "learning_objectives": [
+    "能够认读并说出饺子、包子、面条、炒饭、火锅和北京烤鸭六种中国美食。",
+    "能够使用好吃、辣、甜、咸等词语描述简单味道。",
+    "能够使用“我喜欢吃……”表达个人饮食喜好。",
+    "能够使用“我想吃……”表达想吃的食物。",
+    "能够使用简单礼貌表达在餐厅点餐。"
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
+      "word_id": "CL21-001",
+      "simplified": "饺子",
+      "traditional": "饺子",
+      "pinyin": "jiǎozi",
+      "part_of_speech": "名词",
+      "definition_zh": "用面皮包住馅料后煮熟或煎熟的食物。",
+      "category": "六种美食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-002",
+      "simplified": "包子",
+      "traditional": "包子",
+      "pinyin": "bāozi",
+      "part_of_speech": "名词",
+      "definition_zh": "用面皮包住馅料后蒸熟的食物。",
+      "category": "六种美食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-003",
+      "simplified": "面条",
+      "traditional": "面条",
+      "pinyin": "miàntiáo",
+      "part_of_speech": "名词",
+      "definition_zh": "用面粉制成的条状主食。",
+      "category": "六种美食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-004",
+      "simplified": "炒饭",
+      "traditional": "炒饭",
+      "pinyin": "chǎofàn",
+      "part_of_speech": "名词",
+      "definition_zh": "用米饭和其他食材一起炒制的食物。",
+      "category": "六种美食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-005",
+      "simplified": "火锅",
+      "traditional": "火锅",
+      "pinyin": "huǒguō",
+      "part_of_speech": "名词",
+      "definition_zh": "把食材放进热汤里煮着吃的一种食物。",
+      "category": "六种美食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-006",
+      "simplified": "北京烤鸭",
+      "traditional": "北京烤鸭",
+      "pinyin": "Běijīng kǎoyā",
+      "part_of_speech": "名词",
+      "definition_zh": "北京有名的一种烤鸭菜肴。",
+      "category": "六种美食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-007",
+      "simplified": "米饭",
+      "traditional": "米饭",
+      "pinyin": "mǐfàn",
+      "part_of_speech": "名词",
+      "definition_zh": "煮熟的米，常见主食。",
+      "category": "食物与主食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-008",
+      "simplified": "面粉",
+      "traditional": "面粉",
+      "pinyin": "miànfěn",
+      "part_of_speech": "名词",
+      "definition_zh": "制作面食常用的粉。",
+      "category": "食物与主食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-009",
+      "simplified": "肉",
+      "traditional": "肉",
+      "pinyin": "ròu",
+      "part_of_speech": "名词",
+      "definition_zh": "常见食物，可以作为菜肴或馅料。",
+      "category": "食物与主食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-010",
+      "simplified": "蔬菜",
+      "traditional": "蔬菜",
+      "pinyin": "shūcài",
+      "part_of_speech": "名词",
+      "definition_zh": "可以食用的植物。",
+      "category": "食物与主食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-011",
+      "simplified": "鸡蛋",
+      "traditional": "鸡蛋",
+      "pinyin": "jīdàn",
+      "part_of_speech": "名词",
+      "definition_zh": "常见食材。",
+      "category": "食物与主食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-012",
+      "simplified": "汤",
+      "traditional": "汤",
+      "pinyin": "tāng",
+      "part_of_speech": "名词",
+      "definition_zh": "用水煮成的食物或饮品。",
+      "category": "食物与主食",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-013",
+      "simplified": "辣",
+      "traditional": "辣",
+      "pinyin": "là",
+      "part_of_speech": "形容词",
+      "definition_zh": "一种刺激性的味道。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-014",
+      "simplified": "甜",
+      "traditional": "甜",
+      "pinyin": "tián",
+      "part_of_speech": "形容词",
+      "definition_zh": "像糖一样的味道。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-015",
+      "simplified": "咸",
+      "traditional": "咸",
+      "pinyin": "xián",
+      "part_of_speech": "形容词",
+      "definition_zh": "含盐较多时的味道。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-016",
+      "simplified": "好吃",
+      "traditional": "好吃",
+      "pinyin": "hǎochī",
+      "part_of_speech": "形容词",
+      "definition_zh": "味道好，吃起来让人喜欢。",
+      "category": "味道",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-017",
+      "simplified": "点菜",
+      "traditional": "点菜",
+      "pinyin": "diǎn cài",
+      "part_of_speech": "动词",
+      "definition_zh": "在餐厅选择要吃的菜。",
+      "category": "用餐",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-018",
+      "simplified": "菜单",
+      "traditional": "菜单",
+      "pinyin": "càidān",
+      "part_of_speech": "名词",
+      "definition_zh": "列出餐厅食物和价格的单子。",
+      "category": "用餐",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-019",
+      "simplified": "一份",
+      "traditional": "一份",
+      "pinyin": "yí fèn",
+      "part_of_speech": "名词",
+      "definition_zh": "点餐时常用的数量表达。",
+      "category": "用餐",
+      "collocations": [],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL21-020",
+      "simplified": "喜欢",
+      "traditional": "喜欢",
+      "pinyin": "xǐhuan",
+      "part_of_speech": "动词",
+      "definition_zh": "对某人或某物有好感。",
+      "category": "用餐",
       "collocations": [],
       "is_key_vocabulary": true
     }
   ],
-  "core_expressions": [],
-  "sentence_patterns": [
+  "core_expressions": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "expression": "你喜欢吃什么？",
+      "pinyin": "Nǐ xǐhuan chī shénme?",
+      "meaning_zh": "询问对方喜欢吃什么。"
+    },
+    {
+      "expression": "我喜欢吃饺子。",
+      "pinyin": "Wǒ xǐhuan chī jiǎozi.",
+      "meaning_zh": "表达喜欢吃饺子。"
+    },
+    {
+      "expression": "这个很好吃。",
+      "pinyin": "Zhège hěn hǎochī.",
+      "meaning_zh": "评价食物的味道。"
+    },
+    {
+      "expression": "你吃过火锅吗？",
+      "pinyin": "Nǐ chī guo huǒguō ma?",
+      "meaning_zh": "询问是否有吃过某种食物。"
+    },
+    {
+      "expression": "我想吃北京烤鸭。",
+      "pinyin": "Wǒ xiǎng chī Běijīng kǎoyā.",
+      "meaning_zh": "表达想吃某种食物。"
+    },
+    {
+      "expression": "这个辣不辣？",
+      "pinyin": "Zhège là bu là?",
+      "meaning_zh": "询问食物是否辣。"
+    },
+    {
+      "expression": "我要一份炒饭。",
+      "pinyin": "Wǒ yào yí fèn chǎofàn.",
+      "meaning_zh": "在餐厅点一份炒饭。"
+    },
+    {
+      "expression": "请给我菜单。",
+      "pinyin": "Qǐng gěi wǒ càidān.",
+      "meaning_zh": "向服务人员要菜单。"
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋喜欢吃＋食物",
+      "explanation": "表达喜欢吃某种食物。",
+      "examples": [
+        "我喜欢吃饺子。",
+        "她喜欢吃面条。"
+      ]
+    },
+    {
+      "pattern": "主语＋想吃＋食物",
+      "explanation": "表达想吃某种食物。",
+      "examples": [
+        "我想吃火锅。",
+        "他想吃包子。"
+      ]
+    },
+    {
+      "pattern": "食物＋很好吃",
+      "explanation": "评价食物的味道。",
+      "examples": [
+        "这个很好吃。",
+        "饺子很好吃。"
+      ]
+    },
+    {
+      "pattern": "这个＋辣不辣？",
+      "explanation": "使用正反问句询问食物是否辣。",
+      "examples": [
+        "这个辣不辣？",
+        "火锅辣不辣？"
+      ]
+    },
+    {
+      "pattern": "主语＋要＋数量＋食物",
+      "explanation": "在餐厅点餐。",
+      "examples": [
+        "我要一份炒饭。",
+        "我要一份面条。"
+      ]
+    },
+    {
+      "pattern": "请给我＋物品",
+      "explanation": "礼貌地向服务人员提出请求。",
+      "examples": [
+        "请给我菜单。",
+        "请给我一碗米饭。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "聊聊喜欢的美食",
+      "scene": "两位朋友谈论自己喜欢吃的中国食物。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你喜欢吃什么？",
+          "traditional": "你喜欢吃什么？",
+          "pinyin": "Nǐ xǐhuan chī shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我喜欢吃饺子。",
+          "traditional": "我喜欢吃饺子。",
+          "pinyin": "Wǒ xǐhuan chī jiǎozi."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你喜欢吃面条吗？",
+          "traditional": "你喜欢吃面条吗？",
+          "pinyin": "Nǐ xǐhuan chī miàntiáo ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "喜欢，面条很好吃。",
+          "traditional": "喜欢，面条很好吃。",
+          "pinyin": "Xǐhuan, miàntiáo hěn hǎochī."
+        }
+      ]
+    },
+    {
+      "title": "在餐厅点餐",
+      "scene": "顾客在餐厅点中国菜。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "请给我菜单。",
+          "traditional": "请给我菜单。",
+          "pinyin": "Qǐng gěi wǒ càidān."
+        },
+        {
+          "speaker": "B",
+          "simplified": "好的，这是菜单。",
+          "traditional": "好的，这是菜单。",
+          "pinyin": "Hǎo de, zhè shì càidān."
+        },
+        {
+          "speaker": "A",
+          "simplified": "我要一份炒饭。",
+          "traditional": "我要一份炒饭。",
+          "pinyin": "Wǒ yào yí fèn chǎofàn."
+        },
+        {
+          "speaker": "B",
+          "simplified": "好的，请稍等。",
+          "traditional": "好的，请稍等。",
+          "pinyin": "Hǎo de, qǐng shāo děng."
+        }
+      ]
+    },
+    {
+      "title": "询问食物口味",
+      "scene": "朋友准备一起吃火锅。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你想吃火锅吗？",
+          "traditional": "你想吃火锅吗？",
+          "pinyin": "Nǐ xiǎng chī huǒguō ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "想。这个火锅辣不辣？",
+          "traditional": "想。这个火锅辣不辣？",
+          "pinyin": "Xiǎng. Zhège huǒguō là bu là?"
+        },
+        {
+          "speaker": "A",
+          "simplified": "有一点儿辣。",
+          "traditional": "有一点儿辣。",
+          "pinyin": "Yǒu yìdiǎnr là."
+        },
+        {
+          "speaker": "B",
+          "simplified": "没关系，我喜欢吃辣的。",
+          "traditional": "没关系，我喜欢吃辣的。",
+          "pinyin": "Méi guānxi, wǒ xǐhuan chī là de."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "六种美食认读",
+      "type": "词汇练习",
+      "instructions": "看图片，认读六种中国美食，并说出对应的中文名称。",
+      "expected_output": [
+        "饺子",
+        "包子",
+        "面条",
+        "炒饭",
+        "火锅",
+        "北京烤鸭"
+      ]
+    },
+    {
+      "activity": "食物与味道配对",
+      "type": "词汇理解",
+      "instructions": "根据图片或教师提供的描述，使用好吃、辣、甜、咸等词语描述食物。",
+      "expected_output": [
+        "这个很好吃。",
+        "这个有一点儿辣。"
+      ]
+    },
+    {
+      "activity": "我喜欢吃什么",
+      "type": "口语练习",
+      "instructions": "轮流询问同伴喜欢吃什么，并用“我喜欢吃……”回答。",
+      "expected_output": [
+        "你喜欢吃什么？我喜欢吃饺子。"
+      ]
+    },
+    {
+      "activity": "餐厅点餐",
+      "type": "情景练习",
+      "instructions": "一人扮演顾客，一人扮演服务人员，使用菜单和点餐表达完成简单对话。",
+      "expected_output": [
+        "请给我菜单。",
+        "我要一份炒饭。"
+      ]
+    },
+    {
+      "activity": "介绍喜欢的中国美食",
+      "type": "综合表达",
+      "instructions": "选择一种美食，介绍名称、味道，以及自己是否喜欢。",
+      "expected_output": [
+        "我喜欢吃饺子。饺子很好吃。",
+        "我想吃火锅。这个有一点儿辣。"
+      ]
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "instructions": "选择一种中国美食，介绍它的名称、味道和自己的喜好。",
+    "expected_output": [
+      "我喜欢吃饺子。",
+      "饺子很好吃。",
+      "我想吃火锅。",
+      "这个有一点儿辣。"
+    ]
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课围绕六种常见中国美食展开，重点是食物名称和日常用餐表达。",
+    "六种美食是教学样例，不代表中国美食的排名或全部种类。",
+    "饺子和包子都可以有不同馅料，不要把某一种馅料当作唯一标准。",
+    "面条、炒饭和米饭属于常见主食表达，注意不要混淆食物名称。",
+    "火锅的汤底和辣度可以不同，询问口味时可使用“辣不辣”。",
+    "北京烤鸭是北京有代表性的菜肴，不要求学生学习复杂烹饪知识。",
+    "“好吃”用于评价食物；“喜欢吃”用于表达个人喜好。",
+    "“一份”是常见点餐量词，可与炒饭等食物搭配；不同食物也可能使用碗、盘等量词。",
+    "点餐对话强调礼貌表达，不要求学生学习复杂菜单或价格谈判。",
+    "饮食偏好因人而异，教师应尊重学生的饮食习惯和个人选择。"
+  ],
+  "completion_criteria": [
+    "能够认读并说出六种中国美食名称。",
+    "能够理解并使用好吃、辣、甜、咸等简单味道表达。",
+    "能够使用“我喜欢吃……”介绍自己的饮食喜好。",
+    "能够使用“我想吃……”表达想吃的食物。",
+    "能够使用简单礼貌表达完成点餐。",
+    "能够用两到三句中文介绍自己喜欢的一种中国美食。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Six Common Chinese Foods",
+      "learning_objectives": [
+        "Recognize six common Chinese foods.",
+        "Use simple words to describe taste.",
+        "Talk about food preferences.",
+        "Express what you would like to eat.",
+        "Order food using simple polite expressions."
+      ],
+      "key_expressions": {
+        "你喜欢吃什么？": "What do you like to eat?",
+        "我喜欢吃饺子。": "I like eating dumplings.",
+        "这个很好吃。": "This is delicious.",
+        "你吃过火锅吗？": "Have you ever eaten hot pot?",
+        "我想吃北京烤鸭。": "I want to eat Peking duck.",
+        "这个辣不辣？": "Is this spicy?",
+        "我要一份炒饭。": "I'd like one portion of fried rice.",
+        "请给我菜单。": "Please give me the menu."
+      },
+      "integrated_task": "Introduce a Chinese food you like, describe its taste and say whether you enjoy it."
+    },
+    "fr": {
+      "title": "Six plats chinois courants",
+      "learning_objectives": [
+        "Reconnaître six plats chinois courants.",
+        "Utiliser des mots simples pour décrire les goûts.",
+        "Parler de ses préférences alimentaires.",
+        "Exprimer ce que l'on souhaite manger.",
+        "Commander avec des expressions polies simples."
+      ],
+      "key_expressions": {
+        "你喜欢吃什么？": "Qu'est-ce que tu aimes manger ?",
+        "我喜欢吃饺子。": "J'aime manger des raviolis chinois.",
+        "这个很好吃。": "C'est très bon.",
+        "你吃过火锅吗？": "As-tu déjà mangé une fondue chinoise ?",
+        "我想吃北京烤鸭。": "Je voudrais manger du canard laqué de Pékin.",
+        "这个辣不辣？": "Est-ce que c'est épicé ?",
+        "我要一份炒饭。": "Je voudrais une portion de riz sauté.",
+        "请给我菜单。": "Veuillez me donner le menu."
+      },
+      "integrated_task": "Présentez un plat chinois que vous aimez, décrivez son goût et dites si vous l'appréciez."
+    },
+    "de": {
+      "title": "Sechs typische chinesische Gerichte",
+      "learning_objectives": [
+        "Sechs typische chinesische Gerichte erkennen.",
+        "Einfache Wörter zur Beschreibung des Geschmacks verwenden.",
+        "Über Essensvorlieben sprechen.",
+        "Sagen, was man essen möchte.",
+        "Mit einfachen höflichen Ausdrücken Essen bestellen."
+      ],
+      "key_expressions": {
+        "你喜欢吃什么？": "Was isst du gerne?",
+        "我喜欢吃饺子。": "Ich esse gerne chinesische Teigtaschen.",
+        "这个很好吃。": "Das schmeckt sehr gut.",
+        "你吃过火锅吗？": "Hast du schon einmal Hotpot gegessen?",
+        "我想吃北京烤鸭。": "Ich möchte Pekingente essen.",
+        "这个辣不辣？": "Ist das scharf?",
+        "我要一份炒饭。": "Ich hätte gerne eine Portion gebratenen Reis.",
+        "请给我菜单。": "Bitte geben Sie mir die Speisekarte."
+      },
+      "integrated_task": "Stelle ein chinesisches Gericht vor, das du magst, beschreibe seinen Geschmack und sage, ob es dir schmeckt."
+    },
+    "es": {
+      "title": "Seis comidas chinas comunes",
+      "learning_objectives": [
+        "Reconocer seis comidas chinas comunes.",
+        "Usar palabras sencillas para describir sabores.",
+        "Hablar de preferencias alimentarias.",
+        "Expresar qué se quiere comer.",
+        "Pedir comida con expresiones sencillas y educadas."
+      ],
+      "key_expressions": {
+        "你喜欢吃什么？": "¿Qué te gusta comer?",
+        "我喜欢吃饺子。": "Me gusta comer empanadillas chinas.",
+        "这个很好吃。": "Esto está muy rico.",
+        "你吃过火锅吗？": "¿Has probado alguna vez el hot pot?",
+        "我想吃北京烤鸭。": "Quiero comer pato pekinés.",
+        "这个辣不辣？": "¿Esto es picante?",
+        "我要一份炒饭。": "Quiero una ración de arroz frito.",
+        "请给我菜单。": "Por favor, dame el menú."
+      },
+      "integrated_task": "Presenta una comida china que te guste, describe su sabor y explica si te gusta."
+    },
+    "it": {
+      "title": "Sei piatti cinesi comuni",
+      "learning_objectives": [
+        "Riconoscere sei piatti cinesi comuni.",
+        "Usare parole semplici per descrivere i sapori.",
+        "Parlare delle proprie preferenze alimentari.",
+        "Esprimere che cosa si desidera mangiare.",
+        "Ordinare da mangiare con espressioni semplici e cortesi."
+      ],
+      "key_expressions": {
+        "你喜欢吃什么？": "Che cosa ti piace mangiare?",
+        "我喜欢吃饺子。": "Mi piace mangiare i ravioli cinesi.",
+        "这个很好吃。": "Questo è molto buono.",
+        "你吃过火锅吗？": "Hai mai mangiato l'hot pot?",
+        "我想吃北京烤鸭。": "Vorrei mangiare l'anatra alla pechinese.",
+        "这个辣不辣？": "Questo è piccante?",
+        "我要一份炒饭。": "Vorrei una porzione di riso saltato.",
+        "请给我菜单。": "Per favore, mi dia il menù."
+      },
+      "integrated_task": "Presenta un piatto cinese che ti piace, descrivine il sapore e spiega se ti piace."
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T18:34:15.164837+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
   },
   "title_status": "confirmed"
 }

@@ -4,49 +4,532 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 12,
-  "learning_objectives": [],
+  "learning_objectives": [
+    "能够使用常见词语介绍自己的工作和休息状态。",
+    "能够询问和回答简单的工作时间安排。",
+    "能够理解并使用常见反义词描述状态。",
+    "能够使用忙、不忙、有空、没空表达时间状态。",
+    "能够结合日常生活情景进行简短对话。"
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
-      "collocations": [],
+      "word_id": "CL12-001",
+      "simplified": "工作",
+      "traditional": "工作",
+      "pinyin": "gōngzuò",
+      "part_of_speech": "动词／名词",
+      "definition_zh": "做职业或日常工作，也可以指工作本身。",
+      "category": "工作活动",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-002",
+      "simplified": "上班",
+      "traditional": "上班",
+      "pinyin": "shàngbān",
+      "part_of_speech": "动词",
+      "definition_zh": "去工作岗位开始工作。",
+      "category": "工作活动",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-003",
+      "simplified": "下班",
+      "traditional": "下班",
+      "pinyin": "xiàbān",
+      "part_of_speech": "动词",
+      "definition_zh": "结束当天的工作。",
+      "category": "工作活动",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-004",
+      "simplified": "休息",
+      "traditional": "休息",
+      "pinyin": "xiūxi",
+      "part_of_speech": "动词",
+      "definition_zh": "暂时停止工作或活动，让身体恢复精力。",
+      "category": "工作与休息",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-005",
+      "simplified": "忙",
+      "traditional": "忙",
+      "pinyin": "máng",
+      "part_of_speech": "形容词",
+      "definition_zh": "有很多事情要做，没有太多空闲时间。",
+      "category": "工作状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-006",
+      "simplified": "不忙",
+      "traditional": "不忙",
+      "pinyin": "bù máng",
+      "part_of_speech": "形容词短语",
+      "definition_zh": "事情不多，有一定的空闲时间。",
+      "category": "工作状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-007",
+      "simplified": "有空",
+      "traditional": "有空",
+      "pinyin": "yǒu kòng",
+      "part_of_speech": "形容词短语",
+      "definition_zh": "有可以自由安排的时间。",
+      "category": "时间状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-008",
+      "simplified": "没空",
+      "traditional": "沒空",
+      "pinyin": "méi kòng",
+      "part_of_speech": "形容词短语",
+      "definition_zh": "没有可以自由安排的时间。",
+      "category": "时间状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-009",
+      "simplified": "早",
+      "traditional": "早",
+      "pinyin": "zǎo",
+      "part_of_speech": "形容词／副词",
+      "definition_zh": "时间比较靠前，与晚相对。",
+      "category": "时间状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-010",
+      "simplified": "晚",
+      "traditional": "晚",
+      "pinyin": "wǎn",
+      "part_of_speech": "形容词／副词",
+      "definition_zh": "时间比较靠后，与早相对。",
+      "category": "时间状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-011",
+      "simplified": "累",
+      "traditional": "累",
+      "pinyin": "lèi",
+      "part_of_speech": "形容词",
+      "definition_zh": "身体或精神感到疲劳。",
+      "category": "身体状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-012",
+      "simplified": "不累",
+      "traditional": "不累",
+      "pinyin": "bú lèi",
+      "part_of_speech": "形容词短语",
+      "definition_zh": "没有感到疲劳。",
+      "category": "身体状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-013",
+      "simplified": "快",
+      "traditional": "快",
+      "pinyin": "kuài",
+      "part_of_speech": "形容词／副词",
+      "definition_zh": "速度较高，与慢相对。",
+      "category": "状态描述",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-014",
+      "simplified": "慢",
+      "traditional": "慢",
+      "pinyin": "màn",
+      "part_of_speech": "形容词／副词",
+      "definition_zh": "速度较低，与快相对。",
+      "category": "状态描述",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-015",
+      "simplified": "准时",
+      "traditional": "準時",
+      "pinyin": "zhǔnshí",
+      "part_of_speech": "形容词／副词",
+      "definition_zh": "按照规定或约定的时间，不早也不晚。",
+      "category": "时间状态",
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL12-016",
+      "simplified": "迟到",
+      "traditional": "遲到",
+      "pinyin": "chídào",
+      "part_of_speech": "动词",
+      "definition_zh": "没有按规定或约定的时间到达。",
+      "category": "时间状态",
       "is_key_vocabulary": true
     }
   ],
-  "core_expressions": [],
-  "sentence_patterns": [
+  "core_expressions": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "expression": "我每天八点上班。",
+      "pinyin": "Wǒ měitiān bā diǎn shàngbān.",
+      "meaning_zh": "介绍自己的上班时间。"
+    },
+    {
+      "expression": "我下午六点下班。",
+      "pinyin": "Wǒ xiàwǔ liù diǎn xiàbān.",
+      "meaning_zh": "介绍自己的下班时间。"
+    },
+    {
+      "expression": "我今天很忙。",
+      "pinyin": "Wǒ jīntiān hěn máng.",
+      "meaning_zh": "说明自己今天有很多事情要做。"
+    },
+    {
+      "expression": "我今天有空。",
+      "pinyin": "Wǒ jīntiān yǒu kòng.",
+      "meaning_zh": "说明自己今天有时间。"
+    },
+    {
+      "expression": "你累不累？",
+      "pinyin": "Nǐ lèi bu lèi?",
+      "meaning_zh": "询问对方是否疲劳。"
+    },
+    {
+      "expression": "我不忙，但是有一点累。",
+      "pinyin": "Wǒ bù máng, dànshì yǒu yìdiǎn lèi.",
+      "meaning_zh": "同时描述工作状态和身体状态。"
+    },
+    {
+      "expression": "我每天准时上班。",
+      "pinyin": "Wǒ měitiān zhǔnshí shàngbān.",
+      "meaning_zh": "说明自己按时开始工作。"
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋时间＋上班／下班。",
+      "explanation": "用时间说明工作开始或结束的时间。",
+      "examples": [
+        "我早上九点上班。",
+        "我晚上七点下班。"
+      ]
+    },
+    {
+      "pattern": "主语＋很／不太＋形容词。",
+      "explanation": "描述忙、累等状态。",
+      "examples": [
+        "我今天很忙。",
+        "他今天不太累。"
+      ]
+    },
+    {
+      "pattern": "主语＋有空／没空。",
+      "explanation": "说明是否有可以自由安排的时间。",
+      "examples": [
+        "我今天有空。",
+        "我明天没空。"
+      ]
+    },
+    {
+      "pattern": "主语＋形容词＋不＋形容词？",
+      "explanation": "使用正反问句询问状态。",
+      "examples": [
+        "你今天忙不忙？",
+        "你累不累？"
+      ]
+    },
+    {
+      "pattern": "主语＋准时／迟到＋动词。",
+      "explanation": "描述是否按时进行某项活动。",
+      "examples": [
+        "我每天准时上班。",
+        "他今天上班迟到了。"
+      ]
+    },
+    {
+      "pattern": "主语＋很＋形容词，但是＋另一种状态。",
+      "explanation": "用但是连接两个不同或相反的情况。",
+      "examples": [
+        "我今天很忙，但是不累。",
+        "他下班很晚，但是今天不忙。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "你的工作时间",
+      "scene": "朋友之间谈论每天的工作时间。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你每天几点上班？",
+          "traditional": "你每天幾點上班？",
+          "pinyin": "Nǐ měitiān jǐ diǎn shàngbān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我每天九点上班。",
+          "traditional": "我每天九點上班。",
+          "pinyin": "Wǒ měitiān jiǔ diǎn shàngbān."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你几点下班？",
+          "traditional": "你幾點下班？",
+          "pinyin": "Nǐ jǐ diǎn xiàbān?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我下午六点下班。",
+          "traditional": "我下午六點下班。",
+          "pinyin": "Wǒ xiàwǔ liù diǎn xiàbān."
+        }
+      ]
+    },
+    {
+      "title": "今天有空吗",
+      "scene": "朋友约对方一起吃饭。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天有空吗？",
+          "traditional": "你今天有空嗎？",
+          "pinyin": "Nǐ jīntiān yǒu kòng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "今天有一点忙。",
+          "traditional": "今天有一點忙。",
+          "pinyin": "Jīntiān yǒu yìdiǎn máng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "那你明天有空吗？",
+          "traditional": "那你明天有空嗎？",
+          "pinyin": "Nà nǐ míngtiān yǒu kòng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "明天有空，我们一起吃饭吧。",
+          "traditional": "明天有空，我們一起吃飯吧。",
+          "pinyin": "Míngtiān yǒu kòng, wǒmen yìqǐ chīfàn ba."
+        }
+      ]
+    },
+    {
+      "title": "今天很累",
+      "scene": "同事下班后谈论当天的状态。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天累不累？",
+          "traditional": "你今天累不累？",
+          "pinyin": "Nǐ jīntiān lèi bu lèi?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我今天很累，工作很多。",
+          "traditional": "我今天很累，工作很多。",
+          "pinyin": "Wǒ jīntiān hěn lèi, gōngzuò hěn duō."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你现在下班了吗？",
+          "traditional": "你現在下班了嗎？",
+          "pinyin": "Nǐ xiànzài xiàbān le ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "下班了，我想回家休息。",
+          "traditional": "下班了，我想回家休息。",
+          "pinyin": "Xiàbān le, wǒ xiǎng huí jiā xiūxi."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "工作时间问答",
+      "type": "两人对话",
+      "instructions": "学生互相询问每天几点上班、几点下班，也可以替换成上课和下课时间。",
+      "expected_output": [
+        "你几点上班？",
+        "我九点上班。",
+        "你几点下班？",
+        "我六点下班。"
+      ]
+    },
+    {
+      "activity": "反义词配对",
+      "type": "词汇练习",
+      "instructions": "把本课反义表达配对，并分别用每个词说一个简单句子。",
+      "expected_output": [
+        "忙—不忙",
+        "早—晚",
+        "累—不累",
+        "快—慢"
+      ]
+    },
+    {
+      "activity": "今天忙不忙",
+      "type": "口语调查",
+      "instructions": "学生询问同伴今天忙不忙、有没有空、累不累，并用完整句子报告答案。",
+      "expected_output": [
+        "你今天忙不忙？",
+        "我今天不忙。",
+        "你有空吗？",
+        "我今天没空。"
+      ]
+    },
+    {
+      "activity": "准时还是迟到",
+      "type": "情景判断",
+      "instructions": "教师给出约定时间和实际到达时间，学生判断是否准时，并说明情况。",
+      "expected_output": [
+        "我八点到，我准时到了。",
+        "我九点才到，我迟到了。"
+      ]
+    },
+    {
+      "activity": "我的一天",
+      "type": "综合口语",
+      "instructions": "学生介绍自己的工作或学习时间，以及一天中忙、累和休息的状态。",
+      "expected_output": [
+        "我早上八点上班。",
+        "我下午六点下班。",
+        "我今天很忙，但是不累。"
+      ]
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "instructions": "主题：我的工作日。学生介绍自己的工作或学习时间、是否忙碌、有没有空、是否疲劳，以及自己是否准时。",
+    "expected_output": "我每天早上九点上班，下午六点下班。我上午很忙，下午不太忙。今天我有空，但是有一点累。明天我还要上班，所以我想早点休息。我每天都尽量准时上班。"
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课属于生活主题词汇与情景表达课程，重点是状态描述和实际交流，不扩展成复杂的职业或劳动制度课程。",
+    "“工作”可以作动词或名词；“上班”和“下班”分别强调开始工作和结束工作。",
+    "“忙”和“有空”相关但不完全相反。忙通常描述事情多，有空强调有可自由安排的时间。",
+    "“不忙”不一定等于“有空”；学生需要根据实际情景理解。",
+    "“早”和“晚”在本课先作为时间状态和时间副词教学，不必展开其他复杂义项。",
+    "“累”和“不累”用于描述身体或精神状态；避免将“不累”误解成“很有精神”。",
+    "“快”和“慢”可以描述速度，初级阶段先用常见动作和生活情景练习。",
+    "“准时”表示按照约定时间，“迟到”表示晚于规定或约定时间。",
+    "反义词练习应让学生先理解词义，再造句，不要只做机械配对。",
+    "工作场景可以根据学生实际生活替换为上课、学习或其他日常安排。"
+  ],
+  "completion_criteria": [
+    "能够使用上班、下班介绍简单时间安排。",
+    "能够使用忙、不忙、有空、没空描述时间状态。",
+    "能够理解并使用早、晚、累、不累、快、慢等常见反义表达。",
+    "能够使用准时和迟到描述到达情况。",
+    "能够通过简单问答了解别人的工作和生活状态。",
+    "能够完成一段介绍自己一天安排的简短表达。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Work situations and opposite expressions",
+      "learning_objectives": [
+        "Describe common work and rest situations.",
+        "Ask and answer questions about work schedules.",
+        "Use common opposite expressions.",
+        "Describe availability and how busy someone is.",
+        "Take part in short everyday conversations."
+      ],
+      "key_expressions": {
+        "我每天八点上班。": "I start work at eight every day.",
+        "我下午六点下班。": "I finish work at six in the afternoon.",
+        "我今天很忙。": "I am very busy today.",
+        "我今天有空。": "I am free today.",
+        "你累不累？": "Are you tired?"
+      },
+      "integrated_task": "My working day."
+    },
+    "fr": {
+      "title": "Situation professionnelle et expressions opposées",
+      "learning_objectives": [
+        "Décrire des situations courantes de travail et de repos.",
+        "Poser des questions sur les horaires de travail.",
+        "Utiliser des expressions opposées courantes.",
+        "Décrire sa disponibilité et son niveau d'activité.",
+        "Participer à de courts dialogues quotidiens."
+      ],
+      "key_expressions": {
+        "我每天八点上班。": "Je commence le travail à huit heures tous les jours.",
+        "我下午六点下班。": "Je termine le travail à dix-huit heures.",
+        "我今天很忙。": "Je suis très occupé aujourd'hui.",
+        "我今天有空。": "Je suis libre aujourd'hui.",
+        "你累不累？": "Est-ce que tu es fatigué ?"
+      },
+      "integrated_task": "Ma journée de travail."
+    },
+    "de": {
+      "title": "Arbeitssituationen und gegensätzliche Ausdrücke",
+      "learning_objectives": [
+        "Typische Arbeits- und Erholungssituationen beschreiben.",
+        "Nach Arbeitszeiten fragen und darauf antworten.",
+        "Häufige gegensätzliche Ausdrücke verwenden.",
+        "Verfügbarkeit und Beschäftigung beschreiben.",
+        "Kurze Alltagsgespräche führen."
+      ],
+      "key_expressions": {
+        "我每天八点上班。": "Ich fange jeden Tag um acht Uhr an zu arbeiten.",
+        "我下午六点下班。": "Ich habe um sechs Uhr abends Feierabend.",
+        "我今天很忙。": "Ich bin heute sehr beschäftigt.",
+        "我今天有空。": "Ich habe heute Zeit.",
+        "你累不累？": "Bist du müde?"
+      },
+      "integrated_task": "Mein Arbeitstag."
+    },
+    "es": {
+      "title": "Situaciones laborales y expresiones opuestas",
+      "learning_objectives": [
+        "Describir situaciones habituales de trabajo y descanso.",
+        "Preguntar y responder sobre horarios laborales.",
+        "Usar expresiones opuestas frecuentes.",
+        "Describir la disponibilidad y el nivel de actividad.",
+        "Participar en conversaciones cotidianas breves."
+      ],
+      "key_expressions": {
+        "我每天八点上班。": "Empiezo a trabajar a las ocho todos los días.",
+        "我下午六点下班。": "Termino de trabajar a las seis de la tarde.",
+        "我今天很忙。": "Hoy estoy muy ocupado.",
+        "我今天有空。": "Hoy tengo tiempo libre.",
+        "你累不累？": "¿Estás cansado?"
+      },
+      "integrated_task": "Mi día de trabajo."
+    },
+    "it": {
+      "title": "Situazioni lavorative ed espressioni opposte",
+      "learning_objectives": [
+        "Descrivere situazioni comuni di lavoro e riposo.",
+        "Chiedere e rispondere sugli orari di lavoro.",
+        "Usare espressioni opposte comuni.",
+        "Descrivere la propria disponibilità e quanto si è impegnati.",
+        "Partecipare a brevi conversazioni quotidiane."
+      ],
+      "key_expressions": {
+        "我每天八点上班。": "Inizio a lavorare alle otto ogni giorno.",
+        "我下午六点下班。": "Finisco di lavorare alle sei del pomeriggio.",
+        "我今天很忙。": "Oggi sono molto impegnato.",
+        "我今天有空。": "Oggi ho tempo libero.",
+        "你累不累？": "Sei stanco?"
+      },
+      "integrated_task": "La mia giornata lavorativa."
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T17:17:21.760223+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "初版内容。后续检查忙与有空的区别、反义表达使用情景及多语言翻译。"
   },
   "title_status": "confirmed"
 }

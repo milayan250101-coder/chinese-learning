@@ -4,49 +4,651 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 26,
-  "learning_objectives": [],
+  "learning_objectives": [
+    "能够理解并说出常见的兴趣爱好和休闲活动。",
+    "能够使用“喜欢／不喜欢＋动词短语”表达个人喜好。",
+    "能够询问别人喜欢做什么以及有什么兴趣爱好。",
+    "能够使用时间表达介绍自己通常在什么时候进行某项活动。",
+    "能够围绕兴趣爱好进行简单的双向交流。"
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
-      "collocations": [],
+      "word_id": "CL26-001",
+      "simplified": "兴趣",
+      "traditional": "興趣",
+      "pinyin": "xìngqù",
+      "part_of_speech": "名词",
+      "definition_zh": "对某件事情感到喜欢并愿意了解或参加。",
+      "category": "兴趣表达",
+      "collocations": [
+        "有兴趣",
+        "对音乐有兴趣"
+      ],
       "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-002",
+      "simplified": "爱好",
+      "traditional": "愛好",
+      "pinyin": "àihào",
+      "part_of_speech": "名词/动词",
+      "definition_zh": "自己喜欢的活动或事情。",
+      "category": "兴趣表达",
+      "collocations": [
+        "兴趣爱好",
+        "我的爱好"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-003",
+      "simplified": "喜欢",
+      "traditional": "喜歡",
+      "pinyin": "xǐhuan",
+      "part_of_speech": "动词",
+      "definition_zh": "对某人或某件事情有好感。",
+      "category": "喜好表达",
+      "collocations": [
+        "喜欢音乐",
+        "喜欢运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-004",
+      "simplified": "不喜欢",
+      "traditional": "不喜歡",
+      "pinyin": "bù xǐhuan",
+      "part_of_speech": "动词短语",
+      "definition_zh": "对某件事情没有喜好。",
+      "category": "喜好表达",
+      "collocations": [
+        "不喜欢做饭",
+        "不喜欢跑步"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-005",
+      "simplified": "听音乐",
+      "traditional": "聽音樂",
+      "pinyin": "tīng yīnyuè",
+      "part_of_speech": "动词短语",
+      "definition_zh": "听歌曲或其他音乐。",
+      "category": "休闲活动",
+      "collocations": [
+        "喜欢听音乐",
+        "晚上听音乐"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-006",
+      "simplified": "唱歌",
+      "traditional": "唱歌",
+      "pinyin": "chàng gē",
+      "part_of_speech": "动词",
+      "definition_zh": "用声音唱出歌曲。",
+      "category": "休闲活动",
+      "collocations": [
+        "喜欢唱歌",
+        "一起唱歌"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-007",
+      "simplified": "跳舞",
+      "traditional": "跳舞",
+      "pinyin": "tiào wǔ",
+      "part_of_speech": "动词",
+      "definition_zh": "跟着音乐做身体动作。",
+      "category": "休闲活动",
+      "collocations": [
+        "喜欢跳舞",
+        "学跳舞"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-008",
+      "simplified": "看电影",
+      "traditional": "看電影",
+      "pinyin": "kàn diànyǐng",
+      "part_of_speech": "动词短语",
+      "definition_zh": "观看电影。",
+      "category": "休闲活动",
+      "collocations": [
+        "周末看电影",
+        "喜欢看电影"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-009",
+      "simplified": "看书",
+      "traditional": "看書",
+      "pinyin": "kàn shū",
+      "part_of_speech": "动词短语",
+      "definition_zh": "阅读书籍。",
+      "category": "休闲活动",
+      "collocations": [
+        "在家看书",
+        "喜欢看书"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-010",
+      "simplified": "运动",
+      "traditional": "運動",
+      "pinyin": "yùndòng",
+      "part_of_speech": "动词/名词",
+      "definition_zh": "通过身体活动锻炼或进行体育活动。",
+      "category": "运动活动",
+      "collocations": [
+        "喜欢运动",
+        "做运动"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-011",
+      "simplified": "跑步",
+      "traditional": "跑步",
+      "pinyin": "pǎo bù",
+      "part_of_speech": "动词",
+      "definition_zh": "用跑的方式进行运动。",
+      "category": "运动活动",
+      "collocations": [
+        "早上跑步",
+        "去跑步"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-012",
+      "simplified": "游泳",
+      "traditional": "游泳",
+      "pinyin": "yóu yǒng",
+      "part_of_speech": "动词",
+      "definition_zh": "在水里游动。",
+      "category": "运动活动",
+      "collocations": [
+        "喜欢游泳",
+        "去游泳"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-013",
+      "simplified": "打球",
+      "traditional": "打球",
+      "pinyin": "dǎ qiú",
+      "part_of_speech": "动词短语",
+      "definition_zh": "进行球类运动。",
+      "category": "运动活动",
+      "collocations": [
+        "打篮球",
+        "打网球"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-014",
+      "simplified": "做饭",
+      "traditional": "做飯",
+      "pinyin": "zuò fàn",
+      "part_of_speech": "动词短语",
+      "definition_zh": "准备并烹饪食物。",
+      "category": "日常活动",
+      "collocations": [
+        "在家做饭",
+        "喜欢做饭"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-015",
+      "simplified": "拍照",
+      "traditional": "拍照",
+      "pinyin": "pāi zhào",
+      "part_of_speech": "动词",
+      "definition_zh": "用相机或手机拍摄照片。",
+      "category": "休闲活动",
+      "collocations": [
+        "喜欢拍照",
+        "出去拍照"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-016",
+      "simplified": "旅行",
+      "traditional": "旅行",
+      "pinyin": "lǚxíng",
+      "part_of_speech": "动词/名词",
+      "definition_zh": "到其他地方游览或体验生活。",
+      "category": "休闲活动",
+      "collocations": [
+        "喜欢旅行",
+        "去旅行"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-017",
+      "simplified": "玩游戏",
+      "traditional": "玩遊戲",
+      "pinyin": "wán yóuxì",
+      "part_of_speech": "动词短语",
+      "definition_zh": "进行电子游戏或其他游戏活动。",
+      "category": "休闲活动",
+      "collocations": [
+        "和朋友玩游戏",
+        "喜欢玩游戏"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-018",
+      "simplified": "画画",
+      "traditional": "畫畫",
+      "pinyin": "huà huà",
+      "part_of_speech": "动词",
+      "definition_zh": "用笔或其他工具画图。",
+      "category": "休闲活动",
+      "collocations": [
+        "喜欢画画",
+        "在家画画"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL26-019",
+      "simplified": "周末",
+      "traditional": "週末",
+      "pinyin": "zhōumò",
+      "part_of_speech": "时间名词",
+      "definition_zh": "一周最后的休息时间，通常指星期六和星期日。",
+      "category": "时间表达",
+      "collocations": [
+        "周末看电影",
+        "周末运动"
+      ],
+      "is_key_vocabulary": false
+    },
+    {
+      "word_id": "CL26-020",
+      "simplified": "有时候",
+      "traditional": "有時候",
+      "pinyin": "yǒu shíhou",
+      "part_of_speech": "时间副词",
+      "definition_zh": "表示某件事情不是每次发生，而是在一些时候发生。",
+      "category": "频率表达",
+      "collocations": [
+        "有时候唱歌",
+        "有时候做饭"
+      ],
+      "is_key_vocabulary": false
     }
   ],
-  "core_expressions": [],
+  "core_expressions": [
+    {
+      "expression": "你喜欢做什么？",
+      "pinyin": "Nǐ xǐhuan zuò shénme?",
+      "meaning_zh": "询问对方喜欢做什么事情。"
+    },
+    {
+      "expression": "你有什么兴趣爱好？",
+      "pinyin": "Nǐ yǒu shénme xìngqù àihào?",
+      "meaning_zh": "询问对方平时喜欢哪些活动。"
+    },
+    {
+      "expression": "我喜欢听音乐。",
+      "pinyin": "Wǒ xǐhuan tīng yīnyuè.",
+      "meaning_zh": "表达自己喜欢听音乐。"
+    },
+    {
+      "expression": "我不太喜欢运动。",
+      "pinyin": "Wǒ bú tài xǐhuan yùndòng.",
+      "meaning_zh": "表达自己不是很喜欢运动。"
+    },
+    {
+      "expression": "我周末喜欢看电影。",
+      "pinyin": "Wǒ zhōumò xǐhuan kàn diànyǐng.",
+      "meaning_zh": "说明自己周末喜欢做的事情。"
+    },
+    {
+      "expression": "我也喜欢做饭。",
+      "pinyin": "Wǒ yě xǐhuan zuò fàn.",
+      "meaning_zh": "表示自己也喜欢做饭。"
+    },
+    {
+      "expression": "我有时候去游泳。",
+      "pinyin": "Wǒ yǒu shíhou qù yóuyǒng.",
+      "meaning_zh": "说明自己有时会去游泳。"
+    },
+    {
+      "expression": "我们可以一起去。",
+      "pinyin": "Wǒmen kěyǐ yìqǐ qù.",
+      "meaning_zh": "提出一起参加某项活动。"
+    }
+  ],
   "sentence_patterns": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "pattern": "主语＋喜欢／不喜欢＋动词短语。",
+      "explanation": "用喜欢或不喜欢表达对某项活动的态度。",
+      "examples": [
+        "我喜欢听音乐。",
+        "他不喜欢跑步。"
+      ]
+    },
+    {
+      "pattern": "主语＋喜欢＋做什么？",
+      "explanation": "使用疑问词“什么”询问对方喜欢的活动。",
+      "examples": [
+        "你喜欢做什么？",
+        "你周末喜欢做什么？"
+      ]
+    },
+    {
+      "pattern": "主语＋有什么＋兴趣爱好？",
+      "explanation": "询问对方有哪些兴趣爱好。",
+      "examples": [
+        "你有什么兴趣爱好？",
+        "他有什么爱好？"
+      ]
+    },
+    {
+      "pattern": "主语＋时间＋喜欢＋动词短语。",
+      "explanation": "将时间放在喜欢前面，说明通常在什么时候进行某项活动。",
+      "examples": [
+        "我周末喜欢看电影。",
+        "她晚上喜欢看书。"
+      ]
+    },
+    {
+      "pattern": "主语＋也／还＋喜欢＋动词短语。",
+      "explanation": "用“也”或“还”补充其他喜好。",
+      "examples": [
+        "我也喜欢唱歌。",
+        "我还喜欢拍照。"
+      ]
+    },
+    {
+      "pattern": "主语＋有时候＋动词短语。",
+      "explanation": "说明某项活动有时会发生，不表示每天都做。",
+      "examples": [
+        "我有时候去游泳。",
+        "他有时候在家做饭。"
+      ]
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "dialogues": [
+    {
+      "title": "你喜欢做什么",
+      "scene": "两位新朋友互相了解对方的兴趣爱好。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你有什么兴趣爱好？",
+          "traditional": "你有什麼興趣愛好？",
+          "pinyin": "Nǐ yǒu shénme xìngqù àihào?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我喜欢听音乐，也喜欢看电影。",
+          "traditional": "我喜歡聽音樂，也喜歡看電影。",
+          "pinyin": "Wǒ xǐhuan tīng yīnyuè, yě xǐhuan kàn diànyǐng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你喜欢运动吗？",
+          "traditional": "你喜歡運動嗎？",
+          "pinyin": "Nǐ xǐhuan yùndòng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我不太喜欢运动。",
+          "traditional": "我不太喜歡運動。",
+          "pinyin": "Wǒ bú tài xǐhuan yùndòng."
+        }
+      ]
+    },
+    {
+      "title": "周末做什么",
+      "scene": "朋友讨论周末的休闲活动。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你周末喜欢做什么？",
+          "traditional": "你週末喜歡做什麼？",
+          "pinyin": "Nǐ zhōumò xǐhuan zuò shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我喜欢看电影，有时候也去旅行。",
+          "traditional": "我喜歡看電影，有時候也去旅行。",
+          "pinyin": "Wǒ xǐhuan kàn diànyǐng, yǒu shíhou yě qù lǚxíng."
+        },
+        {
+          "speaker": "A",
+          "simplified": "我喜欢拍照。",
+          "traditional": "我喜歡拍照。",
+          "pinyin": "Wǒ xǐhuan pāizhào."
+        },
+        {
+          "speaker": "B",
+          "simplified": "下次我们可以一起去旅行。",
+          "traditional": "下次我們可以一起去旅行。",
+          "pinyin": "Xià cì wǒmen kěyǐ yìqǐ qù lǚxíng."
+        }
+      ]
+    },
+    {
+      "title": "一起去运动",
+      "scene": "同事邀请朋友一起参加运动。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你喜欢运动吗？",
+          "traditional": "你喜歡運動嗎？",
+          "pinyin": "Nǐ xǐhuan yùndòng ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "喜欢，我喜欢游泳和跑步。",
+          "traditional": "喜歡，我喜歡游泳和跑步。",
+          "pinyin": "Xǐhuan, wǒ xǐhuan yóuyǒng hé pǎobù."
+        },
+        {
+          "speaker": "A",
+          "simplified": "星期六我们一起去游泳吧。",
+          "traditional": "星期六我們一起去游泳吧。",
+          "pinyin": "Xīngqīliù wǒmen yìqǐ qù yóuyǒng ba."
+        },
+        {
+          "speaker": "B",
+          "simplified": "好啊！",
+          "traditional": "好啊！",
+          "pinyin": "Hǎo a!"
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "兴趣爱好图片配对",
+      "type": "picture_matching",
+      "instructions": "根据活动图片选择正确的中文词语，例如听音乐、游泳、拍照和做饭。",
+      "expected_output": "听音乐、游泳、拍照、做饭。"
+    },
+    {
+      "activity": "喜欢还是不喜欢",
+      "type": "sentence_completion",
+      "instructions": "根据个人真实喜好，使用“喜欢”“不喜欢”或“不太喜欢”完成句子。",
+      "expected_output": "我喜欢看电影。我不太喜欢跑步。"
+    },
+    {
+      "activity": "兴趣爱好采访",
+      "type": "pair_work",
+      "instructions": "两人互相询问喜欢做什么、周末做什么，并记录对方的两项喜好。",
+      "expected_output": "你喜欢做什么？我喜欢听音乐，也喜欢看书。"
+    },
+    {
+      "activity": "我的周末活动",
+      "type": "guided_speaking",
+      "instructions": "使用周末、有时候、喜欢等表达介绍自己的休闲活动。",
+      "expected_output": "我周末喜欢看电影，有时候也去运动。"
+    },
+    {
+      "activity": "找一个共同爱好",
+      "type": "communication_task",
+      "instructions": "与同伴交流兴趣爱好，找出双方都喜欢的一项活动，并提出一起参加的建议。",
+      "expected_output": "我们都喜欢听音乐。我们可以一起去听音乐。"
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "title": "介绍我的兴趣爱好",
+    "instructions": "介绍自己喜欢和不太喜欢的活动。至少说出三项兴趣或休闲活动，说明通常什么时候做其中一项，并向同伴询问兴趣爱好，找出一个共同爱好。",
+    "expected_output": "我喜欢听音乐、看电影和做饭。我周末喜欢看电影，有时候去游泳。我不太喜欢跑步。你喜欢做什么？"
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课重点是高频日常兴趣爱好表达，优先选择学生真实生活中常见的活动。",
+    "先掌握“喜欢＋动词短语”，再扩展“不喜欢”和“不太喜欢”。",
+    "“喜欢”后面可以接名词，也可以接动词短语，例如“喜欢音乐”和“喜欢听音乐”。",
+    "“兴趣”和“爱好”可以用于询问个人喜好，但初级学生先熟练使用“你喜欢做什么”。",
+    "“也”用于补充另一项相同主体的喜好，注意句子中的自然位置。",
+    "结合 CL-13 的频率表达和 CL-25 的时间表达，练习“我周末喜欢……”和“我有时候……”。",
+    "“打球”可以作为概括表达，具体球类名称可根据学生兴趣适当补充，不必一次扩展过多。",
+    "不要要求学生掌握大量低频兴趣词汇；本课以听音乐、看电影、运动、做饭、旅行等高频活动为主。",
+    "尊重学生真实喜好，不把某一种兴趣或运动设定为所有学生都应该喜欢的活动。",
+    "鼓励学生进行双向交流，最终能够找到一个共同爱好并提出简单邀请。"
+  ],
+  "completion_criteria": [
+    "能够理解并说出至少八种常见兴趣或休闲活动。",
+    "能够使用“喜欢＋动词短语”表达个人喜好。",
+    "能够使用“不喜欢”或“不太喜欢”表达不同程度的否定喜好。",
+    "能够询问别人喜欢做什么或有什么兴趣爱好。",
+    "能够结合时间表达介绍自己的休闲活动。",
+    "能够完成一段介绍兴趣爱好并与同伴交流的简短表达。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Common Hobbies and Interests",
+      "learning_objectives": [
+        "Understand and name common hobbies and leisure activities.",
+        "Express preferences using 'like / dislike + verb phrase'.",
+        "Ask others what they like doing and about their hobbies.",
+        "Use time expressions to describe when activities are usually done.",
+        "Have simple two-way conversations about hobbies and interests."
+      ],
+      "integrated_task": "Introduce activities you like and do not particularly like, describe when you do one of them, and find one hobby you share with a partner.",
+      "key_expressions": [
+        "你喜欢做什么？",
+        "你有什么兴趣爱好？",
+        "我喜欢听音乐。",
+        "我不太喜欢运动。",
+        "我周末喜欢看电影。",
+        "我也喜欢做饭。",
+        "我有时候去游泳。",
+        "我们可以一起去。"
+      ]
+    },
+    "fr": {
+      "title": "Loisirs et centres d'intérêt courants",
+      "learning_objectives": [
+        "Comprendre et nommer des loisirs et activités courants.",
+        "Exprimer ses préférences avec « aimer / ne pas aimer + verbe ».",
+        "Demander aux autres ce qu'ils aiment faire et quels sont leurs loisirs.",
+        "Utiliser des expressions de temps pour décrire quand on pratique une activité.",
+        "Avoir un échange simple sur les loisirs et les centres d'intérêt."
+      ],
+      "integrated_task": "Présentez les activités que vous aimez et celles que vous aimez moins, indiquez quand vous pratiquez l'une d'elles et trouvez un loisir commun avec votre partenaire.",
+      "key_expressions": [
+        "你喜欢做什么？",
+        "你有什么兴趣爱好？",
+        "我喜欢听音乐。",
+        "我不太喜欢运动。",
+        "我周末喜欢看电影。",
+        "我也喜欢做饭。",
+        "我有时候去游泳。",
+        "我们可以一起去。"
+      ]
+    },
+    "de": {
+      "title": "Häufige Hobbys und Interessen",
+      "learning_objectives": [
+        "Häufige Hobbys und Freizeitaktivitäten verstehen und benennen.",
+        "Vorlieben mit „mögen / nicht mögen + Verbphrase“ ausdrücken.",
+        "Andere fragen, was sie gerne machen und welche Hobbys sie haben.",
+        "Zeitangaben verwenden, um übliche Aktivitäten zu beschreiben.",
+        "Einfache Gespräche über Hobbys und Interessen führen."
+      ],
+      "integrated_task": "Stellen Sie Aktivitäten vor, die Sie mögen oder weniger mögen, sagen Sie, wann Sie eine davon machen, und finden Sie eine gemeinsame Freizeitaktivität mit Ihrem Gesprächspartner.",
+      "key_expressions": [
+        "你喜欢做什么？",
+        "你有什么兴趣爱好？",
+        "我喜欢听音乐。",
+        "我不太喜欢运动。",
+        "我周末喜欢看电影。",
+        "我也喜欢做饭。",
+        "我有时候去游泳。",
+        "我们可以一起去。"
+      ]
+    },
+    "es": {
+      "title": "Aficiones e intereses habituales",
+      "learning_objectives": [
+        "Comprender y nombrar aficiones y actividades de ocio habituales.",
+        "Expresar preferencias con «gustar / no gustar + verbo» en chino.",
+        "Preguntar a otras personas qué les gusta hacer y cuáles son sus aficiones.",
+        "Utilizar expresiones de tiempo para describir cuándo se realizan las actividades.",
+        "Mantener conversaciones sencillas sobre aficiones e intereses."
+      ],
+      "integrated_task": "Presenta las actividades que te gustan y las que no te gustan mucho, indica cuándo realizas una de ellas y encuentra una afición en común con tu compañero.",
+      "key_expressions": [
+        "你喜欢做什么？",
+        "你有什么兴趣爱好？",
+        "我喜欢听音乐。",
+        "我不太喜欢运动。",
+        "我周末喜欢看电影。",
+        "我也喜欢做饭。",
+        "我有时候去游泳。",
+        "我们可以一起去。"
+      ]
+    },
+    "it": {
+      "title": "Hobby e interessi comuni",
+      "learning_objectives": [
+        "Comprendere e nominare hobby e attività del tempo libero comuni.",
+        "Esprimere preferenze con «piacere / non piacere + verbo» in cinese.",
+        "Chiedere agli altri che cosa piace fare e quali hobby hanno.",
+        "Usare espressioni di tempo per descrivere quando si svolgono le attività.",
+        "Sostenere semplici conversazioni su hobby e interessi."
+      ],
+      "integrated_task": "Presenta le attività che ti piacciono e quelle che ti piacciono meno, indica quando ne svolgi una e trova un hobby in comune con il tuo interlocutore.",
+      "key_expressions": [
+        "你喜欢做什么？",
+        "你有什么兴趣爱好？",
+        "我喜欢听音乐。",
+        "我不太喜欢运动。",
+        "我周末喜欢看电影。",
+        "我也喜欢做饭。",
+        "我有时候去游泳。",
+        "我们可以一起去。"
+      ]
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T18:50:55",
+    "version": 3,
+    "source": "CL-curriculum-framework",
+    "content_status": "draft",
+    "review_note": "CL-26 first content draft. Focus: common hobbies, preferences, and simple leisure activities. Requires pedagogical and translation review."
   },
   "title_status": "confirmed"
 }

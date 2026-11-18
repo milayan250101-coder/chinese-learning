@@ -4,49 +4,662 @@
   "module_id": "M01",
   "status": "draft",
   "sort_order": 14,
-  "learning_objectives": [],
+  "learning_objectives": [
+    "能够识别并说出常见的早餐食物名称。",
+    "能够使用吃、喝、买等常见动词描述早餐。",
+    "能够说出自己早餐通常吃什么、喝什么。",
+    "能够询问别人早餐吃什么以及喜欢吃什么。",
+    "能够在简单的早餐场景中表达自己的选择和需求。"
+  ],
   "vocabulary": [
     {
-      "word_id": "",
-      "simplified": "",
-      "traditional": "",
-      "pinyin": "",
-      "part_of_speech": "",
-      "definition_zh": "",
-      "category": "",
-      "collocations": [],
+      "word_id": "CL14-001",
+      "simplified": "面包",
+      "traditional": "麵包",
+      "pinyin": "miànbāo",
+      "part_of_speech": "名词",
+      "definition_zh": "用面粉制作的常见早餐食物。",
+      "category": "面包类",
+      "collocations": [
+        "吃面包",
+        "买面包"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-002",
+      "simplified": "鸡蛋",
+      "traditional": "雞蛋",
+      "pinyin": "jīdàn",
+      "part_of_speech": "名词",
+      "definition_zh": "常见的蛋类食物。",
+      "category": "蛋类",
+      "collocations": [
+        "吃鸡蛋",
+        "煮鸡蛋"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-003",
+      "simplified": "煎蛋",
+      "traditional": "煎蛋",
+      "pinyin": "jiāndàn",
+      "part_of_speech": "名词",
+      "definition_zh": "放在锅里煎熟的鸡蛋。",
+      "category": "蛋类",
+      "collocations": [
+        "吃煎蛋"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-004",
+      "simplified": "水煮蛋",
+      "traditional": "水煮蛋",
+      "pinyin": "shuǐzhǔdàn",
+      "part_of_speech": "名词",
+      "definition_zh": "用水煮熟的鸡蛋。",
+      "category": "蛋类",
+      "collocations": [
+        "吃水煮蛋"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-005",
+      "simplified": "牛奶",
+      "traditional": "牛奶",
+      "pinyin": "niúnǎi",
+      "part_of_speech": "名词",
+      "definition_zh": "常见的乳制饮品。",
+      "category": "饮品",
+      "collocations": [
+        "喝牛奶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-006",
+      "simplified": "豆浆",
+      "traditional": "豆漿",
+      "pinyin": "dòujiāng",
+      "part_of_speech": "名词",
+      "definition_zh": "用大豆制作的饮品。",
+      "category": "饮品",
+      "collocations": [
+        "喝豆浆"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-007",
+      "simplified": "粥",
+      "traditional": "粥",
+      "pinyin": "zhōu",
+      "part_of_speech": "名词",
+      "definition_zh": "用米和水煮成的较稀的食物。",
+      "category": "主食",
+      "collocations": [
+        "喝粥",
+        "吃粥"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-008",
+      "simplified": "米饭",
+      "traditional": "米飯",
+      "pinyin": "mǐfàn",
+      "part_of_speech": "名词",
+      "definition_zh": "煮熟的米，常见主食。",
+      "category": "主食",
+      "collocations": [
+        "吃米饭"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-009",
+      "simplified": "面条",
+      "traditional": "麵條",
+      "pinyin": "miàntiáo",
+      "part_of_speech": "名词",
+      "definition_zh": "用面粉制作的条状主食。",
+      "category": "主食",
+      "collocations": [
+        "吃面条",
+        "煮面条"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-010",
+      "simplified": "包子",
+      "traditional": "包子",
+      "pinyin": "bāozi",
+      "part_of_speech": "名词",
+      "definition_zh": "有馅的面食，通常蒸熟后吃。",
+      "category": "中式早餐",
+      "collocations": [
+        "吃包子",
+        "买包子"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-011",
+      "simplified": "馒头",
+      "traditional": "饅頭",
+      "pinyin": "mántou",
+      "part_of_speech": "名词",
+      "definition_zh": "通常没有馅的蒸面食。",
+      "category": "中式早餐",
+      "collocations": [
+        "吃馒头"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-012",
+      "simplified": "饺子",
+      "traditional": "餃子",
+      "pinyin": "jiǎozi",
+      "part_of_speech": "名词",
+      "definition_zh": "有馅的面食，可以煮着吃。",
+      "category": "中式早餐",
+      "collocations": [
+        "吃饺子",
+        "煮饺子"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-013",
+      "simplified": "三明治",
+      "traditional": "三明治",
+      "pinyin": "sānmíngzhì",
+      "part_of_speech": "名词",
+      "definition_zh": "通常用面包夹着其他食物制作的食物。",
+      "category": "西式早餐",
+      "collocations": [
+        "吃三明治",
+        "做三明治"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-014",
+      "simplified": "水果",
+      "traditional": "水果",
+      "pinyin": "shuǐguǒ",
+      "part_of_speech": "名词",
+      "definition_zh": "可以直接吃的植物果实。",
+      "category": "其他食物",
+      "collocations": [
+        "吃水果"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-015",
+      "simplified": "苹果",
+      "traditional": "蘋果",
+      "pinyin": "píngguǒ",
+      "part_of_speech": "名词",
+      "definition_zh": "一种常见水果。",
+      "category": "水果",
+      "collocations": [
+        "吃苹果"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-016",
+      "simplified": "香蕉",
+      "traditional": "香蕉",
+      "pinyin": "xiāngjiāo",
+      "part_of_speech": "名词",
+      "definition_zh": "一种常见的黄色水果。",
+      "category": "水果",
+      "collocations": [
+        "吃香蕉"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-017",
+      "simplified": "酸奶",
+      "traditional": "酸奶",
+      "pinyin": "suānnǎi",
+      "part_of_speech": "名词",
+      "definition_zh": "有酸味的乳制品。",
+      "category": "饮品",
+      "collocations": [
+        "喝酸奶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-018",
+      "simplified": "咖啡",
+      "traditional": "咖啡",
+      "pinyin": "kāfēi",
+      "part_of_speech": "名词",
+      "definition_zh": "一种常见饮品。",
+      "category": "饮品",
+      "collocations": [
+        "喝咖啡"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-019",
+      "simplified": "茶",
+      "traditional": "茶",
+      "pinyin": "chá",
+      "part_of_speech": "名词",
+      "definition_zh": "用茶叶泡制的饮品。",
+      "category": "饮品",
+      "collocations": [
+        "喝茶"
+      ],
+      "is_key_vocabulary": true
+    },
+    {
+      "word_id": "CL14-020",
+      "simplified": "早餐",
+      "traditional": "早餐",
+      "pinyin": "zǎocān",
+      "part_of_speech": "名词",
+      "definition_zh": "一天中的第一顿饭。",
+      "category": "用餐时间",
+      "collocations": [
+        "吃早餐",
+        "做早餐"
+      ],
       "is_key_vocabulary": true
     }
   ],
-  "core_expressions": [],
-  "sentence_patterns": [
+  "core_expressions": [
     {
-      "pattern": "",
-      "explanation": "",
-      "examples": []
+      "expression": "我早上吃面包。",
+      "pinyin": "Wǒ zǎoshang chī miànbāo.",
+      "meaning_zh": "说明早上吃的食物。"
+    },
+    {
+      "expression": "我早餐喝牛奶。",
+      "pinyin": "Wǒ zǎocān hē niúnǎi.",
+      "meaning_zh": "说明早餐喝的饮品。"
+    },
+    {
+      "expression": "我喜欢吃鸡蛋。",
+      "pinyin": "Wǒ xǐhuan chī jīdàn.",
+      "meaning_zh": "表达对某种食物的喜好。"
+    },
+    {
+      "expression": "我不喜欢喝咖啡。",
+      "pinyin": "Wǒ bù xǐhuan hē kāfēi.",
+      "meaning_zh": "表达不喜欢的饮品。"
+    },
+    {
+      "expression": "你早餐吃什么？",
+      "pinyin": "Nǐ zǎocān chī shénme?",
+      "meaning_zh": "询问别人早餐吃什么。"
+    },
+    {
+      "expression": "你想吃包子还是面包？",
+      "pinyin": "Nǐ xiǎng chī bāozi háishi miànbāo?",
+      "meaning_zh": "询问对方在两种食物中如何选择。"
+    },
+    {
+      "expression": "我要一个鸡蛋和一杯牛奶。",
+      "pinyin": "Wǒ yào yí ge jīdàn hé yì bēi niúnǎi.",
+      "meaning_zh": "在早餐场景中表达需要。"
+    },
+    {
+      "expression": "我今天在家吃早餐。",
+      "pinyin": "Wǒ jīntiān zài jiā chī zǎocān.",
+      "meaning_zh": "说明吃早餐的地点。"
     }
   ],
-  "dialogues": [],
-  "classroom_practice": [],
+  "sentence_patterns": [
+    {
+      "pattern": "主语＋早上／早餐＋吃＋食物。",
+      "explanation": "用来说明早餐吃什么。",
+      "examples": [
+        "我早上吃面包。",
+        "我早餐吃鸡蛋。"
+      ]
+    },
+    {
+      "pattern": "主语＋早上／早餐＋喝＋饮品。",
+      "explanation": "用来说明早餐喝什么。",
+      "examples": [
+        "我早上喝牛奶。",
+        "她早餐喝豆浆。"
+      ]
+    },
+    {
+      "pattern": "主语＋喜欢／不喜欢＋吃／喝＋食物或饮品。",
+      "explanation": "表达自己对食物或饮品的喜好。",
+      "examples": [
+        "我喜欢吃包子。",
+        "他不喜欢喝咖啡。"
+      ]
+    },
+    {
+      "pattern": "你＋早餐＋吃／喝＋什么？",
+      "explanation": "询问别人早餐吃什么或喝什么。",
+      "examples": [
+        "你早餐吃什么？",
+        "你早上喝什么？"
+      ]
+    },
+    {
+      "pattern": "主语＋想吃＋A＋还是＋B？",
+      "explanation": "在两个选项之间询问对方的选择。",
+      "examples": [
+        "你想吃包子还是面包？",
+        "你想吃粥还是面条？"
+      ]
+    },
+    {
+      "pattern": "主语＋要＋数量词＋食物／饮品。",
+      "explanation": "在早餐店简单表达自己需要的食物或饮品。",
+      "examples": [
+        "我要一个包子。",
+        "我要一杯牛奶。"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "在家吃早餐",
+      "scene": "家人早上在家吃早餐。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你早上吃什么？",
+          "traditional": "你早上吃什麼？",
+          "pinyin": "Nǐ zǎoshang chī shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我吃面包和鸡蛋。",
+          "traditional": "我吃麵包和雞蛋。",
+          "pinyin": "Wǒ chī miànbāo hé jīdàn."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你喝牛奶吗？",
+          "traditional": "你喝牛奶嗎？",
+          "pinyin": "Nǐ hē niúnǎi ma?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "喝，我每天早上都喝牛奶。",
+          "traditional": "喝，我每天早上都喝牛奶。",
+          "pinyin": "Hē, wǒ měitiān zǎoshang dōu hē niúnǎi."
+        }
+      ]
+    },
+    {
+      "title": "选择早餐",
+      "scene": "两位朋友讨论今天早上想吃什么。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你今天早上想吃什么？",
+          "traditional": "你今天早上想吃什麼？",
+          "pinyin": "Nǐ jīntiān zǎoshang xiǎng chī shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想吃包子。",
+          "traditional": "我想吃包子。",
+          "pinyin": "Wǒ xiǎng chī bāozi."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你想喝豆浆还是牛奶？",
+          "traditional": "你想喝豆漿還是牛奶？",
+          "pinyin": "Nǐ xiǎng hē dòujiāng háishi niúnǎi?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我想喝豆浆。",
+          "traditional": "我想喝豆漿。",
+          "pinyin": "Wǒ xiǎng hē dòujiāng."
+        }
+      ]
+    },
+    {
+      "title": "在早餐店点餐",
+      "scene": "顾客在早餐店购买简单的早餐。",
+      "lines": [
+        {
+          "speaker": "A",
+          "simplified": "你好，你要吃什么？",
+          "traditional": "你好，你要吃什麼？",
+          "pinyin": "Nǐ hǎo, nǐ yào chī shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我要一个三明治和一个鸡蛋。",
+          "traditional": "我要一個三明治和一個雞蛋。",
+          "pinyin": "Wǒ yào yí ge sānmíngzhì hé yí ge jīdàn."
+        },
+        {
+          "speaker": "A",
+          "simplified": "你要喝什么？",
+          "traditional": "你要喝什麼？",
+          "pinyin": "Nǐ yào hē shénme?"
+        },
+        {
+          "speaker": "B",
+          "simplified": "我要一杯牛奶，谢谢。",
+          "traditional": "我要一杯牛奶，謝謝。",
+          "pinyin": "Wǒ yào yì bēi niúnǎi, xièxie."
+        }
+      ]
+    }
+  ],
+  "classroom_practice": [
+    {
+      "activity": "早餐食物分类",
+      "type": "词汇理解",
+      "instructions": "将本课词汇分成主食、蛋类、水果和饮品，并读出词语。",
+      "expected_output": [
+        "主食：面包、粥、面条、包子、馒头",
+        "蛋类：鸡蛋、煎蛋、水煮蛋",
+        "水果：苹果、香蕉",
+        "饮品：牛奶、豆浆、酸奶、咖啡、茶"
+      ]
+    },
+    {
+      "activity": "早餐搭配",
+      "type": "词汇运用",
+      "instructions": "从食物和饮品中各选两种，分别用吃和喝组成句子。",
+      "expected_output": [
+        "我吃面包和鸡蛋。",
+        "我喝牛奶。"
+      ]
+    },
+    {
+      "activity": "采访同学",
+      "type": "口语问答",
+      "instructions": "两人一组，互相询问早餐吃什么、喝什么以及喜欢吃什么。",
+      "expected_output": [
+        "你早餐吃什么？",
+        "我早餐吃包子。",
+        "你喜欢喝什么？"
+      ]
+    },
+    {
+      "activity": "早餐店角色扮演",
+      "type": "情景表达",
+      "instructions": "一人扮演顾客，一人扮演店员，练习询问和点选简单早餐。",
+      "expected_output": [
+        "我要一个鸡蛋。",
+        "我要一杯牛奶。"
+      ]
+    },
+    {
+      "activity": "我的早餐介绍",
+      "type": "综合表达",
+      "instructions": "学生用三至五句话介绍自己平时的早餐和喜欢的食物。",
+      "expected_output": [
+        "我早上吃面包。",
+        "我喜欢吃鸡蛋。",
+        "我喝牛奶。"
+      ]
+    }
+  ],
   "integrated_expression_task": {
-    "instructions": "",
-    "expected_output": ""
+    "instructions": "介绍自己平时的早餐。说一说早上通常吃什么、喝什么、喜欢什么，以及今天想吃什么。尽量使用本课词汇和句型完成四至六句话。",
+    "expected_output": [
+      "我早上通常吃面包和鸡蛋。",
+      "我喜欢喝牛奶。",
+      "我也喜欢吃水果。",
+      "今天我想吃包子。"
+    ]
   },
-  "teacher_notes": [],
-  "completion_criteria": [],
+  "teacher_notes": [
+    "本课重点是早餐食物的识别和日常表达，不要求学生学习复杂的烹饪词汇。",
+    "吃主要搭配固体食物，喝主要搭配饮品；可以结合真实食物图片帮助理解。",
+    "粥在日常表达中既可以说吃粥，也可以说喝粥，不必机械限制。",
+    "早餐、早上和早饭的使用场景略有不同，初级阶段先理解常见表达即可。",
+    "鸡蛋是上位词，煎蛋和水煮蛋是具体做法，不必要求学生掌握所有烹饪方式。",
+    "三明治、包子、馒头等食物可结合图片或学生熟悉的饮食文化解释。",
+    "点餐句型中的数量词要结合实物练习，例如一个鸡蛋、一杯牛奶。",
+    "还是用于本课两个选项之间的选择疑问句，不需要扩展复杂用法。",
+    "学生的早餐习惯可能因国家和家庭而异，应鼓励学生介绍真实生活，不设定统一早餐标准。",
+    "本课对话中的每天、今天、通常等词语用于自然复习，不把频率副词作为本课新的语法重点。"
+  ],
+  "completion_criteria": [
+    "能够看图识别并说出至少十种常见早餐食物或饮品。",
+    "能够正确使用吃和喝描述简单早餐。",
+    "能够询问并回答早餐吃什么、喝什么。",
+    "能够用喜欢、不喜欢表达对早餐食物的偏好。",
+    "能够使用一个或两个数量表达完成简单早餐点餐。",
+    "能够用四至六句话介绍自己的早餐习惯。"
+  ],
   "resources": [],
   "translations": {
-    "en": {},
-    "fr": {},
-    "de": {},
-    "es": {},
-    "it": {}
+    "en": {
+      "title": "Common Breakfast Foods",
+      "learning_objectives": [
+        "Recognize and name common breakfast foods.",
+        "Use common verbs such as eat, drink and buy to talk about breakfast.",
+        "Describe what you usually eat and drink for breakfast.",
+        "Ask others what they eat for breakfast and what they like.",
+        "Make simple choices and requests in a breakfast setting."
+      ],
+      "key_expressions": {
+        "我早上吃面包。": "I eat bread in the morning.",
+        "我早餐喝牛奶。": "I drink milk for breakfast.",
+        "我喜欢吃鸡蛋。": "I like eating eggs.",
+        "我不喜欢喝咖啡。": "I don't like drinking coffee.",
+        "你早餐吃什么？": "What do you eat for breakfast?",
+        "你想吃包子还是面包？": "Would you like a steamed bun or bread?",
+        "我要一个鸡蛋和一杯牛奶。": "I'd like an egg and a glass of milk.",
+        "我今天在家吃早餐。": "I'm having breakfast at home today."
+      },
+      "integrated_task": "Describe your usual breakfast."
+    },
+    "fr": {
+      "title": "Les aliments du petit-déjeuner",
+      "learning_objectives": [
+        "Reconnaître et nommer les aliments courants du petit-déjeuner.",
+        "Utiliser des verbes courants comme manger, boire et acheter pour parler du petit-déjeuner.",
+        "Dire ce que l'on mange et boit habituellement le matin.",
+        "Demander aux autres ce qu'ils mangent au petit-déjeuner et ce qu'ils aiment.",
+        "Faire des choix et des demandes simples dans un contexte de petit-déjeuner."
+      ],
+      "key_expressions": {
+        "我早上吃面包。": "Je mange du pain le matin.",
+        "我早餐喝牛奶。": "Je bois du lait au petit-déjeuner.",
+        "我喜欢吃鸡蛋。": "J'aime manger des œufs.",
+        "我不喜欢喝咖啡。": "Je n'aime pas boire du café.",
+        "你早餐吃什么？": "Qu'est-ce que tu manges au petit-déjeuner ?",
+        "你想吃包子还是面包？": "Tu préfères un baozi ou du pain ?",
+        "我要一个鸡蛋和一杯牛奶。": "Je voudrais un œuf et un verre de lait.",
+        "我今天在家吃早餐。": "Aujourd'hui, je prends mon petit-déjeuner à la maison."
+      },
+      "integrated_task": "Présentez votre petit-déjeuner habituel."
+    },
+    "de": {
+      "title": "Typische Frühstücksgerichte",
+      "learning_objectives": [
+        "Häufige Frühstücksspeisen erkennen und benennen.",
+        "Mit Verben wie essen, trinken und kaufen über das Frühstück sprechen.",
+        "Beschreiben, was man normalerweise zum Frühstück isst und trinkt.",
+        "Andere fragen, was sie frühstücken und was sie gern essen.",
+        "In einer Frühstückssituation einfache Wünsche und Bestellungen äußern."
+      ],
+      "key_expressions": {
+        "我早上吃面包。": "Ich esse morgens Brot.",
+        "我早餐喝牛奶。": "Ich trinke Milch zum Frühstück.",
+        "我喜欢吃鸡蛋。": "Ich esse gern Eier.",
+        "我不喜欢喝咖啡。": "Ich trinke nicht gern Kaffee.",
+        "你早餐吃什么？": "Was isst du zum Frühstück?",
+        "你想吃包子还是面包？": "Möchtest du Baozi oder Brot essen?",
+        "我要一个鸡蛋和一杯牛奶。": "Ich möchte ein Ei und ein Glas Milch.",
+        "我今天在家吃早餐。": "Heute frühstücke ich zu Hause."
+      },
+      "integrated_task": "Beschreibe dein übliches Frühstück."
+    },
+    "es": {
+      "title": "Alimentos habituales para el desayuno",
+      "learning_objectives": [
+        "Reconocer y nombrar alimentos habituales del desayuno.",
+        "Usar verbos comunes como comer, beber y comprar para hablar del desayuno.",
+        "Describir qué comes y bebes normalmente en el desayuno.",
+        "Preguntar a otras personas qué desayunan y qué les gusta.",
+        "Hacer elecciones y peticiones sencillas en una situación de desayuno."
+      ],
+      "key_expressions": {
+        "我早上吃面包。": "Como pan por la mañana.",
+        "我早餐喝牛奶。": "Bebo leche en el desayuno.",
+        "我喜欢吃鸡蛋。": "Me gusta comer huevos.",
+        "我不喜欢喝咖啡。": "No me gusta beber café.",
+        "你早餐吃什么？": "¿Qué desayunas?",
+        "你想吃包子还是面包？": "¿Quieres baozi o pan?",
+        "我要一个鸡蛋和一杯牛奶。": "Quiero un huevo y un vaso de leche.",
+        "我今天在家吃早餐。": "Hoy desayuno en casa."
+      },
+      "integrated_task": "Describe tu desayuno habitual."
+    },
+    "it": {
+      "title": "Cibi comuni per la colazione",
+      "learning_objectives": [
+        "Riconoscere e nominare gli alimenti comuni della colazione.",
+        "Usare verbi comuni come mangiare, bere e comprare per parlare della colazione.",
+        "Descrivere cosa si mangia e si beve abitualmente a colazione.",
+        "Chiedere agli altri cosa mangiano a colazione e cosa preferiscono.",
+        "Fare semplici scelte e richieste in una situazione di colazione."
+      ],
+      "key_expressions": {
+        "我早上吃面包。": "La mattina mangio pane.",
+        "我早餐喝牛奶。": "A colazione bevo latte.",
+        "我喜欢吃鸡蛋。": "Mi piace mangiare le uova.",
+        "我不喜欢喝咖啡。": "Non mi piace bere il caffè.",
+        "你早餐吃什么？": "Che cosa mangi a colazione?",
+        "你想吃包子还是面包？": "Preferisci i baozi o il pane?",
+        "我要一个鸡蛋和一杯牛奶。": "Vorrei un uovo e un bicchiere di latte.",
+        "我今天在家吃早餐。": "Oggi faccio colazione a casa."
+      },
+      "integrated_task": "Descrivi la tua colazione abituale."
+    }
   },
   "metadata": {
     "created_at": null,
-    "updated_at": null,
-    "version": 1,
-    "source": "CL-curriculum-framework"
+    "updated_at": "2026-11-15T18:02:55.572065+00:00",
+    "version": 2,
+    "source": "CL-curriculum-framework",
+    "content_status": "initial_complete",
+    "review_note": "首次内容写入完成；待教学质量审核。"
   },
   "title_status": "confirmed"
 }

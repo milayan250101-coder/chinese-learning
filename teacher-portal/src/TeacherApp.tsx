@@ -169,54 +169,11 @@ const clCourseLoaders = import.meta.glob<CLCourseDetail>(
   { eager: false, import: 'default' },
 )
 
-function clDisplayText(value: unknown): string {
-  if (typeof value === 'string') return value.trim()
-  if (typeof value === 'number') return String(value)
-  if (Array.isArray(value)) {
-    return value.map(clDisplayText).filter(Boolean).join('；')
-  }
-  if (value && typeof value === 'object') {
-    return Object.entries(value as Record<string, unknown>)
-      .filter(([key]) => !['word_id', 'is_key_vocabulary'].includes(key))
-      .map(([key, item]) => {
-        const text = clDisplayText(item)
-        return text ? `${key}: ${text}` : ''
-      })
-      .filter(Boolean)
-      .join('；')
-  }
-  return ''
-}
-
-function CLDetailList({
-  title,
-  items,
-}: {
-  title: string
-  items?: unknown[]
-}) {
-  const visibleItems = (items ?? [])
-    .map(clDisplayText)
-    .filter(Boolean)
-
-  if (visibleItems.length === 0) return null
-
-  return (
-    <section className="cl-detail-section">
-      <h3>{title}</h3>
-      <ul>
-        {visibleItems.map((item, index) => (
-          <li key={`${title}-${index}`}>{item}</li>
-        ))}
-      </ul>
-    </section>
-  )
-}
-
 type PageId =
   | 'home'
   | 'curriculum'
   | 'students'
+  | 'upload'
   | 'whiteboard'
   | 'calendar'
   | 'hsk'
@@ -228,6 +185,7 @@ type PageId =
 const navigation = [
   { id: 'curriculum', label: '我的课程体系', en: 'Curriculum', icon: BookOpen },
   { id: 'students', label: '学生管理', en: 'Students', icon: Users },
+  { id: 'upload', label: '统一资料上传', en: 'Upload Center', icon: Upload },
   { id: 'whiteboard', label: '教学白板', en: 'Whiteboard', icon: NotebookPen },
   { id: 'calendar', label: '日历与课程安排', en: 'Calendar', icon: CalendarDays },
   { id: 'hsk', label: 'HSK 搜索', en: 'HSK Search', icon: Search },
@@ -382,6 +340,7 @@ function HomePage({
   notesLoading,
   notesError,
   onNavigate,
+  onOpenStudent,
 }: {
   teacher: Teacher | null
   students: Student[]
@@ -391,8 +350,11 @@ function HomePage({
   notesLoading: boolean
   notesError: string
   onNavigate: (page: PageId) => void
+  onOpenStudent: (studentId: number | string) => void
 }) {
   const today = new Date()
+  const hour = today.getHours()
+  const greeting = hour < 6 ? '夜深了' : hour < 12 ? '早上好' : hour < 18 ? '下午好' : '晚上好'
   const dateText = new Intl.DateTimeFormat('zh-CN', {
     year: 'numeric',
     month: 'long',
@@ -443,7 +405,7 @@ function HomePage({
       <section className="welcome-banner">
         <div>
           <span className="eyebrow">TEACHER DASHBOARD</span>
-          <h1>早上好，{teacher?.username || '老师'} <span>☀️</span></h1>
+          <h1>{greeting}，{teacher?.username || '老师'} <span>☀️</span></h1>
           <p>今天也为学生创造一点新的进步吧。</p>
           <div className="welcome-date"><CalendarDays size={15} /> {dateText}</div>
         </div>
@@ -534,7 +496,20 @@ function HomePage({
                 : 0
 
               return (
-                <div className="student-progress-row" key={student.id}>
+                <div
+                  className="student-progress-row dashboard-clickable-row"
+                  key={student.id}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => onOpenStudent(student.id)}
+                  onKeyDown={event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault()
+                      onOpenStudent(student.id)
+                    }
+                  }}
+                  title={`打开${student.display_name || '该学生'}的档案`}
+                >
                   <div className="student-progress-avatar">
                     {(student.display_name || '学').slice(0, 1)}
                   </div>
@@ -581,13 +556,26 @@ function HomePage({
         {notesLoading ? (
           <div className="loading-state">正在读取课堂资料…</div>
         ) : notes.length === 0 ? (
-          <EmptyState title="暂无课堂资料记录" description="学生上传课堂资料后，资料及分析状态会显示在这里。" />
+          <EmptyState title="暂无课堂资料记录" description="老师上传学生的课堂资料后，资料及分析状态会显示在这里。" />
         ) : (
           <div className="recent-note-list">
             {notes.slice(0, 6).map(note => {
               const status = note.analysis_status || 'not_started'
               return (
-                <div className="recent-note-row" key={`${note.student_id}-${note.id}`}>
+                <div
+                  className="recent-note-row dashboard-clickable-row"
+                  key={`${note.student_id}-${note.id}`}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => onOpenStudent(note.student_id)}
+                  onKeyDown={event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault()
+                      onOpenStudent(note.student_id)
+                    }
+                  }}
+                  title="打开所属学生档案"
+                >
                   <div className="recent-note-icon"><FileText size={19} /></div>
                   <div className="recent-note-main">
                     <strong>{note.title || note.filename || '未命名资料'}</strong>
@@ -619,8 +607,8 @@ function HomePage({
           <button onClick={() => onNavigate('whiteboard')}>
             <NotebookPen size={20} /><span><strong>教学白板</strong><small>进入白板工作区（建设中）</small></span><ArrowRight size={16} />
           </button>
-          <button disabled title="React 教师端上传入口尚未接入">
-            <Upload size={20} /><span><strong>上传课堂资料</strong><small>上传入口接入中</small></span><LockKeyhole size={15} />
+          <button onClick={() => onNavigate('students')}>
+            <Upload size={20} /><span><strong>上传课堂资料</strong><small>进入学生档案后选择学生并上传</small></span><ArrowRight size={16} />
           </button>
         </div>
       </section>
@@ -628,7 +616,15 @@ function HomePage({
   )
 }
 
-function StudentsPage({ token }: { token: string }) {
+function StudentsPage({
+  token,
+  initialStudentId,
+  onClearInitialStudentId,
+}: {
+  token: string
+  initialStudentId: number | string | null
+  onClearInitialStudentId: () => void
+}) {
   const [students, setStudents] = useState<Student[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -728,6 +724,14 @@ function StudentsPage({ token }: { token: string }) {
       setDetailLoading(false)
     }
   }
+
+  useEffect(() => {
+    if (loading || initialStudentId == null || selectedStudent) return
+    const target = students.find(
+      student => String(student.id) === String(initialStudentId),
+    )
+    if (target) void openStudent(target)
+  }, [loading, students, initialStudentId, selectedStudent])
 
   function resetForm() {
     setName('')
@@ -946,6 +950,7 @@ function StudentsPage({ token }: { token: string }) {
         setCredentials(null)
         setNotice('')
         setActionError('')
+        onClearInitialStudentId()
       }}
     >
       <ArrowLeft size={15} /> 返回学生列表
@@ -1394,7 +1399,187 @@ function StudentsPage({ token }: { token: string }) {
   )
 }
 
-function CurriculumPage({ token }: { token: string }) {
+
+type CLFolderEntry = {
+  label: string
+  value: unknown
+}
+
+const clFolderFieldLabels: Record<string, string> = {
+  simplified: '简体汉字',
+  traditional: '繁体汉字',
+  pinyin: '拼音',
+  part_of_speech: '词性',
+  definition_zh: '中文释义',
+  category: '类别',
+  collocations: '常见搭配',
+  expression: '核心表达',
+  meaning_zh: '表达释义',
+  examples: '例句',
+  pattern: '句型结构',
+  explanation: '语法说明',
+  title: '标题',
+  scene: '场景',
+  lines: '对话内容',
+  speaker: '说话人',
+  activity: '活动名称',
+  type: '练习类型',
+  instructions: '任务说明',
+  expected_output: '预期表达',
+  word_id: '词汇编号',
+  is_key_vocabulary: '是否为重点词汇',
+}
+
+function clFolderHasContent(value: unknown): boolean {
+  if (value === null || value === undefined) return false
+  if (typeof value === 'string') return value.trim().length > 0
+  if (typeof value === 'number' || typeof value === 'boolean') return true
+
+  if (Array.isArray(value)) {
+    return value.some(item => clFolderHasContent(item))
+  }
+
+  if (typeof value === 'object') {
+    return Object.values(value as Record<string, unknown>)
+      .some(item => clFolderHasContent(item))
+  }
+
+  return false
+}
+
+function clFolderEntries(value: unknown): CLFolderEntry[] {
+  if (Array.isArray(value)) {
+    return value
+      .map((item, index) => ({
+        label: clFolderItemLabel(item, index),
+        value: item,
+      }))
+      .filter(item => clFolderHasContent(item.value))
+  }
+
+  if (value && typeof value === 'object') {
+    return Object.entries(value as Record<string, unknown>)
+      .filter(([, item]) => clFolderHasContent(item))
+      .map(([key, item]) => ({
+        label: clFolderFieldLabels[key] ?? key,
+        value: item,
+      }))
+  }
+
+  return []
+}
+
+function clFolderItemLabel(value: unknown, index: number): string {
+  if (value && typeof value === 'object' && !Array.isArray(value)) {
+    const item = value as Record<string, unknown>
+    const candidates = [
+      item.simplified,
+      item.expression,
+      item.pattern,
+      item.title,
+      item.activity,
+      item.name,
+      item.word,
+      item.content,
+    ]
+
+    const label = candidates.find(
+      candidate => typeof candidate === 'string' && candidate.trim()
+    )
+
+    if (typeof label === 'string') return label
+  }
+
+  if (typeof value === 'string') {
+    return value.length > 36 ? `${value.slice(0, 36)}…` : value
+  }
+
+  return `第 ${index + 1} 项`
+}
+
+function CLFolderLeaf({ value }: { value: unknown }) {
+  if (value === null || value === undefined) return null
+
+  if (typeof value === 'string' || typeof value === 'number') {
+    return <p className="cl-folder-leaf-text">{String(value)}</p>
+  }
+
+  if (typeof value === 'boolean') {
+    return <p className="cl-folder-leaf-text">{value ? '是' : '否'}</p>
+  }
+
+  const entries = clFolderEntries(value)
+
+  if (entries.length === 0) return null
+
+  return (
+    <div className="cl-folder-content-tree">
+      {entries.map((entry, index) => (
+        <div className="cl-folder-content-entry" key={`${entry.label}-${index}`}>
+          <strong>{entry.label}</strong>
+          <CLFolderLeaf value={entry.value} />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function CLCourseFolderBrowser({
+  detail,
+  vocabulary,
+}: {
+  detail: CLCourseDetail
+  vocabulary: CLVocabulary[]
+}) {
+  const sections: CLFolderEntry[] = [
+    { label: '教学目标', value: detail.learning_objectives },
+    { label: '主题词汇', value: vocabulary },
+    { label: '核心表达', value: detail.core_expressions },
+    { label: '例句、句型与语法', value: detail.sentence_patterns },
+    { label: '课堂对话', value: detail.dialogues },
+    { label: '课堂练习', value: detail.classroom_practice },
+    { label: '综合表达任务', value: detail.integrated_expression_task },
+    { label: '教师备注', value: detail.teacher_notes },
+    { label: '课程完成标准', value: detail.completion_criteria },
+    { label: '教学资源', value: detail.resources },
+  ].filter(section => clFolderHasContent(section.value))
+
+  return (
+    <section className="cl-folder-browser">
+      <div className="cl-folder-browser-heading">
+        <div>
+          <h3>课程内容目录</h3>
+          <p>点击分类前的小三角，直接展开或收起该部分的完整内容。</p>
+        </div>
+      </div>
+
+      {sections.length > 0 ? (
+        <div className="cl-folder-accordion">
+          {sections.map((section, index) => (
+            <details
+              className="cl-folder-accordion-item"
+              key={`${section.label}-${index}`}
+            >
+              <summary>
+                <span>{section.label}</span>
+                <span className="cl-folder-accordion-hint">展开 / 收起</span>
+              </summary>
+              <div className="cl-folder-accordion-content">
+                <CLFolderLeaf value={section.value} />
+              </div>
+            </details>
+          ))}
+        </div>
+      ) : (
+        <div className="cl-empty-detail">
+          当前课程尚未填写教学内容。
+        </div>
+      )}
+    </section>
+  )
+}
+
+function CLSeriesPage({ token, onBack }: { token: string; onBack: () => void }) {
   const [courseSearch, setCourseSearch] = useState('')
   const [students, setStudents] = useState<Student[]>([])
   const [studentsLoading, setStudentsLoading] = useState(false)
@@ -1644,96 +1829,15 @@ function CurriculumPage({ token }: { token: string }) {
   return (
     <>
       <PageHeading
-        title="我的课程体系"
-        subtitle={`CL 中文主题课程 · ${clCatalog.total_courses} 门课程 · ${clCatalog.module_count} 个模块`}
+        title="原创中文课程目录"
+        subtitle={`CL 系列 · ${clCatalog.total_courses} 门课程 · ${clCatalog.module_count} 个模块`}
       />
 
-      <section className="course-series-framework">
-        <div className="course-series-heading">
-          <div>
-            <span className="course-series-eyebrow">CHINESE COURSE SYSTEM</span>
-            <h2>中文课程系列</h2>
-            <p>统一课程总体系 · 主题课程与语法课程</p>
-          </div>
-          <BookOpen size={24} />
-        </div>
-
-        <div className="course-series-grid">
-          <article className="course-series-card">
-            <div className="course-series-card-heading">
-              <span className="course-series-code">CL SERIES</span>
-              <span className="course-series-tag">主题课程</span>
-            </div>
-
-            <h3>CL 系列</h3>
-            <p className="course-series-description">
-              中文主题词汇与情景课程
-            </p>
-
-            <div className="course-series-number">
-              <strong>{clCatalog.total_courses}</strong>
-              <span>门课程</span>
-            </div>
-
-            <div className="course-series-divider" />
-
-            <div className="course-series-facts">
-              <div>
-                <strong>{clCatalog.module_count}</strong>
-                <span>课程模块</span>
-              </div>
-              <div>
-                <strong>CL-01 — CL-114</strong>
-                <span>课程编号范围</span>
-              </div>
-            </div>
-
-            <p className="course-series-note">
-              基础入门、描述与比较、城市生活、日常生活、工作与职业等主题。
-            </p>
-
-            <span className="course-series-status">
-              已接入现有课程目录
-            </span>
-          </article>
-
-          <article className="course-series-card">
-            <div className="course-series-card-heading">
-              <span className="course-series-code">G SERIES</span>
-              <span className="course-series-tag">语法课程</span>
-            </div>
-
-            <h3>G 系列</h3>
-            <p className="course-series-description">
-              中文语法知识与专项教学课程
-            </p>
-
-            <div className="course-series-number">
-              <strong>G</strong>
-              <span>独立语法编号</span>
-            </div>
-
-            <div className="course-series-divider" />
-
-            <div className="course-series-groups">
-              <div><span>01</span><strong>第一部分：词语类</strong></div>
-              <div><span>02</span><strong>第二部分：补语类</strong></div>
-              <div><span>03</span><strong>第三部分：句式类</strong></div>
-              <div><span>04</span><strong>第四部分：复句类</strong></div>
-              <div><span>+</span><strong>补充一、补充二、补充三</strong></div>
-              <div><span>+</span><strong>补充四及后续扩展</strong></div>
-            </div>
-
-            <p className="course-series-note">
-              保留四大基础部分，统一管理全部补充章节，后续继续扩展。
-            </p>
-
-            <span className="course-series-status course-series-status-pending">
-              课程框架已建立 · 内容待接入
-            </span>
-          </article>
-        </div>
-      </section>
+      <div className="course-series-subnav">
+        <button type="button" className="course-series-back" onClick={onBack}>
+          ← 返回我的课程体系
+        </button>
+      </div>
 
       <section className="content-card cl-curriculum-overview">
         <div className="card-heading">
@@ -1826,6 +1930,10 @@ function CurriculumPage({ token }: { token: string }) {
                         setSelectedModuleId(course.module_id)
                         setSelectedCourseId(course.course_id)
                         setSelectedGroupIndex(null)
+                        document.getElementById('cl-detail-panel')?.scrollIntoView({
+                          behavior: 'smooth',
+                          block: 'start',
+                        })
                       }}
                     >
                       <span className="cl-course-number">{course.course_id}</span>
@@ -1876,7 +1984,13 @@ function CurriculumPage({ token }: { token: string }) {
                     className={`cl-course-button ${
                       selectedCourseId === course.course_id ? 'active' : ''
                     }`}
-                    onClick={() => setSelectedCourseId(course.course_id)}
+                    onClick={() => {
+                      setSelectedCourseId(course.course_id)
+                      document.getElementById('cl-detail-panel')?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      })
+                    }}
                   >
                     <span className="cl-course-number">{course.course_id}</span>
                     <span className="cl-course-title">{course.title}</span>
@@ -1890,7 +2004,7 @@ function CurriculumPage({ token }: { token: string }) {
         </section>
       </div>
 
-      <section className="content-card cl-detail-panel">
+      <section id="cl-detail-panel" className="content-card cl-detail-panel">
         <div className="card-heading">
           <div>
             <h2>
@@ -2011,64 +2125,10 @@ function CurriculumPage({ token }: { token: string }) {
               <span>课程状态：{detail.status === 'draft' ? '草稿' : detail.status}</span>
             </div>
 
-            <CLDetailList title="教学目标" items={detail.learning_objectives} />
-
-            {visibleVocabulary.length > 0 && (
-              <section className="cl-detail-section">
-                <h3>主题词汇</h3>
-                <div className="cl-vocabulary-list">
-                  {visibleVocabulary.map((word, index) => (
-                    <article className="cl-vocabulary-item" key={`${word.word_id || word.simplified}-${index}`}>
-                      <strong>{word.simplified || word.traditional}</strong>
-                      {word.traditional && word.traditional !== word.simplified
-                        ? <span>{word.traditional}</span>
-                        : null}
-                      {word.pinyin && <span>{word.pinyin}</span>}
-                      {word.part_of_speech && <span>{word.part_of_speech}</span>}
-                      {word.definition_zh && <p>{word.definition_zh}</p>}
-                      {word.category && <small>{word.category}</small>}
-                      {word.collocations?.filter(Boolean).length
-                        ? <p>常见搭配：{word.collocations.filter(Boolean).join('、')}</p>
-                        : null}
-                    </article>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            <CLDetailList title="核心表达" items={detail.core_expressions} />
-            <CLDetailList title="句型与语法" items={detail.sentence_patterns} />
-            <CLDetailList title="课堂对话" items={detail.dialogues} />
-            <CLDetailList title="课堂练习" items={detail.classroom_practice} />
-
-            {(detail.integrated_expression_task?.instructions ||
-              detail.integrated_expression_task?.expected_output) && (
-              <section className="cl-detail-section">
-                <h3>综合表达任务</h3>
-                {detail.integrated_expression_task.instructions && (
-                  <p>{detail.integrated_expression_task.instructions}</p>
-                )}
-                {detail.integrated_expression_task.expected_output && (
-                  <p>{detail.integrated_expression_task.expected_output}</p>
-                )}
-              </section>
-            )}
-
-            <CLDetailList title="教师备注" items={detail.teacher_notes} />
-            <CLDetailList title="课程完成标准" items={detail.completion_criteria} />
-            <CLDetailList title="教学资源" items={detail.resources} />
-
-            {!detail.learning_objectives?.some(item => clDisplayText(item)) &&
-              visibleVocabulary.length === 0 &&
-              !(detail.core_expressions ?? []).some(item => clDisplayText(item)) &&
-              !(detail.sentence_patterns ?? []).some(item => clDisplayText(item)) &&
-              !(detail.dialogues ?? []).some(item => clDisplayText(item)) &&
-              !(detail.classroom_practice ?? []).some(item => clDisplayText(item)) && (
-                <div className="cl-empty-detail">
-                  这门课程的详情模板已经建立，实际教学内容尚未填写。
-                  课程编号、名称和所属模块已保留。
-                </div>
-              )}
+            <CLCourseFolderBrowser
+              detail={detail}
+              vocabulary={visibleVocabulary}
+            />
           </>
         ) : (
           <EmptyState title="请选择一门课程" description="从上方课程列表中选择课程，查看它的详情。" />
@@ -2078,52 +2138,416 @@ function CurriculumPage({ token }: { token: string }) {
   )
 }
 
-function HSKPage({ token }: { token: string }) {
-  const [keyword, setKeyword] = useState('')
-  const [results, setResults] = useState<Vocabulary[]>([])
-  const [searched, setSearched] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
 
-  async function search(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    if (!keyword.trim()) return
-    setLoading(true)
-    setError('')
-    setSearched(true)
-    try {
-      const params = new URLSearchParams({ keyword: keyword.trim(), page: '1', page_size: '50' })
-      const data = await apiRequest<unknown>(`/hsk/vocabulary/?${params}`, token)
-      setResults(getItems<Vocabulary>(data))
-    } catch (err) {
-      setError(err instanceof Error ? err.message : '搜索失败')
-    } finally {
-      setLoading(false)
+type HSKGrammarPoint = {
+  id?: number
+  level?: string | number
+  category?: string
+  category_name?: string
+  subcategory?: string
+  content?: string
+}
+
+function getLevelList(data: unknown): string[] {
+  if (Array.isArray(data)) {
+    return data.map(String)
+  }
+
+  if (data && typeof data === 'object') {
+    const object = data as { levels?: unknown }
+    if (Array.isArray(object.levels)) {
+      return object.levels.map(String)
     }
   }
 
+  return []
+}
+
+function getTotal(data: unknown): number {
+  if (data && typeof data === 'object') {
+    const total = (data as { total?: unknown }).total
+    if (typeof total === 'number') return total
+  }
+  return 0
+}
+
+function HSKSearchPanel({ token }: { token: string }) {
+  const [keyword, setKeyword] = useState('')
+  const [vocabulary, setVocabulary] = useState<Vocabulary[]>([])
+  const [grammar, setGrammar] = useState<HSKGrammarPoint[]>([])
+  const [searched, setSearched] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [vocabularyError, setVocabularyError] = useState('')
+  const [grammarError, setGrammarError] = useState('')
+
+  async function search(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const term = keyword.trim()
+    if (!term) return
+
+    setLoading(true)
+    setSearched(true)
+    setVocabularyError('')
+    setGrammarError('')
+    setVocabulary([])
+    setGrammar([])
+
+    const params = new URLSearchParams({
+      keyword: term,
+      page: '1',
+      page_size: '50',
+    })
+
+    const [vocabularyResult, grammarResult] = await Promise.all([
+      apiRequest<unknown>(`/hsk/vocabulary/?${params}`, token)
+        .then(data => ({
+          items: getItems<Vocabulary>(data),
+          error: '',
+        }))
+        .catch(err => ({
+          items: [] as Vocabulary[],
+          error: err instanceof Error ? err.message : '词汇搜索失败',
+        })),
+      apiRequest<unknown>(`/hsk/grammar/?${params}`, token)
+        .then(data => ({
+          items: getItems<HSKGrammarPoint>(data),
+          error: '',
+        }))
+        .catch(err => ({
+          items: [] as HSKGrammarPoint[],
+          error: err instanceof Error ? err.message : '语法搜索失败',
+        })),
+    ])
+
+    setVocabulary(vocabularyResult.items)
+    setGrammar(grammarResult.items)
+    setVocabularyError(vocabularyResult.error)
+    setGrammarError(grammarResult.error)
+    setLoading(false)
+  }
+
   return (
-    <>
-      <PageHeading title="HSK 搜索" subtitle="搜索 HSK 词汇，后续可扩展语法和等级筛选。" />
-      <section className="content-card">
-        <form className="search-form" onSubmit={search}>
-          <Search size={19} />
-          <input value={keyword} onChange={event => setKeyword(event.target.value)} placeholder="输入汉字、拼音或英文释义…" />
-          <button className="primary-button" disabled={loading}>{loading ? '搜索中…' : '搜索'}</button>
-        </form>
-        {error && <div className="error-message">{error}</div>}
-        {searched && !loading && !error && results.length === 0 && <EmptyState title="没有找到匹配词汇" description="请尝试其他汉字、拼音或英文关键词。" />}
-        {results.length > 0 && (
+    <section className="content-card">
+      <div className="card-heading">
+        <div>
+          <h2>HSK 统一搜索</h2>
+          <p>同时搜索 HSK 词汇与语法知识点，结果按类型和等级区分。</p>
+        </div>
+      </div>
+
+      <form className="search-form" onSubmit={search}>
+        <Search size={19} />
+        <input
+          value={keyword}
+          onChange={event => setKeyword(event.target.value)}
+          placeholder="输入汉字、拼音、英文释义或语法关键词…"
+        />
+        <button className="primary-button" disabled={loading || !keyword.trim()}>
+          {loading ? '搜索中…' : '搜索'}
+        </button>
+      </form>
+
+      {vocabularyError && (
+        <div className="error-message">词汇搜索失败：{vocabularyError}</div>
+      )}
+      {grammarError && (
+        <div className="error-message">语法搜索失败：{grammarError}</div>
+      )}
+
+      {searched && !loading && vocabulary.length === 0 && grammar.length === 0 &&
+        !vocabularyError && !grammarError && (
+          <EmptyState
+            title="没有找到匹配内容"
+            description="请尝试其他汉字、拼音、英文释义或语法关键词。"
+          />
+        )}
+
+      {vocabulary.length > 0 && (
+        <div className="hsk-search-results">
+          <div className="card-heading">
+            <div>
+              <h3>词汇结果</h3>
+              <p>找到 {vocabulary.length} 条词汇（最多显示前 50 条）</p>
+            </div>
+          </div>
           <div className="data-table-wrap">
             <table className="data-table">
-              <thead><tr><th>汉字</th><th>拼音</th><th>英文</th><th>等级</th></tr></thead>
-              <tbody>{results.map((word, index) => (
-                <tr key={`${word.simplified}-${index}`}>
-                  <td><strong>{word.simplified || '—'}</strong>{word.traditional && word.traditional !== word.simplified ? <small className="traditional">{word.traditional}</small> : null}</td>
-                  <td>{word.pinyin || '—'}</td><td>{word.english || '—'}</td><td>{word.level || '—'}</td>
+              <thead>
+                <tr>
+                  <th>类型</th>
+                  <th>汉字</th>
+                  <th>拼音</th>
+                  <th>英文</th>
+                  <th>词性</th>
+                  <th>等级</th>
                 </tr>
-              ))}</tbody>
+              </thead>
+              <tbody>
+                {vocabulary.map((word, index) => (
+                  <tr key={`${word.level}-${word.simplified}-${index}`}>
+                    <td>词汇</td>
+                    <td>
+                      <strong>{word.simplified || '—'}</strong>
+                      {word.traditional && word.traditional !== word.simplified
+                        ? <small className="traditional">{word.traditional}</small>
+                        : null}
+                    </td>
+                    <td>{word.pinyin || '—'}</td>
+                    <td>{word.english || '—'}</td>
+                    <td>{word.part_of_speech || '—'}</td>
+                    <td>{word.level || '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
+          </div>
+        </div>
+      )}
+
+      {grammar.length > 0 && (
+        <div className="hsk-search-results">
+          <div className="card-heading">
+            <div>
+              <h3>语法结果</h3>
+              <p>找到 {grammar.length} 条语法知识点（最多显示前 50 条）</p>
+            </div>
+          </div>
+          <div className="data-table-wrap">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>类型</th>
+                  <th>语法知识点</th>
+                  <th>分类</th>
+                  <th>子分类</th>
+                  <th>等级</th>
+                </tr>
+              </thead>
+              <tbody>
+                {grammar.map((item, index) => (
+                  <tr key={item.id ?? `${item.level}-${item.content}-${index}`}>
+                    <td>语法</td>
+                    <td><strong>{item.content || '—'}</strong></td>
+                    <td>{item.category_name || item.category || '—'}</td>
+                    <td>{item.subcategory || '—'}</td>
+                    <td>{item.level || '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+    </section>
+  )
+}
+
+function HSKBrowsePage({
+  token,
+  folder,
+  onBack,
+}: {
+  token: string
+  folder: string
+  onBack: () => void
+}) {
+  const isVocabulary = folder === 'HSK 词汇'
+  const [levels, setLevels] = useState<string[]>([])
+  const [level, setLevel] = useState('')
+  const [items, setItems] = useState<(Vocabulary | HSKGrammarPoint)[]>([])
+  const [page, setPage] = useState(1)
+  const [total, setTotal] = useState(0)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    let active = true
+    const endpoint = isVocabulary
+      ? '/hsk/vocabulary/levels'
+      : '/hsk/grammar/levels'
+
+    apiRequest<unknown>(endpoint, token)
+      .then(data => {
+        if (active) setLevels(getLevelList(data))
+      })
+      .catch(err => {
+        if (active) {
+          setError(err instanceof Error ? err.message : '等级列表加载失败')
+        }
+      })
+
+    return () => {
+      active = false
+    }
+  }, [token, isVocabulary])
+
+  useEffect(() => {
+    let active = true
+    setLoading(true)
+    setError('')
+
+    const params = new URLSearchParams({
+      page: String(page),
+      page_size: '50',
+    })
+    if (level) params.set('level', level)
+
+    const endpoint = isVocabulary
+      ? `/hsk/vocabulary/?${params}`
+      : `/hsk/grammar/?${params}`
+
+    apiRequest<unknown>(endpoint, token)
+      .then(data => {
+        if (!active) return
+        setItems(
+          isVocabulary
+            ? getItems<Vocabulary>(data)
+            : getItems<HSKGrammarPoint>(data),
+        )
+        setTotal(getTotal(data))
+      })
+      .catch(err => {
+        if (active) {
+          setItems([])
+          setTotal(0)
+          setError(err instanceof Error ? err.message : '内容加载失败')
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false)
+      })
+
+    return () => {
+      active = false
+    }
+  }, [token, isVocabulary, level, page])
+
+  function changeLevel(value: string) {
+    setLevel(value)
+    setPage(1)
+  }
+
+  const pageCount = Math.max(1, Math.ceil(total / 50))
+
+  return (
+    <>
+      <div className="course-series-subnav">
+        <button type="button" className="course-series-back" onClick={onBack}>
+          ← 返回 HSK 系列目录
+        </button>
+      </div>
+
+      <PageHeading
+        title={folder}
+        subtitle={isVocabulary
+          ? '浏览现有 HSK 分级词汇数据。'
+          : '浏览现有 HSK 分级语法知识点。'}
+      />
+
+      <section className="content-card">
+        <div className="card-heading">
+          <div>
+            <h2>{folder}</h2>
+            <p>按现有数据等级筛选，每页显示 50 条。</p>
+          </div>
+        </div>
+
+        <div className="hsk-browse-toolbar">
+          <label htmlFor="hsk-level-filter">HSK 等级</label>
+          <select
+            id="hsk-level-filter"
+            value={level}
+            onChange={event => changeLevel(event.target.value)}
+          >
+            <option value="">全部等级</option>
+            {levels.map(item => (
+              <option value={item} key={item}>{item}</option>
+            ))}
+          </select>
+          <span>共 {total} 条</span>
+        </div>
+
+        {error && <div className="error-message">{error}</div>}
+        {loading && <p>正在加载…</p>}
+
+        {!loading && !error && items.length === 0 && (
+          <EmptyState
+            title="暂无内容"
+            description="当前筛选条件下没有可显示的数据。"
+          />
+        )}
+
+        {!loading && items.length > 0 && (
+          <div className="data-table-wrap">
+            {isVocabulary ? (
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>汉字</th>
+                    <th>繁体</th>
+                    <th>拼音</th>
+                    <th>英文</th>
+                    <th>词性</th>
+                    <th>等级</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(items as Vocabulary[]).map((word, index) => (
+                    <tr key={`${word.level}-${word.simplified}-${index}`}>
+                      <td><strong>{word.simplified || '—'}</strong></td>
+                      <td>{word.traditional || '—'}</td>
+                      <td>{word.pinyin || '—'}</td>
+                      <td>{word.english || '—'}</td>
+                      <td>{word.part_of_speech || '—'}</td>
+                      <td>{word.level || '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>语法知识点</th>
+                    <th>分类</th>
+                    <th>子分类</th>
+                    <th>等级</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(items as HSKGrammarPoint[]).map((item, index) => (
+                    <tr key={item.id ?? `${item.level}-${index}`}>
+                      <td><strong>{item.content || '—'}</strong></td>
+                      <td>{item.category_name || item.category || '—'}</td>
+                      <td>{item.subcategory || '—'}</td>
+                      <td>{item.level || '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
+        )}
+
+        {!loading && total > 0 && (
+          <div className="hsk-pagination">
+            <button
+              type="button"
+              className="course-series-back"
+              disabled={page <= 1}
+              onClick={() => setPage(value => Math.max(1, value - 1))}
+            >
+              ← 上一页
+            </button>
+            <span>第 {page} / {pageCount} 页</span>
+            <button
+              type="button"
+              className="course-series-back"
+              disabled={page >= pageCount}
+              onClick={() => setPage(value => Math.min(pageCount, value + 1))}
+            >
+              下一页 →
+            </button>
           </div>
         )}
       </section>
@@ -2131,7 +2555,730 @@ function HSKPage({ token }: { token: string }) {
   )
 }
 
-function FrameworkPage({ page }: { page: Exclude<PageId, 'home' | 'curriculum' | 'students' | 'hsk'> }) {
+function CurriculumPage({ token }: { token: string }) {
+  const [selectedSeries, setSelectedSeries] = useState<
+    'home' | 'cl' | 'g' | 'hsk'
+  >('home')
+  const [selectedFolder, setSelectedFolder] = useState('')
+
+  const goHome = () => {
+    setSelectedSeries('home')
+    setSelectedFolder('')
+  }
+
+  if (selectedSeries === 'cl') {
+    return <CLSeriesPage token={token} onBack={goHome} />
+  }
+
+  return (
+    <>
+      {selectedSeries === 'home' ? (
+        <>
+          <PageHeading
+            title="我的课程体系"
+            subtitle="统一管理原创中文课程、语法课程与HSK课程"
+          />
+          <section className="course-series-framework">
+            <div className="course-series-heading">
+              <div>
+                <span className="course-series-eyebrow">CHINESE COURSE SYSTEM</span>
+                <h2>中文课程系列</h2>
+                <p>请选择一个课程系列进入目录</p>
+              </div>
+              <BookOpen size={24} />
+            </div>
+
+            <div className="course-series-entry-grid">
+              <button
+                type="button"
+                className="course-series-entry-button"
+                onClick={() => setSelectedSeries('cl')}
+              >
+                <span className="course-series-code">CL SERIES</span>
+                <strong>CL 系列</strong>
+                <span>原创中文主题课程 · 114门课程</span>
+                <span className="course-series-entry-action">进入课程目录 →</span>
+              </button>
+
+              <button
+                type="button"
+                className="course-series-entry-button"
+                onClick={() => {
+                  setSelectedSeries('g')
+                  setSelectedFolder('')
+                }}
+              >
+                <span className="course-series-code">G SERIES</span>
+                <strong>G 系列</strong>
+                <span>中文语法知识与专项教学课程</span>
+                <span className="course-series-entry-action">进入语法目录 →</span>
+              </button>
+
+              <button
+                type="button"
+                className="course-series-entry-button"
+                onClick={() => {
+                  setSelectedSeries('hsk')
+                  setSelectedFolder('')
+                }}
+              >
+                <span className="course-series-code">HSK SERIES</span>
+                <strong>HSK 系列</strong>
+                <span>HSK 分级词汇与语法课程</span>
+                <span className="course-series-entry-action">进入HSK目录 →</span>
+              </button>
+            </div>
+          </section>
+        </>
+      ) : (
+        <>
+          <PageHeading
+            title={selectedSeries === 'g' ? 'G 系列语法课程' : 'HSK 系列课程'}
+            subtitle="课程体系目录"
+          />
+          <div className="course-series-subnav">
+            <button type="button" className="course-series-back" onClick={goHome}>
+              ← 返回我的课程体系
+            </button>
+          </div>
+
+          {selectedSeries === 'g' ? (
+            <section className="content-card">
+              <div className="card-heading">
+                <div>
+                  <h2>G 系列目录</h2>
+                  <p>保留现有语法分类框架，正式内容接入后逐层展开</p>
+                </div>
+              </div>
+              <div className="course-series-folder-grid">
+                {[
+                  '第一部分：词语类',
+                  '第二部分：补语类',
+                  '第三部分：句式类',
+                  '第四部分：复句类',
+                  '补充一、补充二、补充三',
+                  '补充四及后续扩展',
+                ].map(folder => (
+                  <button
+                    type="button"
+                    className="course-series-folder-button"
+                    key={folder}
+                    onClick={() => setSelectedFolder(folder)}
+                  >
+                    📁 {folder} →
+                  </button>
+                ))}
+              </div>
+              {selectedFolder && (
+                <p className="cl-folder-empty">
+                  {selectedFolder}：正式G系列教学内容尚未接入，当前仅保留目录框架。
+                </p>
+              )}
+            </section>
+          ) : selectedFolder === 'HSK 词汇' || selectedFolder === 'HSK 语法' ? (
+            <HSKBrowsePage
+              key={selectedFolder}
+              token={token}
+              folder={selectedFolder}
+              onBack={() => setSelectedFolder('')}
+            />
+          ) : (
+            <section className="content-card">
+              <div className="card-heading">
+                <div>
+                  <h2>HSK 系列目录</h2>
+                  <p>词汇与语法分开管理，共用HSK系列入口</p>
+                </div>
+              </div>
+              <div className="course-series-folder-grid">
+                {['HSK 词汇', 'HSK 语法'].map(folder => (
+                  <button
+                    type="button"
+                    className="course-series-folder-button"
+                    key={folder}
+                    onClick={() => setSelectedFolder(folder)}
+                  >
+                    📁 {folder} →
+                  </button>
+                ))}
+              </div>
+              <HSKSearchPanel token={token} />
+            </section>
+          )}
+        </>
+      )}
+    </>
+  )
+}
+
+function HSKPage({ token }: { token: string }) {
+  return (
+    <>
+      <PageHeading
+        title="HSK 搜索"
+        subtitle="统一搜索 HSK 词汇与语法知识点。"
+      />
+      <HSKSearchPanel token={token} />
+    </>
+  )
+}
+
+
+function UploadCenterPage({ token }: { token: string }) {
+  type UploadFolder = {
+    id: number
+    name: string
+    level_name?: string | null
+    sort_order?: number
+  }
+
+  const [students, setStudents] = useState<Student[]>([])
+  const [studentsLoading, setStudentsLoading] = useState(true)
+  const [studentId, setStudentId] = useState('')
+  const [folders, setFolders] = useState<UploadFolder[]>([])
+  const [foldersLoading, setFoldersLoading] = useState(false)
+
+  type UploadDocument = {
+    id: number
+    title?: string | null
+    filename?: string | null
+    document_type?: string | null
+    source_mode?: string | null
+    lesson_number?: number | null
+    created_at?: string | null
+    analysis_status?: string | null
+    folder_id?: number | null
+    link_title?: string | null
+  }
+
+  const [documents, setDocuments] = useState<UploadDocument[]>([])
+  const [documentsLoading, setDocumentsLoading] = useState(false)
+  const [newFolderName, setNewFolderName] = useState('')
+  const [creatingFolder, setCreatingFolder] = useState(false)
+
+  const [documentType, setDocumentType] = useState('class_notes')
+  const [sourceMode, setSourceMode] = useState('local_file')
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [lessonNumber, setLessonNumber] = useState('')
+  const [folderId, setFolderId] = useState('')
+  const [file, setFile] = useState<File | null>(null)
+  const [chineseText, setChineseText] = useState('')
+  const [pinyinText, setPinyinText] = useState('')
+  const [translationText, setTranslationText] = useState('')
+  const [linkUrl, setLinkUrl] = useState('')
+  const [linkTitle, setLinkTitle] = useState('')
+  const [linkProvider, setLinkProvider] = useState('whiteboard')
+
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const [notice, setNotice] = useState('')
+
+  useEffect(() => {
+    let active = true
+    setStudentsLoading(true)
+
+    apiRequest<unknown>('/students/?skip=0&limit=100', token)
+      .then(data => {
+        if (active) setStudents(getItems<Student>(data))
+      })
+      .catch(err => {
+        if (active) {
+          setError(err instanceof Error ? err.message : '学生列表加载失败')
+        }
+      })
+      .finally(() => {
+        if (active) setStudentsLoading(false)
+      })
+
+    return () => { active = false }
+  }, [token])
+
+  useEffect(() => {
+    if (!studentId) {
+      setFolders([])
+      setDocuments([])
+      setFolderId('')
+      return
+    }
+
+    let active = true
+    setFoldersLoading(true)
+    setDocumentsLoading(true)
+    setFolders([])
+    setDocuments([])
+    setFolderId('')
+    setError('')
+
+    async function loadStudentResources() {
+      try {
+        const data = await apiRequest<unknown>(
+          `/student-knowledge/students/${studentId}/folders`,
+          token,
+        )
+        if (active) setFolders(getItems<UploadFolder>(data))
+      } catch (err) {
+        if (active) {
+          setError(err instanceof Error ? err.message : '文件夹读取失败')
+        }
+      } finally {
+        if (active) setFoldersLoading(false)
+      }
+
+      try {
+        const data = await apiRequest<unknown>(
+          `/student-knowledge/students/${studentId}/documents`,
+          token,
+        )
+        if (active) setDocuments(getItems<UploadDocument>(data))
+      } catch (err) {
+        if (active) {
+          setError(err instanceof Error ? err.message : '学生资料列表读取失败')
+        }
+      } finally {
+        if (active) setDocumentsLoading(false)
+      }
+    }
+
+    void loadStudentResources()
+    return () => { active = false }
+  }, [studentId, token])
+
+  async function createUploadFolder() {
+    const name = newFolderName.trim()
+    if (!studentId) {
+      setError('请先选择学生。')
+      return
+    }
+    if (!name) {
+      setError('请填写文件夹名称。')
+      return
+    }
+    if (name.length > 120) {
+      setError('文件夹名称不能超过120个字符。')
+      return
+    }
+
+    setCreatingFolder(true)
+    setError('')
+    setNotice('')
+
+    try {
+      await apiRequest<unknown>(
+        `/student-knowledge/students/${studentId}/folders?name=${encodeURIComponent(name)}`,
+        token,
+        { method: 'POST' },
+      )
+
+      const data = await apiRequest<unknown>(
+        `/student-knowledge/students/${studentId}/folders`,
+        token,
+      )
+      const refreshedFolders = getItems<UploadFolder>(data)
+      setFolders(refreshedFolders)
+
+      const created = refreshedFolders.find(folder => folder.name === name)
+      if (created) setFolderId(String(created.id))
+
+      setNewFolderName('')
+      setNotice(`文件夹“${name}”已创建。`)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '创建文件夹失败')
+    } finally {
+      setCreatingFolder(false)
+    }
+  }
+
+  function resetUploadFields() {
+    setTitle('')
+    setDescription('')
+    setLessonNumber('')
+    setFolderId('')
+    setFile(null)
+    setChineseText('')
+    setPinyinText('')
+    setTranslationText('')
+    setLinkUrl('')
+    setLinkTitle('')
+    const fileInput = document.getElementById('upload-center-file') as HTMLInputElement | null
+    if (fileInput) fileInput.value = ''
+  }
+
+  async function submitUpload(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (!studentId) {
+      setError('请先选择目标学生。')
+      return
+    }
+
+    if (sourceMode === 'local_file' && !file) {
+      setError('请先选择要上传的文件。')
+      return
+    }
+    if (sourceMode === 'pasted_text' && !chineseText.trim()) {
+      setError('请填写要保存的文字内容。')
+      return
+    }
+    if (sourceMode === 'external_link' && !linkUrl.trim()) {
+      setError('请填写外部链接。')
+      return
+    }
+
+    setBusy(true)
+    setError('')
+    setNotice('')
+
+    try {
+      const formData = new FormData()
+      formData.append('document_type', documentType)
+      formData.append('source_mode', sourceMode)
+
+      if (title.trim()) formData.append('title', title.trim())
+      if (description.trim()) formData.append('description', description.trim())
+      if (lessonNumber.trim()) formData.append('lesson_number', lessonNumber.trim())
+      if (folderId) formData.append('folder_id', folderId)
+
+      if (sourceMode === 'local_file' && file) {
+        formData.append('file', file)
+      }
+
+      if (sourceMode === 'pasted_text' || documentType === 'personalized_article') {
+        if (chineseText.trim()) formData.append('chinese_text', chineseText)
+        if (pinyinText.trim()) formData.append('pinyin_text', pinyinText)
+        if (translationText.trim()) formData.append('translation_text', translationText)
+      }
+
+      if (sourceMode === 'external_link') {
+        formData.append('link_url', linkUrl.trim())
+        if (linkTitle.trim()) formData.append('link_title', linkTitle.trim())
+        formData.append('link_provider', linkProvider)
+      }
+
+      await apiRequest<unknown>(
+        `/student-knowledge/students/${studentId}/documents`,
+        token,
+        { method: 'POST', body: formData },
+      )
+
+      const selected = students.find(s => String(s.id) === studentId)
+      setNotice(`资料已成功归档到 ${selected?.display_name || '所选学生'} 的资料库。`)
+      resetUploadFields()
+
+      try {
+        const refreshed = await apiRequest<unknown>(
+          `/student-knowledge/students/${studentId}/documents`,
+          token,
+        )
+        setDocuments(getItems<UploadDocument>(refreshed))
+      } catch {
+        setError('资料已经保存成功，但列表刷新失败。请重新选择学生或刷新页面查看。')
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '资料上传失败')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <>
+      <PageHeading
+        title="统一资料上传中心"
+        subtitle="先选择学生，再上传并归档资料。也可以从学生个人档案进入原有上传入口。"
+      />
+
+      <section className="content-card upload-center-card">
+        <div className="upload-center-intro">
+          <div className="upload-center-icon"><Upload size={22} /></div>
+          <div>
+            <h2>新增学生学习资料</h2>
+            <p>所有资料均归属于指定学生，可选关联等级文件夹和课程课次。</p>
+          </div>
+        </div>
+
+        <form className="upload-center-form" onSubmit={submitUpload}>
+          <label>
+            目标学生 <span>*</span>
+            <select
+              value={studentId}
+              onChange={event => setStudentId(event.target.value)}
+              required
+              disabled={studentsLoading}
+            >
+              <option value="">
+                {studentsLoading ? '正在读取学生列表…' : '请选择学生'}
+              </option>
+              {students.map(student => (
+                <option key={student.id} value={String(student.id)}>
+                  {student.display_name || student.student_code || `学生 ${student.id}`}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <div className="upload-center-grid">
+            <label>
+              资料用途 <span>*</span>
+              <select value={documentType} onChange={event => setDocumentType(event.target.value)}>
+                <option value="class_notes">学生课堂笔记</option>
+                <option value="meeting_record">会议记录 / Zoom 转录稿</option>
+                <option value="personalized_article">学生个性化文章</option>
+                <option value="other">其他学习材料</option>
+              </select>
+            </label>
+
+            <label>
+              输入方式 <span>*</span>
+              <select value={sourceMode} onChange={event => setSourceMode(event.target.value)}>
+                <option value="local_file">本地文件上传</option>
+                <option value="pasted_text">直接输入 / 粘贴文字</option>
+                <option value="external_link">白板 / 外部链接登记</option>
+              </select>
+            </label>
+          </div>
+
+          <div className="upload-center-grid">
+            <div className="upload-center-folder-field">
+              <label>
+                归档文件夹
+                <select
+                  value={folderId}
+                  onChange={event => setFolderId(event.target.value)}
+                  disabled={!studentId || foldersLoading}
+                >
+                  <option value="">
+                    {!studentId ? '请先选择学生' : foldersLoading ? '正在读取文件夹…' : '暂不关联文件夹'}
+                  </option>
+                  {folders.map(folder => (
+                    <option key={folder.id} value={String(folder.id)}>
+                      {folder.level_name ? `${folder.level_name} / ` : ''}{folder.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <div className="upload-center-new-folder">
+                <input
+                  value={newFolderName}
+                  onChange={event => setNewFolderName(event.target.value)}
+                  maxLength={120}
+                  placeholder="输入新文件夹名称"
+                  disabled={!studentId || creatingFolder}
+                  aria-label="新文件夹名称"
+                />
+                <button
+                  type="button"
+                  className="students-secondary-button"
+                  onClick={createUploadFolder}
+                  disabled={!studentId || creatingFolder || !newFolderName.trim()}
+                >
+                  <Plus size={14} />
+                  {creatingFolder ? '创建中…' : '新建文件夹'}
+                </button>
+              </div>
+            </div>
+
+            <label>
+              课程课次（选填）
+              <input
+                type="number"
+                min="1"
+                value={lessonNumber}
+                onChange={event => setLessonNumber(event.target.value)}
+                placeholder="例如：12"
+              />
+            </label>
+          </div>
+
+          <label>
+            资料名称
+            <input
+              value={title}
+              onChange={event => setTitle(event.target.value)}
+              maxLength={255}
+              placeholder="例如：第 12 课课堂笔记 / Zoom 会议记录"
+            />
+          </label>
+
+          {sourceMode === 'local_file' && (
+            <label>
+              选择文件（TXT、PDF、DOCX，最大 10MB） <span>*</span>
+              <input
+                id="upload-center-file"
+                type="file"
+                accept=".txt,.pdf,.docx"
+                onChange={event => setFile(event.target.files?.[0] || null)}
+              />
+              {file && <small>已选择：{file.name}</small>}
+            </label>
+          )}
+
+          {sourceMode === 'pasted_text' && (
+            <label>
+              粘贴文字内容 <span>*</span>
+              <textarea
+                rows={8}
+                value={chineseText}
+                onChange={event => setChineseText(event.target.value)}
+                placeholder={documentType === 'meeting_record'
+                  ? '粘贴会议记录或 Zoom 转录稿…'
+                  : '在这里粘贴课堂笔记或学习材料…'}
+              />
+            </label>
+          )}
+
+          {documentType === 'personalized_article' && (
+            <div className="upload-center-article-fields">
+              <h3>个性化文章内容</h3>
+              <label>
+                中文正文
+                <textarea
+                  rows={6}
+                  value={chineseText}
+                  onChange={event => setChineseText(event.target.value)}
+                  placeholder="输入或粘贴中文文章…"
+                />
+              </label>
+              <label>
+                拼音
+                <textarea
+                  rows={4}
+                  value={pinyinText}
+                  onChange={event => setPinyinText(event.target.value)}
+                  placeholder="输入对应拼音…"
+                />
+              </label>
+              <label>
+                翻译
+                <textarea
+                  rows={4}
+                  value={translationText}
+                  onChange={event => setTranslationText(event.target.value)}
+                  placeholder="输入学生使用的语言翻译…"
+                />
+              </label>
+            </div>
+          )}
+
+          {sourceMode === 'external_link' && (
+            <div className="upload-center-grid">
+              <label>
+                链接平台
+                <select value={linkProvider} onChange={event => setLinkProvider(event.target.value)}>
+                  <option value="whiteboard">教学白板</option>
+                  <option value="zoom">Zoom</option>
+                  <option value="other">其他平台</option>
+                </select>
+              </label>
+              <label>
+                链接标题
+                <input
+                  value={linkTitle}
+                  onChange={event => setLinkTitle(event.target.value)}
+                  placeholder="链接或白板名称"
+                />
+              </label>
+              <label className="upload-center-full">
+                外部链接 <span>*</span>
+                <input
+                  type="url"
+                  value={linkUrl}
+                  onChange={event => setLinkUrl(event.target.value)}
+                  placeholder="https://…"
+                />
+              </label>
+            </div>
+          )}
+
+          <label>
+            资料备注
+            <textarea
+              rows={3}
+              value={description}
+              onChange={event => setDescription(event.target.value)}
+              placeholder="可填写资料说明、来源或教学备注…"
+            />
+          </label>
+
+          <div className="upload-center-drive">
+            <div>
+              <strong>Google Drive 云端导入</strong>
+              <p>后续接入 OAuth 授权和文件选择。目前尚未连接，不会自动读取云端文件。</p>
+            </div>
+            <span>后续接入</span>
+          </div>
+
+          {error && <div className="error-message">{error}</div>}
+          {notice && <div className="students-notice">{notice}</div>}
+
+          <div className="upload-center-actions">
+            <button className="primary-button" type="submit" disabled={busy || !studentId}>
+              {busy ? '正在保存资料…' : '上传并归档资料'}
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section className="content-card upload-center-documents">
+        <div className="upload-center-documents-heading">
+          <div>
+            <h2>已归档学习资料</h2>
+            <p>
+              {!studentId
+                ? '选择学生后查看其已上传的资料。'
+                : `当前学生：${students.find(s => String(s.id) === studentId)?.display_name || '所选学生'}`
+              }
+            </p>
+          </div>
+          <span className="upload-center-document-count">
+            {studentId ? `${documents.length} 份资料` : '尚未选择学生'}
+          </span>
+        </div>
+
+        {!studentId ? (
+          <div className="upload-center-empty">请先在上方选择学生。</div>
+        ) : documentsLoading ? (
+          <div className="upload-center-empty">正在读取学生资料…</div>
+        ) : documents.length === 0 ? (
+          <div className="upload-center-empty">该学生暂时还没有归档资料。</div>
+        ) : (
+          <div className="upload-center-document-list">
+            {documents.map(document => (
+              <article className="upload-center-document-item" key={document.id}>
+                <div className="upload-center-document-icon">
+                  <FileText size={19} />
+                </div>
+                <div className="upload-center-document-info">
+                  <strong>{document.title || document.link_title || document.filename || `学习资料 #${document.id}`}</strong>
+                  <div className="upload-center-document-meta">
+                    <span>
+                      {document.document_type === 'class_notes' ? '课堂笔记'
+                        : document.document_type === 'meeting_record' ? '会议记录'
+                        : document.document_type === 'personalized_article' ? '个性化文章'
+                        : document.document_type === 'other' ? '其他材料'
+                        : '学习资料'}
+                    </span>
+                    {document.lesson_number ? <span>第 {document.lesson_number} 课</span> : null}
+                    <span>
+                      {document.source_mode === 'local_file' ? '本地文件'
+                        : document.source_mode === 'pasted_text' ? '文字资料'
+                        : document.source_mode === 'external_link' ? '外部链接'
+                        : '资料'}
+                    </span>
+                    {document.created_at ? (
+                      <span>{new Date(document.created_at).toLocaleString()}</span>
+                    ) : null}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+    </>
+  )
+}
+
+function FrameworkPage({ page }: { page: Exclude<PageId, 'home' | 'curriculum' | 'students' | 'upload' | 'hsk'> }) {
   const content = {
     whiteboard: {
       title: '教学白板',
@@ -2225,6 +3372,7 @@ export default function TeacherApp() {
   const [token, setToken] = useState(() => localStorage.getItem('teacher_access_token') || '')
   const [teacher, setTeacher] = useState<Teacher | null>(null)
   const [page, setPage] = useState<PageId>('home')
+  const [pendingStudentId, setPendingStudentId] = useState<number | string | null>(null)
   const [collapsed, setCollapsed] = useState(false)
   const [authLoading, setAuthLoading] = useState(Boolean(localStorage.getItem('teacher_access_token')))
   const [authError, setAuthError] = useState('')
@@ -2467,13 +3615,39 @@ export default function TeacherApp() {
               ← 返回工作台首页
             </button>
           )}
-          {page === 'home' && <HomePage teacher={teacher} students={students} levels={levels} notes={dashboardNotes} loading={dashboardLoading} notesLoading={notesLoading} notesError={notesError} onNavigate={setPage} />}
-          {page === 'students' && <StudentsPage token={token} />}
+          {page === 'home' && (
+            <HomePage
+              teacher={teacher}
+              students={students}
+              levels={levels}
+              notes={dashboardNotes}
+              loading={dashboardLoading}
+              notesLoading={notesLoading}
+              notesError={notesError}
+              onNavigate={setPage}
+              onOpenStudent={studentId => {
+                setPendingStudentId(studentId)
+                setPage('students')
+              }}
+            />
+          )}
+          {page === 'students' && (
+            <StudentsPage
+              token={token}
+              initialStudentId={pendingStudentId}
+              onClearInitialStudentId={() => setPendingStudentId(null)}
+            />
+          )}
+          {page === 'upload' && <UploadCenterPage token={token} />}
           {page === 'curriculum' && <CurriculumPage token={token} />}
           {page === 'hsk' && <HSKPage token={token} />}
-          {page !== 'home' && page !== 'students' && page !== 'curriculum' && page !== 'hsk' && (
-            <FrameworkPage page={page} />
-          )}
+          {page !== 'home' &&
+            page !== 'students' &&
+            page !== 'curriculum' &&
+            page !== 'hsk' &&
+            page !== 'upload' && (
+              <FrameworkPage page={page} />
+            )}
           <footer className="page-footer">Chinese Learning Platform <span>·</span> 教师专属工作空间</footer>
         </main>
       </div>
