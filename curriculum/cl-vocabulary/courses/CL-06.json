@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "course_id": "CL-06",
+  "course_title": "要＋动词、不要＋动词",
+  "sections": [
+    "vocabulary",
+    "translations",
+    "hsk_mapping"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "CL06-001",
+      "simplified": "要",
+      "traditional": "要",
+      "pinyin": "yào",
+      "translations": {
+        "en": "want to; need to",
+        "de": "wollen; brauchen",
+        "fr": "vouloir; devoir (selon le contexte)",
+        "es": "querer; necesitar",
+        "it": "volere; avere bisogno di"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1"
+        ],
+        "relation_type": "first_learning",
+        "first_learning_course": "CL-06",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-002",
+      "simplified": "不要",
+      "traditional": "不要",
+      "pinyin": "bú yào",
+      "translations": {
+        "en": "do not; don't want to",
+        "de": "nicht; nicht wollen",
+        "fr": "ne pas; ne pas vouloir",
+        "es": "no; no querer",
+        "it": "non; non volere"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1"
+        ],
+        "relation_type": "first_learning",
+        "first_learning_course": "CL-06",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-003",
+      "simplified": "吃",
+      "traditional": "吃",
+      "pinyin": "chī",
+      "translations": {
+        "en": "to eat",
+        "de": "essen",
+        "fr": "manger",
+        "es": "comer",
+        "it": "mangiare"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1"
+        ],
+        "relation_type": "review",
+        "first_learning_course": "CL-02",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-004",
+      "simplified": "喝",
+      "traditional": "喝",
+      "pinyin": "hē",
+      "translations": {
+        "en": "to drink",
+        "de": "trinken",
+        "fr": "boire",
+        "es": "beber",
+        "it": "bere"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1"
+        ],
+        "relation_type": "review",
+        "first_learning_course": "CL-02",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-005",
+      "simplified": "买",
+      "traditional": "買",
+      "pinyin": "mǎi",
+      "translations": {
+        "en": "to buy",
+        "de": "kaufen",
+        "fr": "acheter",
+        "es": "comprar",
+        "it": "comprare"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1"
+        ],
+        "relation_type": "review",
+        "first_learning_course": "CL-02",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-006",
+      "simplified": "去",
+      "traditional": "去",
+      "pinyin": "qù",
+      "translations": {
+        "en": "to go",
+        "de": "gehen",
+        "fr": "aller",
+        "es": "ir",
+        "it": "andare"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1"
+        ],
+        "relation_type": "review",
+        "first_learning_course": "CL-02",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-007",
+      "simplified": "看",
+      "traditional": "看",
+      "pinyin": "kàn",
+      "translations": {
+        "en": "to look at; to watch; to read",
+        "de": "ansehen; anschauen; lesen",
+        "fr": "regarder; lire",
+        "es": "mirar; ver; leer",
+        "it": "guardare; leggere"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1",
+          "HSK 5"
+        ],
+        "relation_type": "review",
+        "first_learning_course": "CL-05",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-008",
+      "simplified": "学习",
+      "traditional": "學習",
+      "pinyin": "xuéxí",
+      "translations": {
+        "en": "to study; to learn",
+        "de": "lernen",
+        "fr": "étudier; apprendre",
+        "es": "estudiar; aprender",
+        "it": "studiare; imparare"
+      },
+      "hsk_mapping": {
+        "levels": [],
+        "relation_type": null,
+        "first_learning_course": null,
+        "status": "pending_full_index_verification"
+      }
+    },
+    {
+      "word_id": "CL06-009",
+      "simplified": "做",
+      "traditional": "做",
+      "pinyin": "zuò",
+      "translations": {
+        "en": "to do; to make",
+        "de": "tun; machen",
+        "fr": "faire",
+        "es": "hacer",
+        "it": "fare"
+      },
+      "hsk_mapping": {
+        "levels": [
+          "HSK 1"
+        ],
+        "relation_type": "review",
+        "first_learning_course": "CL-05",
+        "status": "matched_in_course_candidate_index"
+      }
+    },
+    {
+      "word_id": "CL06-010",
+      "simplified": "睡觉",
+      "traditional": "睡覺",
+      "pinyin": "shuìjiào",
+      "translations": {
+        "en": "to sleep",
+        "de": "schlafen",
+        "fr": "dormir",
+        "es": "dormir",
+        "it": "dormire"
+      },
+      "hsk_mapping": {
+        "levels": [],
+        "relation_type": null,
+        "first_learning_course": null,
+        "status": "pending_full_index_verification"
+      }
+    },
+    {
+      "word_id": "CL06-011",
+      "simplified": "工作",
+      "traditional": "工作",
+      "pinyin": "gōngzuò",
+      "translations": {
+        "en": "to work; work",
+        "de": "arbeiten; Arbeit",
+        "fr": "travailler; travail",
+        "es": "trabajar; trabajo",
+        "it": "lavorare; lavoro"
+      },
+      "hsk_mapping": {
+        "levels": [],
+        "relation_type": null,
+        "first_learning_course": null,
+        "status": "pending_full_index_verification"
+      }
+    },
+    {
+      "word_id": "CL06-012",
+      "simplified": "休息",
+      "traditional": "休息",
+      "pinyin": "xiūxi",
+      "translations": {
+        "en": "to rest; to take a break",
+        "de": "sich ausruhen; Pause machen",
+        "fr": "se reposer; faire une pause",
+        "es": "descansar; hacer una pausa",
+        "it": "riposarsi; fare una pausa"
+      },
+      "hsk_mapping": {
+        "levels": [],
+        "relation_type": null,
+        "first_learning_course": null,
+        "status": "pending_full_index_verification"
+      }
+    }
+  ],
+  "metadata": {
+    "source_course_file": "curriculum/courses/CL-06.json",
+    "source_hsk_candidates": "curriculum/vocabulary/CL-01-20-vocabulary-candidates.json",
+    "original_files_modified": false,
+    "translations_added_for_selected_interface_languages": [
+      "en",
+      "de",
+      "fr",
+      "es",
+      "it"
+    ],
+    "note": "This is an additive minimal vocabulary record. HSK entries not present in the course candidate index remain pending full-index verification."
+  }
+}
